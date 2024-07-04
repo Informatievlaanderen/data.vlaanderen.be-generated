@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/af0ca01df86df8a54759dfb5b491e6da5dea9633",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/af0ca01df86df8a54759dfb5b491e6da5dea9633/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/7f001c354512735105b8a973325c2c9e284ecbfb",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/7f001c354512735105b8a973325c2c9e284ecbfb/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -156,7 +156,9 @@
       },
       "usage": {},
       "equivalent": [],
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut",
@@ -170,7 +172,9 @@
       },
       "usage": {},
       "equivalent": [],
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet",
@@ -184,21 +188,9 @@
       },
       "usage": {},
       "equivalent": [],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator",
-      "name": "LokaleSolvabiliteitsindicator",
-      "label": {
-        "nl": "Lokale Solvabiliteitsindicator"
-      },
-      "sort": "Lokale Solvabiliteitsindicator",
-      "description": {
-        "nl": "Informatie opgehaald uit lokale datasystemen, die een aanwijzing geeft over de financiële draagkracht van een persoon."
-      },
-      "usage": {},
-      "equivalent": [],
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring",
@@ -303,6 +295,22 @@
       "sort": "Sociaal Statuut",
       "description": {
         "nl": "Een statuut dat bepaalt welke sociale rechten een persoon geniet. "
+      },
+      "usage": {},
+      "equivalent": [],
+      "parents": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator",
+      "name": "Solvabiliteitsindicator",
+      "label": {
+        "nl": "Solvabiliteitsindicator"
+      },
+      "sort": "Solvabiliteitsindicator",
+      "description": {
+        "nl": "Informatie die een aanwijzing geeft over de financiële draagkracht van een persoon."
       },
       "usage": {},
       "equivalent": [],
@@ -564,7 +572,7 @@
       },
       "sort": "verjaringstermijn",
       "description": {
-        "nl": "De verjaringstermijn die voor schuldvorderingen van dit categorie geldt."
+        "nl": "De verjaringstermijn die voor schuldvorderingen van deze categorie geldt."
       },
       "usage": {},
       "domain": [
@@ -583,7 +591,7 @@
       },
       "sort": "verjaringsdatum",
       "description": {
-        "nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling. ?"
+        "nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."
       },
       "usage": {},
       "domain": [
@@ -640,13 +648,15 @@
       },
       "sort": "type",
       "description": {
-        "nl": "De aarde van het lokale solvibiliteitsindicator, bijvoorbeeld onder budgetbeheer, laatbetaler."
+        "nl": "De aarde van de solvibiliteitsindicator."
       },
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
       ],
-      "range": [],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
       "parents": []
     },
     {
@@ -733,82 +743,6 @@
       },
       "sort": "startdatum",
       "description": {
-        "nl": "De startdatum van de periode waarin de inkomst ontvangen wordt."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "name": "startdatum",
-      "label": {
-        "nl": "startdatum"
-      },
-      "sort": "startdatum",
-      "description": {
-        "nl": "De startdatum van een sociaal statuut."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "name": "startdatum",
-      "label": {
-        "nl": "startdatum"
-      },
-      "sort": "startdatum",
-      "description": {
-        "nl": "De startdatum van het krediet."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "name": "startdatum",
-      "label": {
-        "nl": "startdatum"
-      },
-      "sort": "startdatum",
-      "description": {
-        "nl": "De startdatum van het juridisch statuut."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "name": "startdatum",
-      "label": {
-        "nl": "startdatum"
-      },
-      "sort": "startdatum",
-      "description": {
         "nl": "De startdatum van het financieel profiel."
       },
       "usage": {},
@@ -828,11 +762,11 @@
       },
       "sort": "einddatum",
       "description": {
-        "nl": "De einddatum voor de geldigheid van de lokale solvabiliteitsindicator."
+        "nl": "De einddatum voor de geldigheid van de solvabiliteitsindicator."
       },
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#date"
@@ -1305,87 +1239,11 @@
       },
       "sort": "startdatum",
       "description": {
-        "nl": "De startdatum voor de geldigheid van de lokale solvabiliteitsindicator."
+        "nl": "De startdatum voor de geldigheid van de solvabiliteitsindicator."
       },
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "name": "einddatum",
-      "label": {
-        "nl": "einddatum"
-      },
-      "sort": "einddatum",
-      "description": {
-        "nl": "De einddatum van de periode waarin de inkomst ontvangen wordt."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "name": "einddatum",
-      "label": {
-        "nl": "einddatum"
-      },
-      "sort": "einddatum",
-      "description": {
-        "nl": "De einddatum van een sociaal statuut."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "name": "einddatum",
-      "label": {
-        "nl": "einddatum"
-      },
-      "sort": "einddatum",
-      "description": {
-        "nl": "De einddatum van het krediet."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#date"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "name": "einddatum",
-      "label": {
-        "nl": "einddatum"
-      },
-      "sort": "einddatum",
-      "description": {
-        "nl": "De einddatum van het juridisch statuut."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#date"
@@ -1552,16 +1410,14 @@
       },
       "sort": "afgeleid van",
       "description": {
-        "nl": "Verwijzing naar de entiteiten waarvan het financieel profiel werd afgeleid. "
+        "nl": "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."
       },
-      "usage": {
-        "nl": "Bijvoorbeeld inkomsten, kredieten, sociale statuten, juridische statuten"
-      },
+      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
       ],
       "range": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
       ],
       "parents": []
     },
@@ -2161,7 +2017,7 @@
       "show": true
     },
     {
-      "uri": "<http://purl.org/dc/terms/title",
+      "uri": "http://purl.org/dc/terms/title",
       "name": "naam",
       "label": {
         "nl": "naam"

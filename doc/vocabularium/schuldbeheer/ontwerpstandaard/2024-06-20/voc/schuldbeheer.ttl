@@ -93,11 +93,10 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan> a owl:ObjectProperty;
   rdfs:label "afgeleid van"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld inkomsten, kredieten, sociale statuten, juridische statuten"@nl;
-  rdfs:comment "Verwijzing naar de entiteiten waarvan het financieel profiel werd afgeleid. "@nl;
+  rdfs:comment "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:range rdfs:Resource .
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor> a owl:ObjectProperty;
   rdfs:label "bestemming"@nl;
@@ -151,17 +150,9 @@ schemas:MonetaryAmount a rdfs:Class;
 <https://data.vlaanderen.be/ns/schuldbeheer#einddatum> a owl:DatatypeProperty;
   rdfs:label "startdatum"@nl,
     "einddatum"@nl;
-  rdfs:comment "De startdatum voor de geldigheid van de lokale solvabiliteitsindicator."@nl,
-    "De einddatum van de periode waarin de inkomst ontvangen wordt."@nl,
-    "De einddatum van een sociaal statuut."@nl,
-    "De einddatum van het krediet."@nl,
-    "De einddatum van het juridisch statuut."@nl,
+  rdfs:comment "De startdatum voor de geldigheid van de solvabiliteitsindicator."@nl,
     "De einddatum van het financieel profiel. Wanneer de financiële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw financieel profiel voor de persoon aan te maken."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Inkomst>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Krediet>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut>,
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>,
     <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:date .
@@ -338,18 +329,10 @@ schemas:MonetaryAmount a rdfs:Class;
 <https://data.vlaanderen.be/ns/schuldbeheer#startdatum> a owl:DatatypeProperty;
   rdfs:label "startdatum"@nl,
     "einddatum"@nl;
-  rdfs:comment "De startdatum van de periode waarin de inkomst ontvangen wordt."@nl,
-    "De startdatum van een sociaal statuut."@nl,
-    "De startdatum van het krediet."@nl,
-    "De startdatum van het juridisch statuut."@nl,
-    "De startdatum van het financieel profiel."@nl,
-    "De einddatum voor de geldigheid van de lokale solvabiliteitsindicator."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Inkomst>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Krediet>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator>;
+  rdfs:comment "De startdatum van het financieel profiel."@nl,
+    "De einddatum voor de geldigheid van de solvabiliteitsindicator."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>,
+    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:date .
 
@@ -381,11 +364,12 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#type> a rdf:Property;
+<https://data.vlaanderen.be/ns/schuldbeheer#type> a owl:ObjectProperty;
   rdfs:label "type"@nl;
-  rdfs:comment "De aarde van het lokale solvibiliteitsindicator, bijvoorbeeld onder budgetbeheer, laatbetaler."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
+  rdfs:comment "De aarde van de solvibiliteitsindicator."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum> a owl:DatatypeProperty;
   rdfs:label "uiterste betaaldatum"@nl;
@@ -398,14 +382,14 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#verjaringsdatum> a owl:DatatypeProperty;
   rdfs:label "verjaringsdatum"@nl;
-  rdfs:comment "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling. ?"@nl;
+  rdfs:comment "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:date .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#verjaringstermijn> a owl:DatatypeProperty;
   rdfs:label "verjaringstermijn"@nl;
-  rdfs:comment "De verjaringstermijn die voor schuldvorderingen van dit categorie geldt."@nl;
+  rdfs:comment "De verjaringstermijn die voor schuldvorderingen van deze categorie geldt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:duration .
@@ -461,6 +445,9 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> .
 
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
@@ -479,11 +466,23 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Saldo> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut> a owl:Class;
+  rdfs:label "Juridisch statuut"@nl;
+  rdfs:comment "Een statuut dat rechtsgevolgen bepaalt. "@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo> a owl:Class;
   rdfs:label "Schuldvorderingssaldo"@nl;
   rdfs:comment "Het verschil tussen het totale verschuldigde bedrag (hoofdsom en eventuele wanbetalingsvergoedingen) en het totale betaalde bedrag dat aan de schuldvordering werd toegerekend."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Saldo> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut> a owl:Class;
+  rdfs:label "Sociaal Statuut"@nl;
+  rdfs:comment "Een statuut dat bepaalt welke sociale rechten een persoon geniet. "@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
 schemas:currency a rdf:Property;
   rdfs:label "valuta"@nl .
@@ -502,6 +501,18 @@ schemas:value a rdf:Property;
   rdfs:comment "Het toewijzen van een betaald geldbedrag aan een schuldvordering. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Inkomst> a owl:Class;
+  rdfs:label "Inkomst"@nl;
+  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen, of als ondersteuning."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Krediet> a owl:Class;
+  rdfs:label "Krediet"@nl;
+  rdfs:comment "Financiële regeling waarbij een kredietverstrekker geld leent aan een persoon of organisatie met de belofte dat het geleende bedrag later zal worden terugbetaald, meestal met rente."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring> a owl:Class;
   rdfs:label "Oninbaarheidsverklaring"@nl;
@@ -527,24 +538,9 @@ schemas:value a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut> a owl:Class;
-  rdfs:label "Juridisch statuut"@nl;
-  rdfs:comment "Een statuut dat rechtsgevolgen bepaalt. "@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator> a owl:Class;
-  rdfs:label "Lokale Solvabiliteitsindicator"@nl;
-  rdfs:comment "Informatie opgehaald uit lokale datasystemen, die een aanwijzing geeft over de financiële draagkracht van een persoon."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
 <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie> a owl:Class;
   rdfs:label "Schuldvorderingscategorie"@nl;
   rdfs:comment "Een soort schuldvordering met bepaalde kenmerken."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut> a owl:Class;
-  rdfs:label "Sociaal Statuut"@nl;
-  rdfs:comment "Een statuut dat bepaalt welke sociale rechten een persoon geniet. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Voorstel> a owl:Class;
@@ -552,16 +548,6 @@ schemas:value a rdf:Property;
   rdfs:comment "Het aanbieden van een afbetalingsplan."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#Inkomst> a owl:Class;
-  rdfs:label "Inkomst"@nl;
-  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen, of als ondersteuning."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#Krediet> a owl:Class;
-  rdfs:label "Krediet"@nl;
-  rdfs:comment "Financiële regeling waarbij een kredietverstrekker geld leent aan een persoon of organisatie met de belofte dat het geleende bedrag later zal worden terugbetaald, meestal met rente."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Saldo> a owl:Class;
   rdfs:label "Saldo"@nl;
@@ -595,6 +581,11 @@ schemas:value a rdf:Property;
   rdfs:comment "De overdracht van geld van één of meerdere partij(en) naar een andere partij. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> a owl:Class;
+  rdfs:label "Solvabiliteitsindicator"@nl;
+  rdfs:comment "Informatie die een aanwijzing geeft over de financiële draagkracht van een persoon."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan> a owl:Class;
   rdfs:label "Afbetalingsplan"@nl;
@@ -706,7 +697,8 @@ schemas:value a rdf:Property;
     schemas:value,
     schemas:currency,
     <http://www.w3.org/ns/adms#identifier>,
-    dc:type;
+    dc:type,
+    dc:title;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [foaf:name "Digitaal Vlaanderen"];

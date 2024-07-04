@@ -364,8 +364,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/af0ca01df86df8a54759dfb5b491e6da5dea9633">https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/af0ca01df86df8a54759dfb5b491e6da5dea9633</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/af0ca01df86df8a54759dfb5b491e6da5dea9633/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/af0ca01df86df8a54759dfb5b491e6da5dea9633/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/7f001c354512735105b8a973325c2c9e284ecbfb">https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/7f001c354512735105b8a973325c2c9e284ecbfb</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/7f001c354512735105b8a973325c2c9e284ecbfb/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/7f001c354512735105b8a973325c2c9e284ecbfb/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues">https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html">https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html</a></dd>
 
@@ -455,7 +455,6 @@ en werd uitgegeven op 2024-06-20.
                       <a href="#Inkomst">Inkomst</a> |
                       <a href="#JuridischStatuut">Juridisch statuut</a> |
                       <a href="#Krediet">Krediet</a> |
-                      <a href="#LokaleSolvabiliteitsindicator">Lokale Solvabiliteitsindicator</a> |
                       <a href="#Oninbaarheidsverklaring">Oninbaarheidsverklaring</a> |
                       <a href="#Organisatie">Organisatie</a> |
                       <a href="#Persoon">Persoon</a> |
@@ -467,6 +466,7 @@ en werd uitgegeven op 2024-06-20.
                       <a href="#Schuldvorderingscategorie">Schuldvorderingscategorie</a> |
                       <a href="#Schuldvorderingssaldo">Schuldvorderingssaldo</a> |
                       <a href="#SociaalStatuut">Sociaal Statuut</a> |
+                      <a href="#Solvabiliteitsindicator">Solvabiliteitsindicator</a> |
                       <a href="#Solvabiliteitsprofiel">Solvabiliteitsprofiel</a> |
                       <a href="#Stuk">Stuk</a> |
                       <a href="#ToerekeningVanBetaling">Toerekening van Betaling</a> |
@@ -1629,14 +1629,16 @@ en werd uitgegeven op 2024-06-20.
                   <dl>
                     <dt>Beschrijving</dt><dd>Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen, of als ondersteuning.</dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Solvabiliteitsindicator">Solvabiliteitsindicator</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Inkomst%3Abedrag">bedrag</a>, 
-                      <a href="#Inkomst%3Aeinddatum">einddatum</a>, 
                       <a href="#Inkomst%3AperiodiciteitInkomst">periodiciteit inkomst</a>, 
-                      <a href="#Inkomst%3Astartdatum">startdatum</a>, 
                       <a href="#Inkomst%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -1677,26 +1679,6 @@ en werd uitgegeven op 2024-06-20.
                         <td></td>
                       </tr>
                     
-                      <tr id="Inkomst%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
-                            einddatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">De einddatum van de periode waarin de inkomst ontvangen wordt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Inkomst%3AperiodiciteitInkomst" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst">
                         <td>
                           <code property="rdfs:label">
@@ -1714,26 +1696,6 @@ en werd uitgegeven op 2024-06-20.
                         <td>1</td>
                         <td property="rdfs:comment">Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. </td>
                         <td property="vann:usageNote">Bijvoorbeeld eenmaling, maandelijks, jaarlijks.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Inkomst%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
-                            startdatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De startdatum van de periode waarin de inkomst ontvangen wordt.</td>
-                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -1769,13 +1731,15 @@ en werd uitgegeven op 2024-06-20.
                   <dl>
                     <dt>Beschrijving</dt><dd>Een statuut dat rechtsgevolgen bepaalt. </dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Solvabiliteitsindicator">Solvabiliteitsindicator</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#JuridischStatuut%3Aeinddatum">einddatum</a>, 
                       <a href="#JuridischStatuut%3Arechtsgrond">rechtsgrond</a>, 
-                      <a href="#JuridischStatuut%3Astartdatum">startdatum</a>, 
                       <a href="#JuridischStatuut%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -1796,26 +1760,6 @@ en werd uitgegeven op 2024-06-20.
 
                     <tbody class="supertype">
                     
-                      <tr id="JuridischStatuut%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
-                            einddatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">De einddatum van het juridisch statuut.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="JuridischStatuut%3Arechtsgrond" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond">
                         <td>
                           <code property="rdfs:label">
@@ -1832,26 +1776,6 @@ en werd uitgegeven op 2024-06-20.
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Verwijzing naar de juridische grondslag van het juridisch statuut. </td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="JuridischStatuut%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
-                            startdatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De startdatum van het juridisch statuut.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1888,13 +1812,15 @@ en werd uitgegeven op 2024-06-20.
                   <dl>
                     <dt>Beschrijving</dt><dd>Financiële regeling waarbij een kredietverstrekker geld leent aan een persoon of organisatie met de belofte dat het geleende bedrag later zal worden terugbetaald, meestal met rente.</dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Solvabiliteitsindicator">Solvabiliteitsindicator</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Krediet%3Aeinddatum">einddatum</a>, 
                       <a href="#Krediet%3AinitieelKredietbedrag">initieel kredietbedrag</a>, 
-                      <a href="#Krediet%3Astartdatum">startdatum</a>, 
                       <a href="#Krediet%3Atype">type</a>, 
                       <a href="#Krediet%3Awanbetaling">wanbetaling</a>.</dd>
                     
@@ -1916,26 +1842,6 @@ en werd uitgegeven op 2024-06-20.
 
                     <tbody class="supertype">
                     
-                      <tr id="Krediet%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
-                            einddatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">De einddatum van het krediet.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Krediet%3AinitieelKredietbedrag" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag">
                         <td>
                           <code property="rdfs:label">
@@ -1952,26 +1858,6 @@ en werd uitgegeven op 2024-06-20.
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Het bedrag dat wordt geleend bij het aangaan van een kredietovereenkomst.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Krediet%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
-                            startdatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De startdatum van het krediet.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2012,100 +1898,6 @@ en werd uitgegeven op 2024-06-20.
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Laat toe te specifiëren of een schuldenaar zijn financiële verplichtingen al dan niet heeft nagekomen. </td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="LokaleSolvabiliteitsindicator"><a href="https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#LokaleSolvabiliteitsindicator" data-placement="right">Lokale Solvabiliteitsindicator</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Informatie opgehaald uit lokale datasystemen, die een aanwijzing geeft over de financiële draagkracht van een persoon.</dd>
-                    
-		    
-                    <dt>Eigenschappen</dt>
-		     
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#LokaleSolvabiliteitsindicator%3Aeinddatum">einddatum</a>, 
-                      <a href="#LokaleSolvabiliteitsindicator%3Astartdatum">startdatum</a>, 
-                      <a href="#LokaleSolvabiliteitsindicator%3Atype">type</a>.</dd>
-                    
-                  </dl>
-                </div>
-		 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="LokaleSolvabiliteitsindicator%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
-                            einddatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De einddatum voor de geldigheid van de lokale solvabiliteitsindicator.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="LokaleSolvabiliteitsindicator%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
-                            startdatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De startdatum voor de geldigheid van de lokale solvabiliteitsindicator.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="LokaleSolvabiliteitsindicator%3Atype" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#type">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#type" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#type" data-placement="right">
-                            type</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De aarde van het lokale solvibiliteitsindicator, bijvoorbeeld onder budgetbeheer, laatbetaler.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2369,7 +2161,7 @@ en werd uitgegeven op 2024-06-20.
               <h3 class="h3" id="Rechtsgrond"><a href="http://data.europa.eu/eli/ontology#LegalResource" data-toggle="tooltip" data-content="http://data.europa.eu/eli/ontology#LegalResource" data-placement="right">Rechtsgrond</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De juridische basis voor een schuldvordering</dd>
+                    <dt>Beschrijving</dt><dd>Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee).</dd>
                     
                     <dt>Gebruik</dt><dd>Een rechtsgrond kan zowel een geheel (bvb: wet,besluit) voorstellen als een onderdeel eruit (bvb: artikel).</dd>
                     
@@ -2387,9 +2179,7 @@ en werd uitgegeven op 2024-06-20.
               <h3 class="h3" id="Resource"><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Resource</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Entiteit waarvan alle entiteiten zijn afgeleid</dd>
-                    
-                    <dt>Gebruik</dt><dd>Bijvoorbeeld een geleverde dienst, een prestatie, </dd>
+                    <dt>Beschrijving</dt><dd></dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -2865,7 +2655,7 @@ en werd uitgegeven op 2024-06-20.
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling. ?</td>
+                        <td property="rdfs:comment">De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2988,10 +2778,10 @@ en werd uitgegeven op 2024-06-20.
                         <td></td>
                       </tr>
                     
-                      <tr id="Schuldvorderingscategorie%3Anaam" typeof="rdfs:Property" resource="&lt;http://purl.org/dc/terms/title">
+                      <tr id="Schuldvorderingscategorie%3Anaam" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
                         <td>
                           <code property="rdfs:label">
-                            <a href="&lt;http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="&lt;http://purl.org/dc/terms/title" data-placement="right">
+                            <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
                             naam</a>
                           </code>
                         </td>
@@ -3023,7 +2813,7 @@ en werd uitgegeven op 2024-06-20.
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">De verjaringstermijn die voor schuldvorderingen van dit categorie geldt.</td>
+                        <td property="rdfs:comment">De verjaringstermijn die voor schuldvorderingen van deze categorie geldt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -3060,12 +2850,14 @@ en werd uitgegeven op 2024-06-20.
                   <dl>
                     <dt>Beschrijving</dt><dd>Een statuut dat bepaalt welke sociale rechten een persoon geniet. </dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Solvabiliteitsindicator">Solvabiliteitsindicator</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#SociaalStatuut%3Aeinddatum">einddatum</a>, 
-                      <a href="#SociaalStatuut%3Astartdatum">startdatum</a>, 
                       <a href="#SociaalStatuut%3AtoegekendDoor">toegekend door</a>, 
                       <a href="#SociaalStatuut%3Atype">type</a>.</dd>
                     
@@ -3086,46 +2878,6 @@ en werd uitgegeven op 2024-06-20.
                     </thead>
 
                     <tbody class="supertype">
-                    
-                      <tr id="SociaalStatuut%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
-                            einddatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">De einddatum van een sociaal statuut.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="SociaalStatuut%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
-                            startdatum</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De startdatum van een sociaal statuut.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
                     
                       <tr id="SociaalStatuut%3AtoegekendDoor" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#toegekendDoor">
                         <td>
@@ -3157,12 +2909,110 @@ en werd uitgegeven op 2024-06-20.
                         <td>
                           
 			    
-			    <a href="#SociaalStatuutType" data-placement="right">SociaalStatuutType</a>
+			    <a href="#SociaalStatuuttype" data-placement="right">SociaalStatuuttype</a>
 			    
                           
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">De aard van een sociaal statuut, bijvoorbeeld verhoogde tegemoetkoming, vermindering verdienvermogen door handicap.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Solvabiliteitsindicator"><a href="https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator" data-placement="right">Solvabiliteitsindicator</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Informatie die een aanwijzing geeft over de financiële draagkracht van een persoon.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Solvabiliteitsindicator%3Aeinddatum">einddatum</a>, 
+                      <a href="#Solvabiliteitsindicator%3Astartdatum">startdatum</a>, 
+                      <a href="#Solvabiliteitsindicator%3Atype">type</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Solvabiliteitsindicator%3Aeinddatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#startdatum">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#startdatum" data-placement="right">
+                            einddatum</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
+                            
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De einddatum voor de geldigheid van de solvabiliteitsindicator.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Solvabiliteitsindicator%3Astartdatum" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#einddatum">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#einddatum" data-placement="right">
+                            startdatum</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a>
+                            
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De startdatum voor de geldigheid van de solvabiliteitsindicator.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Solvabiliteitsindicator%3Atype" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/schuldbeheer#type">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/schuldbeheer#type" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/schuldbeheer#type" data-placement="right">
+                            type</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Solvabiliteitsindicatortype" data-placement="right">Solvabiliteitsindicatortype</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De aarde van de solvibiliteitsindicator.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -3217,13 +3067,13 @@ en werd uitgegeven op 2024-06-20.
                         <td>
                           
 			    
-			    <a href="#Resource" data-placement="right">Resource</a>
+			    <a href="#Solvabiliteitsindicator" data-placement="right">Solvabiliteitsindicator</a>
 			    
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Verwijzing naar de entiteiten waarvan het financieel profiel werd afgeleid. </td>
-                        <td property="vann:usageNote">Bijvoorbeeld inkomsten, kredieten, sociale statuten, juridische statuten</td>
+                        <td property="rdfs:comment">Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid.</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -3718,7 +3568,7 @@ en werd uitgegeven op 2024-06-20.
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Laat toe om de aard van de wanbetalingsvergoeding verder te specifieren</td>
+                        <td property="rdfs:comment">De aard van de wanbetalingsvergoeding, bijvoorbeeld verwijlinterest, aanmaningskost, verzendingskost</td>
                         <td property="vann:usageNote">Bijvoorbeeld verwijlinterest, aanmaningskost, verzendingskost</td>
                         <td></td>
                       </tr>
