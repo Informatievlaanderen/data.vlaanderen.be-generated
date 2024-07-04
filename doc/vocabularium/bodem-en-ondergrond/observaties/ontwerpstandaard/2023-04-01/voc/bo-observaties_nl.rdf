@@ -219,6 +219,21 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#HVVmeting"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Korrelverdeling">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
+    <rdfs:label xml:lang="nl">Korrelverdeling</rdfs:label>
+    <rdfs:comment xml:lang="nl">Observatie van de distributie van de korreldiameter in een Grondmonster.</rdfs:comment>
+    <ns1:usageNote xml:lang="nl">Een Korrelverdeling is een Fractiemeting. Een Fractiemeting meet het aandeel van iets in functie van iets anders (hier dus het aandeel korrels in een Grondmonster met een bepaalde korreldiameter).</ns1:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"/>
+    <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Samendrukbaarheidsproef">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
+    <rdfs:label xml:lang="nl">Samendrukbaarheidsproef</rdfs:label>
+    <rdfs:comment xml:lang="nl">Geotechnisch onderzoek waarbij verschillende belastingen op een grondmonster worden uitgeoefend en de resulterende vervorming wordt gemeten.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"/>
+    <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+  </owl:Class>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Samendrukbaarheidsproefresultaat.waarde">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
     <rdfs:label xml:lang="nl">waarde</rdfs:label>
@@ -428,22 +443,6 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefresultaat"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#diameter">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-    <rdfs:label xml:lang="nl">diameter</rdfs:label>
-    <rdfs:comment xml:lang="nl">Diameter van het Grondmonster.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Samendrukbaarheidsproef">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-        <rdfs:label xml:lang="nl">Samendrukbaarheidsproef</rdfs:label>
-        <rdfs:comment xml:lang="nl">Geotechnisch onderzoek waarbij verschillende belastingen op een grondmonster worden uitgeoefend en de resulterende vervorming wordt gemeten.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"/>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"/>
-    <rdfs:subPropertyOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#dichtheid">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
     <rdfs:label xml:lang="nl">n</rdfs:label>
@@ -465,39 +464,6 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiek"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#humusKalkVerwijderd">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-    <rdfs:label xml:lang="nl">humusKalkVerwijderd</rdfs:label>
-    <rdfs:comment xml:lang="nl">Geeft aan of voorafgaand aan de Observatie humus en kalk uit het Grondmonster werden verwijderd.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Korrelverdeling">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-        <rdfs:label xml:lang="nl">Korrelverdeling</rdfs:label>
-        <rdfs:comment xml:lang="nl">Observatie van de distributie van de korreldiameter in een Grondmonster.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">Een Korrelverdeling is een Fractiemeting. Een Fractiemeting meet het aandeel van iets in functie van iets anders (hier dus het aandeel korrels in een Grondmonster met een bepaalde korreldiameter).</ns1:usageNote>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"/>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:subPropertyOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#initiëleHoogte">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-    <rdfs:label xml:lang="nl">initiëleHoogte</rdfs:label>
-    <rdfs:comment xml:lang="nl">De hoogte van het Grondmonster bij aanvang van de proef.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Samendrukbaarheidsproef"/>
-    <rdfs:range rdf:resource="http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"/>
-    <rdfs:subPropertyOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#massa">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
-    <rdfs:label xml:lang="nl">massa</rdfs:label>
-    <rdfs:comment xml:lang="nl">De massa van het Grondmonster.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Samendrukbaarheidsproef"/>
-    <rdfs:range rdf:resource="http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"/>
-    <rdfs:subPropertyOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#samendrukking">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties"/>
     <rdfs:label xml:lang="nl">samendrukking</rdfs:label>
