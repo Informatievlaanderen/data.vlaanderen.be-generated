@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/1e4be5199bf1f608979af49d25f03d657b3668b9",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/1e4be5199bf1f608979af49d25f03d657b3668b9/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/224b603b0caf40455a5b83403cc8794716bc01c9",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/224b603b0caf40455a5b83403cc8794716bc01c9/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html",
     "usesVocs": [],
@@ -179,6 +179,46 @@
             "name": "Doodsoorzaak.hoofdoorzaak",
             "definition-nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht.",
             "ap-definition-nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan",
+          "name": "gelinktAan",
+          "sort": "gelinkt aan",
+          "label": {
+            "nl": "gelinkt aan"
+          },
+          "description": {
+            "nl": "De geassocieerde oorzaak gelinkt aan een Doodsoorzaak."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Doodsoorzaak",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GeassocieerdeOorzaak",
+              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Geassocieerde Oorzaak",
+              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
+              "range_label": {
+                "nl": "Geassocieerde Oorzaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gelinkt aan",
+            "name": "Doodsoorzaak.gelinktAan",
+            "definition-nl": "De geassocieerde oorzaak gelinkt aan een Doodsoorzaak."
           }
         },
         {
@@ -434,22 +474,14 @@
         "nl": "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."
       },
       "usage": {},
-      "parents": [
-        {
-          "label": "Doodsoorzaak",
-          "name": "Doodsoorzaak",
-          "package": "OSLO_Overlijdensaangifte",
-          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak",
-          "scoped_uri": "#Doodsoorzaak"
-        }
-      ],
+      "parents": [],
       "rawTags": {
         "label-nl": "Geassocieerde Oorzaak",
         "definition-nl": "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan",
           "name": "gelinktAan",
           "sort": "gelinkt aan",
           "label": {
@@ -458,8 +490,48 @@
           "description": {
             "nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
           },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeassocieerdeOorzaak",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Doodsoorzaak",
+              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Doodsoorzaak",
+              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak",
+              "range_label": {
+                "nl": "Doodsoorzaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gelinkt aan",
+            "name": "GeassocieerdeOorzaak.gelinktAan",
+            "definition-nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur",
+          "name": "duur",
+          "sort": "duur",
+          "label": {
+            "nl": "duur"
+          },
+          "description": {
+            "nl": "De afbakening in tijd van de geassocieerde oorzaak."
+          },
           "usage": {
-            "nl": "Te gebruiken wanneer de gezondheidstoestand van een zwanger Persoon leidt tot het overlijden van de Persoon."
+            "nl": "Te gebruiken om de duur van de geassocieerde oorzaak te vermelden."
           },
           "domain": [
             {
@@ -469,26 +541,71 @@
           ],
           "range": [
             {
-              "range_label": "Gezondheidstoestand",
-              "range_uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+              "range_label": "Periode",
+              "range_uri": "http://data.europa.eu/m8g/PeriodOfTime"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Gezondheidstoestand",
-              "range_puri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
+              "range_uri": "#Periode",
+              "range_puri": "http://data.europa.eu/m8g/PeriodOfTime",
               "range_label": {
-                "nl": "Gezondheidstoestand"
+                "nl": "Periode"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "gelinkt aan",
-            "name": "gelinkt aan",
-            "ap-usageNote-nl": "Te gebruiken wanneer de gezondheidstoestand van een zwanger Persoon leidt tot het overlijden van de Persoon.",
-            "definition-nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
+            "label-nl": "duur",
+            "definition-nl": "De afbakening in tijd van de geassocieerde oorzaak.",
+            "name": "GeassocieerdeOorzaak.duur",
+            "ap-usageNote-nl": "Te gebruiken om de duur van de geassocieerde oorzaak te vermelden."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
+          "name": "hoofdoorzaak",
+          "sort": "hoofdoorzaak",
+          "label": {
+            "nl": "hoofdoorzaak"
+          },
+          "description": {
+            "nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
+          },
+          "usage": {
+            "nl": "Hiervoor kan een TaalString of codelijst zoals <a href=\"https://icd.who.int/browse10\">ICD</a> of een equivalent gebruikt worden."
+          },
+          "domain": [
+            {
+              "EA-Name": "GeassocieerdeOorzaak",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Hiervoor kan een TaalString of codelijst zoals <a href=\"https://icd.who.int/browse10\">ICD</a> of een equivalent gebruikt worden.",
+            "label-nl": "hoofdoorzaak",
+            "ap-label-nl": "hoofdoorzaak",
+            "name": "Doodsoorzaak.hoofdoorzaak",
+            "definition-nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht.",
+            "ap-definition-nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
           }
         }
       ]
@@ -4714,11 +4831,11 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan",
-          "name": "toestandVan",
-          "sort": "toestand van",
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand",
+          "name": "heeftGezondheidstoestand",
+          "sort": "heeft gezondheidstoestand",
           "label": {
-            "nl": "toestand van"
+            "nl": "heeft gezondheidstoestand"
           },
           "description": {
             "nl": "De Persoon heeft een Gezondheidstoestand"
@@ -4748,10 +4865,10 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "label-nl": "heeft gezondheidstoestand",
+            "name": "Gezondheidstoestand.heeftMedischeToestand",
             "package": "OSLO-Gezondheidstoestand",
-            "label-nl": "toestand van",
-            "definition-nl": "De Persoon heeft een Gezondheidstoestand",
-            "name": "Gezondheidstoestand.toestandVan"
+            "definition-nl": "De Persoon heeft een Gezondheidstoestand"
           }
         },
         {
@@ -7451,11 +7568,11 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand",
-          "name": "heeftGezondheidstoestand",
-          "sort": "heeft gezondheidstoestand",
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan",
+          "name": "toestandVan",
+          "sort": "toestand van",
           "label": {
-            "nl": "heeft gezondheidstoestand"
+            "nl": "toestand van"
           },
           "description": {
             "nl": "De Persoon heeft een Gezondheidstoestand"
@@ -7485,10 +7602,10 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "heeft gezondheidstoestand",
-            "name": "Gezondheidstoestand.heeftMedischeToestand",
             "package": "OSLO-Gezondheidstoestand",
-            "definition-nl": "De Persoon heeft een Gezondheidstoestand"
+            "label-nl": "toestand van",
+            "definition-nl": "De Persoon heeft een Gezondheidstoestand",
+            "name": "Gezondheidstoestand.toestandVan"
           }
         },
         {
@@ -9635,21 +9752,6 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
-      "name": {
-        "nl": "gelinkt aan",
-        "undefined": "gelinktAan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.wordtBepaaldDoor",
       "name": {
         "nl": "wordt bepaald door",
@@ -10070,6 +10172,36 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan",
+      "name": {
+        "nl": "gelinkt aan",
+        "undefined": "gelinktAan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur",
+      "name": {
+        "nl": "duur",
+        "undefined": "duur"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.verwerking",
       "name": {
         "nl": "verwerking",
@@ -10134,6 +10266,21 @@
       "name": {
         "nl": "volgt op",
         "undefined": "volgtOp"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan",
+      "name": {
+        "nl": "gelinkt aan",
+        "undefined": "gelinktAan"
       },
       "description": {},
       "domain": [

@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/1e4be5199bf1f608979af49d25f03d657b3668b9",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/1e4be5199bf1f608979af49d25f03d657b3668b9/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/224b603b0caf40455a5b83403cc8794716bc01c9",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/224b603b0caf40455a5b83403cc8794716bc01c9/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-overlijdensaangifte.html",
     "usesVocs": [],
@@ -94,9 +94,7 @@
       },
       "usage": {},
       "equivalent": [],
-      "parents": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
-      ]
+      "parents": []
     },
     {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
@@ -300,25 +298,6 @@
     }
   ],
   "properties": [
-    {
-      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
-      "name": "gelinktAan",
-      "label": {
-        "nl": "gelinkt aan"
-      },
-      "sort": "gelinkt aan",
-      "description": {
-        "nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
-      ],
-      "parents": []
-    },
     {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.wordtBepaaldDoor",
       "name": "wordtBepaaldDoor",
@@ -985,6 +964,44 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan",
+      "name": "gelinktAan",
+      "label": {
+        "nl": "gelinkt aan"
+      },
+      "sort": "gelinkt aan",
+      "description": {
+        "nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur",
+      "name": "duur",
+      "label": {
+        "nl": "duur"
+      },
+      "sort": "duur",
+      "description": {
+        "nl": "De afbakening in tijd van de geassocieerde oorzaak."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PeriodOfTime"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.verwerking",
       "name": "verwerking",
       "label": {
@@ -1095,6 +1112,44 @@
       ],
       "range": [
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
+      "name": "hoofdoorzaak",
+      "label": {
+        "nl": "hoofdoorzaak"
+      },
+      "sort": "hoofdoorzaak",
+      "description": {
+        "nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+      ],
+      "range": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan",
+      "name": "gelinktAan",
+      "label": {
+        "nl": "gelinkt aan"
+      },
+      "sort": "gelinkt aan",
+      "description": {
+        "nl": "De geassocieerde oorzaak gelinkt aan een Doodsoorzaak."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
       ],
       "parents": []
     },

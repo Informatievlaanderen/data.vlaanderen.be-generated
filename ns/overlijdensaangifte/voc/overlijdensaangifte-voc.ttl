@@ -66,10 +66,18 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan> a owl:ObjectProperty;
+  rdfs:label "gelinkt aan"@nl;
+  rdfs:comment "De geassocieerde oorzaak gelinkt aan een Doodsoorzaak."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak> .
+
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak> a owl:DatatypeProperty;
   rdfs:label "hoofdoorzaak"@nl;
   rdfs:comment "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak>;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak>,
+    <https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range rdf:langString .
 
@@ -108,11 +116,19 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak> a owl:Class;
-  rdfs:label "Geassocieerde Oorzaak"@nl;
-  rdfs:comment "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."@nl;
+<https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur> a owl:ObjectProperty;
+  rdfs:label "duur"@nl;
+  rdfs:comment "De afbakening in tijd van de geassocieerde oorzaak."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan> a owl:ObjectProperty;
+  rdfs:label "gelinkt aan"@nl;
+  rdfs:comment "De Geassocieerde oorzaak gelinkt aan een oorzaak."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.bezwaar> a owl:ObjectProperty;
   rdfs:label "bezwaar"@nl;
@@ -401,6 +417,11 @@ dc:type a rdf:Property;
   rdfs:comment "Het Overlijden van een Foetus in de baarmoeder vóór de Geboorte."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:subClassOf <http://fixme.com#Gebeurtenis> .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak> a owl:Class;
+  rdfs:label "Geassocieerde Oorzaak"@nl;
+  rdfs:comment "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> a owl:Class;
   rdfs:label "Ongeval"@nl;

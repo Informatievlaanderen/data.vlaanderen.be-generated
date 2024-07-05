@@ -586,8 +586,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/1e4be5199bf1f608979af49d25f03d657b3668b9">https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/1e4be5199bf1f608979af49d25f03d657b3668b9</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/1e4be5199bf1f608979af49d25f03d657b3668b9/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/1e4be5199bf1f608979af49d25f03d657b3668b9/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/224b603b0caf40455a5b83403cc8794716bc01c9">https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/224b603b0caf40455a5b83403cc8794716bc01c9</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/224b603b0caf40455a5b83403cc8794716bc01c9/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/224b603b0caf40455a5b83403cc8794716bc01c9/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues">https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html">https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html</a></dd>
 
@@ -1783,6 +1783,7 @@
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Doodsoorzaak%3Aduur">duur</a>, 
+                      <a href="#Doodsoorzaak%3AgelinktAan">gelinkt aan</a>, 
                       <a href="#Doodsoorzaak%3Ahoofdoorzaak">hoofdoorzaak</a>, 
                       <a href="#Doodsoorzaak%3AvolgtOp">volgt op</a>.</dd>
                     
@@ -1821,6 +1822,26 @@
                         <td>0..1</td>
                         <td property="rdfs:comment">De afbakening in tijd van de Doodsoorzaak.</td>
                         <td property="vann:usageNote">Te gebruiken om de duur van de Doodsoorzaak te vermelden.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Doodsoorzaak%3AgelinktAan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan" data-placement="right">
+                            gelinkt aan</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Geassocieerde Oorzaak" data-placement="right">Geassocieerde Oorzaak</a>
+			    
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">De geassocieerde oorzaak gelinkt aan een Doodsoorzaak.</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -2143,15 +2164,13 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid.</dd>
                     
-		     
-		    <dt>Subklasse van <dt><dd>
-                        <a href="#Doodsoorzaak">Doodsoorzaak</a>
-		   </dd>
-                    
+		    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#GeassocieerdeOorzaak%3AgelinktAan">gelinkt aan</a>.</dd>
+                      <a href="#GeassocieerdeOorzaak%3Aduur">duur</a>, 
+                      <a href="#GeassocieerdeOorzaak%3AgelinktAan">gelinkt aan</a>, 
+                      <a href="#GeassocieerdeOorzaak%3Ahoofdoorzaak">hoofdoorzaak</a>.</dd>
                     
                   </dl>
                 </div>
@@ -2171,23 +2190,63 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="GeassocieerdeOorzaak%3AgelinktAan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan">
+                      <tr id="GeassocieerdeOorzaak%3Aduur" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan" data-placement="right">
+                            <a href="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur" data-placement="right">
+                            duur</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Periode" data-placement="right">Periode</a>
+			    
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">De afbakening in tijd van de geassocieerde oorzaak.</td>
+                        <td property="vann:usageNote">Te gebruiken om de duur van de geassocieerde oorzaak te vermelden.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="GeassocieerdeOorzaak%3AgelinktAan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan" data-placement="right">
                             gelinkt aan</a>
                           </code>
                         </td>
                         <td>
                           
 			    
-			    <a href="#Gezondheidstoestand" data-placement="right">Gezondheidstoestand</a>
+			    <a href="#Doodsoorzaak" data-placement="right">Doodsoorzaak</a>
 			    
                           
                         </td>
                         <td>0..1</td>
                         <td property="rdfs:comment">De Geassocieerde oorzaak gelinkt aan een oorzaak.</td>
-                        <td property="vann:usageNote">Te gebruiken wanneer de gezondheidstoestand van een zwanger Persoon leidt tot het overlijden van de Persoon.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="GeassocieerdeOorzaak%3Ahoofdoorzaak" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak" data-placement="right">
+                            hoofdoorzaak</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a>
+                            
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht.</td>
+                        <td property="vann:usageNote">Hiervoor kan een TaalString of codelijst zoals <a href="https://icd.who.int/browse10">ICD</a> of een equivalent gebruikt worden.</td>
                         <td></td>
                       </tr>
                     
@@ -2678,9 +2737,9 @@
                       <a href="#Gezondheidstoestand%3AgebruikteMedicatie">gebruikte medicatie</a>, 
                       <a href="#Gezondheidstoestand%3Agewicht">gewicht</a>, 
                       <a href="#Gezondheidstoestand%3AheeftGebeurtenis">heeft gebeurtenis</a>, 
-                      <a href="#Gezondheidstoestand%3AheeftGezondheidstoestand">heeft gezondheidstoestand</a>, 
                       <a href="#Gezondheidstoestand%3Alengte">lengte</a>, 
                       <a href="#Gezondheidstoestand%3Arisico">risico</a>, 
+                      <a href="#Gezondheidstoestand%3AtoestandVan">toestand van</a>, 
                       <a href="#Gezondheidstoestand%3AvastgesteldDoor">vastgesteld door</a>, 
                       <a href="#Gezondheidstoestand%3AwordtGevoedDoor">wordt gevoed door</a>, 
                       <a href="#Gezondheidstoestand%3Azorg">zorg</a>.</dd>
@@ -2783,26 +2842,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Gezondheidstoestand%3AheeftGezondheidstoestand" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand" data-placement="right">
-                            heeft gezondheidstoestand</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Persoon" data-placement="right">Persoon</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">De Persoon heeft een Gezondheidstoestand</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Gezondheidstoestand%3Alengte" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.lengte">
                         <td>
                           <code property="rdfs:label">
@@ -2840,6 +2879,26 @@
                         <td>0..*</td>
                         <td property="rdfs:comment">Risico die de Medische Toestand van een Persoon kan beïnvloeden.</td>
                         <td property="vann:usageNote">Een equivalent van ICD mag ook gebruikt worden als codelijst.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Gezondheidstoestand%3AtoestandVan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan" data-placement="right">
+                            toestand van</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Persoon" data-placement="right">Persoon</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">De Persoon heeft een Gezondheidstoestand</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -4249,11 +4308,11 @@ De CPSV-AP erkent een gemeenschappelijke rol verbonden aan openbare diensten, na
                       <a href="#Persoon%3Ageslacht">geslacht</a>, 
                       <a href="#Persoon%3AheeftBevalling">heeft bevalling</a>, 
                       <a href="#Persoon%3AheeftGeboorte">heeft geboorte</a>, 
+                      <a href="#Persoon%3AheeftGezondheidstoestand">heeft gezondheidstoestand</a>, 
                       <a href="#Persoon%3AheeftInwonerschap">heeft inwonerschap</a>, 
                       <a href="#Persoon%3AheeftOverlijden">heeft overlijden</a>, 
                       <a href="#Persoon%3AheeftRelatieMet">heeft relatie met</a>, 
                       <a href="#Persoon%3AheeftZwangerschap">heeft zwangerschap</a>, 
-                      <a href="#Persoon%3AtoestandVan">toestand van</a>, 
                       <a href="#Persoon%3AvolledigeNaam">volledige naam</a>.</dd>
                     
                   </dl>
@@ -4454,6 +4513,26 @@ De CPSV-AP erkent een gemeenschappelijke rol verbonden aan openbare diensten, na
                         <td></td>
                       </tr>
                     
+                      <tr id="Persoon%3AheeftGezondheidstoestand" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand" data-placement="right">
+                            heeft gezondheidstoestand</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Gezondheidstoestand" data-placement="right">Gezondheidstoestand</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">De Persoon heeft een Gezondheidstoestand</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Persoon%3AheeftInwonerschap" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/persoon#heeftInwonerschap">
                         <td>
                           <code property="rdfs:label">
@@ -4530,26 +4609,6 @@ De CPSV-AP erkent een gemeenschappelijke rol verbonden aan openbare diensten, na
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Een Persoon heeft een Zwangerschap</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Persoon%3AtoestandVan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan" data-placement="right">
-                            toestand van</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Gezondheidstoestand" data-placement="right">Gezondheidstoestand</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">De Persoon heeft een Gezondheidstoestand</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>

@@ -158,6 +158,10 @@
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur",
       "@type": "@id"
     },
+    "Doodsoorzaak.gelinktAan": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan",
+      "@type": "@id"
+    },
     "Doodsoorzaak.hoofdoorzaak": {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -210,9 +214,17 @@
       "@type": "@id"
     },
     "GeassocieerdeOorzaak": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
-    "GeassocieerdeOorzaak.gelinktAan": {
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
+    "GeassocieerdeOorzaak.duur": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur",
       "@type": "@id"
+    },
+    "GeassocieerdeOorzaak.gelinktAan": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan",
+      "@type": "@id"
+    },
+    "GeassocieerdeOorzaak.hoofdoorzaak": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Gebeurtenis": "https://schema.org/Event",
     "Gebeurtenis.begindatum": {
@@ -302,11 +314,6 @@
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftGebeurtenis",
       "@type": "@id"
     },
-    "Gezondheidstoestand.heeftGezondheidstoestand": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand",
-      "@type": "@id"
-    },
     "Gezondheidstoestand.lengte": {
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.lengte",
       "@type": "@id"
@@ -314,6 +321,11 @@
     "Gezondheidstoestand.risico": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.risico",
+      "@type": "@id"
+    },
+    "Gezondheidstoestand.toestandVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan",
       "@type": "@id"
     },
     "Gezondheidstoestand.vastgesteldDoor": {
@@ -600,6 +612,11 @@
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte",
       "@type": "@id"
     },
+    "Persoon.heeftGezondheidstoestand": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand",
+      "@type": "@id"
+    },
     "Persoon.heeftInwonerschap": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap",
@@ -617,11 +634,6 @@
     "Persoon.heeftZwangerschap": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Persoon.heeftZwangerschap",
-      "@type": "@id"
-    },
-    "Persoon.toestandVan": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan",
       "@type": "@id"
     },
     "Persoon.volledigeNaam": {
