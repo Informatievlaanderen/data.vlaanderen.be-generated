@@ -307,7 +307,7 @@
         "nl": "Adviesvraag"
       },
       "definition": {
-        "nl": "Vraag aan een organisatie of persoon om een opinie die bijdraagt aan het beslissingsproces"
+        "nl": "Vraag aan een organisatie of persoon om een raadgeving die bijdraagt aan het beslissingsproces"
       },
       "parents": [
         "http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity"
@@ -420,6 +420,16 @@
       "@type": "rdfs:Class"
     },
     {
+      "name": {},
+      "@id": "http://www.w3.org/ns/prov#Agent",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/ns/prov#Location",
+      "@type": "rdfs:Class"
+    },
+    {
       "name": {
         "nl": "Website"
       },
@@ -463,38 +473,80 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftModaliteit",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "heeft modaliteit"
+        "nl": "heeft thema"
       },
       "definition": {
-        "nl": "Voorwaarde die verbonden is met een bepaald recht."
+        "nl": "Thema-code dat de annotatie gebruikt als inhoud voor een resource."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+        "http://www.w3.org/ns/oa#Annotation"
       ],
       "range": [
-        "http://data.europa.eu/m8g/Requirement"
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
-      "generalization": []
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftModaliteit",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "heeft modaliteit"
+        "nl": "heeft tekstuele inhoud"
       },
       "definition": {
-        "nl": "Voorwaarde die verbonden is met een bepaalde verbintenis."
+        "nl": "Tekst dat de annotatie gebruikt als inhoud voor een resource."
       },
       "domain": [
-        "http://ontology.tno.nl/normengineering/flint#Duty"
+        "http://www.w3.org/ns/oa#Annotation"
       ],
       "range": [
-        "http://data.europa.eu/m8g/Requirement"
+        "http://www.w3.org/ns/oa#TextualBody"
       ],
-      "generalization": []
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft object"
+      },
+      "definition": {
+        "nl": "Object dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Entity"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft locatie"
+      },
+      "definition": {
+        "nl": "Locatie dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Location"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#datumAntwoordVerwacht",
@@ -503,7 +555,7 @@
         "nl": "datum antwoord verwacht"
       },
       "definition": {
-        "nl": "Datum waarop het antwoord op de initiatiefrechtvraag verwacht wordt."
+        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
@@ -575,26 +627,6 @@
     {
       "name": {},
       "@id": "http://www.w3.org/ns/oa#end",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {},
-      "@id": "http://www.w3.org/ns/oa#body",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {},
-      "@id": "http://www.w3.org/ns/oa#body",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {},
-      "@id": "http://www.w3.org/ns/oa#body",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {},
-      "@id": "http://www.w3.org/ns/oa#body",
       "@type": "rdf:Property"
     },
     {
