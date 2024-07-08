@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/803e13879484f8d001e8d9ca159d13ffe555bb35",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/803e13879484f8d001e8d9ca159d13ffe555bb35/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/5b9d4f8cb83b2356549aa2ba65f6677118083bf2",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/5b9d4f8cb83b2356549aa2ba65f6677118083bf2/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-slimme-raadpleegomgeving.html",
     "usesVocs": [],
@@ -1578,6 +1578,46 @@
             "nl": "gebruikte"
           },
           "description": {
+            "nl": "Stuk dat werd gebruikt voor de behandeling van de agendapunt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Stuk",
+              "range_uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Stuk",
+              "range_puri": "https://data.vlaanderen.be/ns/dossier#Stuk",
+              "range_label": {
+                "nl": "Stuk"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#used",
+            "ap-definition-nl": "Stuk dat werd gebruikt voor de behandeling van de agendapunt.",
+            "ap-label-nl": "gebruikte"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#used",
+          "name": "gebruikte",
+          "sort": "gebruikte",
+          "label": {
+            "nl": "gebruikte"
+          },
+          "description": {
             "nl": "Instantie publieke dienstverlening die werd gebruikt voor de behandeling van de agendapunt."
           },
           "usage": {
@@ -1610,46 +1650,6 @@
             "ap-usageNote-nl": "Om te verwijzen naar een instantie publieke dienstverlening die nog in ontwerp is en al dan niet bekrachtigd wordt.",
             "ap-definition-nl": "Instantie publieke dienstverlening die werd gebruikt voor de behandeling van de agendapunt.",
             "uri": "http://www.w3.org/ns/prov#used",
-            "ap-label-nl": "gebruikte"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#used",
-          "name": "gebruikte",
-          "sort": "gebruikte",
-          "label": {
-            "nl": "gebruikte"
-          },
-          "description": {
-            "nl": "Stuk dat werd gebruikt voor de behandeling van de agendapunt."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "BehandelingVanAgendapunt",
-              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Stuk",
-              "range_uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Stuk",
-              "range_puri": "https://data.vlaanderen.be/ns/dossier#Stuk",
-              "range_label": {
-                "nl": "Stuk"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#used",
-            "ap-definition-nl": "Stuk dat werd gebruikt voor de behandeling van de agendapunt.",
             "ap-label-nl": "gebruikte"
           }
         },
@@ -4240,86 +4240,6 @@
             "nl": "onderwerp"
           },
           "description": {
-            "nl": "Initiatiefrechtvraag waarover het stuk gaat."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Stuk",
-              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "InitiatiefrechtVraag",
-              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Initiatiefrechtvraag",
-              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag",
-              "range_label": {
-                "nl": "Initiatiefrechtvraag"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Initiatiefrechtvraag waarover het stuk gaat.",
-            "ap-label-nl": "onderwerp",
-            "uri": "http://purl.org/dc/terms/subject"
-          }
-        },
-        {
-          "uri": "http://purl.org/dc/terms/subject",
-          "name": "onderwerp",
-          "sort": "onderwerp",
-          "label": {
-            "nl": "onderwerp"
-          },
-          "description": {
-            "nl": "Adviesantwoord waarover het stuk gaat."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Stuk",
-              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "AdviesAntwoord",
-              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Adviesantwoord",
-              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
-              "range_label": {
-                "nl": "Adviesantwoord"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "onderwerp",
-            "ap-definition-nl": "Adviesantwoord waarover het stuk gaat.",
-            "uri": "http://purl.org/dc/terms/subject"
-          }
-        },
-        {
-          "uri": "http://purl.org/dc/terms/subject",
-          "name": "onderwerp",
-          "sort": "onderwerp",
-          "label": {
-            "nl": "onderwerp"
-          },
-          "description": {
             "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
           },
           "usage": {},
@@ -4389,6 +4309,86 @@
           "rawTags": {
             "ap-definition-nl": "Adviesvraag waarover het stuk gaat.",
             "ap-label-nl": "onderwerp",
+            "uri": "http://purl.org/dc/terms/subject"
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/subject",
+          "name": "onderwerp",
+          "sort": "onderwerp",
+          "label": {
+            "nl": "onderwerp"
+          },
+          "description": {
+            "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "InitiatiefrechtVraag",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Initiatiefrechtvraag",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag",
+              "range_label": {
+                "nl": "Initiatiefrechtvraag"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "ap-label-nl": "onderwerp",
+            "uri": "http://purl.org/dc/terms/subject"
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/subject",
+          "name": "onderwerp",
+          "sort": "onderwerp",
+          "label": {
+            "nl": "onderwerp"
+          },
+          "description": {
+            "nl": "Adviesantwoord waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "AdviesAntwoord",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adviesantwoord",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
+              "range_label": {
+                "nl": "Adviesantwoord"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "onderwerp",
+            "ap-definition-nl": "Adviesantwoord waarover het stuk gaat.",
             "uri": "http://purl.org/dc/terms/subject"
           }
         },
