@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/72024ab08490d8ce41a123347ef18412d15058fb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/72024ab08490d8ce41a123347ef18412d15058fb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/5cf0e86c1cfbed43f3dfc21e872e01c709d8d714",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/5cf0e86c1cfbed43f3dfc21e872e01c709d8d714/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-slimme-raadpleegomgeving.html",
     "usesVocs": [],
@@ -46,6 +46,50 @@
         "definition-nl": "Input van een organisatie of persoon die bijdraagt aan het beslissingsproces."
       },
       "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Adviesantwoord.motiveerde",
+          "name": "motiveerde",
+          "sort": "motiveerde",
+          "label": {
+            "nl": "motiveerde"
+          },
+          "description": {
+            "nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AdviesAntwoord",
+              "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Beslissingsactiviteit",
+              "range_uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Beslissingsactiviteit",
+              "range_puri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit",
+              "range_label": {
+                "nl": "Beslissingsactiviteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "motiveerde",
+            "parentURI": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
+            "label-nl": "motiveerde",
+            "ap-definition-nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "definition-nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "name": "Adviesantwoord.motiveerde",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        },
         {
           "uri": "http://purl.org/dc/terms/description",
           "name": "beschrijving",
@@ -1394,6 +1438,240 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#beeindigt",
+          "name": "beeindigt",
+          "sort": "beeindigt",
+          "label": {
+            "nl": "beeindigt"
+          },
+          "description": {
+            "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+          },
+          "usage": {
+            "nl": "Gebruik http://www.w3.org/ns/prov#invalidated bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NormatieveBepaling",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Normatieve Bepaling",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
+              "range_label": {
+                "nl": "Normatieve Bepaling"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "parentURI": "http://www.w3.org/ns/prov#invalidated",
+            "ap-definition-nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "ap-label-nl": "beeindigt",
+            "ap-usageNote-nl": "Gebruik http://www.w3.org/ns/prov#invalidated bij implementatie.",
+            "definition-nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "label-nl": "beeindigt"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.creeertNormatieveBepaling",
+          "name": "creeert",
+          "sort": "creeert",
+          "label": {
+            "nl": "creeert"
+          },
+          "description": {
+            "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+          },
+          "usage": {
+            "nl": "Gebruik http://www.w3.org/ns/prov#generated bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NormatieveBepaling",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Normatieve Bepaling",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
+              "range_label": {
+                "nl": "Normatieve Bepaling"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "creeert",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "definition-nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
+            "ap-label-nl": "creeert",
+            "parentURI": "http://www.w3.org/ns/prov#generated",
+            "name": "BehandelingVanAgendapunt.creeertNormatieveBepaling",
+            "ap-usageNote-nl": "Gebruik http://www.w3.org/ns/prov#generated bij implementatie.",
+            "ap-definition-nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+          "name": "bestaatUit",
+          "sort": "bestaat uit",
+          "label": {
+            "nl": "bestaat uit"
+          },
+          "description": {
+            "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+          },
+          "usage": {
+            "nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "InitiatiefrechtVraag",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Initiatiefrechtvraag",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag",
+              "range_label": {
+                "nl": "Initiatiefrechtvraag"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "bestaat uit",
+            "label-nl": "bestaat uit",
+            "name": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+            "ap-definition-nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "definition-nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "parentURI": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "ap-usageNote-nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
+          "name": "bestaatUit",
+          "sort": "bestaat uit",
+          "label": {
+            "nl": "bestaat uit"
+          },
+          "description": {
+            "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+          },
+          "usage": {
+            "nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "InitiatiefrechtAntwoord",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Initiatiefrechtantwoord",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord",
+              "range_label": {
+                "nl": "Initiatiefrechtantwoord"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "ap-label-nl": "bestaat uit",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "ap-usageNote-nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "parentURI": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "definition-nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "label-nl": "bestaat uit",
+            "name": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+          "name": "bestaatUit",
+          "sort": "bestaat uit",
+          "label": {
+            "nl": "bestaat uit"
+          },
+          "description": {
+            "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+          },
+          "usage": {
+            "nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "BehandelingVanAgendapunt",
+              "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Beslissingsactiviteit",
+              "range_uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Beslissingsactiviteit",
+              "range_puri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit",
+              "range_label": {
+                "nl": "Beslissingsactiviteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "name": "BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+            "parentURI": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "label-nl": "bestaat uit",
+            "ap-usageNote-nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "ap-label-nl": "bestaat uit",
+            "definition-nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+          }
+        },
+        {
           "uri": "http://www.w3.org/ns/prov#generated",
           "name": "geeftAanleidingTot",
           "sort": "geeft aanleiding tot",
@@ -2437,6 +2715,50 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie",
+          "name": "genereert",
+          "sort": "genereert",
+          "label": {
+            "nl": "genereert"
+          },
+          "description": {
+            "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.w3.org/ns/prov#Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Annotatie",
+              "range_uri": "http://www.w3.org/ns/oa#Annotation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Annotatie",
+              "range_puri": "http://www.w3.org/ns/oa#Annotation",
+              "range_label": {
+                "nl": "Annotatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "ap-label-nl": "genereert",
+            "parentURI": "http://www.w3.org/ns/prov#generates",
+            "label-nl": "genereert",
+            "definition-nl": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "name": "Activiteit.genereertAnnotatie",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek",
           "name": "tijdsbestek",
           "sort": "tijdsbestek",
@@ -2843,6 +3165,50 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+          "name": "realiseert",
+          "sort": "realiseert",
+          "label": {
+            "nl": "realiseert"
+          },
+          "description": {
+            "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "LegaleVerschijningsvorm",
+              "uri": "https://data.europa.eu/eli/ontology#LegalExpression"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "NormatieveBepaling",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Normatieve Bepaling",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
+              "range_label": {
+                "nl": "Normatieve Bepaling"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
+            "parentURI": "http://data.europa.eu/eli/ontology#realizes",
+            "ap-label": "realiseert",
+            "label-nl": "realiseert",
+            "name": "LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "definition-nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+          }
+        },
+        {
           "uri": "http://data.europa.eu/eli/ontology#type_document",
           "name": "besluittype",
           "sort": "besluittype",
@@ -3074,6 +3440,53 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Beslissingsactiviteit.wasGemotiveerdDoorAdviesantwoord",
+          "name": "wasGemotiveerdDoor",
+          "sort": "was gemotiveerd door",
+          "label": {
+            "nl": "was gemotiveerd door"
+          },
+          "description": {
+            "nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
+          },
+          "usage": {
+            "nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by bij implementatie."
+          },
+          "domain": [
+            {
+              "EA-Name": "Beslissingsactiviteit",
+              "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "AdviesAntwoord",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adviesantwoord",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
+              "range_label": {
+                "nl": "Adviesantwoord"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "was gemotiveerd door",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "name": "Beslissingsactiviteit.wasGemotiveerdDoorAdviesantwoord",
+            "ap-usageNote-nl": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by bij implementatie.",
+            "parentURI": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "ap-definition-nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.",
+            "ap-label-nl": "was gemotiveerd door",
+            "definition-nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/besluitvorming#resultaat",
           "name": "resultaat",
           "sort": "resultaat",
@@ -3185,6 +3598,181 @@
             "definition-nl": "Thema waarover dit Stuk gaat.",
             "name": "Stuk.thema",
             "label-nl": "thema",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtvraag",
+          "name": "gaatOverInitiatiefrechtvraag",
+          "sort": "gaat over initiatiefrechtvraag",
+          "label": {
+            "nl": "gaat over initiatiefrechtvraag"
+          },
+          "description": {
+            "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "InitiatiefrechtVraag",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Initiatiefrechtvraag",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag",
+              "range_label": {
+                "nl": "Initiatiefrechtvraag"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "parentURI": "http://purl.org/dc/terms/subject",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "ap-definition-nl": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "name": "Stuk.gaatOverInitiatiefrechtvraag",
+            "ap-label-nl": "gaat over initiatiefrechtvraag",
+            "label-nl": "gaat over initiatiefrechtvraag",
+            "definition-nl": "Initiatiefrechtvraag waarover het stuk gaat."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtantwoord",
+          "name": "gaatOverInitiatiefrechtantwoord",
+          "sort": "gaat over initiatiefrechtantwoord",
+          "label": {
+            "nl": "gaat over initiatiefrechtantwoord"
+          },
+          "description": {
+            "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "InitiatiefrechtAntwoord",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Initiatiefrechtantwoord",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord",
+              "range_label": {
+                "nl": "Initiatiefrechtantwoord"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "Stuk.gaatOverInitiatiefrechtantwoord",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "label-nl": "gaat over initiatiefrechtantwoord",
+            "definition-nl": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "ap-definition-nl": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "parentURI": "http://purl.org/dc/terms/subject"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag",
+          "name": "gaatOverAdviesvraag",
+          "sort": "gaat over adviesvraag",
+          "label": {
+            "nl": "gaat over adviesvraag"
+          },
+          "description": {
+            "nl": "Adviesvraag waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "AdviesVraag",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adviesvraag",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag",
+              "range_label": {
+                "nl": "Adviesvraag"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "ap-definition-nl": "Adviesvraag waarover het stuk gaat.",
+            "definition-nl": "Adviesvraag waarover het stuk gaat.",
+            "label-nl": "gaat over adviesvraag",
+            "parentURI": "http://purl.org/dc/terms/subject",
+            "ap-label-nl": "gaat over adviesvraag",
+            "name": "Stuk.gaatOverAdviesvraag"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesantwoord",
+          "name": "gaatOverAdviesantwoord",
+          "sort": "gaat over adviesantwoord",
+          "label": {
+            "nl": "gaat over adviesantwoord"
+          },
+          "description": {
+            "nl": "Adviesantwoord waarover het stuk gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "AdviesAntwoord",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adviesantwoord",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
+              "range_label": {
+                "nl": "Adviesantwoord"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gaat over adviesantwoord",
+            "ap-label-nl": "gaat over adviesantwoord",
+            "ap-definition-nl": "Adviesantwoord waarover het stuk gaat.",
+            "name": "Stuk.gaatOverAdviesantwoord",
+            "definition-nl": "Adviesantwoord waarover het stuk gaat.",
+            "parentURI": "http://purl.org/dc/terms/subject",
             "package": "OSLO-SlimmeRaadpleegomgeving"
           }
         },
@@ -3754,6 +4342,50 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie",
+          "name": "genereert",
+          "sort": "genereert",
+          "label": {
+            "nl": "genereert"
+          },
+          "description": {
+            "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.w3.org/ns/prov#Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Annotatie",
+              "range_uri": "http://www.w3.org/ns/oa#Annotation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Annotatie",
+              "range_puri": "http://www.w3.org/ns/oa#Annotation",
+              "range_label": {
+                "nl": "Annotatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "ap-label-nl": "genereert",
+            "parentURI": "http://www.w3.org/ns/prov#generates",
+            "label-nl": "genereert",
+            "definition-nl": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "name": "Activiteit.genereertAnnotatie",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek",
           "name": "tijdsbestek",
           "sort": "tijdsbestek",
@@ -4206,7 +4838,50 @@
         "label-nl": "Recht",
         "definition-nl": "De toestemming om een bepaalde activiteit uit te voeren op een bepaalde locatie, waarvoor, op het moment van aanvraag of melding, een specifieke vergunning of melding vereist is volgens de geldende regelgeving op het gebied van ruimtelijke ordening en milieu."
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Recht.begunstigde",
+          "name": "begunstigde",
+          "sort": "begunstigde",
+          "label": {
+            "nl": "begunstigde"
+          },
+          "description": {
+            "nl": "Agent die het recht mag uitoefenen."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Recht"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "begunstigde",
+            "definition-nl": "Agent die het recht mag uitoefenen.",
+            "name": "Recht.begunstigde",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "label-nl": "begunstigde"
+          }
+        }
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis",
@@ -4229,7 +4904,94 @@
       "rawTags": {
         "label-nl": "Verbintenis"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende",
+          "name": "rechthebbende",
+          "sort": "rechthebbende",
+          "label": {
+            "nl": "rechthebbende"
+          },
+          "description": {
+            "nl": "De agent die rechthebbende is van de verbintenis."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verbintenis",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "rechthebbende",
+            "ap-definition-nl": "De agent die rechthebbende is van de verbintenis.",
+            "package": "OSLO-SlimmeRaadpleegomgeving",
+            "name": "Verbintenis.rechthebbende",
+            "label-nl": "rechthebbende",
+            "definition-nl": "De agent die rechthebbende is van de verbintenis."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.eiser",
+          "name": "eiser",
+          "sort": "eiser",
+          "label": {
+            "nl": "eiser"
+          },
+          "description": {
+            "nl": "De agent die de vordering van de verbintenis eist."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verbintenis",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "Verbintenis.eiser",
+            "definition-nl": "De agent die de vordering van de verbintenis eist.",
+            "ap-label-nl": "eiser",
+            "ap-definition-nl": "De agent die de vordering van de verbintenis eist.",
+            "label-nl": "eiser",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        }
+      ]
     },
     {
       "uri": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService",
@@ -4545,6 +5307,53 @@
       ]
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#beeindigt",
+      "name": {
+        "nl": "beeindigt",
+        "undefined": "beeindigt"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://www.w3.org/ns/prov#invalidated"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende",
+      "name": {
+        "nl": "rechthebbende",
+        "undefined": "rechthebbende"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.eiser",
+      "name": {
+        "nl": "eiser",
+        "undefined": "eiser"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema",
       "name": {
         "nl": "thema",
@@ -4559,6 +5368,225 @@
       ],
       "parents": [
         "http://purl.org/dc/terms/subject"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtvraag",
+      "name": {
+        "nl": "gaat over initiatiefrechtvraag",
+        "undefined": "gaatOverInitiatiefrechtvraag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://purl.org/dc/terms/subject"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtantwoord",
+      "name": {
+        "nl": "gaat over initiatiefrechtantwoord",
+        "undefined": "gaatOverInitiatiefrechtantwoord"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://purl.org/dc/terms/subject"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag",
+      "name": {
+        "nl": "gaat over adviesvraag",
+        "undefined": "gaatOverAdviesvraag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://purl.org/dc/terms/subject"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesantwoord",
+      "name": {
+        "nl": "gaat over adviesantwoord",
+        "undefined": "gaatOverAdviesantwoord"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://purl.org/dc/terms/subject"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Recht.begunstigde",
+      "name": {
+        "nl": "begunstigde",
+        "undefined": "begunstigde"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+      "name": {
+        "nl": "realiseert",
+        "undefined": "realiseert"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/ontology#realizes"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Beslissingsactiviteit.wasGemotiveerdDoorAdviesantwoord",
+      "name": {
+        "nl": "was gemotiveerd door",
+        "undefined": "wasGemotiveerdDoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.creeertNormatieveBepaling",
+      "name": {
+        "nl": "creeert",
+        "undefined": "creeert"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://www.w3.org/ns/prov#generated"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+      "name": {
+        "nl": "bestaat uit",
+        "undefined": "bestaatUit"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
+      "name": {
+        "nl": "bestaat uit",
+        "undefined": "bestaatUit"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+      "name": {
+        "nl": "bestaat uit",
+        "undefined": "bestaatUit"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Adviesantwoord.motiveerde",
+      "name": {
+        "nl": "motiveerde",
+        "undefined": "motiveerde"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie",
+      "name": {
+        "nl": "genereert",
+        "undefined": "genereert"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://www.w3.org/ns/prov#generates"
       ]
     }
   ],
