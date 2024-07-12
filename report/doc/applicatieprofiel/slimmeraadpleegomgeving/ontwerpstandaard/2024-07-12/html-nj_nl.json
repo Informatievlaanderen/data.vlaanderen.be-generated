@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/0407713647c55a5b886a5a76c7e14037b97d354d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/0407713647c55a5b886a5a76c7e14037b97d354d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/7420ebd880bc579007e7efe8719629730879547d",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/7420ebd880bc579007e7efe8719629730879547d/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-slimme-raadpleegomgeving.html",
     "usesVocs": [],
@@ -2414,11 +2414,11 @@
     },
     {
       "uri": "http://www.w3.org/ns/prov#Activity",
-      "name": "Activiteit",
+      "name": "Activiteit(generiek)",
       "label": {
-        "nl": "Activiteit"
+        "nl": "Activiteit (Generiek)"
       },
-      "sort": "Activiteit",
+      "sort": "Activiteit (Generiek)",
       "description": {
         "nl": "Handeling van bepaalde duur op of met entiteiten."
       },
@@ -2431,7 +2431,7 @@
         "label-nl": "Activiteit",
         "uri": "http://www.w3.org/ns/prov#Activity",
         "usageNote": "Bv het consumeren,verwerken,transformeren,wijzigen,verplaatsen,gebruiken of genereren van entiteiten.",
-        "ap-label-nl": "Activiteit",
+        "ap-label-nl": "Activiteit (Generiek)",
         "ap-definition-nl": "Handeling van bepaalde duur op of met entiteiten.",
         "ap-usageNote-nl": "Bv het genereren van annotaties."
       },
@@ -2656,10 +2656,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
+              "range_uri": "#Activiteit (Omgevingsvergunning)",
               "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Activiteit (Omgevingsvergunning)"
               }
             }
           ],
@@ -3223,6 +3223,49 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/dossier#auteur",
+          "name": "auteur",
+          "sort": "auteur",
+          "label": {
+            "nl": "auteur"
+          },
+          "description": {
+            "nl": "De auteur van het stuk."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "http://www.w3.org/ns/prov#Entity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "auteur",
+            "definition-nl": "De auteur van het stuk(onderdeel).",
+            "ap-definition-nl": "De auteur van het stuk.",
+            "parentURI": "http://purl.org/dc/terms/creator",
+            "domain": "http://www.w3.org/ns/prov#Entity",
+            "uri": "https://data.vlaanderen.be/ns/dossier#auteur"
+          }
+        },
+        {
           "uri": "http://www.w3.org/ns/prov#value",
           "name": "inhoud",
           "sort": "inhoud",
@@ -3552,48 +3595,6 @@
           }
         },
         {
-          "uri": "http://fixme.com#auteur",
-          "name": "auteur",
-          "sort": "auteur",
-          "label": {
-            "nl": "auteur"
-          },
-          "description": {
-            "nl": "De auteur van het stuk."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Stuk",
-              "uri": "http://www.w3.org/ns/prov#Entity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Agent",
-              "range_uri": "http://www.w3.org/ns/prov#Agent"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Agent",
-              "range_puri": "http://www.w3.org/ns/prov#Agent",
-              "range_label": {
-                "nl": "Agent"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "auteur",
-            "definition-nl": "De auteur van het stuk(onderdeel).",
-            "ap-definition-nl": "De auteur van het stuk.",
-            "parentURI": "http://purl.org/dc/terms/creator",
-            "domain": "http://www.w3.org/ns/prov#Entity"
-          }
-        },
-        {
           "uri": "http://fixme.com#Stuk.thema",
           "name": "thema",
           "sort": "thema",
@@ -3637,7 +3638,8 @@
             "parentURI": "http://purl.org/dc/terms/subject",
             "definition-nl": "Thema waarover dit Stuk gaat.",
             "name": "Stuk.thema",
-            "label-nl": "thema"
+            "label-nl": "thema",
+            "package": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#"
           }
         }
       ]
@@ -3731,11 +3733,11 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
-      "name": "Activiteit",
+      "name": "Activiteit(omgevingsvergunning)",
       "label": {
-        "nl": "Activiteit"
+        "nl": "Activiteit (Omgevingsvergunning)"
       },
-      "sort": "Activiteit",
+      "sort": "Activiteit (Omgevingsvergunning)",
       "description": {
         "nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën."
       },
@@ -3748,7 +3750,7 @@
         "definition-nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën.",
         "usageNote-nl": "Maakt het voorwerp uit van vergunningsaanvragen, meldingen, vergunningsbesluiten, vaststellingen.",
         "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
-        "ap-label-nl": "Activiteit",
+        "ap-label-nl": "Activiteit (Omgevingsvergunning)",
         "ap-definition-nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën."
       },
       "properties": [
@@ -3972,10 +3974,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
+              "range_uri": "#Activiteit (Omgevingsvergunning)",
               "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Activiteit (Omgevingsvergunning)"
               }
             }
           ],
@@ -4165,10 +4167,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
+              "range_uri": "#Activiteit (Omgevingsvergunning)",
               "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Activiteit (Omgevingsvergunning)"
               }
             }
           ],
