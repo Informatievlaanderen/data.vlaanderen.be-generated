@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/7420ebd880bc579007e7efe8719629730879547d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/7420ebd880bc579007e7efe8719629730879547d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/tree/72024ab08490d8ce41a123347ef18412d15058fb",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/blob/72024ab08490d8ce41a123347ef18412d15058fb/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-slimme-raadpleegomgeving.html",
     "usesVocs": [],
@@ -2414,11 +2414,11 @@
     },
     {
       "uri": "http://www.w3.org/ns/prov#Activity",
-      "name": "Activiteit(generiek)",
+      "name": "Activiteit(annotaties)",
       "label": {
-        "nl": "Activiteit (Generiek)"
+        "nl": "Activiteit (Annotaties)"
       },
-      "sort": "Activiteit (Generiek)",
+      "sort": "Activiteit (Annotaties)",
       "description": {
         "nl": "Handeling van bepaalde duur op of met entiteiten."
       },
@@ -2431,7 +2431,7 @@
         "label-nl": "Activiteit",
         "uri": "http://www.w3.org/ns/prov#Activity",
         "usageNote": "Bv het consumeren,verwerken,transformeren,wijzigen,verplaatsen,gebruiken of genereren van entiteiten.",
-        "ap-label-nl": "Activiteit (Generiek)",
+        "ap-label-nl": "Activiteit (Annotaties)",
         "ap-definition-nl": "Handeling van bepaalde duur op of met entiteiten.",
         "ap-usageNote-nl": "Bv het genereren van annotaties."
       },
@@ -3141,6 +3141,54 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema",
+          "name": "thema",
+          "sort": "thema",
+          "label": {
+            "nl": "thema"
+          },
+          "description": {
+            "nl": "Thema waarover dit Stuk gaat."
+          },
+          "usage": {
+            "nl": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden."
+          },
+          "domain": [
+            {
+              "EA-Name": "Stuk",
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Thema",
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema",
+              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema",
+              "range_label": {
+                "nl": "Thema"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema",
+          "rawTags": {
+            "ap-label-nl": "thema",
+            "ap-definition-nl": "Thema waarover dit Stuk gaat.",
+            "ap-codelist": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema",
+            "ap-usageNote-nl": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden.",
+            "parentURI": "http://purl.org/dc/terms/subject",
+            "definition-nl": "Thema waarover dit Stuk gaat.",
+            "name": "Stuk.thema",
+            "label-nl": "thema",
+            "package": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        },
+        {
           "uri": "https://schema.org/keywords",
           "name": "trefwoord",
           "sort": "trefwoord",
@@ -3593,54 +3641,6 @@
             "ap-definition-nl": "De datum van het stuk.",
             "ap-usageNote-nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
           }
-        },
-        {
-          "uri": "http://fixme.com#Stuk.thema",
-          "name": "thema",
-          "sort": "thema",
-          "label": {
-            "nl": "thema"
-          },
-          "description": {
-            "nl": "Thema waarover dit Stuk gaat."
-          },
-          "usage": {
-            "nl": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden."
-          },
-          "domain": [
-            {
-              "EA-Name": "Stuk",
-              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Thema",
-              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema",
-              "range_puri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema",
-              "range_label": {
-                "nl": "Thema"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema",
-          "rawTags": {
-            "ap-label-nl": "thema",
-            "ap-definition-nl": "Thema waarover dit Stuk gaat.",
-            "ap-codelist": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema",
-            "ap-usageNote-nl": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden.",
-            "parentURI": "http://purl.org/dc/terms/subject",
-            "definition-nl": "Thema waarover dit Stuk gaat.",
-            "name": "Stuk.thema",
-            "label-nl": "thema",
-            "package": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#"
-          }
         }
       ]
     },
@@ -3749,7 +3749,6 @@
         "label-nl": "Activiteit",
         "definition-nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën.",
         "usageNote-nl": "Maakt het voorwerp uit van vergunningsaanvragen, meldingen, vergunningsbesluiten, vaststellingen.",
-        "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
         "ap-label-nl": "Activiteit (Omgevingsvergunning)",
         "ap-definition-nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën."
       },
@@ -4543,6 +4542,23 @@
       ],
       "parents": [
         "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema",
+      "name": {
+        "nl": "thema",
+        "undefined": "thema"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": [
+        "http://purl.org/dc/terms/subject"
       ]
     }
   ],
