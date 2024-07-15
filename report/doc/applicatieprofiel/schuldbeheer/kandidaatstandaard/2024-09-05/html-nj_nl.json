@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/a02ebb148328650118b45aa8c7a6c9f82caad434",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/a02ebb148328650118b45aa8c7a6c9f82caad434/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/3939bb1b1030baa04223f4bf01d81c680f34dd2f",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/3939bb1b1030baa04223f4bf01d81c680f34dd2f/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -3698,6 +3698,46 @@
             "definition-nl": "Persoon die standaard het Gezin vertegenwoordigt.",
             "parentURI": "https://data.vlaanderen.be/ns/persoon#isLidVan"
           }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#heeftRelatieMet",
+          "name": "heeftRelatieMet",
+          "sort": "heeft relatie met",
+          "label": {
+            "nl": "heeft relatie met"
+          },
+          "description": {
+            "nl": "Persoon waarmee de persoon gerelateerd is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Persoon",
+              "uri": "http://www.w3.org/ns/person#Person"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Persoon",
+              "range_uri": "http://www.w3.org/ns/person#Person"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Persoon",
+              "range_puri": "http://www.w3.org/ns/person#Person",
+              "range_label": {
+                "nl": "Persoon"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Persoon waarmee de persoon gerelateerd is.",
+            "definition-nl": "Persoon waarmee de persoon gerelateerd is.",
+            "label-nl": "heeft relatie met"
+          }
         }
       ]
     },
@@ -4303,6 +4343,79 @@
             "label-nl": "datum",
             "ap-definition-nl": "De datum van het stuk.",
             "ap-usageNote-nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+      "name": "GeregistreerdPersoon",
+      "label": {
+        "nl": "Geregistreerd Persoon"
+      },
+      "sort": "Geregistreerd Persoon",
+      "description": {
+        "nl": "Persoon waarvan de gegevens zijn ingeschreven in een register."
+      },
+      "usage": {
+        "nl": "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb naam en voornaam) en de Verblijfplaats vd persoon en op belangrijke levensgebeurtenissen zoals geboorte, huwelijk, overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking."
+      },
+      "parents": [
+        {
+          "label": "Persoon",
+          "name": "Persoon",
+          "package": "OSLO-Persoon",
+          "uri": "http://www.w3.org/ns/person#Person",
+          "scoped_uri": "#Persoon"
+        }
+      ],
+      "rawTags": {
+        "ap-definition-nl": "Persoon waarvan de gegevens zijn ingeschreven in een register.",
+        "ap-usageNote-nl": "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb naam en voornaam) en de Verblijfplaats vd persoon en op belangrijke levensgebeurtenissen zoals geboorte, huwelijk, overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking.",
+        "defintion-nl": "Persoon waarvan de gegevens zijn ingeschreven in een register.",
+        "label-nl": "Geregistreerd Persoon",
+        "usageNote-nl": "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb Naam en Voornaam) en de Verblijfplaats vd Persoon en op belangrijke levensgebeurtenissen zoals Geboorte, Huwelijk, Overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven Persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking."
+      },
+      "properties": [
+        {
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "registratie",
+          "sort": "registratie",
+          "label": {
+            "nl": "registratie"
+          },
+          "description": {
+            "nl": "Identificatiecode vd persoon ih register."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Identificator",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Identificatiecode vd persoon ih register.",
+            "label-nl": "registratie",
+            "ap-definition-nl": "Identificatiecode vd persoon ih register.",
+            "uri": "http://www.w3.org/ns/adms#identifier"
           }
         }
       ]
@@ -5242,6 +5355,24 @@
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/lokaal-digitaal"
       },
       "email": "simon.vanderelst@vlaanderen.be"
+    },
+    {
+      "role": "C",
+      "first_name": "Robin",
+      "last_name": "Van Trigt",
+      "affiliation": {
+        "name": "SAM steunpunt Mens en Samenleving",
+        "website": "https://www.samvzw.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Wietske",
+      "last_name": "Van Gils",
+      "affiliation": {
+        "name": "SAM steunpunt Mens en Samenleving",
+        "website": "https://www.samvzw.be/"
+      }
     },
     {
       "role": "C",
