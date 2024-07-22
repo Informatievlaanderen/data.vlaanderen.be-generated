@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/624f7cea70e32273dc8b176f29709fa2c8872665">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/624f7cea70e32273dc8b176f29709fa2c8872665</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/624f7cea70e32273dc8b176f29709fa2c8872665/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/624f7cea70e32273dc8b176f29709fa2c8872665/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f4fbffee3188373887fa80fa2a500da51009aaf2">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f4fbffee3188373887fa80fa2a500da51009aaf2</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f4fbffee3188373887fa80fa2a500da51009aaf2/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f4fbffee3188373887fa80fa2a500da51009aaf2/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html">https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html</a></dd>
 
@@ -171,16 +171,17 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
 <p>Het applicatieprofiel Ruimtelijke Bereiken toont hoe met termen uit het overeenkomstig <a href="https://data.vlaanderen.be/ns/ruimtelijke-bereiken/">vocabularium</a> de geografische spreiding van een fenomeen kan worden beschreven.</p>
-<p>Eerder dan een set van individuele resultaten van individuele observaties, wordt een dergelijke spreiding beschreven als zijnde het resultaat van één enkele observatie.</p>
-<p>Dat resultaat is een verzameling geometrie-waarde paren, bvb een reeks puntlocaties waarvoor de temperatuur is bepaald.</p>
-<p>In dat opzicht is een RuimtelijkBereik een specialisatie van een meetreeks, ttz een reeks metingen die de variatie x=f(y) voorstelt, ttz fenomeen x dat varieert in functie van een fenomeen y.</p>
-<p>In het voorbeeld van temperatuur zou dat bvb de temperatuur in functie van de luchtdruk kunnen zijn, maar ihkv het AP Ruimtelijke Bereiken gaat het over het variatie van x in functie van zijn ligging, dus temperatuur in functie van de positie.</p>
+<p>Niet elk fenomeen levert een constante als waarde op (bvb kleur), het kan ook variëren in functie van een andere parameter (bvb de lengte ve treinspoor in functie vd temperatuur).</p>
+<p>Bij variatie in ruimte of tijd spreken we van een Bereik.</p>
 <p>We baseren dit model op <a href="https://www.iso.org/standard/40121.html">ISO 19103</a> Geographic information — Schema for coverage geometry and functions.</p>
 <p>Daarin wordt Geometrie ruim gezien, het kan niet enkel gaan over een positie in de ruimte maar ook over een positie in de tijd (tijdreeks).</p>
 <p>We beperken ons hier tot ruimtelijke Geometrie en bovendien werkten we enkel het geval van PuntBereiken en CurveBereiken uit.</p>
-<p>Ook worden enkel DiscreteBereiken gemodelleerd, ttz een bereik waarvoor de waarden enkel gekend zijn voor een eindige set van punten of curves, niet voor elk punt in het beschouwde gebied bvb dmv interpolatie.</p>
-<p>Centrale klassen zijn DiscreetPuntBereik en DiscreetCurveBereik met resp bijhorende datatypes PuntWaardepaar en CurveWaardepaar.</p>
-<p>De geometrie is dus Punt of Curve, de waarde is generiek gedefinieerd dmv de klasse Record en moet bij hergebruik verder worden gespecialiseerd. </p>
+<p>Ook modelleren we enkel DiscreteBereiken, ttz een bereik waarvoor de waarden enkel gekend zijn voor een eindige set van geometrieën en bvb niet voor elk punt in het beschouwde gebied zoals het geval bij een ContinueBereik.</p>
+<p>Bvb bij remote sensing wordt de variatie weergegeven voor een eindige set van pixels, waarbij de waarde , bvb de reflectiegraad, constant is binnen elke pixel.</p>
+<p>De set van geometriëen kan kunstmatig bepaald zijn zoals bij de pixels of bij sampling, maar ook natuurlijk zoals bij een gemeentelijke indeling.</p>
+<p>Merk op dat DiscreteBereiken in ContinueBereiken kunnen worden omgezet, de discrete punten vormen dan controlepunten bij interpolatie.</p>
+<p>DiscreetPuntBereik en DiscreetCurveBereik zijn de centrale klassen, met resp PuntWaardepaar en CurveWaardepaar als datatypes.</p>
+<p>De waarde in het GeometrieWaardepaar is generiek gedefinieerd dmv de klasse Record en moet bij hergebruik verder worden gespecialiseerd.</p> 
 
             </div>
 
@@ -265,7 +266,9 @@
               <h3 class="h3" id="Bereik"><a href="https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik" data-placement="right">Bereik</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Variatie van een fenomeen in ruimte of tijd.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode).</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -442,9 +445,9 @@
               <h3 class="h3" id="Discreetbereik"><a href="http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage" data-placement="right">DiscreetBereik</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een fenomeen dat discreet varieert in ruimte of tijd.</dd>
+                    <dt>Beschrijving</dt><dd>Stapsgewijze variatie van een fenomeen in ruimte of tijd.</dd>
                     
-                    <dt>Gebruik</dt><dd>De waarde van een bepaald fenomeen kan een constante zijn (bv kleur) of kan variëren in functie van een andere parameter (bv de lengte van een treinspoor is functie van de temperatuur). Als het fenomeen varieert in ruimte of tijd spreken we van een bereik, bv de  temperatuur verandert met de locatie of wijzigt doorheen de tijd. Als het fenomeen bovendien varieert in stappen dan hebben we te maken met een DiscreetBereik. In tegenstelling tot een ContinuBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners uiteraard niet varieert binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinuBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie.</dd>
+                    <dt>Gebruik</dt><dd>In tegenstelling tot een ContinueBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners constant is binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinueBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
