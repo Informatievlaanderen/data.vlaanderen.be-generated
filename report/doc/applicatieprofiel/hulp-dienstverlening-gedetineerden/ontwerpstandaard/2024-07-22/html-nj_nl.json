@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/e09aeb4e9b1a88515c33bf00642cd34cdcd06afa",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/e09aeb4e9b1a88515c33bf00642cd34cdcd06afa/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/18900d6ef4037fb0b03b22bff490681c8faedafc",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/18900d6ef4037fb0b03b22bff490681c8faedafc/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-mijnThema/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -36,9 +36,11 @@
       "properties": [
         {
           "uri": "http://fixme.com#reden",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "reden",
+          "sort": "reden",
+          "label": {
+            "nl": "reden"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -64,13 +66,17 @@
           ],
           "cardinality": "1",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "label-nl": "reden"
+          }
         },
         {
           "uri": "http://fixme.com#aantalSessies",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "aantalSessies",
+          "sort": "aantal sessies",
+          "label": {
+            "nl": "aantal sessies"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -83,7 +89,9 @@
           "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "label-nl": "aantal sessies"
+          }
         }
       ]
     },
@@ -255,9 +263,11 @@
       "properties": [
         {
           "uri": "http://fixme.com#gedetineerdepopulatieVan",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "gedetineerdepopulatieVan",
+          "sort": "gedetineerdepopulatie van",
+          "label": {
+            "nl": "gedetineerdepopulatie van"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -283,39 +293,9 @@
           ],
           "cardinality": "1",
           "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
-          "uri": "http://fixme.com#gedetineerdepopulatieVan",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Gedetineerdepopulatie",
-              "uri": "http://fixme.com#Gedetineerdepopulatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "GevangenisVestiging",
-              "range_uri": "http://fixme.com#GevangenisVestiging"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#GevangenisVestiging",
-              "range_puri": "http://fixme.com#GevangenisVestiging",
-              "range_label": {
-                "nl": "GevangenisVestiging"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "label-nl": "gedetineerdepopulatie van"
+          }
         }
       ]
     },
@@ -333,6 +313,42 @@
         "label-nl": "GevangenisRegime"
       },
       "properties": [
+        {
+          "uri": "http://fixme.com#regimeVan",
+          "name": "regimeVan",
+          "sort": "regime van",
+          "label": {
+            "nl": "regime van"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GevangenisRegime",
+              "uri": "http://fixme.com#GevangenisRegime"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GevangenisVestiging",
+              "range_uri": "http://fixme.com#GevangenisVestiging"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#GevangenisVestiging",
+              "range_puri": "http://fixme.com#GevangenisVestiging",
+              "range_label": {
+                "nl": "GevangenisVestiging"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "regime van"
+          }
+        },
         {
           "uri": "http://fixme.com#regime",
           "name": "regime",
@@ -368,70 +384,6 @@
           "rawTags": {
             "label-nl": "regime"
           }
-        },
-        {
-          "uri": "http://fixme.com#isRegimeVan",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "GevangenisRegime",
-              "uri": "http://fixme.com#GevangenisRegime"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "GevangenisVestiging",
-              "range_uri": "http://fixme.com#GevangenisVestiging"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#GevangenisVestiging",
-              "range_puri": "http://fixme.com#GevangenisVestiging",
-              "range_label": {
-                "nl": "GevangenisVestiging"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
-          "uri": "http://fixme.com#isRegimeVan",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "GevangenisRegime",
-              "uri": "http://fixme.com#GevangenisRegime"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "GevangenisVestiging",
-              "range_uri": "http://fixme.com#GevangenisVestiging"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#GevangenisVestiging",
-              "range_puri": "http://fixme.com#GevangenisVestiging",
-              "range_label": {
-                "nl": "GevangenisVestiging"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {}
         },
         {
           "uri": "http://fixme.com#beschikbaarheid",
@@ -500,6 +452,78 @@
         "label-nl": "GevangenisVestiging"
       },
       "properties": [
+        {
+          "uri": "http://fixme.com#regime",
+          "name": "regime",
+          "sort": "regime",
+          "label": {
+            "nl": "regime"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GevangenisVestiging",
+              "uri": "http://fixme.com#GevangenisVestiging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GevangenisRegime",
+              "range_uri": "http://fixme.com#GevangenisRegime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#GevangenisRegime",
+              "range_puri": "http://fixme.com#GevangenisRegime",
+              "range_label": {
+                "nl": "GevangenisRegime"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "regime"
+          }
+        },
+        {
+          "uri": "http://fixme.com#gedetineerdepopulatie",
+          "name": "gedetineerdepopulatie",
+          "sort": "gedetineerdepopulatie",
+          "label": {
+            "nl": "gedetineerdepopulatie"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GevangenisVestiging",
+              "uri": "http://fixme.com#GevangenisVestiging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gedetineerdepopulatie",
+              "range_uri": "http://fixme.com#Gedetineerdepopulatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Gedetineerdepopulatie",
+              "range_puri": "http://fixme.com#Gedetineerdepopulatie",
+              "range_label": {
+                "nl": "Gedetineerdepopulatie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gedetineerdepopulatie"
+          }
+        },
         {
           "uri": "http://fixme.com#effectievePopulatie",
           "name": "effectievePopulatie",
@@ -671,9 +695,11 @@
       "properties": [
         {
           "uri": "http://fixme.com#populatieKenmerk",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "populatiekenmerk",
+          "sort": "populatieKenmerk",
+          "label": {
+            "nl": "populatieKenmerk"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -699,39 +725,9 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
-          "uri": "http://fixme.com#populatieKenmerk",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Populatie",
-              "uri": "http://fixme.com#Populatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PopulatieKenmerk",
-              "range_uri": "http://fixme.com#PopulatieKenmerk"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#PopulatieKenmerk",
-              "range_puri": "http://fixme.com#PopulatieKenmerk",
-              "range_label": {
-                "nl": "PopulatieKenmerk"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "label-nl": "populatieKenmerk"
+          }
         }
       ]
     },
@@ -748,7 +744,44 @@
       "rawTags": {
         "label-nl": "PopulatieKenmerk"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://fixme.com#deelVan",
+          "name": "deelVan",
+          "sort": "deel van",
+          "label": {
+            "nl": "deel van"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "PopulatieKenmerk",
+              "uri": "http://fixme.com#PopulatieKenmerk"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Populatie",
+              "range_uri": "http://fixme.com#Populatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Populatie",
+              "range_puri": "http://fixme.com#Populatie",
+              "range_label": {
+                "nl": "Populatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "deel van"
+          }
+        }
+      ]
     },
     {
       "uri": "http://fixme.com#Strafhuis",
@@ -4277,6 +4310,36 @@
   ],
   "properties": [
     {
+      "uri": "http://fixme.com#regimeVan",
+      "name": {
+        "nl": "regime van",
+        "undefined": "regimeVan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#regime",
+      "name": {
+        "nl": "regime",
+        "undefined": "regime"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "http://fixme.com#regime",
       "name": {
         "nl": "regime",
@@ -4309,7 +4372,8 @@
     {
       "uri": "http://fixme.com#reden",
       "name": {
-        "undefined": ""
+        "nl": "reden",
+        "undefined": "reden"
       },
       "description": {},
       "domain": [
@@ -4323,7 +4387,8 @@
     {
       "uri": "http://fixme.com#populatieKenmerk",
       "name": {
-        "undefined": ""
+        "nl": "populatieKenmerk",
+        "undefined": "populatiekenmerk"
       },
       "description": {},
       "domain": [
@@ -4339,34 +4404,6 @@
       "name": {
         "nl": "niveau",
         "undefined": "niveau"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "http://fixme.com#isRegimeVan",
-      "name": {
-        "undefined": ""
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "http://fixme.com#isRegimeVan",
-      "name": {
-        "undefined": ""
       },
       "description": {},
       "domain": [
@@ -4395,7 +4432,8 @@
     {
       "uri": "http://fixme.com#gedetineerdepopulatieVan",
       "name": {
-        "undefined": ""
+        "nl": "gedetineerdepopulatie van",
+        "undefined": "gedetineerdepopulatieVan"
       },
       "description": {},
       "domain": [
@@ -4407,9 +4445,10 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#gedetineerdepopulatieVan",
+      "uri": "http://fixme.com#gedetineerdepopulatie",
       "name": {
-        "undefined": ""
+        "nl": "gedetineerdepopulatie",
+        "undefined": "gedetineerdepopulatie"
       },
       "description": {},
       "domain": [
@@ -4436,9 +4475,10 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#populatieKenmerk",
+      "uri": "http://fixme.com#deelVan",
       "name": {
-        "undefined": ""
+        "nl": "deel van",
+        "undefined": "deelVan"
       },
       "description": {},
       "domain": [
