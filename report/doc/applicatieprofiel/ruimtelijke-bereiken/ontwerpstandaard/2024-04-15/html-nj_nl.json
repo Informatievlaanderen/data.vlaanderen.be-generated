@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3634fa73e1db40d8d434fb3f6d8bddb66af73b75",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3634fa73e1db40d8d434fb3f6d8bddb66af73b75/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/70331503604bfaf887f29d8a985ab29bee5ee96b",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/70331503604bfaf887f29d8a985ab29bee5ee96b/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html",
     "usesVocs": [],
@@ -49,14 +49,14 @@
       },
       "sort": "CRS",
       "description": {
-        "nl": "TODO"
+        "nl": "Indeling van de ruimte zodanig dat elk punt eenduidig dmv een set van getallen (de coördinaten) eenduidig kan worden weergegeven."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "CRS",
         "uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
-        "ap-definition-nl": "TODO"
+        "ap-definition-nl": "Indeling van de ruimte zodanig dat elk punt eenduidig dmv een set van getallen (de coördinaten) eenduidig kan worden weergegeven."
       },
       "properties": []
     },
@@ -71,14 +71,14 @@
         "nl": "Variatie van een fenomeen in ruimte of tijd."
       },
       "usage": {
-        "nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
+        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
       },
       "parents": [],
       "rawTags": {
         "label-nl": "Bereik",
         "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
         "ap-definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
-        "ap-usageNote-nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
+        "ap-usageNote-nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
       },
       "properties": [
         {
@@ -89,7 +89,7 @@
             "nl": "typeBereik"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Datatype van het Record dat een waarde voorstelt."
           },
           "usage": {},
           "domain": [
@@ -118,7 +118,7 @@
           "rawTags": {
             "label-nl": "typeBereik",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Datatype van het Record dat een waarde voorstelt."
           }
         },
         {
@@ -129,9 +129,11 @@
             "nl": "bereikElement"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar een Attribuutwaarde van het Bereik."
           },
-          "usage": {},
+          "usage": {
+            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+          },
           "domain": [
             {
               "EA-Name": "Bereik",
@@ -140,16 +142,16 @@
           ],
           "range": [
             {
-              "range_label": "Attribuutwaarden",
+              "range_label": "Attribuutwaarde",
               "range_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Attribuutwaarden",
+              "range_uri": "#Attribuutwaarde",
               "range_puri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
               "range_label": {
-                "nl": "Attribuutwaarden"
+                "nl": "Attribuutwaarde"
               }
             }
           ],
@@ -158,7 +160,8 @@
           "rawTags": {
             "label-nl": "bereikElement",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Verwijzing naar een Attribuutwaarde van het Bereik.",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
           }
         },
         {
@@ -169,7 +172,7 @@
             "nl": "domeinOmvang"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Uierste grenzen in tijd en/of ruimte van het Bereik."
           },
           "usage": {},
           "domain": [
@@ -198,7 +201,7 @@
           "rawTags": {
             "label-nl": "domeinOmvang",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Uierste grenzen in tijd en/of ruimte van het Bereik."
           }
         },
         {
@@ -209,9 +212,11 @@
             "nl": "domeinElement"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar een DomeinObject van het Bereik."
           },
-          "usage": {},
+          "usage": {
+            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+          },
           "domain": [
             {
               "EA-Name": "Bereik",
@@ -238,7 +243,8 @@
           "rawTags": {
             "label-nl": "domeinElement",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Verwijzing naar een DomeinObject van het Bereik.",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
           }
         },
         {
@@ -249,9 +255,11 @@
             "nl": "gemeenschappelijkPuntRegel"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Geeft aan welke waarde moet worden teruggegeven voor een gegeven positie wanneer die binnen meerdere Geometrieën valt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb de laagste waarde of juist de hoogste of het gemiddelde. Voor het uitzonderlijke geval dat Domeinobjecten of de Geometrieën ervan elkaar overlappen."
+          },
           "domain": [
             {
               "EA-Name": "Bereik",
@@ -278,7 +286,8 @@
           "rawTags": {
             "label-nl": "gemeenschappelijkPuntRegel",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Geeft aan welke waarde moet worden teruggegeven voor een gegeven positie wanneer die binnen meerdere Geometrieën valt.",
+            "ap-usageNote-nl": "Bvb de laagste waarde of juist de hoogste of het gemiddelde. Voor het uitzonderlijke geval dat Domeinobjecten of de Geometrieën ervan elkaar overlappen."
           }
         },
         {
@@ -289,9 +298,11 @@
             "nl": "crs"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
           },
-          "usage": {},
+          "usage": {
+            "nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie."
+          },
           "domain": [
             {
               "EA-Name": "Bereik",
@@ -317,8 +328,9 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "crs",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie.",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
           }
         }
       ]
@@ -588,14 +600,14 @@
       },
       "sort": "Recordtype",
       "description": {
-        "nl": "TODO"
+        "nl": "Datatype van de waarden in het Bereik."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "Recordtype",
         "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
-        "ap-definition-nl": "TODO"
+        "ap-definition-nl": "Datatype van de waarden in het Bereik."
       },
       "properties": []
     },
@@ -607,33 +619,36 @@
       },
       "sort": "Omvang",
       "description": {
-        "nl": "TODO"
+        "nl": "Informatie over de ruimtelijke of temporele omvang van iets."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Bvb de omschrijvende rechthoek van een polygoon."
+      },
       "parents": [],
       "rawTags": {
         "label-nl": "Omvang",
         "uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
-        "ap-definition-nl": "TODO"
+        "ap-definition-nl": "Informatie over de ruimtelijke of temporele omvang van iets.",
+        "ap-usageNote-nl": "Bvb de omschrijvende rechthoek van een polygoon."
       },
       "properties": []
     },
     {
       "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
-      "name": "Attribuutwaarden",
+      "name": "Attribuutwaarde",
       "label": {
-        "nl": "Attribuutwaarden"
+        "nl": "Attribuutwaarde"
       },
-      "sort": "Attribuutwaarden",
+      "sort": "Attribuutwaarde",
       "description": {
-        "nl": "TODO"
+        "nl": "Record met een waarde voor een Domeinobject."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "Attribuutwaarden",
+        "label-nl": "Attribuutwaarde",
         "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
-        "ap-definition-nl": "TODO"
+        "ap-definition-nl": "Record met een waarde voor een Domeinobject."
       },
       "properties": [
         {
@@ -644,12 +659,12 @@
             "nl": "waarden"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De waarden."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Attribuutwaarden",
+              "EA-Name": "Attribuutwaarde",
               "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
             }
           ],
@@ -673,7 +688,7 @@
           "rawTags": {
             "label-nl": "waarden",
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "De waarden."
           }
         }
       ]
@@ -931,17 +946,17 @@
       },
       "sort": "Domeinobject",
       "description": {
-        "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+        "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
       },
       "usage": {
-        "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+        "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
       },
       "parents": [],
       "rawTags": {
         "label-nl": "Domeinobject",
         "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject",
-        "ap-definition-nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is.",
-        "ap-usageNote-nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+        "ap-definition-nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald.",
+        "ap-usageNote-nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
       },
       "properties": [
         {
@@ -952,7 +967,7 @@
             "nl": "ruimtelijkeSamenstelling"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
           },
           "usage": {},
           "domain": [
@@ -981,7 +996,7 @@
           "rawTags": {
             "label-nl": "ruimtelijkeSamenstelling",
             "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "De geometrieën waaruit het Domeinobject is samengesteld."
           }
         }
       ]
@@ -997,7 +1012,7 @@
         "nl": "Een 1-dimensionele geometrische primitieve."
       },
       "usage": {
-        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
       },
       "parents": [
         {
@@ -1013,7 +1028,7 @@
         "uri": "http://www.opengis.net/ont/sf#Curve",
         "ap-label-nl": "Curve",
         "ap-definition-nl": "Een 1-dimensionele geometrische primitieve.",
-        "ap-usageNote-nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+        "ap-usageNote-nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
       },
       "properties": []
     },

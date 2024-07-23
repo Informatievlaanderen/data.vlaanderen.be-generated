@@ -20,7 +20,7 @@
         "nl": "Recordtype"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Datatype van de waarden in het Bereik."
       }
     },
     {
@@ -30,7 +30,7 @@
         "nl": "CRS"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Indeling van de ruimte zodanig dat elk punt eenduidig dmv een set van getallen (de coördinaten) eenduidig kan worden weergegeven."
       }
     },
     {
@@ -40,17 +40,20 @@
         "nl": "Omvang"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Informatie over de ruimtelijke of temporele omvang van iets."
+      },
+      "usage": {
+        "nl": "Bvb de omschrijvende rechthoek van een polygoon."
       }
     },
     {
       "EA-Guid": "{830085F9-A4B0-4386-9A88-8DA4F6265522}",
-      "name": "Attribuutwaarden",
+      "name": "Attribuutwaarde",
       "label": {
-        "nl": "Attribuutwaarden"
+        "nl": "Attribuutwaarde"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Record met een waarde voor een Domeinobject."
       }
     },
     {
@@ -63,7 +66,7 @@
         "nl": "Variatie van een fenomeen in ruimte of tijd."
       },
       "usage": {
-        "nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
+        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
       }
     },
     {
@@ -148,10 +151,10 @@
         "nl": "Domeinobject"
       },
       "definition": {
-        "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+        "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
       },
       "usage": {
-        "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+        "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
       }
     },
     {
@@ -174,7 +177,7 @@
         "nl": "Een 1-dimensionele geometrische primitieve."
       },
       "usage": {
-        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
       }
     },
     {
@@ -245,7 +248,7 @@
         "nl": "ruimtelijkeSamenstelling"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
       }
     },
     {
@@ -294,7 +297,7 @@
         "nl": "typeBereik"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Datatype van het Record dat een waarde voorstelt."
       }
     },
     {
@@ -304,7 +307,10 @@
         "nl": "bereikElement"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Verwijzing naar een Attribuutwaarde van het Bereik."
+      },
+      "usage": {
+        "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
       }
     },
     {
@@ -314,7 +320,7 @@
         "nl": "domeinOmvang"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Uierste grenzen in tijd en/of ruimte van het Bereik."
       }
     },
     {
@@ -324,7 +330,10 @@
         "nl": "domeinElement"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Verwijzing naar een DomeinObject van het Bereik."
+      },
+      "usage": {
+        "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
       }
     },
     {
@@ -334,7 +343,10 @@
         "nl": "gemeenschappelijkPuntRegel"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Geeft aan welke waarde moet worden teruggegeven voor een gegeven positie wanneer die binnen meerdere Geometrieën valt."
+      },
+      "usage": {
+        "nl": "Bvb de laagste waarde of juist de hoogste of het gemiddelde. Voor het uitzonderlijke geval dat Domeinobjecten of de Geometrieën ervan elkaar overlappen."
       }
     },
     {
@@ -387,7 +399,7 @@
         "nl": "waarden"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "De waarden."
       }
     },
     {
@@ -397,7 +409,10 @@
         "nl": "crs"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
+      },
+      "usage": {
+        "nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie."
       }
     }
   ]

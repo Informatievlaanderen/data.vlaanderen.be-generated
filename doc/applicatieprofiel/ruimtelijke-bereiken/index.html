@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3634fa73e1db40d8d434fb3f6d8bddb66af73b75">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3634fa73e1db40d8d434fb3f6d8bddb66af73b75</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3634fa73e1db40d8d434fb3f6d8bddb66af73b75/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3634fa73e1db40d8d434fb3f6d8bddb66af73b75/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/70331503604bfaf887f29d8a985ab29bee5ee96b">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/70331503604bfaf887f29d8a985ab29bee5ee96b</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/70331503604bfaf887f29d8a985ab29bee5ee96b/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/70331503604bfaf887f29d8a985ab29bee5ee96b/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html">https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html</a></dd>
 
@@ -171,13 +171,10 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
 <p>Het applicatieprofiel Ruimtelijke Bereiken toont hoe met termen uit het overeenkomstig <a href="https://data.vlaanderen.be/ns/ruimtelijke-bereiken/">vocabularium</a> de geografische spreiding van een fenomeen kan worden beschreven.</p>
-<p>Niet elk fenomeen levert een constante als waarde op (bvb kleur), het kan ook variëren in functie van een andere parameter (bvb de lengte ve treinspoor in functie vd temperatuur).</p>
-<p>Bij variatie in ruimte of tijd spreken we van een Bereik.</p>
+<p>Niet elk fenomeen levert een constante als waarde op (bvb kleur), het kan ook variëren in functie van een andere parameter (bvb de lengte ve treinspoor in functie vd temperatuur). Bij variatie in ruimte of tijd spreken we van een Bereik.</p>
 <p>We baseren dit model op <a href="https://www.iso.org/standard/40121.html">ISO 19103</a> Geographic information — Schema for coverage geometry and functions.</p>
-<p>Daarin wordt Geometrie ruim gezien, het kan niet enkel gaan over een positie in de ruimte maar ook over een positie in de tijd (tijdreeks).</p>
-<p>We beperken ons hier tot ruimtelijke Geometrie en bovendien werkten we enkel het geval van PuntBereiken en CurveBereiken uit.</p>
-<p>Ook modelleren we enkel DiscreteBereiken, ttz een bereik waarvoor de waarden enkel gekend zijn voor een eindige set van geometrieën en bvb niet voor elk punt in het beschouwde gebied zoals het geval bij een ContinueBereik.</p>
-<p>Bvb bij remote sensing wordt de variatie weergegeven voor een eindige set van pixels, waarbij de waarde , bvb de reflectiegraad, constant is binnen elke pixel.</p>
+<p>Daarin wordt Geometrie ruim gezien, het kan niet enkel gaan over een positie in de ruimte maar ook over een positie in de tijd (tijdreeks). We beperken ons hier tot ruimtelijke Geometrie en bovendien werkten we enkel het geval van PuntBereiken en CurveBereiken uit.</p>
+<p>Ook modelleren we enkel DiscreteBereiken, ttz een bereik waarvoor de waarden enkel gekend zijn voor een eindige set van geometrieën en bvb niet voor elk punt in het beschouwde gebied zoals het geval bij een ContinueBereik. Bvb bij remote sensing wordt de variatie weergegeven voor een eindige set van pixels, waarbij de waarde , bvb de reflectiegraad, constant is binnen elke pixel.</p>
 <p>De set van geometriëen kan kunstmatig bepaald zijn zoals bij de pixels of bij sampling, maar ook natuurlijk zoals bij een gemeentelijke indeling.</p>
 <p>Merk op dat DiscreteBereiken in ContinueBereiken kunnen worden omgezet, de discrete punten vormen dan controlepunten bij interpolatie.</p>
 <p>DiscreetPuntBereik en DiscreetCurveBereik zijn de centrale klassen, met resp PuntWaardepaar en CurveWaardepaar als datatypes.</p>
@@ -234,7 +231,7 @@
                     <p> In dit document worden de volgende datatypes toegelicht:
                       <br />
                       |
-                      <a href="#Attribuutwaarden">Attribuutwaarden</a> |
+                      <a href="#Attribuutwaarde">Attribuutwaarde</a> |
                       <a href="#Curve">Curve</a> |
                       <a href="#Curvewaardepaar">CurveWaardepaar</a> |
                       <a href="#Domeinobject">Domeinobject</a> |
@@ -268,7 +265,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Variatie van een fenomeen in ruimte of tijd.</dd>
                     
-                    <dt>Gebruik</dt><dd>Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode).</dd>
+                    <dt>Gebruik</dt><dd>Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode).</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -309,13 +306,13 @@
                         <td>
                           
 			    
-			    <a href="#Attribuutwaarden" data-placement="right">Attribuutwaarden</a>
+			    <a href="#Attribuutwaarde" data-placement="right">Attribuutwaarde</a>
 			    
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Verwijzing naar een Attribuutwaarde van het Bereik.</td>
+                        <td property="vann:usageNote">OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt.</td>
                         <td></td>
                       </tr>
                     
@@ -334,8 +331,8 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd.</td>
+                        <td property="vann:usageNote">OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie.</td>
                         <td></td>
                       </tr>
                     
@@ -354,8 +351,8 @@
                           
                         </td>
                         <td>1..*</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Verwijzing naar een DomeinObject van het Bereik.</td>
+                        <td property="vann:usageNote">OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt.</td>
                         <td></td>
                       </tr>
                     
@@ -374,7 +371,7 @@
                           
                         </td>
                         <td>1..*</td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">Uierste grenzen in tijd en/of ruimte van het Bereik.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -394,8 +391,8 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Geeft aan welke waarde moet worden teruggegeven voor een gegeven positie wanneer die binnen meerdere Geometrieën valt.</td>
+                        <td property="vann:usageNote">Bvb de laagste waarde of juist de hoogste of het gemiddelde. Voor het uitzonderlijke geval dat Domeinobjecten of de Geometrieën ervan elkaar overlappen.</td>
                         <td></td>
                       </tr>
                     
@@ -414,7 +411,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">Datatype van het Record dat een waarde voorstelt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -429,7 +426,7 @@
               <h3 class="h3" id="Crs"><a href="http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS" data-placement="right">CRS</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Indeling van de ruimte zodanig dat elk punt eenduidig dmv een set van getallen (de coördinaten) eenduidig kan worden weergegeven.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -651,17 +648,17 @@
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Attribuutwaarden"><a href="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues" data-placement="right">Attribuutwaarden</a></h3>
+              <h3 class="h3" id="Attribuutwaarde"><a href="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues" data-placement="right">Attribuutwaarde</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Record met een waarde voor een Domeinobject.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Attribuutwaarden%3Awaarden">waarden</a>.</dd>
+                      <a href="#Attribuutwaarde%3Awaarden">waarden</a>.</dd>
                     
                   </dl>
                 </div>
@@ -681,7 +678,7 @@
 
                     <tbody class="supertype">
                       
-                      <tr id="Attribuutwaarden%3Awaarden" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values">
+                      <tr id="Attribuutwaarde%3Awaarden" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values" data-placement="right">waarden</a>
@@ -695,7 +692,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">De waarden.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -714,7 +711,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Een 1-dimensionele geometrische primitieve.</dd>
                     
-                    <dt>Gebruik</dt><dd>Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.</dd>
+                    <dt>Gebruik</dt><dd>Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -799,9 +796,9 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is.</dd>
+                    <dt>Beschrijving</dt><dd>Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling.</dd>
+                    <dt>Gebruik</dt><dd>In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -841,7 +838,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">De geometrieën waaruit het Domeinobject is samengesteld.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1034,7 +1031,9 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Informatie over de ruimtelijke of temporele omvang van iets.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Bvb de omschrijvende rechthoek van een polygoon.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1138,7 +1137,7 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Datatype van de waarden in het Bereik.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
