@@ -54,78 +54,43 @@
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-04-15",
-  "classes": [
+  "classes": [],
+  "externals": [
     {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Attribuutwaarden"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Bereik"
-      },
-      "definition": {
-        "nl": "Variatie van een fenomeen in ruimte of tijd."
-      },
-      "usage": {
-        "nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "CRS"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "GemeenschappelijkePuntregel"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Omvang"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
+      "name": {
         "nl": "Recordtype"
       },
-      "definition": {
-        "nl": "TODO"
+      "@id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "CRS"
       },
-      "parents": []
-    }
-  ],
-  "externals": [
+      "@id": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Omvang"
+      },
+      "@id": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Attribuutwaarden"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Bereik"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+      "@type": "rdfs:Class"
+    },
     {
       "name": {
         "nl": "CurveWaardepaar"
@@ -174,129 +139,16 @@
       },
       "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject",
       "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "GemeenschappelijkePuntregel"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule",
+      "@type": "rdfs:Class"
     }
   ],
-  "properties": [
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#waarden",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "waarden"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#typeBereik",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "typeBereik"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#gemeenschappelijkPuntRegel",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gemeenschappelijkPuntRegel"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinOmvang",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "domeinOmvang"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinElement",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "domeinElement"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#crs",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "crs"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#bereikElement",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "bereikElement"
-      },
-      "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden"
-      ],
-      "generalization": []
-    }
-  ],
+  "properties": [],
   "externalproperties": [
     {
       "name": {
@@ -306,7 +158,9 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {},
+      "name": {
+        "nl": "element"
+      },
       "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element",
       "@type": "rdf:Property"
     },
@@ -318,8 +172,45 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {},
+      "name": {
+        "nl": "element"
+      },
       "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "typeBereik"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bereikElement"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "domeinOmvang"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "domeinElement"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "gemeenschappelijkPuntRegel"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
       "@type": "rdf:Property"
     },
     {
@@ -348,6 +239,20 @@
         "nl": "geometrie"
       },
       "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "waarden"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "crs"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
       "@type": "rdf:Property"
     }
   ],

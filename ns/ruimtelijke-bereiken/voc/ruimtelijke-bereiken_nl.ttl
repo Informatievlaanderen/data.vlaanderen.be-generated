@@ -6,6 +6,21 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType> a rdfs:Class;
+  rdfs:label "Recordtype"@nl .
+
+<http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS> a rdfs:Class;
+  rdfs:label "CRS"@nl .
+
+<http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent> a rdfs:Class;
+  rdfs:label "Omvang"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues> a rdfs:Class;
+  rdfs:label "Attribuutwaarden"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage> a rdfs:Class;
+  rdfs:label "Bereik"@nl .
+
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> a rdfs:Class;
   rdfs:label "CurveWaardepaar"@nl .
 
@@ -27,107 +42,8 @@
 <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject> a rdfs:Class;
   rdfs:label "Domeinobject"@nl .
 
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#bereikElement> a owl:ObjectProperty;
-  rdfs:label "bereikElement"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#crs> a owl:ObjectProperty;
-  rdfs:label "crs"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinElement> a owl:ObjectProperty;
-  rdfs:label "domeinElement"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinOmvang> a owl:ObjectProperty;
-  rdfs:label "domeinOmvang"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#gemeenschappelijkPuntRegel> a owl:ObjectProperty;
-  rdfs:label "gemeenschappelijkPuntRegel"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#typeBereik> a owl:ObjectProperty;
-  rdfs:label "typeBereik"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#waarden> a owl:ObjectProperty;
-  rdfs:label "waarden"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken>;
-  rdfs:range <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
-
-<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry> a rdf:Property;
-  rdfs:label "geometrie"@nl .
-
-<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry> a rdf:Property;
-  rdfs:label "geometrie"@nl .
-
-<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> a rdf:Property;
-  rdfs:label "waarde"@nl .
-
-<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry> a rdf:Property;
-  rdfs:label "geometrie"@nl .
-
-<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element> a rdf:Property .
-
-<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element> a rdf:Property;
-  rdfs:label "element"@nl .
-
-<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element> a rdf:Property .
-
-<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement> a rdf:Property;
-  rdfs:label "ruimtelijkeSamenstelling"@nl .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS> a owl:Class;
-  rdfs:label "CRS"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel> a owl:Class;
-  rdfs:label "GemeenschappelijkePuntregel"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang> a owl:Class;
-  rdfs:label "Omvang"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype> a owl:Class;
-  rdfs:label "Recordtype"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden> a owl:Class;
-  rdfs:label "Attribuutwaarden"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
-
-<https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik> a owl:Class;
-  rdfs:label "Bereik"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."@nl;
-  rdfs:comment "Variatie van een fenomeen in ruimte of tijd."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> .
+<http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule> a rdfs:Class;
+  rdfs:label "GemeenschappelijkePuntregel"@nl .
 
 <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> a owl:Ontology;
   rdfs:label "ruimtelijke-bereiken"@en,
@@ -150,21 +66,34 @@
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair>,
+  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType>,
+    <http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS>,
+    <http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject>,
+    <http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry>,
-    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>;
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CRS>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
@@ -185,3 +114,48 @@
     foaf:lastName "AuteurNaam";
     foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
   ] .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CRS> a rdf:Property;
+  rdfs:label "crs"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values> a rdf:Property;
+  rdfs:label "waarden"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> a rdf:Property;
+  rdfs:label "waarde"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule> a rdf:Property;
+  rdfs:label "gemeenschappelijkPuntRegel"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement> a rdf:Property;
+  rdfs:label "domeinElement"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent> a rdf:Property;
+  rdfs:label "domeinOmvang"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement> a rdf:Property;
+  rdfs:label "bereikElement"@nl .
+
+<http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType> a rdf:Property;
+  rdfs:label "typeBereik"@nl .
+
+<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element> a rdf:Property;
+  rdfs:label "element"@nl .
+
+<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element> a rdf:Property;
+  rdfs:label "element"@nl .
+
+<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element> a rdf:Property;
+  rdfs:label "element"@nl .
+
+<http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement> a rdf:Property;
+  rdfs:label "ruimtelijkeSamenstelling"@nl .

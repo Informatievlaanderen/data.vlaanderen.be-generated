@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f4fbffee3188373887fa80fa2a500da51009aaf2",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f4fbffee3188373887fa80fa2a500da51009aaf2/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3634fa73e1db40d8d434fb3f6d8bddb66af73b75",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3634fa73e1db40d8d434fb3f6d8bddb66af73b75/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html",
     "usesVocs": [],
@@ -23,7 +23,45 @@
   },
   "classes": [
     {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik",
+      "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+      "name": "Record",
+      "label": {
+        "nl": "Record"
+      },
+      "sort": "Record",
+      "description": {
+        "nl": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Record",
+        "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+        "ap-definition-nl": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde."
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
+      "name": "Crs",
+      "label": {
+        "nl": "CRS"
+      },
+      "sort": "CRS",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "CRS",
+        "uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
+        "ap-definition-nl": "TODO"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
       "name": "Bereik",
       "label": {
         "nl": "Bereik"
@@ -38,12 +76,13 @@
       "parents": [],
       "rawTags": {
         "label-nl": "Bereik",
-        "definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
-        "usageNote-nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+        "ap-definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
+        "ap-usageNote-nl": "Voor situaties dat het fenomeen geen constante als waarde oplevert (bvb de kleur van het fenomeen), maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode)."
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#typeBereik",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
           "name": "typebereik",
           "sort": "typeBereik",
           "label": {
@@ -56,19 +95,19 @@
           "domain": [
             {
               "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
             }
           ],
           "range": [
             {
               "range_label": "Recordtype",
-              "range_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype"
+              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Recordtype",
-              "range_puri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype",
+              "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
               "range_label": {
                 "nl": "Recordtype"
               }
@@ -78,15 +117,16 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "typeBereik",
-            "definition-nl": "TODO"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
+            "ap-definition-nl": "TODO"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#gemeenschappelijkPuntRegel",
-          "name": "gemeenschappelijkpuntregel",
-          "sort": "gemeenschappelijkPuntRegel",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+          "name": "bereikelement",
+          "sort": "bereikElement",
           "label": {
-            "nl": "gemeenschappelijkPuntRegel"
+            "nl": "bereikElement"
           },
           "description": {
             "nl": "TODO"
@@ -95,33 +135,34 @@
           "domain": [
             {
               "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
             }
           ],
           "range": [
             {
-              "range_label": "GemeenschappelijkPuntregel",
-              "range_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel"
+              "range_label": "Attribuutwaarden",
+              "range_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GemeenschappelijkePuntregel",
-              "range_puri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#GemeenschappelijkPuntregel",
+              "range_uri": "#Attribuutwaarden",
+              "range_puri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
               "range_label": {
-                "nl": "GemeenschappelijkePuntregel"
+                "nl": "Attribuutwaarden"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "gemeenschappelijkPuntRegel",
-            "definition-nl": "TODO"
+            "label-nl": "bereikElement",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+            "ap-definition-nl": "TODO"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinOmvang",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
           "name": "domeinomvang",
           "sort": "domeinOmvang",
           "label": {
@@ -134,19 +175,19 @@
           "domain": [
             {
               "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
             }
           ],
           "range": [
             {
               "range_label": "Omvang",
-              "range_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang"
+              "range_uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Omvang",
-              "range_puri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang",
+              "range_puri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
               "range_label": {
                 "nl": "Omvang"
               }
@@ -156,11 +197,12 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "domeinOmvang",
-            "definition-nl": "TODO"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
+            "ap-definition-nl": "TODO"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinElement",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
           "name": "domeinelement",
           "sort": "domeinElement",
           "label": {
@@ -173,7 +215,7 @@
           "domain": [
             {
               "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
             }
           ],
           "range": [
@@ -195,11 +237,52 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "domeinElement",
-            "definition-nl": "TODO"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
+            "ap-definition-nl": "TODO"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#crs",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
+          "name": "gemeenschappelijkpuntregel",
+          "sort": "gemeenschappelijkPuntRegel",
+          "label": {
+            "nl": "gemeenschappelijkPuntRegel"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bereik",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GemeenschappelijkPuntregel",
+              "range_uri": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#GemeenschappelijkePuntregel",
+              "range_puri": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule",
+              "range_label": {
+                "nl": "GemeenschappelijkePuntregel"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gemeenschappelijkPuntRegel",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
+            "ap-definition-nl": "TODO"
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
           "name": "crs",
           "sort": "crs",
           "label": {
@@ -212,19 +295,19 @@
           "domain": [
             {
               "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
             }
           ],
           "range": [
             {
               "range_label": "CRS",
-              "range_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS"
+              "range_uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#CRS",
-              "range_puri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS",
+              "range_puri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
               "range_label": {
                 "nl": "CRS"
               }
@@ -234,86 +317,11 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "crs",
-            "definition-nl": "TODO"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#bereikElement",
-          "name": "bereikelement",
-          "sort": "bereikElement",
-          "label": {
-            "nl": "bereikElement"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Bereik",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Attribuutwaarden",
-              "range_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Attribuutwaarden",
-              "range_puri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden",
-              "range_label": {
-                "nl": "Attribuutwaarden"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "bereikElement",
-            "definition-nl": "TODO"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
+            "ap-definition-nl": "TODO"
           }
         }
       ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#CRS",
-      "name": "Crs",
-      "label": {
-        "nl": "CRS"
-      },
-      "sort": "CRS",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "rawTags": {
-        "label-nl": "CRS",
-        "definition-nl": "TODO"
-      },
-      "properties": []
-    },
-    {
-      "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
-      "name": "Record",
-      "label": {
-        "nl": "Record"
-      },
-      "sort": "Record",
-      "description": {
-        "nl": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde."
-      },
-      "usage": {},
-      "parents": [],
-      "rawTags": {
-        "label-nl": "Record",
-        "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
-        "ap-definition-nl": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde."
-      },
-      "properties": []
     },
     {
       "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
@@ -333,14 +341,13 @@
           "label": "Bereik",
           "name": "Bereik",
           "package": "OSLO-RuimtelijkeBereiken",
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
           "scoped_uri": "#Bereik"
         }
       ],
       "rawTags": {
         "label-nl": "DiscreetBereik",
         "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
-        "ap-label-nl": "DiscreetBereik",
         "ap-definition-nl": "Stapsgewijze variatie van een fenomeen in ruimte of tijd.",
         "ap-usageNote-nl": "In tegenstelling tot een ContinueBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners constant is binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinueBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
       },
@@ -383,9 +390,9 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "Onderdeel van het Bereik.",
-            "ap-label-nl": "element",
             "ap-usageNote-nl": "Concreet het discrete deel van het bereik waarvoor de waarde vh fenomeen gekend is. Bv een pixel en de waarde vd pixel.",
-            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element"
+            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
+            "label-nl": "element"
           }
         }
       ]
@@ -489,7 +496,6 @@
       "rawTags": {
         "label-nl": "DiscreetPuntbereik",
         "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage",
-        "ap-label-nl": "DiscreetPuntbereik",
         "ap-definition-nl": "DiscreetBereik waarbij het fenomeen puntgewijs varieert in de ruimte.",
         "ap-usageNote-nl": "Het fenomeen komt enkel voor op bepaalde puntlocaties in een gebied (bv exemplaren van een bepaalde plantensoort) of werd enkel bepaald voor een welgekozen set van puntlocaties (bv reflectiegraad op een regelmatig rooster van meetpunten)."
       },
@@ -531,122 +537,16 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "element",
             "ap-definition-nl": "Onderdeel van het Bereik.",
             "ap-usageNote-nl": "Concreet het discrete deel van het bereik waarvoor de waarde vh fenomeen gekend is. Bv een meetpunt en de waarde in dat meetpunt.",
-            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element"
+            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element",
+            "label-nl": "element"
           }
         }
       ]
     }
   ],
-  "properties": [
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#waarden",
-      "name": {
-        "nl": "waarden",
-        "undefined": "waarden"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#typeBereik",
-      "name": {
-        "nl": "typeBereik",
-        "undefined": "typebereik"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#gemeenschappelijkPuntRegel",
-      "name": {
-        "nl": "gemeenschappelijkPuntRegel",
-        "undefined": "gemeenschappelijkpuntregel"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinOmvang",
-      "name": {
-        "nl": "domeinOmvang",
-        "undefined": "domeinomvang"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#domeinElement",
-      "name": {
-        "nl": "domeinElement",
-        "undefined": "domeinelement"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#crs",
-      "name": {
-        "nl": "crs",
-        "undefined": "crs"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#bereikElement",
-      "name": {
-        "nl": "bereikElement",
-        "undefined": "bereikelement"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    }
-  ],
+  "properties": [],
   "contributors": [
     {
       "role": "A",
@@ -681,7 +581,45 @@
   ],
   "datatypes": [
     {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden",
+      "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
+      "name": "Recordtype",
+      "label": {
+        "nl": "Recordtype"
+      },
+      "sort": "Recordtype",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Recordtype",
+        "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
+        "ap-definition-nl": "TODO"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
+      "name": "Omvang",
+      "label": {
+        "nl": "Omvang"
+      },
+      "sort": "Omvang",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Omvang",
+        "uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
+        "ap-definition-nl": "TODO"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
       "name": "Attribuutwaarden",
       "label": {
         "nl": "Attribuutwaarden"
@@ -694,11 +632,12 @@
       "parents": [],
       "rawTags": {
         "label-nl": "Attribuutwaarden",
-        "definition-nl": "TODO"
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
+        "ap-definition-nl": "TODO"
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#waarden",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
           "name": "waarden",
           "sort": "waarden",
           "label": {
@@ -711,7 +650,7 @@
           "domain": [
             {
               "EA-Name": "Attribuutwaarden",
-              "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Attribuutwaarden"
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
             }
           ],
           "range": [
@@ -733,46 +672,11 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "waarden",
-            "definition-nl": "TODO"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
+            "ap-definition-nl": "TODO"
           }
         }
       ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Omvang",
-      "name": "Omvang",
-      "label": {
-        "nl": "Omvang"
-      },
-      "sort": "Omvang",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "rawTags": {
-        "label-nl": "Omvang",
-        "definition-nl": "TODO"
-      },
-      "properties": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Recordtype",
-      "name": "Recordtype",
-      "label": {
-        "nl": "Recordtype"
-      },
-      "sort": "Recordtype",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "rawTags": {
-        "label-nl": "Recordtype",
-        "definition-nl": "TODO"
-      },
-      "properties": []
     },
     {
       "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
@@ -798,9 +702,9 @@
       ],
       "rawTags": {
         "label-nl": "CurveWaardepaar",
-        "definition-nl": "Element van een DiscreetCurveBereik.",
-        "usageNote-nl": "Een CurveWaardepaar beschrijft de geometrie van een stuk van de ruimte voorgesteld door een Curve en de waarde van een continu variërend fenomeen die men voor die Curve heeft vastgesteld. Bv de straatnaam langs een stuk van een wegsegment of de stratigrafie van een diepteinterval bij een boring.",
-        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair"
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
+        "ap-definition-nl": "Element van een DiscreetCurveBereik.",
+        "ap-usageNote-nl": "Een CurveWaardepaar beschrijft de geometrie van een stuk van de ruimte voorgesteld door een Curve en de waarde van een continu variërend fenomeen die men voor die Curve heeft vastgesteld. Bv de straatnaam langs een stuk van een wegsegment of de stratigrafie van een diepteinterval bij een boring."
       },
       "properties": [
         {
@@ -839,8 +743,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "geometrie",
-            "definition-nl": "Geometrie van het element.",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+            "ap-definition-nl": "Geometrie van het element."
           }
         }
       ]
@@ -861,9 +765,9 @@
       "parents": [],
       "rawTags": {
         "label-nl": "GeometrieWaardepaar",
-        "definition-nl": "Element van een DiscreetRuimtelijkBereik.",
-        "usageNote-nl": "Een GeometrieWaardepaar beschrijft de geometrie van een stuk van de ruimte (Punt, Lijn, Vlak etc.) of de tijd (Moment, Periode etc.) en de waarde van een continu variërend fenomeen die men voor dat stuk heeft vastgesteld. Bv de waarde van een pixel in een luchtfoto of de temperatuur in een meetstation op een bepaald tijdstip.",
-        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
+        "ap-definition-nl": "Element van een DiscreetRuimtelijkBereik.",
+        "ap-usageNote-nl": "Een GeometrieWaardepaar beschrijft de geometrie van een stuk van de ruimte (Punt, Lijn, Vlak etc.) of de tijd (Moment, Periode etc.) en de waarde van een continu variërend fenomeen die men voor dat stuk heeft vastgesteld. Bv de waarde van een pixel in een luchtfoto of de temperatuur in een meetstation op een bepaald tijdstip."
       },
       "properties": [
         {
@@ -902,8 +806,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "waarde",
-            "definition-nl": "Waarde van het element.",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+            "ap-definition-nl": "Waarde van het element."
           }
         },
         {
@@ -973,8 +877,8 @@
       ],
       "rawTags": {
         "label-nl": "PuntWaardepaar",
-        "definition-nl": "Waarde van een punt.",
-        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair"
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair",
+        "ap-definition-nl": "Waarde van een punt."
       },
       "properties": [
         {
@@ -1013,8 +917,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "geometrie",
-            "definition-nl": "Geometrie van het PuntWaardepaar.",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry",
+            "ap-definition-nl": "Geometrie van het PuntWaardepaar."
           }
         }
       ]
@@ -1076,8 +980,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "ruimtelijkeSamenstelling",
-            "definition-nl": "TODO",
-            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement"
+            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
+            "ap-definition-nl": "TODO"
           }
         }
       ]
