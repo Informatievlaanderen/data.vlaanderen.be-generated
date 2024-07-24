@@ -1,6 +1,8 @@
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15> rdfs:member <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#RecordShape>,
@@ -17,9 +19,16 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#DiscreetPuntbereikShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#DomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#GemeenschappelijkPuntregelShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#CurveShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#PuntShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#GeometrieShape> .
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingmethodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#GeometrieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#AttribuutwaardeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -310,6 +319,56 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OmvangShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/b60cbb1f5aefd2bfc3349aed95e6c89745dd980d>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485>;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.methode";
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:maxCount 1;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.uitgevoerdDoor";
+  shacl:class dc:Agent;
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/b60cbb1f5aefd2bfc3349aed95e6c89745dd980d> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.uitgevoerdDoor";
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:minCount 1;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.methode";
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:minCount 1;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.methode";
+  shacl:class skos:Concept;
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#Opmeting.uitgevoerdDoor";
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:maxCount 1;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#OpmetingmethodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15#PuntShape> a shacl:NodeShape;
   shacl:closed false;

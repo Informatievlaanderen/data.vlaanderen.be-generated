@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/b1311224d1f41e9f82ae4393321b3b77d0969bc0",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/b1311224d1f41e9f82ae4393321b3b77d0969bc0/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f9a89a0745126ae2cabaf213643d67a55bc59bc6",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f9a89a0745126ae2cabaf213643d67a55bc59bc6/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-ruimtelijke-bereiken/index.html",
     "usesVocs": [],
@@ -556,6 +556,25 @@
           }
         }
       ]
+    },
+    {
+      "uri": "http://purl.org/dc/terms/Agent",
+      "name": "Agent",
+      "label": {
+        "nl": "Agent"
+      },
+      "sort": "Agent",
+      "description": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "label-nl": "Agent",
+        "uri": "http://purl.org/dc/terms/Agent"
+      },
+      "properties": []
     }
   ],
   "properties": [],
@@ -1105,7 +1124,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+              "range_uri": "#Opmeting",
               "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
               "range_label": {
                 "nl": "Opmeting"
@@ -1206,6 +1225,105 @@
             "label-nl": "gml",
             "ap-usageNote-nl": "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
             "ap-definition-nl": "Geometrie uitgedrukt in gml-formaat."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+      "name": "Opmeting",
+      "label": {
+        "nl": "Opmeting"
+      },
+      "sort": "Opmeting",
+      "description": {
+        "nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Opmeting",
+        "ap-definition-nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "name": "uitgevoerddoor",
+          "sort": "uitgevoerdDoor",
+          "label": {
+            "nl": "uitgevoerdDoor"
+          },
+          "description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "uitgevoerdDoor",
+            "definition-nl": "Agent die de Opmeting heeft uitgevoerd.",
+            "name": "Opmeting.uitgevoerdDoor"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "name": "methode",
+          "sort": "methode",
+          "label": {
+            "nl": "methode"
+          },
+          "description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Opmetingmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Opmetingmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Opmetingmethode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "methode",
+            "name": "Opmeting.methode",
+            "definition-nl": "Aard van de gebruikte methode."
           }
         }
       ]
