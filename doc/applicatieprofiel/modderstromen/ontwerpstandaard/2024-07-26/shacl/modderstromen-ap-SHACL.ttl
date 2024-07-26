@@ -1044,9 +1044,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/ce012334c76fbb8723d52324457cb619f53f2527>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/8452958e7e3ff4f372a2572514a9e5828932e062>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/8452958e7e3ff4f372a2572514a9e5828932e062>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/85dd2fcbfc5e7e4a2fce56aca526a14d83cc522d>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/12d7d4108d3dfe748ceae310e03cfb56f33674b0>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/605542cafefa103789376bee3937c2ac8c30e96c>,
@@ -1065,6 +1063,8 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/67ea555474378d8510c3e840a9b9a4b5d91045bf>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/da7b20fa5672e1efac8134dc00bf3f008dc299c8>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/864cdc326c1157097b7cc41cd71094247fdc96b6>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/09fecc6c28edeeebc46bec465a9a567a30879053>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/0fdbcee7d454cd20803546a7f93071bc47f2b191>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/74feba662f4f65577bf45a8dd94f8faec0f03592>;
@@ -1075,6 +1075,18 @@
   shacl:description "De identificator van de Ruimtelijke Eenheid."@nl;
   shacl:name "identificator"@nl;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/09fecc6c28edeeebc46bec465a9a567a30879053> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.overstromingsgevoeligheid";
+  shacl:class <http://fixme.com#Overstromingsgevoeligheid>;
+  shacl:description "De overstromingsgevoeligheid van een gebied."@nl;
+  shacl:name "overstromingsgevoeligheid"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/perceel#overstromingsgevoeligheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/0fdbcee7d454cd20803546a7f93071bc47f2b191> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.overstromingsgevoeligheid";
+  shacl:description "De overstromingsgevoeligheid van een gebied."@nl;
+  shacl:maxCount 1;
+  shacl:name "overstromingsgevoeligheid"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/perceel#overstromingsgevoeligheid> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/12d7d4108d3dfe748ceae310e03cfb56f33674b0> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.geldigheidsperiode";
   shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
@@ -1105,11 +1117,6 @@
   shacl:description "Geeft het gebruik aan van de ruimtelijke eenheid."@nl;
   shacl:name "landgebruik"@nl;
   shacl:path <https://data.vlaanderen.be/ns/perceel#landgebruik> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.";
-  shacl:class <http://fixme.com#Overstromingsgevoeligheid>;
-  shacl:description "";
-  shacl:path <https://data.vlaanderen.be/ns/perceel#overstromingsgevoeligheid> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/605542cafefa103789376bee3937c2ac8c30e96c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.geldigheidsperiode";
   shacl:description "Tijdsinterval waarbinnen de ruimtelijke eenheid van toepassing is."@nl;
@@ -1206,11 +1213,6 @@
   shacl:maxCount 1;
   shacl:name "landgebruik"@nl;
   shacl:path <https://data.vlaanderen.be/ns/perceel#landgebruik> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/ce012334c76fbb8723d52324457cb619f53f2527> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.";
-  shacl:description "";
-  shacl:maxCount 1;
-  shacl:path <https://data.vlaanderen.be/ns/perceel#overstromingsgevoeligheid> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheidShape/d7e4e623022693159b355b9e717ac7ec1a50695c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/modderstromen/ontwerpstandaard/2024-07-26#RuimtelijkeEenheid.geometrie";
   shacl:description "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald."@nl;
