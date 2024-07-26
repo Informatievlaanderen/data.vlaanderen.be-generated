@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/0ebd0955cc29ca074ee6e26fb8e2c3ca853d52c0",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/0ebd0955cc29ca074ee6e26fb8e2c3ca853d52c0/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/482af54cf55479a880ebbe6895dd2b80694e00c8",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/482af54cf55479a880ebbe6895dd2b80694e00c8/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -89,7 +89,9 @@
           "label": {
             "nl": "aantal sessies"
           },
-          "description": {},
+          "description": {
+            "nl": "Het aantal sessies die geannuleerd zijn."
+          },
           "usage": {},
           "domain": [
             {
@@ -117,7 +119,9 @@
           "rawTags": {
             "label-nl": "aantal sessies",
             "ap-label-nl": "aantal sessies",
-            "name": "aantal sessies"
+            "name": "aantal sessies",
+            "definition-nl": "Het aantal sessies die geannuleerd zijn.",
+            "ap-definition-nl": "Het aantal sessies die geannuleerd zijn."
           }
         }
       ]
@@ -145,7 +149,9 @@
       "rawTags": {
         "label-nl": "Arresthuis",
         "ap-definition-nl": "In arresthuizen verblijven beklaagden, personen die nog niet veroordeeld zijn.",
-        "definition-nl": "In arresthuizen verblijven beklaagden, personen die nog niet veroordeeld zijn."
+        "definition-nl": "In arresthuizen verblijven beklaagden, personen die nog niet veroordeeld zijn.",
+        "ap-label-nl": "Arresthuis",
+        "name": "Arresthuis"
       },
       "properties": []
     },
@@ -168,7 +174,9 @@
         }
       ],
       "rawTags": {
-        "label-nl": "Deelnamepopulatie"
+        "label-nl": "Deelnamepopulatie",
+        "ap-label-nl": "Deelnamepopulatie",
+        "name": "Deelnamepopulatie"
       },
       "properties": []
     },
@@ -195,7 +203,9 @@
       "rawTags": {
         "label-nl": "Detentiehuis",
         "ap-definition-nl": "Een detentiehuis is een kleinschalige inrichting waar kortgestrafte veroordeelden hun straf uitzitten.",
-        "definition-nl": "Een detentiehuis is een kleinschalige inrichting waar kortgestrafte veroordeelden hun straf uitzitten."
+        "definition-nl": "Een detentiehuis is een kleinschalige inrichting waar kortgestrafte veroordeelden hun straf uitzitten.",
+        "ap-label-nl": "Detentiehuis",
+        "name": "Detentiehuis"
       },
       "properties": []
     },
@@ -214,48 +224,11 @@
       "rawTags": {
         "label-nl": "Financiering",
         "definition-nl": "Informatie over hoe een Realisator gefinancieerd wordt.",
-        "ap-definition-nl": "Informatie over hoe een Realisator gefinancieerd wordt."
+        "ap-definition-nl": "Informatie over hoe een Realisator gefinancieerd wordt.",
+        "ap-label-nl": "Financiering",
+        "name": "Financiering"
       },
       "properties": [
-        {
-          "uri": "http://fixme.com#gefinancieerdDoor",
-          "name": "gefinancieertDoor",
-          "sort": "gefinancieert door",
-          "label": {
-            "nl": "gefinancieert door"
-          },
-          "description": {
-            "nl": "De Agent die financieert."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Financiering",
-              "uri": "http://fixme.com#Financiering"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Subsidiegever",
-              "range_uri": "http://fixme.com#Subsidiegever"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Subsidiegever",
-              "range_puri": "http://fixme.com#Subsidiegever",
-              "range_label": {
-                "nl": "Subsidiegever"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "De Agent die financieert.",
-            "label-nl": "gefinancieert door"
-          }
-        },
         {
           "uri": "http://fixme.com#bedrag",
           "name": "bedrag",
@@ -293,7 +266,51 @@
           "rawTags": {
             "label-nl": "bedrag",
             "definition-nl": "Het bedrag dat gefinancieerd wordt.",
-            "ap-definition-nl": "Het bedrag dat gefinancieerd wordt."
+            "ap-definition-nl": "Het bedrag dat gefinancieerd wordt.",
+            "ap-label-nl": "bedrag",
+            "name": "bedrag"
+          }
+        },
+        {
+          "uri": "http://fixme.com#GefinancieertDoor",
+          "name": "gefinancieertDoor",
+          "sort": "gefinancieert door",
+          "label": {
+            "nl": "gefinancieert door"
+          },
+          "description": {
+            "nl": "De Agent die financieert."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Financiering",
+              "uri": "http://fixme.com#Financiering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Subsidiegever",
+              "range_uri": "http://fixme.com#Subsidiegever"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Subsidiegever",
+              "range_puri": "http://fixme.com#Subsidiegever",
+              "range_label": {
+                "nl": "Subsidiegever"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "De Agent die financieert.",
+            "definition-nl": "De Agent die financieert.",
+            "name": "gefinancieert door",
+            "ap-label-nl": "gefinancieert door",
+            "label-nl": "gefinancieert door"
           }
         }
       ]
@@ -317,11 +334,13 @@
         }
       ],
       "rawTags": {
-        "label-nl": "Gedetineerdepopulatie"
+        "label-nl": "Gedetineerdepopulatie",
+        "ap-label-nl": "Gedetineerdepopulatie",
+        "name": "Gedetineerdepopulatie"
       },
       "properties": [
         {
-          "uri": "http://fixme.com#gedetineerdepopulatieVan",
+          "uri": "http://fixme.com#GedetineerdepopulatieVan",
           "name": "gedetineerdepopulatieVan",
           "sort": "gedetineerdepopulatie van",
           "label": {
@@ -353,7 +372,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "gedetineerdepopulatie van"
+            "label-nl": "gedetineerdepopulatie van",
+            "name": "gedetineerdepopulatie van",
+            "ap-label-nl": "gedetineerdepopulatie van"
           }
         }
       ]
@@ -373,49 +394,11 @@
       "rawTags": {
         "label-nl": "GevangenisRegime",
         "definition-nl": "Informatie over welke regime waar en wanneer wordt toegepast.",
-        "ap-definition-nl": "Informatie over welke regime waar en wanneer wordt toegepast."
+        "ap-definition-nl": "Informatie over welke regime waar en wanneer wordt toegepast.",
+        "ap-label-nl": "GevangenisRegime",
+        "name": "GevangenisRegime"
       },
       "properties": [
-        {
-          "uri": "http://fixme.com#regimeVan",
-          "name": "regimeVan",
-          "sort": "regime van",
-          "label": {
-            "nl": "regime van"
-          },
-          "description": {
-            "nl": "De GevangenisVestiging waar het regime wordt gegepast."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "GevangenisRegime",
-              "uri": "http://fixme.com#GevangenisRegime"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "GevangenisVestiging",
-              "range_uri": "http://fixme.com#GevangenisVestiging"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#GevangenisVestiging",
-              "range_puri": "http://fixme.com#GevangenisVestiging",
-              "range_label": {
-                "nl": "GevangenisVestiging"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "De GevangenisVestiging waar het regime wordt gegepast.",
-            "ap-definition-nl": "De GevangenisVestiging waar het regime wordt gegepast.",
-            "label-nl": "regime van"
-          }
-        },
         {
           "uri": "http://fixme.com#regime",
           "name": "regime",
@@ -453,7 +436,9 @@
           "rawTags": {
             "label-nl": "regime",
             "definition-nl": "Het toegpaste gevangenisregime.",
-            "ap-definition-nl": "Het toegpaste gevangenisregime."
+            "ap-definition-nl": "Het toegpaste gevangenisregime.",
+            "ap-label-nl": "regime",
+            "name": "regime"
           }
         },
         {
@@ -493,7 +478,51 @@
           "rawTags": {
             "label-nl": "beschikbaarheid",
             "definition-nl": "Wanneer het regime van toepassing is.",
-            "ap-definition-nl": "Wanneer het regime van toepassing is."
+            "ap-definition-nl": "Wanneer het regime van toepassing is.",
+            "ap-label-nl": "beschikbaarheid",
+            "name": "beschikbaarheid"
+          }
+        },
+        {
+          "uri": "http://fixme.com#RegimeVan",
+          "name": "regimeVan",
+          "sort": "regime van",
+          "label": {
+            "nl": "regime van"
+          },
+          "description": {
+            "nl": "De GevangenisVestiging waar het regime wordt gegepast."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GevangenisRegime",
+              "uri": "http://fixme.com#GevangenisRegime"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GevangenisVestiging",
+              "range_uri": "http://fixme.com#GevangenisVestiging"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#GevangenisVestiging",
+              "range_puri": "http://fixme.com#GevangenisVestiging",
+              "range_label": {
+                "nl": "GevangenisVestiging"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "regime van",
+            "definition-nl": "De GevangenisVestiging waar het regime wordt gegepast.",
+            "ap-definition-nl": "De GevangenisVestiging waar het regime wordt gegepast.",
+            "label-nl": "regime van",
+            "ap-label-nl": "regime van"
           }
         }
       ]
@@ -528,7 +557,9 @@
       "rawTags": {
         "label-nl": "GevangenisVestiging",
         "definition-nl": "Een vestiging van een gevangenis.",
-        "ap-definition-nl": "Een vestiging van een gevangenis."
+        "ap-definition-nl": "Een vestiging van een gevangenis.",
+        "ap-label-nl": "GevangenisVestiging",
+        "name": "GevangenisVestiging"
       },
       "properties": [
         {
@@ -538,7 +569,9 @@
           "label": {
             "nl": "regime"
           },
-          "description": {},
+          "description": {
+            "nl": "Een regime dat toegepast wordt in de GevangenisVestiging."
+          },
           "usage": {},
           "domain": [
             {
@@ -564,7 +597,11 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "regime"
+            "label-nl": "regime",
+            "ap-label-nl": "regime",
+            "definition-nl": "Een regime dat toegepast wordt in de GevangenisVestiging.",
+            "name": "regime",
+            "ap-definition-nl": "Een regime dat toegepast wordt in de GevangenisVestiging."
           }
         },
         {
@@ -704,13 +741,6 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-HDG",
-          "uri": "http://fixme.com#Activiteit",
-          "scoped_uri": "#Activiteit"
-        },
-        {
-          "label": "Activiteit",
-          "name": "Activiteit",
           "package": "OSLO-DDT",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
           "scoped_uri": "#Activiteit"
@@ -719,11 +749,13 @@
       "rawTags": {
         "label-nl": "GroepsActiviteit",
         "definition-nl": "Een Activiteit die in groep gedaan wordt.",
-        "ap-definition-nl": "Een Activiteit die in groep gedaan wordt."
+        "ap-definition-nl": "Een Activiteit die in groep gedaan wordt.",
+        "ap-label-nl": "GroepsActiviteit",
+        "name": "GroepsActiviteit"
       },
       "properties": [
         {
-          "uri": "http://fixme.com#minAantalDeelnemers",
+          "uri": "http://fixme.com#minimum aantal deelnemers",
           "name": "minimumAantalDeelnemers",
           "sort": "minimum aantal deelnemers",
           "label": {
@@ -759,11 +791,13 @@
           "rawTags": {
             "label-nl": "minimum aantal deelnemers",
             "definition-nl": "Het minimaal aantal deelnemers voor een GroepsActiviteit.",
-            "ap-definition-nl": "Het minimaal aantal deelnemers voor een GroepsActiviteit."
+            "ap-definition-nl": "Het minimaal aantal deelnemers voor een GroepsActiviteit.",
+            "ap-label-nl": "minimum aantal deelnemers",
+            "name": "minimum aantal deelnemers"
           }
         },
         {
-          "uri": "http://fixme.com#maxAantalDeelnemers",
+          "uri": "http://fixme.com#maximum aantal deelnemers",
           "name": "maximumAantalDeelnemers",
           "sort": "maximum aantal deelnemers",
           "label": {
@@ -799,7 +833,9 @@
           "rawTags": {
             "label-nl": "maximum aantal deelnemers",
             "definition-nl": "Het maximaal aantal deelnemers voor een GroepsActiviteit.",
-            "ap-definition-nl": "Het maximaal aantal deelnemers voor een GroepsActiviteit."
+            "ap-definition-nl": "Het maximaal aantal deelnemers voor een GroepsActiviteit.",
+            "ap-label-nl": "maximum aantal deelnemers",
+            "name": "maximum aantal deelnemers"
           }
         }
       ]
@@ -819,13 +855,6 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-HDG",
-          "uri": "http://fixme.com#Activiteit",
-          "scoped_uri": "#Activiteit"
-        },
-        {
-          "label": "Activiteit",
-          "name": "Activiteit",
           "package": "OSLO-DDT",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
           "scoped_uri": "#Activiteit"
@@ -834,7 +863,9 @@
       "rawTags": {
         "label-nl": "IndividueleActiviteit",
         "definition-nl": "Een Activiteit die individueel gedaan wordt.",
-        "ap-definition-nl": "Een Activiteit die individueel gedaan wordt."
+        "ap-definition-nl": "Een Activiteit die individueel gedaan wordt.",
+        "ap-label-nl": "IndividueleActiviteit",
+        "name": "IndividueleActiviteit"
       },
       "properties": []
     },
@@ -849,7 +880,9 @@
       "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "Populatie"
+        "label-nl": "Populatie",
+        "ap-label-nl": "Populatie",
+        "name": "Populatie"
       },
       "properties": [
         {
@@ -885,7 +918,9 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "populatieKenmerk"
+            "label-nl": "populatieKenmerk",
+            "ap-label-nl": "populatieKenmerk",
+            "name": "populatieKenmerk"
           }
         }
       ]
@@ -901,11 +936,13 @@
       "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "PopulatieKenmerk"
+        "label-nl": "PopulatieKenmerk",
+        "ap-label-nl": "PopulatieKenmerk",
+        "name": "PopulatieKenmerk"
       },
       "properties": [
         {
-          "uri": "http://fixme.com#deelVan",
+          "uri": "http://fixme.com#DeelVan",
           "name": "deelVan",
           "sort": "deel van",
           "label": {
@@ -937,7 +974,9 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "deel van"
+            "label-nl": "deel van",
+            "ap-label-nl": "deel van",
+            "name": "deel van"
           }
         }
       ]
@@ -965,7 +1004,9 @@
       "rawTags": {
         "label-nl": "Strafhuis",
         "definition-nl": "Strafhuizen zijn de gevangenissen voor veroordeelden.",
-        "ap-definition-nl": "Strafhuizen zijn de gevangenissen voor veroordeelden."
+        "ap-definition-nl": "Strafhuizen zijn de gevangenissen voor veroordeelden.",
+        "ap-label-nl": "Strafhuis",
+        "name": "Strafhuis"
       },
       "properties": []
     },
@@ -992,7 +1033,9 @@
       "rawTags": {
         "label-nl": "Subsidiegever",
         "definition-nl": "Een Agent die financieering voorziet.",
-        "ap-definition-nl": "Een Agent die financieering voorziet."
+        "ap-definition-nl": "Een Agent die financieering voorziet.",
+        "ap-label-nl": "Subsidiegever",
+        "name": "Subsidiegever"
       },
       "properties": [
         {
@@ -1032,7 +1075,9 @@
           "rawTags": {
             "label-nl": "niveau",
             "definition-nl": "Het niveau van financieering dat een subsidiegever financieert, zoals bijvoorbeeld Vlaams of federaal.",
-            "ap-definition-nl": "Het niveau van financieering dat een subsidiegever financieert, zoals bijvoorbeeld Vlaams of federaal."
+            "ap-definition-nl": "Het niveau van financieering dat een subsidiegever financieert, zoals bijvoorbeeld Vlaams of federaal.",
+            "ap-label-nl": "niveau",
+            "name": "niveau"
           }
         },
         {
@@ -1072,6 +1117,8 @@
           "rawTags": {
             "ap-definition-nl": "De Financieering die een subsidiegever financieert.",
             "definition-nl": "De Financieering die een subsidiegever financieert.",
+            "ap-label-nl": "financieert",
+            "name": "financieert",
             "label-nl": "financieert"
           }
         }
@@ -1092,7 +1139,9 @@
       "rawTags": {
         "label-nl": "Verplaatsing",
         "definition-nl": "Informatie over het aantal Activiteiten dat verplaatst is en de reden.",
-        "ap-definition-nl": "Informatie over het aantal Activiteiten dat verplaatst is en de reden."
+        "ap-definition-nl": "Informatie over het aantal Activiteiten dat verplaatst is en de reden.",
+        "ap-label-nl": "Verplaatsing",
+        "name": "Verplaatsing"
       },
       "properties": [
         {
@@ -1132,11 +1181,13 @@
           "rawTags": {
             "label-nl": "reden",
             "definition-nl": "De reden van verplaatsing.",
-            "ap-definition-nl": "De reden van verplaatsing."
+            "ap-definition-nl": "De reden van verplaatsing.",
+            "ap-label-nl": "reden",
+            "name": "reden"
           }
         },
         {
-          "uri": "http://fixme.com#aantalSessies",
+          "uri": "http://fixme.com#aantal sessies",
           "name": "aantalSessies",
           "sort": "aantal sessies",
           "label": {
@@ -1172,7 +1223,9 @@
           "rawTags": {
             "label-nl": "aantal sessies",
             "definition-nl": "Het aantal Activiteiten dat verplaatst werd.",
-            "ap-definition-nl": "Het aantal Activiteiten dat verplaatst werd."
+            "ap-definition-nl": "Het aantal Activiteiten dat verplaatst werd.",
+            "ap-label-nl": "aantal sessies",
+            "name": "aantal sessies"
           }
         }
       ]
@@ -1200,7 +1253,9 @@
       "rawTags": {
         "label-nl": "Werkhuis",
         "definition-nl": "In het werkhuis van de gevangenis kunnen gedetineerden kleine, eenvoudige werken uitvoeren voor externe aannemers.",
-        "ap-definition-nl": "In het werkhuis van de gevangenis kunnen gedetineerden kleine, eenvoudige werken uitvoeren voor externe aannemers."
+        "ap-definition-nl": "In het werkhuis van de gevangenis kunnen gedetineerden kleine, eenvoudige werken uitvoeren voor externe aannemers.",
+        "ap-label-nl": "Werkhuis",
+        "name": "Werkhuis"
       },
       "properties": []
     },
@@ -1396,7 +1451,8 @@
             "label-nl": "subcategorie",
             "ap-label-nl": "subcategorie",
             "definition-nl": "De subcategorie van een activiteit.",
-            "ap-definition-nl": "De subcategorie van een activiteit."
+            "ap-definition-nl": "De subcategorie van een activiteit.",
+            "name": "subcategorie"
           }
         },
         {
@@ -2339,10 +2395,12 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/organisatie#heeftVestiging",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "uri": "https://data.vlaanderen.be/ns/organisatie#HeeftVestiging",
+          "name": "heeftVestiging",
+          "sort": "heeft vestiging",
+          "label": {
+            "nl": "heeft vestiging"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -2368,7 +2426,11 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "ap-label-nl": "heeft vestiging",
+            "name": "heeft vestiging",
+            "label-nl": "heeft vestiging"
+          }
         }
       ]
     },
@@ -4587,21 +4649,6 @@
   ],
   "properties": [
     {
-      "uri": "http://fixme.com#regimeVan",
-      "name": {
-        "nl": "regime van",
-        "undefined": "regimeVan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "http://fixme.com#regime",
       "name": {
         "nl": "regime",
@@ -4692,36 +4739,6 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#gefinancieerdDoor",
-      "name": {
-        "nl": "gefinancieert door",
-        "undefined": "gefinancieertDoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "http://fixme.com#gedetineerdepopulatieVan",
-      "name": {
-        "nl": "gedetineerdepopulatie van",
-        "undefined": "gedetineerdepopulatieVan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "http://fixme.com#gedetineerdepopulatie",
       "name": {
         "nl": "gedetineerdepopulatie",
@@ -4752,21 +4769,6 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#deelVan",
-      "name": {
-        "nl": "deel van",
-        "undefined": "deelVan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "http://fixme.com#beschikbaarheid",
       "name": {
         "nl": "beschikbaarheid",
@@ -4786,6 +4788,66 @@
       "name": {
         "nl": "bedrag",
         "undefined": "bedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#RegimeVan",
+      "name": {
+        "nl": "regime van",
+        "undefined": "regimeVan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#GefinancieertDoor",
+      "name": {
+        "nl": "gefinancieert door",
+        "undefined": "gefinancieertDoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#GedetineerdepopulatieVan",
+      "name": {
+        "nl": "gedetineerdepopulatie van",
+        "undefined": "gedetineerdepopulatieVan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#DeelVan",
+      "name": {
+        "nl": "deel van",
+        "undefined": "deelVan"
       },
       "description": {},
       "domain": [
