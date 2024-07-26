@@ -148,18 +148,18 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betwisting> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#einddatum> a owl:DatatypeProperty;
-  rdfs:label "startdatum"@nl,
-    "einddatum"@nl;
-  rdfs:comment "De startdatum voor de geldigheid van de solvabiliteitsindicator."@nl,
-    "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>;
+  rdfs:label "einddatum"@nl,
+    "startdatum"@nl;
+  rdfs:comment "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."@nl,
+    "De startdatum voor de geldigheid van de solvabiliteitsindicator."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>,
+    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:date .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#fiscaal> a owl:DatatypeProperty;
   rdfs:label "fiscaal"@nl;
-  rdfs:comment "Laat toe om te specifiëren het om fiscale of niet-fiscale schuldvorderingen gaat."@nl;
+  rdfs:comment "Laat toe om te specifiëren of het om fiscale of niet-fiscale schuldvorderingen gaat."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:boolean .
@@ -250,7 +250,7 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag> a owl:ObjectProperty;
   rdfs:label "oninbaar bedrag"@nl;
-  rdfs:comment "Het bedrag de als oninbaar beschouwd wordt."@nl;
+  rdfs:comment "Het bedrag dat als oninbaar beschouwd wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
@@ -264,7 +264,7 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst> a owl:ObjectProperty;
   rdfs:label "periodiciteit inkomst"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld eenmaling, maandelijks, jaarlijks."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld eenmalig, maandelijks, jaarlijks."@nl;
   rdfs:comment "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. "@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Inkomst>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
@@ -351,8 +351,8 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range schemas:MonetaryAmount .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling> a owl:ObjectProperty;
-  rdfs:label "betaling"@nl;
-  rdfs:comment "Verwijzing naar de betaling dit werd toegerekend."@nl;
+  rdfs:label "toegerekende betaling"@nl;
+  rdfs:comment "Verwijzing naar de betaling die werd toegerekend."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> .
@@ -605,51 +605,92 @@ schemas:value a rdf:Property;
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://risolto.be/en/>;
-      foaf:name "Risolto"
+      foaf:homepage <https://recht.gent/>;
+      foaf:name "Recht.gent"
     ];
-    foaf:firstName "Joannes";
-    foaf:lastName "Verbeke"
+    foaf:firstName "Katia";
+    foaf:lastName "De Vos"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.antwerpen.be/>;
-      foaf:name "Stad Antwerpen"
+      foaf:homepage <https://www.aalter.be/>;
+      foaf:name "Gemeente Aalter"
     ];
-    foaf:firstName "Sven";
-    foaf:lastName "Verbeeck"
+    foaf:firstName "Mieke";
+    foaf:lastName "De Vreese"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.samvzw.be/>;
-      foaf:name "SAM steunpunt Mens en Samenleving"
+      foaf:homepage <https://www.destelbergen.be/>;
+      foaf:name "Gemeente Destelbergen"
     ];
-    foaf:firstName "Robin";
-    foaf:lastName "Van Trigt"
+    foaf:firstName "Elke";
+    foaf:lastName "Demeulenaere"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.samvzw.be/>;
-      foaf:name "SAM steunpunt Mens en Samenleving"
+      foaf:homepage <https://www.zulte.be/>;
+      foaf:name "Gemeente Zulte"
     ];
-    foaf:firstName "Wietske";
-    foaf:lastName "Van Gils"
+    foaf:firstName "Annelies";
+    foaf:lastName "Demeurie"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://risolto.be/en/>;
-      foaf:name "Risolto"
+      foaf:homepage <https://www.vvsg.be/>;
+      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Van Damme"
+    foaf:lastName "Gilot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting>;
+      foaf:name "Departement Financiën en Begroting"
+    ];
+    foaf:firstName "Quinten";
+    foaf:lastName "Heldens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.zulte.be/>;
+      foaf:name "Gemeente Zulte"
+    ];
+    foaf:firstName "Barbara";
+    foaf:lastName "Ide"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.roeselare.be/>;
+      foaf:name "Stad Roeselare"
+    ];
+    foaf:firstName "Michèle";
+    foaf:lastName "Marichal"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vvsg.be/>;
+      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
+    ];
+    foaf:firstName "Miet";
+    foaf:lastName "Remans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://aalst.be/>;
+      foaf:name "Stad Aalst"
+    ];
+    foaf:firstName "Kurt";
+    foaf:lastName "Schelfhout"
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
       foaf:name "Agentschap Binnenlands Bestuur"
     ];
-    foaf:firstName "Tina";
-    foaf:lastName "Tyteca"
+    foaf:firstName "Janis";
+    foaf:lastName "Sevens";
+    foaf:mbox <mailto:janis.sevens@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -664,89 +705,48 @@ schemas:value a rdf:Property;
       foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
       foaf:name "Agentschap Binnenlands Bestuur"
     ];
-    foaf:firstName "Janis";
-    foaf:lastName "Sevens";
-    foaf:mbox <mailto:janis.sevens@vlaanderen.be>
+    foaf:firstName "Tina";
+    foaf:lastName "Tyteca"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://aalst.be/>;
-      foaf:name "Stad Aalst"
-    ];
-    foaf:firstName "Kurt";
-    foaf:lastName "Schelfhout"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vvsg.be/>;
-      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
-    ];
-    foaf:firstName "Miet";
-    foaf:lastName "Remans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.roeselare.be/>;
-      foaf:name "Stad Roeselare"
-    ];
-    foaf:firstName "Michèle";
-    foaf:lastName "Marichal"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.zulte.be/>;
-      foaf:name "Gemeente Zulte"
-    ];
-    foaf:firstName "Barbara";
-    foaf:lastName "Ide"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting>;
-      foaf:name "Departement Financiën en Begroting"
-    ];
-    foaf:firstName "Quinten";
-    foaf:lastName "Heldens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vvsg.be/>;
-      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
+      foaf:homepage <https://risolto.be/en/>;
+      foaf:name "Risolto"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Gilot"
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.zulte.be/>;
-      foaf:name "Gemeente Zulte"
+      foaf:homepage <https://www.samvzw.be/>;
+      foaf:name "SAM steunpunt Mens en Samenleving"
     ];
-    foaf:firstName "Annelies";
-    foaf:lastName "Demeurie"
+    foaf:firstName "Wietske";
+    foaf:lastName "Van Gils"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.destelbergen.be/>;
-      foaf:name "Gemeente Destelbergen"
+      foaf:homepage <https://www.samvzw.be/>;
+      foaf:name "SAM steunpunt Mens en Samenleving"
     ];
-    foaf:firstName "Elke";
-    foaf:lastName "Demeulenaere"
+    foaf:firstName "Robin";
+    foaf:lastName "Van Trigt"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.aalter.be/>;
-      foaf:name "Gemeente Aalter"
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
     ];
-    foaf:firstName "Mieke";
-    foaf:lastName "De Vreese"
+    foaf:firstName "Sven";
+    foaf:lastName "Verbeeck"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://recht.gent/>;
-      foaf:name "Recht.gent"
+      foaf:homepage <https://risolto.be/en/>;
+      foaf:name "Risolto"
     ];
-    foaf:firstName "Katia";
-    foaf:lastName "De Vos"
+    foaf:firstName "Joannes";
+    foaf:lastName "Verbeke"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -760,47 +760,38 @@ schemas:value a rdf:Property;
     rdfs:Resource,
     skos:Concept,
     schemas:MonetaryAmount,
-    schemas:value,
-    schemas:currency,
-    <http://www.w3.org/ns/adms#identifier>,
+    dc:title,
     dc:type,
-    dc:title;
+    <http://www.w3.org/ns/adms#identifier>,
+    schemas:currency,
+    schemas:value;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Els";
-    foaf:lastName "de Vleeschauwer";
-    foaf:mbox <mailto:els.devleeschauwer@vlaanderen.be>
+    foaf:firstName "Ben";
+    foaf:lastName "De Meester";
+    foaf:mbox <mailto:ben.demeester@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Laurens";
-    foaf:lastName "Vercauteren";
-    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+    foaf:firstName "Vlassenroot";
+    foaf:lastName "Eveline";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Aline";
-    foaf:lastName "Verbrugge";
-    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Mathieu";
-    foaf:lastName "Tulpinck";
-    foaf:mbox <mailto:mathieu.tulpinck@vlaanderen.be>
+    foaf:firstName "Leemans";
+    foaf:lastName "Kim";
+    foaf:mbox <mailto:kim.leemans@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -816,9 +807,63 @@ schemas:value a rdf:Property;
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Ben";
-    foaf:lastName "De Meester";
-    foaf:mbox <mailto:ben.demeester@vlaanderen.be>
+    foaf:firstName "Buyle";
+    foaf:lastName "Raf";
+    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Mathieu";
+    foaf:lastName "Tulpinck";
+    foaf:mbox <mailto:mathieu.tulpinck@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Beyaert";
+    foaf:lastName "Veerle";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Aline";
+    foaf:lastName "Verbrugge";
+    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Vanlishout";
+    foaf:lastName "Ziggy";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Els";
+    foaf:lastName "de Vleeschauwer";
+    foaf:mbox <mailto:els.devleeschauwer@vlaanderen.be>
   ];
   foaf:maker [
     a foaf:Person;
@@ -826,8 +871,8 @@ schemas:value a rdf:Property;
       foaf:homepage <https://stad.gent/nl>;
       foaf:name "Stad Gent"
     ];
-    foaf:firstName "Bert";
-    foaf:lastName "Verstraeten"
+    foaf:firstName "Stefan";
+    foaf:lastName "Somers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -842,6 +887,6 @@ schemas:value a rdf:Property;
       foaf:homepage <https://stad.gent/nl>;
       foaf:name "Stad Gent"
     ];
-    foaf:firstName "Stefan";
-    foaf:lastName "Somers"
+    foaf:firstName "Bert";
+    foaf:lastName "Verstraeten"
   ] .
