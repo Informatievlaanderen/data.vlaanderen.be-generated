@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/f57b3538e0a5f89a79cd38b86c047358a54b8137",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/f57b3538e0a5f89a79cd38b86c047358a54b8137/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/552dae4d50692170fdc6f4f000b7e733bee6d4ee",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/552dae4d50692170fdc6f4f000b7e733bee6d4ee/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
     "usesVocs": [],
@@ -2009,6 +2009,86 @@
           "rawTags": {
             "definition-nl": "Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering.",
             "label-nl": "oninbaarheidsverklaring"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
+          "name": "schuldeiser",
+          "sort": "schuldeiser",
+          "label": {
+            "nl": "schuldeiser"
+          },
+          "description": {
+            "nl": "Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen. "
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "package": "OSLO-Schuldbeheer-master",
+            "definition-nl": "Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen. ",
+            "label-nl": "schuldeiser"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
+          "name": "schuldenaar",
+          "sort": "schuldenaar",
+          "label": {
+            "nl": "schuldenaar"
+          },
+          "description": {
+            "nl": "Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij. "
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "schuldenaar",
+            "definition-nl": "Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij. ",
+            "package": "OSLO-Schuldbeheer-master"
           }
         },
         {
@@ -4350,6 +4430,206 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#inkomst",
+          "name": "inkomst",
+          "sort": "inkomst",
+          "label": {
+            "nl": "inkomst"
+          },
+          "description": {
+            "nl": "Verwijzing naar een inkomst van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Inkomst",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Inkomst",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst",
+              "range_label": {
+                "nl": "Inkomst"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een inkomst van een persoon.",
+            "label-nl": "inkomst",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut",
+          "name": "juridischStatuut",
+          "sort": "juridisch statuut",
+          "label": {
+            "nl": "juridisch statuut"
+          },
+          "description": {
+            "nl": "Verwijzing naar een juridisch statuut van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "JuridischStatuut",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Juridisch statuut",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut",
+              "range_label": {
+                "nl": "Juridisch statuut"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een juridisch statuut van een persoon.",
+            "package": "OSLO-Schuldbeheer-master",
+            "label-nl": "juridisch statuut"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#krediet",
+          "name": "krediet",
+          "sort": "krediet",
+          "label": {
+            "nl": "krediet"
+          },
+          "description": {
+            "nl": "Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Krediet",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Krediet",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet",
+              "range_label": {
+                "nl": "Krediet"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "krediet",
+            "package": "OSLO-Schuldbeheer-master",
+            "definition-nl": "Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut",
+          "name": "sociaalStatuut",
+          "sort": "sociaal statuut",
+          "label": {
+            "nl": "sociaal statuut"
+          },
+          "description": {
+            "nl": "Verwijzing naar een sociaal statuut van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "SociaalStatuut",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sociaal Statuut",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut",
+              "range_label": {
+                "nl": "Sociaal Statuut"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een sociaal statuut van een persoon.",
+            "label-nl": "sociaal statuut",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
+          "name": "solvabiliteitsprofiel",
+          "sort": "solvabiliteitsprofiel",
+          "label": {
+            "nl": "solvabiliteitsprofiel"
+          },
+          "description": {
+            "nl": "Verwijzing naar een solvabiliteitsrofiel van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Solvabiliteitsprofiel",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Solvabiliteitsprofiel",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel",
+              "range_label": {
+                "nl": "Solvabiliteitsprofiel"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een solvabiliteitsrofiel van een persoon.",
+            "label-nl": "solvabiliteitsprofiel",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
           "uri": "http://www.w3.org/ns/adms#identifier",
           "name": "registratie",
           "sort": "registratie",
@@ -4852,6 +5132,21 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#inkomst",
+      "name": {
+        "nl": "inkomst",
+        "undefined": "inkomst"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#isDeelvan",
       "name": {
         "nl": "is deel van",
@@ -4882,10 +5177,40 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut",
+      "name": {
+        "nl": "juridisch statuut",
+        "undefined": "juridischStatuut"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
       "name": {
         "nl": "kost",
         "undefined": "kost"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#krediet",
+      "name": {
+        "nl": "krediet",
+        "undefined": "krediet"
       },
       "description": {},
       "domain": [
@@ -5002,6 +5327,36 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
+      "name": {
+        "nl": "schuldeiser",
+        "undefined": "schuldeiser"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
+      "name": {
+        "nl": "schuldenaar",
+        "undefined": "schuldenaar"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
       "name": {
         "nl": "schuldvorderingscategorie",
@@ -5021,6 +5376,36 @@
       "name": {
         "nl": "schuldvorderingssaldo",
         "undefined": "schuldvorderingssaldo"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut",
+      "name": {
+        "nl": "sociaal statuut",
+        "undefined": "sociaalStatuut"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
+      "name": {
+        "nl": "solvabiliteitsprofiel",
+        "undefined": "solvabiliteitsprofiel"
       },
       "description": {},
       "domain": [
