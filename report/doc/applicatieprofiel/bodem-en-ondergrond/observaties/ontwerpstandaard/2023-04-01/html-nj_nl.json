@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/7476eaf73b23b876437ac1df65366bb7e6762f11",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/7476eaf73b23b876437ac1df65366bb7e6762f11/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/aeee7e24239badf362abcc005204c5333771f764",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/aeee7e24239badf362abcc005204c5333771f764/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html",
     "usesVocs": [],
@@ -930,10 +930,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#VVVVmeting",
+              "range_uri": "#VVVmeting",
               "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#VVVmeting",
               "range_label": {
-                "nl": "VVVVmeting"
+                "nl": "VVVmeting"
               }
             }
           ],
@@ -2290,6 +2290,28 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+      "name": "Bereik",
+      "label": {
+        "nl": "Bereik"
+      },
+      "sort": "Bereik",
+      "description": {
+        "nl": "Variatie van een fenomeen in ruimte of tijd."
+      },
+      "usage": {
+        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
+        "ap-usageNote-nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>.",
+        "label-nl": "Bereik",
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
       "name": "Discreetbereik",
       "label": {
@@ -2308,7 +2330,7 @@
           "name": "Bereik",
           "package": "OSLO-RuimtelijkeBereiken",
           "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
-          "scoped_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+          "scoped_uri": "#Bereik"
         }
       ],
       "rawTags": {
@@ -3418,6 +3440,28 @@
       "properties": []
     },
     {
+      "uri": "http://fixme.com#Meetreeksresultaat",
+      "name": "Meetreeksresultaat",
+      "label": {
+        "nl": "Meetreeksresultaat"
+      },
+      "sort": "Meetreeksresultaat",
+      "description": {
+        "nl": "OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>."
+      },
+      "usage": {
+        "nl": "Concreet een verzameling Meetreekswaarden,ttz waardeparen met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter."
+      },
+      "parents": [],
+      "rawTags": {
+        "definition-nl": "Resultaat van een Meetreeksobservatie.",
+        "label-nl": "Meetreeksresultaat",
+        "usageNote-nl": "Concreet een verzameling Meetreekswaarden,ttz waardeparen met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter.",
+        "ap-definition-nl": "OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>."
+      },
+      "properties": []
+    },
+    {
       "uri": "http://purl.org/dc/terms/Agent",
       "name": "Agent",
       "label": {
@@ -4030,7 +4074,7 @@
           "name": "Meetreeksresultaat",
           "package": "OSLO-BodemEnOndergrond",
           "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat",
-          "scoped_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat"
+          "scoped_uri": "#Meetreeksresultaat"
         }
       ],
       "rawTags": {
@@ -4136,16 +4180,9 @@
         "nl": "Monster genomen uit de grond voor observatie ex situ."
       },
       "usage": {
-        "nl": "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo."
+        "nl": "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/\">Grondboringen</a>."
       },
       "parents": [
-        {
-          "label": "Monster",
-          "name": "Monster",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
-          "scoped_uri": "#Monster"
-        },
         {
           "label": "Bemonsteringsobject",
           "name": "Bemonsteringsobject",
@@ -4155,267 +4192,13 @@
         }
       ],
       "rawTags": {
-        "label-nl": "Grondmonster",
         "definition-nl": "Monster genomen uit de grond voor observatie ex situ.",
-        "usageNote-nl": "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo."
+        "label-nl": "Grondmonster",
+        "usageNote-nl": "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo.",
+        "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+        "ap-usageNote-nl": "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/\">Grondboringen</a>."
       },
-      "properties": [
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
-          "name": "monstertype",
-          "sort": "monstertype",
-          "label": {
-            "nl": "monstertype"
-          },
-          "description": {
-            "nl": "Materiële vorm die het Grondmonster aanneemt."
-          },
-          "usage": {
-            "nl": "Bv of het gespoeld, gestoken, gekernd is."
-          },
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Grondmonstertype",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Grondmonstertype"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "monstertype",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
-            "ap-usageNote-nl": "Bv of het gespoeld, gestoken, gekernd is.",
-            "ap-definition-nl": "Materiële vorm die het Grondmonster aanneemt."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
-          "name": "grootte",
-          "sort": "grootte",
-          "label": {
-            "nl": "grootte"
-          },
-          "description": {
-            "nl": "De fysieke omvang van het monster."
-          },
-          "usage": {
-            "nl": "Afhankelijk van het materiaaltype gaat dit over lengte, massa, volume edm."
-          },
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Maat",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Maat",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
-              "range_label": {
-                "nl": "Maat"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "grootte",
-            "definition-nl": "De fysieke omvang van het monster.",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
-            "ap-usageNote-nl": "Afhankelijk van het materiaaltype gaat dit over lengte, massa, volume edm."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
-          "name": "bemonsteringstijdstip",
-          "sort": "bemonsteringstijdstip",
-          "label": {
-            "nl": "bemonsteringstijdstip"
-          },
-          "description": {
-            "nl": "Moment waarop het Grondmonster is genomen."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Periode",
-              "range_uri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Periode",
-              "range_puri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
-              "range_label": {
-                "nl": "Periode"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "bemonsteringstijdstip",
-            "definition-nl": "Moment waarop het Grondmonster is genomen.",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime"
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
-          "name": "bemonsteringsplaats",
-          "sort": "bemonsteringsplaats",
-          "label": {
-            "nl": "bemonsteringsplaats"
-          },
-          "description": {
-            "nl": "Plaats waar het Monster werd genomen."
-          },
-          "usage": {
-            "nl": "Als het Monster een geassocieerdBemonsteringsobject heeft dat ondubbelzinnig gelocaliseerd is dan is dit attribuut overbodig. Uitzondering in dat geval is wanneer de plaats tov het Bemonsteringsobject daarbij van belang is, bv de diepte waarop een grondmonster is genomen bij een boring. Datatype is Geometrie om naast puntlocaties ook een ruimere begrenzing te kunnen opgeven (bv een diepte-interval in het geval van een grondmonster)."
-          },
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Geometrie",
-              "range_uri": "http://www.w3.org/ns/locn#Geometry"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/ns/locn#Geometry",
-              "range_puri": "http://www.w3.org/ns/locn#Geometry",
-              "range_label": {
-                "nl": "Geometrie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "bemonsteringsplaats",
-            "definition-nl": "Plaats waar het Monster werd genomen.",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
-            "ap-usageNote-nl": "Als het Monster een geassocieerdBemonsteringsobject heeft dat ondubbelzinnig gelocaliseerd is dan is dit attribuut overbodig. Uitzondering in dat geval is wanneer de plaats tov het Bemonsteringsobject daarbij van belang is, bv de diepte waarop een grondmonster is genomen bij een boring. Datatype is Geometrie om naast puntlocaties ook een ruimere begrenzing te kunnen opgeven (bv een diepte-interval in het geval van een grondmonster)."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
-          "name": "materiaalklasse",
-          "sort": "materiaalklasse",
-          "label": {
-            "nl": "materiaalklasse"
-          },
-          "description": {
-            "nl": "Basisclassificatie vh materiaal waaruit het Grondmonster bestaat."
-          },
-          "usage": {
-            "nl": "Bv bodem, gesteente"
-          },
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Materiaalklasse",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Materiaalklasse"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "materiaalklasse",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
-            "ap-usageNote-nl": "Bv bodem, gesteente",
-            "ap-definition-nl": "Basisclassificatie vh materiaal waaruit het Grondmonster bestaat."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
-          "name": "huidigelocatie",
-          "sort": "huidigeLocatie",
-          "label": {
-            "nl": "huidigeLocatie"
-          },
-          "description": {
-            "nl": "Plaats waar het Monster wordt bewaard."
-          },
-          "usage": {
-            "nl": "Dit is typisch een indirecte aanduiding  van de locatie bv een verwijzing naar de Organisatie waar het Monster wordt bewaard en evt de positie daarbinnen (schap in een opslagplaats of lade in een museum)."
-          },
-          "domain": [
-            {
-              "EA-Name": "Grondmonster",
-              "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Locatie",
-              "range_uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
-              "range_puri": "http://www.w3.org/ns/prov#Location",
-              "range_label": {
-                "nl": "Locatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "huidigeLocatie",
-            "definition-nl": "Plaats waar het Monster wordt bewaard.",
-            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
-            "ap-usageNote-nl": "Dit is typisch een indirecte aanduiding  van de locatie bv een verwijzing naar de Organisatie waar het Monster wordt bewaard en evt de positie daarbinnen (schap in een opslagplaats of lade in een museum)."
-          }
-        }
-      ]
+      "properties": []
     },
     {
       "uri": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
@@ -5886,18 +5669,18 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#VVVmeting",
-      "name": "Vvvvmeting",
+      "name": "Vvvmeting",
       "label": {
-        "nl": "VVVVmeting"
+        "nl": "VVVmeting"
       },
-      "sort": "VVVVmeting",
+      "sort": "VVVmeting",
       "description": {
         "nl": "Individuele meting van de horizontale Doorlatendheid bij veranderlijk verval."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "VVVVmeting",
+        "label-nl": "VVVmeting",
         "definition-nl": "Individuele meting van de horizontale Doorlatendheid bij veranderlijk verval."
       },
       "properties": [
