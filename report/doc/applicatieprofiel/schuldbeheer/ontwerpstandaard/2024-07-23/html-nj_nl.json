@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/c2a523e16abc320c25f46fa6a89be4605290f622",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/c2a523e16abc320c25f46fa6a89be4605290f622/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/0aa3460639997f55eeb7808e98c92baf225f5412",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/0aa3460639997f55eeb7808e98c92baf225f5412/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
     "usesVocs": [],
@@ -3258,8 +3258,21 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_label": {
+                "nl": "Decimal"
+              }
+            }
+          ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
@@ -3460,54 +3473,10 @@
       "properties": [
         {
           "uri": "http://www.w3.org/ns/org#subOrganizationOf",
-          "name": "isSuborganisatieVan(target)",
-          "sort": "is suborganisatie van (target)",
+          "name": "isSuborganisatieVan",
+          "sort": "is suborganisatie van",
           "label": {
-            "nl": "is suborganisatie van (target)"
-          },
-          "description": {
-            "nl": "Organisatie die deze organisatie omvat."
-          },
-          "usage": {
-            "nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren."
-          },
-          "domain": [
-            {
-              "EA-Name": "Organisatie",
-              "uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Organisatie",
-              "range_uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Organisatie",
-              "range_puri": "http://www.w3.org/ns/org#Organization",
-              "range_label": {
-                "nl": "Organisatie"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Organisatie die deze organisatie omvat.",
-            "ap-usageNote-nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "label-nl": "",
-            "ap-label-nl": "",
-            "uri": "http://www.w3.org/ns/org#subOrganizationOf"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/org#subOrganizationOf",
-          "name": "isSuborganisatieVan(source)",
-          "sort": "is suborganisatie van (source)",
-          "label": {
-            "nl": "is suborganisatie van (source)"
+            "nl": "is suborganisatie van"
           },
           "description": {
             "nl": "Organisatie die deze organisatie omvat."
@@ -3541,8 +3510,8 @@
           "rawTags": {
             "ap-definition-nl": "Organisatie die deze organisatie omvat.",
             "ap-usageNote-nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "label-nl": "",
-            "ap-label-nl": "",
+            "label-nl": "is suborganisatie van",
+            "ap-label-nl": "is suborganisatie van",
             "uri": "http://www.w3.org/ns/org#subOrganizationOf"
           }
         }

@@ -220,11 +220,12 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#interest> a rdf:Property;
+<https://data.vlaanderen.be/ns/schuldbeheer#interest> a owl:DatatypeProperty;
   rdfs:label "interest"@nl;
   rdfs:comment "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range xsd:decimal .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#isDeelvan> a owl:ObjectProperty;
   rdfs:label "is deel van"@nl;
