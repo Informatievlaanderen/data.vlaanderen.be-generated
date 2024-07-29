@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/aeee7e24239badf362abcc005204c5333771f764">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/aeee7e24239badf362abcc005204c5333771f764</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/aeee7e24239badf362abcc005204c5333771f764/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/aeee7e24239badf362abcc005204c5333771f764/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/787a3e06c841daedd36ccef95d8ac2663cbc7cf2">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/787a3e06c841daedd36ccef95d8ac2663cbc7cf2</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/787a3e06c841daedd36ccef95d8ac2663cbc7cf2/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/787a3e06c841daedd36ccef95d8ac2663cbc7cf2/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html">https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html</a></dd>
 
@@ -340,7 +340,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Deel van het Object dat men wil observeren en dat representatief is voor dat Object.</dd>
                     
-                    <dt>Gebruik</dt><dd>Het deel waarvan sprake kan fysiek zijn (een Monster) of ruimtelijk (een RuimtelijkBemonsteringsobject). Men observeert een Bemonsteringsobject ipv het werkelijk Object als dat laatste niet in zijn geheel geobserveerd kan worden (bv omdat exhaustieve observatie onpraktisch zou zijn). Het Bemonsteringsobject vormt samen met het Proces dat voor observatie is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein.</dd>
+                    <dt>Gebruik</dt><dd>Het deel waarvan sprake kan fysiek zijn (een Monster) of ruimtelijk (een RuimtelijkBemonsteringsobject). Men observeert een Bemonsteringsobject ipv het werkelijk Object als dat laatste niet in zijn geheel geobserveerd kan worden (bv omdat exhaustieve observatie onpraktisch zou zijn). Het Bemonsteringsobject vormt samen met het Proces dat voor observatie is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein.OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href="https://data.vlaanderen.be/doc/applicatieprofiel/observaties-e-en-metingen/">Observaties en Metingen</a>.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -350,11 +350,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Bemonsteringsobject%3Abemonsterdobject">bemonsterdObject</a>, 
-                      <a href="#Bemonsteringsobject%3Aherkomst">herkomst</a>, 
-                      <a href="#Bemonsteringsobject%3Aidentificator">identificator</a>, 
-                      <a href="#Bemonsteringsobject%3Aparameter">parameter</a>, 
-                      <a href="#Bemonsteringsobject%3Atype">type</a>.</dd>
+                      <a href="#Bemonsteringsobject%3Abemonsterdobject">bemonsterdObject</a>.</dd>
                     
                   </dl>
                 </div>
@@ -391,86 +387,6 @@
                         <td>1..*</td>
                         <td property="rdfs:comment">Verwijzing naar het Object dat men wil bemonsteren.</td>
                         <td property="vann:usageNote">Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Bemonsteringsobject%3Aherkomst" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage" data-placement="right">
-                            herkomst</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Herkomst" data-placement="right">Herkomst</a>
-			    
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">Verwijzing naar de Herkomst van een Bemonsteringsobject.</td>
-                        <td property="vann:usageNote">De Herkomst beschrijf de oorsprong en historiek vh Bemonsteringsobject. Bv de manier van monstername of de werkwijze gevolgd bij een veldonderzoek.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Bemonsteringsobject%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
-                            identificator</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Identificator" data-placement="right">Identificator</a>
-			    
-                          
-                        </td>
-                        <td>1..*</td>
-                        <td property="rdfs:comment">Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert.</td>
-                        <td property="vann:usageNote">Bv het uniek nummer dat aan een Monster wordt toegekend of het numer van een meetstation.</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Bemonsteringsobject%3Aparameter" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter" data-placement="right">
-                            parameter</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#BenoemdeWaarde" data-placement="right">BenoemdeWaarde</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">Willekeurig gegeven gassocieerd met het Bemonsteringsobject.</td>
-                        <td property="vann:usageNote">Bv een parameter die een aspect van de Bemonstering beschrijft (bv hoogte bij een luchtopname) of een belangrijke omgevingsparameter (bv het waterpeil bij een boring).</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Bemonsteringsobject%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
-                            type</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Bemonsteringsobjecttype" data-placement="right">Bemonsteringsobjecttype</a>
-			    
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">Aard van het Bemonsteringsobject.</td>
-                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
