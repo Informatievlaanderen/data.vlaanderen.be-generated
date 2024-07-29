@@ -7554,6 +7554,12 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "test"
+      },
+      "ap-label-nl": {
+        "nl": "test"
+      },
       "ap-definition-nl": {
         "nl": "TODO"
       },
@@ -7565,10 +7571,14 @@
         "EA-Parents": "",
         "EA-Parents2": [],
         "parentclasses": "",
-        "label": "",
+        "label": {
+          "nl": "test"
+        },
         "definition": "",
         "usage": "",
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "test"
+        },
         "ap-definition-nl": {
           "nl": "TODO"
         },
@@ -7579,11 +7589,16 @@
             "key": "uri",
             "value": "http://www.w3.org/2004/02/skos/core#Concept",
             "note": "null"
+          },
+          {
+            "key": "label-nl",
+            "value": "test",
+            "note": "null"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY"
       },
-      "name": ""
+      "name": "Test"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -8586,6 +8601,12 @@
       "@id": "https://schema.org/MonetaryAmount",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "inpackage": "OTHER_PACKAGE",
+      "ap-usageNote-nl": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      },
+      "usage": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      },
       "definition": {
         "nl": "Een geldwaarde of -bereik."
       },
@@ -8612,14 +8633,18 @@
         "definition": {
           "nl": "Een geldwaarde of -bereik."
         },
-        "usage": "",
+        "usage": {
+          "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+        },
         "ap-label-nl": {
           "nl": "Geldbedrag"
         },
         "ap-definition-nl": {
           "nl": "Een geldwaarde of -bereik."
         },
-        "ap-usageNote-nl": "",
+        "ap-usageNote-nl": {
+          "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+        },
         "ap-codelist": "",
         "RawTags": [
           {
@@ -8635,6 +8660,11 @@
           {
             "key": "uri",
             "value": "https://schema.org/MonetaryAmount",
+            "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. ",
             "note": "null"
           }
         ],
@@ -11809,7 +11839,7 @@
     },
     {
       "@id": "https://schema.org/currency",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "name": "valuta",
       "inpackage": "OTHER_PACKAGE",
       "definition": {
@@ -11831,11 +11861,11 @@
         "EA-Type": "attribute",
         "EA-Domain": "Geldbedrag",
         "EA-Domain-Guid": "{13BC8164-4E7E-4bb6-9D33-D30FC6F725C2}",
-        "EA-Range": "Valuta",
+        "EA-Range": "String",
         "RangeData": {
-          "EA-Name": "",
+          "EA-Name": "String",
           "EA-Package": "",
-          "uri": "null"
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
         },
         "label": {
           "nl": "valuta"
@@ -11878,7 +11908,13 @@
           "EA-Name": "Geldbedrag"
         }
       ],
-      "range": [],
+      "range": [
+        {
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
       "generalization": [],
       "minCardinality": "1",
       "maxCardinality": "1"
@@ -11907,11 +11943,11 @@
         "EA-Type": "attribute",
         "EA-Domain": "Geldbedrag",
         "EA-Domain-Guid": "{13BC8164-4E7E-4bb6-9D33-D30FC6F725C2}",
-        "EA-Range": "Double",
+        "EA-Range": "Decimal",
         "RangeData": {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "label": {
           "nl": "waarde"
@@ -11956,9 +11992,9 @@
       ],
       "range": [
         {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         }
       ],
       "generalization": [],
@@ -12085,12 +12121,12 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
   "config": "config/config-ap.json",
   "branchtag": "main",
-  "dummy": "03",
+  "dummy": "04",
   "filename": "config/eap-mapping.json",
   "navigation": {},
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer",
   "urlref": "/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/2024-07-23",
-  "documentcommit": "e7810267a49c35238b0a6cbaeaee8bc5cf96b28b",
-  "toolchaincommit": "3ee65f60a88486f9f8531877e0e37d6eb76602c9",
+  "documentcommit": "e38a9cc94257f24797434e99c3e7770054f46c00",
+  "toolchaincommit": "f46bb2bc0203b5f0aeb4290787cd8b321494e9c8",
   "hostname": "https://data.test-vlaanderen.be"
 }

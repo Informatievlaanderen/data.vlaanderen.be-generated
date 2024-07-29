@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/e7810267a49c35238b0a6cbaeaee8bc5cf96b28b",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/e7810267a49c35238b0a6cbaeaee8bc5cf96b28b/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/e38a9cc94257f24797434e99c3e7770054f46c00",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/e38a9cc94257f24797434e99c3e7770054f46c00/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
     "usesVocs": [],
@@ -2577,10 +2577,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#SociaalStatuuttype",
+              "range_uri": "#test",
               "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "SociaalStatuuttype"
+                "nl": "test"
               }
             }
           ],
@@ -5680,12 +5680,15 @@
       "description": {
         "nl": "Een geldwaarde of -bereik."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      },
       "parents": [],
       "rawTags": {
         "label-nl": "Geldbedrag",
         "definition-nl": "Een geldwaarde of -bereik.",
-        "uri": "https://schema.org/MonetaryAmount"
+        "uri": "https://schema.org/MonetaryAmount",
+        "ap-usageNote-nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
       },
       "properties": [
         {
@@ -5705,8 +5708,21 @@
               "uri": "https://schema.org/MonetaryAmount"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -5734,16 +5750,16 @@
           ],
           "range": [
             {
-              "range_label": "Double",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#double"
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#double",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#double",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
               "range_label": {
-                "nl": "Double"
+                "nl": "Decimal"
               }
             }
           ],

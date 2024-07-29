@@ -2046,8 +2046,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-Schuldbeheer-master",
-  "documentcommit": "e7810267a49c35238b0a6cbaeaee8bc5cf96b28b",
-  "dummy": "03",
+  "documentcommit": "e38a9cc94257f24797434e99c3e7770054f46c00",
+  "dummy": "04",
   "eap": "OSLO-Schuldbeheer.eap",
   "editors": [
     {
@@ -5441,7 +5441,7 @@
     },
     {
       "@id": "https://schema.org/currency",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{235B2E34-FA32-4add-B467-4F0CDF2C53E4}",
       "codelist": [],
       "definition": {
@@ -5462,12 +5462,12 @@
         "EA-Guid": "{235B2E34-FA32-4add-B467-4F0CDF2C53E4}",
         "EA-Name": "valuta",
         "EA-Package": "OSLO-Schuldbeheer-master",
-        "EA-Range": "Valuta",
+        "EA-Range": "String",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
+          "EA-Name": "String",
           "EA-Package": "",
-          "uri": "null"
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
         },
         "RawTags": [
           {
@@ -5520,7 +5520,13 @@
       "maxCardinality": "1",
       "minCardinality": "1",
       "name": "valuta",
-      "range": []
+      "range": [
+        {
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
     },
     {
       "@id": "https://schema.org/value",
@@ -5545,12 +5551,12 @@
         "EA-Guid": "{76A97297-02E7-40df-9EF3-2857686D7B55}",
         "EA-Name": "waarde",
         "EA-Package": "OSLO-Schuldbeheer-master",
-        "EA-Range": "Double",
+        "EA-Range": "Decimal",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "RawTags": [
           {
@@ -5605,9 +5611,9 @@
       "name": "waarde",
       "range": [
         {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         }
       ]
     },
@@ -6006,6 +6012,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "test"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -6015,10 +6026,12 @@
           "nl": "TODO"
         },
         "equivalent": "",
-        "label": "",
+        "label": {
+          "nl": "test"
+        },
         "label-en": "",
         "label-nl": {
-          "nl": "TODO"
+          "nl": "test"
         },
         "parentclasses": "",
         "sameAs": "",
@@ -6029,10 +6042,13 @@
         "usageNote-nl": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
+      "label": {
+        "nl": "test"
       },
-      "name": ""
+      "label-nl": {
+        "nl": "test"
+      },
+      "name": "Test"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -7098,6 +7114,11 @@
             "key": "uri",
             "note": "null",
             "value": "https://schema.org/MonetaryAmount"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -12942,7 +12963,7 @@
   "title-nl": {
     "nl": "TODO"
   },
-  "toolchaincommit": "3ee65f60a88486f9f8531877e0e37d6eb76602c9",
+  "toolchaincommit": "f46bb2bc0203b5f0aeb4290787cd8b321494e9c8",
   "translation": [
     {
       "language": "nl",
