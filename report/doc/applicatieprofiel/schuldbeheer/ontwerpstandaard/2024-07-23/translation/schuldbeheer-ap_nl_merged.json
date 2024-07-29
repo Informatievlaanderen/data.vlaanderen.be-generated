@@ -1887,8 +1887,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-Schuldbeheer-master",
-  "documentcommit": "98be791fb2f39e17f87b4ab5c863ec2ab137b0b6",
-  "dummy": "04",
+  "documentcommit": "f57b3538e0a5f89a79cd38b86c047358a54b8137",
+  "dummy": "05",
   "eap": "OSLO-Schuldbeheer.eap",
   "editors": [
     {
@@ -3651,10 +3651,10 @@
         "EA-Range": "Rol",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-GUID": "{E97D183C-AFF6-4992-B9C2-3D98EC1BCFD6}",
+          "EA-GUID": "{BB56784D-A0A7-4a2f-94EC-25093B279416}",
           "EA-Name": "Rol",
-          "EA-Package": "OSLO-Schuldbeheer-001",
-          "uri": "http://fixme.com#Rol"
+          "EA-Package": "OSLO-Organisatie",
+          "uri": "http://www.w3.org/ns/org#Role"
         },
         "RawTags": [
           {
@@ -3700,10 +3700,10 @@
       "name": "rol",
       "range": [
         {
-          "EA-GUID": "{E97D183C-AFF6-4992-B9C2-3D98EC1BCFD6}",
+          "EA-GUID": "{BB56784D-A0A7-4a2f-94EC-25093B279416}",
           "EA-Name": "Rol",
-          "EA-Package": "OSLO-Schuldbeheer-001",
-          "uri": "http://fixme.com#Rol"
+          "EA-Package": "OSLO-Organisatie",
+          "uri": "http://www.w3.org/ns/org#Role"
         }
       ]
     },
@@ -5200,7 +5200,7 @@
     },
     {
       "@id": "https://schema.org/currency",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{235B2E34-FA32-4add-B467-4F0CDF2C53E4}",
       "ap-definition-nl": {
         "nl": "De valuta van het geldbedrag"
@@ -5224,13 +5224,12 @@
         "EA-Guid": "{235B2E34-FA32-4add-B467-4F0CDF2C53E4}",
         "EA-Name": "valuta",
         "EA-Package": "OSLO-Schuldbeheer-master",
-        "EA-Range": "Valuta",
+        "EA-Range": "String",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-GUID": "{097D7214-151C-4f69-A9E2-A474814A77D9}",
-          "EA-Name": "Valuta",
-          "EA-Package": "OSLO-Schuldbeheer-001",
-          "uri": "http://fixme.com#Valuta"
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
         },
         "RawTags": [
           {
@@ -5276,10 +5275,9 @@
       "name": "valuta",
       "range": [
         {
-          "EA-GUID": "{097D7214-151C-4f69-A9E2-A474814A77D9}",
-          "EA-Name": "Valuta",
-          "EA-Package": "OSLO-Schuldbeheer-001",
-          "uri": "http://fixme.com#Valuta"
+          "EA-Name": "String",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#string"
         }
       ]
     },
@@ -5309,12 +5307,12 @@
         "EA-Guid": "{76A97297-02E7-40df-9EF3-2857686D7B55}",
         "EA-Name": "waarde",
         "EA-Package": "OSLO-Schuldbeheer-master",
-        "EA-Range": "Double",
+        "EA-Range": "Decimal",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "RawTags": [
           {
@@ -5360,9 +5358,9 @@
       "name": "waarde",
       "range": [
         {
-          "EA-Name": "Double",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#double"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         }
       ]
     },
@@ -5663,6 +5661,9 @@
       "ap-definition-nl": {
         "nl": "TODO"
       },
+      "ap-label-nl": {
+        "nl": "Krediettype"
+      },
       "extra": {
         "EA-Guid": "{0BA6091D-9962-4129-906E-BD2A7AB8E2EB}",
         "EA-Name": "Krediettype",
@@ -5675,6 +5676,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Krediettype"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5682,15 +5688,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Krediettype"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Krediettype"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Krediettype"
+      },
+      "name": "Krediettype"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5698,6 +5711,9 @@
       "EA-Guid": "{B2119B09-AA0F-4387-A626-0D28A95C8985}",
       "ap-definition-nl": {
         "nl": "TODO"
+      },
+      "ap-label-nl": {
+        "nl": "Type sociaal statuut"
       },
       "extra": {
         "EA-Guid": "{B2119B09-AA0F-4387-A626-0D28A95C8985}",
@@ -5711,6 +5727,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Type sociaal statuut"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5718,15 +5739,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Type sociaal statuut"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Type sociaal statuut"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Type sociaal statuut"
+      },
+      "name": "TypeSociaalStatuut"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5734,6 +5762,9 @@
       "EA-Guid": "{10ED1405-D93D-4dfb-93A0-0AB00F9256C0}",
       "ap-definition-nl": {
         "nl": "TODO"
+      },
+      "ap-label-nl": {
+        "nl": "Type jurische statuut"
       },
       "extra": {
         "EA-Guid": "{10ED1405-D93D-4dfb-93A0-0AB00F9256C0}",
@@ -5747,6 +5778,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Type jurische statuut"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5754,15 +5790,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Type jurische statuut"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Type jurische statuut"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Type jurische statuut"
+      },
+      "name": "TypeJurischeStatuut"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5770,6 +5813,9 @@
       "EA-Guid": "{C5993CF9-60F8-42e1-98EB-348556BEBF4A}",
       "ap-definition-nl": {
         "nl": "TODO"
+      },
+      "ap-label-nl": {
+        "nl": "Inkomsttype"
       },
       "extra": {
         "EA-Guid": "{C5993CF9-60F8-42e1-98EB-348556BEBF4A}",
@@ -5783,6 +5829,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Inkomsttype"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5790,15 +5841,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Inkomsttype"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Inkomsttype"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Inkomsttype"
+      },
+      "name": "Inkomsttype"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5858,6 +5916,9 @@
       "ap-definition-nl": {
         "nl": "TODO"
       },
+      "ap-label-nl": {
+        "nl": "Periodiciteit inkomst"
+      },
       "extra": {
         "EA-Guid": "{C4E50886-6732-4ea3-A2EA-6EC4E548BA03}",
         "EA-Name": "PeriodiciteitInkomst",
@@ -5870,6 +5931,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Periodiciteit inkomst"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5877,15 +5943,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Periodiciteit inkomst"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Periodiciteit inkomst"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Periodiciteit inkomst"
+      },
+      "name": "PeriodiciteitInkomst"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -5893,6 +5966,9 @@
       "EA-Guid": "{F96C1E67-ACC4-4550-BB15-71A0F99F3E03}",
       "ap-definition-nl": {
         "nl": "TODO"
+      },
+      "ap-label-nl": {
+        "nl": "Solvabiliteitsindicatortype"
       },
       "extra": {
         "EA-Guid": "{F96C1E67-ACC4-4550-BB15-71A0F99F3E03}",
@@ -5906,6 +5982,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Solvabiliteitsindicatortype"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -5913,15 +5994,22 @@
         "ap-definition-nl": {
           "nl": "TODO"
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Solvabiliteitsindicatortype"
+        },
         "ap-usageNote-nl": "",
         "definition": "",
-        "label": "",
+        "label": {
+          "nl": "Solvabiliteitsindicatortype"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Solvabiliteitsindicatortype"
+      },
+      "name": "Solvabiliteitsindicatortype"
     },
     {
       "@id": "http://www.w3.org/ns/adms#Identifier",
@@ -6690,6 +6778,9 @@
       "ap-label-nl": {
         "nl": "Geldbedrag"
       },
+      "ap-usageNote-nl": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      },
       "definition": {
         "nl": "Een geldwaarde of -bereik."
       },
@@ -6715,6 +6806,11 @@
             "key": "uri",
             "note": "null",
             "value": "https://schema.org/MonetaryAmount"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -6725,7 +6821,9 @@
         "ap-label-nl": {
           "nl": "Geldbedrag"
         },
-        "ap-usageNote-nl": "",
+        "ap-usageNote-nl": {
+          "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+        },
         "definition": {
           "nl": "Een geldwaarde of -bereik."
         },
@@ -6733,13 +6831,18 @@
           "nl": "Geldbedrag"
         },
         "parentclasses": "",
-        "usage": ""
+        "usage": {
+          "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+        }
       },
       "inpackage": "OTHER_PACKAGE",
       "label": {
         "nl": "Geldbedrag"
       },
-      "name": "Geldbedrag"
+      "name": "Geldbedrag",
+      "usage": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      }
     }
   ],
   "extra": {
@@ -12166,7 +12269,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
   "template": "schuldbeheer-ap.j2",
   "title": "OSLO Schuldbeheer - Applicatieprofiel",
-  "toolchaincommit": "5ae04d31e11d28ca45d265e4dc990307608a2d2e",
+  "toolchaincommit": "a378ef83ad0c76eeefa36030694f39043b02e094",
   "translation": [
     {
       "language": "nl",
