@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/5c49e6ac3b08e59465fecf058732239cffbb2ca3",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/5c49e6ac3b08e59465fecf058732239cffbb2ca3/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/0467f47e94a14f79a38cc2c092e539ab5a70e419",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/0467f47e94a14f79a38cc2c092e539ab5a70e419/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html",
     "usesVocs": [],
@@ -1413,6 +1413,67 @@
       ]
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandkarakteristiekenprocedure",
+      "name": "",
+      "label": {},
+      "sort": "",
+      "description": {},
+      "usage": {},
+      "parents": [
+        {
+          "label": "Observatieprocedure",
+          "name": "Observatieprocedure",
+          "package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/Procedure",
+          "scoped_uri": "#Observatieprocedure"
+        }
+      ],
+      "rawTags": {},
+      "properties": [
+        {
+          "uri": "http://www.w3.org/ns/ssn/hasInput",
+          "name": "input",
+          "sort": "input",
+          "label": {
+            "nl": "input"
+          },
+          "description": {
+            "nl": "Verwijzing naar de Input die de procedure vereist."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandkarakteristiekenprocedure",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandkarakteristiekenprocedure"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Schuifweerstandsproefreeks",
+              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Schuifweerstandsproefreeks",
+              "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks",
+              "range_label": {
+                "nl": "Schuifweerstandsproefreeks"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "input",
+            "uri": "http://www.w3.org/ns/ssn/hasInput",
+            "ap-label-nl": "input",
+            "ap-definition-nl": "Verwijzing naar de Input die de procedure vereist."
+          }
+        }
+      ]
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef",
       "name": "Schuifweerstandsproef",
       "label": {
@@ -1427,18 +1488,18 @@
       },
       "parents": [
         {
-          "label": "Meetreeks",
-          "name": "Meetreeks",
-          "package": "OSLO-BodemEnOndergrond",
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks",
-          "scoped_uri": "#Meetreeks"
-        },
-        {
           "label": "Observatie",
           "name": "Observatie",
           "package": "OSLO-ObservatiesEnMetingen",
           "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
           "scoped_uri": "#Observatie"
+        },
+        {
+          "label": "Meting",
+          "name": "Meting",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement",
+          "scoped_uri": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
         }
       ],
       "rawTags": {
@@ -1488,86 +1549,6 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetwaardeparameter",
-          "name": "meetwaardeparameter",
-          "sort": "meetwaardeparameter",
-          "label": {
-            "nl": "meetwaardeparameter"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandproef",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-              "range_label": {
-                "nl": "Kenmerktype"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "meetwaardeparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandsproef.meetwaardeparameter"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetpuntparameter",
-          "name": "meetpuntparameter",
-          "sort": "meetpuntparameter",
-          "label": {
-            "nl": "meetpuntparameter"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandproef",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-              "range_label": {
-                "nl": "Kenmerktype"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "meetpuntparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandsproef.meetpuntparameter"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.geobserveerdObject",
           "name": "geobserveerdobject",
           "sort": "geobserveerdObject",
@@ -1607,6 +1588,47 @@
             "xUML": "{redefines geobserveerdObject}",
             "name": "Schuifweerstandsproef.geobserveerdObject"
           }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "name": "geobserveerdkenmerk",
+          "sort": "geobserveerdKenmerk",
+          "label": {
+            "nl": "geobserveerdKenmerk"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandproef",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kenmerktype",
+              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kenmerktype",
+              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "range_label": {
+                "nl": "Kenmerktype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "xUML": "{redefines geobserveerdKenmerk}",
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+            "label-nl": "geobserveerdKenmerk",
+            "ap-definition-nl": "TODO"
+          }
         }
       ]
     },
@@ -1625,18 +1647,18 @@
       },
       "parents": [
         {
-          "label": "Meetreeks",
-          "name": "Meetreeks",
-          "package": "OSLO-BodemEnOndergrond",
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks",
-          "scoped_uri": "#Meetreeks"
-        },
-        {
           "label": "Observatie",
           "name": "Observatie",
           "package": "OSLO-ObservatiesEnMetingen",
           "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
           "scoped_uri": "#Observatie"
+        },
+        {
+          "label": "Meting",
+          "name": "Meting",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement",
+          "scoped_uri": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
         }
       ],
       "rawTags": {
@@ -1727,14 +1749,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetwaardeparameter",
-          "name": "meetwaardeparameter",
-          "sort": "meetwaardeparameter",
+          "uri": "http://www.w3.org/ns/sosa/usedProcedure",
+          "name": "gebruikteprocedure",
+          "sort": "gebruikteProcedure",
           "label": {
-            "nl": "meetwaardeparameter"
+            "nl": "gebruikteProcedure"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De gebruikte procedure van de observatie."
           },
           "usage": {},
           "domain": [
@@ -1745,33 +1767,33 @@
           ],
           "range": [
             {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+              "range_label": "Schuifweerstandkarakteristiekenprocedure",
+              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandkarakteristiekenprocedure"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "range_uri": "#Schuifweerstandkarakteristiekenprocedure",
+              "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandkarakteristiekenprocedure",
               "range_label": {
-                "nl": "Kenmerktype"
+                "nl": "Schuifweerstandkarakteristiekenprocedure"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "meetwaardeparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandskaraketeristieken.meetwaardeparameter"
+            "ap-definition-nl": "De gebruikte procedure van de observatie.",
+            "uri": "http://www.w3.org/ns/sosa/usedProcedure",
+            "label-nl": "gebruikteProcedure"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetpuntparameter",
-          "name": "meetpuntparameter",
-          "sort": "meetpuntparameter",
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "name": "geobserveerdkenmerk",
+          "sort": "geobserveerdKenmerk",
           "label": {
-            "nl": "meetpuntparameter"
+            "nl": "geobserveerdKenmerk"
           },
           "description": {
             "nl": "TODO"
@@ -1801,9 +1823,10 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "meetpuntparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandskaraketeristieken.meetpuntparameter"
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+            "label-nl": "geobserveerdKenmerk",
+            "ap-definition-nl": "TODO",
+            "xUML": "{redefines geobserveerdKenmerk}"
           }
         }
       ]
@@ -1893,86 +1916,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetwaardeparameter",
-          "name": "meetwaardeparameter",
-          "sort": "meetwaardeparameter",
-          "label": {
-            "nl": "meetwaardeparameter"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandsproefreeks",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-              "range_label": {
-                "nl": "Kenmerktype"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "meetwaardeparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandsproefreeks.meetwaardeparameter"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetpuntparameter",
-          "name": "meetpuntparameter",
-          "sort": "meetpuntparameter",
-          "label": {
-            "nl": "meetpuntparameter"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandsproefreeks",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-              "range_label": {
-                "nl": "Kenmerktype"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "meetpuntparameter",
-            "definition-nl": "TODO",
-            "name": "Schuifweerstandsproefreeks.meetpuntparameter"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.geobserveerdObject",
           "name": "geobserveerdobject",
           "sort": "geobserveerdObject",
@@ -2032,46 +1975,6 @@
           ],
           "range": [
             {
-              "range_label": "Schuifweerstandskarakteristieken",
-              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Schuifweerstandskarakteristieken",
-              "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken",
-              "range_label": {
-                "nl": "Schuifweerstandskarakteristieken"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/sosa/hasMember",
-            "label-nl": "heeftLid",
-            "definition-nl": "TODO"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/sosa/hasMember",
-          "name": "heeftlid",
-          "sort": "heeftLid",
-          "label": {
-            "nl": "heeftLid"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandsproefreeks",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks"
-            }
-          ],
-          "range": [
-            {
               "range_label": "Schuifweerstandproef",
               "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
             }
@@ -2091,6 +1994,47 @@
             "definition-nl": "TODO",
             "label-nl": "heeftLid",
             "uri": "http://www.w3.org/ns/sosa/hasMember"
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "name": "geobserveerdkenmerk",
+          "sort": "geobserveerdKenmerk",
+          "label": {
+            "nl": "geobserveerdKenmerk"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandsproefreeks",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kenmerktype",
+              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kenmerktype",
+              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "range_label": {
+                "nl": "Kenmerktype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+            "label-nl": "geobserveerdKenmerk",
+            "ap-definition-nl": "TODO",
+            "xUML": "{redefines geobserveerdKenmerk}"
           }
         }
       ]
@@ -2346,26 +2290,25 @@
       },
       "sort": "DiscreetBereik",
       "description": {
-        "nl": "Een fenomeen dat discreet varieert in ruimte of tijd."
+        "nl": "Stapsgewijze variatie van een fenomeen in ruimte of tijd."
       },
       "usage": {
-        "nl": "De waarde van een bepaald fenomeen kan een constante zijn (bv kleur) of kan variëren in functie van een andere parameter (bv de lengte van een treinspoor is functie van de temperatuur). Als het fenomeen varieert in ruimte of tijd spreken we van een bereik, bv de  temperatuur verandert met de locatie of wijzigt doorheen de tijd. Als het fenomeen bovendien varieert in stappen dan hebben we te maken met een DiscreetBereik. In tegenstelling tot een ContinuBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners uiteraard niet varieert binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinuBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
+        "nl": "In tegenstelling tot een ContinueBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners constant is binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinueBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
       },
       "parents": [
         {
           "label": "Bereik",
           "name": "Bereik",
           "package": "OSLO-RuimtelijkeBereiken",
-          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik",
-          "scoped_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+          "scoped_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
         }
       ],
       "rawTags": {
         "label-nl": "DiscreetBereik",
         "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
-        "ap-label-nl": "DiscreetBereik",
-        "ap-definition-nl": "Een fenomeen dat discreet varieert in ruimte of tijd.",
-        "ap-usageNote-nl": "De waarde van een bepaald fenomeen kan een constante zijn (bv kleur) of kan variëren in functie van een andere parameter (bv de lengte van een treinspoor is functie van de temperatuur). Als het fenomeen varieert in ruimte of tijd spreken we van een bereik, bv de  temperatuur verandert met de locatie of wijzigt doorheen de tijd. Als het fenomeen bovendien varieert in stappen dan hebben we te maken met een DiscreetBereik. In tegenstelling tot een ContinuBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners uiteraard niet varieert binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinuBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
+        "ap-definition-nl": "Stapsgewijze variatie van een fenomeen in ruimte of tijd.",
+        "ap-usageNote-nl": "In tegenstelling tot een ContinueBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners constant is binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinueBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
       },
       "properties": [
         {
@@ -2406,9 +2349,9 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "Onderdeel van het Bereik.",
-            "ap-label-nl": "element",
             "ap-usageNote-nl": "Concreet het discrete deel van het bereik waarvoor de waarde vh fenomeen gekend is. Bv een pixel en de waarde vd pixel.",
-            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element"
+            "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
+            "label-nl": "element"
           }
         }
       ]
@@ -4730,36 +4673,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetwaardeparameter",
-      "name": {
-        "nl": "meetwaardeparameter",
-        "undefined": "meetwaardeparameter"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetpuntparameter",
-      "name": {
-        "nl": "meetpuntparameter",
-        "undefined": "meetpuntparameter"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.geobserveerdObject",
       "name": {
         "nl": "geobserveerdObject",
@@ -4779,36 +4692,6 @@
       "name": {
         "nl": "resultaat",
         "undefined": "resultaat"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetwaardeparameter",
-      "name": {
-        "nl": "meetwaardeparameter",
-        "undefined": "meetwaardeparameter"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetpuntparameter",
-      "name": {
-        "nl": "meetpuntparameter",
-        "undefined": "meetpuntparameter"
       },
       "description": {},
       "domain": [
@@ -4884,36 +4767,6 @@
       "name": {
         "nl": "geobserveerdObject",
         "undefined": "geobserveerdobject"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetwaardeparameter",
-      "name": {
-        "nl": "meetwaardeparameter",
-        "undefined": "meetwaardeparameter"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetpuntparameter",
-      "name": {
-        "nl": "meetpuntparameter",
-        "undefined": "meetpuntparameter"
       },
       "description": {},
       "domain": [
@@ -6351,9 +6204,9 @@
       "parents": [],
       "rawTags": {
         "label-nl": "GeometrieWaardepaar",
-        "definition-nl": "Element van een DiscreetRuimtelijkBereik.",
-        "usageNote-nl": "Een GeometrieWaardepaar beschrijft de geometrie van een stuk van de ruimte (Punt, Lijn, Vlak etc.) of de tijd (Moment, Periode etc.) en de waarde van een continu variërend fenomeen die men voor dat stuk heeft vastgesteld. Bv de waarde van een pixel in een luchtfoto of de temperatuur in een meetstation op een bepaald tijdstip.",
-        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
+        "ap-definition-nl": "Element van een DiscreetRuimtelijkBereik.",
+        "ap-usageNote-nl": "Een GeometrieWaardepaar beschrijft de geometrie van een stuk van de ruimte (Punt, Lijn, Vlak etc.) of de tijd (Moment, Periode etc.) en de waarde van een continu variërend fenomeen die men voor dat stuk heeft vastgesteld. Bv de waarde van een pixel in een luchtfoto of de temperatuur in een meetstation op een bepaald tijdstip."
       },
       "properties": [
         {
@@ -6392,8 +6245,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "waarde",
-            "definition-nl": "Waarde van het element.",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value"
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+            "ap-definition-nl": "Waarde van het element."
           }
         },
         {

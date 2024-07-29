@@ -136,19 +136,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetpuntparameter> a owl:ObjectProperty;
-  rdfs:label "meetpuntparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken>;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandkarakteristiekenprocedure> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskaraketeristieken.meetwaardeparameter> a owl:ObjectProperty;
-  rdfs:label "meetwaardeparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.geobserveerdObject> a owl:ObjectProperty;
   rdfs:label "geobserveerdObject"@nl;
@@ -185,20 +175,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetpuntparameter> a owl:ObjectProperty;
-  rdfs:label "meetpuntparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.meetwaardeparameter> a owl:ObjectProperty;
-  rdfs:label "meetwaardeparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.resultaat> a owl:ObjectProperty;
   rdfs:label "resultaat"@nl;
   rdfs:comment "TODO"@nl;
@@ -212,20 +188,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetpuntparameter> a owl:ObjectProperty;
-  rdfs:label "meetpuntparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.meetwaardeparameter> a owl:ObjectProperty;
-  rdfs:label "meetwaardeparameter"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefresultaat.waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
@@ -369,7 +331,8 @@ skos:Concept a rdfs:Class;
   rdfs:label "geobserveerdObject"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty> a rdf:Property;
-  rdfs:label "meetwaardeparameter"@nl .
+  rdfs:label "meetwaardeparameter"@nl,
+    "geobserveerdKenmerk"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
   rdfs:label "resultaat"@nl,
@@ -377,6 +340,12 @@ skos:Concept a rdfs:Class;
 
 <http://www.w3.org/ns/sosa/hasMember> a rdf:Property;
   rdfs:label "heeftLid"@nl .
+
+<http://www.w3.org/ns/sosa/usedProcedure> a rdf:Property;
+  rdfs:label "gebruikteProcedure"@nl .
+
+<http://www.w3.org/ns/ssn/hasInput> a rdf:Property;
+  rdfs:label "input"@nl .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter> a rdf:Property;
   rdfs:label "meetpuntparameter"@nl .
@@ -404,16 +373,32 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Resultaat van een Samendrukbaarheidsproef."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat> a owl:Class;
-  rdfs:label "Schuifweerstandskarakteristiekenresultaat"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks> a owl:Class;
   rdfs:label "Schuifweerstandsproefreeks"@nl;
   rdfs:comment "TODO"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef> a owl:Class;
+  rdfs:label "Schuifweerstandsproef"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken> a owl:Class;
+  rdfs:label "Schuifweerstandskarakteristieken"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat> a owl:Class;
+  rdfs:label "Schuifweerstandskarakteristiekenresultaat"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#CVmeting> a owl:Class;
   rdfs:label "CVmeting"@nl;
@@ -424,22 +409,6 @@ skos:Concept a rdfs:Class;
   rdfs:label "HVVmeting"@nl;
   rdfs:comment "Individuele meting van de horizontale Doorlatendheid bij veranderlijk verval."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef> a owl:Class;
-  rdfs:label "Schuifweerstandsproef"@nl;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken> a owl:Class;
-  rdfs:label "Schuifweerstandskarakteristieken"@nl;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefresultaat> a owl:Class;
   rdfs:label "Schuifweerstandsproefresultaat"@nl;
@@ -489,6 +458,8 @@ skos:Concept a rdfs:Class;
   ];
   rdfs:seeAlso skos:Concept,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter>,
+    <http://www.w3.org/ns/ssn/hasInput>,
+    <http://www.w3.org/ns/sosa/usedProcedure>,
     <http://www.w3.org/ns/sosa/hasMember>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,
