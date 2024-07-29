@@ -4749,7 +4749,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "name": "interest",
       "inpackage": "ACTIVE_PACKAGE",
       "label-nl": {
@@ -4771,11 +4771,11 @@
         "EA-Type": "attribute",
         "EA-Domain": "Wanbetalingsvergoeding",
         "EA-Domain-Guid": "{17BBCE3D-8DC1-42ae-A89A-E284C2B58EBA}",
-        "EA-Range": "Percentage",
+        "EA-Range": "Decimal",
         "RangeData": {
-          "EA-Name": "",
+          "EA-Name": "Decimal",
           "EA-Package": "",
-          "uri": "null"
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "label": {
           "nl": "interest"
@@ -4819,7 +4819,13 @@
           "EA-Name": "Wanbetalingsvergoeding"
         }
       ],
-      "range": [],
+      "range": [
+        {
+          "EA-Name": "Decimal",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#decimal"
+        }
+      ],
       "generalization": [],
       "minCardinality": "0",
       "maxCardinality": "1"
@@ -10470,13 +10476,13 @@
     {
       "@id": "http://www.w3.org/ns/org#subOrganizationOf",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "name": "suborganisatieVan(target)",
+      "name": "isSuborganisatieVan",
       "inpackage": "OTHER_PACKAGE",
       "label-nl": {
-        "nl": "suborganisatie van (target)"
+        "nl": "is suborganisatie van"
       },
       "label": {
-        "nl": "suborganisatie van (target)"
+        "nl": "is suborganisatie van"
       },
       "definition-nl": {
         "nl": "TODO"
@@ -10484,7 +10490,7 @@
       "extra": {
         "EA-Name": "isSuborganisatieVan",
         "EA-Guid": "{4E8D3085-D773-474c-89F0-8C197AAEA199}",
-        "derived": "true",
+        "derived": "false",
         "EA-Package": "",
         "EA-Type": "connector",
         "EA-Domain": "Organisatie",
@@ -10496,15 +10502,15 @@
           "EA-Package": "OSLO-Organisatie",
           "uri": "http://www.w3.org/ns/org#Organization"
         },
-        "sourceRole": "isSuborganisatieVan",
+        "sourceRole": "null",
         "destRole": "isSuborganisatieVan",
         "label": {
-          "nl": "suborganisatie van (target)"
+          "nl": "is suborganisatie van"
         },
         "definition": "",
         "usage": "",
         "label-nl": {
-          "nl": "suborganisatie van (target)"
+          "nl": "is suborganisatie van"
         },
         "definition-nl": {
           "nl": "TODO"
@@ -10520,198 +10526,55 @@
         "RawTags": [
           {
             "key": "ap-definition-nl",
-            "value": "Organisatie die deze organisatie omvat.",
-            "note": " "
+            "value": "NOTE",
+            "note": "Organisatie die deze organisatie omvat."
           },
           {
             "key": "ap-usageNote-nl",
-            "value": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "note": " "
+            "value": "NOTE",
+            "note": "Wordt gebruikt om een hiërarchie van organisaties te documenteren."
           },
           {
             "key": "label-nl",
-            "value": "suborganisatie van",
-            "note": "null"
+            "value": "NOTE",
+            "note": "is suborganisatie van"
           },
           {
             "key": "ap-label-nl",
-            "value": "is suborganisatie van",
-            "note": "null"
+            "value": "NOTE",
+            "note": "is suborganisatie van"
           },
           {
             "key": "uri",
-            "value": "http://www.w3.org/ns/org#subOrganizationOf",
-            "note": "null"
-          },
-          {
-            "key": "label-nl",
-            "value": "suborganisatie van (target)",
-            "note": ""
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "is suborganisatie van (target)",
-            "note": ""
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/org#subOrganizationOf"
           }
         ],
         "DestRoleTags": [
           {
             "key": "ap-definition-nl",
-            "value": "Organisatie die deze organisatie omvat.",
-            "note": " "
+            "value": "NOTE",
+            "note": "Organisatie die deze organisatie omvat."
           },
           {
             "key": "ap-usageNote-nl",
-            "value": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "note": " "
+            "value": "NOTE",
+            "note": "Wordt gebruikt om een hiërarchie van organisaties te documenteren."
           },
           {
             "key": "label-nl",
-            "value": "suborganisatie van",
-            "note": "null"
+            "value": "NOTE",
+            "note": "is suborganisatie van"
           },
           {
             "key": "ap-label-nl",
-            "value": "is suborganisatie van",
-            "note": "null"
+            "value": "NOTE",
+            "note": "is suborganisatie van"
           },
           {
             "key": "uri",
-            "value": "http://www.w3.org/ns/org#subOrganizationOf",
-            "note": "null"
-          }
-        ],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/org#Organization",
-          "EA-Name": "Organisatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Organisatie",
-          "EA-GUID": "{6728B11D-A64D-4fd1-B5DF-555EBE11A20B}",
-          "EA-Package": "OSLO-Organisatie",
-          "uri": "http://www.w3.org/ns/org#Organization"
-        }
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "name": "suborganisatieVan(source)",
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "suborganisatie van (source)"
-      },
-      "label": {
-        "nl": "suborganisatie van (source)"
-      },
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Name": "isSuborganisatieVan",
-        "EA-Guid": "{4E8D3085-D773-474c-89F0-8C197AAEA199}",
-        "derived": "true",
-        "EA-Package": "",
-        "EA-Type": "connector",
-        "EA-Domain": "Organisatie",
-        "EA-Domain-Guid": "{6728B11D-A64D-4fd1-B5DF-555EBE11A20B}",
-        "EA-Range": "Organisatie",
-        "RangeData": {
-          "EA-Name": "Organisatie",
-          "EA-GUID": "{6728B11D-A64D-4fd1-B5DF-555EBE11A20B}",
-          "EA-Package": "OSLO-Organisatie",
-          "uri": "http://www.w3.org/ns/org#Organization"
-        },
-        "sourceRole": "isSuborganisatieVan",
-        "destRole": "isSuborganisatieVan",
-        "label": {
-          "nl": "suborganisatie van (source)"
-        },
-        "definition": "",
-        "usage": "",
-        "label-nl": {
-          "nl": "suborganisatie van (source)"
-        },
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "usageNote-nl": "",
-        "label-en": "",
-        "definition-en": "",
-        "usageNote-en": "",
-        "equivalent": "",
-        "subclass": "",
-        "subclass1": "",
-        "sameAs": "",
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "value": "Organisatie die deze organisatie omvat.",
-            "note": " "
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "note": " "
-          },
-          {
-            "key": "label-nl",
-            "value": "suborganisatie van",
-            "note": "null"
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "is suborganisatie van",
-            "note": "null"
-          },
-          {
-            "key": "uri",
-            "value": "http://www.w3.org/ns/org#subOrganizationOf",
-            "note": "null"
-          },
-          {
-            "key": "label-nl",
-            "value": "suborganisatie van (source)",
-            "note": ""
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "is suborganisatie van (source)",
-            "note": ""
-          }
-        ],
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "value": "Organisatie die deze organisatie omvat.",
-            "note": " "
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "note": " "
-          },
-          {
-            "key": "label-nl",
-            "value": "suborganisatie van",
-            "note": "null"
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "is suborganisatie van",
-            "note": "null"
-          },
-          {
-            "key": "uri",
-            "value": "http://www.w3.org/ns/org#subOrganizationOf",
-            "note": "null"
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/org#subOrganizationOf"
           }
         ],
         "Scope": "NOTHING"
@@ -12889,13 +12752,13 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-schuldbeheer/",
   "config": "config/config-voc.json",
   "branchtag": "main",
-  "dummy": "00",
+  "dummy": "01",
   "filename": "config/eap-mapping.json",
   "navigation": {},
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer",
   "urlref": "/doc/vocabularium/schuldbeheer/ontwerpstandaard/2024-07-23",
-  "documentcommit": "c2a523e16abc320c25f46fa6a89be4605290f622",
-  "toolchaincommit": "eb3209ede2d9bec455e985fd644fe0083728680b",
+  "documentcommit": "0aa3460639997f55eeb7808e98c92baf225f5412",
+  "toolchaincommit": "addd36104baf20641dc319fe08aa005eb83141ed",
   "hostname": "https://data.test-vlaanderen.be",
   "translation": [
     {
