@@ -144,19 +144,21 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.geobserveerdObject> a owl:ObjectProperty;
-  rdfs:label "geobserveerdObject"@nl;
-  rdfs:comment "Grondmonster waarvoor de waarden worden bepaald."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken>;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef> a owl:Class;
+  rdfs:label "Schuifweerstandsproef"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Getest wordt onder welke druk de grond in een monster bezwijkt (afschuift, breekt). Dit gebeurt in zeer gecontroleerde omstandigheden bvb bij de triaxaalproef door het monster op te sluiten in een container zodanig dat het overal dezelfde druk ervaart en er dan van bovenaf druk op uit te oefenen tot de breuk optreedt.Typisch wordt een van de procedures (waaronder de triaxaal procedure) toegepast beschreven in <a href=\"https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=17892\">ISO 17892-7 tot 10</a>. Door de proef enkele keren te herhalen op deelmonsters bij verschillende basisdrukken kunnen op basis van de vastgestelde drukwaarden (ook spanningen genoemd) karakteristieken worden bepaald (zie klasse Schuifweerstandkarakteristieken) op basis waarvan de kritische schuifspanning kan worden berekend, ttz de spanning waarbij de grond bezwijkt onder een bepaalde druk."@nl;
+  rdfs:comment "Labotest op een deelmonster om waarden te bepalen noodzakelijk voor het berekenen van de Schuifweerstandskarakteristieken."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.resultaat> a owl:ObjectProperty;
-  rdfs:label "resultaat"@nl;
-  rdfs:comment "Resultaat van de berekening."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken>;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken> a owl:Class;
+  rdfs:label "Schuifweerstandskarakteristieken"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Komt neer op het berekenen van de cohesie en de wrijvingshoek zodat de formule van Coulomb kan worden toegepast die voor een bepaalde normaalspanning aangeeft wat de kritische schuifspanning is, ttz de schuifspanning waarbij de grond afschuift."@nl;
+  rdfs:comment "Berekening van waarden op basis waarvan de kritische schuifspanning kan worden bepaald."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat> .
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat.waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
@@ -173,26 +175,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.geobserveerdObject> a owl:ObjectProperty;
-  rdfs:label "geobserveerdObject"@nl;
-  rdfs:comment "Deelmonster waarop de proef wordt uitgevoerd."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef>;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks> a owl:Class;
+  rdfs:label "Schuifweerstandsproefreeks"@nl;
+  rdfs:comment "Verzameling Schuifweerstandsproeven die plaatsvonden op deelmonsters van hetzelfde Grondmonster."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.resultaat> a owl:ObjectProperty;
-  rdfs:label "resultaat"@nl;
-  rdfs:comment "Resultaat van de Schuifweerstandsproef."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefresultaat> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.geobserveerdObject> a owl:ObjectProperty;
-  rdfs:label "geobserveerdObject"@nl;
-  rdfs:comment "Grondmonster waaruit de deelmonsters zijn genomen waarop de Schuifweerstandproeven zijn uitgevoerd."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefresultaat.waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
@@ -337,8 +324,14 @@ skos:Concept a rdfs:Class;
   rdfs:label "resultaat"@nl,
     "fractiemetingresultaat"@nl .
 
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> a rdf:Property;
+  rdfs:label "geobserveerdObject"@nl .
+
 <http://www.w3.org/ns/sosa/hasMember> a rdf:Property;
   rdfs:label "heeftLid"@nl .
+
+<http://www.w3.org/ns/sosa/observedProperty> a rdf:Property;
+  rdfs:label "geobserveerdKenmerk"@nl .
 
 <http://www.w3.org/ns/sosa/usedProcedure> a rdf:Property;
   rdfs:label "gebruikteProcedure"@nl .
@@ -371,28 +364,6 @@ skos:Concept a rdfs:Class;
   rdfs:label "Samendrukbaarheidsproefresultaat"@nl;
   rdfs:comment "Resultaat van een Samendrukbaarheidsproef."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks> a owl:Class;
-  rdfs:label "Schuifweerstandsproefreeks"@nl;
-  rdfs:comment "Verzameling Schuifweerstandsproeven die plaatsvonden op deelmonsters van hetzelfde Grondmonster."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef> a owl:Class;
-  rdfs:label "Schuifweerstandsproef"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Getest wordt onder welke druk de grond in een monster bezwijkt (afschuift, breekt). Dit gebeurt in zeer gecontroleerde omstandigheden bvb bij de triaxaalproef door het monster op te sluiten in een container zodanig dat het overal dezelfde druk ervaart en er dan van bovenaf druk op uit te oefenen tot de breuk optreedt.Typisch wordt een van de procedures (waaronder de triaxaal procedure) toegepast beschreven in <a href=\"https://www.iso.org/search.html?PROD_isoorg_en%5Bquery%5D=17892\">ISO 17892-7 tot 10</a>. Door de proef enkele keren te herhalen op deelmonsters bij verschillende basisdrukken kunnen op basis van de vastgestelde drukwaarden (ook spanningen genoemd) karakteristieken worden bepaald (zie klasse Schuifweerstandkarakteristieken) op basis waarvan de kritische schuifspanning kan worden berekend, ttz de spanning waarbij de grond bezwijkt onder een bepaalde druk."@nl;
-  rdfs:comment "Labotest op een deelmonster om waarden te bepalen noodzakelijk voor het berekenen van de Schuifweerstandskarakteristieken."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken> a owl:Class;
-  rdfs:label "Schuifweerstandskarakteristieken"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Komt neer op het berekenen van de cohesie en de wrijvingshoek zodat de formule van Coulomb kan worden toegepast die voor een bepaalde normaalspanning aangeeft wat de kritische schuifspanning is, ttz de schuifspanning waarbij de grond afschuift."@nl;
-  rdfs:comment "Berekening van waarden op basis waarvan de kritische schuifspanning kan worden bepaald."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat> a owl:Class;
   rdfs:label "Schuifweerstandskarakteristiekenresultaat"@nl;
@@ -461,7 +432,9 @@ skos:Concept a rdfs:Class;
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter>,
     <http://www.w3.org/ns/ssn/hasInput>,
     <http://www.w3.org/ns/sosa/usedProcedure>,
+    <http://www.w3.org/ns/sosa/observedProperty>,
     <http://www.w3.org/ns/sosa/hasMember>,
+    <http://www.w3.org/ns/sosa/hasFeatureOfInterest>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>,

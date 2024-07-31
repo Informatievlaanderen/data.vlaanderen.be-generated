@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/929e13ecebfe11861a4245ea7b8d86a036561fcb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/929e13ecebfe11861a4245ea7b8d86a036561fcb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/80fb824a9e3b3ae783f292132cd3e3201d05944b",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/80fb824a9e3b3ae783f292132cd3e3201d05944b/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html",
     "usesVocs": [],
@@ -1262,7 +1262,6 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "resultaat",
-            "name": "Samendrukbaarheidsproef.resultaat",
             "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
             "ap-definition-nl": "Resultaat van de proef."
           }
@@ -1519,7 +1518,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.resultaat",
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
           "name": "resultaat",
           "sort": "resultaat",
           "label": {
@@ -1555,48 +1554,7 @@
           "rawTags": {
             "label-nl": "resultaat",
             "definition-nl": "Resultaat van de Schuifweerstandsproef.",
-            "name": "Schuifweerstandsproef.resultaat"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.geobserveerdObject",
-          "name": "geobserveerdobject",
-          "sort": "geobserveerdObject",
-          "label": {
-            "nl": "geobserveerdObject"
-          },
-          "description": {
-            "nl": "Deelmonster waarop de proef wordt uitgevoerd."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandproef",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Grondmonster",
-              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Grondmonster",
-              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
-              "range_label": {
-                "nl": "Grondmonster"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "geobserveerdObject",
-            "definition-nl": "Deelmonster waarop de proef wordt uitgevoerd.",
-            "xUML": "{redefines geobserveerdObject}",
-            "name": "Schuifweerstandsproef.geobserveerdObject"
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"
           }
         },
         {
@@ -1642,6 +1600,47 @@
             "ap-definition-nl": "Kenmerk dat wordt geobserveerd bij de Schuifweerstandsproef.",
             "ap-usageNote-nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
           }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+          "name": "geobserveerdobject",
+          "sort": "geobserveerdObject",
+          "label": {
+            "nl": "geobserveerdObject"
+          },
+          "description": {
+            "nl": "Deelmonster waarop de proef wordt uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandproef",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandproef"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Grondmonster",
+              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Grondmonster",
+              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+              "range_label": {
+                "nl": "Grondmonster"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "geobserveerdObject",
+            "definition-nl": "Deelmonster waarop de proef wordt uitgevoerd.",
+            "xUML": "{redefines geobserveerdObject}",
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest"
+          }
         }
       ]
     },
@@ -1680,87 +1679,6 @@
         "usageNote-nl": "Komt neer op het berekenen van de cohesie en de wrijvingshoek zodat de formule van Coulomb kan worden toegepast die voor een bepaalde normaalspanning aangeeft wat de kritische schuifspanning is, ttz de schuifspanning waarbij de grond afschuift."
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.resultaat",
-          "name": "resultaat",
-          "sort": "resultaat",
-          "label": {
-            "nl": "resultaat"
-          },
-          "description": {
-            "nl": "Resultaat van de berekening."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandskarakteristieken",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Schuifweerstandskarakteristiekenresultaat",
-              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Schuifweerstandskarakteristiekenresultaat",
-              "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat",
-              "range_label": {
-                "nl": "Schuifweerstandskarakteristiekenresultaat"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "resultaat",
-            "definition-nl": "Resultaat van de berekening.",
-            "name": "Schuifweerstandskarakteristieken.resultaat"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.geobserveerdObject",
-          "name": "geobserveerdobject",
-          "sort": "geobserveerdObject",
-          "label": {
-            "nl": "geobserveerdObject"
-          },
-          "description": {
-            "nl": "Grondmonster waarvoor de waarden worden bepaald."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuifweerstandskarakteristieken",
-              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Grondmonster",
-              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Grondmonster",
-              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
-              "range_label": {
-                "nl": "Grondmonster"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "geobserveerdObject",
-            "definition-nl": "Grondmonster waarvoor de waarden worden bepaald.",
-            "xUML": "{redefines geobserveerdObject}",
-            "name": "Schuifweerstandskarakteristieken.geobserveerdObject"
-          }
-        },
         {
           "uri": "http://www.w3.org/ns/sosa/usedProcedure",
           "name": "gebruikteprocedure",
@@ -1805,6 +1723,46 @@
           }
         },
         {
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "name": "resultaat",
+          "sort": "resultaat",
+          "label": {
+            "nl": "resultaat"
+          },
+          "description": {
+            "nl": "Resultaat van de berekening."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandskarakteristieken",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Schuifweerstandskarakteristiekenresultaat",
+              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Schuifweerstandskarakteristiekenresultaat",
+              "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristiekenresultaat",
+              "range_label": {
+                "nl": "Schuifweerstandskarakteristiekenresultaat"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "resultaat",
+            "definition-nl": "Resultaat van de berekening.",
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"
+          }
+        },
+        {
           "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
           "name": "geobserveerdkenmerk",
           "sort": "geobserveerdKenmerk",
@@ -1846,6 +1804,47 @@
             "ap-definition-nl": "Kenmerk dat wordt geobserveerd bij de Schuifweerstandsproef.",
             "xUML": "{redefines geobserveerdKenmerk}",
             "ap-usageNote-nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+          "name": "geobserveerdobject",
+          "sort": "geobserveerdObject",
+          "label": {
+            "nl": "geobserveerdObject"
+          },
+          "description": {
+            "nl": "Grondmonster waarvoor de waarden worden bepaald."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuifweerstandskarakteristieken",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Grondmonster",
+              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Grondmonster",
+              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+              "range_label": {
+                "nl": "Grondmonster"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "geobserveerdObject",
+            "definition-nl": "Grondmonster waarvoor de waarden worden bepaald.",
+            "xUML": "{redefines geobserveerdObject}",
+            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest"
           }
         }
       ]
@@ -1935,16 +1934,18 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.geobserveerdObject",
-          "name": "geobserveerdobject",
-          "sort": "geobserveerdObject",
+          "uri": "http://www.w3.org/ns/sosa/observedProperty",
+          "name": "geobserveerdkenmerk",
+          "sort": "geobserveerdKenmerk",
           "label": {
-            "nl": "geobserveerdObject"
+            "nl": "geobserveerdKenmerk"
           },
           "description": {
-            "nl": "Grondmonster waaruit de deelmonsters zijn genomen waarop de Schuifweerstandproeven zijn uitgevoerd."
+            "nl": "Kenmerk dat bij de Schuifweerstandsproeven werd geobserveerd."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
+          },
           "domain": [
             {
               "EA-Name": "Schuifweerstandsproefreeks",
@@ -1953,26 +1954,27 @@
           ],
           "range": [
             {
-              "range_label": "Grondmonster",
-              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
+              "range_label": "Kenmerktype",
+              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Grondmonster",
-              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+              "range_uri": "#Kenmerktype",
+              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
               "range_label": {
-                "nl": "Grondmonster"
+                "nl": "Kenmerktype"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "geobserveerdObject",
-            "definition-nl": "Grondmonster waaruit de deelmonsters zijn genomen waarop de Schuifweerstandproeven zijn uitgevoerd.",
-            "xUML": "{redefines geobserveerdObject}",
-            "name": "Schuifweerstandsproefreeks.geobserveerdObject"
+            "uri": "http://www.w3.org/ns/sosa/observedProperty",
+            "label-nl": "geobserveerdKenmerk",
+            "ap-definition-nl": "Kenmerk dat bij de Schuifweerstandsproeven werd geobserveerd.",
+            "xUML": "{redefines geobserveerdKenmerk}",
+            "ap-usageNote-nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
           }
         },
         {
@@ -2016,18 +2018,16 @@
           }
         },
         {
-          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
-          "name": "geobserveerdkenmerk",
-          "sort": "geobserveerdKenmerk",
+          "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "name": "geobserveerdobject",
+          "sort": "geobserveerdObject",
           "label": {
-            "nl": "geobserveerdKenmerk"
+            "nl": "geobserveerdObject"
           },
           "description": {
-            "nl": "Kenmerk dat bij de Schuifweerstandsproeven werd geobserveerd."
+            "nl": "Grondmonster waaruit de deelmonsters zijn genomen waarop de Schuifweerstandproeven zijn uitgevoerd."
           },
-          "usage": {
-            "nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Schuifweerstandsproefreeks",
@@ -2036,27 +2036,26 @@
           ],
           "range": [
             {
-              "range_label": "Kenmerktype",
-              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+              "range_label": "Grondmonster",
+              "range_uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kenmerktype",
-              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "range_uri": "#Grondmonster",
+              "range_puri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
               "range_label": {
-                "nl": "Kenmerktype"
+                "nl": "Grondmonster"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
-            "label-nl": "geobserveerdKenmerk",
-            "ap-definition-nl": "Kenmerk dat bij de Schuifweerstandsproeven werd geobserveerd.",
-            "xUML": "{redefines geobserveerdKenmerk}",
-            "ap-usageNote-nl": "Waarvan de waarde standaard \"schuifweerstand\" is."
+            "label-nl": "geobserveerdObject",
+            "definition-nl": "Grondmonster waaruit de deelmonsters zijn genomen waarop de Schuifweerstandproeven zijn uitgevoerd.",
+            "xUML": "{redefines geobserveerdObject}",
+            "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
           }
         }
       ]
@@ -3886,7 +3885,7 @@
             "label-nl": "fractiemetingwaarde",
             "definition-nl": "Waarde ve individuele Meting in de Meetreeks..",
             "package": "Hulppakket2",
-            "name": "Meetreeksresultaat.meetreekswaarde"
+            "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde"
           }
         }
       ]
@@ -4227,51 +4226,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproefreeks.geobserveerdObject",
-      "name": {
-        "nl": "geobserveerdObject",
-        "undefined": "geobserveerdobject"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.resultaat",
-      "name": {
-        "nl": "resultaat",
-        "undefined": "resultaat"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsproef.geobserveerdObject",
-      "name": {
-        "nl": "geobserveerdObject",
-        "undefined": "geobserveerdobject"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandsmeting.breukcriterium",
       "name": {
         "nl": "breukcriterium",
@@ -4291,36 +4245,6 @@
       "name": {
         "nl": "waarde",
         "undefined": "waarde"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.resultaat",
-      "name": {
-        "nl": "resultaat",
-        "undefined": "resultaat"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/observaties#Schuifweerstandskarakteristieken.geobserveerdObject",
-      "name": {
-        "nl": "geobserveerdObject",
-        "undefined": "geobserveerdobject"
       },
       "description": {},
       "domain": [
