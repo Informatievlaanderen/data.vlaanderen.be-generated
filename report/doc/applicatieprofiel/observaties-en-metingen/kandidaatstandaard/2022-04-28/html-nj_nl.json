@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/81ab747cfb90368fd2a0aba3197f5997e229d915",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/81ab747cfb90368fd2a0aba3197f5997e229d915/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/6e75cad890434b0ff392678f64ace204f4b89664",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/6e75cad890434b0ff392678f64ace204f4b89664/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
     "usesVocs": [],
@@ -110,6 +110,28 @@
       "properties": []
     },
     {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+      "name": "Bereik",
+      "label": {
+        "nl": "Bereik"
+      },
+      "sort": "Bereik",
+      "description": {
+        "nl": "Variatie van een fenomeen in ruimte of tijd."
+      },
+      "usage": {
+        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
+        "ap-usageNote-nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>.",
+        "label-nl": "Bereik",
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
       "name": "Discreetbereik",
       "label": {
@@ -128,7 +150,7 @@
           "name": "Bereik",
           "package": "OSLO-RuimtelijkeBereiken",
           "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
-          "scoped_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+          "scoped_uri": "#Bereik"
         }
       ],
       "rawTags": {
@@ -805,7 +827,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -847,7 +869,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+              "range_uri": "#Opdracht",
               "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
               "range_label": {
                 "nl": "Opdracht"
@@ -2688,7 +2710,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -3069,10 +3091,10 @@
             "nl": "verwerkingsdetails"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."
           },
           "usage": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."
           },
           "domain": [
             {
@@ -3099,8 +3121,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
-            "ap-definition-nl": "TODO",
-            "ap-usageNote-nl": "TODO",
+            "ap-definition-nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren.",
+            "ap-usageNote-nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren.",
             "ap-label-nl": "verwerkingsdetails",
             "label-nl": "verwerkingsdetails"
           }
@@ -3350,6 +3372,47 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "sort": "Domeinobject",
+      "description": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Domeinobject",
+        "ap-definition-nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+        "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
+        "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://purl.org/dc/terms/Agent",
+      "name": "Agent",
+      "label": {
+        "nl": "Agent"
+      },
+      "sort": "Agent",
+      "description": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "label-nl": "Agent",
+        "uri": "http://purl.org/dc/terms/Agent"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
       "name": "Any",
       "label": {
@@ -3369,6 +3432,27 @@
         "label-nl": "Any",
         "uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
         "ap-label-nl": "Any"
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+      "name": "Opdracht",
+      "label": {
+        "nl": "Opdracht"
+      },
+      "sort": "Opdracht",
+      "description": {
+        "nl": "Toegewezen taak."
+      },
+      "usage": {
+        "nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
+      },
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Opdracht",
+        "definition-nl": "Toegewezen taak.",
+        "usageNote-nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
       },
       "properties": []
     }
@@ -3638,7 +3722,7 @@
           "name": "Dekking",
           "package": "DublinCore",
           "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
-          "scoped_uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+          "scoped_uri": "#Dekking"
         }
       ],
       "rawTags": {
@@ -3807,7 +3891,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+              "range_uri": "#Domeinobject",
               "range_puri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
               "range_label": {
                 "nl": "Domeinobject"
@@ -4298,7 +4382,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -4359,7 +4443,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+              "range_uri": "#Opmeting",
               "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
               "range_label": {
                 "nl": "Opmeting"
@@ -4483,7 +4567,7 @@
           "name": "Dekking",
           "package": "DublinCore",
           "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
-          "scoped_uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+          "scoped_uri": "#Dekking"
         }
       ],
       "rawTags": {
@@ -4491,6 +4575,127 @@
         "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet dit datatype gesubstitueerd worden door klassen of datatypes zoals Geometrie, GeografischeNaam, Adres etc. OPMERKING: Meer info over deze klassen/datatypes in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/\">OSLO Generiek - basis</a>.",
         "label-nl": "Locatie",
         "uri": "http://www.w3.org/ns/prov#Location"
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+      "name": "Opmeting",
+      "label": {
+        "nl": "Opmeting"
+      },
+      "sort": "Opmeting",
+      "description": {
+        "nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Opmeting",
+        "ap-definition-nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "name": "uitgevoerddoor",
+          "sort": "uitgevoerdDoor",
+          "label": {
+            "nl": "uitgevoerdDoor"
+          },
+          "description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "uitgevoerdDoor",
+            "definition-nl": "Agent die de Opmeting heeft uitgevoerd.",
+            "name": "Opmeting.uitgevoerdDoor"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "name": "methode",
+          "sort": "methode",
+          "label": {
+            "nl": "methode"
+          },
+          "description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Opmetingmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Opmetingmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Opmetingmethode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "methode",
+            "name": "Opmeting.methode",
+            "definition-nl": "Aard van de gebruikte methode."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+      "name": "Dekking",
+      "label": {
+        "nl": "Dekking"
+      },
+      "sort": "Dekking",
+      "description": {
+        "nl": "Gebied of periode waarop de data betrekking heeft"
+      },
+      "usage": {
+        "nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
+      },
+      "parents": [],
+      "rawTags": {
+        "definition-nl": "Gebied of periode waarop de data betrekking heeft",
+        "label-nl": "Dekking",
+        "package": "OSLO-SensorenEnBemonstering",
+        "usageNote-nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
       },
       "properties": []
     }

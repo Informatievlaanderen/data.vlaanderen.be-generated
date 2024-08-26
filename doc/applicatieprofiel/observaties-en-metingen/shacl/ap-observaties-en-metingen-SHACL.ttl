@@ -18,6 +18,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#PositioneleNauwkeurigheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#HerkomstShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MetadataShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BereikShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieWaardepaarShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#PuntWaardepaarShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DiscreetBereikShape>,
@@ -48,6 +49,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#TemporeleObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#TijdreeksobservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#WaarheidsObservatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjectShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#VlakShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#3DobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#CurveShape>,
@@ -55,13 +58,21 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#AnyShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatietypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsobjecttypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingmethodeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#LocatieShape> .
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#LocatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpdrachtShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DekkingShape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#3DobjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/gml#Solid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#AnyShape> a shacl:NodeShape;
   shacl:closed false;
@@ -306,6 +317,10 @@
   shacl:name "naam"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BereikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape/09ed995683a26095de4577d13e597160f260ecb2>,
@@ -360,6 +375,10 @@
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/sf#Curve> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DiscreetBereikObservatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DiscreetBereikObservatieShape/09ed995683a26095de4577d13e597160f260ecb2>,
@@ -406,6 +425,10 @@
   shacl:description "Onderdeel van het Bereik."@nl;
   shacl:name "element"@nl;
   shacl:path <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeneriekeNaamShape> a shacl:NodeShape;
   shacl:closed false;
@@ -740,7 +763,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/e2f8d557eb6b6e6df77690725c80e7b2114f2742> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.verwerkingsdetails";
   shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>;
-  shacl:description "TODO"@nl;
+  shacl:description "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."@nl;
   shacl:name "verwerkingsdetails"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails> .
 
@@ -1121,6 +1144,60 @@
   shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpdrachtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/b60cbb1f5aefd2bfc3349aed95e6c89745dd980d>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485>;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode";
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:maxCount 1;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor";
+  shacl:class dc:Agent;
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/b60cbb1f5aefd2bfc3349aed95e6c89745dd980d> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor";
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:minCount 1;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode";
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:minCount 1;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode";
+  shacl:class skos:Concept;
+  shacl:description "Aard van de gebruikte methode."@nl;
+  shacl:name "methode"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor";
+  shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+  shacl:maxCount 1;
+  shacl:name "uitgevoerdDoor"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingmethodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
