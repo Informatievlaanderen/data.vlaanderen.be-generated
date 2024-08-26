@@ -85,9 +85,6 @@
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection> a rdfs:Class;
   rdfs:label "Bemonsteringsobjectverzameling"@nl .
 
-<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex> a rdfs:Class;
-  rdfs:label "BemonsteringsobjectComplex"@nl .
-
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> a rdfs:Class;
   rdfs:label "Bemonsteringspunt"@nl .
 
@@ -124,21 +121,8 @@
 rdfs:Resource a rdfs:Class;
   rdfs:label "Any"@nl .
 
-skos:Concept a rdfs:Class .
-
-<https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source> a owl:ObjectProperty;
-  rdfs:label "Bemonsteringsobject (source)"@nl;
-  rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
-  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
-
-<https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target> a owl:ObjectProperty;
-  rdfs:label "Bemonsteringsobject (target)"@nl;
-  rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
-  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+skos:Concept a rdfs:Class;
+  rdfs:label "Observatietype"@nl .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> a owl:ObjectProperty;
   rdfs:label "BemonsteringsProces"@nl;
@@ -269,17 +253,11 @@ skos:Concept a rdfs:Class .
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> a rdf:Property;
   rdfs:label "parameter"@nl .
 
-<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> a rdf:Property;
-  rdfs:label "bemonsterdObject"@nl .
-
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member> a rdf:Property;
   rdfs:label "lid"@nl .
 
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature> a rdf:Property;
   rdfs:label "geassocieerdBemonsteringsobject"@nl .
-
-<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role> a rdf:Property;
-  rdfs:label "rol"@nl .
 
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape> a rdf:Property;
   rdfs:label "geometrie"@nl .
@@ -391,7 +369,6 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint>,
     <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid>,
     <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface>,
@@ -426,10 +403,8 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface.shape>,
     <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid.shape>,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape>,

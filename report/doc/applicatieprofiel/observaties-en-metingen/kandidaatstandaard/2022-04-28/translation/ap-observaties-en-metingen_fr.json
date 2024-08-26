@@ -121,38 +121,6 @@
         "nl": "",
         "fr": "Enter your translation here"
       }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(target)",
-      "label": {
-        "nl": "Bemonsteringsobject (target)",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(source)",
-      "label": {
-        "nl": "Bemonsteringsobject (source)",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "",
-        "fr": "Enter your translation here"
-      }
     }
   ],
   "externals": [
@@ -380,11 +348,11 @@
         "fr": "Enter your translation here"
       },
       "definition": {
-        "nl": "Een fenomeen dat discreet varieert in ruimte of tijd.",
+        "nl": "Stapsgewijze variatie van een fenomeen in ruimte of tijd.",
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "De waarde van een bepaald fenomeen kan een constante zijn (bv kleur) of kan variëren in functie van een andere parameter (bv de lengte van een treinspoor is functie van de temperatuur). Als het fenomeen varieert in ruimte of tijd spreken we van een bereik, bv de  temperatuur verandert met de locatie of wijzigt doorheen de tijd. Als het fenomeen bovendien varieert in stappen dan hebben we te maken met een DiscreetBereik. In tegenstelling tot een ContinuBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners uiteraard niet varieert binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinuBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie.",
+        "nl": "In tegenstelling tot een ContinueBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners constant is binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinueBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie.",
         "fr": "Enter your translation here"
       }
     },
@@ -641,22 +609,6 @@
       }
     },
     {
-      "EA-Guid": "{75348108-6968-4eeb-9169-6DC6418A1052}",
-      "name": "Bemonsteringsobjectcomplex",
-      "label": {
-        "nl": "BemonsteringsobjectComplex",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Associatie tussen twee Bemonsteringsobjecten.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "De Bemonsteringsobjecten maken deel uit van een geheel of het zijn deelmonsters. Bv Bemonsteringspunten langs een Bemonsteringscurve (bv metingen op verschillende diepten in een boorgat), Monsters genomen op eenzelfde Bemonsteringspunt, pixels die deel uitmaken van eenzelfde Scene.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{242109B3-B4AE-4c5a-8186-E4F9678BD951}",
       "name": "Bemonsteringspunt",
       "label": {
@@ -872,7 +824,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.",
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.",
         "fr": "Enter your translation here"
       }
     },
@@ -1379,18 +1331,6 @@
       }
     },
     {
-      "EA-Guid": "{56F2E606-FC33-4e4b-9684-74FA2FA3CB5A}",
-      "name": "rol",
-      "label": {
-        "nl": "rol",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Aard van de associatie.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{1D2F0991-A37B-4c99-8DD9-0D5AB922F6F4}",
       "name": "geassocieerdbemonsteringsobject",
       "label": {
@@ -1415,22 +1355,6 @@
       },
       "definition": {
         "nl": "Bemonsteringsobject dat deel uitmaakt van de verzameling van Bemonsteringsobjecten.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{28C3DF0D-EF04-44d8-88B2-DD583AFBCA44}",
-      "name": "bemonsterdobject",
-      "label": {
-        "nl": "bemonsterdObject",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Verwijzing naar het Object dat men wil bemonsteren.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.",
         "fr": "Enter your translation here"
       }
     },
@@ -1507,6 +1431,18 @@
       }
     },
     {
+      "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
+      "name": "geassocieerdeobservatie",
+      "label": {
+        "nl": "geassocieerdeObservatie",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{26E59195-6002-4978-BDE0-D77DFDF4F335}",
       "name": "geassocieerdeobservatie",
       "label": {
@@ -1519,18 +1455,6 @@
       },
       "usage": {
         "nl": "Het gaat om samenhang die van belang is om het resultaat van individuele Observaties te begrijpen, bv biotische relaties (dier A is roofdier en is aanwezig omdat dier B prooi voorkomt). Dergelijke relaties vereisen expliciet te worden beschreven (in tegenstelling tot relaties zoals het samenvallen van resultaten van Observaties in ruimte of tijd die impliciet mogen blijven). Ook nuttig voor relaties waarbij de output van Observatie A de input vormt voor Observatie B.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
-      "name": "geassocieerdeobservatie",
-      "label": {
-        "nl": "geassocieerdeObservatie",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
         "fr": "Enter your translation here"
       }
     },
