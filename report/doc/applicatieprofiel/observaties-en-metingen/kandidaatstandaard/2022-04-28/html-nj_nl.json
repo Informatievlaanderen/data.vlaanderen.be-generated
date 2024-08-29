@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/55ef95ffab06a1660a2826e4e26fbc41fa72af9a",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/55ef95ffab06a1660a2826e4e26fbc41fa72af9a/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/1a8aced4b8573925ac6494e5d63f4ed826175fdc",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/1a8aced4b8573925ac6494e5d63f4ed826175fdc/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
     "usesVocs": [],
@@ -1317,7 +1317,7 @@
             "nl": "Kenmerk dat men observeert vh geobserveerdObject."
           },
           "usage": {
-            "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord."
+            "nl": "In praktijk een instantie van skos:Concept in een bepaald ConceptSchema OF een instantie van een bestaande klasse van grootheden, bvb qudt:QuantityKind. Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord."
           },
           "domain": [
             {
@@ -1345,7 +1345,7 @@
           "rawTags": {
             "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
             "ap-definition-nl": "Kenmerk dat men observeert vh geobserveerdObject.",
-            "ap-usageNote-nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
+            "ap-usageNote-nl": "NOTE$ea_notes=In praktijk een instantie van skos:Concept in een bepaald ConceptSchema OF een instantie van een bestaande klasse van grootheden, bvb qudt:QuantityKind. Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
             "label-nl": "geobserveerdKenmerk"
           }
         },
@@ -3443,7 +3443,122 @@
         "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
         "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Domeinobject",
+              "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Domeinobjecttype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Domeinobjecttype"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "type",
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van het Domeinobject."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "sort": "Domeinobject",
+      "description": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "parents": [
+        {
+          "label": "Object",
+          "name": "Object",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "scoped_uri": "#Object"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Domeinobject",
+        "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+        "ap-label-nl": "Domeinobject",
+        "ap-definition-nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+        "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "properties": [
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Domeinobject",
+              "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Domeinobjecttype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Domeinobjecttype"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "type",
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van het Domeinobject."
+          }
+        }
+      ]
     },
     {
       "uri": "http://purl.org/dc/terms/Agent",
