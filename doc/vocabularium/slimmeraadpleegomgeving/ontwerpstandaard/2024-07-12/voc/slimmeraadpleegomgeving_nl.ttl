@@ -44,14 +44,6 @@ schemas:WebSite a rdfs:Class;
   rdfs:range oa:Annotation;
   rdfs:subPropertyOf prov:generates .
 
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Adviesantwoord.motiveerde> a owl:ObjectProperty;
-  rdfs:label "motiveerde"@nl;
-  rdfs:comment "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit>;
-  rdfs:subPropertyOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated> .
-
 <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit> a owl:ObjectProperty;
   rdfs:label "bestaat uit"@nl;
   rdfs:comment "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
@@ -83,14 +75,6 @@ schemas:WebSite a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
   rdfs:subPropertyOf prov:generated .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Beslissingsactiviteit.wasGemotiveerdDoorAdviesantwoord> a owl:ObjectProperty;
-  rdfs:label "was gemotiveerd door"@nl;
-  rdfs:comment "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord>;
-  rdfs:subPropertyOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by> .
 
 <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.datumAntwoordVerwacht> a owl:DatatypeProperty;
   rdfs:label "datum antwoord verwacht"@nl;
@@ -228,6 +212,8 @@ schemas:WebSite a rdfs:Class;
   rdfs:range skos:Concept;
   rdfs:subPropertyOf oa:hasBody .
 
+<http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by> a rdf:Property .
+
 dc11:format a rdf:Property .
 
 dc11:language a rdf:Property .
@@ -264,6 +250,12 @@ oa:start a rdf:Property .
 
 oa:suffix a rdf:Property .
 
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord> a owl:Class;
+  rdfs:label "Adviesantwoord"@nl;
+  rdfs:comment "Input van een organisatie of persoon die bijdraagt aan het beslissingsproces."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
 <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag> a owl:Class;
   rdfs:label "Adviesvraag"@nl;
   rdfs:comment "Vraag aan een organisatie of persoon om een raadgeving die bijdraagt aan het beslissingsproces"@nl;
@@ -273,17 +265,9 @@ oa:suffix a rdf:Property .
 schemas:url a rdf:Property;
   rdfs:label "locatie"@nl .
 
-<http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by> a rdf:Property .
-
 <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord> a owl:Class;
   rdfs:label "Initiatiefrechtantwoord"@nl;
   rdfs:comment "Antwoord van de bevoegde mandataris op een initiatiefrechtVraag"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord> a owl:Class;
-  rdfs:label "Adviesantwoord"@nl;
-  rdfs:comment "Input van een organisatie of persoon die bijdraagt aan het beslissingsproces."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
   rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
 

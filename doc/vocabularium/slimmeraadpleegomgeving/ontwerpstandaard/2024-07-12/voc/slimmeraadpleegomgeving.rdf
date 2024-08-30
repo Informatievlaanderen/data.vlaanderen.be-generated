@@ -503,21 +503,6 @@
     <rdfs:range rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generates"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Adviesantwoord.motiveerde">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">motiveerde</rdfs:label>
-    <rdfs:comment xml:lang="nl">Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-        <rdfs:label xml:lang="nl">Adviesantwoord</rdfs:label>
-        <rdfs:comment xml:lang="nl">Input van een organisatie of persoon die bijdraagt aan het beslissingsproces.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"/>
-    <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
     <rdfs:label xml:lang="nl">bestaat uit</rdfs:label>
@@ -563,14 +548,6 @@
     <rdfs:domain rdf:resource="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Beslissingsactiviteit.wasGemotiveerdDoorAdviesantwoord">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">was gemotiveerd door</rdfs:label>
-    <rdfs:comment xml:lang="nl">Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"/>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"/>
-    <rdfs:subPropertyOf rdf:resource="http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.datumAntwoordVerwacht">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
@@ -619,7 +596,14 @@
     <rdfs:label xml:lang="nl">gaat over adviesantwoord</rdfs:label>
     <rdfs:comment xml:lang="nl">Adviesantwoord waarover het stuk gaat.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/dossier#Stuk"/>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+        <rdfs:label xml:lang="nl">Adviesantwoord</rdfs:label>
+        <rdfs:comment xml:lang="nl">Input van een organisatie of persoon die bijdraagt aan het beslissingsproces.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity"/>
+      </owl:Class>
+    </rdfs:range>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag">
