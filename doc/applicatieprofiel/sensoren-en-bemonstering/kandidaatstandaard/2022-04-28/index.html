@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d4d8521ff8035681f609269bb4a1e8be70203e7f">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d4d8521ff8035681f609269bb4a1e8be70203e7f</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d4d8521ff8035681f609269bb4a1e8be70203e7f/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d4d8521ff8035681f609269bb4a1e8be70203e7f/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/6a3662d144f6dc5ffdc9d530eabad7a0d09c0449">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/6a3662d144f6dc5ffdc9d530eabad7a0d09c0449</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/6a3662d144f6dc5ffdc9d530eabad7a0d09c0449/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/6a3662d144f6dc5ffdc9d530eabad7a0d09c0449/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-sensoren-en-bemonstering/">https://data.vlaanderen.be/standaarden/applicatieprofiel-sensoren-en-bemonstering/</a></dd>
 
@@ -171,9 +171,9 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
 <p>Het applicatieprofiel Sensoren en Bemonstering legt uit hoe de <a href="https://data.vlaanderen.be/ns/sensoren-en-bemonstering#">terminologie</a> moet gebruikt worden om gegevens uit te wisselen over waarnemingsinstrumenten waarmee Observaties worden uitgevoerd en over de activiteit van het bekomen van representatieve ruimtelijke of fysieke stalen.</p
-<p>Dit applicatieprofiel is gebaseerd op <a href="https://www.w3.org/TR/vocab-ssn/">de W3C SSN ontologie</a> en zijn <a href="https://www.w3.org/TR/vocab-ssn-ext/">extensies</a>. Het bouwt ook verder op <a href="https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/observaties-en-metingen">het applicatieprofiel OSLO Observaties en Metingen</a>.
+<p>Dit applicatieprofiel is gebaseerd op <a href="https://www.w3.org/TR/vocab-ssn/">de W3C SSN ontologie</a> en zijn <a href="https://www.w3.org/TR/vocab-ssn-ext/">extensies</a>. Het bouwt ook verder op <a href="https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen">het applicatieprofiel OSLO Observaties en Metingen</a>.</p>
 <p>Observatie wordt overgenomen van Observaties & Metingen met zijn kenmerken maar Proces (dit is de gebruikteProcedure bij een Observatie) wordt opgesplitst in Sensor (het instrument waarmee de waarneming gebeurt) en Observatieprocedure (de methode waarmee de Observatie gebeurt).</p>
-<p>Bemonsteringsobjecten (locatie en Monster) zijn er ook nog maar zijn nu het resultaat van een Bemonstering(sactiviteit), net als Observatie (dat ook een activiteit is) met een Bemonsteraar (het instrument waarmee de Bemonstering gebeurt) en een bemonsteringsProcedure (de methode die gevolgd wordt bij het Bemonsteren).</p>
+<p>Bemonsteringsobjecten (locatie en Monster) zijn er ook nog maar zijn nu het resultaat van een Bemonstering (een activiteit, net als Observatie) met een Bemonsteraar (het instrument waarmee de Bemonstering gebeurt) en een bemonsteringsProcedure (de methode die gevolgd wordt bij het Bemonsteren).</p>
 <p>Observaties kunnen nu ook gegroepeerd worden in een Observatieverzameling evt met opgave vh kenmerk vd Observatie waarop ze gegroepeerd zijn (bv dezelfde locatie of hetzelfde geobserveerdKenmerk).</p>
 <p>Sensoren zijn een specialisatie van Systeem, wat toelaat om de kenmerken ve Sensor op te geven bv de resolutie of het meetbereik.</p>
 <p>Een Toestel is ook toegevoegd als subklasse van Systeem wat toelaat om een Sensor (dat ook een Systeem is) bijkomend te bekijken als een apparaat (met bv een merknaam of een fabrikant).</p>
@@ -779,6 +779,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Bemonsteringsobject%3Abemonsterdobject">bemonsterdObject</a>, 
                       <a href="#Bemonsteringsobject%3Ageassocieerdbemonsteringsobject">geassocieerdBemonsteringsobject</a>, 
                       <a href="#Bemonsteringsobject%3Ageassocieerdeobservatie">geassocieerdeObservatie</a>, 
                       <a href="#Bemonsteringsobject%3Aherkomst">herkomst</a>, 
@@ -804,6 +805,26 @@
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Bemonsteringsobject%3Abemonsterdobject" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature" data-placement="right">
+                            bemonsterdObject</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Object" data-placement="right">Object</a>
+			    
+                          
+                        </td>
+                        <td>1..*</td>
+                        <td property="rdfs:comment">Verwijzing naar het Object dat men wil bemonsteren.</td>
+                        <td property="vann:usageNote">Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.</td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Bemonsteringsobject%3Ageassocieerdbemonsteringsobject" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature">
                         <td>
