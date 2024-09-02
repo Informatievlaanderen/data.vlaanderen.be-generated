@@ -44,6 +44,46 @@ schemas:WebSite a rdfs:Class;
   rdfs:range oa:Annotation;
   rdfs:subPropertyOf prov:generates .
 
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie> a owl:ObjectProperty;
+  rdfs:label "heeft locatie"@nl;
+  rdfs:comment "Locatie dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Location;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject> a owl:ObjectProperty;
+  rdfs:label "heeft object"@nl;
+  rdfs:comment "Object dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Entity;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud> a owl:ObjectProperty;
+  rdfs:label "heeft tekstuele inhoud"@nl;
+  rdfs:comment "Tekst dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range oa:TextualBody;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema> a owl:ObjectProperty;
+  rdfs:label "heeft thema"@nl;
+  rdfs:comment "Thema-code dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling> a owl:ObjectProperty;
+  rdfs:label "beeindigt"@nl;
+  rdfs:comment "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
+  rdfs:subPropertyOf prov:invalidated .
+
 <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit> a owl:ObjectProperty;
   rdfs:label "bestaat uit"@nl;
   rdfs:comment "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
@@ -171,46 +211,6 @@ schemas:WebSite a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
   rdfs:range prov:Agent .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#beeindigt> a owl:ObjectProperty;
-  rdfs:label "beeindigt"@nl;
-  rdfs:comment "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."@nl;
-  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
-  rdfs:subPropertyOf prov:invalidated .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie> a owl:ObjectProperty;
-  rdfs:label "heeft locatie"@nl;
-  rdfs:comment "Locatie dat de annotatie gebruikt als inhoud voor een resource."@nl;
-  rdfs:domain oa:Annotation;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range prov:Location;
-  rdfs:subPropertyOf oa:hasBody .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject> a owl:ObjectProperty;
-  rdfs:label "heeft object"@nl;
-  rdfs:comment "Object dat de annotatie gebruikt als inhoud voor een resource."@nl;
-  rdfs:domain oa:Annotation;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range prov:Entity;
-  rdfs:subPropertyOf oa:hasBody .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud> a owl:ObjectProperty;
-  rdfs:label "heeft tekstuele inhoud"@nl;
-  rdfs:comment "Tekst dat de annotatie gebruikt als inhoud voor een resource."@nl;
-  rdfs:domain oa:Annotation;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range oa:TextualBody;
-  rdfs:subPropertyOf oa:hasBody .
-
-<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema> a owl:ObjectProperty;
-  rdfs:label "heeft thema"@nl;
-  rdfs:comment "Thema-code dat de annotatie gebruikt als inhoud voor een resource."@nl;
-  rdfs:domain oa:Annotation;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
-  rdfs:range skos:Concept;
-  rdfs:subPropertyOf oa:hasBody .
 
 <http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by> a rdf:Property .
 

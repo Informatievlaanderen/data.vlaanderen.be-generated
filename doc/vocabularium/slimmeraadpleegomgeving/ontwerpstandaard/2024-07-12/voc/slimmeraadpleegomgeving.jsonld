@@ -283,9 +283,11 @@
   ],
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06"
+  },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "2023-07-12",
+  "publication-date": "2024-07-12",
   "classes": [
     {
       "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
@@ -438,101 +440,6 @@
     }
   ],
   "properties": [
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "heeft thema"
-      },
-      "definition": {
-        "nl": "Thema-code dat de annotatie gebruikt als inhoud voor een resource."
-      },
-      "domain": [
-        "http://www.w3.org/ns/oa#Annotation"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/oa#hasBody"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "heeft tekstuele inhoud"
-      },
-      "definition": {
-        "nl": "Tekst dat de annotatie gebruikt als inhoud voor een resource."
-      },
-      "domain": [
-        "http://www.w3.org/ns/oa#Annotation"
-      ],
-      "range": [
-        "http://www.w3.org/ns/oa#TextualBody"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/oa#hasBody"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "heeft object"
-      },
-      "definition": {
-        "nl": "Object dat de annotatie gebruikt als inhoud voor een resource."
-      },
-      "domain": [
-        "http://www.w3.org/ns/oa#Annotation"
-      ],
-      "range": [
-        "http://www.w3.org/ns/prov#Entity"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/oa#hasBody"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "heeft locatie"
-      },
-      "definition": {
-        "nl": "Locatie dat de annotatie gebruikt als inhoud voor een resource."
-      },
-      "domain": [
-        "http://www.w3.org/ns/oa#Annotation"
-      ],
-      "range": [
-        "http://www.w3.org/ns/prov#Location"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/oa#hasBody"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#beeindigt",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "beeindigt"
-      },
-      "definition": {
-        "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/prov#invalidated"
-      ]
-    },
     {
       "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -823,6 +730,101 @@
       ],
       "generalization": [
         "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "beeindigt"
+      },
+      "definition": {
+        "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+      },
+      "domain": [
+        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/prov#invalidated"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft thema"
+      },
+      "definition": {
+        "nl": "Thema-code dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft tekstuele inhoud"
+      },
+      "definition": {
+        "nl": "Tekst dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/oa#TextualBody"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft object"
+      },
+      "definition": {
+        "nl": "Object dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Entity"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft locatie"
+      },
+      "definition": {
+        "nl": "Locatie dat de annotatie gebruikt als inhoud voor een resource."
+      },
+      "domain": [
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Location"
+      ],
+      "generalization": [
+        "http://www.w3.org/ns/oa#hasBody"
       ]
     },
     {

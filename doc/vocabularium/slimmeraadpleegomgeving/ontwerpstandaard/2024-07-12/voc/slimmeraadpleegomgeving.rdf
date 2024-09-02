@@ -503,6 +503,46 @@
     <rdfs:range rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generates"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+    <rdfs:label xml:lang="nl">heeft locatie</rdfs:label>
+    <rdfs:comment xml:lang="nl">Locatie dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+    <rdfs:label xml:lang="nl">heeft object</rdfs:label>
+    <rdfs:comment xml:lang="nl">Object dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+    <rdfs:label xml:lang="nl">heeft tekstuele inhoud</rdfs:label>
+    <rdfs:comment xml:lang="nl">Tekst dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/oa#TextualBody"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+    <rdfs:label xml:lang="nl">heeft thema</rdfs:label>
+    <rdfs:comment xml:lang="nl">Thema-code dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
+    <rdfs:label xml:lang="nl">beeindigt</rdfs:label>
+    <rdfs:comment xml:lang="nl">Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#invalidated"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
     <rdfs:label xml:lang="nl">bestaat uit</rdfs:label>
@@ -658,45 +698,5 @@
     <rdfs:comment xml:lang="nl">De agent die rechthebbende is van de verbintenis.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#beeindigt">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">beeindigt</rdfs:label>
-    <rdfs:comment xml:lang="nl">Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"/>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#invalidated"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">heeft locatie</rdfs:label>
-    <rdfs:comment xml:lang="nl">Locatie dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">heeft object</rdfs:label>
-    <rdfs:comment xml:lang="nl">Object dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">heeft tekstuele inhoud</rdfs:label>
-    <rdfs:comment xml:lang="nl">Tekst dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/oa#TextualBody"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/slimmeraadpleegomgeving"/>
-    <rdfs:label xml:lang="nl">heeft thema</rdfs:label>
-    <rdfs:comment xml:lang="nl">Thema-code dat de annotatie gebruikt als inhoud voor een resource.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
   </owl:ObjectProperty>
 </rdf:RDF>

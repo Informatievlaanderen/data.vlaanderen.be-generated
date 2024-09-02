@@ -1,6 +1,39 @@
 {
   "@context": {
-    "Activiteit": "http://www.w3.org/ns/prov#Activity",
+    "Activiteit": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+    "Activiteit.activiteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#activiteit",
+      "@type": "@id"
+    },
+    "Activiteit.beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Activiteit.genereert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#generates",
+      "@type": "@id"
+    },
+    "Activiteit.juridischeKwalificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
+      "@type": "@id"
+    },
+    "Activiteit.locatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#locatie",
+      "@type": "@id"
+    },
+    "Activiteit.rechtssubject": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtssubject",
+      "@type": "@id"
+    },
+    "Activiteit.tijdsbestek": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek"
+    },
     "Activiteit.type": {
       "@container": "@set",
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
@@ -38,7 +71,7 @@
       "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
       "@type": "@id"
     },
-    "Agent": "http://purl.org/dc/terms/Agent",
+    "Agent": "http://www.w3.org/ns/prov#Agent",
     "Annotatie": "http://www.w3.org/ns/oa#Annotation",
     "Annotatie.gaatOver": {
       "@container": "@set",
@@ -52,21 +85,21 @@
     },
     "Annotatie.heeftLocatie": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/oa#body",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie",
       "@type": "@id"
     },
     "Annotatie.heeftObject": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/oa#body",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject",
       "@type": "@id"
     },
     "Annotatie.heeftTekstueleInhoud": {
-      "@id": "http://www.w3.org/ns/oa#body",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud",
       "@type": "@id"
     },
     "Annotatie.heeftThema": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/oa#body",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema",
       "@type": "@id"
     },
     "Annotatie.isGemotiveerdDoor": {
@@ -75,9 +108,14 @@
     },
     "Artikel": "http://data.vlaanderen.be/ns/besluit#Artikel",
     "BehandelingVanAgendapunt": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt",
-    "BehandelingVanAgendapunt.bestaatUit": {
+    "BehandelingVanAgendapunt.beeindigt": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+      "@id": "http://www.w3.org/ns/prov#invalidated",
+      "@type": "@id"
+    },
+    "BehandelingVanAgendapunt.creeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#generated",
       "@type": "@id"
     },
     "BehandelingVanAgendapunt.gebruikte": {
@@ -249,17 +287,35 @@
       "@type": "@id"
     },
     "LegaleVerschijningsvorm.jurisdictie": {
-      "@container": "@set",
       "@id": "http://data.europa.eu/eli/ontology#jurisdiction",
+      "@type": "@id"
+    },
+    "LegaleVerschijningsvorm.realiseert": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/eli/ontology#realizes",
+      "@type": "@id"
+    },
+    "LegaleVerschijningsvorm.vervangt": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/eli/ontology#repeals",
       "@type": "@id"
     },
     "Locatie": "http://www.w3.org/ns/prov#Location",
     "Motivatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Notificatiebericht": "http://fixme.com#Notificatiebericht",
-    "Notificatiebericht.url": {
+    "NormatieveBepaling": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
+    "NormatieveBepaling.rechtsobject": {
       "@container": "@set",
-      "@id": "http://schema.org/url",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsobject",
       "@type": "@id"
+    },
+    "NormatieveBepaling.tijdsbestek": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek"
+    },
+    "Notificatiebericht": "https://data.vlaanderen.be/ns/notificatie#Notificatiebericht",
+    "Notificatiebericht.url": {
+      "@id": "https://schema.org/url",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "Participatie": "http://data.europa.eu/eli/eli-draft-legislation-ontology#Participation",
     "Participatie.heeftOrganisatieAlsParticipant": {
@@ -295,45 +351,7 @@
       "@id": "http://data.europa.eu/m8g/endTime",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "Plaats.geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "@id"
-    },
-    "Plaats.plaatsnaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Plicht": "http://ontology.tno.nl/normengineering/flint#Duty",
-    "Plicht.eiser": {
-      "@id": "http://ontology.tno.nl/normengineering/flint#hasClaimant",
-      "@type": "@id"
-    },
-    "Plicht.rechthebbende": {
-      "@id": "http://ontology.tno.nl/normengineering/flint#hasHolder",
-      "@type": "@id"
-    },
-    "Recht": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
-    "Recht.beschrijving": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-      "@type": "@id"
-    },
-    "Recht.termijn": {
-      "@id": "http://purl.org/dc/terms/temporal",
-      "@type": "@id"
-    },
-    "Recht.titel": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Recht.type": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-      "@type": "@id"
-    },
+    "Recht": "https://data.vlaanderen.be/ns/omgevingsvergunning#Recht",
     "Rechtsgrond": "http://data.europa.eu/eli/ontology#LegalResource",
     "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
     "ResourceOnderdeel": "http://www.w3.org/ns/oa#SpecificResource",
@@ -343,7 +361,6 @@
       "@type": "@id"
     },
     "ResourceOnderdeel.isOnderdeelVan": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/oa#hasSource",
       "@type": "@id"
     },
@@ -359,7 +376,7 @@
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "Stuk": "http://fixme.com#Stuk",
+    "Stuk": "https://data.vlaanderen.be/ns/dossier#Stuk",
     "Stuk.auteur": {
       "@container": "@set",
       "@id": "http://fixme.com#auteur",
@@ -372,7 +389,7 @@
     },
     "Stuk.geografischeDekking": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "@id"
     },
     "Stuk.heeftMeerInfo": {
@@ -395,11 +412,6 @@
     },
     "Stuk.inhoud": {
       "@id": "http://www.w3.org/ns/prov#value"
-    },
-    "Stuk.initiatiefrechtantwoordWaaroverHetStukGaat": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/subject",
-      "@type": "@id"
     },
     "Stuk.naam": {
       "@id": "http://purl.org/dc/terms/title",
@@ -456,19 +468,13 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Thema": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Voorwaarde": "http://data.europa.eu/m8g/Requirement",
-    "Voorwaarde.beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Voorwaarde.geografischeDekking": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
+    "Verbintenis": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis",
+    "Verbintenis.eiser": {
+      "@id": "http://ontology.tno.nl/normengineering/flint#hasClaimant",
       "@type": "@id"
     },
-    "Voorwaarde.periode": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/temporal",
+    "Verbintenis.rechthebbende": {
+      "@id": "http://ontology.tno.nl/normengineering/flint#hasHolder",
       "@type": "@id"
     },
     "Website": "https://schema.org/WebSite",
@@ -477,7 +483,8 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Website.locatie": {
-      "@id": "https://schema.org/url"
+      "@id": "https://schema.org/url",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "Website.naam": {
       "@id": "http://purl.org/dc/terms/title",
