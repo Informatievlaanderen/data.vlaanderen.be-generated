@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/4df8fc6dcec924e9cb340f257cdcdc5f28741610",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/4df8fc6dcec924e9cb340f257cdcdc5f28741610/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/de794c96e3c306d9fda478b7651807e1a3a2a55f",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/de794c96e3c306d9fda478b7651807e1a3a2a55f/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-sensoren-en-bemonstering/",
     "usesVocs": [],
@@ -56,14 +56,14 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a>OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
       },
       "parents": [],
       "rawTags": {
         "label-nl": "Kenmerktype",
         "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
         "ap-definition-nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
-        "ap-usageNote-nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier).",
+        "ap-usageNote-nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a>OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse.",
         "ap-label-nl": "Kenmerktype"
       },
       "properties": [
@@ -1735,7 +1735,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.opengis.net/ont/sf#Point",
+              "range_uri": "#Punt",
               "range_puri": "http://www.opengis.net/ont/sf#Point",
               "range_label": {
                 "nl": "Punt"
@@ -1815,7 +1815,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.opengis.net/ont/sf#Point",
+              "range_uri": "#Punt",
               "range_puri": "http://www.opengis.net/ont/sf#Point",
               "range_label": {
                 "nl": "Punt"
@@ -7572,7 +7572,7 @@
           "label": "Dekking",
           "name": "Dekking",
           "package": "DublinCore",
-          "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+          "uri": "http://purl.org/dc/elements/1.1/coverage",
           "scoped_uri": "#Dekking"
         }
       ],
@@ -7764,6 +7764,29 @@
       ]
     },
     {
+      "uri": "http://purl.org/dc/elements/1.1/coverage",
+      "name": "Dekking",
+      "label": {
+        "nl": "Dekking"
+      },
+      "sort": "Dekking",
+      "description": {
+        "nl": "Gebied of periode waarop de data betrekking heeft"
+      },
+      "usage": {
+        "nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
+      },
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Dekking",
+        "definition-nl": "Gebied of periode waarop de data betrekking heeft",
+        "usageNote-nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding.",
+        "package": "OSLO-SensorenEnBemonstering",
+        "uri": "http://purl.org/dc/elements/1.1/coverage"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://purl.org/dc/terms/FileFormat",
       "name": "Bestandsformaat",
       "label": {
@@ -7778,7 +7801,7 @@
         {
           "label": "Formaat",
           "name": "Formaat",
-          "package": "DublinCore",
+          "package": "OSLO-Generiek",
           "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
           "scoped_uri": "#Formaat"
         }
@@ -7808,7 +7831,7 @@
         {
           "label": "Formaat",
           "name": "Formaat",
-          "package": "DublinCore",
+          "package": "OSLO-Generiek",
           "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
           "scoped_uri": "#Formaat"
         }
@@ -7912,6 +7935,36 @@
         "ap-label-nl": "Curve",
         "ap-definition-nl": "Een 1-dimensionele geometrische primitieve.",
         "ap-usageNote-nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://www.opengis.net/ont/sf#Point",
+      "name": "Punt",
+      "label": {
+        "nl": "Punt"
+      },
+      "sort": "Punt",
+      "description": {
+        "nl": "Een 0-dimensionele geometrische primitieve."
+      },
+      "usage": {
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Punt zelf gevormd wordt is geen enkele coördinaat nodig, er is immers maar 1 punt. Een Punt heeft daarom geen breedte, lengte of diepte. OPGELET: dat betekent niet dat een Punt geen coördinaten kan hebben in een ander coördinaatysteem, bv xyz-coördinaten in en 3-assig orthogonaal coördinaatsysteem.\r\n"
+      },
+      "parents": [
+        {
+          "label": "Geometrie",
+          "name": "Geometrie",
+          "package": "OSLO-Generiek",
+          "uri": "http://www.w3.org/ns/locn#Geometry",
+          "scoped_uri": "#Geometrie"
+        }
+      ],
+      "rawTags": {
+        "ap-definition-nl": "Een 0-dimensionele geometrische primitieve.",
+        "label-nl": "Punt",
+        "uri": "http://www.opengis.net/ont/sf#Point",
+        "ap-usageNote-nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Punt zelf gevormd wordt is geen enkele coördinaat nodig, er is immers maar 1 punt. Een Punt heeft daarom geen breedte, lengte of diepte. OPGELET: dat betekent niet dat een Punt geen coördinaten kan hebben in een ander coördinaatysteem, bv xyz-coördinaten in en 3-assig orthogonaal coördinaatsysteem.\r\n"
       },
       "properties": []
     },
@@ -8149,7 +8202,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+              "range_uri": "#Opmeting",
               "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
               "range_label": {
                 "nl": "Opmeting"
@@ -8272,7 +8325,7 @@
           "label": "Dekking",
           "name": "Dekking",
           "package": "DublinCore",
-          "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+          "uri": "http://purl.org/dc/elements/1.1/coverage",
           "scoped_uri": "#Dekking"
         }
       ],
@@ -8285,26 +8338,103 @@
       "properties": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
-      "name": "Dekking",
+      "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+      "name": "Opmeting",
       "label": {
-        "nl": "Dekking"
+        "nl": "Opmeting"
       },
-      "sort": "Dekking",
+      "sort": "Opmeting",
       "description": {
-        "nl": "Gebied of periode waarop de data betrekking heeft"
+        "nl": "Het bepalen van de precieze omvang van iets door het te meten."
       },
-      "usage": {
-        "nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
-      },
+      "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "Dekking",
-        "definition-nl": "Gebied of periode waarop de data betrekking heeft",
-        "usageNote-nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding.",
-        "package": "OSLO-SensorenEnBemonstering"
+        "label-nl": "Opmeting",
+        "ap-definition-nl": "Het bepalen van de precieze omvang van iets door het te meten."
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "name": "uitgevoerddoor",
+          "sort": "uitgevoerdDoor",
+          "label": {
+            "nl": "uitgevoerdDoor"
+          },
+          "description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "uitgevoerdDoor",
+            "definition-nl": "Agent die de Opmeting heeft uitgevoerd.",
+            "name": "Opmeting.uitgevoerdDoor"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "name": "methode",
+          "sort": "methode",
+          "label": {
+            "nl": "methode"
+          },
+          "description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Opmetingmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Opmetingmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Opmetingmethode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "methode",
+            "name": "Opmeting.methode",
+            "definition-nl": "Aard van de gebruikte methode."
+          }
+        }
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie",
@@ -8323,7 +8453,7 @@
         {
           "label": "Formaat",
           "name": "Formaat",
-          "package": "DublinCore",
+          "package": "OSLO-Generiek",
           "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
           "scoped_uri": "#Formaat"
         }

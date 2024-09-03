@@ -2292,6 +2292,13 @@
       "sh:targetClass": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#DekkingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/elements/1.1/coverage"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2332,6 +2339,13 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.opengis.net/ont/sf#Curve"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#PuntShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.opengis.net/ont/sf#Point"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#AnyShape",
@@ -2433,6 +2447,13 @@
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#InformatietypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingmethodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
@@ -3696,18 +3717,91 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor",
+          "sh:class": "http://purl.org/dc/terms/Agent",
+          "sh:description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "sh:name": {
+            "nl": "uitgevoerdDoor"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/b60cbb1f5aefd2bfc3349aed95e6c89745dd980d",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor",
+          "sh:description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "uitgevoerdDoor"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor",
+          "sh:description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "uitgevoerdDoor"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#WettelijkKaderShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#DekkingShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#DimensieShape",
