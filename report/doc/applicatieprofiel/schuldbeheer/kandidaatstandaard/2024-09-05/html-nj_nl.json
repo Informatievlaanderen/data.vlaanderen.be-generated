@@ -2,7 +2,7 @@
   "metadata": {
     "title": "OSLO Schuldbeheer - Applicatieprofiel",
     "uri": "https://data.vlaanderen.be/ns/schuldbeheer",
-    "issued": "2024-09-05",
+    "issued": "2024-07-23",
     "baseURI": "https://data.vlaanderen.be/ns/schuldbeheer#",
     "filename": "schuldbeheer-ap",
     "navigation": {
@@ -11,10 +11,10 @@
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "documenttype": "ap",
     "documentconfig": {},
-    "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
-    "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/115c2d08a47229be893e3e6960e68e3f73fe1136",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/115c2d08a47229be893e3e6960e68e3f73fe1136/CHANGELOG",
+    "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+    "statuslabel": "Ontwerp Standaard",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/78afa54c8e43eaae0f93b80d8e961a46b6858a9b",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/78afa54c8e43eaae0f93b80d8e961a46b6858a9b/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-schuldbeheer/",
     "usesVocs": [],
@@ -42,49 +42,10 @@
         }
       ],
       "rawTags": {
-        "label-nl": "Aanmaning",
-        "definition-nl": "Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schuldenaar te herinneren aan een schuldvordering die niet is voldaan terwijl de uiterste betaaldatum van deze schuldvordering reeds verstreken is.  "
+        "definition-nl": "Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schuldenaar te herinneren aan een schuldvordering die niet is voldaan terwijl de uiterste betaaldatum van deze schuldvordering reeds verstreken is.  ",
+        "label-nl": "Aanmaning"
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
-          "name": "genereertWanbetalingsvergoeding",
-          "sort": "genereert wanbetalingsvergoeding",
-          "label": {
-            "nl": "genereert wanbetalingsvergoeding"
-          },
-          "description": {
-            "nl": "Verwijzing naar een wanbetalingsvergoeding die door de aanmaning wordt gegenereerd. Een wanbetalingsvergoeding wordt gegenereerd door een aanmaning maar heeft zijn grondslag in een algemene voorwaarde of een reglement"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Aanmaning",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Wanbetalingsvergoeding",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Wanbetalingsvergoeding",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
-              "range_label": {
-                "nl": "Wanbetalingsvergoeding"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "genereert wanbetalingsvergoeding",
-            "definition-nl": "Verwijzing naar een wanbetalingsvergoeding die door de aanmaning wordt gegenereerd. Een wanbetalingsvergoeding wordt gegenereerd door een aanmaning maar heeft zijn grondslag in een algemene voorwaarde of een reglement"
-          }
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaningsdatum",
           "name": "aanmaningsdatum",
@@ -122,6 +83,45 @@
           "rawTags": {
             "label-nl": "aanmaningsdatum",
             "definition-nl": "Datum waarop de aanmaning werd verstuurd. "
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
+          "name": "genereertWanbetalingsvergoeding",
+          "sort": "genereert wanbetalingsvergoeding",
+          "label": {
+            "nl": "genereert wanbetalingsvergoeding"
+          },
+          "description": {
+            "nl": "Verwijzing naar een wanbetalingsvergoeding die door de aanmaning wordt gegenereerd. Een wanbetalingsvergoeding wordt gegenereerd door een aanmaning maar heeft zijn grondslag in een algemene voorwaarde of een reglement"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanmaning",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Wanbetalingsvergoeding",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Wanbetalingsvergoeding",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
+              "range_label": {
+                "nl": "Wanbetalingsvergoeding"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "genereert wanbetalingsvergoeding",
+            "definition-nl": "Verwijzing naar een wanbetalingsvergoeding die door de aanmaning wordt gegenereerd. Een wanbetalingsvergoeding wordt gegenereerd door een aanmaning maar heeft zijn grondslag in een algemene voorwaarde of een reglement"
           }
         }
       ]
@@ -276,14 +276,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
-          "name": "voorstel",
-          "sort": "voorstel",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaarding",
+          "name": "aanvaarding",
+          "sort": "aanvaarding",
           "label": {
-            "nl": "voorstel"
+            "nl": "aanvaarding"
           },
           "description": {
-            "nl": "Verwijzing naar de activiteit die het afbetalingsplan voorstelt."
+            "nl": "Verwijzing naar de aanvaarding van het afbetalingsplan."
           },
           "usage": {},
           "domain": [
@@ -294,180 +294,24 @@
           ],
           "range": [
             {
-              "range_label": "Voorstel",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel"
+              "range_label": "Aanvaarding",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Voorstel",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel",
+              "range_uri": "#Aanvaarding",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding",
               "range_label": {
-                "nl": "Voorstel"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "voorstel",
-            "definition-nl": "Verwijzing naar de activiteit die het afbetalingsplan voorstelt."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startBedrag",
-          "name": "startbedrag",
-          "sort": "startbedrag",
-          "label": {
-            "nl": "startbedrag"
-          },
-          "description": {
-            "nl": "Het totale verschuldigde bedrag dat wordt herschikt bij de aanvang van het afbetalingsplan."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Afbetalingsplan",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "https://schema.org/MonetaryAmount"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "https://schema.org/MonetaryAmount",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "startbedrag",
-            "definition-nl": "Het totale verschuldigde bedrag dat wordt herschikt bij de aanvang van het afbetalingsplan."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
-          "name": "schrapping",
-          "sort": "schrapping",
-          "label": {
-            "nl": "schrapping"
-          },
-          "description": {
-            "nl": "Verwijzing naar een schrapping van de schuldvordering."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Afbetalingsplan",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Schrapping",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Schrapping",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping",
-              "range_label": {
-                "nl": "Schrapping"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "schrapping",
-            "definition-nl": "Verwijzing naar een schrapping van de schuldvordering."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
-          "name": "herschikteSchuldvordering",
-          "sort": "herschikte schuldvordering",
-          "label": {
-            "nl": "herschikte schuldvordering"
-          },
-          "description": {
-            "nl": "Verwijzijng naar een schuldvordering waarvan de betaalmodaliteiten door het afbetalingsplan herschikt worden."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Afbetalingsplan",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Schuldvordering",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Schuldvordering",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
-              "range_label": {
-                "nl": "Schuldvordering"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "Verwijzijng naar een schuldvordering waarvan de betaalmodaliteiten door het afbetalingsplan herschikt worden.",
-            "label-nl": "herschikte schuldvordering"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplansaldo",
-          "name": "afbetalingsplansaldo",
-          "sort": "afbetalingsplansaldo",
-          "label": {
-            "nl": "afbetalingsplansaldo"
-          },
-          "description": {
-            "nl": "Verwijzing naar een saldo van een afbetalingsplan, namelijk het nog af te betalen bedrag op een bepaalde datum."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Afbetalingsplan",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Afbetalingsplansaldo",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Afbetalingsplansaldo",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo",
-              "range_label": {
-                "nl": "Afbetalingsplansaldo"
+                "nl": "Aanvaarding"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "afbetalingsplansaldo",
-            "definition-nl": "Verwijzing naar een saldo van een afbetalingsplan, namelijk het nog af te betalen bedrag op een bepaalde datum."
+            "label-nl": "aanvaarding",
+            "definition-nl": "Verwijzing naar de aanvaarding van het afbetalingsplan."
           }
         },
         {
@@ -510,14 +354,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaarding",
-          "name": "aanvaarding",
-          "sort": "aanvaarding",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplansaldo",
+          "name": "afbetalingsplansaldo",
+          "sort": "afbetalingsplansaldo",
           "label": {
-            "nl": "aanvaarding"
+            "nl": "afbetalingsplansaldo"
           },
           "description": {
-            "nl": "Verwijzing naar de aanvaarding van het afbetalingsplan."
+            "nl": "Verwijzing naar een saldo van een afbetalingsplan, namelijk het nog af te betalen bedrag op een bepaalde datum."
           },
           "usage": {},
           "domain": [
@@ -528,24 +372,180 @@
           ],
           "range": [
             {
-              "range_label": "Aanvaarding",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding"
+              "range_label": "Afbetalingsplansaldo",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Aanvaarding",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding",
+              "range_uri": "#Afbetalingsplansaldo",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo",
               "range_label": {
-                "nl": "Aanvaarding"
+                "nl": "Afbetalingsplansaldo"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanvaarding",
-            "definition-nl": "Verwijzing naar de aanvaarding van het afbetalingsplan."
+            "label-nl": "afbetalingsplansaldo",
+            "definition-nl": "Verwijzing naar een saldo van een afbetalingsplan, namelijk het nog af te betalen bedrag op een bepaalde datum."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
+          "name": "herschikteSchuldvordering",
+          "sort": "herschikte schuldvordering",
+          "label": {
+            "nl": "herschikte schuldvordering"
+          },
+          "description": {
+            "nl": "Verwijzijng naar een schuldvordering waarvan de betaalmodaliteiten door het afbetalingsplan herschikt worden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afbetalingsplan",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Schuldvordering",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Schuldvordering",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
+              "range_label": {
+                "nl": "Schuldvordering"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzijng naar een schuldvordering waarvan de betaalmodaliteiten door het afbetalingsplan herschikt worden.",
+            "label-nl": "herschikte schuldvordering"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
+          "name": "schrapping",
+          "sort": "schrapping",
+          "label": {
+            "nl": "schrapping"
+          },
+          "description": {
+            "nl": "Verwijzing naar een schrapping van de schuldvordering."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afbetalingsplan",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Schrapping",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Schrapping",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping",
+              "range_label": {
+                "nl": "Schrapping"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "schrapping",
+            "definition-nl": "Verwijzing naar een schrapping van de schuldvordering."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startBedrag",
+          "name": "startbedrag",
+          "sort": "startbedrag",
+          "label": {
+            "nl": "startbedrag"
+          },
+          "description": {
+            "nl": "Het totale verschuldigde bedrag dat wordt herschikt bij de aanvang van het afbetalingsplan."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afbetalingsplan",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Geldbedrag",
+              "range_uri": "https://schema.org/MonetaryAmount"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Geldbedrag",
+              "range_puri": "https://schema.org/MonetaryAmount",
+              "range_label": {
+                "nl": "Geldbedrag"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "startbedrag",
+            "definition-nl": "Het totale verschuldigde bedrag dat wordt herschikt bij de aanvang van het afbetalingsplan."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
+          "name": "voorstel",
+          "sort": "voorstel",
+          "label": {
+            "nl": "voorstel"
+          },
+          "description": {
+            "nl": "Verwijzing naar de activiteit die het afbetalingsplan voorstelt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Afbetalingsplan",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Voorstel",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Voorstel",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel",
+              "range_label": {
+                "nl": "Voorstel"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "voorstel",
+            "definition-nl": "Verwijzing naar de activiteit die het afbetalingsplan voorstelt."
           }
         }
       ]
@@ -568,14 +568,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum",
-          "name": "uitersteBetaaldatum",
-          "sort": "uiterste betaaldatum",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
+          "name": "afTeBetalenBedrag",
+          "sort": "af te betalen bedrag",
           "label": {
-            "nl": "uiterste betaaldatum"
+            "nl": "af te betalen bedrag"
           },
           "description": {
-            "nl": "De laatst mogelijke datum waarop het af te betalen bedrag moet betaald zijn om aan de betaaldverplichting van het aanvaarde afbetalingsplan te voldoen."
+            "nl": "Het geldbedrag dat voor de uiterste betaaldatum moet worden betaald."
           },
           "usage": {},
           "domain": [
@@ -586,24 +586,24 @@
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Geldbedrag",
+              "range_uri": "https://schema.org/MonetaryAmount"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Geldbedrag",
+              "range_puri": "https://schema.org/MonetaryAmount",
               "range_label": {
-                "nl": "Date"
+                "nl": "Geldbedrag"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "uiterste betaaldatum",
-            "definition-nl": "De laatst mogelijke datum waarop het af te betalen bedrag moet betaald zijn om aan de betaaldverplichting van het aanvaarde afbetalingsplan te voldoen."
+            "label-nl": "af te betalen bedrag",
+            "definition-nl": "Het geldbedrag dat voor de uiterste betaaldatum moet worden betaald."
           }
         },
         {
@@ -646,14 +646,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
-          "name": "afTeBetalenBedrag",
-          "sort": "af te betalen bedrag",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum",
+          "name": "uitersteBetaaldatum",
+          "sort": "uiterste betaaldatum",
           "label": {
-            "nl": "af te betalen bedrag"
+            "nl": "uiterste betaaldatum"
           },
           "description": {
-            "nl": "Het geldbedrag dat voor de uiterste betaaldatum moet worden betaald."
+            "nl": "De laatst mogelijke datum waarop het af te betalen bedrag moet betaald zijn om aan de betaaldverplichting van het aanvaarde afbetalingsplan te voldoen."
           },
           "usage": {},
           "domain": [
@@ -664,24 +664,24 @@
           ],
           "range": [
             {
-              "range_label": "Geldbedrag",
-              "range_uri": "https://schema.org/MonetaryAmount"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "https://schema.org/MonetaryAmount",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Geldbedrag"
+                "nl": "Date"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "af te betalen bedrag",
-            "definition-nl": "Het geldbedrag dat voor de uiterste betaaldatum moet worden betaald."
+            "label-nl": "uiterste betaaldatum",
+            "definition-nl": "De laatst mogelijke datum waarop het af te betalen bedrag moet betaald zijn om aan de betaaldverplichting van het aanvaarde afbetalingsplan te voldoen."
           }
         }
       ]
@@ -738,14 +738,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
-          "name": "wordtToegerekendDoor",
-          "sort": "wordt toegerekend door",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor",
+          "name": "bedoeldVoor",
+          "sort": "bedoeld voor",
           "label": {
-            "nl": "wordt toegerekend door"
+            "nl": "bedoeld voor"
           },
           "description": {
-            "nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een schuldvordering."
+            "nl": "Verwijzing naar de schuldvordering die de betaler wenst af te lossen met de betaling."
           },
           "usage": {},
           "domain": [
@@ -756,63 +756,24 @@
           ],
           "range": [
             {
-              "range_label": "ToerekeningVanBetaling",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
+              "range_label": "Schuldvordering",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Toerekening van Betaling",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
+              "range_uri": "#Schuldvordering",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
               "range_label": {
-                "nl": "Toerekening van Betaling"
+                "nl": "Schuldvordering"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een schuldvordering.",
-            "label-nl": "wordt toegerekend door"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betalingsdatum",
-          "name": "betalingsdatum",
-          "sort": "betalingsdatum",
-          "label": {
-            "nl": "betalingsdatum"
-          },
-          "description": {
-            "nl": "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Betaling",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Date"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "betalingsdatum",
-            "definition-nl": "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "
+            "label-nl": "bedoeld voor",
+            "definition-nl": "Verwijzing naar de schuldvordering die de betaler wenst af te lossen met de betaling."
           }
         },
         {
@@ -855,14 +816,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor",
-          "name": "bedoeldVoor",
-          "sort": "bedoeld voor",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betalingsdatum",
+          "name": "betalingsdatum",
+          "sort": "betalingsdatum",
           "label": {
-            "nl": "bedoeld voor"
+            "nl": "betalingsdatum"
           },
           "description": {
-            "nl": "Verwijzing naar de schuldvordering die de betaler wenst af te lossen met de betaling."
+            "nl": "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "
           },
           "usage": {},
           "domain": [
@@ -873,24 +834,63 @@
           ],
           "range": [
             {
-              "range_label": "Schuldvordering",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Schuldvordering",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Schuldvordering"
+                "nl": "Date"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "betalingsdatum",
+            "definition-nl": "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
+          "name": "wordtToegerekendDoor",
+          "sort": "wordt toegerekend door",
+          "label": {
+            "nl": "wordt toegerekend door"
+          },
+          "description": {
+            "nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een schuldvordering."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Betaling",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "ToerekeningVanBetaling",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Toerekening van Betaling",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
+              "range_label": {
+                "nl": "Toerekening van Betaling"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "bedoeld voor",
-            "definition-nl": "Verwijzing naar de schuldvordering die de betaler wenst af te lossen met de betaling."
+            "definition-nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een schuldvordering.",
+            "label-nl": "wordt toegerekend door"
           }
         },
         {
@@ -1027,48 +1027,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst",
-          "name": "periodiciteitInkomst",
-          "sort": "periodiciteit inkomst",
-          "label": {
-            "nl": "periodiciteit inkomst"
-          },
-          "description": {
-            "nl": "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. "
-          },
-          "usage": {
-            "nl": "Bijvoorbeeld eenmaling, maandelijks, jaarlijks."
-          },
-          "domain": [
-            {
-              "EA-Name": "Inkomst",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PeriodiciteitInkomst",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#PeriodiciteitInkomst",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "PeriodiciteitInkomst"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "periodiciteit inkomst",
-            "definition-nl": "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. ",
-            "usageNote-nl": "Bijvoorbeeld eenmaling, maandelijks, jaarlijks."
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedrag",
           "name": "bedrag",
           "sort": "bedrag",
@@ -1105,6 +1063,48 @@
           "rawTags": {
             "label-nl": "bedrag",
             "definition-nl": "Het bedrag van de inkomst."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst",
+          "name": "periodiciteitInkomst",
+          "sort": "periodiciteit inkomst",
+          "label": {
+            "nl": "periodiciteit inkomst"
+          },
+          "description": {
+            "nl": "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. "
+          },
+          "usage": {
+            "nl": "Bijvoorbeeld eenmalig, maandelijks, jaarlijks."
+          },
+          "domain": [
+            {
+              "EA-Name": "Inkomst",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PeriodiciteitInkomst",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Periodiciteit inkomst",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Periodiciteit inkomst"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "periodiciteit inkomst",
+            "definition-nl": "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. ",
+            "usageNote-nl": "Bijvoorbeeld eenmalig, maandelijks, jaarlijks."
           }
         },
         {
@@ -1238,10 +1238,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#JuridischStatuutType",
+              "range_uri": "#Type jurische statuut",
               "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "JuridischStatuutType"
+                "nl": "Type jurische statuut"
               }
             }
           ],
@@ -1281,45 +1281,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
-          "name": "wanbetaling",
-          "sort": "wanbetaling",
-          "label": {
-            "nl": "wanbetaling"
-          },
-          "description": {
-            "nl": "Laat toe te specifiëren of een schuldenaar zijn financiële verplichtingen al dan niet heeft nagekomen. "
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Krediet",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Boolean",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_label": {
-                "nl": "Boolean"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "wanbetaling",
-            "definition-nl": "Laat toe te specifiëren of een schuldenaar zijn financiële verplichtingen al dan niet heeft nagekomen. "
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag",
           "name": "initieelKredietbedrag",
           "sort": "initieel kredietbedrag",
@@ -1356,6 +1317,45 @@
           "rawTags": {
             "label-nl": "initieel kredietbedrag",
             "definition-nl": "Het bedrag dat wordt geleend bij het aangaan van een kredietovereenkomst."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
+          "name": "wanbetaling",
+          "sort": "wanbetaling",
+          "label": {
+            "nl": "wanbetaling"
+          },
+          "description": {
+            "nl": "Laat toe te specifiëren of een schuldenaar zijn financiële verplichtingen al dan niet heeft nagekomen. "
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Krediet",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "wanbetaling",
+            "definition-nl": "Laat toe te specifiëren of een schuldenaar zijn financiële verplichtingen al dan niet heeft nagekomen. "
           }
         },
         {
@@ -1433,7 +1433,7 @@
             "nl": "oninbaar bedrag"
           },
           "description": {
-            "nl": "Het bedrag de als oninbaar beschouwd wordt."
+            "nl": "Het bedrag dat als oninbaar beschouwd wordt."
           },
           "usage": {},
           "domain": [
@@ -1461,7 +1461,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "oninbaar bedrag",
-            "definition-nl": "Het bedrag de als oninbaar beschouwd wordt."
+            "definition-nl": "Het bedrag dat als oninbaar beschouwd wordt."
           }
         }
       ]
@@ -1483,45 +1483,6 @@
         "definition-nl": "Het bedrag dat overblijft als je het verschil berekent tussen twee grootheden, zoals inkomsten en uitgaven, kosten en opbrengsten, te betalen bedrag en betaald bedrag. Een saldo is een momentopname."
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#saldodatum",
-          "name": "saldodatum",
-          "sort": "saldodatum",
-          "label": {
-            "nl": "saldodatum"
-          },
-          "description": {
-            "nl": "De datum waarop het saldo geldt."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Saldo",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Saldo"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Date"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "saldodatum",
-            "definition-nl": "De datum waarop het saldo geldt."
-          }
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#saldobedrag",
           "name": "saldobedrag",
@@ -1559,6 +1520,45 @@
           "rawTags": {
             "label-nl": "saldobedrag",
             "definition-nl": "Het resterende bedrag zelf."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#saldodatum",
+          "name": "saldodatum",
+          "sort": "saldodatum",
+          "label": {
+            "nl": "saldodatum"
+          },
+          "description": {
+            "nl": "De datum waarop het saldo geldt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Saldo",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Saldo"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_label": {
+                "nl": "Date"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "saldodatum",
+            "definition-nl": "De datum waarop het saldo geldt."
           }
         }
       ]
@@ -1658,14 +1658,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
-          "name": "wanbetalingsvergoeding",
-          "sort": "wanbetalingsvergoeding",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
+          "name": "aanleiding",
+          "sort": "aanleiding",
           "label": {
-            "nl": "wanbetalingsvergoeding"
+            "nl": "aanleiding"
           },
           "description": {
-            "nl": "Een schuldvordering kan verhoogd worden met een wanbetalingsvergoeding."
+            "nl": "Verwijzing naar de aanleiding voor de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -1676,35 +1676,35 @@
           ],
           "range": [
             {
-              "range_label": "Wanbetalingsvergoeding",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
+              "range_label": "Resource",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Wanbetalingsvergoeding",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
+              "range_uri": "#Resource",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Resource",
               "range_label": {
-                "nl": "Wanbetalingsvergoeding"
+                "nl": "Resource"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "wanbetalingsvergoeding",
-            "definition-nl": "Een schuldvordering kan verhoogd worden met een wanbetalingsvergoeding."
+            "label-nl": "aanleiding",
+            "definition-nl": "Verwijzing naar de aanleiding voor de schuldvordering."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
-          "name": "wanbetaling",
-          "sort": "wanbetaling",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaning",
+          "name": "aanmaning",
+          "sort": "aanmaning",
           "label": {
-            "nl": "wanbetaling"
+            "nl": "aanmaning"
           },
           "description": {
-            "nl": "Laat toe om aan te duiden of de hoofdsom voor de uiterste betaaldatum werd betaald."
+            "nl": "Verwijzing naar een aanmaning  met betrekking tot de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -1715,74 +1715,35 @@
           ],
           "range": [
             {
-              "range_label": "Boolean",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+              "range_label": "Aanmaning",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_uri": "#Aanmaning",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning",
               "range_label": {
-                "nl": "Boolean"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "wanbetaling",
-            "definition-nl": "Laat toe om aan te duiden of de hoofdsom voor de uiterste betaaldatum werd betaald."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
-          "name": "vermindering",
-          "sort": "vermindering",
-          "label": {
-            "nl": "vermindering"
-          },
-          "description": {
-            "nl": "Verwijzing naar een vermindering voor de schuldvordering."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuldvordering",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vermindering",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vermindering",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering",
-              "range_label": {
-                "nl": "Vermindering"
+                "nl": "Aanmaning"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "vermindering",
-            "definition-nl": "Verwijzing naar een vermindering voor de schuldvordering."
+            "definition-nl": "Verwijzing naar een aanmaning  met betrekking tot de schuldvordering.",
+            "label-nl": "aanmaning"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringsdatum",
-          "name": "verjaringsdatum",
-          "sort": "verjaringsdatum",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
+          "name": "afbetalingsplan",
+          "sort": "afbetalingsplan",
           "label": {
-            "nl": "verjaringsdatum"
+            "nl": "afbetalingsplan"
           },
           "description": {
-            "nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."
+            "nl": "Verwijzing naar een afbetalingsplan dat voor de schuldvordering geldt."
           },
           "usage": {},
           "domain": [
@@ -1793,35 +1754,35 @@
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Afbetalingsplan",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Afbetalingsplan",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan",
               "range_label": {
-                "nl": "Date"
+                "nl": "Afbetalingsplan"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "verjaringsdatum",
-            "definition-nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."
+            "label-nl": "afbetalingsplan",
+            "definition-nl": "Verwijzing naar een afbetalingsplan dat voor de schuldvordering geldt."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum",
-          "name": "uitersteBetaaldatum",
-          "sort": "uiterste betaaldatum",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwisting",
+          "name": "betwisting",
+          "sort": "betwisting",
           "label": {
-            "nl": "uiterste betaaldatum"
+            "nl": "betwisting"
           },
           "description": {
-            "nl": "De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd."
+            "nl": "Verwijzing naar een betwisting van de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -1832,74 +1793,35 @@
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Betwisting",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Betwisting",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting",
               "range_label": {
-                "nl": "Date"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "uiterste betaaldatum",
-            "definition-nl": "De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
-          "name": "toerekeningVanBetaling",
-          "sort": "toerekening van betaling",
-          "label": {
-            "nl": "toerekening van betaling"
-          },
-          "description": {
-            "nl": "Het toewijzen van een betaald geldbedrag aan een schuldvordering. "
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuldvordering",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "ToerekeningVanBetaling",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Toerekening van Betaling",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
-              "range_label": {
-                "nl": "Toerekening van Betaling"
+                "nl": "Betwisting"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Het toewijzen van een betaald geldbedrag aan een schuldvordering. ",
-            "label-nl": "toerekening van betaling"
+            "definition-nl": "Verwijzing naar een betwisting van de schuldvordering.",
+            "label-nl": "betwisting"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
-          "name": "schuldvorderingssaldo",
-          "sort": "schuldvorderingssaldo",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
+          "name": "grondslag",
+          "sort": "grondslag",
           "label": {
-            "nl": "schuldvorderingssaldo"
+            "nl": "grondslag"
           },
           "description": {
-            "nl": "Verwijzing naar een saldo dat werd berekend voor de schuldvordering."
+            "nl": "Verwijzing naar de juridische basis voor de schuldvordering"
           },
           "usage": {},
           "domain": [
@@ -1910,35 +1832,35 @@
           ],
           "range": [
             {
-              "range_label": "Schuldvorderingssaldo",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo"
+              "range_label": "Rechtsgrond",
+              "range_uri": "http://data.europa.eu/eli/ontology#LegalResource"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Schuldvorderingssaldo",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo",
+              "range_uri": "#Rechtsgrond",
+              "range_puri": "http://data.europa.eu/eli/ontology#LegalResource",
               "range_label": {
-                "nl": "Schuldvorderingssaldo"
+                "nl": "Rechtsgrond"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "schuldvorderingssaldo",
-            "definition-nl": "Verwijzing naar een saldo dat werd berekend voor de schuldvordering."
+            "label-nl": "grondslag",
+            "definition-nl": "Verwijzing naar de juridische basis voor de schuldvordering"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
-          "name": "schuldvorderingscategorie",
-          "sort": "schuldvorderingscategorie",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#hoofdsom",
+          "name": "hoofdsom",
+          "sort": "hoofdsom",
           "label": {
-            "nl": "schuldvorderingscategorie"
+            "nl": "hoofdsom"
           },
           "description": {
-            "nl": "Een schuldvordering behoort tot een categorie."
+            "nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."
           },
           "usage": {},
           "domain": [
@@ -1949,35 +1871,35 @@
           ],
           "range": [
             {
-              "range_label": "Schuldvorderingscategorie",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie"
+              "range_label": "Geldbedrag",
+              "range_uri": "https://schema.org/MonetaryAmount"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Schuldvorderingscategorie",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie",
+              "range_uri": "#Geldbedrag",
+              "range_puri": "https://schema.org/MonetaryAmount",
               "range_label": {
-                "nl": "Schuldvorderingscategorie"
+                "nl": "Geldbedrag"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "schuldvorderingscategorie",
-            "definition-nl": "Een schuldvordering behoort tot een categorie."
+            "label-nl": "hoofdsom",
+            "definition-nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
-          "name": "oninbaarheidsverklaring",
-          "sort": "oninbaarheidsverklaring",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
+          "name": "identificator",
+          "sort": "identificator",
           "label": {
-            "nl": "oninbaarheidsverklaring"
+            "nl": "identificator"
           },
           "description": {
-            "nl": "Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering."
+            "nl": "Een identificator voor de schuldvordering"
           },
           "usage": {},
           "domain": [
@@ -1988,24 +1910,24 @@
           ],
           "range": [
             {
-              "range_label": "Oninbaarheidsverklaring",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring"
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Oninbaarheidsverklaring",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring",
+              "range_uri": "#Identificator",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
               "range_label": {
-                "nl": "Oninbaarheidsverklaring"
+                "nl": "Identificator"
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering.",
-            "label-nl": "oninbaarheidsverklaring"
+            "label-nl": "identificator",
+            "definition-nl": "Een identificator voor de schuldvordering"
           }
         },
         {
@@ -2051,14 +1973,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
-          "name": "identificator",
-          "sort": "identificator",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
+          "name": "oninbaarheidsverklaring",
+          "sort": "oninbaarheidsverklaring",
           "label": {
-            "nl": "identificator"
+            "nl": "oninbaarheidsverklaring"
           },
           "description": {
-            "nl": "Een identificator voor de schuldvordering"
+            "nl": "Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -2069,35 +1991,75 @@
           ],
           "range": [
             {
-              "range_label": "Identificator",
-              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+              "range_label": "Oninbaarheidsverklaring",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Identificator",
-              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_uri": "#Oninbaarheidsverklaring",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring",
               "range_label": {
-                "nl": "Identificator"
+                "nl": "Oninbaarheidsverklaring"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering.",
+            "label-nl": "oninbaarheidsverklaring"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
+          "name": "schuldeiser",
+          "sort": "schuldeiser",
+          "label": {
+            "nl": "schuldeiser"
+          },
+          "description": {
+            "nl": "Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen. "
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "identificator",
-            "definition-nl": "Een identificator voor de schuldvordering"
+            "package": "OSLO-Schuldbeheer-master",
+            "definition-nl": "Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen. ",
+            "label-nl": "schuldeiser"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#hoofdsom",
-          "name": "hoofdsom",
-          "sort": "hoofdsom",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
+          "name": "schuldenaar",
+          "sort": "schuldenaar",
           "label": {
-            "nl": "hoofdsom"
+            "nl": "schuldenaar"
           },
           "description": {
-            "nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."
+            "nl": "Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij. "
           },
           "usage": {},
           "domain": [
@@ -2108,35 +2070,75 @@
           ],
           "range": [
             {
-              "range_label": "Geldbedrag",
-              "range_uri": "https://schema.org/MonetaryAmount"
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "https://schema.org/MonetaryAmount",
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
               "range_label": {
-                "nl": "Geldbedrag"
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "schuldenaar",
+            "definition-nl": "Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij. ",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
+          "name": "schuldvorderingscategorie",
+          "sort": "schuldvorderingscategorie",
+          "label": {
+            "nl": "schuldvorderingscategorie"
+          },
+          "description": {
+            "nl": "Een schuldvordering behoort tot een categorie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Schuldvorderingscategorie",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Schuldvorderingscategorie",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie",
+              "range_label": {
+                "nl": "Schuldvorderingscategorie"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "hoofdsom",
-            "definition-nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."
+            "label-nl": "schuldvorderingscategorie",
+            "definition-nl": "Een schuldvordering behoort tot een categorie."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
-          "name": "grondslag",
-          "sort": "grondslag",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
+          "name": "schuldvorderingssaldo",
+          "sort": "schuldvorderingssaldo",
           "label": {
-            "nl": "grondslag"
+            "nl": "schuldvorderingssaldo"
           },
           "description": {
-            "nl": "Verwijzing naar de juridische basis voor de schuldvordering"
+            "nl": "Verwijzing naar een saldo dat werd berekend voor de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -2147,35 +2149,35 @@
           ],
           "range": [
             {
-              "range_label": "Rechtsgrond",
-              "range_uri": "http://data.europa.eu/eli/ontology#LegalResource"
+              "range_label": "Schuldvorderingssaldo",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Rechtsgrond",
-              "range_puri": "http://data.europa.eu/eli/ontology#LegalResource",
+              "range_uri": "#Schuldvorderingssaldo",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo",
               "range_label": {
-                "nl": "Rechtsgrond"
+                "nl": "Schuldvorderingssaldo"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "grondslag",
-            "definition-nl": "Verwijzing naar de juridische basis voor de schuldvordering"
+            "label-nl": "schuldvorderingssaldo",
+            "definition-nl": "Verwijzing naar een saldo dat werd berekend voor de schuldvordering."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwisting",
-          "name": "betwisting",
-          "sort": "betwisting",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
+          "name": "toerekeningVanBetaling",
+          "sort": "toerekening van betaling",
           "label": {
-            "nl": "betwisting"
+            "nl": "toerekening van betaling"
           },
           "description": {
-            "nl": "Verwijzing naar een betwisting van de schuldvordering."
+            "nl": "Het toewijzen van een betaald geldbedrag aan een schuldvordering. "
           },
           "usage": {},
           "domain": [
@@ -2186,35 +2188,35 @@
           ],
           "range": [
             {
-              "range_label": "Betwisting",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting"
+              "range_label": "ToerekeningVanBetaling",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Betwisting",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting",
+              "range_uri": "#Toerekening van Betaling",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
               "range_label": {
-                "nl": "Betwisting"
+                "nl": "Toerekening van Betaling"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar een betwisting van de schuldvordering.",
-            "label-nl": "betwisting"
+            "definition-nl": "Het toewijzen van een betaald geldbedrag aan een schuldvordering. ",
+            "label-nl": "toerekening van betaling"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
-          "name": "afbetalingsplan",
-          "sort": "afbetalingsplan",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum",
+          "name": "uitersteBetaaldatum",
+          "sort": "uiterste betaaldatum",
           "label": {
-            "nl": "afbetalingsplan"
+            "nl": "uiterste betaaldatum"
           },
           "description": {
-            "nl": "Verwijzing naar een afbetalingsplan dat voor de schuldvordering geldt."
+            "nl": "De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd."
           },
           "usage": {},
           "domain": [
@@ -2225,35 +2227,35 @@
           ],
           "range": [
             {
-              "range_label": "Afbetalingsplan",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Afbetalingsplan",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Afbetalingsplan"
+                "nl": "Date"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "afbetalingsplan",
-            "definition-nl": "Verwijzing naar een afbetalingsplan dat voor de schuldvordering geldt."
+            "label-nl": "uiterste betaaldatum",
+            "definition-nl": "De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaning",
-          "name": "aanmaning",
-          "sort": "aanmaning",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringsdatum",
+          "name": "verjaringsdatum",
+          "sort": "verjaringsdatum",
           "label": {
-            "nl": "aanmaning"
+            "nl": "verjaringsdatum"
           },
           "description": {
-            "nl": "Verwijzing naar een aanmaning  met betrekking tot de schuldvordering."
+            "nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."
           },
           "usage": {},
           "domain": [
@@ -2264,35 +2266,35 @@
           ],
           "range": [
             {
-              "range_label": "Aanmaning",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Aanmaning",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Aanmaning"
+                "nl": "Date"
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar een aanmaning  met betrekking tot de schuldvordering.",
-            "label-nl": "aanmaning"
+            "label-nl": "verjaringsdatum",
+            "definition-nl": "De datum waarna de schuldeiser zijn recht om juridische stappen te ondernemen verliest en de vordering niet langer inbaar is. Wordt berekend op basis van de verjaringstermijn, vanaf de startdatum van de vordering of de datum van de stuitende activiteit, bijvoorbeeld een betaling."
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
-          "name": "aanleiding",
-          "sort": "aanleiding",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
+          "name": "vermindering",
+          "sort": "vermindering",
           "label": {
-            "nl": "aanleiding"
+            "nl": "vermindering"
           },
           "description": {
-            "nl": "Verwijzing naar de aanleiding voor de schuldvordering."
+            "nl": "Verwijzing naar een vermindering voor de schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -2303,24 +2305,102 @@
           ],
           "range": [
             {
-              "range_label": "Resource",
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+              "range_label": "Vermindering",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Resource",
-              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Resource",
+              "range_uri": "#Vermindering",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering",
               "range_label": {
-                "nl": "Resource"
+                "nl": "Vermindering"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanleiding",
-            "definition-nl": "Verwijzing naar de aanleiding voor de schuldvordering."
+            "label-nl": "vermindering",
+            "definition-nl": "Verwijzing naar een vermindering voor de schuldvordering."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
+          "name": "wanbetaling",
+          "sort": "wanbetaling",
+          "label": {
+            "nl": "wanbetaling"
+          },
+          "description": {
+            "nl": "Laat toe om aan te duiden of de hoofdsom voor de uiterste betaaldatum werd betaald."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "wanbetaling",
+            "definition-nl": "Laat toe om aan te duiden of de hoofdsom voor de uiterste betaaldatum werd betaald."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
+          "name": "wanbetalingsvergoeding",
+          "sort": "wanbetalingsvergoeding",
+          "label": {
+            "nl": "wanbetalingsvergoeding"
+          },
+          "description": {
+            "nl": "Een schuldvordering kan verhoogd worden met een wanbetalingsvergoeding."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Wanbetalingsvergoeding",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Wanbetalingsvergoeding",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
+              "range_label": {
+                "nl": "Wanbetalingsvergoeding"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "wanbetalingsvergoeding",
+            "definition-nl": "Een schuldvordering kan verhoogd worden met een wanbetalingsvergoeding."
           }
         }
       ]
@@ -2342,6 +2422,45 @@
         "definition-nl": "Een soort schuldvordering met bepaalde kenmerken."
       },
       "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#fiscaal",
+          "name": "fiscaal",
+          "sort": "fiscaal",
+          "label": {
+            "nl": "fiscaal"
+          },
+          "description": {
+            "nl": "Laat toe om te specifiëren of het om fiscale of niet-fiscale schuldvorderingen gaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Schuldvorderingscategorie",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "fiscaal",
+            "definition-nl": "Laat toe om te specifiëren of het om fiscale of niet-fiscale schuldvorderingen gaat."
+          }
+        },
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringstermijn",
           "name": "verjaringstermijn",
@@ -2379,45 +2498,6 @@
           "rawTags": {
             "label-nl": "verjaringstermijn",
             "definition-nl": "De verjaringstermijn die voor schuldvorderingen van deze categorie geldt."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#fiscaal",
-          "name": "fiscaal",
-          "sort": "fiscaal",
-          "label": {
-            "nl": "fiscaal"
-          },
-          "description": {
-            "nl": "Laat toe om te specifiëren het om fiscale of niet-fiscale schuldvorderingen gaat."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Schuldvorderingscategorie",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Boolean",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_label": {
-                "nl": "Boolean"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "fiscaal",
-            "definition-nl": "Laat toe om te specifiëren het om fiscale of niet-fiscale schuldvorderingen gaat."
           }
         },
         {
@@ -2577,10 +2657,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#SociaalStatuuttype",
+              "range_uri": "#Type sociaal statuut",
               "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "SociaalStatuuttype"
+                "nl": "Type sociaal statuut"
               }
             }
           ],
@@ -2612,14 +2692,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#type",
-          "name": "type",
-          "sort": "type",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
+          "name": "startdatum",
+          "sort": "startdatum",
           "label": {
-            "nl": "type"
+            "nl": "startdatum"
           },
           "description": {
-            "nl": "De aarde van de solvibiliteitsindicator."
+            "nl": "De startdatum voor de geldigheid van de solvabiliteitsindicator."
           },
           "usage": {},
           "domain": [
@@ -2630,24 +2710,24 @@
           ],
           "range": [
             {
-              "range_label": "Solvabiliteitsindicatortype",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Solvabiliteitsindicatortype",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Solvabiliteitsindicatortype"
+                "nl": "Date"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "type",
-            "definition-nl": "De aarde van de solvibiliteitsindicator."
+            "label-nl": "startdatum",
+            "definition-nl": "De startdatum voor de geldigheid van de solvabiliteitsindicator."
           }
         },
         {
@@ -2690,14 +2770,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-          "name": "startdatum",
-          "sort": "startdatum",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#type",
+          "name": "type",
+          "sort": "type",
           "label": {
-            "nl": "startdatum"
+            "nl": "type"
           },
           "description": {
-            "nl": "De startdatum voor de geldigheid van de solvabiliteitsindicator."
+            "nl": "De aarde van de solvibiliteitsindicator."
           },
           "usage": {},
           "domain": [
@@ -2708,24 +2788,24 @@
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Solvabiliteitsindicatortype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Solvabiliteitsindicatortype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "Date"
+                "nl": "Solvabiliteitsindicatortype"
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "startdatum",
-            "definition-nl": "De startdatum voor de geldigheid van de solvabiliteitsindicator."
+            "label-nl": "type",
+            "definition-nl": "De aarde van de solvibiliteitsindicator."
           }
         }
       ]
@@ -2748,14 +2828,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-          "name": "startdatum",
-          "sort": "startdatum",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
+          "name": "afgeleidVan",
+          "sort": "afgeleid van",
           "label": {
-            "nl": "startdatum"
+            "nl": "afgeleid van"
           },
           "description": {
-            "nl": "De startdatum van het solvabiliteitsprofiel."
+            "nl": "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."
           },
           "usage": {},
           "domain": [
@@ -2766,63 +2846,24 @@
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Solvabiliteitsindicator",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Solvabiliteitsindicator",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator",
               "range_label": {
-                "nl": "Date"
+                "nl": "Solvabiliteitsindicator"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "startdatum",
-            "definition-nl": "De startdatum van het solvabiliteitsprofiel."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-          "name": "einddatum",
-          "sort": "einddatum",
-          "label": {
-            "nl": "einddatum"
-          },
-          "description": {
-            "nl": "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Solvabiliteitsprofiel",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Date"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "einddatum",
-            "definition-nl": "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."
+            "label-nl": "afgeleid van",
+            "definition-nl": "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."
           }
         },
         {
@@ -2865,14 +2906,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
-          "name": "afgeleidVan",
-          "sort": "afgeleid van",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
+          "name": "einddatum",
+          "sort": "einddatum",
           "label": {
-            "nl": "afgeleid van"
+            "nl": "einddatum"
           },
           "description": {
-            "nl": "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."
+            "nl": "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."
           },
           "usage": {},
           "domain": [
@@ -2883,24 +2924,63 @@
           ],
           "range": [
             {
-              "range_label": "Solvabiliteitsindicator",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Solvabiliteitsindicator",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Solvabiliteitsindicator"
+                "nl": "Date"
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "afgeleid van",
-            "definition-nl": "Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid."
+            "label-nl": "einddatum",
+            "definition-nl": "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
+          "name": "startdatum",
+          "sort": "startdatum",
+          "label": {
+            "nl": "startdatum"
+          },
+          "description": {
+            "nl": "De startdatum van het solvabiliteitsprofiel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Solvabiliteitsprofiel",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_label": {
+                "nl": "Date"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "startdatum",
+            "definition-nl": "De startdatum van het solvabiliteitsprofiel."
           }
         },
         {
@@ -2974,14 +3054,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
-          "name": "betaling",
-          "sort": "betaling",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
+          "name": "rekentToeAan",
+          "sort": "rekent toe aan",
           "label": {
-            "nl": "betaling"
+            "nl": "rekent toe aan"
           },
           "description": {
-            "nl": "Verwijzing naar de betaling dit werd toegerekend."
+            "nl": "Een toerekening van betaling rekent een (deel van het) betaalde bedrag toe aan een schuldvordering."
           },
           "usage": {},
           "domain": [
@@ -2992,24 +3072,24 @@
           ],
           "range": [
             {
-              "range_label": "Betaling",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
+              "range_label": "Schuldvordering",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Betaling",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling",
+              "range_uri": "#Schuldvordering",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
               "range_label": {
-                "nl": "Betaling"
+                "nl": "Schuldvordering"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar de betaling dit werd toegerekend.",
-            "label-nl": "betaling"
+            "definition-nl": "Een toerekening van betaling rekent een (deel van het) betaalde bedrag toe aan een schuldvordering.",
+            "label-nl": "rekent toe aan"
           }
         },
         {
@@ -3052,14 +3132,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
-          "name": "rekentToeAan",
-          "sort": "rekent toe aan",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
+          "name": "toegerekendeBetaling",
+          "sort": "toegerekende betaling",
           "label": {
-            "nl": "rekent toe aan"
+            "nl": "toegerekende betaling"
           },
           "description": {
-            "nl": "Een toerekening van betaling rekent een (deel van het) betaalde bedrag toe aan een schuldvordering."
+            "nl": "Verwijzing naar de betaling die werd toegerekend."
           },
           "usage": {},
           "domain": [
@@ -3070,24 +3150,24 @@
           ],
           "range": [
             {
-              "range_label": "Schuldvordering",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+              "range_label": "Betaling",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Schuldvordering",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
+              "range_uri": "#Betaling",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling",
               "range_label": {
-                "nl": "Schuldvordering"
+                "nl": "Betaling"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Een toerekening van betaling rekent een (deel van het) betaalde bedrag toe aan een schuldvordering.",
-            "label-nl": "rekent toe aan"
+            "definition-nl": "Verwijzing naar de betaling die werd toegerekend.",
+            "label-nl": "toegerekende betaling"
           }
         }
       ]
@@ -3242,6 +3322,45 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
+          "name": "interest",
+          "sort": "interest",
+          "label": {
+            "nl": "interest"
+          },
+          "description": {
+            "nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Wanbetalingsvergoeding",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_label": {
+                "nl": "Decimal"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "interest",
+            "definition-nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
           "name": "kost",
           "sort": "kost",
@@ -3278,32 +3397,6 @@
           "rawTags": {
             "label-nl": "kost",
             "definition-nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een vast geldbedrag."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
-          "name": "interest",
-          "sort": "interest",
-          "label": {
-            "nl": "interest"
-          },
-          "description": {
-            "nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Wanbetalingsvergoeding",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
-            }
-          ],
-          "range": [],
-          "scopedrange": [],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "interest",
-            "definition-nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."
           }
         },
         {
@@ -3403,12 +3496,15 @@
         "nl": "Resource"
       },
       "sort": "Resource",
-      "description": {},
+      "description": {
+        "nl": "Entiteit waarvan alle entiteiten zijn afgeleid"
+      },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "Resource",
-        "uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
+        "definition-nl": "Entiteit waarvan alle entiteiten zijn afgeleid"
       },
       "properties": []
     },
@@ -3457,54 +3553,10 @@
       "properties": [
         {
           "uri": "http://www.w3.org/ns/org#subOrganizationOf",
-          "name": "isSuborganisatieVan(target)",
-          "sort": "is suborganisatie van (target)",
+          "name": "isSuborganisatieVan",
+          "sort": "is suborganisatie van",
           "label": {
-            "nl": "is suborganisatie van (target)"
-          },
-          "description": {
-            "nl": "Organisatie die deze organisatie omvat."
-          },
-          "usage": {
-            "nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren."
-          },
-          "domain": [
-            {
-              "EA-Name": "Organisatie",
-              "uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Organisatie",
-              "range_uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Organisatie",
-              "range_puri": "http://www.w3.org/ns/org#Organization",
-              "range_label": {
-                "nl": "Organisatie"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Organisatie die deze organisatie omvat.",
-            "ap-usageNote-nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "label-nl": "",
-            "ap-label-nl": "",
-            "uri": "http://www.w3.org/ns/org#subOrganizationOf"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/org#subOrganizationOf",
-          "name": "isSuborganisatieVan(source)",
-          "sort": "is suborganisatie van (source)",
-          "label": {
-            "nl": "is suborganisatie van (source)"
+            "nl": "is suborganisatie van"
           },
           "description": {
             "nl": "Organisatie die deze organisatie omvat."
@@ -3538,8 +3590,8 @@
           "rawTags": {
             "ap-definition-nl": "Organisatie die deze organisatie omvat.",
             "ap-usageNote-nl": "Wordt gebruikt om een hiërarchie van organisaties te documenteren.",
-            "label-nl": "",
-            "ap-label-nl": "",
+            "label-nl": "is suborganisatie van",
+            "ap-label-nl": "is suborganisatie van",
             "uri": "http://www.w3.org/ns/org#subOrganizationOf"
           }
         }
@@ -3575,57 +3627,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
-          "name": "volledigeNaam",
-          "sort": "volledige naam",
+          "uri": "https://data.vlaanderen.be/ns/persoon#heeftRelatieMet",
+          "name": "heeftRelatieMet",
+          "sort": "heeft relatie met",
           "label": {
-            "nl": "volledige naam"
+            "nl": "heeft relatie met"
           },
           "description": {
-            "nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Persoon",
-              "uri": "http://www.w3.org/ns/person#Person"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": " ",
-            "parentURI": "http://xmlns.com/foaf/0.1/name",
-            "label-nl": "volledige naam",
-            "ap-definition-nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/persoon#isLidVan",
-          "name": "isLidVan",
-          "sort": "is lid van",
-          "label": {
-            "nl": "is lid van"
-          },
-          "description": {
-            "nl": "Persoon die tot een gezin behoort."
+            "nl": "Persoon waarmee de persoon gerelateerd is."
           },
           "usage": {},
           "domain": [
@@ -3636,26 +3645,25 @@
           ],
           "range": [
             {
-              "range_label": "Gezin",
-              "range_uri": "https://data.vlaanderen.be/ns/persoon#Gezin"
+              "range_label": "Persoon",
+              "range_uri": "http://www.w3.org/ns/person#Person"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Gezin",
-              "range_puri": "https://data.vlaanderen.be/ns/persoon#Gezin",
+              "range_uri": "#Persoon",
+              "range_puri": "http://www.w3.org/ns/person#Person",
               "range_label": {
-                "nl": "Gezin"
+                "nl": "Persoon"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Persoon die tot een gezin behoort.",
-            "parentURI": "http://www.w3.org/ns/org#memberOf",
-            "label-nl": "is lid van",
-            "definition-nl": "Persoon die tot een Gezin behoort."
+            "ap-definition-nl": "Persoon waarmee de persoon gerelateerd is.",
+            "definition-nl": "Persoon waarmee de persoon gerelateerd is.",
+            "label-nl": "heeft relatie met"
           }
         },
         {
@@ -3700,14 +3708,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/persoon#heeftRelatieMet",
-          "name": "heeftRelatieMet",
-          "sort": "heeft relatie met",
+          "uri": "https://data.vlaanderen.be/ns/persoon#isLidVan",
+          "name": "isLidVan",
+          "sort": "is lid van",
           "label": {
-            "nl": "heeft relatie met"
+            "nl": "is lid van"
           },
           "description": {
-            "nl": "Persoon waarmee de persoon gerelateerd is."
+            "nl": "Persoon die tot een gezin behoort."
           },
           "usage": {},
           "domain": [
@@ -3718,25 +3726,69 @@
           ],
           "range": [
             {
-              "range_label": "Persoon",
-              "range_uri": "http://www.w3.org/ns/person#Person"
+              "range_label": "Gezin",
+              "range_uri": "https://data.vlaanderen.be/ns/persoon#Gezin"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Persoon",
-              "range_puri": "http://www.w3.org/ns/person#Person",
+              "range_uri": "#Gezin",
+              "range_puri": "https://data.vlaanderen.be/ns/persoon#Gezin",
               "range_label": {
-                "nl": "Persoon"
+                "nl": "Gezin"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Persoon waarmee de persoon gerelateerd is.",
-            "definition-nl": "Persoon waarmee de persoon gerelateerd is.",
-            "label-nl": "heeft relatie met"
+            "ap-definition-nl": "Persoon die tot een gezin behoort.",
+            "parentURI": "http://www.w3.org/ns/org#memberOf",
+            "label-nl": "is lid van",
+            "definition-nl": "Persoon die tot een Gezin behoort."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+          "name": "volledigeNaam",
+          "sort": "volledige naam",
+          "label": {
+            "nl": "volledige naam"
+          },
+          "description": {
+            "nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Persoon",
+              "uri": "http://www.w3.org/ns/person#Person"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": " ",
+            "parentURI": "http://xmlns.com/foaf/0.1/name",
+            "label-nl": "volledige naam",
+            "ap-definition-nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
           }
         }
       ]
@@ -3760,14 +3812,14 @@
       },
       "properties": [
         {
-          "uri": "https://www.w3.org/TR/prov-o/#wasStartedBy",
-          "name": "werdGestartDoor",
-          "sort": "werd gestart door",
+          "uri": "http://www.w3.org/ns/prov#qualifiedAssociation",
+          "name": "heeftDeelnemer",
+          "sort": "heeft deelnemer",
           "label": {
-            "nl": "werd gestart door"
+            "nl": "heeft deelnemer"
           },
           "description": {
-            "nl": "Van een start is sprake wanneer een activiteit geacht wordt te zijn gestart. Een start kan verwijzen naar een entiteit, ook wel een trigger genoemd, die de activiteit heeft geïntitieerd."
+            "nl": "Persoon of organisatie die binnen een bepaalde rol een verantwoordelijkheid opneemt voor deze activiteit."
           },
           "usage": {},
           "domain": [
@@ -3778,108 +3830,25 @@
           ],
           "range": [
             {
-              "range_label": "Agent",
-              "range_uri": "http://www.w3.org/ns/prov#Agent"
+              "range_label": "AgentInRol",
+              "range_uri": "http://www.w3.org/ns/prov#Association"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Agent",
-              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_uri": "#Agent (in rol)",
+              "range_puri": "http://www.w3.org/ns/prov#Association",
               "range_label": {
-                "nl": "Agent"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "https://www.w3.org/TR/prov-o/#wasStartedBy",
-            "definition-nl": "Van een start is sprake wanneer een activiteit geacht wordt te zijn gestart. Een start kan verwijzen naar een entiteit, ook wel een trigger genoemd, die de activiteit heeft geïntitieerd.",
-            "label-nl": "werd gestart door"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/dossier/#Activiteit.einddatum",
-          "name": "einddatum",
-          "sort": "einddatum",
-          "label": {
-            "nl": "einddatum"
-          },
-          "description": {
-            "nl": "De einddatum van de activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.w3.org/ns/prov#Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "DateTime",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
-              "range_label": {
-                "nl": "DateTime"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "De einddatum van de activiteit.",
-            "parentURI": "http://www.w3.org/ns/prov#endedAtTime",
-            "name": "Activiteit.einddatum",
-            "label-nl": "einddatum",
-            "uri": "https://data.vlaanderen.be/ns/dossier/#Activiteit.einddatum"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/dossier#genereert",
-          "name": "genereert",
-          "sort": "genereert",
-          "label": {
-            "nl": "genereert"
-          },
-          "description": {
-            "nl": "Een activiteit kan een stuk genereren."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.w3.org/ns/prov#Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Stuk",
-              "range_uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Stuk",
-              "range_puri": "https://data.vlaanderen.be/ns/dossier#Stuk",
-              "range_label": {
-                "nl": "Stuk"
+                "nl": "Agent (in rol)"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "parentURI": "http://www.w3.org/ns/prov#generated",
-            "uri": "https://data.vlaanderen.be/ns/dossier#genereert",
-            "label-nl": "genereert",
-            "definition-nl": "Een activiteit kan een stuk genereren."
+            "definition-nl": "Persoon of organisatie die binnen een bepaalde rol een verantwoordelijkheid opneemt voor deze activiteit.",
+            "label-nl": "heeft deelnemer",
+            "uri": "http://www.w3.org/ns/prov#qualifiedAssociation"
           }
         },
         {
@@ -3925,14 +3894,14 @@
           }
         },
         {
-          "uri": "http://www.w3.org/ns/prov#qualifiedAssociation",
-          "name": "heeftDeelnemer",
-          "sort": "heeft deelnemer",
+          "uri": "https://data.vlaanderen.be/ns/dossier#genereert",
+          "name": "genereert",
+          "sort": "genereert",
           "label": {
-            "nl": "heeft deelnemer"
+            "nl": "genereert"
           },
           "description": {
-            "nl": "Persoon of organisatie die binnen een bepaalde rol een verantwoordelijkheid opneemt voor deze activiteit."
+            "nl": "Een activiteit kan een stuk genereren."
           },
           "usage": {},
           "domain": [
@@ -3943,25 +3912,108 @@
           ],
           "range": [
             {
-              "range_label": "AgentInRol",
-              "range_uri": "http://www.w3.org/ns/prov#Association"
+              "range_label": "Stuk",
+              "range_uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Agent (in rol)",
-              "range_puri": "http://www.w3.org/ns/prov#Association",
+              "range_uri": "#Stuk",
+              "range_puri": "https://data.vlaanderen.be/ns/dossier#Stuk",
               "range_label": {
-                "nl": "Agent (in rol)"
+                "nl": "Stuk"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Persoon of organisatie die binnen een bepaalde rol een verantwoordelijkheid opneemt voor deze activiteit.",
-            "label-nl": "heeft deelnemer",
-            "uri": "http://www.w3.org/ns/prov#qualifiedAssociation"
+            "parentURI": "http://www.w3.org/ns/prov#generated",
+            "uri": "https://data.vlaanderen.be/ns/dossier#genereert",
+            "label-nl": "genereert",
+            "definition-nl": "Een activiteit kan een stuk genereren."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/dossier/#Activiteit.einddatum",
+          "name": "einddatum",
+          "sort": "einddatum",
+          "label": {
+            "nl": "einddatum"
+          },
+          "description": {
+            "nl": "De einddatum van de activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.w3.org/ns/prov#Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De einddatum van de activiteit.",
+            "parentURI": "http://www.w3.org/ns/prov#endedAtTime",
+            "name": "Activiteit.einddatum",
+            "label-nl": "einddatum",
+            "uri": "https://data.vlaanderen.be/ns/dossier/#Activiteit.einddatum"
+          }
+        },
+        {
+          "uri": "https://www.w3.org/TR/prov-o/#wasStartedBy",
+          "name": "werdGestartDoor",
+          "sort": "werd gestart door",
+          "label": {
+            "nl": "werd gestart door"
+          },
+          "description": {
+            "nl": "Van een start is sprake wanneer een activiteit geacht wordt te zijn gestart. Een start kan verwijzen naar een entiteit, ook wel een trigger genoemd, die de activiteit heeft geïntitieerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.w3.org/ns/prov#Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://www.w3.org/ns/prov#Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://www.w3.org/ns/prov#Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "https://www.w3.org/TR/prov-o/#wasStartedBy",
+            "definition-nl": "Van een start is sprake wanneer een activiteit geacht wordt te zijn gestart. Een start kan verwijzen naar een entiteit, ook wel een trigger genoemd, die de activiteit heeft geïntitieerd.",
+            "label-nl": "werd gestart door"
           }
         }
       ]
@@ -4046,46 +4098,6 @@
       },
       "properties": [
         {
-          "uri": "http://www.w3.org/ns/prov#hadRole",
-          "name": "rol",
-          "sort": "rol",
-          "label": {
-            "nl": "rol"
-          },
-          "description": {
-            "nl": "De functie van een agent met betrekking tot een activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "AgentInRol",
-              "uri": "http://www.w3.org/ns/prov#Association"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Rol",
-              "range_uri": "http://fixme.com#Rol"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://fixme.com#Rol",
-              "range_puri": "http://fixme.com#Rol",
-              "range_label": {
-                "nl": "Rol"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#hadRole",
-            "definition-nl": "De functie van een agent met betrekking tot een activiteit.",
-            "label-nl": "rol"
-          }
-        },
-        {
           "uri": "http://www.w3.org/ns/prov#agent",
           "name": "isRolspecialisatieVan",
           "sort": "is rolspecialisatie van",
@@ -4123,6 +4135,46 @@
             "definition-nl": "Duidt de agent aan waarvan deze entiteit een rol toewijst.",
             "uri": "http://www.w3.org/ns/prov#agent",
             "label-nl": "is rolspecialisatie van"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#hadRole",
+          "name": "rol",
+          "sort": "rol",
+          "label": {
+            "nl": "rol"
+          },
+          "description": {
+            "nl": "De functie van een agent met betrekking tot een activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "AgentInRol",
+              "uri": "http://www.w3.org/ns/prov#Association"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Rol",
+              "range_uri": "http://www.w3.org/ns/org#Role"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/org#Role",
+              "range_puri": "http://www.w3.org/ns/org#Role",
+              "range_label": {
+                "nl": "Rol"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#hadRole",
+            "definition-nl": "De functie van een agent met betrekking tot een activiteit.",
+            "label-nl": "rol"
           }
         }
       ]
@@ -4220,46 +4272,46 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/dossier#auteur",
-          "name": "auteur",
-          "sort": "auteur",
+          "uri": "http://purl.org/dc/terms/date",
+          "name": "datum",
+          "sort": "datum",
           "label": {
-            "nl": "auteur"
+            "nl": "datum"
           },
           "description": {
-            "nl": "De auteur van het stuk."
+            "nl": "De datum van het stuk."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
+          },
           "domain": [
             {
               "EA-Name": "Stuk",
-              "uri": "http://www.w3.org/ns/prov#Entity"
+              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
             }
           ],
           "range": [
             {
-              "range_label": "Agent",
-              "range_uri": "http://purl.org/dc/terms/Agent"
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Agent",
-              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
               "range_label": {
-                "nl": "Agent"
+                "nl": "Date"
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "auteur",
-            "definition-nl": "De auteur van het stuk(onderdeel).",
-            "ap-definition-nl": "De auteur van het stuk.",
-            "parentURI": "http://purl.org/dc/terms/creator",
-            "domain": "http://www.w3.org/ns/prov#Entity",
-            "uri": "https://data.vlaanderen.be/ns/dossier#auteur"
+            "uri": "http://purl.org/dc/terms/date",
+            "label-nl": "datum",
+            "ap-definition-nl": "De datum van het stuk.",
+            "ap-usageNote-nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
           }
         },
         {
@@ -4303,46 +4355,46 @@
           }
         },
         {
-          "uri": "http://purl.org/dc/terms/date",
-          "name": "datum",
-          "sort": "datum",
+          "uri": "https://data.vlaanderen.be/ns/dossier#auteur",
+          "name": "auteur",
+          "sort": "auteur",
           "label": {
-            "nl": "datum"
+            "nl": "auteur"
           },
           "description": {
-            "nl": "De datum van het stuk."
+            "nl": "De auteur van het stuk."
           },
-          "usage": {
-            "nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Stuk",
-              "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+              "uri": "http://www.w3.org/ns/prov#Entity"
             }
           ],
           "range": [
             {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
-                "nl": "Date"
+                "nl": "Agent"
               }
             }
           ],
-          "cardinality": "1..*",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://purl.org/dc/terms/date",
-            "label-nl": "datum",
-            "ap-definition-nl": "De datum van het stuk.",
-            "ap-usageNote-nl": "Indien mogelijk, wordt idealiter een subproperty (created, dateSubmitted, issued, ...) gebruikt."
+            "label-nl": "auteur",
+            "definition-nl": "De auteur van het stuk(onderdeel).",
+            "ap-definition-nl": "De auteur van het stuk.",
+            "parentURI": "http://purl.org/dc/terms/creator",
+            "domain": "http://www.w3.org/ns/prov#Entity",
+            "uri": "https://data.vlaanderen.be/ns/dossier#auteur"
           }
         }
       ]
@@ -4377,6 +4429,206 @@
         "usageNote-nl": "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb Naam en Voornaam) en de Verblijfplaats vd Persoon en op belangrijke levensgebeurtenissen zoals Geboorte, Huwelijk, Overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven Persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking."
       },
       "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#inkomst",
+          "name": "inkomst",
+          "sort": "inkomst",
+          "label": {
+            "nl": "inkomst"
+          },
+          "description": {
+            "nl": "Verwijzing naar een inkomst van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Inkomst",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Inkomst",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst",
+              "range_label": {
+                "nl": "Inkomst"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een inkomst van een persoon.",
+            "label-nl": "inkomst",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut",
+          "name": "juridischStatuut",
+          "sort": "juridisch statuut",
+          "label": {
+            "nl": "juridisch statuut"
+          },
+          "description": {
+            "nl": "Verwijzing naar een juridisch statuut van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "JuridischStatuut",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Juridisch statuut",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut",
+              "range_label": {
+                "nl": "Juridisch statuut"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een juridisch statuut van een persoon.",
+            "package": "OSLO-Schuldbeheer-master",
+            "label-nl": "juridisch statuut"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#krediet",
+          "name": "krediet",
+          "sort": "krediet",
+          "label": {
+            "nl": "krediet"
+          },
+          "description": {
+            "nl": "Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Krediet",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Krediet",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet",
+              "range_label": {
+                "nl": "Krediet"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "krediet",
+            "package": "OSLO-Schuldbeheer-master",
+            "definition-nl": "Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut",
+          "name": "sociaalStatuut",
+          "sort": "sociaal statuut",
+          "label": {
+            "nl": "sociaal statuut"
+          },
+          "description": {
+            "nl": "Verwijzing naar een sociaal statuut van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "SociaalStatuut",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sociaal Statuut",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut",
+              "range_label": {
+                "nl": "Sociaal Statuut"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een sociaal statuut van een persoon.",
+            "label-nl": "sociaal statuut",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
+          "name": "solvabiliteitsprofiel",
+          "sort": "solvabiliteitsprofiel",
+          "label": {
+            "nl": "solvabiliteitsprofiel"
+          },
+          "description": {
+            "nl": "Verwijzing naar een solvabiliteitsrofiel van een persoon."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeregistreerdPersoon",
+              "uri": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Solvabiliteitsprofiel",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Solvabiliteitsprofiel",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel",
+              "range_label": {
+                "nl": "Solvabiliteitsprofiel"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Verwijzing naar een solvabiliteitsrofiel van een persoon.",
+            "label-nl": "solvabiliteitsprofiel",
+            "package": "OSLO-Schuldbeheer-master"
+          }
+        },
         {
           "uri": "http://www.w3.org/ns/adms#identifier",
           "name": "registratie",
@@ -4451,46 +4703,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/persoon#gezinslid",
-          "name": "gezinslid",
-          "sort": "gezinslid",
-          "label": {
-            "nl": "gezinslid"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Gezin",
-              "uri": "https://data.vlaanderen.be/ns/persoon#Gezin"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Persoon",
-              "range_uri": "http://www.w3.org/ns/person#Person"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Persoon",
-              "range_puri": "http://www.w3.org/ns/person#Person",
-              "range_label": {
-                "nl": "Persoon"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "Persoon die tot een gezin behoort.",
-            "label-nl": "gezinslid",
-            "ap-definition-nl": "TODO"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/persoon#gezinshoofd",
           "name": "gezinshoofd",
           "sort": "gezinshoofd",
@@ -4498,7 +4710,7 @@
             "nl": "gezinshoofd"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Persoon die standaard het gezin vertegenwoordigt."
           },
           "usage": {},
           "domain": [
@@ -4526,8 +4738,46 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "gezinshoofd",
-            "definition-nl": "Persoon die standaard het gezin vertegenwoordigt.",
-            "ap-definition-nl": "TODO"
+            "definition-nl": "Persoon die standaard het gezin vertegenwoordigt."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#gezinslid",
+          "name": "gezinslid",
+          "sort": "gezinslid",
+          "label": {
+            "nl": "gezinslid"
+          },
+          "description": {
+            "nl": "Persoon die tot een gezin behoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Gezin",
+              "uri": "https://data.vlaanderen.be/ns/persoon#Gezin"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Persoon",
+              "range_uri": "http://www.w3.org/ns/person#Person"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Persoon",
+              "range_puri": "http://www.w3.org/ns/person#Person",
+              "range_label": {
+                "nl": "Persoon"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Persoon die tot een gezin behoort.",
+            "label-nl": "gezinslid"
           }
         }
       ]
@@ -4535,670 +4785,10 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
       "name": {
-        "nl": "wordt toegerekend door",
-        "undefined": "wordtToegerekendDoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
-      "name": {
-        "nl": "wanbetalingsvergoeding",
-        "undefined": "wanbetalingsvergoeding"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
-      "name": {
-        "nl": "voorstel",
-        "undefined": "voorstel"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorgesteldAfbetalingsplan",
-      "name": {
-        "nl": "stelt voor",
-        "undefined": "steltVoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verminderingsbedrag",
-      "name": {
-        "nl": "verminderingsbedrag",
-        "undefined": "verminderingsbedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
-      "name": {
-        "nl": "vermindering",
-        "undefined": "vermindering"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#type",
-      "name": {
-        "nl": "type",
-        "undefined": "type"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
-      "name": {
-        "nl": "toerekening van betaling",
-        "undefined": "toerekeningVanBetaling"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
-      "name": {
-        "nl": "betaling",
-        "undefined": "betaling"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendBedrag",
-      "name": {
-        "nl": "toegerekend bedrag",
-        "undefined": "toegerekendBedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegekendDoor",
-      "name": {
-        "nl": "toegekend door",
-        "undefined": "toegekendDoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startBedrag",
-      "name": {
-        "nl": "startbedrag",
-        "undefined": "startbedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
-      "name": {
-        "nl": "schuldvorderingssaldo",
-        "undefined": "schuldvorderingssaldo"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
-      "name": {
-        "nl": "schuldvorderingscategorie",
-        "undefined": "schuldvorderingscategorie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
-      "name": {
-        "nl": "schrapping",
-        "undefined": "schrapping"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#saldobedrag",
-      "name": {
-        "nl": "saldobedrag",
-        "undefined": "saldobedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
-      "name": {
-        "nl": "rekent toe aan",
-        "undefined": "rekentToeAan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
-      "name": {
-        "nl": "rechtsgrond",
-        "undefined": "rechtsgrond"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst",
-      "name": {
-        "nl": "periodiciteit inkomst",
-        "undefined": "periodiciteitInkomst"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
-      "name": {
-        "nl": "oninbaarheidsverklaring",
-        "undefined": "oninbaarheidsverklaring"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag",
-      "name": {
-        "nl": "oninbaar bedrag",
-        "undefined": "oninbaarBedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
-      "name": {
-        "nl": "kost",
-        "undefined": "kost"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#isGerelateerdMet",
-      "name": {
-        "nl": "is gerelateerd met",
-        "undefined": "isGerelateerdMet"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#isDeelvan",
-      "name": {
-        "nl": "is deel van",
-        "undefined": "isDeelVan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag",
-      "name": {
-        "nl": "initieel kredietbedrag",
-        "undefined": "initieelKredietbedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
-      "name": {
-        "nl": "identificator",
-        "undefined": "identificator"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#hoofdsom",
-      "name": {
-        "nl": "hoofdsom",
-        "undefined": "hoofdsom"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
-      "name": {
-        "nl": "herschikte schuldvordering",
-        "undefined": "herschikteSchuldvordering"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
-      "name": {
-        "nl": "grondslag",
-        "undefined": "grondslag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#gevolgdAfbetalingsplanonderdeel",
-      "name": {
-        "nl": "gevolgd afbetalingsplan",
-        "undefined": "gevolgdAfbetalingsplan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#geschraptAfbetalingsplan",
-      "name": {
-        "nl": "geschrapt afbetalingsplan",
-        "undefined": "geschraptAfbetalingsplan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
-      "name": {
-        "nl": "genereert wanbetalingsvergoeding",
-        "undefined": "genereertWanbetalingsvergoeding"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwisting",
-      "name": {
-        "nl": "betwisting",
-        "undefined": "betwisting"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwistBedrag",
-      "name": {
-        "nl": "betwist bedrag",
-        "undefined": "betwistBedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betaaldBedrag",
-      "name": {
-        "nl": "betaald bedrag",
-        "undefined": "betaaldBedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bepaaldDoor",
-      "name": {
-        "nl": "bepaald door",
-        "undefined": "bepaaldDoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedrag",
-      "name": {
-        "nl": "bedrag",
-        "undefined": "bedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor",
-      "name": {
-        "nl": "bedoeld voor",
-        "undefined": "bedoeldVoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
-      "name": {
-        "nl": "afgeleid van",
-        "undefined": "afgeleidVan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplansaldo",
-      "name": {
-        "nl": "afbetalingsplansaldo",
-        "undefined": "afbetalingsplansaldo"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplanonderdeel",
-      "name": {
-        "nl": "afbetalingsplanonderdeel",
-        "undefined": "afbetalingsplanonderdeel"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
-      "name": {
-        "nl": "afbetalingsplan",
-        "undefined": "afbetalingsplan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
-      "name": {
-        "nl": "af te betalen bedrag",
-        "undefined": "afTeBetalenBedrag"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaarding",
-      "name": {
-        "nl": "aanvaarding",
-        "undefined": "aanvaarding"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaardAfbetalingsplan",
-      "name": {
-        "nl": "aanvaard afbetalingsplan",
-        "undefined": "aanvaardAfbetalingsplan"
+        "nl": "aanleiding",
+        "undefined": "aanleiding"
       },
       "description": {},
       "domain": [
@@ -5225,10 +4815,775 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaardAfbetalingsplan",
       "name": {
-        "nl": "aanleiding",
-        "undefined": "aanleiding"
+        "nl": "aanvaard afbetalingsplan",
+        "undefined": "aanvaardAfbetalingsplan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaarding",
+      "name": {
+        "nl": "aanvaarding",
+        "undefined": "aanvaarding"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
+      "name": {
+        "nl": "af te betalen bedrag",
+        "undefined": "afTeBetalenBedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
+      "name": {
+        "nl": "afbetalingsplan",
+        "undefined": "afbetalingsplan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplanonderdeel",
+      "name": {
+        "nl": "afbetalingsplanonderdeel",
+        "undefined": "afbetalingsplanonderdeel"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplansaldo",
+      "name": {
+        "nl": "afbetalingsplansaldo",
+        "undefined": "afbetalingsplansaldo"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
+      "name": {
+        "nl": "afgeleid van",
+        "undefined": "afgeleidVan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor",
+      "name": {
+        "nl": "bedoeld voor",
+        "undefined": "bedoeldVoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bedrag",
+      "name": {
+        "nl": "bedrag",
+        "undefined": "bedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#bepaaldDoor",
+      "name": {
+        "nl": "bepaald door",
+        "undefined": "bepaaldDoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betaaldBedrag",
+      "name": {
+        "nl": "betaald bedrag",
+        "undefined": "betaaldBedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwistBedrag",
+      "name": {
+        "nl": "betwist bedrag",
+        "undefined": "betwistBedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#betwisting",
+      "name": {
+        "nl": "betwisting",
+        "undefined": "betwisting"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
+      "name": {
+        "nl": "genereert wanbetalingsvergoeding",
+        "undefined": "genereertWanbetalingsvergoeding"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#geschraptAfbetalingsplan",
+      "name": {
+        "nl": "geschrapt afbetalingsplan",
+        "undefined": "geschraptAfbetalingsplan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#gevolgdAfbetalingsplanonderdeel",
+      "name": {
+        "nl": "gevolgd afbetalingsplan",
+        "undefined": "gevolgdAfbetalingsplan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
+      "name": {
+        "nl": "grondslag",
+        "undefined": "grondslag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
+      "name": {
+        "nl": "herschikte schuldvordering",
+        "undefined": "herschikteSchuldvordering"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#hoofdsom",
+      "name": {
+        "nl": "hoofdsom",
+        "undefined": "hoofdsom"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
+      "name": {
+        "nl": "identificator",
+        "undefined": "identificator"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag",
+      "name": {
+        "nl": "initieel kredietbedrag",
+        "undefined": "initieelKredietbedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#inkomst",
+      "name": {
+        "nl": "inkomst",
+        "undefined": "inkomst"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#isDeelvan",
+      "name": {
+        "nl": "is deel van",
+        "undefined": "isDeelVan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#isGerelateerdMet",
+      "name": {
+        "nl": "is gerelateerd met",
+        "undefined": "isGerelateerdMet"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut",
+      "name": {
+        "nl": "juridisch statuut",
+        "undefined": "juridischStatuut"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
+      "name": {
+        "nl": "kost",
+        "undefined": "kost"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#krediet",
+      "name": {
+        "nl": "krediet",
+        "undefined": "krediet"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag",
+      "name": {
+        "nl": "oninbaar bedrag",
+        "undefined": "oninbaarBedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
+      "name": {
+        "nl": "oninbaarheidsverklaring",
+        "undefined": "oninbaarheidsverklaring"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst",
+      "name": {
+        "nl": "periodiciteit inkomst",
+        "undefined": "periodiciteitInkomst"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
+      "name": {
+        "nl": "rechtsgrond",
+        "undefined": "rechtsgrond"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
+      "name": {
+        "nl": "rekent toe aan",
+        "undefined": "rekentToeAan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#saldobedrag",
+      "name": {
+        "nl": "saldobedrag",
+        "undefined": "saldobedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
+      "name": {
+        "nl": "schrapping",
+        "undefined": "schrapping"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
+      "name": {
+        "nl": "schuldeiser",
+        "undefined": "schuldeiser"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
+      "name": {
+        "nl": "schuldenaar",
+        "undefined": "schuldenaar"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
+      "name": {
+        "nl": "schuldvorderingscategorie",
+        "undefined": "schuldvorderingscategorie"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
+      "name": {
+        "nl": "schuldvorderingssaldo",
+        "undefined": "schuldvorderingssaldo"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut",
+      "name": {
+        "nl": "sociaal statuut",
+        "undefined": "sociaalStatuut"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
+      "name": {
+        "nl": "solvabiliteitsprofiel",
+        "undefined": "solvabiliteitsprofiel"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#startBedrag",
+      "name": {
+        "nl": "startbedrag",
+        "undefined": "startbedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegekendDoor",
+      "name": {
+        "nl": "toegekend door",
+        "undefined": "toegekendDoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendBedrag",
+      "name": {
+        "nl": "toegerekend bedrag",
+        "undefined": "toegerekendBedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
+      "name": {
+        "nl": "toegerekende betaling",
+        "undefined": "toegerekendeBetaling"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
+      "name": {
+        "nl": "toerekening van betaling",
+        "undefined": "toerekeningVanBetaling"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#type",
+      "name": {
+        "nl": "type",
+        "undefined": "type"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
+      "name": {
+        "nl": "vermindering",
+        "undefined": "vermindering"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verminderingsbedrag",
+      "name": {
+        "nl": "verminderingsbedrag",
+        "undefined": "verminderingsbedrag"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorgesteldAfbetalingsplan",
+      "name": {
+        "nl": "stelt voor",
+        "undefined": "steltVoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
+      "name": {
+        "nl": "voorstel",
+        "undefined": "voorstel"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
+      "name": {
+        "nl": "wanbetalingsvergoeding",
+        "undefined": "wanbetalingsvergoeding"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
+      "name": {
+        "nl": "wordt toegerekend door",
+        "undefined": "wordtToegerekendDoor"
       },
       "description": {},
       "domain": [
@@ -5243,8 +5598,8 @@
   "contributors": [
     {
       "role": "A",
-      "first_name": "Bert",
-      "last_name": "Verstraeten",
+      "first_name": "Stefan",
+      "last_name": "Somers",
       "affiliation": {
         "name": "Stad Gent",
         "website": "https://stad.gent/nl"
@@ -5261,8 +5616,8 @@
     },
     {
       "role": "A",
-      "first_name": "Stefan",
-      "last_name": "Somers",
+      "first_name": "Bert",
+      "last_name": "Verstraeten",
       "affiliation": {
         "name": "Stad Gent",
         "website": "https://stad.gent/nl"
@@ -5270,43 +5625,33 @@
     },
     {
       "role": "E",
-      "first_name": "Els",
-      "last_name": "de Vleeschauwer",
+      "first_name": "Ben",
+      "last_name": "De Meester",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       },
-      "email": "els.devleeschauwer@vlaanderen.be"
+      "email": "ben.demeester@vlaanderen.be"
     },
     {
       "role": "E",
-      "first_name": "Laurens",
-      "last_name": "Vercauteren",
+      "first_name": "Vlassenroot",
+      "last_name": "Eveline",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       },
-      "email": "laurens.vercauteren@vlaanderen.be"
+      "email": "eveline.vlassenroot@vlaanderen.be"
     },
     {
       "role": "E",
-      "first_name": "Aline",
-      "last_name": "Verbrugge",
+      "first_name": "Leemans",
+      "last_name": "Kim",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       },
-      "email": "aline.verbrugge@vlaanderen.be"
-    },
-    {
-      "role": "E",
-      "first_name": "Mathieu",
-      "last_name": "Tulpinck",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      },
-      "email": "mathieu.tulpinck@vlaanderen.be"
+      "email": "kim.leemans@vlaanderen.be"
     },
     {
       "role": "E",
@@ -5320,75 +5665,162 @@
     },
     {
       "role": "E",
-      "first_name": "Ben",
-      "last_name": "De Meester",
+      "first_name": "Buyle",
+      "last_name": "Raf",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       },
-      "email": "ben.demeester@vlaanderen.be"
+      "email": "raf.buyle@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Mathieu",
+      "last_name": "Tulpinck",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "mathieu.tulpinck@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Beyaert",
+      "last_name": "Veerle",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "veerle.beyaert@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Aline",
+      "last_name": "Verbrugge",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "aline.verbrugge@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Laurens",
+      "last_name": "Vercauteren",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "laurens.vercauteren@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Vanlishout",
+      "last_name": "Ziggy",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "ziggy.vanlishout@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Els",
+      "last_name": "de Vleeschauwer",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      },
+      "email": "els.devleeschauwer@vlaanderen.be"
     },
     {
       "role": "C",
-      "first_name": "Joannes",
-      "last_name": "Verbeke",
+      "first_name": "Katia",
+      "last_name": "De Vos",
       "affiliation": {
-        "name": "Risolto",
-        "website": "https://risolto.be/en/"
+        "name": "Recht.gent",
+        "website": "https://recht.gent/"
       }
     },
     {
       "role": "C",
-      "first_name": "Sven",
-      "last_name": "Verbeeck",
+      "first_name": "Mieke",
+      "last_name": "De Vreese",
       "affiliation": {
-        "name": "Stad Antwerpen",
-        "website": "https://www.antwerpen.be/"
+        "name": "Gemeente Aalter",
+        "website": "https://www.aalter.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Robin",
-      "last_name": "Van Trigt",
+      "first_name": "Elke",
+      "last_name": "Demeulenaere",
       "affiliation": {
-        "name": "SAM steunpunt Mens en Samenleving",
-        "website": "https://www.samvzw.be/"
+        "name": "Gemeente Destelbergen",
+        "website": "https://www.destelbergen.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Wietske",
-      "last_name": "Van Gils",
+      "first_name": "Annelies",
+      "last_name": "Demeurie",
       "affiliation": {
-        "name": "SAM steunpunt Mens en Samenleving",
-        "website": "https://www.samvzw.be/"
+        "name": "Gemeente Zulte",
+        "website": "https://www.zulte.be/"
       }
     },
     {
       "role": "C",
       "first_name": "Ben",
-      "last_name": "Van Damme",
+      "last_name": "Gilot",
       "affiliation": {
-        "name": "Risolto",
-        "website": "https://risolto.be/en/"
+        "name": "Vereniging van Vlaamse Steden en Gemeenten",
+        "website": "https://www.vvsg.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Tina",
-      "last_name": "Tyteca",
+      "first_name": "Quinten",
+      "last_name": "Heldens",
       "affiliation": {
-        "name": "Agentschap Binnenlands Bestuur",
-        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
+        "name": "Departement Financiën en Begroting",
+        "website": "https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting"
       }
     },
     {
       "role": "C",
-      "first_name": "Filip",
-      "last_name": "Staes",
+      "first_name": "Barbara",
+      "last_name": "Ide",
       "affiliation": {
-        "name": "Stad Leuven",
-        "website": "https://leuven.be/"
+        "name": "Gemeente Zulte",
+        "website": "https://www.zulte.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Michèle",
+      "last_name": "Marichal",
+      "affiliation": {
+        "name": "Stad Roeselare",
+        "website": "https://www.roeselare.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Miet",
+      "last_name": "Remans",
+      "affiliation": {
+        "name": "Vereniging van Vlaamse Steden en Gemeenten",
+        "website": "https://www.vvsg.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kurt",
+      "last_name": "Schelfhout",
+      "affiliation": {
+        "name": "Stad Aalst",
+        "website": "https://aalst.be/"
       }
     },
     {
@@ -5403,92 +5835,65 @@
     },
     {
       "role": "C",
-      "first_name": "Kurt",
-      "last_name": "Schelfhout",
+      "first_name": "Filip",
+      "last_name": "Staes",
       "affiliation": {
-        "name": "Stad Aalst",
-        "website": "https://aalst.be/"
+        "name": "Stad Leuven",
+        "website": "https://leuven.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Miet",
-      "last_name": "Remans",
+      "first_name": "Tina",
+      "last_name": "Tyteca",
       "affiliation": {
-        "name": "Vereniging van Vlaamse Steden en Gemeenten",
-        "website": "https://www.vvsg.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Michèle",
-      "last_name": "Marichal",
-      "affiliation": {
-        "name": "Stad Roeselare",
-        "website": "https://www.roeselare.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Barbara",
-      "last_name": "Ide",
-      "affiliation": {
-        "name": "Gemeente Zulte",
-        "website": "https://www.zulte.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Quinten",
-      "last_name": "Heldens",
-      "affiliation": {
-        "name": "Departement Financiën en Begroting",
-        "website": "https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting"
+        "name": "Agentschap Binnenlands Bestuur",
+        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
       }
     },
     {
       "role": "C",
       "first_name": "Ben",
-      "last_name": "Gilot",
+      "last_name": "Van Damme",
       "affiliation": {
-        "name": "Vereniging van Vlaamse Steden en Gemeenten",
-        "website": "https://www.vvsg.be/"
+        "name": "Risolto",
+        "website": "https://risolto.be/en/"
       }
     },
     {
       "role": "C",
-      "first_name": "Annelies",
-      "last_name": "Demeurie",
+      "first_name": "Wietske",
+      "last_name": "Van Gils",
       "affiliation": {
-        "name": "Gemeente Zulte",
-        "website": "https://www.zulte.be/"
+        "name": "SAM steunpunt Mens en Samenleving",
+        "website": "https://www.samvzw.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Elke",
-      "last_name": "Demeulenaere",
+      "first_name": "Robin",
+      "last_name": "Van Trigt",
       "affiliation": {
-        "name": "Gemeente Destelbergen",
-        "website": "https://www.destelbergen.be/"
+        "name": "SAM steunpunt Mens en Samenleving",
+        "website": "https://www.samvzw.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Mieke",
-      "last_name": "De Vreese",
+      "first_name": "Sven",
+      "last_name": "Verbeeck",
       "affiliation": {
-        "name": "Gemeente Aalter",
-        "website": "https://www.aalter.be/"
+        "name": "Stad Antwerpen",
+        "website": "https://www.antwerpen.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Katia",
-      "last_name": "De Vos",
+      "first_name": "Joannes",
+      "last_name": "Verbeke",
       "affiliation": {
-        "name": "Recht.gent",
-        "website": "https://recht.gent/"
+        "name": "Risolto",
+        "website": "https://risolto.be/en/"
       }
     }
   ],
@@ -5515,17 +5920,17 @@
       },
       "properties": [
         {
-          "uri": "http://www.w3.org/2004/02/skos/core#notation",
-          "name": "identificator",
-          "sort": "identificator",
+          "uri": "http://purl.org/dc/terms/creator",
+          "name": "toegekendDoor",
+          "sort": "toegekend door",
           "label": {
-            "nl": "identificator"
+            "nl": "toegekend door"
           },
           "description": {
-            "nl": "String gebruikt om het object uniek te identificeren."
+            "nl": "Link naar de agent die de identificator heeft uitgegeven."
           },
           "usage": {
-            "nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."
+            "nl": " "
           },
           "domain": [
             {
@@ -5535,27 +5940,27 @@
           ],
           "range": [
             {
-              "range_label": "GetypeerdeString",
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
-              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
-                "nl": "GetypeerdeString"
+                "nl": "Agent"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "identificator",
-            "uri": "http://www.w3.org/2004/02/skos/core#notation",
-            "ap-usageNote-nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
-            "label-nl": "notatie",
-            "ap-definition-nl": "String gebruikt om het object uniek te identificeren."
+            "ap-usageNote-nl": " ",
+            "uri": "http://purl.org/dc/terms/creator",
+            "label-nl": "maker",
+            "ap-label-nl": "toegekend door",
+            "ap-definition-nl": "Link naar de agent die de identificator heeft uitgegeven."
           }
         },
         {
@@ -5603,17 +6008,17 @@
           }
         },
         {
-          "uri": "http://purl.org/dc/terms/creator",
-          "name": "toegekendDoor",
-          "sort": "toegekend door",
+          "uri": "http://www.w3.org/2004/02/skos/core#notation",
+          "name": "identificator",
+          "sort": "identificator",
           "label": {
-            "nl": "toegekend door"
+            "nl": "identificator"
           },
           "description": {
-            "nl": "Link naar de agent die de identificator heeft uitgegeven."
+            "nl": "String gebruikt om het object uniek te identificeren."
           },
           "usage": {
-            "nl": " "
+            "nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."
           },
           "domain": [
             {
@@ -5623,27 +6028,27 @@
           ],
           "range": [
             {
-              "range_label": "Agent",
-              "range_uri": "http://purl.org/dc/terms/Agent"
+              "range_label": "GetypeerdeString",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Agent",
-              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "Agent"
+                "nl": "GetypeerdeString"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "ap-usageNote-nl": " ",
-            "uri": "http://purl.org/dc/terms/creator",
-            "label-nl": "maker",
-            "ap-label-nl": "toegekend door",
-            "ap-definition-nl": "Link naar de agent die de identificator heeft uitgegeven."
+            "ap-label-nl": "identificator",
+            "uri": "http://www.w3.org/2004/02/skos/core#notation",
+            "ap-usageNote-nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
+            "label-nl": "notatie",
+            "ap-definition-nl": "String gebruikt om het object uniek te identificeren."
           }
         }
       ]
@@ -5658,14 +6063,60 @@
       "description": {
         "nl": "Een geldwaarde of -bereik."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
+      },
       "parents": [],
       "rawTags": {
         "label-nl": "Geldbedrag",
         "definition-nl": "Een geldwaarde of -bereik.",
-        "uri": "https://schema.org/MonetaryAmount"
+        "uri": "https://schema.org/MonetaryAmount",
+        "ap-usageNote-nl": "Voor de doeleinden van dit applicatieprofiel wordt enkel een geldwaarde gebruikt, geen geldbereik. "
       },
       "properties": [
+        {
+          "uri": "https://schema.org/currency",
+          "name": "valuta",
+          "sort": "valuta",
+          "label": {
+            "nl": "valuta"
+          },
+          "description": {
+            "nl": "De valuta van het geldbedrag"
+          },
+          "usage": {
+            "nl": "Gebruik ISO 4217 valuta codes, bijvoorbeeld \"EUR\"\r\n"
+          },
+          "domain": [
+            {
+              "EA-Name": "Geldbedrag",
+              "uri": "https://schema.org/MonetaryAmount"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "valuta",
+            "definition-nl": "De valuta van het geldbedrag",
+            "uri": "https://schema.org/currency",
+            "usageNote-nl": "Gebruik ISO 4217 valuta codes, bijvoorbeeld \"EUR\"\r\n"
+          }
+        },
         {
           "uri": "https://schema.org/value",
           "name": "waarde",
@@ -5685,16 +6136,16 @@
           ],
           "range": [
             {
-              "range_label": "Double",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#double"
+              "range_label": "Decimal",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#double",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#double",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#decimal",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#decimal",
               "range_label": {
-                "nl": "Double"
+                "nl": "Decimal"
               }
             }
           ],
@@ -5704,46 +6155,6 @@
             "label-nl": "waarde",
             "definition-nl": "De waarde van het geldbedrag",
             "uri": "https://schema.org/value"
-          }
-        },
-        {
-          "uri": "https://schema.org/currency",
-          "name": "valuta",
-          "sort": "valuta",
-          "label": {
-            "nl": "valuta"
-          },
-          "description": {
-            "nl": "De valuta van het geldbedrag"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Geldbedrag",
-              "uri": "https://schema.org/MonetaryAmount"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Valuta",
-              "range_uri": "http://fixme.com#Valuta"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://fixme.com#Valuta",
-              "range_puri": "http://fixme.com#Valuta",
-              "range_label": {
-                "nl": "Valuta"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "valuta",
-            "definition-nl": "De valuta van het geldbedrag",
-            "uri": "https://schema.org/currency"
           }
         }
       ]
