@@ -17,7 +17,13 @@ rdfs:Resource a rdfs:Class;
 
 skos:Concept a rdfs:Class;
   rdfs:label "Wanbetalingsvergoedingstype"@nl,
-    "Solvabiliteitstype"@nl .
+    "Krediettype"@nl,
+    "Type sociaal statuut"@nl,
+    "Type jurische statuut"@nl,
+    "Inkomsttype"@nl,
+    "Solvabiliteitstype"@nl,
+    "Periodiciteit inkomst"@nl,
+    "Solvabiliteitsindicatortype"@nl .
 
 schemas:MonetaryAmount a rdfs:Class;
   rdfs:label "Geldbedrag"@nl .
@@ -148,18 +154,18 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betwisting> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#einddatum> a owl:DatatypeProperty;
-  rdfs:label "startdatum"@nl,
-    "einddatum"@nl;
-  rdfs:comment "De startdatum voor de geldigheid van de solvabiliteitsindicator."@nl,
-    "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>;
+  rdfs:label "einddatum"@nl,
+    "startdatum"@nl;
+  rdfs:comment "De einddatum van het solvabiliteitsprofiel. Wanneer de finaciële situatie van een persoon wijzigt, kan het nodig zijn om een nieuw solvabiliteitsprofiel voor de persoon aan te maken."@nl,
+    "De startdatum voor de geldigheid van de solvabiliteitsindicator."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel>,
+    <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:date .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#fiscaal> a owl:DatatypeProperty;
   rdfs:label "fiscaal"@nl;
-  rdfs:comment "Laat toe om te specifiëren het om fiscale of niet-fiscale schuldvorderingen gaat."@nl;
+  rdfs:comment "Laat toe om te specifiëren of het om fiscale of niet-fiscale schuldvorderingen gaat."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:boolean .
@@ -220,11 +226,19 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#interest> a rdf:Property;
+<https://data.vlaanderen.be/ns/schuldbeheer#inkomst> a owl:ObjectProperty;
+  rdfs:label "inkomst"@nl;
+  rdfs:comment "Verwijzing naar een inkomst van een persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Inkomst> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#interest> a owl:DatatypeProperty;
   rdfs:label "interest"@nl;
   rdfs:comment "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de schuldvordering dat nog niet betaald werd."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range xsd:decimal .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#isDeelvan> a owl:ObjectProperty;
   rdfs:label "is deel van"@nl;
@@ -241,6 +255,13 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut> a owl:ObjectProperty;
+  rdfs:label "juridisch statuut"@nl;
+  rdfs:comment "Verwijzing naar een juridisch statuut van een persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#kost> a owl:ObjectProperty;
   rdfs:label "kost"@nl;
   rdfs:comment "De omvang van de wanbetalingsvergoeding kan worden bepaald door een vast geldbedrag."@nl;
@@ -248,9 +269,16 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#krediet> a owl:ObjectProperty;
+  rdfs:label "krediet"@nl;
+  rdfs:comment "Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Krediet> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag> a owl:ObjectProperty;
   rdfs:label "oninbaar bedrag"@nl;
-  rdfs:comment "Het bedrag de als oninbaar beschouwd wordt."@nl;
+  rdfs:comment "Het bedrag dat als oninbaar beschouwd wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
@@ -264,7 +292,7 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst> a owl:ObjectProperty;
   rdfs:label "periodiciteit inkomst"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld eenmaling, maandelijks, jaarlijks."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld eenmalig, maandelijks, jaarlijks."@nl;
   rdfs:comment "Laat toe om het verschil tussen een eenmalige inkomst en een periodieke inkomst te specifiëren. "@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Inkomst>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
@@ -305,6 +333,20 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Schrapping> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser> a owl:ObjectProperty;
+  rdfs:label "schuldeiser"@nl;
+  rdfs:comment "Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen. "@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range prov:Agent .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar> a owl:ObjectProperty;
+  rdfs:label "schuldenaar"@nl;
+  rdfs:comment "Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij. "@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range prov:Agent .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie> a owl:ObjectProperty;
   rdfs:label "schuldvorderingscategorie"@nl;
   rdfs:comment "Een schuldvordering behoort tot een categorie."@nl;
@@ -318,6 +360,20 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut> a owl:ObjectProperty;
+  rdfs:label "sociaal statuut"@nl;
+  rdfs:comment "Verwijzing naar een sociaal statuut van een persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel> a owl:ObjectProperty;
+  rdfs:label "solvabiliteitsprofiel"@nl;
+  rdfs:comment "Verwijzing naar een solvabiliteitsrofiel van een persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#startBedrag> a owl:ObjectProperty;
   rdfs:label "startbedrag"@nl;
@@ -351,8 +407,8 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range schemas:MonetaryAmount .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling> a owl:ObjectProperty;
-  rdfs:label "betaling"@nl;
-  rdfs:comment "Verwijzing naar de betaling dit werd toegerekend."@nl;
+  rdfs:label "toegerekende betaling"@nl;
+  rdfs:comment "Verwijzing naar de betaling die werd toegerekend."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> .
@@ -466,23 +522,11 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Saldo> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut> a owl:Class;
-  rdfs:label "Juridisch statuut"@nl;
-  rdfs:comment "Een statuut dat rechtsgevolgen bepaalt. "@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
-
 <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo> a owl:Class;
   rdfs:label "Schuldvorderingssaldo"@nl;
   rdfs:comment "Het verschil tussen het totale verschuldigde bedrag (hoofdsom en eventuele wanbetalingsvergoedingen) en het totale betaalde bedrag dat aan de schuldvordering werd toegerekend."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Saldo> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut> a owl:Class;
-  rdfs:label "Sociaal Statuut"@nl;
-  rdfs:comment "Een statuut dat bepaalt welke sociale rechten een persoon geniet. "@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
 schemas:currency a rdf:Property;
   rdfs:label "valuta"@nl .
@@ -502,15 +546,9 @@ schemas:value a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Inkomst> a owl:Class;
-  rdfs:label "Inkomst"@nl;
-  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen, of als ondersteuning."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#Krediet> a owl:Class;
-  rdfs:label "Krediet"@nl;
-  rdfs:comment "Financiële regeling waarbij een kredietverstrekker geld leent aan een persoon of organisatie met de belofte dat het geleende bedrag later zal worden terugbetaald, meestal met rente."@nl;
+<https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut> a owl:Class;
+  rdfs:label "Juridisch statuut"@nl;
+  rdfs:comment "Een statuut dat rechtsgevolgen bepaalt. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
@@ -526,6 +564,12 @@ schemas:value a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut> a owl:Class;
+  rdfs:label "Sociaal Statuut"@nl;
+  rdfs:comment "Een statuut dat bepaalt welke sociale rechten een persoon geniet. "@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#Vermindering> a owl:Class;
   rdfs:label "Vermindering"@nl;
   rdfs:comment "Het verlagen van de omvang van de schuldvordering."@nl;
@@ -537,6 +581,18 @@ schemas:value a rdf:Property;
   rdfs:comment "Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schuldenaar te herinneren aan een schuldvordering die niet is voldaan terwijl de uiterste betaaldatum van deze schuldvordering reeds verstreken is.  "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Inkomst> a owl:Class;
+  rdfs:label "Inkomst"@nl;
+  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen, of als ondersteuning."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Krediet> a owl:Class;
+  rdfs:label "Krediet"@nl;
+  rdfs:comment "Financiële regeling waarbij een kredietverstrekker geld leent aan een persoon of organisatie met de belofte dat het geleende bedrag later zal worden terugbetaald, meestal met rente."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie> a owl:Class;
   rdfs:label "Schuldvorderingscategorie"@nl;
@@ -554,11 +610,6 @@ schemas:value a rdf:Property;
   rdfs:comment "Het bedrag dat overblijft als je het verschil berekent tussen twee grootheden, zoals inkomsten en uitgaven, kosten en opbrengsten, te betalen bedrag en betaald bedrag. Een saldo is een momentopname."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel> a owl:Class;
-  rdfs:label "Solvabiliteitsprofiel"@nl;
-  rdfs:comment "Categorisatie van de financiële draagkracht van een persoon."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
 <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding> a owl:Class;
   rdfs:label "Wanbetalingsvergoeding"@nl;
   rdfs:comment "Vergoeding die in rekening worden gebracht als gevolg van een wanbetaling."@nl;
@@ -567,6 +618,11 @@ schemas:value a rdf:Property;
 <https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel> a owl:Class;
   rdfs:label "Afbetalingsplanonderdeel"@nl;
   rdfs:comment "Een afbetalingsplan bestaat uit verschillende onderdelen. Elk onderdeel specifieert een bedrag en tijdstip waarop dit bedrag ten laatste betaald moet zijn. "@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel> a owl:Class;
+  rdfs:label "Solvabiliteitsprofiel"@nl;
+  rdfs:comment "Categorisatie van de financiële draagkracht van een persoon."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> a owl:Class;
@@ -605,51 +661,92 @@ schemas:value a rdf:Property;
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://risolto.be/en/>;
-      foaf:name "Risolto"
+      foaf:homepage <https://recht.gent/>;
+      foaf:name "Recht.gent"
     ];
-    foaf:firstName "Joannes";
-    foaf:lastName "Verbeke"
+    foaf:firstName "Katia";
+    foaf:lastName "De Vos"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.antwerpen.be/>;
-      foaf:name "Stad Antwerpen"
+      foaf:homepage <https://www.aalter.be/>;
+      foaf:name "Gemeente Aalter"
     ];
-    foaf:firstName "Sven";
-    foaf:lastName "Verbeeck"
+    foaf:firstName "Mieke";
+    foaf:lastName "De Vreese"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.samvzw.be/>;
-      foaf:name "SAM steunpunt Mens en Samenleving"
+      foaf:homepage <https://www.destelbergen.be/>;
+      foaf:name "Gemeente Destelbergen"
     ];
-    foaf:firstName "Robin";
-    foaf:lastName "Van Trigt"
+    foaf:firstName "Elke";
+    foaf:lastName "Demeulenaere"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.samvzw.be/>;
-      foaf:name "SAM steunpunt Mens en Samenleving"
+      foaf:homepage <https://www.zulte.be/>;
+      foaf:name "Gemeente Zulte"
     ];
-    foaf:firstName "Wietske";
-    foaf:lastName "Van Gils"
+    foaf:firstName "Annelies";
+    foaf:lastName "Demeurie"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://risolto.be/en/>;
-      foaf:name "Risolto"
+      foaf:homepage <https://www.vvsg.be/>;
+      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Van Damme"
+    foaf:lastName "Gilot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting>;
+      foaf:name "Departement Financiën en Begroting"
+    ];
+    foaf:firstName "Quinten";
+    foaf:lastName "Heldens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.zulte.be/>;
+      foaf:name "Gemeente Zulte"
+    ];
+    foaf:firstName "Barbara";
+    foaf:lastName "Ide"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.roeselare.be/>;
+      foaf:name "Stad Roeselare"
+    ];
+    foaf:firstName "Michèle";
+    foaf:lastName "Marichal"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vvsg.be/>;
+      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
+    ];
+    foaf:firstName "Miet";
+    foaf:lastName "Remans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://aalst.be/>;
+      foaf:name "Stad Aalst"
+    ];
+    foaf:firstName "Kurt";
+    foaf:lastName "Schelfhout"
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
       foaf:name "Agentschap Binnenlands Bestuur"
     ];
-    foaf:firstName "Tina";
-    foaf:lastName "Tyteca"
+    foaf:firstName "Janis";
+    foaf:lastName "Sevens";
+    foaf:mbox <mailto:janis.sevens@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -664,89 +761,48 @@ schemas:value a rdf:Property;
       foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
       foaf:name "Agentschap Binnenlands Bestuur"
     ];
-    foaf:firstName "Janis";
-    foaf:lastName "Sevens";
-    foaf:mbox <mailto:janis.sevens@vlaanderen.be>
+    foaf:firstName "Tina";
+    foaf:lastName "Tyteca"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://aalst.be/>;
-      foaf:name "Stad Aalst"
-    ];
-    foaf:firstName "Kurt";
-    foaf:lastName "Schelfhout"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vvsg.be/>;
-      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
-    ];
-    foaf:firstName "Miet";
-    foaf:lastName "Remans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.roeselare.be/>;
-      foaf:name "Stad Roeselare"
-    ];
-    foaf:firstName "Michèle";
-    foaf:lastName "Marichal"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.zulte.be/>;
-      foaf:name "Gemeente Zulte"
-    ];
-    foaf:firstName "Barbara";
-    foaf:lastName "Ide"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/organisaties/administratieve-diensten-van-de-vlaamse-overheid/beleidsdomein-financien-en-begroting/departement-financien-en-begroting>;
-      foaf:name "Departement Financiën en Begroting"
-    ];
-    foaf:firstName "Quinten";
-    foaf:lastName "Heldens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vvsg.be/>;
-      foaf:name "Vereniging van Vlaamse Steden en Gemeenten"
+      foaf:homepage <https://risolto.be/en/>;
+      foaf:name "Risolto"
     ];
     foaf:firstName "Ben";
-    foaf:lastName "Gilot"
+    foaf:lastName "Van Damme"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.zulte.be/>;
-      foaf:name "Gemeente Zulte"
+      foaf:homepage <https://www.samvzw.be/>;
+      foaf:name "SAM steunpunt Mens en Samenleving"
     ];
-    foaf:firstName "Annelies";
-    foaf:lastName "Demeurie"
+    foaf:firstName "Wietske";
+    foaf:lastName "Van Gils"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.destelbergen.be/>;
-      foaf:name "Gemeente Destelbergen"
+      foaf:homepage <https://www.samvzw.be/>;
+      foaf:name "SAM steunpunt Mens en Samenleving"
     ];
-    foaf:firstName "Elke";
-    foaf:lastName "Demeulenaere"
+    foaf:firstName "Robin";
+    foaf:lastName "Van Trigt"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.aalter.be/>;
-      foaf:name "Gemeente Aalter"
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
     ];
-    foaf:firstName "Mieke";
-    foaf:lastName "De Vreese"
+    foaf:firstName "Sven";
+    foaf:lastName "Verbeeck"
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://recht.gent/>;
-      foaf:name "Recht.gent"
+      foaf:homepage <https://risolto.be/en/>;
+      foaf:name "Risolto"
     ];
-    foaf:firstName "Katia";
-    foaf:lastName "De Vos"
+    foaf:firstName "Joannes";
+    foaf:lastName "Verbeke"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -760,47 +816,38 @@ schemas:value a rdf:Property;
     rdfs:Resource,
     skos:Concept,
     schemas:MonetaryAmount,
-    schemas:value,
-    schemas:currency,
-    <http://www.w3.org/ns/adms#identifier>,
+    dc:title,
     dc:type,
-    dc:title;
+    <http://www.w3.org/ns/adms#identifier>,
+    schemas:currency,
+    schemas:value;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Els";
-    foaf:lastName "de Vleeschauwer";
-    foaf:mbox <mailto:els.devleeschauwer@vlaanderen.be>
+    foaf:firstName "Ben";
+    foaf:lastName "De Meester";
+    foaf:mbox <mailto:ben.demeester@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Laurens";
-    foaf:lastName "Vercauteren";
-    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+    foaf:firstName "Vlassenroot";
+    foaf:lastName "Eveline";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Aline";
-    foaf:lastName "Verbrugge";
-    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Mathieu";
-    foaf:lastName "Tulpinck";
-    foaf:mbox <mailto:mathieu.tulpinck@vlaanderen.be>
+    foaf:firstName "Leemans";
+    foaf:lastName "Kim";
+    foaf:mbox <mailto:kim.leemans@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -816,9 +863,63 @@ schemas:value a rdf:Property;
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Ben";
-    foaf:lastName "De Meester";
-    foaf:mbox <mailto:ben.demeester@vlaanderen.be>
+    foaf:firstName "Buyle";
+    foaf:lastName "Raf";
+    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Mathieu";
+    foaf:lastName "Tulpinck";
+    foaf:mbox <mailto:mathieu.tulpinck@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Beyaert";
+    foaf:lastName "Veerle";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Aline";
+    foaf:lastName "Verbrugge";
+    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Vanlishout";
+    foaf:lastName "Ziggy";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Els";
+    foaf:lastName "de Vleeschauwer";
+    foaf:mbox <mailto:els.devleeschauwer@vlaanderen.be>
   ];
   foaf:maker [
     a foaf:Person;
@@ -826,8 +927,8 @@ schemas:value a rdf:Property;
       foaf:homepage <https://stad.gent/nl>;
       foaf:name "Stad Gent"
     ];
-    foaf:firstName "Bert";
-    foaf:lastName "Verstraeten"
+    foaf:firstName "Stefan";
+    foaf:lastName "Somers"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -842,6 +943,6 @@ schemas:value a rdf:Property;
       foaf:homepage <https://stad.gent/nl>;
       foaf:name "Stad Gent"
     ];
-    foaf:firstName "Stefan";
-    foaf:lastName "Somers"
+    foaf:firstName "Bert";
+    foaf:lastName "Verstraeten"
   ] .
