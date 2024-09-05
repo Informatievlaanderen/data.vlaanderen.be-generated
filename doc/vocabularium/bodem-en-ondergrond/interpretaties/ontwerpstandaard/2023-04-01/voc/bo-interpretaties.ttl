@@ -31,7 +31,8 @@ skos:Concept a rdfs:Class;
     "PidType"@nl,
     "Vochtgehaltetype"@nl,
     "QuartairStratigrafieLid"@nl,
-    "LithostratigrafischeEenheidtype"@nl .
+    "LithostratigrafischeEenheidtype"@nl,
+    "Antropogeenkenmerktype"@nl .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Ader.kenmerk> a owl:ObjectProperty;
   rdfs:label "kenmerk"@nl;
@@ -435,6 +436,20 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
   rdfs:range <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#antropogeenkenmerktype> a owl:ObjectProperty;
+  rdfs:label "antropogeenkenmerktype"@nl;
+  rdfs:comment "Type antropogeen kenmerk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#antropogeenkenmerkwaarde> a owl:ObjectProperty;
+  rdfs:label "antropogeenkenmerkwaarde"@nl;
+  rdfs:comment "Waarde die het antropogeen kenmerk aanneemt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
+  rdfs:range rdfs:Resource .
+
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#aquifer> a owl:ObjectProperty;
   rdfs:label "aquifer"@nl;
   rdfs:comment "Code van de watervoerende laag waarin de hydrostratigrafische laag zich bevindt."@nl;
@@ -457,20 +472,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Fossiel> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#geursoort> a owl:ObjectProperty;
-  rdfs:label "geursoort"@nl;
-  rdfs:comment "Type van geur dat is vastgesteld."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#geursterkte> a owl:ObjectProperty;
-  rdfs:label "geursterkte"@nl;
-  rdfs:comment "Sterkte van de vastgestelde geur."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:range skos:Concept .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#helling> a owl:ObjectProperty;
   rdfs:label "helling"@nl;
   rdfs:comment "Helling van de tektoniek."@nl;
@@ -491,20 +492,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieWaarde>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
   rdfs:range xsd:string .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#olie> a owl:ObjectProperty;
-  rdfs:label "olie"@nl;
-  rdfs:comment "Aanwezigheid van olie."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#pid> a owl:ObjectProperty;
-  rdfs:label "pid"@nl;
-  rdfs:comment "Aanwezigheid van gassen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#regime> a owl:ObjectProperty;
   rdfs:label "regime"@nl;
@@ -533,13 +520,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieWaarde>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Tektoniek> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#vochtgehalte> a owl:ObjectProperty;
-  rdfs:label "vochtgehalte"@nl;
-  rdfs:comment "Aandeel van vocht dat is vastgesteld."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:range skos:Concept .
 
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> a rdf:Property;
   rdfs:label "waarde"@nl .
@@ -570,6 +550,12 @@ dc:type a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Bv calcietader, kwartsader"@nl;
   rdfs:comment "Intrusies van een ander gesteente aanwezig in de lithologische laag."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde> a owl:Class;
+  rdfs:label "AntropogeneKenmerkenwaarde"@nl;
+  rdfs:comment "Record dat de antropogene kenmerken beschrijft."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeHoofdnaam> a owl:Class;
   rdfs:label "GecodeerdeHoofdnaam"@nl;
@@ -641,12 +627,6 @@ dc:type a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Bv plooien, breuken"@nl;
   rdfs:comment "Resultaat van bewegingen en vervormingen van de grond in de lithologische laag."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde> a owl:Class;
-  rdfs:label "AntropogeneKenmerkenwaarde"@nl;
-  rdfs:comment "Record dat de antropogene kenmerken beschrijft."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieWaarde> a owl:Class;
   rdfs:label "GecodeerdeLithologiewaarde"@nl;
