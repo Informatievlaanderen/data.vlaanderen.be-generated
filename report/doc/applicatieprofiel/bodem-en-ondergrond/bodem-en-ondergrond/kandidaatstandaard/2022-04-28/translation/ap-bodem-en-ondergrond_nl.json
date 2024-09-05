@@ -99,7 +99,7 @@
         "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
       },
       "usage": {
-        "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+        "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
       }
     },
     {
@@ -262,6 +262,16 @@
       }
     },
     {
+      "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
+      "name": "fractiemetingwaarde",
+      "label": {
+        "nl": "fractiemetingwaarde"
+      },
+      "definition": {
+        "nl": "Waarde ve individuele Meting in de Meetreeks.."
+      }
+    },
+    {
       "EA-Guid": "{BB1DBF9F-19E5-4b27-906C-E3E847B8D0AB}",
       "name": "meetpuntparameter",
       "label": {
@@ -378,7 +388,7 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
       }
     },
     {
@@ -414,10 +424,10 @@
         "nl": "Domeinobject"
       },
       "definition": {
-        "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+        "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
       },
       "usage": {
-        "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+        "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
       }
     },
     {
@@ -482,7 +492,7 @@
         "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
       },
       "usage": {
-        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
       }
     },
     {
@@ -570,7 +580,7 @@
         "nl": "Een 1-dimensionele geometrische primitieve."
       },
       "usage": {
-        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
       }
     },
     {
@@ -632,6 +642,9 @@
       "name": "Opmetingmethode",
       "label": {
         "nl": "Opmetingmethode"
+      },
+      "definition": {
+        "nl": "TODO"
       }
     },
     {
@@ -696,29 +709,13 @@
   ],
   "externalproperties": [
     {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(target)",
+      "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+      "name": "opnamedatum",
       "label": {
-        "nl": "Bemonsteringsobject (target)"
+        "nl": "opnamedatum"
       },
       "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
-      }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(source)",
-      "label": {
-        "nl": "Bemonsteringsobject (source)"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
+        "nl": "Datum waarop de Opmeting plaatsvond."
       }
     },
     {
@@ -771,27 +768,7 @@
         "nl": "Waarde van de fractie."
       },
       "usage": {
-        "nl": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
-      }
-    },
-    {
-      "EA-Guid": "{30613E53-5C83-441e-B3AE-86F0BB9AEC86}",
-      "name": "meetpunt",
-      "label": {
-        "nl": "meetpunt"
-      },
-      "definition": {
-        "nl": "Waarde van het meetpunt."
-      }
-    },
-    {
-      "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
-      "name": "fractiemetingwaarde",
-      "label": {
-        "nl": "fractiemetingwaarde"
-      },
-      "definition": {
-        "nl": "Waarde ve individuele Meting in de Meetreeks.."
+        "nl": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven."
       }
     },
     {
@@ -1100,7 +1077,7 @@
         "nl": "ruimtelijkeSamenstelling"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
       }
     },
     {

@@ -13,10 +13,10 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/008013250da18624c6d06a846066b4f6c4f3b62e",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/008013250da18624c6d06a846066b4f6c4f3b62e/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-bodem-en-ondergrond.html",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/",
     "usesVocs": [],
     "usesAPs": []
   },
@@ -153,7 +153,7 @@
         "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
       },
       "usage": {
-        "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+        "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
       },
       "equivalent": [],
       "parents": [
@@ -401,6 +401,25 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "name": "fractiemetingwaarde",
+      "label": {
+        "nl": "fractiemetingwaarde"
+      },
+      "sort": "fractiemetingwaarde",
+      "description": {
+        "nl": "Waarde ve individuele Meting in de Meetreeks.."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter",
       "name": "meetpuntparameter",
       "label": {
@@ -593,6 +612,20 @@
       "description": {},
       "usage": {},
       "sort": "Materiaalklasse",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Erkenningtype",
+      "label": {
+        "nl": "Erkenningtype"
+      },
+      "description": {},
+      "usage": {},
+      "sort": "Erkenningtype",
       "indvl": false,
       "inpackage": false,
       "inscope": true,

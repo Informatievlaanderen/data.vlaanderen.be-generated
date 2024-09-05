@@ -171,7 +171,7 @@
         "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
       },
       "usage": {
-        "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+        "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
@@ -319,7 +319,9 @@
       "@type": "rdfs:Class"
     },
     {
-      "name": {},
+      "name": {
+        "nl": "Erkenningtype"
+      },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
     }
@@ -417,6 +419,23 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "fractiemetingwaarde"
+      },
+      "definition": {
+        "nl": "Waarde ve individuele Meting in de Meetreeks.."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
       ],
       "generalization": []
     },

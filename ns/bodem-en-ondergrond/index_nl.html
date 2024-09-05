@@ -124,10 +124,10 @@
                 </div>
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/008013250da18624c6d06a846066b4f6c4f3b62e">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/008013250da18624c6d06a846066b4f6c4f3b62e</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/008013250da18624c6d06a846066b4f6c4f3b62e/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/008013250da18624c6d06a846066b4f6c4f3b62e/CHANGELOG</a></dd>
               <dt id="feedbackurl">Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
-              <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-bodem-en-ondergrond.html">https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-bodem-en-ondergrond.html</a></dd>
+              <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/">https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/</a></dd>
 
               <dt>Afhankelijkheden</dt><dd>
                 
@@ -266,6 +266,8 @@
                                             |
                                             
                                             <a href="#BO_RuimtelijkBemonsteringsobject.diepte" rel="property">diepte</a> |
+                                            
+                                            <a href="#Meetreeksresultaat.meetreekswaarde" rel="property">fractiemetingwaarde</a> |
                                             
                                             <a href="#Maaiveld.hoogte" rel="property">hoogte</a> |
                                             
@@ -641,7 +643,7 @@
                                             <th>
                                               <p>Gebruik</p>
                                             </th>
-                                            <td>Een fractie (in de betekenis van &quot;aandeel&quot;) kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt.</td>
+                                            <td>Een fractie (in de betekenis van &quot;aandeel&quot;) houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%.</td>
                                           </tr>
                                           
                                         </tbody>
@@ -1032,6 +1034,48 @@
                                           <tr>
                                             <th>Gebruik</th>
                                             <td>Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="Meetreeksresultaat.meetreekswaarde">Eigenschap <em>fractiemetingwaarde</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde</code></td>
+                                          </tr>
+                                           
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>
+                                                
+                                                  https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat 
+                                                
+                                            </code></td>
+                                          </tr>
+                                           
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>
+                                                
+                                                  https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde 
+                                                
+                                            </code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Waarde ve individuele Meting in de Meetreeks..</td>
                                           </tr>
                                           
                                         </tbody>
@@ -1522,6 +1566,22 @@
                                 
                                 <div class="region region--no-space-top">
                                     <h3 class="h4" id="Bemonsteringsobjecttype"><em>Bemonsteringsobjecttype</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>http://www.w3.org/2004/02/skos/core#Concept</code></td>
+                                          </tr>
+					 
+                                          
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h4" id="Erkenningtype"><em>Erkenningtype</em></h3>
                                     <table class="definition">
                                         <tbody>
                                           

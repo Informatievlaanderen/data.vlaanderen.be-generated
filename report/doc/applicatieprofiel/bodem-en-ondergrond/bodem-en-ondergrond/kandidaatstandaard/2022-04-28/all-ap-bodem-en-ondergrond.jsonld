@@ -649,7 +649,7 @@
             "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "usage": {
-                "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+                "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
             },
             "definition": {
                 "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
@@ -685,7 +685,7 @@
                     "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
                 },
                 "usage": {
-                    "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+                    "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
                 },
                 "ap-label-nl": {
                     "nl": "Fractiemetingwaarde"
@@ -709,7 +709,7 @@
                     {
                         "key": "usageNote-nl",
                         "value": "NOTE",
-                        "note": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+                        "note": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
                     }
                 ],
                 "Scope": "FULL_DEFINITON"
@@ -1738,6 +1738,95 @@
             "maxCardinality": "*"
         },
         {
+            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "fractiemetingwaarde",
+            "inpackage": "ACTIVE_PACKAGE",
+            "definition": {
+                "nl": "Waarde ve individuele Meting in de Meetreeks.."
+            },
+            "label": {
+                "nl": "fractiemetingwaarde"
+            },
+            "ap-label-nl": {
+                "nl": "fractiemetingwaarde"
+            },
+            "ap-definition-nl": {
+                "nl": "Waarde ve individuele Meting in de Meetreeks.."
+            },
+            "extra": {
+                "EA-Name": "fractiemetingwaarde",
+                "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
+                "EA-Package": "OSLO-BodemEnOndergrond",
+                "EA-Type": "attribute",
+                "EA-Domain": "Fractiemetingresultaat",
+                "EA-Domain-Guid": "{D6EFD756-5DF7-4d16-AABD-7F0BF4C90B5D}",
+                "EA-Range": "Fractiemetingwaarde",
+                "RangeData": {
+                    "EA-Name": "Fractiemetingwaarde",
+                    "EA-GUID": "{A894C62B-C5E6-4c78-9530-2F78CC053ECB}",
+                    "EA-Package": "OSLO-BodemEnOndergrond",
+                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
+                },
+                "label": {
+                    "nl": "fractiemetingwaarde"
+                },
+                "definition": {
+                    "nl": "Waarde ve individuele Meting in de Meetreeks.."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "fractiemetingwaarde"
+                },
+                "ap-definition-nl": {
+                    "nl": "Waarde ve individuele Meting in de Meetreeks.."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "fractiemetingwaarde",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Waarde ve individuele Meting in de Meetreeks..",
+                        "note": "null"
+                    },
+                    {
+                        "key": "package",
+                        "value": "Hulppakket2",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat",
+                    "EA-Name": "Fractiemetingresultaat"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Fractiemetingwaarde",
+                    "EA-GUID": "{A894C62B-C5E6-4c78-9530-2F78CC053ECB}",
+                    "EA-Package": "OSLO-BodemEnOndergrond",
+                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "*"
+        },
+        {
             "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "meetpuntparameter",
@@ -2510,10 +2599,10 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+                "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
             },
             "usage": {
-                "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+                "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
             },
             "definition": {
                 "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
@@ -2542,7 +2631,7 @@
                     "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
                 },
                 "usage": {
-                    "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+                    "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
                 },
                 "ap-label-nl": {
                     "nl": "Kenmerktype"
@@ -2551,7 +2640,7 @@
                     "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+                    "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -2573,7 +2662,7 @@
                     {
                         "key": "ap-usageNote-nl",
                         "value": "NOTE",
-                        "note": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+                        "note": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
                     },
                     {
                         "key": "ap-label-nl",
@@ -2750,13 +2839,13 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+                "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
             },
             "usage": {
-                "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+                "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
             },
             "definition": {
-                "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+                "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
             },
             "label": {
                 "nl": "Domeinobject"
@@ -2765,7 +2854,7 @@
                 "nl": "Domeinobject"
             },
             "ap-definition-nl": {
-                "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+                "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
             },
             "extra": {
                 "EA-Name": "Domeinobject",
@@ -2779,19 +2868,19 @@
                     "nl": "Domeinobject"
                 },
                 "definition": {
-                    "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+                    "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
                 },
                 "usage": {
-                    "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+                    "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
                 },
                 "ap-label-nl": {
                     "nl": "Domeinobject"
                 },
                 "ap-definition-nl": {
-                    "nl": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is."
+                    "nl": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+                    "nl": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -2807,13 +2896,13 @@
                     },
                     {
                         "key": "ap-definition-nl",
-                        "value": "Stuk van ruimte of tijd waarvoor een waarde van het DiscreetBereik bepaald is.",
+                        "value": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald.",
                         "note": "null"
                     },
                     {
                         "key": "ap-usageNote-nl",
                         "value": "NOTE",
-                        "note": "Bv de polygoon of polygonen van één Gemeente als het Discreetbereik het aantal inwoners per gemeente beschrijft. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
+                        "note": "In praktijk één of meerdere geometrieën of punten in de tijd waarvoor een  waarde is bepaald. Bv de polygoon of polygonen met hetzelfde landgebruik. OPMERKING: Enkel de ruimtelijkeSamenstelling van het Domeinobject is hier momenteel weergegeven, niet de temporeleSamenstelling."
                     }
                 ],
                 "Scope": "NOTHING"
@@ -3148,10 +3237,10 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
             },
             "usage": {
-                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
             },
             "definition": {
                 "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
@@ -3180,7 +3269,7 @@
                     "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
                 },
                 "usage": {
-                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
                 },
                 "ap-label-nl": {
                     "nl": "Proces"
@@ -3189,7 +3278,7 @@
                     "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -3211,7 +3300,7 @@
                     {
                         "key": "ap-usageNote-nl",
                         "value": "NOTE",
-                        "note": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+                        "note": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
                     }
                 ],
                 "Scope": "NOTHING"
@@ -3711,10 +3800,10 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+                "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
             },
             "usage": {
-                "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+                "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
             },
             "definition": {
                 "nl": "Een 1-dimensionele geometrische primitieve."
@@ -3750,7 +3839,7 @@
                     "nl": "Een 1-dimensionele geometrische primitieve."
                 },
                 "usage": {
-                    "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+                    "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
                 },
                 "ap-label-nl": {
                     "nl": "Curve"
@@ -3759,7 +3848,7 @@
                     "nl": "Een 1-dimensionele geometrische primitieve."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+                    "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -3786,7 +3875,7 @@
                     {
                         "key": "ap-usageNote-nl",
                         "value": "NOTE",
-                        "note": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
+                        "note": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."
                     }
                 ],
                 "Scope": "NOTHING"
@@ -4159,6 +4248,11 @@
                         "key": "ap-label-nl",
                         "value": "Erkenningtype",
                         "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Erkenningtype",
+                        "note": "null"
                     }
                 ],
                 "Scope": "TRANSLATIONS_ONLY"
@@ -4169,6 +4263,9 @@
             "@id": "http://www.w3.org/2004/02/skos/core#Concept",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "TODO"
+            },
             "label": {
                 "nl": "Opmetingmethode"
             },
@@ -4189,7 +4286,9 @@
                 "label": {
                     "nl": "Opmetingmethode"
                 },
-                "definition": "",
+                "definition": {
+                    "nl": "TODO"
+                },
                 "usage": "",
                 "ap-label-nl": {
                     "nl": "Opmetingmethode"
@@ -4208,6 +4307,11 @@
                     {
                         "key": "uri",
                         "value": "http://www.w3.org/2004/02/skos/core#Concept",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "TODO",
                         "note": "null"
                     }
                 ],
@@ -4272,7 +4376,7 @@
                     },
                     {
                         "key": "ap-usageNote-nl",
-                        "value": "NOTE",
+                        "value": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem.",
                         "note": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."
                     },
                     {
@@ -4283,6 +4387,11 @@
                     {
                         "key": "uri",
                         "value": "http://www.w3.org/ns/adms#Identifier",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Identificator",
                         "note": "null"
                     }
                 ],
@@ -4383,10 +4492,10 @@
                         "name": "Dekking",
                         "label": "Dekking",
                         "package": "DublinCore",
-                        "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+                        "uri": "http://purl.org/dc/elements/1.1/coverage"
                     }
                 ],
-                "parentclasses": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+                "parentclasses": "http://purl.org/dc/elements/1.1/coverage",
                 "label": {
                     "nl": "Locatie"
                 },
@@ -4555,239 +4664,80 @@
     ],
     "externalproperties": [
         {
-            "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "bemonsteringsobject(target)",
+            "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "opnamedatum",
             "inpackage": "OTHER_PACKAGE",
-            "ap-usageNote-nl": {
-                "nl": ""
-            },
-            "usage": {
-                "nl": ""
-            },
             "definition": {
-                "nl": "Referentie naar verbonden klasse."
+                "nl": "Datum waarop de Opmeting plaatsvond."
             },
             "label": {
-                "nl": "Bemonsteringsobject (target)"
+                "nl": "opnamedatum"
             },
             "ap-label-nl": {
-                "nl": "Bemonsteringsobject (target)"
+                "nl": "opnamedatum"
             },
             "ap-definition-nl": {
-                "nl": "Referentie naar verbonden klasse."
+                "nl": "Datum waarop de Opmeting plaatsvond."
             },
             "extra": {
-                "EA-Name": "Bemonsteringsobject",
-                "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                "derived": "true",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "BemonsteringsobjectComplex",
-                "EA-Domain-Guid": "{75348108-6968-4eeb-9169-6DC6418A1052}",
-                "EA-Range": "Bemonsteringsobject",
+                "EA-Name": "opnamedatum",
+                "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+                "EA-Package": "OSLO-Generiek",
+                "EA-Type": "attribute",
+                "EA-Domain": "Opmeting",
+                "EA-Domain-Guid": "{BFD25136-77A8-41d2-A135-26FA75EC9287}",
+                "EA-Range": "DateTime",
                 "RangeData": {
-                    "EA-Name": "Bemonsteringsobject",
-                    "EA-GUID": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+                    "EA-Name": "DateTime",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
                 },
-                "sourceRole": "null",
-                "destRole": "null",
                 "label": {
-                    "nl": "Bemonsteringsobject (target)"
+                    "nl": "opnamedatum"
                 },
                 "definition": {
-                    "nl": "Referentie naar verbonden klasse."
+                    "nl": "Datum waarop de Opmeting plaatsvond."
                 },
-                "usage": {
-                    "nl": ""
-                },
+                "usage": "",
                 "ap-label-nl": {
-                    "nl": "Bemonsteringsobject (target)"
+                    "nl": "opnamedatum"
                 },
                 "ap-definition-nl": {
-                    "nl": "Referentie naar verbonden klasse."
+                    "nl": "Datum waarop de Opmeting plaatsvond."
                 },
-                "ap-usageNote-nl": {
-                    "nl": ""
-                },
+                "ap-usageNote-nl": "",
                 "ap-codelist": "",
                 "RawTags": [
                     {
                         "key": "label-nl",
-                        "value": "Bemonsteringsobject (target)",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-label-nl",
-                        "value": "Bemonsteringsobject (target)",
-                        "note": ""
+                        "value": "opnamedatum",
+                        "note": "null"
                     },
                     {
                         "key": "definition-nl",
-                        "value": "Referentie naar verbonden klasse.",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-definition-nl",
-                        "value": "Referentie naar verbonden klasse.",
-                        "note": ""
-                    },
-                    {
-                        "key": "usageNote-nl",
-                        "value": "",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-usageNote-nl",
-                        "value": "",
-                        "note": ""
-                    },
-                    {
-                        "key": "package",
-                        "value": "OSLO-ObservatiesEnMetingen",
-                        "note": ""
+                        "value": "Datum waarop de Opmeting plaatsvond.",
+                        "note": "null"
                     }
                 ],
-                "DestRoleTags": [],
                 "Scope": "NOTHING"
             },
             "codelist": [],
             "domain": [
                 {
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
-                    "EA-Name": "BemonsteringsobjectComplex"
+                    "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+                    "EA-Name": "Opmeting"
                 }
             ],
             "range": [
                 {
-                    "EA-Name": "Bemonsteringsobject",
-                    "EA-GUID": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+                    "EA-Name": "DateTime",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
                 }
             ],
             "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "bemonsteringsobject(source)",
-            "inpackage": "OTHER_PACKAGE",
-            "ap-usageNote-nl": {
-                "nl": ""
-            },
-            "usage": {
-                "nl": ""
-            },
-            "definition": {
-                "nl": "Referentie naar verbonden klasse."
-            },
-            "label": {
-                "nl": "Bemonsteringsobject (source)"
-            },
-            "ap-label-nl": {
-                "nl": "Bemonsteringsobject (source)"
-            },
-            "ap-definition-nl": {
-                "nl": "Referentie naar verbonden klasse."
-            },
-            "extra": {
-                "EA-Name": "Bemonsteringsobject",
-                "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                "derived": "true",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "BemonsteringsobjectComplex",
-                "EA-Domain-Guid": "{75348108-6968-4eeb-9169-6DC6418A1052}",
-                "EA-Range": "Bemonsteringsobject",
-                "RangeData": {
-                    "EA-Name": "Bemonsteringsobject",
-                    "EA-GUID": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-                },
-                "sourceRole": "null",
-                "destRole": "null",
-                "label": {
-                    "nl": "Bemonsteringsobject (source)"
-                },
-                "definition": {
-                    "nl": "Referentie naar verbonden klasse."
-                },
-                "usage": {
-                    "nl": ""
-                },
-                "ap-label-nl": {
-                    "nl": "Bemonsteringsobject (source)"
-                },
-                "ap-definition-nl": {
-                    "nl": "Referentie naar verbonden klasse."
-                },
-                "ap-usageNote-nl": {
-                    "nl": ""
-                },
-                "ap-codelist": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "Bemonsteringsobject (source)",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-label-nl",
-                        "value": "Bemonsteringsobject (source)",
-                        "note": ""
-                    },
-                    {
-                        "key": "definition-nl",
-                        "value": "Referentie naar verbonden klasse.",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-definition-nl",
-                        "value": "Referentie naar verbonden klasse.",
-                        "note": ""
-                    },
-                    {
-                        "key": "usageNote-nl",
-                        "value": "",
-                        "note": ""
-                    },
-                    {
-                        "key": "ap-usageNote-nl",
-                        "value": "",
-                        "note": ""
-                    },
-                    {
-                        "key": "package",
-                        "value": "OSLO-ObservatiesEnMetingen",
-                        "note": ""
-                    }
-                ],
-                "DestRoleTags": [],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
-                    "EA-Name": "BemonsteringsobjectComplex"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Bemonsteringsobject",
-                    "EA-GUID": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
+            "minCardinality": "0",
             "maxCardinality": "1"
         },
         {
@@ -4871,7 +4821,7 @@
                 }
             ],
             "generalization": [],
-            "minCardinality": "1",
+            "minCardinality": "0",
             "maxCardinality": "1"
         },
         {
@@ -5132,10 +5082,10 @@
             "name": "meetwaarde",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
+                "nl": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven."
             },
             "usage": {
-                "nl": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
+                "nl": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven."
             },
             "definition": {
                 "nl": "Waarde van de fractie."
@@ -5170,7 +5120,7 @@
                     "nl": "Waarde van de fractie."
                 },
                 "usage": {
-                    "nl": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
+                    "nl": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven."
                 },
                 "ap-label-nl": {
                     "nl": "meetwaarde"
@@ -5179,7 +5129,7 @@
                     "nl": "Waarde van de fractie."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
+                    "nl": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven."
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -5205,96 +5155,12 @@
                     },
                     {
                         "key": "ap-usageNote-nl",
-                        "value": "NOTE",
+                        "value": "De meetwaarde mag ontbreken om een onderbreking in de meetreeks aan te geven.",
                         "note": "De meetwaarde mag ontbreken om een onderbreking in de korrelverdeling aan te geven. "
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde",
-                    "EA-Name": "Fractiemetingwaarde"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Maat",
-                    "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "meetpunt",
-            "inpackage": "OTHER_PACKAGE",
-            "definition": {
-                "nl": "Waarde van het meetpunt."
-            },
-            "label": {
-                "nl": "meetpunt"
-            },
-            "ap-label-nl": {
-                "nl": "meetpunt"
-            },
-            "ap-definition-nl": {
-                "nl": "Waarde van het meetpunt."
-            },
-            "extra": {
-                "EA-Name": "meetpunt",
-                "EA-Guid": "{30613E53-5C83-441e-B3AE-86F0BB9AEC86}",
-                "EA-Package": "OSLO-BodemEnOndergrond",
-                "EA-Type": "attribute",
-                "EA-Domain": "Fractiemetingwaarde",
-                "EA-Domain-Guid": "{A894C62B-C5E6-4c78-9530-2F78CC053ECB}",
-                "EA-Range": "Maat",
-                "RangeData": {
-                    "EA-Name": "Maat",
-                    "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
-                    "EA-Package": "OSLO-ObservatiesEnMetingen",
-                    "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-                },
-                "label": {
-                    "nl": "meetpunt"
-                },
-                "definition": {
-                    "nl": "Waarde van het meetpunt."
-                },
-                "usage": "",
-                "ap-label-nl": {
-                    "nl": "meetpunt"
-                },
-                "ap-definition-nl": {
-                    "nl": "Waarde van het meetpunt."
-                },
-                "ap-usageNote-nl": "",
-                "ap-codelist": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "meetpunt",
-                        "note": "null"
                     },
                     {
-                        "key": "definition-nl",
-                        "value": "Waarde van het meetpunt.",
-                        "note": "null"
-                    },
-                    {
-                        "key": "name",
-                        "value": "Meetreekswaarde.meetpunt",
-                        "note": "null"
-                    },
-                    {
-                        "key": "package",
-                        "value": "Hulppakket2",
+                        "key": "ap-label-nl",
+                        "value": "meetwaarde",
                         "note": "null"
                     }
                 ],
@@ -5318,95 +5184,6 @@
             "generalization": [],
             "minCardinality": "0",
             "maxCardinality": "1"
-        },
-        {
-            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "fractiemetingwaarde",
-            "inpackage": "OTHER_PACKAGE",
-            "definition": {
-                "nl": "Waarde ve individuele Meting in de Meetreeks.."
-            },
-            "label": {
-                "nl": "fractiemetingwaarde"
-            },
-            "ap-label-nl": {
-                "nl": "fractiemetingwaarde"
-            },
-            "ap-definition-nl": {
-                "nl": "Waarde ve individuele Meting in de Meetreeks.."
-            },
-            "extra": {
-                "EA-Name": "fractiemetingwaarde",
-                "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
-                "EA-Package": "OSLO-BodemEnOndergrond",
-                "EA-Type": "attribute",
-                "EA-Domain": "Fractiemetingresultaat",
-                "EA-Domain-Guid": "{D6EFD756-5DF7-4d16-AABD-7F0BF4C90B5D}",
-                "EA-Range": "Fractiemetingwaarde",
-                "RangeData": {
-                    "EA-Name": "Fractiemetingwaarde",
-                    "EA-GUID": "{A894C62B-C5E6-4c78-9530-2F78CC053ECB}",
-                    "EA-Package": "OSLO-BodemEnOndergrond",
-                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
-                },
-                "label": {
-                    "nl": "fractiemetingwaarde"
-                },
-                "definition": {
-                    "nl": "Waarde ve individuele Meting in de Meetreeks.."
-                },
-                "usage": "",
-                "ap-label-nl": {
-                    "nl": "fractiemetingwaarde"
-                },
-                "ap-definition-nl": {
-                    "nl": "Waarde ve individuele Meting in de Meetreeks.."
-                },
-                "ap-usageNote-nl": "",
-                "ap-codelist": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "fractiemetingwaarde",
-                        "note": "null"
-                    },
-                    {
-                        "key": "definition-nl",
-                        "value": "Waarde ve individuele Meting in de Meetreeks..",
-                        "note": "null"
-                    },
-                    {
-                        "key": "package",
-                        "value": "Hulppakket2",
-                        "note": "null"
-                    },
-                    {
-                        "key": "name",
-                        "value": "Meetreeksresultaat.meetreekswaarde",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat",
-                    "EA-Name": "Fractiemetingresultaat"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Fractiemetingwaarde",
-                    "EA-GUID": "{A894C62B-C5E6-4c78-9530-2F78CC053ECB}",
-                    "EA-Package": "OSLO-BodemEnOndergrond",
-                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "*"
         },
         {
             "@id": "http://www.w3.org/ns/adms#schemaAgency",
@@ -5726,11 +5503,10 @@
                 "EA-Type": "attribute",
                 "EA-Domain": "Geometrie",
                 "EA-Domain-Guid": "{5720A716-474C-4451-B7ED-50C2423DC51D}",
-                "EA-Range": "GetypeerdeString",
+                "EA-Range": "Literal",
                 "RangeData": {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 },
                 "label": {
@@ -5790,9 +5566,8 @@
             ],
             "range": [
                 {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 }
             ],
@@ -5830,11 +5605,10 @@
                 "EA-Type": "attribute",
                 "EA-Domain": "DirectePositie",
                 "EA-Domain-Guid": "{55506D79-2E1E-4ca4-8A7A-26553B1AE415}",
-                "EA-Range": "GetypeerdeString",
+                "EA-Range": "Literal",
                 "RangeData": {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 },
                 "label": {
@@ -5889,9 +5663,8 @@
             ],
             "range": [
                 {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 }
             ],
@@ -5929,11 +5702,10 @@
                 "EA-Type": "attribute",
                 "EA-Domain": "Geometrie",
                 "EA-Domain-Guid": "{5720A716-474C-4451-B7ED-50C2423DC51D}",
-                "EA-Range": "GetypeerdeString",
+                "EA-Range": "Literal",
                 "RangeData": {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 },
                 "label": {
@@ -5993,9 +5765,8 @@
             ],
             "range": [
                 {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 }
             ],
@@ -6033,11 +5804,10 @@
                 "EA-Type": "attribute",
                 "EA-Domain": "DirectePositie",
                 "EA-Domain-Guid": "{55506D79-2E1E-4ca4-8A7A-26553B1AE415}",
-                "EA-Range": "GetypeerdeString",
+                "EA-Range": "Literal",
                 "RangeData": {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 },
                 "label": {
@@ -6092,9 +5862,8 @@
             ],
             "range": [
                 {
-                    "EA-Name": "GetypeerdeString",
-                    "EA-GUID": "{B6D75F64-5CDC-4937-AD4A-58B8358E284F}",
-                    "EA-Package": "OSLO-Generiek",
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
                     "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
                 }
             ],
@@ -7046,7 +6815,7 @@
             "extra": {
                 "EA-Name": "geassocieerdBemonsteringsobject",
                 "EA-Guid": "{1D2F0991-A37B-4c99-8DD9-0D5AB922F6F4}",
-                "derived": "true",
+                "derived": "false",
                 "EA-Package": "",
                 "EA-Type": "connector",
                 "EA-Domain": "Bemonsteringsobject",
@@ -7967,7 +7736,7 @@
             "name": "ruimtelijkesamenstelling",
             "inpackage": "OTHER_PACKAGE",
             "definition": {
-                "nl": "TODO"
+                "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
             },
             "label": {
                 "nl": "ruimtelijkeSamenstelling"
@@ -7976,7 +7745,7 @@
                 "nl": "ruimtelijkeSamenstelling"
             },
             "ap-definition-nl": {
-                "nl": "TODO"
+                "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
             },
             "extra": {
                 "EA-Name": "ruimtelijkeSamenstelling",
@@ -7996,14 +7765,14 @@
                     "nl": "ruimtelijkeSamenstelling"
                 },
                 "definition": {
-                    "nl": "TODO"
+                    "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
                 },
                 "usage": "",
                 "ap-label-nl": {
                     "nl": "ruimtelijkeSamenstelling"
                 },
                 "ap-definition-nl": {
-                    "nl": "TODO"
+                    "nl": "De geometrieën waaruit het Domeinobject is samengesteld."
                 },
                 "ap-usageNote-nl": "",
                 "ap-codelist": "",
@@ -8014,13 +7783,13 @@
                         "note": "null"
                     },
                     {
-                        "key": "definition-nl",
-                        "value": "TODO",
+                        "key": "uri",
+                        "value": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
                         "note": "null"
                     },
                     {
-                        "key": "uri",
-                        "value": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
+                        "key": "ap-definition-nl",
+                        "value": "De geometrieën waaruit het Domeinobject is samengesteld.",
                         "note": "null"
                     }
                 ],
@@ -8236,17 +8005,17 @@
     "contributors-column": "MijnKolom",
     "site": "site-skeleton/OSLO-BodemEnOndergrond",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-bodem-en-ondergrond.html",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-bodem-en-ondergrond/",
     "config": "config/config-ap.json",
     "branchtag": "master",
-    "dummy": "032",
+    "dummy": "034",
     "filename": "config/OSLO-BodemEnOndergrond-AP-BodemEnOndergrond.json",
     "navigation": {
         "prev": "/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/2021-08-01"
     },
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond",
     "urlref": "/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2022-04-28",
-    "documentcommit": "85500245c8f93b57ebaea99b10c9a9d3fd8b0ed8",
-    "toolchaincommit": "df1e1cb4aa7cc5e17032d4a66c83e395c213ba78",
+    "documentcommit": "008013250da18624c6d06a846066b4f6c4f3b62e",
+    "toolchaincommit": "649a5ab5f3af27b021a32eaf0d7b02a111d8bf3f",
     "hostname": "https://data.vlaanderen.be"
 }
