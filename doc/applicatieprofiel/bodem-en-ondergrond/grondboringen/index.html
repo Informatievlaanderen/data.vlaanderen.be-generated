@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3b82af76b6ea7a71471a8a3c2f923c122092f6f7">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3b82af76b6ea7a71471a8a3c2f923c122092f6f7</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3b82af76b6ea7a71471a8a3c2f923c122092f6f7/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3b82af76b6ea7a71471a8a3c2f923c122092f6f7/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/49fbe8c57506401935140eb14112129d71fd12b5">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/49fbe8c57506401935140eb14112129d71fd12b5</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/49fbe8c57506401935140eb14112129d71fd12b5/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/49fbe8c57506401935140eb14112129d71fd12b5/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-grondboringen/">https://data.vlaanderen.be/standaarden/applicatieprofiel-grondboringen/</a></dd>
 
@@ -778,6 +778,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Bemonsteringsobject%3Abemonsterdobject">bemonsterdObject</a>, 
                       <a href="#Bemonsteringsobject%3Ageassocieerdbemonsteringsobject">geassocieerdBemonsteringsobject</a>, 
                       <a href="#Bemonsteringsobject%3Aherkomst">herkomst</a>, 
                       <a href="#Bemonsteringsobject%3Aidentificator">identificator</a>, 
@@ -802,6 +803,26 @@
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Bemonsteringsobject%3Abemonsterdobject" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature" data-placement="right">
+                            bemonsterdObject</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Object" data-placement="right">Object</a>
+			    
+                          
+                        </td>
+                        <td>1..*</td>
+                        <td property="rdfs:comment">Verwijzing naar het Object dat men wil bemonsteren.</td>
+                        <td property="vann:usageNote">Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.</td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Bemonsteringsobject%3Ageassocieerdbemonsteringsobject" typeof="rdfs:Property" resource="http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature">
                         <td>
@@ -2271,9 +2292,9 @@
                         </td>
                         <td>
                           
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">InputType</a>
-                            
+			    
+			    <a href="#InputType" data-placement="right">InputType</a>
+			    
                           
                         </td>
                         <td>0..1</td>
@@ -2541,9 +2562,9 @@
                         </td>
                         <td>
                           
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">OutputType</a>
-                            
+			    
+			    <a href="#OutputType" data-placement="right">OutputType</a>
+			    
                           
                         </td>
                         <td>0..1</td>
@@ -2582,7 +2603,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen.</dd>
                     
-                    <dt>Gebruik</dt><dd>In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein.</dd>
+                    <dt>Gebruik</dt><dd>In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href="https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/">OSLO Observaties en Metingen</a>.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

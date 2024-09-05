@@ -56,6 +56,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjecttypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LegaleVerschijningsvormtypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpmetingmethodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#InputTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OutputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GeometrieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LocatieShape>,
@@ -359,7 +361,9 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/bff6e3438377968c492a6ca0fe2e7df779731318>,
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/59b9347ab72afa0c39a2c50ed656780c82fba2dc>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/7dc9be25e8708bd3eb46ed61288f2a193eea5d61>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/bff6e3438377968c492a6ca0fe2e7df779731318>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/2ad9fcaea8c54f3993381acf97bd6401ba6549dc>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/7f7729e4df614394423f92badbe4304148f90b07>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
@@ -407,11 +411,23 @@
   shacl:name "isResultaatVan"@nl;
   shacl:path <http://www.w3.org/ns/sosa/isResultOf> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/59b9347ab72afa0c39a2c50ed656780c82fba2dc> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#Bemonsteringsobject.bemonsterdObject";
+  shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+  shacl:description "Verwijzing naar het Object dat men wil bemonsteren."@nl;
+  shacl:name "bemonsterdObject"@nl;
+  shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/683a84ff35816eb194d8c6f0bfc0104665ba1a9f> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#Bemonsteringsobject.isResultaatVan";
   shacl:description "Verwijzing naar de Bemonstering waarvan dit Bemonsteringsobject het resultaat is."@nl;
   shacl:minCount 1;
   shacl:name "isResultaatVan"@nl;
   shacl:path <http://www.w3.org/ns/sosa/isResultOf> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/7dc9be25e8708bd3eb46ed61288f2a193eea5d61> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#Bemonsteringsobject.bemonsterdObject";
+  shacl:description "Verwijzing naar het Object dat men wil bemonsteren."@nl;
+  shacl:minCount 1;
+  shacl:name "bemonsterdObject"@nl;
+  shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape/7f7729e4df614394423f92badbe4304148f90b07> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#Bemonsteringsobject.herkomst";
   shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>;
@@ -1356,6 +1372,10 @@
   shacl:name "referentie"@nl;
   shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#InputTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LegaleVerschijningsvormShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LegaleVerschijningsvormShape/0e9a7d4dbf6ec19568d474169ad717f71e882319>,
@@ -1572,6 +1592,10 @@
   shacl:description "Verwijzing naar originele Output."@nl;
   shacl:name "referentie"@nl;
   shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OutputTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
