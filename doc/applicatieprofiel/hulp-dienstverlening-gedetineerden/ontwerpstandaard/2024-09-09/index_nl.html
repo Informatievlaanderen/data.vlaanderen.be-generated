@@ -130,8 +130,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/022381b508a9f1dfe8451660c6ae79b377534bd4">https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/022381b508a9f1dfe8451660c6ae79b377534bd4</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/022381b508a9f1dfe8451660c6ae79b377534bd4/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/022381b508a9f1dfe8451660c6ae79b377534bd4/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/17e449a6a353cac4f36f3248d749a80742a5668e">https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/17e449a6a353cac4f36f3248d749a80742a5668e</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/17e449a6a353cac4f36f3248d749a80742a5668e/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/17e449a6a353cac4f36f3248d749a80742a5668e/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues">https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html</a></dd>
 
@@ -249,8 +249,8 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Activiteit%3A"></a>, 
                       <a href="#Activiteit%3AaantalInschrijvingen">aantal inschrijvingen</a>, 
+                      <a href="#Activiteit%3AannulatieReden">annulatie reden</a>, 
                       <a href="#Activiteit%3Abeleidsdomein">beleidsdomein</a>, 
                       <a href="#Activiteit%3Abeschrijving">beschrijving</a>, 
                       <a href="#Activiteit%3Acategorie">categorie</a>, 
@@ -282,26 +282,6 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Activiteit%3A" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden" data-placement="right">
-                            </a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#AnnulatieReden" data-placement="right">AnnulatieReden</a>
-			    
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment"></td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Activiteit%3AaantalInschrijvingen" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/cultuurparticipatie#aantalInschrijvingen">
                         <td>
                           <code property="rdfs:label">
@@ -318,6 +298,26 @@
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Het aantal personen dat zich heeft ingeschreven voor een activiteit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Activiteit%3AannulatieReden" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden" data-placement="right">
+                            annulatie reden</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#AnnulatieReden" data-placement="right">AnnulatieReden</a>
+			    
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">De reden waarom een Activiteit geannuleerd werd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -453,7 +453,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Activiteit </td>
+                        <td property="rdfs:comment">Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Activiteit</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1781,7 +1781,7 @@
               <h3 class="h3" id="Sessiereeks"><a href="http://fixme.com#Sessiereeks" data-toggle="tooltip" data-content="http://fixme.com#Sessiereeks" data-placement="right">Sessiereeks</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een reeks van één of meerdere sessies van een Activeit.</dd>
+                    <dt>Beschrijving</dt><dd>Een reeks van één of meerdere sessies van een Activiteit.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
