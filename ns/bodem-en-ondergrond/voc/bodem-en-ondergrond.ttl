@@ -23,8 +23,8 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte> a owl:ObjectProperty;
   rdfs:label "diepte"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."@nl;
-  rdfs:comment "De Diepte vh Bemonsteringsobject."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven hoe diep er geboord is."@nl;
+  rdfs:comment "Geeft aan tot welke Diepte het Bemonsteringsobject reikt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte> .
@@ -39,8 +39,8 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld> a owl:ObjectProperty;
   rdfs:label "maaiveld"@nl;
-  <http://purl.org/vocab/vann/usageNote> "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring)."@nl;
-  rdfs:comment "Het Maaiveld vh Bemonsteringsobject."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb nuttig in het geval wanneer men de geometrie van een Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."@nl;
+  rdfs:comment "Ligging van het grondoppervlak."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> .
@@ -136,6 +136,14 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Toegewezen taak."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil> a owl:ObjectProperty;
+  rdfs:label "aanvangspeil"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."@nl;
+  rdfs:comment "Geeft aan waar tov het Maaiveld het Bemonsteringsobject start."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
+
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry> a rdf:Property;
   rdfs:label "geometrie"@nl .
 
@@ -208,19 +216,19 @@ dc:type a rdf:Property;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> a owl:Class;
-  rdfs:label "BO_RuimtelijkBemonsteringsobject"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Het gaat over kenmerken die typisch zijn in de context van Bemonstering bv bij Boringen het maaiveld en de diepte."@nl;
-  rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> a owl:Class;
   rdfs:label "Fractiemetingwaarde"@nl;
   <http://purl.org/vocab/vann/usageNote> "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."@nl;
   rdfs:comment "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> a owl:Class;
+  rdfs:label "BO_RuimtelijkBemonsteringsobject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het gaat over kenmerken die typisch zijn in de context van Bemonstering bv bij Boringen het maaiveld en de diepte."@nl;
+  rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> a owl:Class;
   rdfs:label "Meetreekswaarde"@nl;

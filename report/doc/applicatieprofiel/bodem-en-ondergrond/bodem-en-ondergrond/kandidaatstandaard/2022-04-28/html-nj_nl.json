@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/008013250da18624c6d06a846066b4f6c4f3b62e",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/008013250da18624c6d06a846066b4f6c4f3b62e/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/5154d458d1c971105425e988d4a18274dfd22e32",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/5154d458d1c971105425e988d4a18274dfd22e32/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-bodem-en-ondergrond/",
     "usesVocs": [],
@@ -51,6 +51,48 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
+          "name": "aanvangspeil",
+          "sort": "aanvangspeil",
+          "label": {
+            "nl": "aanvangspeil"
+          },
+          "description": {
+            "nl": "Geeft aan waar tov het Maaiveld het Bemonsteringsobject start."
+          },
+          "usage": {
+            "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+          },
+          "domain": [
+            {
+              "EA-Name": "BO_RuimtelijkBemonsteringsobject",
+              "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Maat",
+              "range_uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Maat",
+              "range_puri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+              "range_label": {
+                "nl": "Maat"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "aanvangspeil",
+            "definition-nl": "Geeft aan waar tov het Maaiveld het Bemonsteringsobject start.",
+            "usageNote-nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
           "name": "maaiveld",
           "sort": "maaiveld",
@@ -58,10 +100,10 @@
             "nl": "maaiveld"
           },
           "description": {
-            "nl": "Het Maaiveld vh Bemonsteringsobject."
+            "nl": "Ligging van het grondoppervlak."
           },
           "usage": {
-            "nl": "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring)."
+            "nl": "Bvb nuttig in het geval wanneer men de geometrie van een Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
           },
           "domain": [
             {
@@ -88,8 +130,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "maaiveld",
-            "definition-nl": "Het Maaiveld vh Bemonsteringsobject.",
-            "usageNote-nl": "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring).",
+            "definition-nl": "Ligging van het grondoppervlak.",
+            "usageNote-nl": "Bvb nuttig in het geval wanneer men de geometrie van een Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld.",
             "name": "BO_RuimtelijkBemonsteringsobject.maaiveld"
           }
         },
@@ -144,10 +186,10 @@
             "nl": "diepte"
           },
           "description": {
-            "nl": "De Diepte vh Bemonsteringsobject."
+            "nl": "Geeft aan tot welke Diepte het Bemonsteringsobject reikt."
           },
           "usage": {
-            "nl": "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."
+            "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven hoe diep er geboord is."
           },
           "domain": [
             {
@@ -174,8 +216,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "diepte",
-            "definition-nl": "De Diepte vh Bemonsteringsobject.",
-            "usageNote-nl": "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen.",
+            "definition-nl": "Geeft aan tot welke Diepte het Bemonsteringsobject reikt.",
+            "usageNote-nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven hoe diep er geboord is.",
             "name": "BO_RuimtelijkBemonsteringsobject.diepte"
           }
         }
@@ -1524,6 +1566,21 @@
     }
   ],
   "properties": [
+    {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
+      "name": {
+        "nl": "aanvangspeil",
+        "undefined": "aanvangspeil"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
     {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde",
       "name": {

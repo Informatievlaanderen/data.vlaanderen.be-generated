@@ -8498,7 +8498,7 @@
       },
       "extra": {
         "EA-Name": "^maaiveld",
-        "EA-Guid": "{03D73409-5465-4107-9B81-12455A201CC0}",
+        "EA-Guid": "{4D6A2812-FA2F-4f92-B624-3B759BF162D4}",
         "EA-Package": "OSLO-Grondboringen",
         "EA-Type": "attribute",
         "EA-Domain": "Boorgat",
@@ -8539,6 +8539,11 @@
             "key": "uri",
             "value": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
             "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "NOTE",
+            "note": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
           },
           {
             "key": "ap-definition-nl",
@@ -8668,7 +8673,7 @@
       },
       "extra": {
         "EA-Name": "^diepte",
-        "EA-Guid": "{6CD2F53D-FC3B-4c4c-90B6-1EF0EB54C73C}",
+        "EA-Guid": "{FA8F4D6E-F744-4e58-8F8C-595895E9C941}",
         "EA-Package": "OSLO-Grondboringen",
         "EA-Type": "attribute",
         "EA-Domain": "Boorgat",
@@ -8714,6 +8719,11 @@
             "key": "ap-definition-nl",
             "value": "De diepte van het Boorgat.",
             "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "NOTE",
+            "note": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
           }
         ],
         "Scope": "TRANSLATIONS_ONLY"
@@ -8731,6 +8741,101 @@
           "EA-GUID": "{2F646ECE-32AB-4301-8A89-0F6F7D410F68}",
           "EA-Package": "OSLO-BodemEnOndergrond",
           "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.aanvangspeil",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "name": "aanvangspeil",
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "aanvangspeil"
+      },
+      "definition": {
+        "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+      },
+      "label": {
+        "nl": "aanvangspeil"
+      },
+      "definition-nl": {
+        "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+      },
+      "extra": {
+        "EA-Name": "^aanvangspeil",
+        "EA-Guid": "{100014F8-C40F-41c8-B56C-99498BEEDB59}",
+        "EA-Package": "OSLO-Grondboringen",
+        "EA-Type": "attribute",
+        "EA-Domain": "Boorgat",
+        "EA-Domain-Guid": "{C38DBB1A-EB18-4590-A878-37846E648571}",
+        "EA-Range": "Maat",
+        "RangeData": {
+          "EA-Name": "Maat",
+          "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
+          "EA-Package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        },
+        "label": {
+          "nl": "aanvangspeil"
+        },
+        "definition": {
+          "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+        },
+        "usage": "",
+        "label-nl": {
+          "nl": "aanvangspeil"
+        },
+        "definition-nl": {
+          "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+        },
+        "usageNote-nl": "",
+        "label-en": "",
+        "definition-en": "",
+        "usageNote-en": "",
+        "equivalent": "",
+        "subclass": "",
+        "subclass1": "",
+        "sameAs": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "aanvangspeil",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Geeft aan waar tov het Maaiveld het Boorgat start.",
+            "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "NOTE",
+            "note": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+          },
+          {
+            "key": "uri",
+            "value": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.aanvangspeil",
+            "note": "null"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
+          "EA-Name": "Boorgat"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Maat",
+          "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
+          "EA-Package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
         }
       ],
       "generalization": [],
@@ -14581,15 +14686,15 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-grondboringen/",
   "config": "config/config-voc.json",
   "branchtag": "master",
-  "dummy": "055",
+  "dummy": "056",
   "filename": "config/OSLO-BodemEnOndergrond-VOC-Grondboringen.json",
   "navigation": {
     "prev": "/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2021-08-01"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond",
   "urlref": "/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01",
-  "documentcommit": "008013250da18624c6d06a846066b4f6c4f3b62e",
-  "toolchaincommit": "649a5ab5f3af27b021a32eaf0d7b02a111d8bf3f",
+  "documentcommit": "5154d458d1c971105425e988d4a18274dfd22e32",
+  "toolchaincommit": "8351a2d3559dde1ef4d76c3436183c0d1822cb9b",
   "hostname": "https://data.vlaanderen.be",
   "translation": [
     {
