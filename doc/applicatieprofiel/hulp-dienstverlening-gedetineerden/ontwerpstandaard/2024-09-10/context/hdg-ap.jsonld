@@ -1,0 +1,245 @@
+{
+  "@context": {
+    "Activiteit": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+    "Activiteit.aantalInschrijvingen": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#aantalInschrijvingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.annulatieReden": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#annulatieReden",
+      "@type": "@id"
+    },
+    "Activiteit.beleidsdomein": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#beleidsdomein",
+      "@type": "@id"
+    },
+    "Activiteit.beschrijving": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Activiteit.categorie": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#categorie",
+      "@type": "@id"
+    },
+    "Activiteit.formaat": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#formaat",
+      "@type": "@id"
+    },
+    "Activiteit.gerealiseerdDoor": {
+      "@container": "@set",
+      "@id": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+      "@type": "@id"
+    },
+    "Activiteit.infrastructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.infrastructuur",
+      "@type": "@id"
+    },
+    "Activiteit.intake": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#intake",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Activiteit.naam": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Activiteit.status": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.status",
+      "@type": "@id"
+    },
+    "Activiteit.subcategorie": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#subcategorie",
+      "@type": "@id"
+    },
+    "Activiteit.taal": {
+      "@container": "@set",
+      "@id": "https://schema.org/inLanguage"
+    },
+    "ActiviteitStatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Annulatie": "http://fixme.com#Annulatie",
+    "Annulatie.aantalSessies": {
+      "@id": "http://fixme.com#aantal sessies",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Annulatie.reden": {
+      "@id": "http://fixme.com#reden",
+      "@type": "@id"
+    },
+    "AnnulatieReden": "http://fixme.com#AnnulatieReden",
+    "Beleidsdomein": "http://fixme.com#Beleidsdomein",
+    "Categorie": "http://fixme.com#Categorie",
+    "Doelgroep": "http://fixme.com#Doelgroep",
+    "Doelgroep.kenmerk": {
+      "@container": "@set",
+      "@id": "http://fixme.com#kenmerk",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk": "http://fixme.com#DoelgroepKenmerk",
+    "DoelgroepKenmerk.deelVan": {
+      "@container": "@set",
+      "@id": "http://fixme.com#deelVan",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.kenmerktype": {
+      "@id": "http://fixme.com#kenmerktype",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.waarde": {
+      "@id": "http://fixme.com#waarde",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerktype": "http://fixme.com#DoelgroepKenmerktype",
+    "Financiering": "http://fixme.com#Financiering",
+    "Financiering.bedrag": {
+      "@id": "http://fixme.com#bedrag",
+      "@type": "@id"
+    },
+    "Financiering.gefinancierdDoor": {
+      "@container": "@set",
+      "@id": "http://fixme.com#GefinancierdDoor",
+      "@type": "@id"
+    },
+    "Financiering.karakter": {
+      "@id": "http://fixme.com#karakter",
+      "@type": "@id"
+    },
+    "Financiering.uitbetalingsdatum": {
+      "@id": "http://fixme.com#uitbetalingsDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Financieringskarakter": "http://fixme.com#Financieringskarakter",
+    "Formaat": "http://fixme.com#Formaat",
+    "GebruikteVte": "http://fixme.com#GebruikteVTE",
+    "GebruikteVte.aantal": {
+      "@id": "http://fixme.com#aantal",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "GebruikteVte.vteType": {
+      "@id": "http://fixme.com#vteType",
+      "@type": "@id"
+    },
+    "GevangenisVestiging": "http://fixme.com#GevangenisVestiging",
+    "GevangenisVestiging.capaciteit": {
+      "@id": "http://fixme.com#capaciteit",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GevangenisVestiging.effectievePopulatie": {
+      "@id": "http://fixme.com#effectieve populatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GroepsActiviteit": "http://fixme.com#GroepsActiviteit",
+    "GroepsActiviteit.maximumAantalDeelnemers": {
+      "@id": "http://fixme.com#maximum aantal deelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GroepsActiviteit.minimumAantalDeelnemers": {
+      "@id": "http://fixme.com#minimum aantal deelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IndividueleActiviteit": "http://fixme.com#IndividueleActiviteit",
+    "Infrastructuur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+    "Infrastructuur.beschrijving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschrijving",
+      "@type": "@id"
+    },
+    "Infrastructuur.capaciteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit",
+      "@type": "@id"
+    },
+    "Infrastructuur.naam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Infrastructuur.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+      "@type": "@id"
+    },
+    "Infrastructuurtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Niveau": "http://fixme.com#Niveau",
+    "Organisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator",
+    "Realisatie": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
+    "Realisatie.activiteit": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.activiteit",
+      "@type": "@id"
+    },
+    "Realisatie.gebruiktObject": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.gebruiktObject"
+    },
+    "Realisatie.realisator": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.realisator",
+      "@type": "@id"
+    },
+    "Realisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator",
+    "Realisator.alternatieveNaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.beleidsdomein": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#beleidsdomein",
+      "@type": "@id"
+    },
+    "Realisator.naam": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.organisatievorm": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.organisatievorm",
+      "@type": "@id"
+    },
+    "Realisator.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Realisator.voertUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert",
+      "@type": "@id"
+    },
+    "Sessiereeks": "http://fixme.com#Sessiereeks",
+    "Sessiereeks.naam": {
+      "@id": "http://fixme.com#naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Sessiereeks.tijdschema": {
+      "@id": "http://fixme.com#tijdschema",
+      "@type": "@id"
+    },
+    "Subcategorie": "http://fixme.com#Subcategorie",
+    "Subsidiegever": "http://fixme.com#Subsidiegever",
+    "Subsidiegever.beleidsdomein": {
+      "@id": "http://fixme.com#beleidsdomein",
+      "@type": "@id"
+    },
+    "Subsidiegever.financiert": {
+      "@container": "@set",
+      "@id": "http://fixme.com#financiert",
+      "@type": "@id"
+    },
+    "Subsidiegever.niveau": {
+      "@id": "http://fixme.com#niveau",
+      "@type": "@id"
+    },
+    "Uitvoerder": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder",
+    "Verplaatsing": "http://fixme.com#Verplaatsing",
+    "Verplaatsing.aantalSessies": {
+      "@id": "http://fixme.com#aantal sessies",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Verplaatsing.reden": {
+      "@id": "http://fixme.com#reden",
+      "@type": "@id"
+    },
+    "VteType": "http://fixme.com#VTEType"
+  }
+}
