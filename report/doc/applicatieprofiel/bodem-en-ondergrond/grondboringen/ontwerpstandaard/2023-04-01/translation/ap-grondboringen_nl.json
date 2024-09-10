@@ -112,7 +112,7 @@
         "nl": "De handeling van het boren van een smalle schacht in de grond."
       },
       "usage": {
-        "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."
+        "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden."
       }
     },
     {
@@ -438,6 +438,19 @@
       }
     },
     {
+      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "definition": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      }
+    },
+    {
       "EA-Guid": "{2755A4AE-FE29-4950-8975-3C828B732715}",
       "name": "Object",
       "label": {
@@ -473,7 +486,7 @@
         "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
       },
       "usage": {
-        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
       }
     },
     {
@@ -526,19 +539,6 @@
       },
       "usage": {
         "nl": "Bedoeld om ex situ te worden geobserveerd, bv in een labo, omdat de vereiste meetaparatuur niet ter plaatse kan worden gebracht of omdat het werkelijk te observeren Object niet kan worden verplaatst of niet rechtstreeks bereikbaar is.OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen\">AP Observaties en Metingen</a>."
-      }
-    },
-    {
-      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-      "name": "Domeinobject",
-      "label": {
-        "nl": "Domeinobject"
-      },
-      "definition": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-      },
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
       }
     },
     {
@@ -709,6 +709,20 @@
       },
       "definition": {
         "nl": "TODO"
+      }
+    },
+    {
+      "EA-Guid": "{2076858F-784E-4260-A880-7D354E4B97F1}",
+      "name": "Inputtype",
+      "label": {
+        "nl": "InputType"
+      }
+    },
+    {
+      "EA-Guid": "{892171DF-EA4B-4e01-9A0A-F605D401D6E0}",
+      "name": "Outputtype",
+      "label": {
+        "nl": "OutputType"
       }
     },
     {
@@ -1101,6 +1115,16 @@
       }
     },
     {
+      "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+      "name": "opnamedatum",
+      "label": {
+        "nl": "opnamedatum"
+      },
+      "definition": {
+        "nl": "Datum waarop de Opmeting plaatsvond."
+      }
+    },
+    {
       "EA-Guid": "{EB48EB0C-3E46-48a0-9276-AB2492ECD655}",
       "name": "uitgevoerddoor",
       "label": {
@@ -1141,6 +1165,19 @@
       }
     },
     {
+      "EA-Guid": "{100014F8-C40F-41c8-B56C-99498BEEDB59}",
+      "name": "aanvangspeil",
+      "label": {
+        "nl": "aanvangspeil"
+      },
+      "definition": {
+        "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+      }
+    },
+    {
       "EA-Guid": "{DEF94715-84B1-4cf1-B2CF-B2C9015CEF4D}",
       "name": "hoogte",
       "label": {
@@ -1151,13 +1188,16 @@
       }
     },
     {
-      "EA-Guid": "{03D73409-5465-4107-9B81-12455A201CC0}",
+      "EA-Guid": "{4D6A2812-FA2F-4f92-B624-3B759BF162D4}",
       "name": "maaiveld",
       "label": {
         "nl": "maaiveld"
       },
       "definition": {
         "nl": "Het maaiveld van het Boorgat."
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
       }
     },
     {
@@ -1171,13 +1211,16 @@
       }
     },
     {
-      "EA-Guid": "{6CD2F53D-FC3B-4c4c-90B6-1EF0EB54C73C}",
+      "EA-Guid": "{FA8F4D6E-F744-4e58-8F8C-595895E9C941}",
       "name": "diepte",
       "label": {
         "nl": "diepte"
       },
       "definition": {
         "nl": "De diepte van het Boorgat."
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
       }
     },
     {
@@ -1604,6 +1647,16 @@
       }
     },
     {
+      "EA-Guid": "{009ABEE2-13FC-4570-9736-D49FCF3D2218}",
+      "name": "bemonsteringsmethode",
+      "label": {
+        "nl": "bemonsteringsmethode"
+      },
+      "definition": {
+        "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+      }
+    },
+    {
       "EA-Guid": "{08260904-7ACD-4ad4-BFE3-37D99E1D5C9F}",
       "name": "bemonsteringsplaats",
       "label": {
@@ -1686,6 +1739,19 @@
       },
       "usage": {
         "nl": "Bv Bemonsteringspunten langs een Bemonsteringscurve of Monsters genomen op een Bemonsteringspunt of deelmonsters (Monster van een Monster)..."
+      }
+    },
+    {
+      "EA-Guid": "{E73168B3-6A67-488f-9111-E9739E7E434F}",
+      "name": "bemonsterdobject",
+      "label": {
+        "nl": "bemonsterdObject"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+      },
+      "usage": {
+        "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
       }
     },
     {

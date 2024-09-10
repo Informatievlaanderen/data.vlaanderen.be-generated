@@ -67,7 +67,7 @@ skos:Concept a rdfs:Class;
   <http://purl.org/vocab/vann/usageNote> "Bvb geologische laag, grondwaterlichaam, bodem... Eventueel te substitueren door een subklasse. Onder \"grond\" wordt het deel vd aardkorst onder het aardoppervlak verstaan."@nl;
   rdfs:comment "Object in of mbt de grond."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
 
 <https://data.vlaanderen.be/ns/grondboringen#aangenomenGrondwaterstand> a owl:ObjectProperty;
   rdfs:label "aangenomenGrondwaterstand"@nl;
@@ -196,6 +196,9 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation> a rdf:Property;
   rdfs:label "bemonsteringsplaats"@nl .
 
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> a rdf:Property;
+  rdfs:label "bemonsteringsmethode"@nl .
+
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime> a rdf:Property;
   rdfs:label "bemonsteringstijdstip"@nl .
 
@@ -219,6 +222,9 @@ dc:type a rdf:Property;
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld> a rdf:Property;
   rdfs:label "maaiveld"@nl .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil> a rdf:Property;
+  rdfs:label "aanvangspeil"@nl .
 
 <https://data.vlaanderen.be/ns/grondboringen#Bekisting> a owl:Class;
   rdfs:label "Bekisting"@nl;
@@ -275,7 +281,7 @@ dc:type a rdf:Property;
 
 <https://data.vlaanderen.be/ns/grondboringen#Grondboring> a owl:Class;
   rdfs:label "Grondboring"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden."@nl;
   rdfs:comment "De handeling van het boren van een smalle schacht in de grond."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampling>,
@@ -306,6 +312,7 @@ dc:type a rdf:Property;
     skos:Concept,
     <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader>,
     <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte>,
@@ -314,6 +321,7 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation>,

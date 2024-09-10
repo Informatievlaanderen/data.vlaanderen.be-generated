@@ -740,7 +740,7 @@
             "@id": "https://data.vlaanderen.be/ns/grondboringen#Grondboring",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "usage": {
-                "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."
+                "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden."
             },
             "definition": {
                 "nl": "De handeling van het boren van een smalle schacht in de grond."
@@ -782,7 +782,7 @@
                     "nl": "De handeling van het boren van een smalle schacht in de grond."
                 },
                 "usage": {
-                    "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."
+                    "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden."
                 },
                 "ap-label-nl": {
                     "nl": "Grondboring"
@@ -805,8 +805,8 @@
                     },
                     {
                         "key": "usageNote-nl",
-                        "value": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd).",
-                        "note": "null"
+                        "value": "NOTE",
+                        "note": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden."
                     }
                 ],
                 "Scope": "FULL_DEFINITON"
@@ -929,10 +929,10 @@
                         "name": "Domeinobject",
                         "label": "Domeinobject",
                         "package": "OSLO-ObservatiesEnMetingen",
-                        "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+                        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
                     }
                 ],
-                "parentclasses": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+                "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
                 "label": {
                     "nl": "Grondobject"
                 },
@@ -972,7 +972,7 @@
             "inpackage": "ACTIVE_PACKAGE",
             "name": "Grondobject",
             "parents": [
-                "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+                "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
             ]
         },
         {
@@ -2684,10 +2684,10 @@
                         "name": "Dekking",
                         "label": "Dekking",
                         "package": "DublinCore",
-                        "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+                        "uri": "http://purl.org/dc/elements/1.1/coverage"
                     }
                 ],
-                "parentclasses": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+                "parentclasses": "http://purl.org/dc/elements/1.1/coverage",
                 "label": {
                     "nl": "Periode"
                 },
@@ -3138,6 +3138,93 @@
             "name": "Boorgat"
         },
         {
+            "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+            },
+            "usage": {
+                "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+            },
+            "definition": {
+                "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+            },
+            "label": {
+                "nl": "Domeinobject"
+            },
+            "ap-label-nl": {
+                "nl": "Domeinobject"
+            },
+            "ap-definition-nl": {
+                "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+            },
+            "extra": {
+                "EA-Name": "Domeinobject",
+                "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+                "EA-Package": "OSLO-ObservatiesEnMetingen",
+                "EA-Type": "CLASS",
+                "EA-Parents": "Object",
+                "EA-Parents2": [
+                    {
+                        "name": "Object",
+                        "label": "Object",
+                        "package": "OSLO-ObservatiesEnMetingen",
+                        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+                    }
+                ],
+                "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+                "label": {
+                    "nl": "Domeinobject"
+                },
+                "definition": {
+                    "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+                },
+                "usage": {
+                    "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+                },
+                "ap-label-nl": {
+                    "nl": "Domeinobject"
+                },
+                "ap-definition-nl": {
+                    "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+                },
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "Domeinobject",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Domeinobject",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Domeinobject"
+        },
+        {
             "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
@@ -3297,10 +3384,10 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "ap-usageNote-nl": {
-                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
             },
             "usage": {
-                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+                "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
             },
             "definition": {
                 "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
@@ -3329,7 +3416,7 @@
                     "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
                 },
                 "usage": {
-                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
                 },
                 "ap-label-nl": {
                     "nl": "Proces"
@@ -3338,7 +3425,7 @@
                     "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
                 },
                 "ap-usageNote-nl": {
-                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+                    "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
                 },
                 "ap-codelist": "",
                 "RawTags": [
@@ -3350,7 +3437,7 @@
                     {
                         "key": "ap-usageNote-nl",
                         "value": "NOTE",
-                        "note": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+                        "note": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
                     },
                     {
                         "key": "label-nl",
@@ -3479,9 +3566,16 @@
                 "EA-Guid": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
                 "EA-Package": "OSLO-ObservatiesEnMetingen",
                 "EA-Type": "CLASS",
-                "EA-Parents": "",
-                "EA-Parents2": [],
-                "parentclasses": "",
+                "EA-Parents": "Object",
+                "EA-Parents2": [
+                    {
+                        "name": "Object",
+                        "label": "Object",
+                        "package": "OSLO-ObservatiesEnMetingen",
+                        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+                    }
+                ],
+                "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
                 "label": {
                     "nl": "Bemonsteringsobject"
                 },
@@ -3686,93 +3780,6 @@
                 "Scope": "NOTHING"
             },
             "name": "Monster"
-        },
-        {
-            "@id": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-            "@type": "http://www.w3.org/2002/07/owl#Class",
-            "inpackage": "OTHER_PACKAGE",
-            "ap-usageNote-nl": {
-                "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-            },
-            "usage": {
-                "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-            },
-            "definition": {
-                "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-            },
-            "label": {
-                "nl": "Domeinobject"
-            },
-            "ap-label-nl": {
-                "nl": "Domeinobject"
-            },
-            "ap-definition-nl": {
-                "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-            },
-            "extra": {
-                "EA-Name": "Domeinobject",
-                "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-                "EA-Package": "OSLO-ObservatiesEnMetingen",
-                "EA-Type": "CLASS",
-                "EA-Parents": "Object",
-                "EA-Parents2": [
-                    {
-                        "name": "Object",
-                        "label": "Object",
-                        "package": "OSLO-ObservatiesEnMetingen",
-                        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-                    }
-                ],
-                "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-                "label": {
-                    "nl": "Domeinobject"
-                },
-                "definition": {
-                    "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-                },
-                "usage": {
-                    "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-                },
-                "ap-label-nl": {
-                    "nl": "Domeinobject"
-                },
-                "ap-definition-nl": {
-                    "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-                },
-                "ap-usageNote-nl": {
-                    "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-                },
-                "ap-codelist": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "Domeinobject",
-                        "note": "null"
-                    },
-                    {
-                        "key": "uri",
-                        "value": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-                        "note": "null"
-                    },
-                    {
-                        "key": "ap-label-nl",
-                        "value": "Domeinobject",
-                        "note": "null"
-                    },
-                    {
-                        "key": "ap-definition-nl",
-                        "value": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
-                        "note": "null"
-                    },
-                    {
-                        "key": "ap-usageNote-nl",
-                        "value": "NOTE",
-                        "note": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "name": "Domeinobject"
         },
         {
             "@id": "http://purl.org/dc/terms/Agent",
@@ -4927,6 +4934,116 @@
             "name": "Opmetingmethode"
         },
         {
+            "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "InputType"
+            },
+            "ap-label-nl": {
+                "nl": "InputType"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "InputType",
+                "EA-Guid": "{2076858F-784E-4260-A880-7D354E4B97F1}",
+                "EA-Package": "OSLO-SensorenEnBemonstering",
+                "EA-Type": "ENUMERATION",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "InputType"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "InputType"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "InputType",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/2004/02/skos/core#Concept",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "InputType",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Inputtype"
+        },
+        {
+            "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "OutputType"
+            },
+            "ap-label-nl": {
+                "nl": "OutputType"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "OutputType",
+                "EA-Guid": "{892171DF-EA4B-4e01-9A0A-F605D401D6E0}",
+                "EA-Package": "OSLO-SensorenEnBemonstering",
+                "EA-Type": "ENUMERATION",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "OutputType"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "OutputType"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "OutputType",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/2004/02/skos/core#Concept",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "OutputType",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Outputtype"
+        },
+        {
             "@id": "http://www.w3.org/ns/adms#Identifier",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
@@ -5099,10 +5216,10 @@
                         "name": "Dekking",
                         "label": "Dekking",
                         "package": "DublinCore",
-                        "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+                        "uri": "http://purl.org/dc/elements/1.1/coverage"
                     }
                 ],
-                "parentclasses": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+                "parentclasses": "http://purl.org/dc/elements/1.1/coverage",
                 "label": {
                     "nl": "Locatie"
                 },
@@ -7547,6 +7664,83 @@
             "maxCardinality": "*"
         },
         {
+            "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "opnamedatum",
+            "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Datum waarop de Opmeting plaatsvond."
+            },
+            "label": {
+                "nl": "opnamedatum"
+            },
+            "ap-label-nl": {
+                "nl": "opnamedatum"
+            },
+            "ap-definition-nl": {
+                "nl": "Datum waarop de Opmeting plaatsvond."
+            },
+            "extra": {
+                "EA-Name": "opnamedatum",
+                "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+                "EA-Package": "OSLO-Generiek",
+                "EA-Type": "attribute",
+                "EA-Domain": "Opmeting",
+                "EA-Domain-Guid": "{BFD25136-77A8-41d2-A135-26FA75EC9287}",
+                "EA-Range": "DateTime",
+                "RangeData": {
+                    "EA-Name": "DateTime",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "label": {
+                    "nl": "opnamedatum"
+                },
+                "definition": {
+                    "nl": "Datum waarop de Opmeting plaatsvond."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "opnamedatum"
+                },
+                "ap-definition-nl": {
+                    "nl": "Datum waarop de Opmeting plaatsvond."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "opnamedatum",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Datum waarop de Opmeting plaatsvond.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+                    "EA-Name": "Opmeting"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "DateTime",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
             "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "uitgevoerddoor",
@@ -7627,7 +7821,7 @@
                 }
             ],
             "generalization": [],
-            "minCardinality": "1",
+            "minCardinality": "0",
             "maxCardinality": "1"
         },
         {
@@ -7883,6 +8077,105 @@
             "maxCardinality": "1"
         },
         {
+            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "aanvangspeil",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+            },
+            "usage": {
+                "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+            },
+            "definition": {
+                "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+            },
+            "label": {
+                "nl": "aanvangspeil"
+            },
+            "ap-label-nl": {
+                "nl": "aanvangspeil"
+            },
+            "ap-definition-nl": {
+                "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+            },
+            "extra": {
+                "EA-Name": "^aanvangspeil",
+                "EA-Guid": "{100014F8-C40F-41c8-B56C-99498BEEDB59}",
+                "EA-Package": "OSLO-Grondboringen",
+                "EA-Type": "attribute",
+                "EA-Domain": "Boorgat",
+                "EA-Domain-Guid": "{C38DBB1A-EB18-4590-A878-37846E648571}",
+                "EA-Range": "Maat",
+                "RangeData": {
+                    "EA-Name": "Maat",
+                    "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+                },
+                "label": {
+                    "nl": "aanvangspeil"
+                },
+                "definition": {
+                    "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+                },
+                "usage": {
+                    "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+                },
+                "ap-label-nl": {
+                    "nl": "aanvangspeil"
+                },
+                "ap-definition-nl": {
+                    "nl": "Geeft aan waar tov het Maaiveld het Boorgat start."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+                },
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "aanvangspeil",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Geeft aan waar tov het Maaiveld het Boorgat start.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
+                    "EA-Name": "Boorgat"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Maat",
+                    "EA-GUID": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
             "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "hoogte",
@@ -7971,6 +8264,12 @@
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "maaiveld",
             "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
+            },
+            "usage": {
+                "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
+            },
             "definition": {
                 "nl": "Het maaiveld van het Boorgat."
             },
@@ -7985,7 +8284,7 @@
             },
             "extra": {
                 "EA-Name": "^maaiveld",
-                "EA-Guid": "{03D73409-5465-4107-9B81-12455A201CC0}",
+                "EA-Guid": "{4D6A2812-FA2F-4f92-B624-3B759BF162D4}",
                 "EA-Package": "OSLO-Grondboringen",
                 "EA-Type": "attribute",
                 "EA-Domain": "Boorgat",
@@ -8003,14 +8302,18 @@
                 "definition": {
                     "nl": "Het maaiveld van het Boorgat."
                 },
-                "usage": "",
+                "usage": {
+                    "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
+                },
                 "ap-label-nl": {
                     "nl": "maaiveld"
                 },
                 "ap-definition-nl": {
                     "nl": "Het maaiveld van het Boorgat."
                 },
-                "ap-usageNote-nl": "",
+                "ap-usageNote-nl": {
+                    "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
+                },
                 "ap-codelist": "",
                 "RawTags": [
                     {
@@ -8022,6 +8325,11 @@
                         "key": "uri",
                         "value": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
                         "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
                     },
                     {
                         "key": "ap-definition-nl",
@@ -8139,6 +8447,12 @@
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "diepte",
             "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
+            },
+            "usage": {
+                "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
+            },
             "definition": {
                 "nl": "De diepte van het Boorgat."
             },
@@ -8153,7 +8467,7 @@
             },
             "extra": {
                 "EA-Name": "^diepte",
-                "EA-Guid": "{6CD2F53D-FC3B-4c4c-90B6-1EF0EB54C73C}",
+                "EA-Guid": "{FA8F4D6E-F744-4e58-8F8C-595895E9C941}",
                 "EA-Package": "OSLO-Grondboringen",
                 "EA-Type": "attribute",
                 "EA-Domain": "Boorgat",
@@ -8171,14 +8485,18 @@
                 "definition": {
                     "nl": "De diepte van het Boorgat."
                 },
-                "usage": "",
+                "usage": {
+                    "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
+                },
                 "ap-label-nl": {
                     "nl": "diepte"
                 },
                 "ap-definition-nl": {
                     "nl": "De diepte van het Boorgat."
                 },
-                "ap-usageNote-nl": "",
+                "ap-usageNote-nl": {
+                    "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
+                },
                 "ap-codelist": "",
                 "RawTags": [
                     {
@@ -8195,6 +8513,11 @@
                         "key": "ap-definition-nl",
                         "value": "De diepte van het Boorgat.",
                         "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is."
                     }
                 ],
                 "Scope": "TRANSLATIONS_ONLY"
@@ -11348,7 +11671,7 @@
             "codelist": [],
             "domain": [
                 {
-                    "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+                    "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
                     "EA-Name": "Domeinobject"
                 }
             ],
@@ -11982,6 +12305,95 @@
                     "EA-GUID": "{AA000383-DD43-474f-91BE-E6D84D2B6CDC}",
                     "EA-Package": "OSLO-ObservatiesEnMetingen",
                     "uri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "bemonsteringsmethode",
+            "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+            },
+            "label": {
+                "nl": "bemonsteringsmethode"
+            },
+            "ap-label-nl": {
+                "nl": "bemonsteringsmethode"
+            },
+            "ap-definition-nl": {
+                "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+            },
+            "extra": {
+                "EA-Name": "^bemonsteringsmethode",
+                "EA-Guid": "{009ABEE2-13FC-4570-9736-D49FCF3D2218}",
+                "EA-Package": "OSLO-Grondboringen",
+                "EA-Type": "attribute",
+                "EA-Domain": "Grondmonster",
+                "EA-Domain-Guid": "{C858560E-C138-4223-AD4E-FC5284AA3FDE}",
+                "EA-Range": "BemonsteringsProces",
+                "RangeData": {
+                    "EA-Name": "BemonsteringsProces",
+                    "EA-GUID": "{A4489D37-7394-4c81-AAE8-75947D9AADD3}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+                },
+                "label": {
+                    "nl": "bemonsteringsmethode"
+                },
+                "definition": {
+                    "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "bemonsteringsmethode"
+                },
+                "ap-definition-nl": {
+                    "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "bemonsteringsmethode",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "bemonsteringsmethode",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Manier waarop het Monster is verkregen uit het bemonsterd Object.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+                    "EA-Name": "Grondmonster"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "BemonsteringsProces",
+                    "EA-GUID": "{A4489D37-7394-4c81-AAE8-75947D9AADD3}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
                 }
             ],
             "generalization": [],
@@ -12684,6 +13096,140 @@
             ],
             "generalization": [],
             "minCardinality": "0",
+            "maxCardinality": "*"
+        },
+        {
+            "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "bemonsterdobject",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+            },
+            "usage": {
+                "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+            },
+            "definition": {
+                "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+            },
+            "label": {
+                "nl": "bemonsterdObject"
+            },
+            "ap-label-nl": {
+                "nl": "bemonsterdObject"
+            },
+            "ap-definition-nl": {
+                "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+            },
+            "extra": {
+                "EA-Name": "bemonsterdObject",
+                "EA-Guid": "{E73168B3-6A67-488f-9111-E9739E7E434F}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Bemonsteringsobject",
+                "EA-Domain-Guid": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
+                "EA-Range": "Object",
+                "RangeData": {
+                    "EA-Name": "Object",
+                    "EA-GUID": "{2755A4AE-FE29-4950-8975-3C828B732715}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+                },
+                "sourceRole": "Intentie",
+                "destRole": "bemonsterdObject",
+                "label": {
+                    "nl": "bemonsterdObject"
+                },
+                "definition": {
+                    "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+                },
+                "usage": {
+                    "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+                },
+                "ap-label-nl": {
+                    "nl": "bemonsterdObject"
+                },
+                "ap-definition-nl": {
+                    "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+                },
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "bemonsterdObject"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "Verwijzing naar het Object dat men wil bemonsteren."
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "bemonsterdObject"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "bemonsterdObject"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "Verwijzing naar het Object dat men wil bemonsteren."
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "bemonsterdObject"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+                    "EA-Name": "Bemonsteringsobject"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Object",
+                    "EA-GUID": "{2755A4AE-FE29-4950-8975-3C828B732715}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
             "maxCardinality": "*"
         },
         {

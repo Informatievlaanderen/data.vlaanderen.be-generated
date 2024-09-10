@@ -6,7 +6,7 @@
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
         <dc:license rdf:resource="https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0"/>
         <dc:mediator>
-          <rdf:Description rdf:nodeID="g457460">
+          <rdf:Description rdf:nodeID="g457440">
             <foaf:homepage rdf:resource="https://data.vlaanderen.be"/>
             <foaf:mbox rdf:resource="mailto:oslo@kb.vlaanderen.be"/>
             <foaf:name>Data Vlaanderen</foaf:name>
@@ -15,9 +15,9 @@
         <rdfs:label xml:lang="en">grondboringen</rdfs:label>
         <rdfs:label xml:lang="nl">grondboringen</rdfs:label>
         <foaf:maker>
-          <foaf:Person rdf:nodeID="g457480">
+          <foaf:Person rdf:nodeID="g457460">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457500">
+              <rdf:Description rdf:nodeID="g457480">
                 <foaf:homepage rdf:resource="https://auteurwebsiteurl"/>
                 <foaf:name>AuteurAffiliatie</foaf:name>
               </rdf:Description>
@@ -28,9 +28,9 @@
           </foaf:Person>
         </foaf:maker>
         <ns0:editor>
-          <foaf:Person rdf:nodeID="g457520">
+          <foaf:Person rdf:nodeID="g457500">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457540">
+              <rdf:Description rdf:nodeID="g457520">
                 <foaf:homepage rdf:resource="https://editorwebsiteurl"/>
                 <foaf:name>EditorAffiliatie</foaf:name>
               </rdf:Description>
@@ -41,9 +41,9 @@
           </foaf:Person>
         </ns0:editor>
         <dc:contributor>
-          <foaf:Person rdf:nodeID="g457560">
+          <foaf:Person rdf:nodeID="g457540">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457580">
+              <rdf:Description rdf:nodeID="g457560">
                 <foaf:homepage rdf:resource="https://medewerkerwebsiteurl"/>
                 <foaf:name>MedewerkerAffiliatie</foaf:name>
               </rdf:Description>
@@ -79,6 +79,11 @@
         <rdfs:seeAlso>
           <rdf:Property rdf:about="https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel">
             <rdfs:label xml:lang="nl">doel</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil">
+            <rdfs:label xml:lang="nl">aanvangspeil</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -119,6 +124,11 @@
         <rdfs:seeAlso>
           <rdf:Property rdf:about="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime">
             <rdfs:label xml:lang="nl">bemonsteringstijdstip</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod">
+            <rdfs:label xml:lang="nl">bemonsteringsmethode</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -241,7 +251,7 @@
     <rdfs:label xml:lang="nl">Grondobject</rdfs:label>
     <rdfs:comment xml:lang="nl">Object in of mbt de grond.</rdfs:comment>
     <ns1:usageNote xml:lang="nl">Bvb geologische laag, grondwaterlichaam, bodem... Eventueel te substitueren door een subklasse. Onder "grond" wordt het deel vd aardkorst onder het aardoppervlak verstaan.</ns1:usageNote>
-    <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"/>
+    <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/grondboringen#aangenomenGrondwaterstand">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
@@ -260,7 +270,7 @@
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
         <rdfs:label xml:lang="nl">Grondboring</rdfs:label>
         <rdfs:comment xml:lang="nl">De handeling van het boren van een smalle schacht in de grond.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">Onder "grond" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd).</ns1:usageNote>
+        <ns1:usageNote xml:lang="nl">Onder "grond" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). Grondboring is gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden.</ns1:usageNote>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
         <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring"/>
       </owl:Class>
