@@ -1,3 +1,4 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,11 +9,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dbo:Case a rdfs:Class;
+  rdfs:label "Zaak"@nl .
+
 skos:Concept a rdfs:Class;
   rdfs:label "Vlarem Rubriek"@nl .
-
-<https://dbpedia.org/ontology/Case> a rdfs:Class;
-  rdfs:label "Zaak"@nl .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie> a owl:ObjectProperty;
   rdfs:label "juridische kwalificatie"@nl;
@@ -91,7 +92,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke> a owl:ObjectProperty;
   rdfs:label "verantwoordelijke"@nl;
-  rdfs:domain <https://dbpedia.org/ontology/Case>;
+  rdfs:domain dbo:Case;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <http://data.europa.eu/m8g/PublicOrganisation> .
 
@@ -105,11 +106,11 @@ skos:Concept a rdfs:Class;
   rdfs:label "zaak"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <https://dbpedia.org/ontology/Case> .
+  rdfs:range dbo:Case .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding> a owl:ObjectProperty;
   rdfs:label "aanleiding"@nl;
-  rdfs:domain <https://dbpedia.org/ontology/Case>;
+  rdfs:domain dbo:Case;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk> .
 
@@ -186,7 +187,7 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
+  rdfs:range <http://www.opengis.net/ont/geosparql#Feature> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#normatieveBepaling> a owl:ObjectProperty;
   rdfs:label "normatieve bepaling"@nl;
@@ -196,7 +197,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#procedure> a owl:ObjectProperty;
   rdfs:label "procedure"@nl;
-  rdfs:domain <https://dbpedia.org/ontology/Case>;
+  rdfs:domain dbo:Case;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure> .
 
@@ -258,9 +259,9 @@ skos:Concept a rdfs:Class;
   rdfs:label "verwanteZaak"@nl;
   <http://purl.org/vocab/vann/usageNote> "Verwantschappen kunnen verschillende doelstellingen hebben. De doelstelling mag een aangegeven worden in een gekwalificeerde relatie."@nl;
   rdfs:comment "Verwijzingen naar verwante Zaken."@nl;
-  rdfs:domain <https://dbpedia.org/ontology/Case>;
+  rdfs:domain dbo:Case;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <https://dbpedia.org/ontology/Case> .
+  rdfs:range dbo:Case .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij> a owl:ObjectProperty;
   rdfs:label "verzoekende partij"@nl;
@@ -268,6 +269,13 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject> .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#vindplaats> a owl:ObjectProperty;
+  rdfs:label "vindplaats"@nl;
+  rdfs:comment "De fysieke of digitale locatie waar het Document zich bevindt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Document>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
+  rdfs:range prov:Location .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp> a owl:ObjectProperty;
   rdfs:label "rechtsobject"@nl,
@@ -278,7 +286,7 @@ skos:Concept a rdfs:Class;
     <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>,
-    <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
+    <http://www.opengis.net/ont/geosparql#Feature> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk> a owl:ObjectProperty;
   rdfs:label "waarmerk"@nl;
@@ -289,7 +297,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling> a owl:ObjectProperty;
   rdfs:label "zaakhandeling"@nl;
-  rdfs:domain <https://dbpedia.org/ontology/Case>;
+  rdfs:domain dbo:Case;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling> .
 
@@ -301,9 +309,6 @@ dc:type a rdf:Property;
 
 <http://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
-
-prov:atLocation a rdf:Property;
-  rdfs:label "vindplaats"@nl .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag> a owl:Class;
   rdfs:label "Aanvraag"@nl;
@@ -319,12 +324,6 @@ prov:atLocation a rdf:Property;
   rdfs:comment "Bekendmaking aan het brede publiek."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling> .
-
-<https://data.vlaanderen.be/ns/omgevingsvergunning#Document> a owl:Class;
-  rdfs:label "Document"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."@nl;
-  rdfs:comment "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#RechterlijkeUitspraak> a owl:Class;
   rdfs:label "Rechterlijke Uitspraak"@nl;
@@ -344,6 +343,12 @@ prov:atLocation a rdf:Property;
   rdfs:comment "Handeling, uitgaande van een bestuur, die de rechtstoestand wijzigt, dan wel belet dat deze wordt gewijzigd."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling> .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#Document> a owl:Class;
+  rdfs:label "Document"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."@nl;
+  rdfs:comment "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud> a owl:Class;
   rdfs:label "Inhoud"@nl;
@@ -950,12 +955,11 @@ prov:atLocation a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso skos:Concept,
-    <https://dbpedia.org/ontology/Case>,
+  rdfs:seeAlso dbo:Case,
+    skos:Concept,
     dc:isPartOf,
     dc:type,
-    <http://www.w3.org/ns/adms#identifier>,
-    prov:atLocation;
+    <http://www.w3.org/ns/adms#identifier>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
