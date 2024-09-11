@@ -9,6 +9,9 @@ INPUT5=$1.extprops
 OUTPUT=$2
 RESULT=aggr.template
 
+# REGEXP for date validation YYYY-MM-DD
+DATE_PATTERN="^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+
 # calculate the participants
 
 NBAUTHORS=$(jq 'unique | length' ${INPUT}.authors)
@@ -43,8 +46,17 @@ jq ' [ .[] | { "status" : .[0].status, "specifications": length } ] ' ${INPUT}.s
 
 jq ' [ .[] | { "status" : .[0].status, "specifications_years": ., "specifications" : length } ] ' ${INPUT}.specstats.1 >${INPUT}.specstats.3
 
-jq '[.[] | .specifications_years |= map(select(.date != null) | . + { "year" : .date | strptime("%Y-%m-%d") | strftime("%Y") })]' ${INPUT}.specstats.3 >${INPUT}.specstats.4
-jq '[.[] | .specifications_years |= map(select(.date != null) | . + { "month" : .date | strptime("%Y-%m-%d") | strftime("%m") })]' ${INPUT}.specstats.4 >${INPUT}.specstats.5
+echo "Starting JSON processing..."
+
+# Process the JSON to extract year from date
+echo "Processing JSON to extract year from date"
+jq --arg DATE_PATTERN "$DATE_PATTERN" '[.[] | .specifications_years |= map(select(.date != null and (.date | test($DATE_PATTERN))) | . + { "year" : .date | strptime("%Y-%m-%d") | strftime("%Y") })]' ${INPUT}.specstats.3 >${INPUT}.specstats.4
+
+# Process the JSON to extract month from date
+echo "Processing JSON to extract month from date"
+jq --arg DATE_PATTERN "$DATE_PATTERN" '[.[] | .specifications_years |= map(select(.date != null and (.date | test($DATE_PATTERN))) | . + { "month" : .date | strptime("%Y-%m-%d") | strftime("%m") })]' ${INPUT}.specstats.4 >${INPUT}.specstats.5
+
+echo "Finished processing. Output written to: ${INPUT}.specstats.5"
 jq '[.[] |  .specifications_years |=  group_by(.year)  ]' ${INPUT}.specstats.5 >${INPUT}.specstats.6
 jq '[.[] |  .specifications_years[] |= {"year" : .[0].year , "number" : length , "specs" : . } ]' ${INPUT}.specstats.6 >${INPUT}.specstats.7
 jq '[.[] |  .specifications_years[].specs |= group_by(.month) ]' ${INPUT}.specstats.7 >${INPUT}.specstats.8
