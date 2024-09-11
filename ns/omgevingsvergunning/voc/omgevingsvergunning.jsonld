@@ -776,6 +776,17 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
+      },
+      "usage": {
+        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -785,11 +796,11 @@
         "nl": "Dat wat een rechtshandeling inhoudt."
       },
       "usage": {
-        "nl": "Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden."
+        "nl": "Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden. Gebruikers worden aangezet om het soort inhoud te classificeren volgens gemeenschappelijke codelijsten."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-        "-6ee58915:191d6e991fd:-7fff"
+        "-6dcd2ea:191dfe8b3db:-7fff"
       ]
     },
     {
@@ -953,7 +964,7 @@
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
-        "-6ee58915:191d6e991fd:-7ffd"
+        "-6dcd2ea:191dfe8b3db:-7ffd"
       ]
     },
     {
@@ -1464,7 +1475,7 @@
         "nl": "procedurestap"
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
@@ -1478,7 +1489,7 @@
         "nl": "procedurestap"
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
@@ -1530,23 +1541,6 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsobject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "rechtsobject"
-      },
-      "definition": {
-        "nl": "Het voorwerp van de Normatieve Bepaling."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
       ],
       "generalization": []
     },
@@ -1656,6 +1650,23 @@
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
+        "nl": "rechtsobject"
+      },
+      "definition": {
+        "nl": "Het voorwerp van de Normatieve Bepaling."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
         "nl": "voorwerp"
       },
       "definition": {
@@ -1666,6 +1677,23 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "waarmerk"
+      },
+      "definition": {
+        "nl": "Waarheidskenmerk van het Document."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk"
       ],
       "generalization": []
     },
@@ -1718,6 +1746,20 @@
         "nl": "identificator"
       },
       "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "identificator"
+      },
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "vindplaats"
+      },
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "rdf:Property"
     }
   ],

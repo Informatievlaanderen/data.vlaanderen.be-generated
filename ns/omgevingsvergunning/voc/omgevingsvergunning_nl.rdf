@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning">
@@ -927,6 +927,11 @@
             <rdfs:label xml:lang="nl">identificator</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://www.w3.org/ns/prov#atLocation">
+            <rdfs:label xml:lang="nl">vindplaats</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="nl">juridische kwalificatie</rdfs:label>
@@ -1031,7 +1036,7 @@
             <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
             <rdfs:label xml:lang="nl">Inhoud</rdfs:label>
             <rdfs:comment xml:lang="nl">Dat wat een rechtshandeling inhoudt.</rdfs:comment>
-            <ns1:usageNote xml:lang="nl">Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden.</ns1:usageNote>
+            <ns1:usageNote xml:lang="nl">Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden. Gebruikers worden aangezet om het soort inhoud te classificeren volgens gemeenschappelijke codelijsten.</ns1:usageNote>
             <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"/>
           </owl:Class>
         </rdfs:subClassOf>
@@ -1255,8 +1260,8 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">procedurestap</rdfs:label>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"/>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#publiekeOrganisatie">
@@ -1292,13 +1297,6 @@
     <ns1:usageNote xml:lang="nl">Bijvoorbeeld, de procedure voor de vereenvoudigde vergunningsprocedure is vastgesteld in de artikelen 37 en volgende van het Omgevingsdecreet, zoals van kracht op een bepaalde datum.</ns1:usageNote>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsobject">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">rechtsobject</rdfs:label>
-    <rdfs:comment xml:lang="nl">Het voorwerp van de Normatieve Bepaling.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#termijn">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1344,10 +1342,27 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+    <rdfs:label xml:lang="nl">rechtsobject</rdfs:label>
     <rdfs:label xml:lang="nl">voorwerp</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het voorwerp van de Normatieve Bepaling.</rdfs:comment>
     <rdfs:comment xml:lang="nl">De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+    <rdfs:label xml:lang="nl">waarmerk</rdfs:label>
+    <rdfs:comment xml:lang="nl">Waarheidskenmerk van het Document.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Document">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+        <rdfs:comment xml:lang="nl">Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook.</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten.</ns1:usageNote>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>

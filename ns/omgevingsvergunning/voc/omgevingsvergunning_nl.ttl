@@ -1,6 +1,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -201,8 +202,8 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap> a owl:ObjectProperty;
   rdfs:label "procedurestap"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>,
-    <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap> .
 
@@ -225,13 +226,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk> .
-
-<https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsobject> a owl:ObjectProperty;
-  rdfs:label "rechtsobject"@nl;
-  rdfs:comment "Het voorwerp van de Normatieve Bepaling."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#termijn> a owl:ObjectProperty;
   rdfs:label "termijn"@nl;
@@ -276,11 +270,22 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp> a owl:ObjectProperty;
-  rdfs:label "voorwerp"@nl;
-  rdfs:comment "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand>;
+  rdfs:label "rechtsobject"@nl,
+    "voorwerp"@nl;
+  rdfs:comment "Het voorwerp van de Normatieve Bepaling."@nl,
+    "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>,
+    <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk> a owl:ObjectProperty;
+  rdfs:label "waarmerk"@nl;
+  rdfs:comment "Waarheidskenmerk van het Document."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Document>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling> a owl:ObjectProperty;
   rdfs:label "zaakhandeling"@nl;
@@ -297,6 +302,9 @@ dc:type a rdf:Property;
 <http://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
 
+prov:atLocation a rdf:Property;
+  rdfs:label "vindplaats"@nl .
+
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag> a owl:Class;
   rdfs:label "Aanvraag"@nl;
   <http://purl.org/vocab/vann/usageNote> "In de context van omgevingsvergunningen betreft dit alle aanvragen van of met betrekking tot omgevingsvergunningen."@nl;
@@ -311,6 +319,11 @@ dc:type a rdf:Property;
   rdfs:comment "Bekendmaking aan het brede publiek."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling> .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#Document> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."@nl;
+  rdfs:comment "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#RechterlijkeUitspraak> a owl:Class;
   rdfs:label "Rechterlijke Uitspraak"@nl;
@@ -333,7 +346,7 @@ dc:type a rdf:Property;
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud> a owl:Class;
   rdfs:label "Inhoud"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden. Gebruikers worden aangezet om het soort inhoud te classificeren volgens gemeenschappelijke codelijsten."@nl;
   rdfs:comment "Dat wat een rechtshandeling inhoudt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk> .
@@ -940,7 +953,8 @@ dc:type a rdf:Property;
     <https://dbpedia.org/ontology/Case>,
     dc:isPartOf,
     dc:type,
-    <http://www.w3.org/ns/adms#identifier>;
+    <http://www.w3.org/ns/adms#identifier>,
+    prov:atLocation;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
