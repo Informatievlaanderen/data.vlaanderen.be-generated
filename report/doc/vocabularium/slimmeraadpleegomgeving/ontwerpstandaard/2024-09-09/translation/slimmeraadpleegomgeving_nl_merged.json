@@ -100,7 +100,7 @@
       "foaf:mbox": "nancy.nimmegeers@aalter.be"
     }
   ],
-  "branchtag": "SRO-0.1.0",
+  "branchtag": "SRO-0.1.1",
   "classes": [
     {
       "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
@@ -618,8 +618,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-SlimmeRaadpleegomgeving",
-  "documentcommit": "0bdb7ce53cf2806e920c132690fd72a573743dbc",
-  "dummy": "013",
+  "documentcommit": "a33ea7f501c467a3005998c0ff5bdc5d1a634709",
+  "dummy": "014",
   "eap": "SlimmeRaadpleegomgeving-AP-en-VOC.eap",
   "editors": [
     {
@@ -768,9 +768,14 @@
             "value": "locatie"
           },
           {
-            "key": "ap-description-nl",
+            "key": "ap-usageNote-nl",
             "note": "null",
-            "value": "URL naar de website."
+            "value": "Website locatie moet voldoen aan het formaat beschreven in RFC1738: https://datatracker.ietf.org/doc/html/rfc1738#section-3.3\t"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "URL van de website."
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -980,7 +985,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{21BBE76B-1798-4674-8641-F6DB0D4C1833}",
       "codelist": [],
       "definition": {
@@ -1004,9 +1009,10 @@
         "EA-Range": "Tijdsduur",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
+          "EA-GUID": "{EDB13599-DB1A-4d8d-8207-4782316720B5}",
+          "EA-Name": "Tijdsduur",
+          "EA-Package": "generiek-uitbreiding",
+          "uri": "http://www.w3.org/2006/time#Interval"
         },
         "RawTags": [
           {
@@ -1017,7 +1023,7 @@
           {
             "key": "usageNote-nl",
             "note": "null",
-            "value": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+            "value": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd. Zie OSLO Omgevingsvergunning voor het gebruik van Tijdsduur."
           },
           {
             "key": "label-nl",
@@ -1045,11 +1051,11 @@
         "subclass": "",
         "subclass1": "",
         "usage": {
-          "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+          "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd. Zie OSLO Omgevingsvergunning voor het gebruik van Tijdsduur."
         },
         "usageNote-en": "",
         "usageNote-nl": {
-          "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+          "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd. Zie OSLO Omgevingsvergunning voor het gebruik van Tijdsduur."
         }
       },
       "generalization": [],
@@ -1063,17 +1069,24 @@
       "maxCardinality": "*",
       "minCardinality": "0",
       "name": "tijdsbestek",
-      "range": [],
+      "range": [
+        {
+          "EA-GUID": "{EDB13599-DB1A-4d8d-8207-4782316720B5}",
+          "EA-Name": "Tijdsduur",
+          "EA-Package": "generiek-uitbreiding",
+          "uri": "http://www.w3.org/2006/time#Interval"
+        }
+      ],
       "usage": {
-        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd. Zie OSLO Omgevingsvergunning voor het gebruik van Tijdsduur."
       },
       "usageNote-nl": {
-        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd. Zie OSLO Omgevingsvergunning voor het gebruik van Tijdsduur."
       }
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{671C8E1D-C71C-46b4-86CD-E9D537BB34CB}",
       "codelist": [],
       "definition": {
@@ -1084,12 +1097,12 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
       ],
       "extra": {
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
         "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
         "EA-Guid": "{671C8E1D-C71C-46b4-86CD-E9D537BB34CB}",
         "EA-Name": "tijdsbestek",
@@ -1097,9 +1110,10 @@
         "EA-Range": "Tijdsduur",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
+          "EA-GUID": "{EDB13599-DB1A-4d8d-8207-4782316720B5}",
+          "EA-Name": "Tijdsduur",
+          "EA-Package": "generiek-uitbreiding",
+          "uri": "http://www.w3.org/2006/time#Interval"
         },
         "RawTags": [
           {
@@ -1147,81 +1161,12 @@
       "maxCardinality": "*",
       "minCardinality": "0",
       "name": "tijdsbestek",
-      "range": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtssubject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{3CBF5C2A-9CFF-4d0e-98EA-6C4F3C2A6482}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Activiteit",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
-        }
-      ],
-      "extra": {
-        "EA-Domain": "Activiteit",
-        "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-        "EA-Guid": "{3CBF5C2A-9CFF-4d0e-98EA-6C4F3C2A6482}",
-        "EA-Name": "rechtssubject",
-        "EA-Package": "OSLO-Omgevingsvergunning",
-        "EA-Range": "Rechtssubject",
-        "EA-Type": "attribute",
-        "RangeData": {
-          "EA-GUID": "{541EDF54-92DB-4f18-AC5B-4811343F7AAF}",
-          "EA-Name": "Rechtssubject",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
-        },
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "note": "null",
-            "value": "rechtssubject"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "equivalent": "",
-        "label": {
-          "nl": "rechtssubject"
-        },
-        "label-en": "",
-        "label-nl": {
-          "nl": "rechtssubject"
-        },
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label": {
-        "nl": "rechtssubject"
-      },
-      "label-nl": {
-        "nl": "rechtssubject"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "rechtssubject",
       "range": [
         {
-          "EA-GUID": "{541EDF54-92DB-4f18-AC5B-4811343F7AAF}",
-          "EA-Name": "Rechtssubject",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+          "EA-GUID": "{EDB13599-DB1A-4d8d-8207-4782316720B5}",
+          "EA-Name": "Tijdsduur",
+          "EA-Package": "generiek-uitbreiding",
+          "uri": "http://www.w3.org/2006/time#Interval"
         }
       ]
     },
@@ -1260,11 +1205,11 @@
         "EA-Guid": "{71140E32-134B-4b6c-97CD-6D5788852717}",
         "EA-Name": "rechtsobject",
         "EA-Package": "",
-        "EA-Range": "Activiteit",
+        "EA-Range": "Activiteit (Omgevingsvergunning)",
         "EA-Type": "connector",
         "RangeData": {
           "EA-GUID": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "EA-Package": "OSLO-Omgevingsvergunning",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         },
@@ -1320,7 +1265,7 @@
       "range": [
         {
           "EA-GUID": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "EA-Package": "OSLO-Omgevingsvergunning",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
@@ -1339,12 +1284,12 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
       ],
       "extra": {
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
         "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
         "EA-Guid": "{DC0CC1A5-5B88-48de-A464-196EA75F3E6F}",
         "EA-Name": "locatie",
@@ -1425,12 +1370,12 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
       ],
       "extra": {
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
         "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
         "EA-Guid": "{931702B6-A759-4059-A346-7D49F86DE918}",
         "EA-Name": "juridischeKwalificatie",
@@ -1499,6 +1444,82 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#betrokkene",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{3CBF5C2A-9CFF-4d0e-98EA-6C4F3C2A6482}",
+      "codelist": [],
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "domain": [
+        {
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
+        "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
+        "EA-Guid": "{3CBF5C2A-9CFF-4d0e-98EA-6C4F3C2A6482}",
+        "EA-Name": "betrokkene",
+        "EA-Package": "OSLO-Omgevingsvergunning",
+        "EA-Range": "Rechtssubject",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{541EDF54-92DB-4f18-AC5B-4811343F7AAF}",
+          "EA-Name": "Rechtssubject",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "betrokkene"
+          }
+        ],
+        "Scope": "NOTHING",
+        "definition": "",
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "betrokkene"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "betrokkene"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "betrokkene"
+      },
+      "label-nl": {
+        "nl": "betrokkene"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "betrokkene",
+      "range": [
+        {
+          "EA-GUID": "{541EDF54-92DB-4f18-AC5B-4811343F7AAF}",
+          "EA-Name": "Rechtssubject",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        }
+      ]
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{CA407D66-47F2-48c3-B25C-2E23EC9F38B1}",
@@ -1511,12 +1532,12 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
       ],
       "extra": {
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
         "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
         "EA-Guid": "{CA407D66-47F2-48c3-B25C-2E23EC9F38B1}",
         "EA-Name": "beschrijving",
@@ -1600,7 +1621,7 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
       ],
@@ -1622,16 +1643,16 @@
             "value": "NOTE"
           }
         ],
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Omgevingsvergunning)",
         "EA-Domain-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
         "EA-Guid": "{C4FC0466-FD8D-4bd1-A109-1AC56E993397}",
         "EA-Name": "activiteit",
         "EA-Package": "",
-        "EA-Range": "Activiteit",
+        "EA-Range": "Activiteit (Omgevingsvergunning)",
         "EA-Type": "connector",
         "RangeData": {
           "EA-GUID": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "EA-Package": "OSLO-Omgevingsvergunning",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         },
@@ -1696,7 +1717,7 @@
       "range": [
         {
           "EA-GUID": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Omgevingsvergunning)",
           "EA-Package": "OSLO-Omgevingsvergunning",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
         }
@@ -1791,6 +1812,215 @@
           "EA-Name": "GestructureerdeIdentificator",
           "EA-Package": "OSLO-Generiek",
           "uri": "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/dossier#informatieclassificatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{D116972D-6FBE-463b-89EA-6683C8168234}",
+      "codelist": [],
+      "definition": {
+        "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
+      },
+      "definition-nl": {
+        "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "http://www.w3.org/ns/prov#Entity"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{D116972D-6FBE-463b-89EA-6683C8168234}",
+        "EA-Name": "informatieclassificatie",
+        "EA-Package": "OSLO-Dossier",
+        "EA-Range": "Code",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{B34F7CDB-D10F-4e2f-BBD1-A7FEFCB01973}",
+          "EA-Name": "Code",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "informatieclassificatie"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden voor het Stuk."
+          },
+          {
+            "key": "domain",
+            "note": "null",
+            "value": "http://www.w3.org/ns/prov#Entity"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://data.vlaanderen.be/ns/dossier#informatieclassificatie"
+          }
+        ],
+        "Scope": "NOTHING",
+        "definition": {
+          "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "informatieclassificatie"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "informatieclassificatie"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "informatieclassificatie"
+      },
+      "label-nl": {
+        "nl": "informatieclassificatie"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "informatieclassificatie",
+      "range": [
+        {
+          "EA-GUID": "{B34F7CDB-D10F-4e2f-BBD1-A7FEFCB01973}",
+          "EA-Name": "Code",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/dossier#auteur",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{08A5F71F-820E-4ab4-85D8-9BFBE222E501}",
+      "codelist": [],
+      "definition": {
+        "nl": "De auteur van het stuk(onderdeel)."
+      },
+      "definition-nl": {
+        "nl": "De auteur van het stuk(onderdeel)."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "http://www.w3.org/ns/prov#Entity"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{08A5F71F-820E-4ab4-85D8-9BFBE222E501}",
+        "EA-Name": "auteur",
+        "EA-Package": "OSLO-Dossier",
+        "EA-Range": "Agent",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "auteur"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De auteur van het stuk(onderdeel)."
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "De auteur van het stuk."
+          },
+          {
+            "key": "parentURI",
+            "note": "null",
+            "value": "http://purl.org/dc/terms/creator"
+          },
+          {
+            "key": "domain",
+            "note": "null",
+            "value": "http://www.w3.org/ns/prov#Entity"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://data.vlaanderen.be/ns/dossier#auteur"
+          }
+        ],
+        "Scope": "NOTHING",
+        "definition": {
+          "nl": "De auteur van het stuk(onderdeel)."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De auteur van het stuk(onderdeel)."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "auteur"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "auteur"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/creator"
+      ],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "auteur"
+      },
+      "label-nl": {
+        "nl": "auteur"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "auteur",
+      "range": [
+        {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
         }
       ]
     },
@@ -1905,7 +2135,7 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Annotaties)",
           "uri": "http://www.w3.org/ns/prov#Activity"
         }
       ],
@@ -1927,7 +2157,7 @@
             "value": "NOTE"
           }
         ],
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Annotaties)",
         "EA-Domain-Guid": "{4909E2DB-60C1-4b34-99F9-AD25B92A9BEB}",
         "EA-Guid": "{AACBDDE8-1874-41af-92A9-F80D21CFD55F}",
         "EA-Name": "wasGeassocieerdMet",
@@ -2086,406 +2316,6 @@
       ]
     },
     {
-      "@id": "http://www.w3.org/ns/prov#used",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{ED5A6636-1A40-48c9-9B14-8D9454F6CC37}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "BehandelingVanAgendapunt",
-          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#used",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Stuk dat werd gebruikt voor de behandeling van de agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "gebruikte",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "BehandelingVanAgendapunt",
-        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
-        "EA-Guid": "{ED5A6636-1A40-48c9-9B14-8D9454F6CC37}",
-        "EA-Name": "gebruikte",
-        "EA-Package": "",
-        "EA-Range": "Stuk",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-          "EA-Name": "Stuk",
-          "EA-Package": "OSLO-Dossier",
-          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#used",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Stuk dat werd gebruikt voor de behandeling van de agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "gebruikte",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "gebruikte",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-          "EA-Name": "Stuk",
-          "EA-Package": "OSLO-Dossier",
-          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/prov#used",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{13EF5280-07B5-4a15-807F-87705E5C2293}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "BehandelingVanAgendapunt",
-          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-usageNote-nl",
-            "note": "Om te verwijzen naar een instantie publieke dienstverlening die nog in ontwerp is en al dan niet bekrachtigd wordt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Instantie publieke dienstverlening die werd gebruikt voor de behandeling van de agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#used",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "gebruikte",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "BehandelingVanAgendapunt",
-        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
-        "EA-Guid": "{13EF5280-07B5-4a15-807F-87705E5C2293}",
-        "EA-Name": "gebruikte",
-        "EA-Package": "",
-        "EA-Range": "InstantiePubliekeDienstverlening",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{88F0D7BB-64E6-4cbc-9878-4A72BE9A0A6D}",
-          "EA-Name": "InstantiePubliekeDienstverlening",
-          "EA-Package": "IPDC-LPDC",
-          "uri": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService"
-        },
-        "RawTags": [
-          {
-            "key": "ap-usageNote-nl",
-            "note": "Om te verwijzen naar een instantie publieke dienstverlening die nog in ontwerp is en al dan niet bekrachtigd wordt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Instantie publieke dienstverlening die werd gebruikt voor de behandeling van de agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#used",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "gebruikte",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "gebruikte",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "1",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{88F0D7BB-64E6-4cbc-9878-4A72BE9A0A6D}",
-          "EA-Name": "InstantiePubliekeDienstverlening",
-          "EA-Package": "IPDC-LPDC",
-          "uri": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService"
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/prov#invalidated",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{145D7266-4349-4bb8-A468-5A09F22E5B11}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "BehandelingVanAgendapunt",
-          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "beeindigt",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#invalidated",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "BehandelingVanAgendapunt",
-        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
-        "EA-Guid": "{145D7266-4349-4bb8-A468-5A09F22E5B11}",
-        "EA-Name": "beeindigt",
-        "EA-Package": "",
-        "EA-Range": "NormatieveBepaling",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-        },
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "beeindigt",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#invalidated",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "beeindigt",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/prov#generates",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{001136FF-7DE0-4c8a-B672-06C38BD603A6}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Activiteit",
-          "uri": "http://www.w3.org/ns/prov#Activity"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#generates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "genereert",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Activiteit",
-        "EA-Domain-Guid": "{4909E2DB-60C1-4b34-99F9-AD25B92A9BEB}",
-        "EA-Guid": "{001136FF-7DE0-4c8a-B672-06C38BD603A6}",
-        "EA-Name": "genereert",
-        "EA-Package": "",
-        "EA-Range": "Annotatie",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{9AC2247A-0639-436a-9AD1-CB162486F4E8}",
-          "EA-Name": "Annotatie",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/oa#Annotation"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#generates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "genereert",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "genereert",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{9AC2247A-0639-436a-9AD1-CB162486F4E8}",
-          "EA-Name": "Annotatie",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/oa#Annotation"
-        }
-      ]
-    },
-    {
       "@id": "http://www.w3.org/ns/prov#generated",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{5D815B95-49CE-4ebd-9842-958C7DA8FF4B}",
@@ -2588,105 +2418,6 @@
           "EA-Name": "LegaleVerschijningsvorm",
           "EA-Package": "OSLO-Besluit",
           "uri": "https://data.europa.eu/eli/ontology#LegalExpression"
-        }
-      ]
-    },
-    {
-      "@id": "http://www.w3.org/ns/prov#generated",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{E6DF339D-5A9A-4f40-A390-14A00683B6E9}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "BehandelingVanAgendapunt",
-          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "creeert",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#generated",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "BehandelingVanAgendapunt",
-        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
-        "EA-Guid": "{E6DF339D-5A9A-4f40-A390-14A00683B6E9}",
-        "EA-Name": "creeert",
-        "EA-Package": "",
-        "EA-Range": "NormatieveBepaling",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "creeert",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#generated",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "creeert",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
         }
       ]
     },
@@ -3797,7 +3528,7 @@
           {
             "key": "ap-label-nl",
             "note": "null",
-            "value": "toegekend door"
+            "value": "toegekend door (string)"
           },
           {
             "key": "definition-nl",
@@ -4513,12 +4244,12 @@
       },
       "domain": [
         {
-          "EA-Name": "Activiteit",
+          "EA-Name": "Activiteit (Annotaties)",
           "uri": "http://www.w3.org/ns/prov#Activity"
         }
       ],
       "extra": {
-        "EA-Domain": "Activiteit",
+        "EA-Domain": "Activiteit (Annotaties)",
         "EA-Domain-Guid": "{4909E2DB-60C1-4b34-99F9-AD25B92A9BEB}",
         "EA-Guid": "{E6489D23-0931-4e7d-9529-946BD7CA0C0B}",
         "EA-Name": "type",
@@ -4793,299 +4524,6 @@
       "usageNote-nl": {
         "nl": "Omwille van de meertaligheid dient er 1 waarde per taal te zijn."
       }
-    },
-    {
-      "@id": "http://purl.org/dc/terms/subject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{B7131DF1-0E02-41c3-A235-F91ABFC68CB2}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Stuk",
-          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "onderwerp",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://purl.org/dc/terms/subject",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Stuk",
-        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-        "EA-Guid": "{B7131DF1-0E02-41c3-A235-F91ABFC68CB2}",
-        "EA-Name": "onderwerp",
-        "EA-Package": "",
-        "EA-Range": "InitiatiefrechtVraag",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
-          "EA-Name": "InitiatiefrechtVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-        },
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "onderwerp",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://purl.org/dc/terms/subject",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "onderwerp",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
-          "EA-Name": "InitiatiefrechtVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-        }
-      ]
-    },
-    {
-      "@id": "http://purl.org/dc/terms/subject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{C5553A82-378C-4239-BDCC-FE6D15AABBD8}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Stuk",
-          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "note": "http://purl.org/dc/terms/subject",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "onderwerp",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Stuk",
-        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-        "EA-Guid": "{C5553A82-378C-4239-BDCC-FE6D15AABBD8}",
-        "EA-Name": "onderwerp",
-        "EA-Package": "",
-        "EA-Range": "InitiatiefrechtAntwoord",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
-          "EA-Name": "InitiatiefrechtAntwoord",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "http://purl.org/dc/terms/subject",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "onderwerp",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "onderwerp",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
-          "EA-Name": "InitiatiefrechtAntwoord",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
-        }
-      ]
-    },
-    {
-      "@id": "http://purl.org/dc/terms/subject",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{A360BB84-EF42-46ee-A4FA-48559C9DB037}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Stuk",
-          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
-        }
-      ],
-      "extra": {
-        "EA-Domain": "Stuk",
-        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-        "EA-Guid": "{A360BB84-EF42-46ee-A4FA-48559C9DB037}",
-        "EA-Name": "onderwerp",
-        "EA-Package": "OSLO-Dossier",
-        "EA-Range": "Thema",
-        "EA-Type": "attribute",
-        "RangeData": {
-          "EA-GUID": "{189BB015-93F5-4a86-9AE5-1FC06DD4E941}",
-          "EA-Name": "Thema",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "http://purl.org/dc/terms/subject"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "onderwerp"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Onderwerp van dit Stuk."
-          },
-          {
-            "key": "ap-codelist",
-            "note": "null",
-            "value": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema"
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "note": "null",
-            "value": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden."
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{189BB015-93F5-4a86-9AE5-1FC06DD4E941}",
-          "EA-Name": "Thema",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
-        }
-      ]
     },
     {
       "@id": "http://purl.org/dc/terms/source",
@@ -6376,702 +5814,6 @@
       ]
     },
     {
-      "@id": "http://ontology.tno.nl/normengineering/flint#terminates",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{8D65C5A0-D20F-4d79-A600-A7CD1417A20C}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Handeling",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Act"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#terminates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "beeindigt",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met die feiten die ze beëindigen wanneer ze worden uitgevoerd.",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Handeling",
-        "EA-Domain-Guid": "{07BE0A1B-E674-47dc-BD4F-B62C105B8D87}",
-        "EA-Guid": "{8D65C5A0-D20F-4d79-A600-A7CD1417A20C}",
-        "EA-Name": "beeindigt",
-        "EA-Package": "",
-        "EA-Range": "Feit",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#terminates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "beeindigt",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met die feiten die ze beëindigen wanneer ze worden uitgevoerd.",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "beeindigt",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        }
-      ]
-    },
-    {
-      "@id": "http://ontology.tno.nl/normengineering/flint#hasPrecondition",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{9CFA4007-8E1C-47f0-91DE-08BC45BC9F81}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Handeling",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Act"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met (mogelijk complexe) feiten die waar moeten zijn om de handeling geldig te laten zijn.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "heeft preconditie",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasPrecondition",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Handeling",
-        "EA-Domain-Guid": "{07BE0A1B-E674-47dc-BD4F-B62C105B8D87}",
-        "EA-Guid": "{9CFA4007-8E1C-47f0-91DE-08BC45BC9F81}",
-        "EA-Name": "heeftPreconditie",
-        "EA-Package": "",
-        "EA-Range": "Feit",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        },
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met (mogelijk complexe) feiten die waar moeten zijn om de handeling geldig te laten zijn.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "heeft preconditie",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasPrecondition",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "heeftPreconditie",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        }
-      ]
-    },
-    {
-      "@id": "http://ontology.tno.nl/normengineering/flint#hasHolder",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{16F443EB-96F7-451c-89E6-CEA08D2B3388}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Verbintenis",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "rechthebbende",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "De agent die rechthebbende is van de verbintenis.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasHolder",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Verbintenis",
-        "EA-Domain-Guid": "{8978C8D4-ABD1-4669-9DF3-99CDBB6AD933}",
-        "EA-Guid": "{16F443EB-96F7-451c-89E6-CEA08D2B3388}",
-        "EA-Name": "rechthebbende",
-        "EA-Package": "",
-        "EA-Range": "Agent",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "rechthebbende",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "De agent die rechthebbende is van de verbintenis.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasHolder",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "rechthebbende",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "1",
-      "minCardinality": "1",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        }
-      ]
-    },
-    {
-      "@id": "http://ontology.tno.nl/normengineering/flint#hasClaimant",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{27C27CF2-D876-4eb8-B1BC-97F7F4011CB5}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Verbintenis",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "eiser",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "De agent die de vordering van de verbintenis eist.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasClaimant",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Verbintenis",
-        "EA-Domain-Guid": "{8978C8D4-ABD1-4669-9DF3-99CDBB6AD933}",
-        "EA-Guid": "{27C27CF2-D876-4eb8-B1BC-97F7F4011CB5}",
-        "EA-Name": "eiser",
-        "EA-Package": "",
-        "EA-Range": "Agent",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "eiser",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "De agent die de vordering van de verbintenis eist.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#hasClaimant",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "eiser",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "1",
-      "minCardinality": "1",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        }
-      ]
-    },
-    {
-      "@id": "http://ontology.tno.nl/normengineering/flint#creates",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{770704A3-4023-4a2a-B325-BF8E86CD2C3E}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Handeling",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Act"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met de feiten die ze creëren wanneer ze worden uitgevoerd.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#creates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "creeert",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Handeling",
-        "EA-Domain-Guid": "{07BE0A1B-E674-47dc-BD4F-B62C105B8D87}",
-        "EA-Guid": "{770704A3-4023-4a2a-B325-BF8E86CD2C3E}",
-        "EA-Name": "creeert",
-        "EA-Package": "",
-        "EA-Range": "Feit",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        },
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Verbindt handelingen met de feiten die ze creëren wanneer ze worden uitgevoerd.",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://ontology.tno.nl/normengineering/flint#creates",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "creeert",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "creeert",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-          "EA-Name": "Feit",
-          "EA-Package": "FLINT",
-          "uri": "http://ontology.tno.nl/normengineering/flint#Fact"
-        }
-      ]
-    },
-    {
-      "@id": "http://fixme.com#informatieclassificatie",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "EA-Guid": "{D116972D-6FBE-463b-89EA-6683C8168234}",
-      "codelist": [],
-      "definition": {
-        "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
-      },
-      "definition-nl": {
-        "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
-      },
-      "domain": [
-        {
-          "EA-Name": "Stuk",
-          "uri": "http://www.w3.org/ns/prov#Entity"
-        }
-      ],
-      "extra": {
-        "EA-Domain": "Stuk",
-        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-        "EA-Guid": "{D116972D-6FBE-463b-89EA-6683C8168234}",
-        "EA-Name": "informatieclassificatie",
-        "EA-Package": "OSLO-Dossier",
-        "EA-Range": "Informatieclassificatie",
-        "EA-Type": "attribute",
-        "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
-        },
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "note": "null",
-            "value": "informatieclassificatie"
-          },
-          {
-            "key": "definition-nl",
-            "note": "null",
-            "value": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden voor het Stuk."
-          },
-          {
-            "key": "domain",
-            "note": "null",
-            "value": "http://www.w3.org/ns/prov#Entity"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": {
-          "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
-        },
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden."
-        },
-        "equivalent": "",
-        "label": {
-          "nl": "informatieclassificatie"
-        },
-        "label-en": "",
-        "label-nl": {
-          "nl": "informatieclassificatie"
-        },
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "OTHER_PACKAGE",
-      "label": {
-        "nl": "informatieclassificatie"
-      },
-      "label-nl": {
-        "nl": "informatieclassificatie"
-      },
-      "maxCardinality": "1",
-      "minCardinality": "0",
-      "name": "informatieclassificatie",
-      "range": []
-    },
-    {
-      "@id": "http://fixme.com#auteur",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{08A5F71F-820E-4ab4-85D8-9BFBE222E501}",
-      "codelist": [],
-      "definition": {
-        "nl": "De auteur van het stuk(onderdeel)."
-      },
-      "definition-nl": {
-        "nl": "De auteur van het stuk(onderdeel)."
-      },
-      "domain": [
-        {
-          "EA-Name": "Stuk",
-          "uri": "http://www.w3.org/ns/prov#Entity"
-        }
-      ],
-      "extra": {
-        "EA-Domain": "Stuk",
-        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
-        "EA-Guid": "{08A5F71F-820E-4ab4-85D8-9BFBE222E501}",
-        "EA-Name": "auteur",
-        "EA-Package": "OSLO-Dossier",
-        "EA-Range": "Agent",
-        "EA-Type": "attribute",
-        "RangeData": {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        },
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "note": "null",
-            "value": "auteur"
-          },
-          {
-            "key": "definition-nl",
-            "note": "null",
-            "value": "De auteur van het stuk(onderdeel)."
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "De auteur van het stuk."
-          },
-          {
-            "key": "parentURI",
-            "note": "null",
-            "value": "http://purl.org/dc/terms/creator"
-          },
-          {
-            "key": "domain",
-            "note": "null",
-            "value": "http://www.w3.org/ns/prov#Entity"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": {
-          "nl": "De auteur van het stuk(onderdeel)."
-        },
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "De auteur van het stuk(onderdeel)."
-        },
-        "equivalent": "",
-        "label": {
-          "nl": "auteur"
-        },
-        "label-en": "",
-        "label-nl": {
-          "nl": "auteur"
-        },
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [
-        "http://purl.org/dc/terms/creator"
-      ],
-      "inpackage": "OTHER_PACKAGE",
-      "label": {
-        "nl": "auteur"
-      },
-      "label-nl": {
-        "nl": "auteur"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "auteur",
-      "range": [
-        {
-          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
-          "EA-Name": "Agent",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "http://www.w3.org/ns/prov#Agent"
-        }
-      ]
-    },
-    {
       "@id": "http://data.vlaanderen.be/ns/besluit#openbaar",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{0F0FBB24-D2AE-4e3d-A35F-7D6DDFBA5D3E}",
@@ -7534,107 +6276,6 @@
       ]
     },
     {
-      "@id": "http://data.europa.eu/eli/ontology#realizes",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{EA240C77-A3B0-4e3a-B22C-267EDCBBC47C}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "LegaleVerschijningsvorm",
-          "uri": "https://data.europa.eu/eli/ontology#LegalExpression"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label",
-            "note": "realiseert",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/ontology#realizes",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "LegaleVerschijningsvorm",
-        "EA-Domain-Guid": "{BFB99B45-79E1-4c91-8C7D-ECF63B141A36}",
-        "EA-Guid": "{EA240C77-A3B0-4e3a-B22C-267EDCBBC47C}",
-        "EA-Name": "realiseert",
-        "EA-Package": "",
-        "EA-Range": "NormatieveBepaling",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-        },
-        "RawTags": [
-          {
-            "key": "ap-definition-nl",
-            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label",
-            "note": "realiseert",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/ontology#realizes",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "realiseert",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "null",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
-          "EA-Name": "NormatieveBepaling",
-          "EA-Package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-        }
-      ]
-    },
-    {
       "@id": "http://data.europa.eu/eli/ontology#jurisdiction",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{763C9C27-FEC3-47b9-9A7A-3D8F3D35A441}",
@@ -7960,208 +6601,6 @@
     {
       "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "AdviesAntwoord",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "AdviesAntwoord",
-        "EA-Domain-Guid": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
-        "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
-        "EA-Name": "wasGemotiveerdDoor",
-        "EA-Package": "",
-        "EA-Range": "AdviesVraag",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
-          "EA-Name": "AdviesVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "TRANSLATIONS_ONLY",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "wasGemotiveerdDoor",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "motiveerde",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "ACTIVE_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
-          "EA-Name": "AdviesVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
-        }
-      ]
-    },
-    {
-      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{BAA730E5-C2EE-47fb-8972-FEE9C876BF0F}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "Beslissingsactiviteit",
-          "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Beslissingsactiviteit",
-        "EA-Domain-Guid": "{609CE81C-4229-4047-B6FF-FD624379315D}",
-        "EA-Guid": "{BAA730E5-C2EE-47fb-8972-FEE9C876BF0F}",
-        "EA-Name": "wasGemotiveerdDoor",
-        "EA-Package": "",
-        "EA-Range": "AdviesAntwoord",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
-          "EA-Name": "AdviesAntwoord",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
-        },
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "wasGemotiveerdDoor",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "motiveerde",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "UNKNOWN",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
-          "EA-Name": "AdviesAntwoord",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
-        }
-      ]
-    },
-    {
-      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{B08FA0A3-261F-4b40-A56E-BB388AAD02D5}",
       "codelist": [],
       "definition-nl": {
@@ -8257,6 +6696,107 @@
           "EA-Name": "InitiatiefrechtVraag",
           "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
           "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        }
+      ]
+    },
+    {
+      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
+      "codelist": [],
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "domain": [
+        {
+          "EA-Name": "AdviesAntwoord",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "AdviesAntwoord",
+        "EA-Domain-Guid": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
+        "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
+        "EA-Name": "wasGemotiveerdDoor",
+        "EA-Package": "",
+        "EA-Range": "AdviesVraag",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": "",
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "derived": "false",
+        "destRole": "wasGemotiveerdDoor",
+        "equivalent": "",
+        "label": "",
+        "label-en": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "sameAs": "",
+        "sourceRole": "motiveerde",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "",
+      "range": [
+        {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
         }
       ]
     },
@@ -8342,113 +6882,15 @@
       ]
     },
     {
-      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
-      "codelist": [],
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "domain": [
-        {
-          "EA-Name": "AdviesAntwoord",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "AdviesAntwoord",
-        "EA-Domain-Guid": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
-        "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
-        "EA-Name": "wasGemotiveerdDoor",
-        "EA-Package": "",
-        "EA-Range": "AdviesVraag",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
-          "EA-Name": "AdviesVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "was gemotiveerd door",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "TRANSLATIONS_ONLY",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "derived": "false",
-        "destRole": "wasGemotiveerdDoor",
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "sameAs": "",
-        "sourceRole": "motiveerde",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "generalization": [],
-      "inpackage": "ACTIVE_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "",
-      "range": [
-        {
-          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
-          "EA-Name": "AdviesVraag",
-          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
-        }
-      ]
-    },
-    {
-      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{BAA730E5-C2EE-47fb-8972-FEE9C876BF0F}",
       "codelist": [],
+      "definition": {
+        "nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
+      },
       "definition-nl": {
-        "nl": "TODO"
+        "nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
       },
       "domain": [
         {
@@ -8459,8 +6901,18 @@
       "extra": {
         "DestRoleTags": [
           {
+            "key": "label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by bij implementatie.",
+            "value": "NOTE"
+          },
+          {
             "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
             "value": "NOTE"
           },
           {
@@ -8471,6 +6923,11 @@
           {
             "key": "ap-label-nl",
             "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.",
             "value": "NOTE"
           }
         ],
@@ -8489,8 +6946,18 @@
         },
         "RawTags": [
           {
+            "key": "label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by bij implementatie.",
+            "value": "NOTE"
+          },
+          {
             "key": "uri",
-            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
             "value": "NOTE"
           },
           {
@@ -8502,21 +6969,30 @@
             "key": "ap-label-nl",
             "note": "was gemotiveerd door",
             "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit.",
+            "value": "NOTE"
           }
         ],
         "Scope": "NOTHING",
-        "definition": "",
+        "definition": {
+          "nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
+        },
         "definition-en": "",
         "definition-nl": {
-          "nl": "TODO"
+          "nl": "Een AdviesAntwoord die ¨logischerwijs¨ voorafging aan deze Beslissingsactiviteit."
         },
         "derived": "false",
         "destRole": "wasGemotiveerdDoor",
         "equivalent": "",
-        "label": "",
+        "label": {
+          "nl": "was gemotiveerd door"
+        },
         "label-en": "",
         "label-nl": {
-          "nl": "TODO"
+          "nl": "was gemotiveerd door"
         },
         "sameAs": "",
         "sourceRole": "motiveerde",
@@ -8528,18 +7004,162 @@
       },
       "generalization": [],
       "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "was gemotiveerd door"
+      },
       "label-nl": {
-        "nl": "TODO"
+        "nl": "was gemotiveerd door"
       },
       "maxCardinality": "*",
       "minCardinality": "0",
-      "name": "",
+      "name": "wasGemotiveerdDoor",
       "range": [
         {
           "EA-GUID": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
           "EA-Name": "AdviesAntwoord",
           "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
           "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        }
+      ]
+    },
+    {
+      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{BAA730E5-C2EE-47fb-8972-FEE9C876BF0F}",
+      "codelist": [],
+      "definition": {
+        "nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."
+      },
+      "definition-nl": {
+        "nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."
+      },
+      "domain": [
+        {
+          "EA-Name": "AdviesAntwoord",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Adviesantwoord.motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "AdviesAntwoord",
+        "EA-Domain-Guid": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
+        "EA-Guid": "{BAA730E5-C2EE-47fb-8972-FEE9C876BF0F}",
+        "EA-Name": "motiveerde",
+        "EA-Package": "",
+        "EA-Range": "Beslissingsactiviteit",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{609CE81C-4229-4047-B6FF-FD624379315D}",
+          "EA-Name": "Beslissingsactiviteit",
+          "EA-Package": "OSLO-Besluitvorming",
+          "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Adviesantwoord.motiveerde",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "definition": {
+          "nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een Beslissingsactiviteit die logisch volgde op dit AdviesAntwoord."
+        },
+        "derived": "false",
+        "destRole": "motiveerde",
+        "equivalent": "",
+        "label": {
+          "nl": "motiveerde"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "motiveerde"
+        },
+        "sameAs": "",
+        "sourceRole": "wasGemotiveerdDoor",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "motiveerde"
+      },
+      "label-nl": {
+        "nl": "motiveerde"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "motiveerde",
+      "range": [
+        {
+          "EA-GUID": "{609CE81C-4229-4047-B6FF-FD624379315D}",
+          "EA-Name": "Beslissingsactiviteit",
+          "EA-Package": "OSLO-Besluitvorming",
+          "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
         }
       ]
     },
@@ -8641,6 +7261,107 @@
           "EA-Name": "InitiatiefrechtVraag",
           "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
           "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        }
+      ]
+    },
+    {
+      "@id": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
+      "codelist": [],
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "domain": [
+        {
+          "EA-Name": "AdviesAntwoord",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "AdviesAntwoord",
+        "EA-Domain-Guid": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
+        "EA-Guid": "{5966228C-990B-4eb1-93A0-D41CAEEA0E00}",
+        "EA-Name": "wasGemotiveerdDoor",
+        "EA-Package": "",
+        "EA-Range": "AdviesVraag",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "was gemotiveerd door",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": "",
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "derived": "false",
+        "destRole": "wasGemotiveerdDoor",
+        "equivalent": "",
+        "label": "",
+        "label-en": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "sameAs": "",
+        "sourceRole": "motiveerde",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "",
+      "range": [
+        {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
         }
       ]
     },
@@ -10338,120 +9059,6 @@
       }
     },
     {
-      "@id": "http://ontology.tno.nl/normengineering/flint#Act",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "EA-Guid": "{07BE0A1B-E674-47dc-BD4F-B62C105B8D87}",
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Guid": "{07BE0A1B-E674-47dc-BD4F-B62C105B8D87}",
-        "EA-Name": "Handeling",
-        "EA-Package": "FLINT",
-        "EA-Parents": "",
-        "EA-Parents2": [],
-        "EA-Type": "CLASS",
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "Handeling"
-          },
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "http://ontology.tno.nl/normengineering/flint#Act"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Beschrijft een handeling die kan worden uitgevoerd door een actor als aan de voorwaarden wordt voldaan en die leidt tot het creëren en/of beëindigen van feiten."
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "parentclasses": "",
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": ""
-    },
-    {
-      "@id": "http://ontology.tno.nl/normengineering/flint#Fact",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "EA-Guid": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Guid": "{7B9BD6E3-F17B-43cd-A5B9-F933A64EA09E}",
-        "EA-Name": "Feit",
-        "EA-Package": "FLINT",
-        "EA-Parents": "",
-        "EA-Parents2": [],
-        "EA-Type": "CLASS",
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "http://ontology.tno.nl/normengineering/flint#Fact"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "Feit"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Beschrijft een feit dat kan dienen als preconditie, postconditie, agent of object."
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "parentclasses": "",
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": ""
-    },
-    {
       "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{F26EE607-7F2B-4bf6-923C-CF2771CED0D8}",
@@ -10527,6 +9134,11 @@
             "key": "uri",
             "note": "null",
             "value": "http://www.w3.org/2004/02/skos/core#Concept"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Motivatie"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -11282,7 +9894,7 @@
       },
       "extra": {
         "EA-Guid": "{4909E2DB-60C1-4b34-99F9-AD25B92A9BEB}",
-        "EA-Name": "Activiteit",
+        "EA-Name": "Activiteit (Annotaties)",
         "EA-Package": "OSLO-Generiek",
         "EA-Parents": "",
         "EA-Parents2": [],
@@ -11307,6 +9919,21 @@
             "key": "usageNote",
             "note": "null",
             "value": "Bv het consumeren,verwerken,transformeren,wijzigen,verplaatsen,gebruiken of genereren van entiteiten."
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Activiteit (Annotaties)"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Handeling van bepaalde duur op of met entiteiten."
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Bv het genereren van annotaties."
           }
         ],
         "Scope": "NOTHING",
@@ -11925,7 +10552,7 @@
       },
       "extra": {
         "EA-Guid": "{505FCB3B-6781-4735-84D1-7CE66608C6A8}",
-        "EA-Name": "Activiteit",
+        "EA-Name": "Activiteit (Omgevingsvergunning)",
         "EA-Package": "OSLO-Omgevingsvergunning",
         "EA-Parents": "",
         "EA-Parents2": [],
@@ -11945,6 +10572,21 @@
             "key": "usageNote-nl",
             "note": "null",
             "value": "Maakt het voorwerp uit van vergunningsaanvragen, meldingen, vergunningsbesluiten, vaststellingen."
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Activiteit (Omgevingsvergunning)"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën.",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
           }
         ],
         "Scope": "NOTHING",
@@ -12418,7 +11060,1328 @@
   "navigation": {},
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#motivering",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{16F443EB-96F7-451c-89E6-CEA08D2B3388}",
+      "codelist": [],
+      "definition": {
+        "nl": "De agent die rechthebbende is van de verbintenis."
+      },
+      "definition-nl": {
+        "nl": "De agent die rechthebbende is van de verbintenis."
+      },
+      "domain": [
+        {
+          "EA-Name": "Verbintenis",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De agent die rechthebbende is van de verbintenis.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Verbintenis.rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "De agent die rechthebbende is van de verbintenis.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Verbintenis",
+        "EA-Domain-Guid": "{8978C8D4-ABD1-4669-9DF3-99CDBB6AD933}",
+        "EA-Guid": "{16F443EB-96F7-451c-89E6-CEA08D2B3388}",
+        "EA-Name": "rechthebbende",
+        "EA-Package": "",
+        "EA-Range": "Agent",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De agent die rechthebbende is van de verbintenis.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Verbintenis.rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "rechthebbende",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "De agent die rechthebbende is van de verbintenis.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De agent die rechthebbende is van de verbintenis."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De agent die rechthebbende is van de verbintenis."
+        },
+        "derived": "false",
+        "destRole": "rechthebbende",
+        "equivalent": "",
+        "label": {
+          "nl": "rechthebbende"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "rechthebbende"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "rechthebbende"
+      },
+      "label-nl": {
+        "nl": "rechthebbende"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "rechthebbende",
+      "range": [
+        {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.eiser",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{27C27CF2-D876-4eb8-B1BC-97F7F4011CB5}",
+      "codelist": [],
+      "definition": {
+        "nl": "De agent die de vordering van de verbintenis eist."
+      },
+      "definition-nl": {
+        "nl": "De agent die de vordering van de verbintenis eist."
+      },
+      "domain": [
+        {
+          "EA-Name": "Verbintenis",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "name",
+            "note": "Verbintenis.eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "De agent die de vordering van de verbintenis eist.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De agent die de vordering van de verbintenis eist.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Verbintenis",
+        "EA-Domain-Guid": "{8978C8D4-ABD1-4669-9DF3-99CDBB6AD933}",
+        "EA-Guid": "{27C27CF2-D876-4eb8-B1BC-97F7F4011CB5}",
+        "EA-Name": "eiser",
+        "EA-Package": "",
+        "EA-Range": "Agent",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        },
+        "RawTags": [
+          {
+            "key": "name",
+            "note": "Verbintenis.eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "De agent die de vordering van de verbintenis eist.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De agent die de vordering van de verbintenis eist.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "eiser",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "De agent die de vordering van de verbintenis eist."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De agent die de vordering van de verbintenis eist."
+        },
+        "derived": "false",
+        "destRole": "eiser",
+        "equivalent": "",
+        "label": {
+          "nl": "eiser"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "eiser"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "eiser"
+      },
+      "label-nl": {
+        "nl": "eiser"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "eiser",
+      "range": [
+        {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{A360BB84-EF42-46ee-A4FA-48559C9DB037}",
+      "codelist": [],
+      "definition": {
+        "nl": "Thema waarover dit Stuk gaat."
+      },
+      "definition-nl": {
+        "nl": "Thema waarover dit Stuk gaat."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{A360BB84-EF42-46ee-A4FA-48559C9DB037}",
+        "EA-Name": "thema",
+        "EA-Package": "OSLO-Dossier",
+        "EA-Range": "Thema",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{189BB015-93F5-4a86-9AE5-1FC06DD4E941}",
+          "EA-Name": "Thema",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "thema"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Thema waarover dit Stuk gaat."
+          },
+          {
+            "key": "ap-codelist",
+            "note": "null",
+            "value": "https://data.vlaanderen.be/id/conceptscheme/BesluitThema"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Voor besluiten kan een thema uit de codelijst gebruikt worden. Specifiekere thema's kunnen via Code - breder gekoppeld worden."
+          },
+          {
+            "key": "parentURI",
+            "note": "null",
+            "value": "http://purl.org/dc/terms/subject"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Thema waarover dit Stuk gaat."
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Stuk.thema"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "thema"
+          },
+          {
+            "key": "package",
+            "note": "null",
+            "value": "OSLO-SlimmeRaadpleegomgeving"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Thema waarover dit Stuk gaat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Thema waarover dit Stuk gaat."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "thema"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "thema"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/subject"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "thema"
+      },
+      "label-nl": {
+        "nl": "thema"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "thema",
+      "range": [
+        {
+          "EA-GUID": "{189BB015-93F5-4a86-9AE5-1FC06DD4E941}",
+          "EA-Name": "Thema",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtvraag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{B7131DF1-0E02-41c3-A235-F91ABFC68CB2}",
+      "codelist": [],
+      "definition": {
+        "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+      },
+      "definition-nl": {
+        "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverInitiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over initiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over initiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{B7131DF1-0E02-41c3-A235-F91ABFC68CB2}",
+        "EA-Name": "gaatOverInitiatiefrechtvraag",
+        "EA-Package": "",
+        "EA-Range": "InitiatiefrechtVraag",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
+          "EA-Name": "InitiatiefrechtVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        },
+        "RawTags": [
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverInitiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over initiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over initiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Initiatiefrechtvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Initiatiefrechtvraag waarover het stuk gaat."
+        },
+        "derived": "false",
+        "destRole": "gaatOverInitiatiefrechtvraag",
+        "equivalent": "",
+        "label": {
+          "nl": "gaat over initiatiefrechtvraag"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "gaat over initiatiefrechtvraag"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/subject"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "gaat over initiatiefrechtvraag"
+      },
+      "label-nl": {
+        "nl": "gaat over initiatiefrechtvraag"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "gaatOverInitiatiefrechtvraag",
+      "range": [
+        {
+          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
+          "EA-Name": "InitiatiefrechtVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtantwoord",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{C5553A82-378C-4239-BDCC-FE6D15AABBD8}",
+      "codelist": [],
+      "definition": {
+        "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
+      },
+      "definition-nl": {
+        "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverInitiatiefrechtantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over initiatiefrechtantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{C5553A82-378C-4239-BDCC-FE6D15AABBD8}",
+        "EA-Name": "gaatOverInitiatiefrechtantwoord",
+        "EA-Package": "",
+        "EA-Range": "InitiatiefrechtAntwoord",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
+          "EA-Name": "InitiatiefrechtAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+        },
+        "RawTags": [
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverInitiatiefrechtantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over initiatiefrechtantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Initiatiefrechtantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
+        },
+        "derived": "false",
+        "destRole": "gaatOverInitiatiefrechtantwoord",
+        "equivalent": "",
+        "label": {
+          "nl": "gaat over initiatiefrechtantwoord"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "gaat over initiatiefrechtantwoord"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/subject"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "gaat over initiatiefrechtantwoord"
+      },
+      "label-nl": {
+        "nl": "gaat over initiatiefrechtantwoord"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "gaatOverInitiatiefrechtantwoord",
+      "range": [
+        {
+          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
+          "EA-Name": "InitiatiefrechtAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{06223223-84C0-4e81-879E-D09C95256889}",
+      "codelist": [],
+      "definition": {
+        "nl": "Adviesvraag waarover het stuk gaat."
+      },
+      "definition-nl": {
+        "nl": "Adviesvraag waarover het stuk gaat."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Adviesvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Adviesvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over adviesvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over adviesvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverAdviesvraag",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{06223223-84C0-4e81-879E-D09C95256889}",
+        "EA-Name": "gaatOverAdviesvraag",
+        "EA-Package": "",
+        "EA-Range": "AdviesVraag",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
+        },
+        "RawTags": [
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Adviesvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Adviesvraag waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "gaat over adviesvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over adviesvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverAdviesvraag",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Adviesvraag waarover het stuk gaat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Adviesvraag waarover het stuk gaat."
+        },
+        "derived": "false",
+        "destRole": "gaatOverAdviesvraag",
+        "equivalent": "",
+        "label": {
+          "nl": "gaat over adviesvraag"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "gaat over adviesvraag"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/subject"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "gaat over adviesvraag"
+      },
+      "label-nl": {
+        "nl": "gaat over adviesvraag"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "gaatOverAdviesvraag",
+      "range": [
+        {
+          "EA-GUID": "{37A81057-4738-475a-B7D5-55A25197F2B6}",
+          "EA-Name": "AdviesVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesantwoord",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{7D37BC9B-37D3-40d2-839B-C65A398DA2D3}",
+      "codelist": [],
+      "definition": {
+        "nl": "Adviesantwoord waarover het stuk gaat."
+      },
+      "definition-nl": {
+        "nl": "Adviesantwoord waarover het stuk gaat."
+      },
+      "domain": [
+        {
+          "EA-Name": "Stuk",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "label-nl",
+            "note": "gaat over adviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over adviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Adviesantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverAdviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Adviesantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Stuk",
+        "EA-Domain-Guid": "{A82776CF-EF6A-4fea-8AEB-4D27408382D4}",
+        "EA-Guid": "{7D37BC9B-37D3-40d2-839B-C65A398DA2D3}",
+        "EA-Name": "gaatOverAdviesAntwoord",
+        "EA-Package": "",
+        "EA-Range": "AdviesAntwoord",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
+          "EA-Name": "AdviesAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "gaat over adviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "gaat over adviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Adviesantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Stuk.gaatOverAdviesantwoord",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Adviesantwoord waarover het stuk gaat.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://purl.org/dc/terms/subject bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://purl.org/dc/terms/subject",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Adviesantwoord waarover het stuk gaat."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Adviesantwoord waarover het stuk gaat."
+        },
+        "derived": "false",
+        "destRole": "gaatOverAdviesAntwoord",
+        "equivalent": "",
+        "label": {
+          "nl": "gaat over adviesantwoord"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "gaat over adviesantwoord"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://purl.org/dc/terms/subject"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "gaat over adviesantwoord"
+      },
+      "label-nl": {
+        "nl": "gaat over adviesantwoord"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "gaatOverAdviesantwoord",
+      "range": [
+        {
+          "EA-GUID": "{B620DE30-CF3B-479a-8D71-1BAD220441A8}",
+          "EA-Name": "AdviesAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Recht.begunstigde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{1C3FA09B-291E-443c-83A5-E7373F817FE7}",
+      "codelist": [],
+      "definition": {
+        "nl": "Agent die het recht mag uitoefenen."
+      },
+      "definition-nl": {
+        "nl": "Agent die het recht mag uitoefenen."
+      },
+      "domain": [
+        {
+          "EA-Name": "Recht",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Recht"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "begunstigde",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Agent die het recht mag uitoefenen.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Recht.begunstigde",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "begunstigde",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Recht",
+        "EA-Domain-Guid": "{21626B14-4860-46bb-B646-F11CD6485457}",
+        "EA-Guid": "{1C3FA09B-291E-443c-83A5-E7373F817FE7}",
+        "EA-Name": "begunstigde",
+        "EA-Package": "",
+        "EA-Range": "Agent",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "begunstigde",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Agent die het recht mag uitoefenen.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Recht.begunstigde",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "begunstigde",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Agent die het recht mag uitoefenen."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Agent die het recht mag uitoefenen."
+        },
+        "derived": "false",
+        "destRole": "begunstigde",
+        "equivalent": "",
+        "label": {
+          "nl": "begunstigde"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "begunstigde"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "begunstigde"
+      },
+      "label-nl": {
+        "nl": "begunstigde"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "begunstigde",
+      "range": [
+        {
+          "EA-GUID": "{A828F235-1025-4df9-A284-0F89695FFCD8}",
+          "EA-Name": "Agent",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/prov#Agent"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{EA240C77-A3B0-4e3a-B22C-267EDCBBC47C}",
+      "codelist": [],
+      "definition": {
+        "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+      },
+      "definition-nl": {
+        "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+      },
+      "domain": [
+        {
+          "EA-Name": "LegaleVerschijningsvorm",
+          "uri": "https://data.europa.eu/eli/ontology#LegalExpression"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/ontology#realizes",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "realiseert",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "LegaleVerschijningsvorm",
+        "EA-Domain-Guid": "{BFB99B45-79E1-4c91-8C7D-ECF63B141A36}",
+        "EA-Guid": "{EA240C77-A3B0-4e3a-B22C-267EDCBBC47C}",
+        "EA-Name": "realiseert",
+        "EA-Package": "",
+        "EA-Range": "NormatieveBepaling",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/ontology#realizes",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "realiseert",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "LegaleVerschijningsvorm.realiseertNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
+        },
+        "derived": "false",
+        "destRole": "realiseert",
+        "equivalent": "",
+        "label": {
+          "nl": "realiseert"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "realiseert"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://data.europa.eu/eli/ontology#realizes"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "realiseert"
+      },
+      "label-nl": {
+        "nl": "realiseert"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "realiseert",
+      "range": [
+        {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.motivering",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{1B42DBA7-4566-44d6-8D4B-BC29A1ACC3D5}",
       "codelist": [],
@@ -12458,6 +12421,11 @@
             "key": "definition-nl",
             "note": "null",
             "value": "Beschrijving van de juridische en feitelijke motivering achter de initiatiefrechtvraag.\t"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Initiatiefrechtvraag.motivering"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -12504,7 +12472,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#indieningsdatum",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.indieningsdatum",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{4AFBAA12-9D72-43dc-92FF-2061884B1586}",
       "codelist": [],
@@ -12543,6 +12511,11 @@
             "key": "definition-nl",
             "note": "null",
             "value": "Datum waarop de initiatiefrechtvraag ingediend werd."
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Initiatiefrechtvraag.indieningsdatum"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -12588,7 +12561,907 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.datumAntwoordVerwacht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "EA-Guid": "{CC0DE542-5A5D-4f5a-824D-8AAD9824188B}",
+      "codelist": [],
+      "definition": {
+        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+      },
+      "definition-nl": {
+        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+      },
+      "domain": [
+        {
+          "EA-Name": "InitiatiefrechtVraag",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "InitiatiefrechtVraag",
+        "EA-Domain-Guid": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
+        "EA-Guid": "{CC0DE542-5A5D-4f5a-824D-8AAD9824188B}",
+        "EA-Name": "datumAntwoordVerwacht",
+        "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+        "EA-Range": "DateTime",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-Name": "DateTime",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "datum antwoord verwacht"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Initiatiefrechtvraag.datumAntwoordVerwacht"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "datum antwoord verwacht"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "datum antwoord verwacht"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "datum antwoord verwacht"
+      },
+      "label-nl": {
+        "nl": "datum antwoord verwacht"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "datumAntwoordVerwacht",
+      "range": [
+        {
+          "EA-Name": "DateTime",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.creeertNormatieveBepaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{E6DF339D-5A9A-4f40-A390-14A00683B6E9}",
+      "codelist": [],
+      "definition": {
+        "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+      },
+      "definition-nl": {
+        "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+      },
+      "domain": [
+        {
+          "EA-Name": "BehandelingVanAgendapunt",
+          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "label-nl",
+            "note": "creeert",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "creeert",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#generated",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.creeertNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://www.w3.org/ns/prov#generated bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "BehandelingVanAgendapunt",
+        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
+        "EA-Guid": "{E6DF339D-5A9A-4f40-A390-14A00683B6E9}",
+        "EA-Name": "creeert",
+        "EA-Package": "",
+        "EA-Range": "NormatieveBepaling",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        },
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "creeert",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "creeert",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#generated",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.creeertNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://www.w3.org/ns/prov#generated bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
+        },
+        "derived": "false",
+        "destRole": "creeert",
+        "equivalent": "",
+        "label": {
+          "nl": "creeert"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "creeert"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://www.w3.org/ns/prov#generated"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "creeert"
+      },
+      "label-nl": {
+        "nl": "creeert"
+      },
+      "name": "creeert",
+      "range": [
+        {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{EEBA3158-41CA-4fef-8BF8-D7E996978D51}",
+      "codelist": [],
+      "definition": {
+        "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "definition-nl": {
+        "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "domain": [
+        {
+          "EA-Name": "BehandelingVanAgendapunt",
+          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "BehandelingVanAgendapunt",
+        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
+        "EA-Guid": "{EEBA3158-41CA-4fef-8BF8-D7E996978D51}",
+        "EA-Name": "bestaatUit",
+        "EA-Package": "",
+        "EA-Range": "InitiatiefrechtVraag",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
+          "EA-Name": "InitiatiefrechtVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "derived": "false",
+        "destRole": "bestaatUit",
+        "equivalent": "",
+        "label": {
+          "nl": "bestaat uit"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "bestaat uit"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "bestaat uit"
+      },
+      "label-nl": {
+        "nl": "bestaat uit"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "bestaatUit",
+      "range": [
+        {
+          "EA-GUID": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
+          "EA-Name": "InitiatiefrechtVraag",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{BDF3AA10-1EA0-455a-A8B3-E1947915F4B6}",
+      "codelist": [],
+      "definition": {
+        "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "definition-nl": {
+        "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "domain": [
+        {
+          "EA-Name": "BehandelingVanAgendapunt",
+          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "BehandelingVanAgendapunt",
+        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
+        "EA-Guid": "{BDF3AA10-1EA0-455a-A8B3-E1947915F4B6}",
+        "EA-Name": "bestaatUit",
+        "EA-Package": "",
+        "EA-Range": "InitiatiefrechtAntwoord",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
+          "EA-Name": "InitiatiefrechtAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "derived": "false",
+        "destRole": "bestaatUit",
+        "equivalent": "",
+        "label": {
+          "nl": "bestaat uit"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "bestaat uit"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "bestaat uit"
+      },
+      "label-nl": {
+        "nl": "bestaat uit"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "bestaatUit",
+      "range": [
+        {
+          "EA-GUID": "{99E9A1DD-6F2D-4798-823D-965F56485030}",
+          "EA-Name": "InitiatiefrechtAntwoord",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{72FCD375-E5EB-49a7-9C45-9AFF3CEB78F6}",
+      "codelist": [],
+      "definition": {
+        "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "definition-nl": {
+        "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+      },
+      "domain": [
+        {
+          "EA-Name": "BehandelingVanAgendapunt",
+          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "BehandelingVanAgendapunt",
+        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
+        "EA-Guid": "{72FCD375-E5EB-49a7-9C45-9AFF3CEB78F6}",
+        "EA-Name": "bestaatUit",
+        "EA-Package": "",
+        "EA-Range": "Beslissingsactiviteit",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{609CE81C-4229-4047-B6FF-FD624379315D}",
+          "EA-Name": "Beslissingsactiviteit",
+          "EA-Package": "OSLO-Besluitvorming",
+          "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "bestaat uit",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
+        },
+        "derived": "false",
+        "destRole": "bestaatUit",
+        "equivalent": "",
+        "label": {
+          "nl": "bestaat uit"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "bestaat uit"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "bestaat uit"
+      },
+      "label-nl": {
+        "nl": "bestaat uit"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "bestaatUit",
+      "range": [
+        {
+          "EA-GUID": "{609CE81C-4229-4047-B6FF-FD624379315D}",
+          "EA-Name": "Beslissingsactiviteit",
+          "EA-Package": "OSLO-Besluitvorming",
+          "uri": "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{145D7266-4349-4bb8-A468-5A09F22E5B11}",
+      "codelist": [],
+      "definition": {
+        "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+      },
+      "definition-nl": {
+        "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+      },
+      "domain": [
+        {
+          "EA-Name": "BehandelingVanAgendapunt",
+          "uri": "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#invalidated",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "beeindigt",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://www.w3.org/ns/prov#invalidated bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.beeindigtNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "beeindigt",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "BehandelingVanAgendapunt",
+        "EA-Domain-Guid": "{2BE79FE3-0E2A-4197-B6CD-2AA080B23DD2}",
+        "EA-Guid": "{145D7266-4349-4bb8-A468-5A09F22E5B11}",
+        "EA-Name": "beeindigt",
+        "EA-Package": "",
+        "EA-Range": "NormatieveBepaling",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        },
+        "RawTags": [
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#invalidated",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "beeindigt",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Gebruik http://www.w3.org/ns/prov#invalidated bij implementatie.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "BehandelingVanAgendapunt.beeindigtNormatieveBepaling",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "beeindigt",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "definition": {
+          "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
+        },
+        "derived": "false",
+        "destRole": "beeindigt",
+        "equivalent": "",
+        "label": {
+          "nl": "beeindigt"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "beeindigt"
+        },
+        "sameAs": "",
+        "sourceRole": "null",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [
+        "http://www.w3.org/ns/prov#invalidated"
+      ],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "beeindigt"
+      },
+      "label-nl": {
+        "nl": "beeindigt"
+      },
+      "name": "beeindigt",
+      "range": [
+        {
+          "EA-GUID": "{40A73836-DE6A-4c4a-A2FA-789736BDFD80}",
+          "EA-Name": "NormatieveBepaling",
+          "EA-Package": "OSLO-Omgevingsvergunning",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{622BDA01-4E8F-4473-A88D-18B2D617F646}",
       "codelist": [],
@@ -12658,6 +13531,11 @@
             "key": "label-nl",
             "note": "null",
             "value": "heeft thema"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Annotatie.heeftThema"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -12706,7 +13584,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{ACEA1BBF-C908-4a45-B15F-2D0D3B9C622F}",
       "codelist": [],
@@ -12771,6 +13649,11 @@
             "key": "label-nl",
             "note": "null",
             "value": "heeft tekstuele inhoud"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Annotatie.heeftTekstueleInhoud"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -12819,7 +13702,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{FAF1654E-D2F2-4992-8EBE-C425F6AAE780}",
       "codelist": [],
@@ -12884,6 +13767,11 @@
             "key": "xUML",
             "note": "null",
             "value": "{redefines heeftInhoud}"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Annotatie.heeftObject"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -12932,7 +13820,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{787EC92B-20A9-4a0c-AE11-BCEDC246E18F}",
       "codelist": [],
@@ -12997,6 +13885,11 @@
             "key": "xUML",
             "note": "null",
             "value": "{redefines heeftInhoud}"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Annotatie.heeftLocatie"
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -13045,100 +13938,167 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#datumAntwoordVerwacht",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "EA-Guid": "{CC0DE542-5A5D-4f5a-824D-8AAD9824188B}",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{001136FF-7DE0-4c8a-B672-06C38BD603A6}",
       "codelist": [],
       "definition": {
-        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+        "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
       },
       "definition-nl": {
-        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+        "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
       },
       "domain": [
         {
-          "EA-Name": "InitiatiefrechtVraag",
-          "uri": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
+          "EA-Name": "Activiteit (Annotaties)",
+          "uri": "http://www.w3.org/ns/prov#Activity"
         }
       ],
       "extra": {
-        "EA-Domain": "InitiatiefrechtVraag",
-        "EA-Domain-Guid": "{5027840E-53BA-45f9-BC8D-DBFD6782435B}",
-        "EA-Guid": "{CC0DE542-5A5D-4f5a-824D-8AAD9824188B}",
-        "EA-Name": "datumAntwoordVerwacht",
-        "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
-        "EA-Range": "DateTime",
-        "EA-Type": "attribute",
-        "RangeData": {
-          "EA-Name": "DateTime",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
-        },
-        "RawTags": [
+        "DestRoleTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "genereert",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#generates",
+            "value": "NOTE"
+          },
           {
             "key": "label-nl",
-            "note": "null",
-            "value": "datum antwoord verwacht"
+            "note": "genereert",
+            "value": "NOTE"
           },
           {
             "key": "definition-nl",
-            "note": "null",
-            "value": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+            "note": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Activiteit.genereertAnnotatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Activiteit (Annotaties)",
+        "EA-Domain-Guid": "{4909E2DB-60C1-4b34-99F9-AD25B92A9BEB}",
+        "EA-Guid": "{001136FF-7DE0-4c8a-B672-06C38BD603A6}",
+        "EA-Name": "genereert",
+        "EA-Package": "",
+        "EA-Range": "Annotatie",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{9AC2247A-0639-436a-9AD1-CB162486F4E8}",
+          "EA-Name": "Annotatie",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/oa#Annotation"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "genereert",
+            "value": "NOTE"
+          },
+          {
+            "key": "parentURI",
+            "note": "http://www.w3.org/ns/prov#generates",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "genereert",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "De annotatie die werd aangemaakt als gevolg van de activiteit.",
+            "value": "NOTE"
+          },
+          {
+            "key": "name",
+            "note": "Activiteit.genereertAnnotatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "package",
+            "note": "OSLO-SlimmeRaadpleegomgeving",
+            "value": "NOTE"
           }
         ],
         "Scope": "FULL_DEFINITON",
         "definition": {
-          "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+          "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
         },
         "definition-en": "",
         "definition-nl": {
-          "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
+          "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
         },
+        "derived": "false",
+        "destRole": "genereert",
         "equivalent": "",
         "label": {
-          "nl": "datum antwoord verwacht"
+          "nl": "genereert"
         },
         "label-en": "",
         "label-nl": {
-          "nl": "datum antwoord verwacht"
+          "nl": "genereert"
         },
         "sameAs": "",
+        "sourceRole": "null",
         "subclass": "",
         "subclass1": "",
         "usage": "",
         "usageNote-en": "",
         "usageNote-nl": ""
       },
-      "generalization": [],
+      "generalization": [
+        "http://www.w3.org/ns/prov#generates"
+      ],
       "inpackage": "ACTIVE_PACKAGE",
       "label": {
-        "nl": "datum antwoord verwacht"
+        "nl": "genereert"
       },
       "label-nl": {
-        "nl": "datum antwoord verwacht"
+        "nl": "genereert"
       },
-      "maxCardinality": "1",
-      "minCardinality": "0",
-      "name": "datumAntwoordVerwacht",
+      "name": "genereert",
       "range": [
         {
-          "EA-Name": "DateTime",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+          "EA-GUID": "{9AC2247A-0639-436a-9AD1-CB162486F4E8}",
+          "EA-Name": "Annotatie",
+          "EA-Package": "OSLO-SlimmeRaadpleegomgeving",
+          "uri": "http://www.w3.org/ns/oa#Annotation"
         }
       ]
     }
   ],
-  "publication-date": "2023-02-08",
+  "publication-date": "2024-09-09",
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-slimmeRaadpleegOmgeving",
-  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-slimme-raadpleegomgeving/",
+  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-slimme-raadpleegomgeving",
   "template": "mijn-vocabularium-voc.j2",
   "title": "Vocabularium Slimme Raadpleegomgeving",
   "title-nl": {
     "nl": "TODO"
   },
-  "toolchaincommit": "389ddd73c922b615cac17c5fe108632d75229c52",
+  "toolchaincommit": "6c09aacbe9bccfa73540bf8c2760af2daad417d6",
   "translation": [
     {
       "language": "nl",
