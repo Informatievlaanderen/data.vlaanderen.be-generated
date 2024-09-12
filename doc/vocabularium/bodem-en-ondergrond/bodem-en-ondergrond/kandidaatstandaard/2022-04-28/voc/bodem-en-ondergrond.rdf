@@ -6,7 +6,7 @@
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
         <dc:license rdf:resource="https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0"/>
         <dc:mediator>
-          <rdf:Description rdf:nodeID="g457440">
+          <rdf:Description rdf:nodeID="g457460">
             <foaf:homepage rdf:resource="https://data.vlaanderen.be"/>
             <foaf:mbox rdf:resource="mailto:oslo@kb.vlaanderen.be"/>
             <foaf:name>Data Vlaanderen</foaf:name>
@@ -15,9 +15,9 @@
         <rdfs:label xml:lang="en">bodem-en-ondergrond</rdfs:label>
         <rdfs:label xml:lang="nl">bodem-en-ondergrond</rdfs:label>
         <foaf:maker>
-          <foaf:Person rdf:nodeID="g457460">
+          <foaf:Person rdf:nodeID="g457480">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457480">
+              <rdf:Description rdf:nodeID="g457500">
                 <foaf:homepage rdf:resource="https://auteurwebsiteurl"/>
                 <foaf:name>AuteurAffiliatie</foaf:name>
               </rdf:Description>
@@ -28,9 +28,9 @@
           </foaf:Person>
         </foaf:maker>
         <ns0:editor>
-          <foaf:Person rdf:nodeID="g457500">
+          <foaf:Person rdf:nodeID="g457520">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457520">
+              <rdf:Description rdf:nodeID="g457540">
                 <foaf:homepage rdf:resource="https://editorwebsiteurl"/>
                 <foaf:name>EditorAffiliatie</foaf:name>
               </rdf:Description>
@@ -41,9 +41,9 @@
           </foaf:Person>
         </ns0:editor>
         <dc:contributor>
-          <foaf:Person rdf:nodeID="g457540">
+          <foaf:Person rdf:nodeID="g457560">
             <schema:affiliation>
-              <rdf:Description rdf:nodeID="g457560">
+              <rdf:Description rdf:nodeID="g457580">
                 <foaf:homepage rdf:resource="https://medewerkerwebsiteurl"/>
                 <foaf:name>MedewerkerAffiliatie</foaf:name>
               </rdf:Description>
@@ -185,7 +185,7 @@
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond"/>
         <rdfs:label xml:lang="nl">Meetreeks</rdfs:label>
         <rdfs:comment xml:lang="nl">Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd.</ns1:usageNote>
+        <ns1:usageNote xml:lang="nl">Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat ze apart werden gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd (zie het &lt;a href="https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/"&gt;AP Observaties &amp; Metingen&lt;/a&gt; voor meer info over deze klasse).</ns1:usageNote>
         <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
       </owl:Class>
     </rdfs:subClassOf>
@@ -194,14 +194,13 @@
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond"/>
     <rdfs:label xml:lang="nl">Interpretatie</rdfs:label>
     <rdfs:comment xml:lang="nl">Persoonlijk beredeneerd oordeel over de betekenis van iets.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een "gewone" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer "semantische lading") omdat er meer theorie en/of verwerking aan te pas kwam.</ns1:usageNote>
+    <ns1:usageNote xml:lang="nl">In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een "gewone" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer "semantische lading") omdat er meer theorie en/of verwerking aan te pas komt.</ns1:usageNote>
     <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond"/>
     <rdfs:label xml:lang="nl">Laag</rdfs:label>
-    <rdfs:comment xml:lang="nl">Laag in de bodem met een zekere verticale omvang, onstaan door niet-pedogene processen en die een verandering in structuur en/of samenstelling vertoont met boven- of onderliggende lagen.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">Kan ook een groepering zijn van bodemhorizonten of andere sublagen met een speciaal doel.</ns1:usageNote>
+    <rdfs:comment xml:lang="nl">Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte">
