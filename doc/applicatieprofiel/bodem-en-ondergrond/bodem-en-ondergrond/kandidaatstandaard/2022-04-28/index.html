@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f8b9e89381d866207212d604bd6f097d743a62f3">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f8b9e89381d866207212d604bd6f097d743a62f3</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f8b9e89381d866207212d604bd6f097d743a62f3/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f8b9e89381d866207212d604bd6f097d743a62f3/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d1917044e17c8186a89b16ae5017190e60b05026">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d1917044e17c8186a89b16ae5017190e60b05026</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d1917044e17c8186a89b16ae5017190e60b05026/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d1917044e17c8186a89b16ae5017190e60b05026/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-bodem-en-ondergrond/">https://data.vlaanderen.be/standaarden/applicatieprofiel-bodem-en-ondergrond/</a></dd>
 
@@ -222,6 +222,7 @@
                       <a href="#Fractiemeting">Fractiemeting</a> |
                       <a href="#Fractiemetingresultaat">Fractiemetingresultaat</a> |
                       <a href="#Interpretatie">Interpretatie</a> |
+                      <a href="#Interval">Interval</a> |
                       <a href="#Kenmerktype">Kenmerktype</a> |
                       <a href="#Laag">Laag</a> |
                       <a href="#Maat">Maat</a> |
@@ -853,6 +854,28 @@
             </div>
             
               <div class="region region--no-space-top">
+              <h3 class="h3" id="Interval"><a href="http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval" data-placement="right">Interval</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Curve, louter bepaald door zijn twee uiteinden.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Tussen die uiteinden gebeuren dan de Observaties, bv een diepte-interval waarin de bodemsamenstelling wordt bestudeerd.</dd>
+                    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Profielelement">Profielelement</a>
+		   </dd>
+                    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
               <h3 class="h3" id="Kenmerktype"><a href="http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType" data-toggle="tooltip" data-content="http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType" data-placement="right">Kenmerktype</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -871,25 +894,65 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Laag"><a href="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag" data-placement="right">Laag</a></h3>
+              <h3 class="h3" id="Laag"><a href="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde" data-placement="right">Laag</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is.</dd>
+                    <dt>Beschrijving</dt><dd>Curve, bepaald door de uiteinden van de doorsnede van een Laagobject.</dd>
                     
-                    <dt>Gebruik</dt><dd>In deze context bvb bodemlaag, ondergrond, gesteentelaag, watervoerende laag, bedrock etc.</dd>
+                    <dt>Gebruik</dt><dd>Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#Profielelement">Profielelement</a>
+                        <a href="#Interval">Interval</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Laag%3Awaarde">waarde</a>.</dd>
                     
                   </dl>
                 </div>
-		
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Laag%3Awaarde" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde" data-placement="right">
+                            waarde</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Any" data-placement="right">Any</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Verwijzing naar een record dat de laal beschrijft.</td>
+                        <td property="vann:usageNote">Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde.</td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
               <div class="region region--no-space-top">

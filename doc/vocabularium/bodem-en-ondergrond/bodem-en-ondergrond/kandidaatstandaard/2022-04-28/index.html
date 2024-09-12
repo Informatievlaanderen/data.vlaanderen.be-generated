@@ -124,8 +124,8 @@
                 </div>
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f8b9e89381d866207212d604bd6f097d743a62f3">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f8b9e89381d866207212d604bd6f097d743a62f3</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f8b9e89381d866207212d604bd6f097d743a62f3/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f8b9e89381d866207212d604bd6f097d743a62f3/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d1917044e17c8186a89b16ae5017190e60b05026">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d1917044e17c8186a89b16ae5017190e60b05026</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d1917044e17c8186a89b16ae5017190e60b05026/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d1917044e17c8186a89b16ae5017190e60b05026/CHANGELOG</a></dd>
               <dt id="feedbackurl">Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues">https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/">https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/</a></dd>
 
@@ -221,6 +221,8 @@
                                         <p>
                                             |
                                             
+                                            <a href="#Laagtype" rel="class"></a> |
+                                            
                                             <a href="#BO_CurveWaardepaar" rel="class">Bo_curvewaardepaar</a> |
                                             
                                             <a href="#BO_RuimtelijkBemonsteringsobject" rel="class">Bo_ruimtelijkbemonsteringsobject</a> |
@@ -239,7 +241,7 @@
                                             
                                             <a href="#Interpretatie" rel="class">Interpretatie</a> |
                                             
-                                            <a href="#Laag" rel="class">Laag</a> |
+                                            <a href="#Laag.waarde" rel="class">Laag</a> |
                                             
                                             <a href="#Maaiveld" rel="class">Maaiveld</a> |
                                             
@@ -291,6 +293,8 @@
                                             
                                             <a href="#Meetreekswaarde.meetwaarde" rel="property">meetwaarde</a> |
                                             
+                                            <a href="#waarde" rel="property">waarde</a> |
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -305,6 +309,31 @@
                                 
                                 <div class="region region--no-space-top">
                                     <p>Deze sectie geeft een formele definitie aan elke klasse.</p>
+                                </div>
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="Laagtype">Klasse <em></em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Klasse</td>
+                                          </tr>
+<!-- The Naam of the property/class is not relevant as it is already in the title of the table
+                                          
+-->
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laagtype</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td></td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
                                 </div>
                                 
                                 <div class="region region--no-space-top">
@@ -699,7 +728,7 @@
                                 </div>
                                 
                                 <div class="region region--no-space-top">
-                                    <h3 class="h3"  id="Laag">Klasse <em>Laag</em></h3>
+                                    <h3 class="h3"  id="Laag.waarde">Klasse <em>Laag</em></h3>
                                     <table class="definition">
                                         <tbody>
                                           <tr>
@@ -716,21 +745,28 @@
 -->
                                           <tr>
                                             <th>URI</th>
-                                            <td><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag</code></td>
+                                            <td><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde</code></td>
                                           </tr>
                                           
 										  <tr>
                                             <th>Specialisatie van</th>
 											<td><ul>
 					      
-                                              <li><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement</code></li>
+                                              <li><code>http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval</code></li>
 											
                                             </ul></td>
 										  </tr>
                                           
                                           <tr>
                                             <th>Definitie</th>
-                                            <td>Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is.</td>
+                                            <td>Curve, bepaald door de uiteinden van de doorsnede van een Laagobject.</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>
+                                              <p>Gebruik</p>
+                                            </th>
+                                            <td>Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat.</td>
                                           </tr>
                                           
                                         </tbody>
@@ -1585,6 +1621,53 @@
                                           <tr>
                                             <th>Gebruik</th>
                                             <td>Datatype is te substitueren door het datatype vd meetwaarde.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="waarde">Eigenschap <em>waarde</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde</code></td>
+                                          </tr>
+                                           
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>
+                                                
+                                                  https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde 
+                                                
+                                            </code></td>
+                                          </tr>
+                                           
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>
+                                                
+                                                  http://www.w3.org/2000/01/rdf-schema#Resource 
+                                                
+                                            </code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Verwijzing naar een record dat de laal beschrijft.</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Gebruik</th>
+                                            <td>Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde.</td>
                                           </tr>
                                           
                                         </tbody>

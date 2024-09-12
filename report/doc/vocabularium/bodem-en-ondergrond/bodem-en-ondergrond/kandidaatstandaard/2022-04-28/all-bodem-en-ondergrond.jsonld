@@ -892,49 +892,59 @@
             ]
         },
         {
-            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag",
+            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "label-nl": {
                 "nl": "Laag"
             },
+            "usage": {
+                "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+            },
+            "usageNote-nl": {
+                "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+            },
             "definition": {
-                "nl": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
+                "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
             },
             "label": {
                 "nl": "Laag"
             },
             "definition-nl": {
-                "nl": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
+                "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
             },
             "extra": {
                 "EA-Name": "Laag",
                 "EA-Guid": "{B21E23EB-317B-4ffd-9A1D-BDBF2365C116}",
                 "EA-Package": "OSLO-BodemEnOndergrond",
                 "EA-Type": "CLASS",
-                "EA-Parents": "Profielelement",
+                "EA-Parents": "Interval",
                 "EA-Parents2": [
                     {
-                        "name": "Profielelement",
-                        "label": "Profielelement",
-                        "package": "OSLO-BodemEnOndergrond",
-                        "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
+                        "name": "Interval",
+                        "label": "Interval",
+                        "package": "Hulppakket",
+                        "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval"
                     }
                 ],
-                "parentclasses": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement",
+                "parentclasses": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval",
                 "label": {
                     "nl": "Laag"
                 },
                 "definition": {
-                    "nl": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
+                    "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
                 },
-                "usage": "",
+                "usage": {
+                    "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+                },
                 "label-nl": {
                     "nl": "Laag"
                 },
                 "definition-nl": {
-                    "nl": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
+                    "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
                 },
-                "usageNote-nl": "",
+                "usageNote-nl": {
+                    "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+                },
                 "label-en": "",
                 "definition-en": "",
                 "usageNote-en": "",
@@ -950,13 +960,18 @@
                     },
                     {
                         "key": "definition-nl",
-                        "value": "NOTE",
+                        "value": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject.",
                         "note": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
                     },
                     {
-                        "key": "ap-usageNote-nl",
-                        "value": "In deze context bvb bodemlaag, ondergrond, gesteentelaag, watervoerende laag, bedrock etc.",
-                        "note": "In deze context bvb bodemlaag, ondergrond, gesteentelaag, watervoerende laag, bedrock etc etc. OPMERKING: Laag is hier gedefinieerd als aanduiding van een Laag, eerder dan de Laag als object. De volledige Laag wordt maw slechts gesampled, typisch op de locatie van een boring waar op basis van Grondmonsters een Profiel vd bodem of ondergrond wordt opgesteld. "
+                        "key": "usageNote-nl",
+                        "value": "NOTE",
+                        "note": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+                    },
+                    {
+                        "key": "name",
+                        "value": "Laag.waarde",
+                        "note": "null"
                     }
                 ],
                 "Scope": "FULL_DEFINITON"
@@ -964,8 +979,49 @@
             "inpackage": "ACTIVE_PACKAGE",
             "name": "Laag",
             "parents": [
-                "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
+                "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval"
             ]
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laagtype",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Laagtype",
+                "EA-Guid": "{2C6DC073-7090-451f-8FDB-066881DBB552}",
+                "EA-Package": "OSLO-BodemEnOndergrond",
+                "EA-Type": "ENUMERATION",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [],
+                "Scope": "FULL_DEFINITON"
+            },
+            "inpackage": "ACTIVE_PACKAGE",
+            "name": "",
+            "parents": []
         },
         {
             "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld",
@@ -1441,6 +1497,106 @@
         }
     ],
     "properties": [
+        {
+            "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "waarde",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "waarde"
+            },
+            "usage": {
+                "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
+            },
+            "usageNote-nl": {
+                "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
+            },
+            "definition": {
+                "nl": "Verwijzing naar een record dat de laal beschrijft."
+            },
+            "label": {
+                "nl": "waarde"
+            },
+            "definition-nl": {
+                "nl": "Verwijzing naar een record dat de laal beschrijft."
+            },
+            "extra": {
+                "EA-Name": "waarde",
+                "EA-Guid": "{149464F6-B1B4-4a66-8B37-629D3139AD30}",
+                "EA-Package": "OSLO-BodemEnOndergrond",
+                "EA-Type": "attribute",
+                "EA-Domain": "Laag",
+                "EA-Domain-Guid": "{B21E23EB-317B-4ffd-9A1D-BDBF2365C116}",
+                "EA-Range": "Any",
+                "RangeData": {
+                    "EA-Name": "Any",
+                    "EA-GUID": "{72F67A3D-E2A1-449c-8D39-7493C3E3F717}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+                },
+                "label": {
+                    "nl": "waarde"
+                },
+                "definition": {
+                    "nl": "Verwijzing naar een record dat de laal beschrijft."
+                },
+                "usage": {
+                    "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
+                },
+                "label-nl": {
+                    "nl": "waarde"
+                },
+                "definition-nl": {
+                    "nl": "Verwijzing naar een record dat de laal beschrijft."
+                },
+                "usageNote-nl": {
+                    "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
+                },
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "waarde",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Verwijzing naar een record dat de laal beschrijft.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "usageNote-nl",
+                        "value": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde",
+                    "EA-Name": "Laag"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Any",
+                    "EA-GUID": "{72F67A3D-E2A1-449c-8D39-7493C3E3F717}",
+                    "EA-Package": "OSLO-ObservatiesEnMetingen",
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#Resource"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
         {
             "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -3291,6 +3447,84 @@
                 "Scope": "NOTHING"
             },
             "name": "Domeinobject"
+        },
+        {
+            "@id": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "Interval"
+            },
+            "label": {
+                "nl": "Interval"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Interval",
+                "EA-Guid": "{79801ECE-2155-430c-8D69-674DE73DF575}",
+                "EA-Package": "Hulppakket",
+                "EA-Type": "CLASS",
+                "EA-Parents": "Profielelement",
+                "EA-Parents2": [
+                    {
+                        "name": "Profielelement",
+                        "label": "Profielelement",
+                        "package": "OSLO-BodemEnOndergrond",
+                        "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
+                    }
+                ],
+                "parentclasses": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement",
+                "label": {
+                    "nl": "Interval"
+                },
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "Interval"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Curve, louter bepaald door zijn twee uiteinden.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Interval",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "Tussen die uiteinden gebeuren dan de Observaties, bv een diepte-interval waarin de bodemsamenstelling wordt bestudeerd.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Interval",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Interval"
         },
         {
             "@id": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
@@ -8264,14 +8498,14 @@
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/",
     "config": "config/config-voc.json",
     "branchtag": "master",
-    "dummy": "038",
+    "dummy": "039",
     "filename": "config/OSLO-BodemEnOndergrond-VOC-BodemEnOndergrond.json",
     "navigation": {
         "prev": "/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/2021-08-01"
     },
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond",
     "urlref": "/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2022-04-28",
-    "documentcommit": "f8b9e89381d866207212d604bd6f097d743a62f3",
-    "toolchaincommit": "12ed8dd971c1521f4f068201a9570b712d246b8b",
+    "documentcommit": "d1917044e17c8186a89b16ae5017190e60b05026",
+    "toolchaincommit": "c5626c478539e4fb9093ea17280d484894026442",
     "hostname": "https://data.vlaanderen.be"
 }

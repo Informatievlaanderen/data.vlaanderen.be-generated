@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/f8b9e89381d866207212d604bd6f097d743a62f3",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/f8b9e89381d866207212d604bd6f097d743a62f3/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/d1917044e17c8186a89b16ae5017190e60b05026",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/d1917044e17c8186a89b16ae5017190e60b05026/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-bodem-en-ondergrond/",
     "usesVocs": [],
@@ -179,20 +179,32 @@
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag",
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde",
       "name": "Laag",
       "label": {
         "nl": "Laag"
       },
       "sort": "Laag",
       "description": {
-        "nl": "Horizontale uitgespreide hoeveelheid materiaal die zich onderscheidt van wat er boven en onder is."
+        "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
+      },
       "equivalent": [],
       "parents": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
+        "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval"
       ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laagtype",
+      "name": "",
+      "label": {},
+      "sort": "",
+      "description": {},
+      "usage": {},
+      "equivalent": [],
+      "parents": []
     },
     {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld",
@@ -295,6 +307,27 @@
     }
   ],
   "properties": [
+    {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde",
+      "name": "waarde",
+      "label": {
+        "nl": "waarde"
+      },
+      "sort": "waarde",
+      "description": {
+        "nl": "Verwijzing naar een record dat de laal beschrijft."
+      },
+      "usage": {
+        "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Resource"
+      ],
+      "parents": []
+    },
     {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
       "name": "aanvangspeil",
