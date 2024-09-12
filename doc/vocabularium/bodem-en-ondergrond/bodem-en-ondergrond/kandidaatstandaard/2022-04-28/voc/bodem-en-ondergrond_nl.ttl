@@ -73,6 +73,14 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde> a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."@nl;
+  rdfs:comment "Verwijzing naar een record dat de laal beschrijft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:range rdfs:Resource .
+
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte> a owl:ObjectProperty;
   rdfs:label "hoogte"@nl;
   rdfs:comment "Verticale maat naar boven vanaf het grondoppervlak van het maaiveld."@nl;
@@ -137,14 +145,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#waarde> a owl:ObjectProperty;
-  rdfs:label "waarde"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."@nl;
-  rdfs:comment "Verwijzing naar een record dat de laal beschrijft."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range rdfs:Resource .
-
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry> a rdf:Property;
   rdfs:label "geometrie"@nl .
 
@@ -183,7 +183,7 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde> a owl:Class;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag> a owl:Class;
   rdfs:label "Laag"@nl;
   <http://purl.org/vocab/vann/usageNote> "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."@nl;
   rdfs:comment "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."@nl;
