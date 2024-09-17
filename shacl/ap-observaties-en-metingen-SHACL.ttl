@@ -61,6 +61,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MateriaalklasseShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstertypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#CategorieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatiecontexttypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#LocatieShape>,
@@ -1163,7 +1164,7 @@
   shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatiecontextShape/e5ccf692ee38c28199531eb5e0c59554153a57c3> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Observatiecontext.rol";
-  shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+  shacl:class skos:Concept;
   shacl:description "Aard van de samenhang."@nl;
   shacl:name "rol"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role> .
@@ -1173,6 +1174,10 @@
   shacl:minCount 1;
   shacl:name "Observatie (target)"@nl;
   shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatiecontexttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatietypeShape> a shacl:NodeShape;
   shacl:closed false;
