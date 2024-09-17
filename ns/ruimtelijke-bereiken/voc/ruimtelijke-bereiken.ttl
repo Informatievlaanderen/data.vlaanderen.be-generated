@@ -3,7 +3,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType> a rdfs:Class;
@@ -48,16 +47,6 @@
 <https://data.vlaanderen.be/ns/ruimtelijke-bereiken> a owl:Ontology;
   rdfs:label "ruimtelijke-bereiken"@en,
     "ruimtelijke-bereiken"@nl;
-  dc:contributor [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://medewerkerwebsiteurl>;
-      foaf:name "MedewerkerAffiliatie"
-    ];
-    foaf:firstName "MedewerkerVoornaam";
-    foaf:lastName "MedewerkerNaam";
-    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
-  ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
@@ -93,27 +82,7 @@
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values>,
-    <http://def.isotc211.org/iso19123/2005/CoverageCore#CRS>;
-  <http://www.w3.org/2001/02pd/rec54#editor> [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://editorwebsiteurl>;
-      foaf:name "EditorAffiliatie"
-    ];
-    foaf:firstName "EditorVoornaam";
-    foaf:lastName "EditorNaam";
-    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
-  ];
-  foaf:maker [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://auteurwebsiteurl>;
-      foaf:name "AuteurAffiliatie"
-    ];
-    foaf:firstName "AuteurVoornaam";
-    foaf:lastName "AuteurNaam";
-    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
-  ] .
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CRS> .
 
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CRS> a rdf:Property;
   rdfs:label "crs"@nl .
