@@ -109,8 +109,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-ObservatiesEnMetingen",
-  "documentcommit": "008013250da18624c6d06a846066b4f6c4f3b62e",
-  "dummy": "036",
+  "documentcommit": "98944b6567ddb96e1c8bf75b08c77855075a3188",
+  "dummy": "038",
   "eap": "OSLO-BodemEnOndergrond-AP.EAP",
   "editors": [
     {
@@ -1227,7 +1227,7 @@
       "domain": [
         {
           "EA-Name": "Domeinobject",
-          "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
         }
       ],
       "extra": {
@@ -4219,6 +4219,121 @@
     {
       "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
+      "ap-definition-nl": {
+        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
+      },
+      "ap-label-nl": {
+        "nl": "geassocieerdeObservatie"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
+      },
+      "domain": [
+        {
+          "EA-Name": "Bemonsteringsobject",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "geassocieerdeObservatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "geassocieerdeObservatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Bemonsteringsobject",
+        "EA-Domain-Guid": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
+        "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
+        "EA-Name": "geassocieerdeObservatie",
+        "EA-Package": "",
+        "EA-Range": "Observatie",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
+          "EA-Name": "Observatie",
+          "EA-Package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "geassocieerdeObservatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+            "value": "NOTE"
+          },
+          {
+            "key": "label-nl",
+            "note": "geassocieerdeObservatie",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
+        },
+        "ap-label-nl": {
+          "nl": "geassocieerdeObservatie"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
+        },
+        "derived": "false",
+        "destRole": "geassocieerdeObservatie",
+        "label": {
+          "nl": "geassocieerdeObservatie"
+        },
+        "sourceRole": "Ontwerp",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "geassocieerdeObservatie"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "geassocieerdeobservatie",
+      "range": [
+        {
+          "EA-GUID": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
+          "EA-Name": "Observatie",
+          "EA-Package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        }
+      ]
+    },
+    {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{26E59195-6002-4978-BDE0-D77DFDF4F335}",
       "ap-definition-nl": {
         "nl": "Observaties waarvan de resultaten op een of andere manier samenhangen."
@@ -4340,121 +4455,6 @@
       "usage": {
         "nl": "Het gaat om samenhang die van belang is om het resultaat van individuele Observaties te begrijpen, bv biotische relaties (dier A is roofdier en is aanwezig omdat dier B prooi voorkomt). Dergelijke relaties vereisen expliciet te worden beschreven (in tegenstelling tot relaties zoals het samenvallen van resultaten van Observaties in ruimte of tijd die impliciet mogen blijven). Ook nuttig voor relaties waarbij de output van Observatie A de input vormt voor Observatie B."
       }
-    },
-    {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
-      "ap-definition-nl": {
-        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
-      },
-      "ap-label-nl": {
-        "nl": "geassocieerdeObservatie"
-      },
-      "codelist": [],
-      "definition": {
-        "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
-      },
-      "domain": [
-        {
-          "EA-Name": "Bemonsteringsobject",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-        }
-      ],
-      "extra": {
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "geassocieerdeObservatie",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-            "value": "NOTE"
-          },
-          {
-            "key": "label-nl",
-            "note": "geassocieerdeObservatie",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
-            "value": "NOTE"
-          }
-        ],
-        "EA-Domain": "Bemonsteringsobject",
-        "EA-Domain-Guid": "{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-        "EA-Guid": "{164E9872-721B-4ee9-B6FC-AFA29D7D7030}",
-        "EA-Name": "geassocieerdeObservatie",
-        "EA-Package": "",
-        "EA-Range": "Observatie",
-        "EA-Type": "connector",
-        "RangeData": {
-          "EA-GUID": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
-          "EA-Name": "Observatie",
-          "EA-Package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-        },
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "note": "geassocieerdeObservatie",
-            "value": "NOTE"
-          },
-          {
-            "key": "uri",
-            "note": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-            "value": "NOTE"
-          },
-          {
-            "key": "label-nl",
-            "note": "geassocieerdeObservatie",
-            "value": "NOTE"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "Observatie die op het Bemonsteringsobject is uitgevoerd.",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "TRANSLATIONS_ONLY",
-        "ap-codelist": "",
-        "ap-definition-nl": {
-          "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
-        },
-        "ap-label-nl": {
-          "nl": "geassocieerdeObservatie"
-        },
-        "ap-usageNote-nl": "",
-        "definition": {
-          "nl": "Observatie die op het Bemonsteringsobject is uitgevoerd."
-        },
-        "derived": "false",
-        "destRole": "geassocieerdeObservatie",
-        "label": {
-          "nl": "geassocieerdeObservatie"
-        },
-        "sourceRole": "Ontwerp",
-        "usage": ""
-      },
-      "generalization": [],
-      "inpackage": "ACTIVE_PACKAGE",
-      "label": {
-        "nl": "geassocieerdeObservatie"
-      },
-      "maxCardinality": "*",
-      "minCardinality": "0",
-      "name": "geassocieerdeobservatie",
-      "range": [
-        {
-          "EA-GUID": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
-          "EA-Name": "Observatie",
-          "EA-Package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-        }
-      ]
     },
     {
       "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
@@ -6654,7 +6654,7 @@
           "EA-GUID": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
           "EA-Name": "Domeinobject",
           "EA-Package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
         },
         "RawTags": [
           {
@@ -6712,7 +6712,7 @@
           "EA-GUID": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
           "EA-Name": "Domeinobject",
           "EA-Package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
         }
       ],
       "usage": {
@@ -8406,6 +8406,94 @@
       "name": "Discreetbereikobservatie",
       "usage": {
         "nl": "Een fenomeen kan variëren in functie van een parameter (bv de lengte van een treinspoor varieert met de temperatuur), als die parameter ruimte of tijd is spreken we van een bereik. Gebeurt de variatie stapsgewijs dan hebben we een DiscreetBereik. Het kan dat het fenomeen werkelijk discreet varieert, bv aantal inwoners per gemeente waarbij het fenomeen het inwonersaantal is en de gemeenten de ruimte opdelen in discrete stukken. In de context van Observaties en Metingen echter gaat het doorgaans om een bewuste opdeling in stukjes ruimte of tijd waarbij bv een Meting plaatsvindt om de x meter of om de y minuten. Dat gebeurt om voor de hand liggende praktische redenen. Aan elk van de stukjes wordt een waarde toegekend die niet varieert binnen dat stuk. Bv een remote sensing beeld geeft de variatie van kleur weer dmv pixels, of een bodemprofiel de opeenvolgende gesteentelagen. Een typisch geval ook is een set van meetpunten, bv een verzameling temperatuurmetingen verspreid over een gebied. Doorgaans worden deze punten gebruikt om dmv interpolatie het DiscreetBereik om te zetten in een ContinuBereik (waarbij voor om het even welk punt in het gebied een temperatuur kan worden gegeven). De meetpunten kunnen ook punten op de tijdsas zijn, bv temperatuurmetingen op één plek op verschillende opeenvolgende tijdstippen. OPMERKING: Een analoog resultaat kan worden bekomen door afzonderlijke Observaties uit te voeren op een reeks Bemonsteringsobjecten, typisch wanneer de meetpunten objecten op zich zijn (bv weerstations) en ook voor andere Observaties worden gebruikt."
+      }
+    },
+    {
+      "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+      "ap-definition-nl": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "ap-label-nl": {
+        "nl": "Domeinobject"
+      },
+      "ap-usageNote-nl": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "definition": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "extra": {
+        "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+        "EA-Name": "Domeinobject",
+        "EA-Package": "OSLO-ObservatiesEnMetingen",
+        "EA-Parents": "Object",
+        "EA-Parents2": [
+          {
+            "label": "Object",
+            "name": "Object",
+            "package": "OSLO-ObservatiesEnMetingen",
+            "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+          }
+        ],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Domeinobject"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Domeinobject"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+        },
+        "ap-label-nl": {
+          "nl": "Domeinobject"
+        },
+        "ap-usageNote-nl": {
+          "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+        },
+        "definition": {
+          "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+        },
+        "label": {
+          "nl": "Domeinobject"
+        },
+        "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+        "usage": {
+          "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+        }
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "name": "Domeinobject",
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
       }
     },
     {
@@ -10306,94 +10394,6 @@
           "nl": "Domeinobject"
         },
         "parentclasses": "",
-        "usage": {
-          "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-        }
-      },
-      "inpackage": "OTHER_PACKAGE",
-      "label": {
-        "nl": "Domeinobject"
-      },
-      "name": "Domeinobject",
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-      }
-    },
-    {
-      "@id": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-      "ap-definition-nl": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-      },
-      "ap-label-nl": {
-        "nl": "Domeinobject"
-      },
-      "ap-usageNote-nl": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-      },
-      "definition": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-      },
-      "extra": {
-        "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-        "EA-Name": "Domeinobject",
-        "EA-Package": "OSLO-ObservatiesEnMetingen",
-        "EA-Parents": "Object",
-        "EA-Parents2": [
-          {
-            "label": "Object",
-            "name": "Object",
-            "package": "OSLO-ObservatiesEnMetingen",
-            "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-          }
-        ],
-        "EA-Type": "CLASS",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "note": "null",
-            "value": "Domeinobject"
-          },
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "Domeinobject"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "note": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
-            "value": "NOTE"
-          }
-        ],
-        "Scope": "TRANSLATIONS_ONLY",
-        "ap-codelist": "",
-        "ap-definition-nl": {
-          "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-        },
-        "ap-label-nl": {
-          "nl": "Domeinobject"
-        },
-        "ap-usageNote-nl": {
-          "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-        },
-        "definition": {
-          "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-        },
-        "label": {
-          "nl": "Domeinobject"
-        },
-        "parentclasses": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
         "usage": {
           "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
         }
@@ -12461,7 +12461,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
   "template": "observaties-en-metingen-ap.j2",
   "title": "Observaties en Metingen (Applicatieprofiel)",
-  "toolchaincommit": "649a5ab5f3af27b021a32eaf0d7b02a111d8bf3f",
+  "toolchaincommit": "02890f3c54fc4d05706aa9c5e73b146d9a90ad23",
   "translation": [
     {
       "language": "nl",

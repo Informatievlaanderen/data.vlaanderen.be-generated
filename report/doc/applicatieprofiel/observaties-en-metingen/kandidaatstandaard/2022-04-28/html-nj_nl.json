@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/008013250da18624c6d06a846066b4f6c4f3b62e",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/008013250da18624c6d06a846066b4f6c4f3b62e/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/98944b6567ddb96e1c8bf75b08c77855075a3188",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/98944b6567ddb96e1c8bf75b08c77855075a3188/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
     "usesVocs": [],
@@ -567,6 +567,79 @@
             "uri": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result",
             "ap-definition-nl": "Resultaat van de DiscreetBereikobservatie.",
             "ap-label-nl": "resultaat"
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "sort": "Domeinobject",
+      "description": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "parents": [
+        {
+          "label": "Object",
+          "name": "Object",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "scoped_uri": "#Object"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Domeinobject",
+        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+        "ap-label-nl": "Domeinobject",
+        "ap-definition-nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+        "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "properties": [
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Domeinobject",
+              "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Domeinobjecttype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Domeinobjecttype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Domeinobjecttype"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "type",
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van het Domeinobject."
           }
         }
       ]
@@ -3458,80 +3531,7 @@
           "domain": [
             {
               "EA-Name": "Domeinobject",
-              "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Domeinobjecttype",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Domeinobjecttype",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Domeinobjecttype"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "type",
-            "uri": "http://purl.org/dc/terms/type",
-            "ap-label-nl": "type",
-            "ap-definition-nl": "Aard van het Domeinobject."
-          }
-        }
-      ]
-    },
-    {
-      "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-      "name": "Domeinobject",
-      "label": {
-        "nl": "Domeinobject"
-      },
-      "sort": "Domeinobject",
-      "description": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-      },
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-      },
-      "parents": [
-        {
-          "label": "Object",
-          "name": "Object",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-          "scoped_uri": "#Object"
-        }
-      ],
-      "rawTags": {
-        "label-nl": "Domeinobject",
-        "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-        "ap-label-nl": "Domeinobject",
-        "ap-definition-nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
-        "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-      },
-      "properties": [
-        {
-          "uri": "http://purl.org/dc/terms/type",
-          "name": "type",
-          "sort": "type",
-          "label": {
-            "nl": "type"
-          },
-          "description": {
-            "nl": "Aard van het Domeinobject."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Domeinobject",
-              "uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+              "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
             }
           ],
           "range": [
@@ -4053,13 +4053,13 @@
           "range": [
             {
               "range_label": "Domeinobject",
-              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+              "range_uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Domeinobject",
-              "range_puri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
               "range_label": {
                 "nl": "Domeinobject"
               }
