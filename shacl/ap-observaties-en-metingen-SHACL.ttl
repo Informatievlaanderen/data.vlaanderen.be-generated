@@ -6,8 +6,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28> rdfs:member <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#NaamInNaamruimteShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#RecordShape>,
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28> rdfs:member <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#RecordShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MaatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#TemporeleEntiteitShape>,
@@ -61,6 +60,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjecttypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MateriaalklasseShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstertypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#CategorieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#LocatieShape>,
@@ -330,6 +330,10 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#CategorieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape/09ed995683a26095de4577d13e597160f260ecb2>,
@@ -338,7 +342,7 @@
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape/09ed995683a26095de4577d13e597160f260ecb2> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Classificatie.resultaat";
-  shacl:class <http://def.isotc211.org/iso19103/2005/Names#ScopedName>;
+  shacl:class skos:Concept;
   shacl:description "Resultaat van de Classificatie."@nl;
   shacl:name "resultaat"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result> .
@@ -884,10 +888,6 @@
   shacl:minCount 1;
   shacl:name "BemonsteringsProces"@nl;
   shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#NaamInNaamruimteShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://def.isotc211.org/iso19103/2005/Names#ScopedName> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
