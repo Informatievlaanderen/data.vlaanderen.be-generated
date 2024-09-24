@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/72c06d89445ef0a2f5c20e74f8f288a970efe640",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/72c06d89445ef0a2f5c20e74f8f288a970efe640/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/a4b4a2f02b67bd01afd17d3f782570a4e4a33761",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/a4b4a2f02b67bd01afd17d3f782570a4e4a33761/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -42,10 +42,14 @@
       "properties": [
         {
           "uri": "http://fixme.com#sessiereeks",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "sessiereeks",
+          "sort": "sessiereeks",
+          "label": {
+            "nl": "sessiereeks"
+          },
+          "description": {
+            "nl": "De Sessiereeks waarop de Annulatie betrekking heeft."
+          },
           "usage": {},
           "domain": [
             {
@@ -70,7 +74,10 @@
           ],
           "cardinality": "",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "definition-nl": "De Sessiereeks waarop de Annulatie betrekking heeft.",
+            "label-nl": "sessiereeks"
+          }
         },
         {
           "uri": "http://fixme.com#reden",
@@ -113,38 +120,6 @@
             "definition-nl": "De reden van annulatie.",
             "ap-definition-nl": "De reden van annulatie."
           }
-        },
-        {
-          "uri": "http://fixme.com#sessiereeks",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Annulatie",
-              "uri": "http://fixme.com#Annulatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Sessiereeks",
-              "range_uri": "http://fixme.com#Sessiereeks"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Sessiereeks",
-              "range_puri": "http://fixme.com#Sessiereeks",
-              "range_label": {
-                "nl": "Sessiereeks"
-              }
-            }
-          ],
-          "cardinality": "",
-          "codelist_uri": "",
-          "rawTags": {}
         },
         {
           "uri": "http://fixme.com#aantal sessies",
@@ -1209,10 +1184,14 @@
       "properties": [
         {
           "uri": "http://fixme.com#verplaatsing",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "verplaatsing",
+          "sort": "verplaatsing",
+          "label": {
+            "nl": "verplaatsing"
+          },
+          "description": {
+            "nl": "Het aantal sessies die verplaatst zijn, samen met de reden."
+          },
           "usage": {},
           "domain": [
             {
@@ -1237,7 +1216,10 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "definition-nl": "Het aantal sessies die verplaatst zijn, samen met de reden.",
+            "label-nl": "verplaatsing"
+          }
         },
         {
           "uri": "http://fixme.com#tijdschema",
@@ -1277,38 +1259,6 @@
             "label-nl": "tijdschema",
             "definition-nl": "Overzicht van de tijdstippen waarop de Sessiereeks plaatsvindt."
           }
-        },
-        {
-          "uri": "http://fixme.com#verplaatsing",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Sessiereeks",
-              "uri": "http://fixme.com#Sessiereeks"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Verplaatsing",
-              "range_uri": "http://fixme.com#Verplaatsing"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Verplaatsing",
-              "range_puri": "http://fixme.com#Verplaatsing",
-              "range_label": {
-                "nl": "Verplaatsing"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {}
         },
         {
           "uri": "http://fixme.com#sessie",
@@ -1386,6 +1336,45 @@
           "rawTags": {
             "label-nl": "naam",
             "definition-nl": "De naam die een Sessiereeks draagt."
+          }
+        },
+        {
+          "uri": "http://fixme.com#annulatie",
+          "name": "annulatie",
+          "sort": "annulatie",
+          "label": {
+            "nl": "annulatie"
+          },
+          "description": {
+            "nl": "Het aantal sessies die geannuleerd zijn, samen met de reden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Sessiereeks",
+              "uri": "http://fixme.com#Sessiereeks"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Annulatie",
+              "range_uri": "http://fixme.com#Annulatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Annulatie",
+              "range_puri": "http://fixme.com#Annulatie",
+              "range_label": {
+                "nl": "Annulatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Het aantal sessies die geannuleerd zijn, samen met de reden.",
+            "label-nl": "annulatie"
           }
         }
       ]
@@ -1567,6 +1556,45 @@
         "name": "Verplaatsing"
       },
       "properties": [
+        {
+          "uri": "http://fixme.com#sessiereeks",
+          "name": "sessiereeks",
+          "sort": "sessiereeks",
+          "label": {
+            "nl": "sessiereeks"
+          },
+          "description": {
+            "nl": "De Sessiereeks waarop de Annulatie betrekking heeft."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verplaatsing",
+              "uri": "http://fixme.com#Verplaatsing"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Sessiereeks",
+              "range_uri": "http://fixme.com#Sessiereeks"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sessiereeks",
+              "range_puri": "http://fixme.com#Sessiereeks",
+              "range_label": {
+                "nl": "Sessiereeks"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "sessiereeks",
+            "definition-nl": "De Sessiereeks waarop de Annulatie betrekking heeft."
+          }
+        },
         {
           "uri": "http://fixme.com#reden",
           "name": "reden",
@@ -3050,7 +3078,8 @@
     {
       "uri": "http://fixme.com#verplaatsing",
       "name": {
-        "undefined": ""
+        "nl": "verplaatsing",
+        "undefined": "verplaatsing"
       },
       "description": {},
       "domain": [
@@ -3109,7 +3138,8 @@
     {
       "uri": "http://fixme.com#sessiereeks",
       "name": {
-        "undefined": ""
+        "nl": "sessiereeks",
+        "undefined": "sessiereeks"
       },
       "description": {},
       "domain": [
@@ -3121,9 +3151,10 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#verplaatsing",
+      "uri": "http://fixme.com#sessiereeks",
       "name": {
-        "undefined": ""
+        "nl": "sessiereeks",
+        "undefined": "sessiereeks"
       },
       "description": {},
       "domain": [
@@ -3330,9 +3361,10 @@
       "parents": []
     },
     {
-      "uri": "http://fixme.com#sessiereeks",
+      "uri": "http://fixme.com#annulatie",
       "name": {
-        "undefined": ""
+        "nl": "annulatie",
+        "undefined": "annulatie"
       },
       "description": {},
       "domain": [

@@ -267,13 +267,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/1aa72654c5ef3d8366321854f42fc6dd2b400fd5>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/1aa72654c5ef3d8366321854f42fc6dd2b400fd5>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/b47d9a04b6042353a9440defedaf0e06ad928e31>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/c69f5aef0b4b1689ca7917fa275e0d6cba8b7010>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/0811a258db793502bde697e0451ae86b56c5155a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/43b1afdc196b1532dfe3ca29e7d591cee4236ff2>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/b28b486348d4b486ff718a781220634b2a860135>;
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/b28b486348d4b486ff718a781220634b2a860135>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/0ee4c8cf31a9595d227b59489619d85200d228e3>;
   shacl:targetClass <http://fixme.com#Annulatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/0811a258db793502bde697e0451ae86b56c5155a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Annulatie.reden";
@@ -281,6 +281,12 @@
   shacl:description "De reden van annulatie."@nl;
   shacl:name "reden"@nl;
   shacl:path <http://fixme.com#reden> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/0ee4c8cf31a9595d227b59489619d85200d228e3> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Annulatie.sessiereeks";
+  shacl:class <http://fixme.com#Sessiereeks>;
+  shacl:description "De Sessiereeks waarop de Annulatie betrekking heeft."@nl;
+  shacl:name "sessiereeks"@nl;
+  shacl:path <http://fixme.com#sessiereeks> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/1aa72654c5ef3d8366321854f42fc6dd2b400fd5> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Annulatie.aantalsessies";
   shacl:description "Het aantal sessies die geannuleerd zijn."@nl;
@@ -292,11 +298,6 @@
   shacl:minCount 1;
   shacl:name "reden"@nl;
   shacl:path <http://fixme.com#reden> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Annulatie.";
-  shacl:class <http://fixme.com#Sessiereeks>;
-  shacl:description "";
-  shacl:path <http://fixme.com#sessiereeks> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#AnnulatieShape/b28b486348d4b486ff718a781220634b2a860135> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Annulatie.reden";
   shacl:description "De reden van annulatie."@nl;
@@ -912,14 +913,15 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/c84930995ffcc95df79678522e40bdb6e0affac4>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/1399bd400d4637b15d5fe38202d6572f82150aac>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/5fceb068938b8a837e254da418f45825d992aec8>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/e9d8e42e8041e72c4534134d5a9044b03bed7ec5>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/ded134c17b613bbe2adfbdd9ff840cf9b02eb6d4>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/47b94713c7e159d4b1e410a61a2522e2405e7d7d>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/74a313f1f6f609280b2ac72e7e8aed5e0896741c>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/9ba428afb4f408a5fd9865b72d5cff6ad1bab601>;
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/9ba428afb4f408a5fd9865b72d5cff6ad1bab601>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/ee94d4f49a228b694c6dd08bca115553e0258e40>;
   shacl:targetClass <http://fixme.com#Sessiereeks> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/1399bd400d4637b15d5fe38202d6572f82150aac> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.naam";
@@ -933,11 +935,6 @@
   shacl:description "Overzicht van de tijdstippen waarop de Sessiereeks plaatsvindt."@nl;
   shacl:name "tijdschema"@nl;
   shacl:path <http://fixme.com#tijdschema> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.";
-  shacl:class <http://fixme.com#Verplaatsing>;
-  shacl:description "";
-  shacl:path <http://fixme.com#verplaatsing> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/5fceb068938b8a837e254da418f45825d992aec8> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.naam";
   shacl:description "De naam die een Sessiereeks draagt."@nl;
@@ -957,6 +954,12 @@
   shacl:name "tijdschema"@nl;
   shacl:path <http://fixme.com#tijdschema> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/c84930995ffcc95df79678522e40bdb6e0affac4> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.annulatie";
+  shacl:class <http://fixme.com#Annulatie>;
+  shacl:description "Het aantal sessies die geannuleerd zijn, samen met de reden."@nl;
+  shacl:name "annulatie"@nl;
+  shacl:path <http://fixme.com#annulatie> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/ded134c17b613bbe2adfbdd9ff840cf9b02eb6d4> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.sessie";
   shacl:class <http://fixme.com#Sessie>;
   shacl:description "Een Sessie in de reeks."@nl;
@@ -968,6 +971,12 @@
   shacl:minCount 1;
   shacl:name "naam"@nl;
   shacl:path <http://fixme.com#naam> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SessiereeksShape/ee94d4f49a228b694c6dd08bca115553e0258e40> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Sessiereeks.verplaatsing";
+  shacl:class <http://fixme.com#Verplaatsing>;
+  shacl:description "Het aantal sessies die verplaatst zijn, samen met de reden."@nl;
+  shacl:name "verplaatsing"@nl;
+  shacl:path <http://fixme.com#verplaatsing> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#SubcategorieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -988,7 +997,8 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/c69f5aef0b4b1689ca7917fa275e0d6cba8b7010>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/0811a258db793502bde697e0451ae86b56c5155a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/43b1afdc196b1532dfe3ca29e7d591cee4236ff2>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/b28b486348d4b486ff718a781220634b2a860135>;
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/b28b486348d4b486ff718a781220634b2a860135>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/0ee4c8cf31a9595d227b59489619d85200d228e3>;
   shacl:targetClass <http://fixme.com#Verplaatsing> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/0811a258db793502bde697e0451ae86b56c5155a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Verplaatsing.reden";
@@ -996,6 +1006,12 @@
   shacl:description "De reden van verplaatsing."@nl;
   shacl:name "reden"@nl;
   shacl:path <http://fixme.com#reden> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/0ee4c8cf31a9595d227b59489619d85200d228e3> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Verplaatsing.sessiereeks";
+  shacl:class <http://fixme.com#Sessiereeks>;
+  shacl:description "De Sessiereeks waarop de Annulatie betrekking heeft."@nl;
+  shacl:name "sessiereeks"@nl;
+  shacl:path <http://fixme.com#sessiereeks> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#VerplaatsingShape/1aa72654c5ef3d8366321854f42fc6dd2b400fd5> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-09-24#Verplaatsing.aantalsessies";
   shacl:description "Het aantal Activiteiten dat verplaatst werd."@nl;
