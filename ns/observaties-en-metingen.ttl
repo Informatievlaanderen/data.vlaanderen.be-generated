@@ -94,6 +94,12 @@
 <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> a rdfs:Class;
   rdfs:label "RuimtelijkBemonsteringsobject"@nl .
 
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> a rdfs:Class;
+  rdfs:label "Monstervoorbereiding"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Process> a rdfs:Class;
+  rdfs:label "BemonsteringsProces"@nl .
+
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> a rdfs:Class;
   rdfs:label "Monster"@nl .
 
@@ -120,6 +126,20 @@ skos:Concept a rdfs:Class;
     "Monstertype"@nl,
     "Categorie"@nl,
     "Observatiecontexttype"@nl .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> a owl:ObjectProperty;
+  rdfs:label "BemonsteringsProces"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process> .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster> a owl:ObjectProperty;
+  rdfs:label "Monster"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer> a owl:ObjectProperty;
   rdfs:label "waardeverschaffer"@nl;
@@ -263,6 +283,15 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape> a rdf:Property;
   rdfs:label "geometrie"@nl .
 
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator> a rdf:Property;
+  rdfs:label "procesoperator"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails> a rdf:Property;
+  rdfs:label "verwerkingsdetails"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> a rdf:Property;
+  rdfs:label "tijdstip"@nl .
+
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation> a rdf:Property;
   rdfs:label "huidigeLocatie"@nl .
 
@@ -271,6 +300,9 @@ skos:Concept a rdfs:Class;
 
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation> a rdf:Property;
   rdfs:label "bemonsteringsplaats"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> a rdf:Property;
+  rdfs:label "bemonsteringsmethode"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime> a rdf:Property;
   rdfs:label "bemonsteringstijdstip"@nl .
@@ -687,6 +719,8 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid>,
     <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface>,
     <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen>,
     <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage>,
     <http://def.isotc211.org/iso19156/2011/TemporalObservation#OM_TemporalObservation>,
@@ -702,9 +736,13 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails>,
+    <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator>,
     <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>,
     <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy>,
     <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>,

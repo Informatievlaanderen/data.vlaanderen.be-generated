@@ -951,6 +951,20 @@
     },
     {
       "name": {
+        "nl": "Monstervoorbereiding"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "BemonsteringsProces"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Monster"
       },
       "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
@@ -1146,6 +1160,40 @@
         "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
       ],
       "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "Monster"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "BemonsteringsProces"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+      ],
+      "generalization": []
     }
   ],
   "externalproperties": [
@@ -1228,6 +1276,13 @@
     },
     {
       "name": {
+        "nl": "bemonsteringsmethode"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "bemonsteringsplaats"
       },
       "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
@@ -1245,6 +1300,27 @@
         "nl": "huidigeLocatie"
       },
       "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "tijdstip"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "verwerkingsdetails"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "procesoperator"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
       "@type": "rdf:Property"
     },
     {

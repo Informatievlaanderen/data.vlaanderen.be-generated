@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/3493a0fc56adfc69b70ceb97e7bea8173eef0eb6",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/3493a0fc56adfc69b70ceb97e7bea8173eef0eb6/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/899e58eedd0993d6d122cb90f5bd44c0fbefefe9",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/899e58eedd0993d6d122cb90f5bd44c0fbefefe9/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
     "usesVocs": [],
@@ -2651,6 +2651,235 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
+      "name": "Monstervoorbereiding",
+      "label": {
+        "nl": "Monstervoorbereiding"
+      },
+      "sort": "Monstervoorbereiding",
+      "description": {
+        "nl": "Het prepareren van een Monster voorafgaand aan de Observatie."
+      },
+      "usage": {
+        "nl": "Deze klasse is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+      },
+      "parents": [
+        {
+          "label": "Bemonstering",
+          "name": "Bemonstering",
+          "package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/Sampling",
+          "scoped_uri": "http://www.w3.org/ns/sosa/Sampling"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Monstervoorbereiding",
+        "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
+        "ap-definition-nl": "Het prepareren van een Monster voorafgaand aan de Observatie.",
+        "ap-label-nl": "Monstervoorbereiding",
+        "ap-usageNote-nl": "Deze klasse is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster",
+          "name": "monster",
+          "sort": "Monster",
+          "label": {
+            "nl": "Monster"
+          },
+          "description": {
+            "nl": "Referentie naar verbonden klasse."
+          },
+          "usage": {
+            "nl": ""
+          },
+          "domain": [
+            {
+              "EA-Name": "Monstervoorbereiding",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Monster",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Monster",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
+              "range_label": {
+                "nl": "Monster"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "",
+            "ap-label-nl": "",
+            "definition-nl": "",
+            "ap-definition-nl": "",
+            "usageNote-nl": "",
+            "ap-usageNote-nl": "",
+            "package": ""
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces",
+          "name": "bemonsteringsproces",
+          "sort": "BemonsteringsProces",
+          "label": {
+            "nl": "BemonsteringsProces"
+          },
+          "description": {
+            "nl": "Referentie naar verbonden klasse."
+          },
+          "usage": {
+            "nl": ""
+          },
+          "domain": [
+            {
+              "EA-Name": "Monstervoorbereiding",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "BemonsteringsProces",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#BemonsteringsProces",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+              "range_label": {
+                "nl": "BemonsteringsProces"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "",
+            "ap-label-nl": "",
+            "definition-nl": "",
+            "ap-definition-nl": "",
+            "usageNote-nl": "",
+            "ap-usageNote-nl": "",
+            "package": ""
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
+          "name": "tijdstip",
+          "sort": "tijdstip",
+          "label": {
+            "nl": "tijdstip"
+          },
+          "description": {
+            "nl": "Moment waarop de voorbereiding gebeurt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Monstervoorbereiding",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TemporeleEntiteit",
+              "range_uri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#TemporeleEntiteit",
+              "range_puri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+              "range_label": {
+                "nl": "TemporeleEntiteit"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "tijdstip",
+            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
+            "ap-definition-nl": "Moment waarop de voorbereiding gebeurt.",
+            "ap-label-nl": "tijdstip"
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
+          "name": "procesoperator",
+          "sort": "procesoperator",
+          "label": {
+            "nl": "procesoperator"
+          },
+          "description": {
+            "nl": "Agent die de voorbereiding uitvoert."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Monstervoorbereiding",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "procesoperator",
+            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
+            "ap-definition-nl": "Agent die de voorbereiding uitvoert.",
+            "ap-label-nl": "procesoperator"
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+      "name": "Bemonsteringsproces",
+      "label": {
+        "nl": "BemonsteringsProces"
+      },
+      "sort": "BemonsteringsProces",
+      "description": {
+        "nl": "Proces geassocieerd met het maken van een Bemonsteringsobject."
+      },
+      "usage": {
+        "nl": "Het gaat hier over zaken als de manier van Bemonstering (Bemonsteringsprocedure) en het daarbij gebruikte instrumentarium (Bemonsteraar)."
+      },
+      "parents": [],
+      "rawTags": {
+        "label-nl": "BemonsteringsProces",
+        "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+        "ap-definition-nl": "Proces geassocieerd met het maken van een Bemonsteringsobject.",
+        "ap-usageNote-nl": "Het gaat hier over zaken als de manier van Bemonstering (Bemonsteringsprocedure) en het daarbij gebruikte instrumentarium (Bemonsteraar).",
+        "ap-label-nl": "BemonsteringsProces"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
       "name": "Monster",
       "label": {
@@ -2810,6 +3039,50 @@
           }
         },
         {
+          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+          "name": "bemonsteringsmethode",
+          "sort": "bemonsteringsmethode",
+          "label": {
+            "nl": "bemonsteringsmethode"
+          },
+          "description": {
+            "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+          },
+          "usage": {
+            "nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+          },
+          "domain": [
+            {
+              "EA-Name": "Monster",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "BemonsteringsProces",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#BemonsteringsProces",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+              "range_label": {
+                "nl": "BemonsteringsProces"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "bemonsteringsmethode",
+            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+            "ap-label-nl": "bemonsteringsmethode",
+            "ap-definition-nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object.",
+            "ap-usageNote-nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+          }
+        },
+        {
           "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
           "name": "bemonsteringsplaats",
           "sort": "bemonsteringsplaats",
@@ -2939,6 +3212,50 @@
             "ap-definition-nl": "Locatie vh Monster.",
             "ap-usageNote-nl": "Typisch de plek waar het monster wordt bewaard (evt tot op het niveau van de plank of lade in het magazijn).",
             "ap-label-nl": "huidigeLocatie"
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
+          "name": "verwerkingsdetails",
+          "sort": "verwerkingsdetails",
+          "label": {
+            "nl": "verwerkingsdetails"
+          },
+          "description": {
+            "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."
+          },
+          "usage": {
+            "nl": "Dieze associatie is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+          },
+          "domain": [
+            {
+              "EA-Name": "Monster",
+              "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "BemonsteringsProces",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#BemonsteringsProces",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+              "range_label": {
+                "nl": "BemonsteringsProces"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
+            "ap-definition-nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren.",
+            "ap-usageNote-nl": "NOTE$ea_notes=Dieze associatie is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering.",
+            "ap-label-nl": "verwerkingsdetails",
+            "label-nl": "verwerkingsdetails"
           }
         }
       ]
@@ -3330,6 +3647,36 @@
       "name": {
         "nl": "waardeverschaffer",
         "undefined": "waardeverschaffer"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster",
+      "name": {
+        "nl": "Monster",
+        "undefined": "monster"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces",
+      "name": {
+        "nl": "BemonsteringsProces",
+        "undefined": "bemonsteringsproces"
       },
       "description": {},
       "domain": [
