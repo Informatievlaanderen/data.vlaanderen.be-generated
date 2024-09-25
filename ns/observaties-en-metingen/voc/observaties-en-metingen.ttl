@@ -7,6 +7,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://def.isotc211.org/iso19103/2005/Names#GenericName> a rdfs:Class;
+  rdfs:label "GeneriekeNaam"@nl .
+
+<http://def.isotc211.org/iso19103/2005/Names#ScopedName> a rdfs:Class;
+  rdfs:label "NaamInNaamruimte"@nl .
+
 <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> a rdfs:Class;
   rdfs:label "Maat"@nl .
 
@@ -45,9 +51,6 @@
 
 <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation> a rdfs:Class;
   rdfs:label "DiscreetBereikObservatie"@nl .
-
-<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> a rdfs:Class;
-  rdfs:label "Domeinobject"@nl .
 
 <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> a rdfs:Class;
   rdfs:label "Object"@nl .
@@ -119,13 +122,7 @@ rdfs:Resource a rdfs:Class;
   rdfs:label "Any"@nl .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "Observatietype"@nl,
-    "Bemonsteringsobjecttype"@nl,
-    "Domeinobjecttype"@nl,
-    "Materiaalklasse"@nl,
-    "Monstertype"@nl,
-    "Categorie"@nl,
-    "Observatiecontexttype"@nl .
+  rdfs:label "Observatietype"@nl .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> a owl:ObjectProperty;
   rdfs:label "BemonsteringsProces"@nl;
@@ -255,9 +252,6 @@ skos:Concept a rdfs:Class;
 
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> a rdf:Property;
   rdfs:label "parameter"@nl .
-
-<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> a rdf:Property;
-  rdfs:label "bemonsterdObject"@nl .
 
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member> a rdf:Property;
   rdfs:label "lid"@nl .
@@ -690,7 +684,9 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>,
+  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/Names#GenericName>,
+    <http://def.isotc211.org/iso19103/2005/Names#ScopedName>,
+    <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>,
@@ -703,7 +699,6 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/ComplexObservation#OM_ComplexObservation>,
     <http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation>,
     <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation>,
-    <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>,
     <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>,
     <http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation>,
     <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement>,
@@ -751,7 +746,6 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape>,

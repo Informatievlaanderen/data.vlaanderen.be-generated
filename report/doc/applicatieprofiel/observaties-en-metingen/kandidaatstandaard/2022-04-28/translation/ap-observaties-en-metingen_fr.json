@@ -125,6 +125,38 @@
   ],
   "externals": [
     {
+      "EA-Guid": "{6EC54B7E-E776-4854-949B-B1E8F6B7445C}",
+      "name": "Generiekenaam",
+      "label": {
+        "nl": "GeneriekeNaam",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Abstracte klasse van alle namen in een naamruimte.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Subtypes zijn LokaleNaam en NaamInNaamruimte (resp een naam zonder en een naam met  vermelding van een naamruimte). Datatype van LokaleNaam is bvb String of Taalstring, datatype van NaamInNaamruimte is bvb URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{23B0CAB9-9455-404f-9CA8-DD0AB73EE7F7}",
+      "name": "Naaminnaamruimte",
+      "label": {
+        "nl": "NaamInNaamruimte",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Naam met vermelding van een naamruimte.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Datatype is typisch een URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{35770AC3-5ED2-4f3d-A981-7385D27474FA}",
       "name": "Record",
       "label": {
@@ -212,7 +244,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse.",
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier).",
         "fr": "Enter your translation here"
       }
     },
@@ -277,22 +309,6 @@
       },
       "usage": {
         "nl": "Observaties kunnen beschouwd worden als gegevens en dus zijn data over Observaties wel degelijk metadata. Omdat al heel wat metagegevens elders in het model kunnen worden meegegeven beperkt deze klasse zich tot beschrijvende metadata, ttz informatie zoals titel, samenvatting, auteur en sleutelwoorden. Dergelijke metadata is in hoofdzaak bedoeld voor identificatie en datacatalogen. OPMERKING: Een meer uitgebreide beschrijving is te vinden in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">OSLO-SensorenEnBemonstering</a>.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{0CDDFF93-3ACE-4d69-95A3-64E9718F39F3}",
-      "name": "Bereik",
-      "label": {
-        "nl": "Bereik",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Variatie van een fenomeen in ruimte of tijd.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>.",
         "fr": "Enter your translation here"
       }
     },
@@ -368,7 +384,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een <a href=\"http://www.w3.org/2004/02/skos/core#Concept\">skos:Concept</a>, maw een waarde uit een codelijst.",
+        "nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een naam in een of andere naamruimte, typisch een waarde uit een codelijst, bij voorkeur uniek aangeduid dmv een URI.",
         "fr": "Enter your translation here"
       }
     },
@@ -417,22 +433,6 @@
       },
       "usage": {
         "nl": "Een fenomeen kan variëren in functie van een parameter (bv de lengte van een treinspoor varieert met de temperatuur), als die parameter ruimte of tijd is spreken we van een bereik. Gebeurt de variatie stapsgewijs dan hebben we een DiscreetBereik. Het kan dat het fenomeen werkelijk discreet varieert, bv aantal inwoners per gemeente waarbij het fenomeen het inwonersaantal is en de gemeenten de ruimte opdelen in discrete stukken. In de context van Observaties en Metingen echter gaat het doorgaans om een bewuste opdeling in stukjes ruimte of tijd waarbij bv een Meting plaatsvindt om de x meter of om de y minuten. Dat gebeurt om voor de hand liggende praktische redenen. Aan elk van de stukjes wordt een waarde toegekend die niet varieert binnen dat stuk. Bv een remote sensing beeld geeft de variatie van kleur weer dmv pixels, of een bodemprofiel de opeenvolgende gesteentelagen. Een typisch geval ook is een set van meetpunten, bv een verzameling temperatuurmetingen verspreid over een gebied. Doorgaans worden deze punten gebruikt om dmv interpolatie het DiscreetBereik om te zetten in een ContinuBereik (waarbij voor om het even welk punt in het gebied een temperatuur kan worden gegeven). De meetpunten kunnen ook punten op de tijdsas zijn, bv temperatuurmetingen op één plek op verschillende opeenvolgende tijdstippen. OPMERKING: Een analoog resultaat kan worden bekomen door afzonderlijke Observaties uit te voeren op een reeks Bemonsteringsobjecten, typisch wanneer de meetpunten objecten op zich zijn (bv weerstations) en ook voor andere Observaties worden gebruikt.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-      "name": "Domeinobject",
-      "label": {
-        "nl": "Domeinobject",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
         "fr": "Enter your translation here"
       }
     },
@@ -528,7 +528,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. ",
+        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>.",
         "fr": "Enter your translation here"
       }
     },
@@ -682,10 +682,6 @@
       "definition": {
         "nl": "Het prepareren van een Monster voorafgaand aan de Observatie.",
         "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Deze klasse is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering.",
-        "fr": "Enter your translation here"
       }
     },
     {
@@ -781,18 +777,6 @@
       },
       "usage": {
         "nl": "Normaal gezien bij Observaties waar gekeken wordt of een bepaald fenomeen zich al dan niet voordoet. Bv het voorkomen van een bedreigde diersoort, de aanwezigheid van een defect. Datatype vh resultaat is een Boolean.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{41322168-5A85-4353-93F3-291FFF4805C6}",
-      "name": "Agent",
-      "label": {
-        "nl": "Agent",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
         "fr": "Enter your translation here"
       }
     },
@@ -893,58 +877,6 @@
       }
     },
     {
-      "EA-Guid": "{5B873956-B910-4762-9FBA-1A0C9ED8127E}",
-      "name": "Opmetingmethode",
-      "label": {
-        "nl": "Opmetingmethode",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "TODO",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{48D7AAA3-0FA2-4fc7-9C2D-3D691E663B44}",
-      "name": "Domeinobjecttype",
-      "label": {
-        "nl": "Domeinobjecttype",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{41F774E3-8189-4832-BBF7-5D51F122E0B7}",
-      "name": "Materiaalklasse",
-      "label": {
-        "nl": "Materiaalklasse",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{CC60E37F-93FA-4166-9E07-EB26DB53D3C3}",
-      "name": "Monstertype",
-      "label": {
-        "nl": "Monstertype",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{7244B253-185C-4739-BD82-ADD1C9358902}",
-      "name": "Categorie",
-      "label": {
-        "nl": "Categorie",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{C0B15AF9-6F97-49cc-BE31-F8BCBDB45C2F}",
-      "name": "Observatiecontexttype",
-      "label": {
-        "nl": "Observatiecontexttype",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{B1C659DC-4064-49c9-AE51-0204F8FDC921}",
       "name": "Identificator",
       "label": {
@@ -987,89 +919,9 @@
         "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet dit datatype gesubstitueerd worden door klassen of datatypes zoals Geometrie, GeografischeNaam, Adres etc. OPMERKING: Meer info over deze klassen/datatypes in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/\">OSLO Generiek - basis</a>.",
         "fr": "Enter your translation here"
       }
-    },
-    {
-      "EA-Guid": "{E2DBE2C7-E4C2-4c22-A2F9-05FF27DE823E}",
-      "name": "Opdracht",
-      "label": {
-        "nl": "Opdracht",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Toegewezen taak.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{BFD25136-77A8-41d2-A135-26FA75EC9287}",
-      "name": "Opmeting",
-      "label": {
-        "nl": "Opmeting",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Het bepalen van de precieze omvang van iets door het te meten.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{3BAFAA9D-851A-43b0-913E-82D049B314C2}",
-      "name": "Dekking",
-      "label": {
-        "nl": "Dekking",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Gebied of periode waarop de data betrekking heeft",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding.",
-        "fr": "Enter your translation here"
-      }
     }
   ],
   "externalproperties": [
-    {
-      "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
-      "name": "opnamedatum",
-      "label": {
-        "nl": "opnamedatum",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Datum waarop de Opmeting plaatsvond.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{EB48EB0C-3E46-48a0-9276-AB2492ECD655}",
-      "name": "uitgevoerddoor",
-      "label": {
-        "nl": "uitgevoerdDoor",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Agent die de Opmeting heeft uitgevoerd.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{0CBDFFBD-6DDA-452b-9220-65E76BEE3635}",
-      "name": "methode",
-      "label": {
-        "nl": "methode",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Aard van de gebruikte methode.",
-        "fr": "Enter your translation here"
-      }
-    },
     {
       "EA-Guid": "{858DE2C3-1FEF-4f64-B50F-3AEB9EF6C34F}",
       "name": "opmeting",
@@ -1195,18 +1047,6 @@
       }
     },
     {
-      "EA-Guid": "{39F96FD0-8A54-4d39-94D2-66ADDF4850A5}",
-      "name": "type",
-      "label": {
-        "nl": "type",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Aard van het Domeinobject.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{A158B091-A5BE-43f7-B1EC-445EFE480A6D}",
       "name": "toegekendOp",
       "label": {
@@ -1320,10 +1160,6 @@
       "definition": {
         "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object.",
         "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering.",
-        "fr": "Enter your translation here"
       }
     },
     {
@@ -1394,11 +1230,11 @@
         "fr": "Enter your translation here"
       },
       "definition": {
-        "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren.",
+        "nl": "TODO",
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Dieze associatie is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering.",
+        "nl": "TODO",
         "fr": "Enter your translation here"
       }
     },
@@ -1519,22 +1355,6 @@
       },
       "definition": {
         "nl": "Bemonsteringsobject dat deel uitmaakt van de verzameling van Bemonsteringsobjecten.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{E73168B3-6A67-488f-9111-E9739E7E434F}",
-      "name": "bemonsterdobject",
-      "label": {
-        "nl": "bemonsterdObject",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Verwijzing naar het Object dat men wil bemonsteren.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.",
         "fr": "Enter your translation here"
       }
     },
@@ -1758,7 +1578,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
+        "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
         "fr": "Enter your translation here"
       }
     },
