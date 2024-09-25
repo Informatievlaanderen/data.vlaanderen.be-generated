@@ -41,8 +41,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Bemonsterings3DobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsvlakShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#RuimtelijkBemonsteringsobjectShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsProcesShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#TemporeelMomentBereikShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#TemporeleObservatieShape>,
@@ -105,10 +103,6 @@
   shacl:minCount 1;
   shacl:name "geometrie"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid.shape> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsProcesShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringscurveShape> a shacl:NodeShape;
   shacl:closed false;
@@ -677,10 +671,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/29292485fe75712f3dd40ced81b4addf5960926b>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/3d44e7e0a67b5078dc3bbdeca7e5ef73bb75a6e9>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/50ecf8ea5e11da6774ff826fe16e051109f85995>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/6e80b5efc02d097d3441aec573940112153fe927>,
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/6e80b5efc02d097d3441aec573940112153fe927>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/781c1a701657ed8531ea71b0ff71dfea0d4177b2>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/93667e5e94a61aaa4c282073bfb73db4384ae87d>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/aaf3bde5f700a97566c53449fadaf43b64d06598>,
@@ -693,9 +684,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/27746fec6c80c8d3f7ddb3639ef23b2fab16603f>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/ce610cb6d997112bf4b21d7015353b406006374e>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/18a2e186a5f9c252476fd785abe447b7413169ac>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/39689cc4e09557881e7e61daec5c352d67cd5550>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/e2f8d557eb6b6e6df77690725c80e7b2114f2742>;
-  shacl:targetClass <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster> .
+    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/39689cc4e09557881e7e61daec5c352d67cd5550>;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/18a2e186a5f9c252476fd785abe447b7413169ac> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.monstertype";
   shacl:class skos:Concept;
@@ -715,29 +705,11 @@
   shacl:name "materiaalklasse"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/29292485fe75712f3dd40ced81b4addf5960926b> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.bemonsteringsmethode";
-  shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>;
-  shacl:description "Manier waarop het Monster is verkregen uit het bemonsterd Object."@nl;
-  shacl:name "bemonsteringsmethode"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/39689cc4e09557881e7e61daec5c352d67cd5550> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.monstertype";
   shacl:description "Vorm waarin het Monster werd bekomen;"@nl;
   shacl:maxCount 1;
   shacl:name "monstertype"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/3d44e7e0a67b5078dc3bbdeca7e5ef73bb75a6e9> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.bemonsteringsmethode";
-  shacl:description "Manier waarop het Monster is verkregen uit het bemonsterd Object."@nl;
-  shacl:minCount 1;
-  shacl:name "bemonsteringsmethode"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/50ecf8ea5e11da6774ff826fe16e051109f85995> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.bemonsteringsmethode";
-  shacl:description "Manier waarop het Monster is verkregen uit het bemonsterd Object."@nl;
-  shacl:maxCount 1;
-  shacl:name "bemonsteringsmethode"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/6e80b5efc02d097d3441aec573940112153fe927> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.bemonsteringsplaats";
   shacl:class <http://www.w3.org/ns/locn#Geometry>;
@@ -793,12 +765,6 @@
   shacl:name "huidigeLocatie"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/e2f8d557eb6b6e6df77690725c80e7b2114f2742> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.verwerkingsdetails";
-  shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>;
-  shacl:description "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."@nl;
-  shacl:name "verwerkingsdetails"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/fb6ef3f37406c3cb9df029e482a520e136898356> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.bemonsteringstijdstip";
   shacl:description "Tijdstip waarop het monster werd verkregen uit het bemonsterdObject."@nl;
   shacl:minCount 1;
@@ -808,87 +774,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstertypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/10753c1269cda52a0602f4affd3318d52d8a33e3>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/56d6d559cdc20476a1252ae2d8ac3790dd2bcb5a>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/c41e577baeacadd4546c5097e28496cc8d348b62>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/2a3175efe1725c6079a2d3e8faf8bb01bab94c1c>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/6efe88a9d012107de6fc4dced3ee9bb42aab82fd>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/a845031c3ddc2abfac4fed0ec83e55a70a5b66aa>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/0e91c1369f854f974acfb0fe9e0341749f1f9c8e>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/432652a9897ef1672c7e460733163adb318b73f2>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/4871811d8d5f50d25ff627cd32699aace01c70a4>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/56892b6c493e0fd0d9aa095d121151232ba2c92c>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/b0b353ad4e427329f8695e342e66f3bc193529d7>;
-  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/0e91c1369f854f974acfb0fe9e0341749f1f9c8e> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.procesoperator";
-  shacl:description "Agent die de voorbereiding uitvoert."@nl;
-  shacl:maxCount 1;
-  shacl:name "procesoperator"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/10753c1269cda52a0602f4affd3318d52d8a33e3> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.BemonsteringsProces";
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:maxCount 1;
-  shacl:name "BemonsteringsProces"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/2a3175efe1725c6079a2d3e8faf8bb01bab94c1c> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.Monster";
-  shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen>;
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:name "Monster"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/432652a9897ef1672c7e460733163adb318b73f2> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.procesoperator";
-  shacl:class dc:Agent;
-  shacl:description "Agent die de voorbereiding uitvoert."@nl;
-  shacl:name "procesoperator"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/4871811d8d5f50d25ff627cd32699aace01c70a4> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.tijdstip";
-  shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
-  shacl:description "Moment waarop de voorbereiding gebeurt."@nl;
-  shacl:name "tijdstip"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/56892b6c493e0fd0d9aa095d121151232ba2c92c> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.tijdstip";
-  shacl:description "Moment waarop de voorbereiding gebeurt."@nl;
-  shacl:minCount 1;
-  shacl:name "tijdstip"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/56d6d559cdc20476a1252ae2d8ac3790dd2bcb5a> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.BemonsteringsProces";
-  shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>;
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:name "BemonsteringsProces"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/6efe88a9d012107de6fc4dced3ee9bb42aab82fd> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.Monster";
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:maxCount 1;
-  shacl:name "Monster"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/a845031c3ddc2abfac4fed0ec83e55a70a5b66aa> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.Monster";
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:minCount 1;
-  shacl:name "Monster"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/b0b353ad4e427329f8695e342e66f3bc193529d7> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.tijdstip";
-  shacl:description "Moment waarop de voorbereiding gebeurt."@nl;
-  shacl:maxCount 1;
-  shacl:name "tijdstip"@nl;
-  shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstervoorbereidingShape/c41e577baeacadd4546c5097e28496cc8d348b62> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monstervoorbereiding.BemonsteringsProces";
-  shacl:description "Referentie naar verbonden klasse."@nl;
-  shacl:minCount 1;
-  shacl:name "BemonsteringsProces"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
