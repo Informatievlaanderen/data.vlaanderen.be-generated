@@ -3,7 +3,7 @@
     "title": "OSLO Verkeersmetingen (vocabularium)",
     "uri": "https://data.vlaanderen.be/ns/verkeersmetingen",
     "issued": "2023-12-01",
-    "filename": "Verkeersmetingen-voc",
+    "filename": "Verkeersmetingen",
     "navigation": {
       "prev": "/doc/vocabularium/verkeersmetingen/kandidaatstandaard/2023-12-01",
       "self": "https://data.vlaanderen.be/doc/vocabularium/verkeersmetingen/erkendestandaard/2024-04-17"
@@ -13,10 +13,10 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/ErkendeStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/tree/05c2e3cc5975cecb58efa85c918a18ef2d9ce092",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/blob/05c2e3cc5975cecb58efa85c918a18ef2d9ce092/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/tree/919623e8a4968ebd315d581ceca5fa9eecbf2dae",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/blob/919623e8a4968ebd315d581ceca5fa9eecbf2dae/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-Verkeersmetingen/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/erkende-standaard/vocabularium-verkeersmetingen.html",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-verkeersmetingen/",
     "usesVocs": [],
     "usesAPs": []
   },
@@ -266,217 +266,131 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.netwerkreferentie",
-      "name": "netwerkreferentie",
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer",
+      "name": "waardeverschaffer",
       "label": {
-        "nl": "netwerkreferentie"
+        "nl": "waardeverschaffer"
       },
-      "sort": "netwerkreferentie",
+      "sort": "waardeverschaffer",
       "description": {
-        "nl": "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeetpunt ligt of dat door dat punt bemonsterd wordt."
+        "nl": "Verwijzing naar een Verkeersmeting die op het geobserveerdObject plaatsvondt."
       },
       "usage": {
-        "nl": "Nuttig als men weet langs welk Wegsegment het punt ligt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.\r\n"
+        "nl": "Die meting verschaft ahw een waarde voor het Verkeerskenmerk dat van het Verkeersobject wordt gemeten."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.rijrichting",
-      "name": "rijrichting",
-      "label": {
-        "nl": "rijrichting"
-      },
-      "sort": "rijrichting",
-      "description": {
-        "nl": "Geeft aan welke op welke Rijrichting het Verkeersmeetpunt gelegen is of betrekking heeft."
-      },
-      "usage": {
-        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de snelheid meet."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/weg#Rijrichting"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.wegdeel",
-      "name": "wegdeel",
-      "label": {
-        "nl": "wegdeel"
-      },
-      "sort": "wegdeel",
-      "description": {
-        "nl": "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."
-      },
-      "usage": {
-        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.netwerkreferentie",
-      "name": "netwerkreferentie",
-      "label": {
-        "nl": "netwerkReferentie"
-      },
-      "sort": "netwerkReferentie",
-      "description": {
-        "nl": "Referentie naar het Netwerkelement waarlangs het Verkeersmeettraject loopt of dat door dat traject bemonsterd wordt."
-      },
-      "usage": {
-        "nl": "Nuttig als men weet langs welk Wegsegment het traject loopt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.\n"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.rijrichting",
-      "name": "rijrichting",
-      "label": {
-        "nl": "rijrichting"
-      },
-      "sort": "rijrichting",
-      "description": {
-        "nl": "Geeft aan welke op welke Rijrichting het Verkeersmeettraject ligt."
-      },
-      "usage": {
-        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie.  Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de gemiddelde snelheid meet."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/weg#Rijrichting"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.wegdeel",
-      "name": "wegdeel",
-      "label": {
-        "nl": "wegdeel"
-      },
-      "sort": "wegdeel",
-      "description": {
-        "nl": "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."
-      },
-      "usage": {
-        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk",
-      "name": "geobserveerdkenmerk",
-      "label": {
-        "nl": "geobserveerdKenmerk"
-      },
-      "sort": "geobserveerdKenmerk",
-      "description": {
-        "nl": "Kenmerk dat de Verkeersmetingen in de verzameling meten."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
-      ],
-      "parents": [
-        "http://www.w3.org/ns/sosa/observedProperty"
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdObject",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdObject"
-      },
-      "sort": "geobserveerdObject",
-      "description": {
-        "nl": "Object dat door de Verkeersmetingen wordt geobserveerd."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject"
-      ],
-      "parents": [
-        "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#bemonsterdObject",
-      "name": "bemonsterdobject",
-      "label": {
-        "nl": "bemonsterdObject"
-      },
-      "sort": "bemonsterdObject",
-      "description": {
-        "nl": "Verwijzing naar het Verkeersdomeinobject waarop de meting betrekking heeft en waarvoor het Verkeersbemonsteringsobject representatief is."
-      },
-      "usage": {
-        "nl": "Bvb het Voertuig of het Wegsegment waarvan men een Verkeerskenmerk bepaalt."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject"
-      ],
-      "parents": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk",
-      "name": "geobserveerdkenmerk",
-      "label": {
-        "nl": "geobserveerdKenmerk"
-      },
-      "sort": "geobserveerdKenmerk",
-      "description": {
-        "nl": "Kenmerk van het Verkeersobject dat geobserveerd wordt."
-      },
-      "usage": {
-        "nl": "CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Bv om de Verkeersintensiteit op een Wegsegment te bepalen telt men individuele doorkomsten van Voertuigen in een Verkeersmeetpunt."
-      },
-      "domain": [
         "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
       ],
-      "range": [
+      "parents": [
+        "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType",
+      "name": "voertuigtype",
+      "label": {
+        "nl": "voertuigType"
+      },
+      "sort": "voertuigType",
+      "description": {
+        "nl": "Soort Voertuig waarvan men het Verkeerskenmerk meet."
+      },
+      "usage": {
+        "nl": "Bvb \"Fiets\" als men enkel het aantal fietsen wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Voertuig zijn maar bvb een Wegsegment of Rijstrook etc."
+      },
+      "domain": [
         "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
       ],
+      "range": [
+        "https://data.vlaanderen.be/ns/transportnetwerk#Voertuigtype"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType",
+      "name": "verkeersdeelnemertype",
+      "label": {
+        "nl": "verkeersdeelnemertype"
+      },
+      "sort": "verkeersdeelnemertype",
+      "description": {
+        "nl": "Soort Verkeersdeelnemer waarvan men het Verkeerskenmerk meet."
+      },
+      "usage": {
+        "nl": "Bvb \"Voetganger\" als men enkel het aantal Voertgangers wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Verkeersdeelnemer zijn maar bvb een Wegsegment of Rijstrook etc."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook",
+      "name": "rijstrook",
+      "label": {
+        "nl": "rijstrook"
+      },
+      "sort": "rijstrook",
+      "description": {
+        "nl": "Identificator van de Rijstrook."
+      },
+      "usage": {
+        "nl": "De identificator moet getypeerd worden bvb volgens het systeem dat werd gehanteerd om de Rijstroken te nummeren. Bvb het schema van DATEX II waar over de volledige breedte van de weg van links naar rechts wordt genummerd."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook"
+      ],
+      "range": [
+        "http://www.w3.org/ns/adms#Identifier"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#ligging",
+      "name": "ligging",
+      "label": {
+        "nl": "ligging"
+      },
+      "sort": "ligging",
+      "description": {
+        "nl": "Locatie van de Sensor."
+      },
+      "usage": {
+        "nl": "Bvb de coördinaten of het adres of een verwijzing naar een meetpunt of ander Bemonsteringsobject. Meerdere verschillende types van locaties kunnen worden opgegeven (bvb adres èn coördinaten). Als de Sensor een meetinstallatie is evt de verschillende meetpunten die worden omvat of een omschrijvende polygoon. OPGELET: De locatie van de Sensor is niet noodzakelijk de positie waar de Observatie gebeurt, die wordt in de eerste plaats gegeven door de ligging vh Bemonsteringsobject. Dit attribuut laat vooral toe om posities van Sensoren te beschrijven los vd metingen die er gebeuren."
+      },
+      "domain": [
+        "http://www.w3.org/ns/sosa/Sensor"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Location"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid",
+      "name": "heeftlid",
+      "label": {
+        "nl": "heeftLid"
+      },
+      "sort": "heeftLid",
+      "description": {
+        "nl": "Verkeersmeting die tot de verzameling behoort."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
+      ],
       "parents": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty"
+        "http://www.w3.org/ns/sosa/hasMember"
       ]
     },
     {
@@ -503,144 +417,221 @@
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid",
-      "name": "heeftlid",
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk",
+      "name": "geobserveerdkenmerk",
       "label": {
-        "nl": "heeftLid"
+        "nl": "geobserveerdKenmerk"
       },
-      "sort": "heeftLid",
+      "sort": "geobserveerdKenmerk",
       "description": {
-        "nl": "Verkeersmeting die tot de verzameling behoort."
+        "nl": "Kenmerk van het Verkeersobject dat geobserveerd wordt."
+      },
+      "usage": {
+        "nl": "CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Bv om de Verkeersintensiteit op een Wegsegment te bepalen telt men individuele doorkomsten van Voertuigen in een Verkeersmeetpunt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
+      ],
+      "parents": [
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#bemonsterdObject",
+      "name": "bemonsterdobject",
+      "label": {
+        "nl": "bemonsterdObject"
+      },
+      "sort": "bemonsterdObject",
+      "description": {
+        "nl": "Verwijzing naar het Verkeersdomeinobject waarop de meting betrekking heeft en waarvoor het Verkeersbemonsteringsobject representatief is."
+      },
+      "usage": {
+        "nl": "Bvb het Voertuig of het Wegsegment waarvan men een Verkeerskenmerk bepaalt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject"
+      ],
+      "parents": [
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdObject",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdObject"
+      },
+      "sort": "geobserveerdObject",
+      "description": {
+        "nl": "Object dat door de Verkeersmetingen wordt geobserveerd."
       },
       "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject"
       ],
       "parents": [
-        "http://www.w3.org/ns/sosa/hasMember"
+        "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#ligging",
-      "name": "ligging",
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk",
+      "name": "geobserveerdkenmerk",
       "label": {
-        "nl": "ligging"
+        "nl": "geobserveerdKenmerk"
       },
-      "sort": "ligging",
+      "sort": "geobserveerdKenmerk",
       "description": {
-        "nl": "Locatie van de Sensor."
+        "nl": "Kenmerk dat de Verkeersmetingen in de verzameling meten."
       },
-      "usage": {
-        "nl": "Bvb de coördinaten of het adres of een verwijzing naar een meetpunt of ander Bemonsteringsobject. Meerdere verschillende types van locaties kunnen worden opgegeven (bvb adres èn coördinaten). Als de Sensor een meetinstallatie is evt de verschillende meetpunten die worden omvat of een omschrijvende polygoon. OPGELET: De locatie van de Sensor is niet noodzakelijk de positie waar de Observatie gebeurt, die wordt in de eerste plaats gegeven door de ligging vh Bemonsteringsobject. Dit attribuut laat vooral toe om posities van Sensoren te beschrijven los vd metingen die er gebeuren."
-      },
+      "usage": {},
       "domain": [
-        "http://www.w3.org/ns/sosa/Sensor"
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling"
       ],
       "range": [
-        "http://www.w3.org/ns/prov#Location"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook",
-      "name": "rijstrook",
-      "label": {
-        "nl": "rijstrook"
-      },
-      "sort": "rijstrook",
-      "description": {
-        "nl": "Identificator van de Rijstrook."
-      },
-      "usage": {
-        "nl": "De identificator moet getypeerd worden bvb volgens het systeem dat werd gehanteerd om de Rijstroken te nummeren. Bvb het schema van DATEX II waar over de volledige breedte van de weg van links naar rechts wordt genummerd."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook"
-      ],
-      "range": [
-        "http://www.w3.org/ns/adms#Identifier"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType",
-      "name": "verkeersdeelnemertype",
-      "label": {
-        "nl": "verkeersdeelnemertype"
-      },
-      "sort": "verkeersdeelnemertype",
-      "description": {
-        "nl": "Soort Verkeersdeelnemer waarvan men het Verkeerskenmerk meet."
-      },
-      "usage": {
-        "nl": "Bvb \"Voetganger\" als men enkel het aantal Voertgangers wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Verkeersdeelnemer zijn maar bvb een Wegsegment of Rijstrook etc."
-      },
-      "domain": [
         "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType",
-      "name": "voertuigtype",
-      "label": {
-        "nl": "voertuigType"
-      },
-      "sort": "voertuigType",
-      "description": {
-        "nl": "Soort Voertuig waarvan men het Verkeerskenmerk meet."
-      },
-      "usage": {
-        "nl": "Bvb \"Fiets\" als men enkel het aantal fietsen wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Voertuig zijn maar bvb een Wegsegment of Rijstrook etc."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/transportnetwerk#Voertuigtype"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer",
-      "name": "waardeverschaffer",
-      "label": {
-        "nl": "waardeverschaffer"
-      },
-      "sort": "waardeverschaffer",
-      "description": {
-        "nl": "Verwijzing naar een Verkeersmeting die op het geobserveerdObject plaatsvondt."
-      },
-      "usage": {
-        "nl": "Die meting verschaft ahw een waarde voor het Verkeerskenmerk dat van het Verkeersobject wordt gemeten."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
       ],
       "parents": [
-        "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer"
+        "http://www.w3.org/ns/sosa/observedProperty"
       ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.wegdeel",
+      "name": "wegdeel",
+      "label": {
+        "nl": "wegdeel"
+      },
+      "sort": "wegdeel",
+      "description": {
+        "nl": "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."
+      },
+      "usage": {
+        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.rijrichting",
+      "name": "rijrichting",
+      "label": {
+        "nl": "rijrichting"
+      },
+      "sort": "rijrichting",
+      "description": {
+        "nl": "Geeft aan welke op welke Rijrichting het Verkeersmeettraject ligt."
+      },
+      "usage": {
+        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie.  Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de gemiddelde snelheid meet."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/weg#Rijrichting"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.netwerkreferentie",
+      "name": "netwerkreferentie",
+      "label": {
+        "nl": "netwerkReferentie"
+      },
+      "sort": "netwerkReferentie",
+      "description": {
+        "nl": "Referentie naar het Netwerkelement waarlangs het Verkeersmeettraject loopt of dat door dat traject bemonsterd wordt."
+      },
+      "usage": {
+        "nl": "Nuttig als men weet langs welk Wegsegment het traject loopt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.\n"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.wegdeel",
+      "name": "wegdeel",
+      "label": {
+        "nl": "wegdeel"
+      },
+      "sort": "wegdeel",
+      "description": {
+        "nl": "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."
+      },
+      "usage": {
+        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.rijrichting",
+      "name": "rijrichting",
+      "label": {
+        "nl": "rijrichting"
+      },
+      "sort": "rijrichting",
+      "description": {
+        "nl": "Geeft aan welke op welke Rijrichting het Verkeersmeetpunt gelegen is of betrekking heeft."
+      },
+      "usage": {
+        "nl": "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de snelheid meet."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/weg#Rijrichting"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.netwerkreferentie",
+      "name": "netwerkreferentie",
+      "label": {
+        "nl": "netwerkreferentie"
+      },
+      "sort": "netwerkreferentie",
+      "description": {
+        "nl": "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeetpunt ligt of dat door dat punt bemonsterd wordt."
+      },
+      "usage": {
+        "nl": "Nuttig als men weet langs welk Wegsegment het punt ligt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.\r\n"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
+      ],
+      "parents": []
     }
   ],
   "contributors": [
-    {
-      "role": "A",
-      "first_name": "Steven",
-      "last_name": "Logghe",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
     {
       "role": "A",
       "first_name": "Yanick",
@@ -651,9 +642,9 @@
       }
     },
     {
-      "role": "E",
-      "first_name": "Veerle",
-      "last_name": "Beyaert",
+      "role": "A",
+      "first_name": "Steven",
+      "last_name": "Logghe",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
@@ -661,53 +652,8 @@
     },
     {
       "role": "E",
-      "first_name": "Raf",
-      "last_name": "Buylle",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Yaron",
-      "last_name": "Dassonneville",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Pieter",
-      "last_name": "Desmijter",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Geert",
-      "last_name": "Thijs",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Liesbeth",
-      "last_name": "Van der Haegen",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Ziggy",
-      "last_name": "Vanlishout",
+      "first_name": "Eveline",
+      "last_name": "Vlassenroot",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
@@ -724,42 +670,60 @@
     },
     {
       "role": "E",
-      "first_name": "Eveline",
-      "last_name": "Vlassenroot",
+      "first_name": "Ziggy",
+      "last_name": "Vanlishout",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       }
     },
     {
-      "role": "C",
-      "first_name": "Danny",
-      "last_name": "Asselman",
+      "role": "E",
+      "first_name": "Liesbeth",
+      "last_name": "Van der Haegen",
       "affiliation": {
-        "name": "SWARCO Belgium",
-        "website": "https://www.swarco.com/"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       }
     },
     {
-      "role": "C",
-      "first_name": "Cécile",
-      "last_name": "Bauvin",
+      "role": "E",
+      "first_name": "Geert",
+      "last_name": "Thijs",
       "affiliation": {
-        "name": "Icoms Detections",
-        "website": "https://www.icomsdetections.com/nl/home/"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       }
     },
     {
-      "role": "C",
-      "first_name": "Jasper",
-      "last_name": "Beernaerts",
+      "role": "E",
+      "first_name": "Pieter",
+      "last_name": "Desmijter",
       "affiliation": {
-        "name": "Nationaal Geografisch Instituut",
-        "website": "https://www.ngi.be/website/"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       }
     },
     {
-      "role": "C",
+      "role": "E",
+      "first_name": "Yaron",
+      "last_name": "Dassonneville",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Raf",
+      "last_name": "Buylle",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      }
+    },
+    {
+      "role": "E",
       "first_name": "Veerle",
       "last_name": "Beyaert",
       "affiliation": {
@@ -769,248 +733,44 @@
     },
     {
       "role": "C",
-      "first_name": "Gert",
-      "last_name": "Brackman",
+      "first_name": "Els",
+      "last_name": "Windmolders",
       "affiliation": {
-        "name": "Signco",
-        "website": "https://www.signco.be/"
+        "name": "Provincie Limburg",
+        "website": "https://www.limburg.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Tom",
-      "last_name": "Callens",
+      "first_name": "Joris",
+      "last_name": "Voets",
       "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+        "name": "Kenniscentrum Vlaamse Steden",
+        "website": "https://www.kenniscentrumvlaamsesteden.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Ruben",
-      "last_name": "Cappelle",
+      "first_name": "David",
+      "last_name": "Vlaminck",
       "affiliation": {
-        "name": "Gewestelijke Overheidsdienst Brussel",
-        "website": "https://servicepublic.brussels/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Kristoff",
-      "last_name": "Certyn",
-      "affiliation": {
-        "name": "KRYCER bvba",
-        "website": "https://krycer.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jeroen",
-      "last_name": "Claes",
-      "affiliation": {
-        "name": "CROPLAND",
-        "website": "https://www.cropland.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Simon",
-      "last_name": "Claus",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Dietger",
-      "last_name": "Cleuren",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer",
-        "website": "https://wegenenverkeer.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Koen",
-      "last_name": "Cuypers",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer - Afdeling Elektromechanica en Telematica",
-        "website": "https://wegenenverkeer.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Caroline",
-      "last_name": "De Bosscher",
-      "affiliation": {
-        "name": "Vlaamse Milieumaatschappij",
-        "website": "https://www.vmm.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Annelies",
-      "last_name": "De Craene",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Kris",
-      "last_name": "De Pril",
-      "affiliation": {
-        "name": "Geosparc",
-        "website": "https://www.geosparc.com/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Bart",
-      "last_name": "De Proost",
-      "affiliation": {
-        "name": "Departement Mobiliteit en Openbare Werken",
-        "website": "https://www.vlaanderen.be/departement-mobiliteit-en-openbare-werken"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Wannes",
-      "last_name": "De Smet",
-      "affiliation": {
-        "name": "Be-Mobile",
-        "website": "https://be-mobile.com/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Joachim",
-      "last_name": "De Wilde",
-      "affiliation": {
-        "name": "CycloMedia Technology B.V.",
-        "website": "https://www.cyclomedia.com/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Steven",
-      "last_name": "Degelaen",
-      "affiliation": {
-        "name": "Agentschap Binnenlands Bestuur",
-        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Patrick",
-      "last_name": "Deknudt",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer",
-        "website": "https://wegenenverkeer.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jan",
-      "last_name": "Geukens",
-      "affiliation": {
-        "name": "myCSN",
-        "website": "https://www.mycsn.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Abdel",
-      "last_name": "Ghoula",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer",
+        "name": "Agentschap Wegen en Verkeer - Afdeling Planning en Coördinatie",
         "website": "https://wegenenverkeer.be/"
       }
     },
     {
       "role": "C",
       "first_name": "Stijn",
-      "last_name": "Goossens",
+      "last_name": "Vernaillen",
       "affiliation": {
-        "name": "Signco",
-        "website": "https://www.signco.be/"
+        "name": "Stad Antwerpen",
+        "website": "https://www.antwerpen.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Gert",
-      "last_name": "Janssens",
-      "affiliation": {
-        "name": "Signco",
-        "website": "https://www.signco.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Glen",
-      "last_name": "Joris",
-      "affiliation": {
-        "name": "Brandweer Zone Antwerpen",
-        "website": "https://www.antwerpen.be/nl/overzicht/brandweer"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Pierre",
-      "last_name": "Maere",
-      "affiliation": {
-        "name": "Geomobility",
-        "website": "https://www.geomobility.eu/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Kurt",
-      "last_name": "Marquet",
-      "affiliation": {
-        "name": "ITS BELGIUM",
-        "website": "http://its.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Dries",
-      "last_name": "Meers",
-      "affiliation": {
-        "name": "Stad Gent",
-        "website": "https://stad.gent/nl"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Viki",
-      "last_name": "Schillemans",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer",
-        "website": "https://wegenenverkeer.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Dany",
-      "last_name": "Sevenhans",
-      "affiliation": {}
-    },
-    {
-      "role": "C",
-      "first_name": "Emilie",
-      "last_name": "Sion",
-      "affiliation": {
-        "name": "Agentschap Binnenlands Bestuur",
-        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Steven",
-      "last_name": "Soetens",
+      "first_name": "Thomas",
+      "last_name": "Verlinden",
       "affiliation": {
         "name": "Provincie Antwerpen",
         "website": "https://www.provincieantwerpen.be/"
@@ -1018,26 +778,62 @@
     },
     {
       "role": "C",
-      "first_name": "Simon",
-      "last_name": "Stock",
+      "first_name": "Joren",
+      "last_name": "Verleyen",
       "affiliation": {
-        "name": "Stad Kortrijk",
-        "website": "https://www.kortrijk.be/"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
       }
     },
     {
       "role": "C",
-      "first_name": "Geert",
-      "last_name": "Thoelen",
+      "first_name": "Laura",
+      "last_name": "Verhulst",
       "affiliation": {
-        "name": "s-Lim",
-        "website": "https://www.s-lim.be/"
+        "name": "Brandweer Zone Antwerpen",
+        "website": "https://www.antwerpen.be/nl/overzicht/brandweer"
       }
     },
     {
       "role": "C",
-      "first_name": "Samuel",
-      "last_name": "Van Ackere",
+      "first_name": "Kris",
+      "last_name": "Verherle",
+      "affiliation": {
+        "name": "Rear Window BV",
+        "website": "https://telraam.net/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Koenraad",
+      "last_name": "Verduyn",
+      "affiliation": {
+        "name": "Movias",
+        "website": "https://movias.eu/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kim",
+      "last_name": "Verbeeck",
+      "affiliation": {
+        "name": "Provincie Antwerpen",
+        "website": "https://www.provincieantwerpen.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Ruth",
+      "last_name": "Vandoren",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Dwight",
+      "last_name": "Van Lancker",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
@@ -1054,8 +850,8 @@
     },
     {
       "role": "C",
-      "first_name": "Dwight",
-      "last_name": "Van Lancker",
+      "first_name": "Samuel",
+      "last_name": "Van Ackere",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
@@ -1063,17 +859,26 @@
     },
     {
       "role": "C",
-      "first_name": "Ruth",
-      "last_name": "Vandoren",
+      "first_name": "Geert",
+      "last_name": "Thoelen",
       "affiliation": {
-        "name": "Provincie Vlaams-Brabant",
-        "website": "https://www.vlaamsbrabant.be/nl"
+        "name": "s-Lim",
+        "website": "https://www.s-lim.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Kim",
-      "last_name": "Verbeeck",
+      "first_name": "Simon",
+      "last_name": "Stock",
+      "affiliation": {
+        "name": "Stad Kortrijk",
+        "website": "https://www.kortrijk.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Steven",
+      "last_name": "Soetens",
       "affiliation": {
         "name": "Provincie Antwerpen",
         "website": "https://www.provincieantwerpen.be/"
@@ -1081,26 +886,59 @@
     },
     {
       "role": "C",
-      "first_name": "Koenraad",
-      "last_name": "Verduyn",
+      "first_name": "Emilie",
+      "last_name": "Sion",
       "affiliation": {
-        "name": "Movias",
-        "website": "https://movias.eu/"
+        "name": "Agentschap Binnenlands Bestuur",
+        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
       }
     },
     {
       "role": "C",
-      "first_name": "Kris",
-      "last_name": "Verherle",
+      "first_name": "Dany",
+      "last_name": "Sevenhans",
+      "affiliation": {}
+    },
+    {
+      "role": "C",
+      "first_name": "Viki",
+      "last_name": "Schillemans",
       "affiliation": {
-        "name": "Rear Window BV",
-        "website": "https://telraam.net/"
+        "name": "Agentschap Wegen en Verkeer",
+        "website": "https://wegenenverkeer.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Laura",
-      "last_name": "Verhulst",
+      "first_name": "Dries",
+      "last_name": "Meers",
+      "affiliation": {
+        "name": "Stad Gent",
+        "website": "https://stad.gent/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kurt",
+      "last_name": "Marquet",
+      "affiliation": {
+        "name": "ITS BELGIUM",
+        "website": "http://its.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Pierre",
+      "last_name": "Maere",
+      "affiliation": {
+        "name": "Geomobility",
+        "website": "https://www.geomobility.eu/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Glen",
+      "last_name": "Joris",
       "affiliation": {
         "name": "Brandweer Zone Antwerpen",
         "website": "https://www.antwerpen.be/nl/overzicht/brandweer"
@@ -1108,8 +946,98 @@
     },
     {
       "role": "C",
-      "first_name": "Joren",
-      "last_name": "Verleyen",
+      "first_name": "Gert",
+      "last_name": "Janssens",
+      "affiliation": {
+        "name": "Signco",
+        "website": "https://www.signco.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Stijn",
+      "last_name": "Goossens",
+      "affiliation": {
+        "name": "Signco",
+        "website": "https://www.signco.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Abdel",
+      "last_name": "Ghoula",
+      "affiliation": {
+        "name": "Agentschap Wegen en Verkeer",
+        "website": "https://wegenenverkeer.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jan",
+      "last_name": "Geukens",
+      "affiliation": {
+        "name": "myCSN",
+        "website": "https://www.mycsn.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Patrick",
+      "last_name": "Deknudt",
+      "affiliation": {
+        "name": "Agentschap Wegen en Verkeer",
+        "website": "https://wegenenverkeer.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Steven",
+      "last_name": "Degelaen",
+      "affiliation": {
+        "name": "Agentschap Binnenlands Bestuur",
+        "website": "https://www.vlaanderen.be/agentschap-binnenlands-bestuur"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Joachim",
+      "last_name": "De Wilde",
+      "affiliation": {
+        "name": "CycloMedia Technology B.V.",
+        "website": "https://www.cyclomedia.com/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Wannes",
+      "last_name": "De Smet",
+      "affiliation": {
+        "name": "Be-Mobile",
+        "website": "https://be-mobile.com/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Bart",
+      "last_name": "De Proost",
+      "affiliation": {
+        "name": "Departement Mobiliteit en Openbare Werken",
+        "website": "https://www.vlaanderen.be/departement-mobiliteit-en-openbare-werken"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kris",
+      "last_name": "De Pril",
+      "affiliation": {
+        "name": "Geosparc",
+        "website": "https://www.geosparc.com/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Annelies",
+      "last_name": "De Craene",
       "affiliation": {
         "name": "Digitaal Vlaanderen",
         "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
@@ -1117,47 +1045,119 @@
     },
     {
       "role": "C",
-      "first_name": "Thomas",
-      "last_name": "Verlinden",
+      "first_name": "Caroline",
+      "last_name": "De Bosscher",
       "affiliation": {
-        "name": "Provincie Antwerpen",
-        "website": "https://www.provincieantwerpen.be/"
+        "name": "Vlaamse Milieumaatschappij",
+        "website": "https://www.vmm.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Vernaillen",
+      "first_name": "Koen",
+      "last_name": "Cuypers",
       "affiliation": {
-        "name": "Stad Antwerpen",
-        "website": "https://www.antwerpen.be/"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "David",
-      "last_name": "Vlaminck",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer - Afdeling Planning en Coördinatie",
+        "name": "Agentschap Wegen en Verkeer - Afdeling Elektromechanica en Telematica",
         "website": "https://wegenenverkeer.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Joris",
-      "last_name": "Voets",
+      "first_name": "Dietger",
+      "last_name": "Cleuren",
       "affiliation": {
-        "name": "Kenniscentrum Vlaamse Steden",
-        "website": "https://www.kenniscentrumvlaamsesteden.be/"
+        "name": "Agentschap Wegen en Verkeer",
+        "website": "https://wegenenverkeer.be/"
       }
     },
     {
       "role": "C",
-      "first_name": "Els",
-      "last_name": "Windmolders",
+      "first_name": "Simon",
+      "last_name": "Claus",
       "affiliation": {
-        "name": "Provincie Limburg",
-        "website": "https://www.limburg.be/"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jeroen",
+      "last_name": "Claes",
+      "affiliation": {
+        "name": "CROPLAND",
+        "website": "https://www.cropland.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kristoff",
+      "last_name": "Certyn",
+      "affiliation": {
+        "name": "KRYCER bvba",
+        "website": "https://krycer.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Ruben",
+      "last_name": "Cappelle",
+      "affiliation": {
+        "name": "Gewestelijke Overheidsdienst Brussel",
+        "website": "https://servicepublic.brussels/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tom",
+      "last_name": "Callens",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Gert",
+      "last_name": "Brackman",
+      "affiliation": {
+        "name": "Signco",
+        "website": "https://www.signco.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Veerle",
+      "last_name": "Beyaert",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jasper",
+      "last_name": "Beernaerts",
+      "affiliation": {
+        "name": "Nationaal Geografisch Instituut",
+        "website": "https://www.ngi.be/website/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Cécile",
+      "last_name": "Bauvin",
+      "affiliation": {
+        "name": "Icoms Detections",
+        "website": "https://www.icomsdetections.com/nl/home/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Danny",
+      "last_name": "Asselman",
+      "affiliation": {
+        "name": "SWARCO Belgium",
+        "website": "https://www.swarco.com/"
       }
     }
   ],
@@ -1275,70 +1275,42 @@
       "show": true
     },
     {
-      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
-      "name": "resultaat",
+      "uri": "https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "name": "fenomeentijd",
       "label": {
-        "nl": "resultaat"
+        "nl": "fenomeenTijd"
       },
       "description": {},
       "usage": {},
-      "sort": "resultaat",
+      "sort": "fenomeenTijd",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
       "show": true
     },
     {
-      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
-      "name": "resultaatkwaliteit",
+      "uri": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "name": "fenomeentijd",
       "label": {
-        "nl": "resultaatkwaliteit"
+        "nl": "fenomeentijd"
       },
       "description": {},
       "usage": {},
-      "sort": "resultaatkwaliteit",
+      "sort": "fenomeentijd",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
       "show": true
     },
     {
-      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
-      "name": "resultaattijd",
+      "uri": "http://www.w3.org/ns/sosa/madeBySensor",
+      "name": "uitgevoerdmet",
       "label": {
-        "nl": "resultaattijd"
+        "nl": "uitgevoerdMet"
       },
       "description": {},
       "usage": {},
-      "sort": "resultaattijd",
-      "inscope": true,
-      "indvl": false,
-      "inpackage": false,
-      "show": true
-    },
-    {
-      "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
-      "name": "geometrie",
-      "label": {
-        "nl": "geometrie"
-      },
-      "description": {},
-      "usage": {},
-      "sort": "geometrie",
-      "inscope": true,
-      "indvl": false,
-      "inpackage": false,
-      "show": true
-    },
-    {
-      "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
-      "name": "geometrie",
-      "label": {
-        "nl": "geometrie"
-      },
-      "description": {},
-      "usage": {},
-      "sort": "geometrie",
+      "sort": "uitgevoerdMet",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
@@ -1346,15 +1318,15 @@
     },
     {
       "uri": "http://purl.org/dc/elements/1.1/type",
-      "name": "rijstrooktype",
+      "name": "verkeersdeelnemertype",
       "label": {
-        "nl": "rijstrooktype"
+        "nl": "verkeersdeelnemertype"
       },
       "description": {
-        "nl": "Aard vd Rijstrook."
+        "nl": "Aard van de Verkeersdeelnemer."
       },
       "usage": {},
-      "sort": "rijstrooktype",
+      "sort": "verkeersdeelnemertype",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
@@ -1378,57 +1350,85 @@
     },
     {
       "uri": "http://purl.org/dc/elements/1.1/type",
-      "name": "verkeersdeelnemertype",
+      "name": "rijstrooktype",
       "label": {
-        "nl": "verkeersdeelnemertype"
+        "nl": "rijstrooktype"
       },
       "description": {
-        "nl": "Aard van de Verkeersdeelnemer."
+        "nl": "Aard vd Rijstrook."
       },
       "usage": {},
-      "sort": "verkeersdeelnemertype",
+      "sort": "rijstrooktype",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
       "show": true
     },
     {
-      "uri": "http://www.w3.org/ns/sosa/madeBySensor",
-      "name": "uitgevoerdmet",
+      "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "name": "geometrie",
       "label": {
-        "nl": "uitgevoerdMet"
+        "nl": "geometrie"
       },
       "description": {},
       "usage": {},
-      "sort": "uitgevoerdMet",
+      "sort": "geometrie",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
       "show": true
     },
     {
-      "uri": "http://www.w3.org/ns/sosa/phenomenonTime",
-      "name": "fenomeentijd",
+      "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
+      "name": "geometrie",
       "label": {
-        "nl": "fenomeentijd"
+        "nl": "geometrie"
       },
       "description": {},
       "usage": {},
-      "sort": "fenomeentijd",
+      "sort": "geometrie",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
       "show": true
     },
     {
-      "uri": "https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
-      "name": "fenomeentijd",
+      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "name": "resultaattijd",
       "label": {
-        "nl": "fenomeenTijd"
+        "nl": "resultaattijd"
       },
       "description": {},
       "usage": {},
-      "sort": "fenomeenTijd",
+      "sort": "resultaattijd",
+      "inscope": true,
+      "indvl": false,
+      "inpackage": false,
+      "show": true
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "name": "resultaatkwaliteit",
+      "label": {
+        "nl": "resultaatkwaliteit"
+      },
+      "description": {},
+      "usage": {},
+      "sort": "resultaatkwaliteit",
+      "inscope": true,
+      "indvl": false,
+      "inpackage": false,
+      "show": true
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "name": "resultaat",
+      "label": {
+        "nl": "resultaat"
+      },
+      "description": {},
+      "usage": {},
+      "sort": "resultaat",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
