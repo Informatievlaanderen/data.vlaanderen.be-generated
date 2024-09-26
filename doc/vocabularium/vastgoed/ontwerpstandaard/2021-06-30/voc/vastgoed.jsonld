@@ -1,1021 +1,1195 @@
 {
-  "metadata": {
-    "title": "OSLO Vastgoed",
-    "uri": "https://data.vlaanderen.be/ns/vastgoed",
-    "issued": "2021-06-30",
-    "filename": "vastgoed",
-    "navigation": {
-      "self": "https://data.vlaanderen.be/doc/vocabularium/vastgoed/ontwerpstandaard/2021-06-30"
-    },
-    "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
-    "documenttype": "voc",
-    "documentconfig": {},
-    "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-    "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-vastgoed/tree/e7b394424bb77baa773a313cfa8139cb9a3ea598",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-vastgoed/blob/e7b394424bb77baa773a313cfa8139cb9a3ea598/CHANGELOG",
-    "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-vastgoed/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-vastgoed/",
-    "usesVocs": [],
-    "usesAPs": []
+  "dcterms:license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+  "dcterms:mediator": {
+    "foaf:homepage": "https://data.vlaanderen.be",
+    "foaf:mbox": "mailto:oslo@kb.vlaanderen.be",
+    "foaf:name": "Data Vlaanderen"
   },
+  "@id": "https://data.vlaanderen.be/ns/vastgoed",
+  "@type": "http://www.w3.org/2002/07/owl#Ontology",
+  "label": {
+    "en": "vastgoed",
+    "nl": "vastgoed"
+  },
+  "authors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vlaanderen.be/digitaal-vlaanderen",
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Vincent",
+      "foaf:lastName": "Van Elsué",
+      "foaf:mbox": "mailto:vincent.vanelsue@vlaanderen.be"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vlaanderen.be/digitaal-vlaanderen",
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Sammy",
+      "foaf:lastName": "Parmentier",
+      "foaf:mbox": "mailto:sammy.parmentier@vlaanderen.be"
+    }
+  ],
+  "editors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.pwc.be",
+        "foaf:name": "PwC"
+      },
+      "foaf:firstName": "Laurens",
+      "foaf:lastName": "Vercauteren",
+      "foaf:mbox": "mailto:laurens.vercauteren@pwc.com"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.pwc.be",
+        "foaf:name": "PwC"
+      },
+      "foaf:firstName": "Anthony",
+      "foaf:lastName": "Van Heymbeeck",
+      "foaf:mbox": "mailto:anthony.van.heymbeeck@pwc.com"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vlaanderen.be/digitaal-vlaanderen",
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Geert",
+      "foaf:lastName": "Thijs",
+      "foaf:mbox": "mailto:geert.thijs@vlaanderen.be"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.vlaanderen.be/digitaal-vlaanderen",
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Matisse",
+      "foaf:lastName": "Ghesquiere"
+    }
+  ],
+  "contributors": [
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Jacob",
+      "foaf:lastName": "Warris"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "West-Vlaamse Intercomunale"
+      },
+      "foaf:firstName": "Wouter",
+      "foaf:lastName": "Verhelst"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Francis",
+      "foaf:lastName": "Verhaeghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Gemeente Balen"
+      },
+      "foaf:firstName": "Ann",
+      "foaf:lastName": "Verbeeck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Gemeente Balen"
+      },
+      "foaf:firstName": "Mireille",
+      "foaf:lastName": "Vansweevelt"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Notaris Binnemans Stein"
+      },
+      "foaf:firstName": "Carole",
+      "foaf:lastName": "Vanheddeghem"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Confederatie van Immobiliënberoepen Vlaanderen"
+      },
+      "foaf:firstName": "Céline",
+      "foaf:lastName": "Van den Berghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Agentschap voor infrastructuur in het onderwijs"
+      },
+      "foaf:firstName": "Stijn",
+      "foaf:lastName": "Van Troys"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Antwerpen"
+      },
+      "foaf:firstName": "Gert",
+      "foaf:lastName": "Van Oost"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "TECCON"
+      },
+      "foaf:firstName": "Stijn",
+      "foaf:lastName": "Van Maelsaeke"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Het Facilitair Bedrijf"
+      },
+      "foaf:firstName": "Christophe",
+      "foaf:lastName": "Van Loo"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Vereniging van Vlaamse Steden en Gemeenten vzw"
+      },
+      "foaf:firstName": "Ward",
+      "foaf:lastName": "Van Hal"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Confederatie van Immobiliënberoepen Vlaanderen"
+      },
+      "foaf:firstName": "Bart",
+      "foaf:lastName": "Van Der Schueren"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Vinta aankoopbegeleiding"
+      },
+      "foaf:firstName": "Hendrik",
+      "foaf:lastName": "Tanghe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Antwerpen"
+      },
+      "foaf:firstName": "Ann",
+      "foaf:lastName": "Smolders"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Het Facilitair Bedrijf"
+      },
+      "foaf:firstName": "Sabrina",
+      "foaf:lastName": "Prieus"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Mechelen"
+      },
+      "foaf:firstName": "Pascale",
+      "foaf:lastName": "Priem"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Isabelle",
+      "foaf:lastName": "Pollé"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Brugge"
+      },
+      "foaf:firstName": "Mathieu",
+      "foaf:lastName": "Nollet"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Vlaamse Milieumaatschappij"
+      },
+      "foaf:firstName": "Katleen",
+      "foaf:lastName": "Miserez"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Gent"
+      },
+      "foaf:firstName": "Bruno",
+      "foaf:lastName": "Minnebo"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "NAV - De Vlaamse Architectenorganisatie"
+      },
+      "foaf:firstName": "Dirk",
+      "foaf:lastName": "Mattheeuws"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Stad Gent"
+      },
+      "foaf:firstName": "Nathalie",
+      "foaf:lastName": "Leeuwerck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Immo Haven"
+      },
+      "foaf:firstName": "Stephanie",
+      "foaf:lastName": "Hermans"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Agentschap Wonen-Vlaanderen"
+      },
+      "foaf:firstName": "Louis",
+      "foaf:lastName": "Gistelinck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Jürgen",
+      "foaf:lastName": "Dooms"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Dewaele Vastgoedgroep"
+      },
+      "foaf:firstName": "Sofie",
+      "foaf:lastName": "Demeulemeester"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Open Real Estate Information Services"
+      },
+      "foaf:firstName": "Franky",
+      "foaf:lastName": "Deleu"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Agentschap Wonen-Vlaanderen"
+      },
+      "foaf:firstName": "Ans",
+      "foaf:lastName": "Deblauwe"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "TECCON"
+      },
+      "foaf:firstName": "Hannes",
+      "foaf:lastName": "Debaveye"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Confederatie van Immobiliënberoepen Vlaanderen"
+      },
+      "foaf:firstName": "Stephan",
+      "foaf:lastName": "De Witte"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Openbare Vlaamse AfvalstoffenMaatschappij"
+      },
+      "foaf:firstName": "Katleen",
+      "foaf:lastName": "De Turck"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Interleuven"
+      },
+      "foaf:firstName": "Emma",
+      "foaf:lastName": "De Proft"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Els",
+      "foaf:lastName": "De Keyser"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Martin",
+      "foaf:lastName": "De Beco"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Group B"
+      },
+      "foaf:firstName": "Sonia",
+      "foaf:lastName": "De Backer"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Confederatie van Immobiliënberoepen Vlaanderen"
+      },
+      "foaf:firstName": "Aidan",
+      "foaf:lastName": "Coppens"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Confederatie van Immobiliënberoepen Vlaanderen"
+      },
+      "foaf:firstName": "Dirk",
+      "foaf:lastName": "Coelus"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Digitaal Vlaanderen"
+      },
+      "foaf:firstName": "Patty",
+      "foaf:lastName": "Cant"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "Gemeente Sint-Katelijne-Waver"
+      },
+      "foaf:firstName": "Marilyn",
+      "foaf:lastName": "Calewaert"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Joahn",
+      "foaf:lastName": "Boogaerts"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:name": "VlaNot / FedNot"
+      },
+      "foaf:firstName": "Matthias",
+      "foaf:lastName": "Boeraeve"
+    }
+  ],
+  "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+  "issued": "TODO",
+  "navigation": {},
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+  "publication-date": "2021-06-30",
   "classes": [
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Aanvraag",
-      "name": "Aanvraag",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Aanvraag",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Aanvraag"
       },
-      "sort": "Aanvraag",
-      "description": {
+      "definition": {
         "nl": "Start van de procedure voor een publieke dienstverlening."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Aanvraagstatus",
-      "name": "Aanvraagstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Aanvraagstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Aanvraagstatus"
       },
-      "sort": "Aanvraagstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Aanvrager",
-      "name": "Aanvrager",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Aanvrager",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Aanvrager"
       },
-      "sort": "Aanvrager",
-      "description": {
+      "definition": {
         "nl": "Persoon of organisatie die een aanvraag doet voor een publieke dienstverlening."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#AardPerceel",
-      "name": "AardPerceel",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#AardPerceel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Aard Perceel"
       },
-      "sort": "Aard Perceel",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting",
-      "name": "AttestInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Attest Inlichting"
       },
-      "sort": "Attest Inlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Attest dat van toepassing is op het Vastgoed."
       },
       "usage": {
         "nl": "Een attest is een schriftelijk bewijs, een (officiële) verklaring die een mondelinge bewering versterkt, ondersteunt, wettigt. e.g. Stedenbouwkundigattest ..."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#AttestType",
-      "name": "Attesttype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#AttestType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "attesttype"
       },
-      "sort": "attesttype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Bedrag",
-      "name": "Bedrag",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Bedrag",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Bedrag"
       },
-      "sort": "Bedrag",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Beheerinlichting",
-      "name": "Beheerinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Beheerinlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Beheerinlichting"
       },
-      "sort": "Beheerinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een beheerplan waaraan een Vastgoed is onderworpen."
       },
       "usage": {
         "nl": "Beschrijving voor een perceel welke doelen met welke middelen nagestreefd worden voor de instandhouding, het herstel en-of ontwikkeling van natuurwaarden. e.g. Natuurbeheerplan ..."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Beheertype",
-      "name": "Beheertype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Beheertype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Beheertype"
       },
-      "sort": "Beheertype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting",
-      "name": "BelastingOfHeffingInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Belasting Of Heffing Inlichting"
       },
-      "sort": "Belasting Of Heffing Inlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Belasting of Heffing die geldt op een vastgoed."
       },
       "usage": {
         "nl": "Een belasting is een heffing welke op grond van hun gezag, door de Staat, de provinciën of de gemeenten verricht wordt op de geldmiddelen van de zowel publiekrechtelijke als privaatrechtelijke personen van vennootschappen zonder rechtspersoonlijkheid en van feitelijke verenigingen of gemeenschappen die op hun grondgebied bestaan of aldaar belangen bezitten, om ze voor de diensten van openbaar nut te gebruiken."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#BelastingType",
-      "name": "Belastingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#BelastingType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Belastingtype"
       },
-      "sort": "Belastingtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#BenoemdeWaarde",
-      "name": "BenoemdeWaarde",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#BenoemdeWaarde",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Benoemde Waarde"
       },
-      "sort": "Benoemde Waarde",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting",
-      "name": "Bescherminginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Bescherminginlichting"
       },
-      "sort": "Bescherminginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting die aangeeft of het Vastgoed beschermd is."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Beschermingtype",
-      "name": "Beschermingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Beschermingtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Beschermingtype"
       },
-      "sort": "Beschermingtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting",
-      "name": "Besluitinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Besluitinlichting"
       },
-      "sort": "Besluitinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een officieel Besluit dat over het Vastgoed is genomen."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Besluittype",
-      "name": "Besluittype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Besluittype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Besluittype"
       },
-      "sort": "Besluittype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Bestemming",
-      "name": "Bestemming",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Bestemming",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Bestemming"
       },
-      "sort": "Bestemming",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#DQ-Dataquality",
-      "name": "Dq-Dataquality",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#DQ-Dataquality",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "DQ- Dataquality"
       },
-      "sort": "DQ- Dataquality",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#DoelAanvraag",
-      "name": "DoelAanvraag",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#DoelAanvraag",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Doel Aanvraag"
       },
-      "sort": "Doel Aanvraag",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#DossierStatus",
-      "name": "Dossierstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#DossierStatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Dossierstatus"
       },
-      "sort": "Dossierstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidType",
-      "name": "Erfdienstbaarheidtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Erfdienstbaarheidtype"
       },
-      "sort": "Erfdienstbaarheidtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut",
-      "name": "ErfdienstbaarheidVanOpenbaarNut",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Erfdienstbaarheid Van Openbaar Nut"
       },
-      "sort": "Erfdienstbaarheid Van Openbaar Nut",
-      "description": {
+      "definition": {
         "nl": "Inlichting opver een Erfdienstbaarheid van Openbaar Nut die op het Vastgoed rust."
       },
       "usage": {
         "nl": "Een erfdienstbaarheid tot openbaar nut legt met het oog op het algemeen belang blijvende beperkingen aan het private eigendomsrecht."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting",
-      "name": "GeassocieerdeInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Geassocieerde Inlichting"
       },
-      "sort": "Geassocieerde Inlichting",
-      "description": {
+      "definition": {
         "nl": "Een inlichting die een verband heeft met een andere inlichting."
       },
       "usage": {
         "nl": "e.g. Voorkooprecht dat volgt uit leegstand."
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf",
-      "name": "InbreukOfMisdrijf",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inbreuk Of Misdrijf"
       },
-      "sort": "Inbreuk Of Misdrijf",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijfType",
-      "name": "InbreukOfMisdrijfType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijfType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inbreuk Of Misdrijf Type"
       },
-      "sort": "Inbreuk Of Misdrijf Type",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Inlichting",
-      "name": "Inlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Inlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inlichting"
       },
-      "sort": "Inlichting",
-      "description": {
+      "definition": {
         "nl": "Een hoeveelheid informatie die ter opheldering gevraagd of verstrekt wordt."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Inlichtingstatus",
-      "name": "Inlichtingstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Inlichtingstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inlichtingstatus"
       },
-      "sort": "Inlichtingstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit",
-      "name": "InrichtingOfActiviteit",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inrichting Of Activiteit"
       },
-      "sort": "Inrichting Of Activiteit",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteitType",
-      "name": "InrichtingOfActiviteitType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteitType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inrichting Of Activiteit Type"
       },
-      "sort": "Inrichting Of Activiteit Type",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting",
-      "name": "InventarisInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inventaris Inlichting"
       },
-      "sort": "Inventaris Inlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting die aangeeft of het Vastgoed deel uitmaakt vanb een Inventaris."
       },
       "usage": {
         "nl": "Een inventaris is een lijst of een opsomming van voorwerpen op een bepaalde plaats gemaakt volgens een vaste procedure."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Inventaristype",
-      "name": "Inventaristype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Inventaristype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Inventaristype"
       },
-      "sort": "Inventaristype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#LI_Citation",
-      "name": "Li_Citation",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#LI_Citation",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "LI_ Citation"
       },
-      "sort": "LI_ Citation",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting",
-      "name": "Meldinginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Meldinginlichting"
       },
-      "sort": "Meldinginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Melding waarin het Vastgoed voorkomt."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Meldingtype",
-      "name": "Meldingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Meldingtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Meldingtype"
       },
-      "sort": "Meldingtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Motivatietype",
-      "name": "Motivatietype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Motivatietype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Motivatietype"
       },
-      "sort": "Motivatietype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting",
-      "name": "Overtredinginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Overtredinginlichting"
       },
-      "sort": "Overtredinginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Overtreding die op het Vastgoed betrekking heeft;"
       },
       "usage": {
         "nl": "Een overtreding is de lichtste vorm van misdrijf. e.g. Inbreuk op de voorschriften i.v.m. Bouw- en verkavelingsvergunningen, bijzondere plannen van aanleg ..."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Overtredingstatus",
-      "name": "Overtredingstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Overtredingstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Overtredingstatus"
       },
-      "sort": "Overtredingstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Overtredingtype",
-      "name": "Overtredingstype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Overtredingtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Overtredingstype"
       },
-      "sort": "Overtredingstype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting",
-      "name": "Planinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "PlanInlichting"
       },
-      "sort": "PlanInlichting",
-      "description": {
+      "definition": {
         "nl": "Een hoeveelheid informatie die ter opheldering gevraagd of verstrekt wordt van een plan."
       },
       "usage": {
         "nl": "Een plan waarmee de overheid in een bepaald gebied de bodembestemming vastlegt."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Planstatus",
-      "name": "Planstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Planstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Planstatus"
       },
-      "sort": "Planstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Plantype",
-      "name": "Plantype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Plantype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Plantype"
       },
-      "sort": "Plantype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Rechtinlichting",
-      "name": "Rechtinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Rechtinlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Rechtinlichting"
       },
-      "sort": "Rechtinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een recht dat op het vastgoed van toepassing is."
       },
       "usage": {
         "nl": "e.g. Voorkooprecht."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#RedenRisicoType",
-      "name": "RedenRisicoType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#RedenRisicoType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Reden Risico Type"
       },
-      "sort": "Reden Risico Type",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#RelatieType",
-      "name": "RelatieType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#RelatieType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Relatie Type"
       },
-      "sort": "Relatie Type",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#RisicoInlichting",
-      "name": "RisicoInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#RisicoInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Risico Inlichting"
       },
-      "sort": "Risico Inlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Risico waaraan het Vastgoed onderhevig is."
       },
       "usage": {
         "nl": "Risico is de kans dat een potentieel gevaar resulteert in een daadwerkelijk incident en de ernst van het letsel of de schade die dit tot gevolg heeft."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#RisicoType",
-      "name": "RisicoType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#RisicoType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Risico Type"
       },
-      "sort": "Risico Type",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Subsidieinlichting",
-      "name": "Subsidieinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Subsidieinlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Subsidieinlichting"
       },
-      "sort": "Subsidieinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Subsidie doe voor het Vastgoed is verstrekt."
       },
       "usage": {
         "nl": "Een tijdelijke bijdrage van de overheid of een niet-commerciële organisatie ten behoeve van het starten van een activiteit waarvan het economische belang niet direct voor de hand ligt."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Subsidietype",
-      "name": "Subsidietype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Subsidietype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Subsidietype"
       },
-      "sort": "Subsidietype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeAanvrager",
-      "name": "TypeAanvrager",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeAanvrager",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Type Aanvrager"
       },
-      "sort": "Type Aanvrager",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeEigenaar",
-      "name": "TypeEigenaar",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeEigenaar",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Type Eigenaar"
       },
-      "sort": "Type Eigenaar",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting",
-      "name": "TypeInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Type Inlichting"
       },
-      "sort": "Type Inlichting",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeVastgoed",
-      "name": "Typevastgoed",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeVastgoed",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "TypeVastgoed"
       },
-      "sort": "TypeVastgoed",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeVerstrekker",
-      "name": "TypeVerstrekker",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeVerstrekker",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Type Verstrekker"
       },
-      "sort": "Type Verstrekker",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#TypeWettelijkKader",
-      "name": "TypeWettelijkKader",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#TypeWettelijkKader",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Type Wettelijk Kader"
       },
-      "sort": "Type Wettelijk Kader",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vastgoed",
-      "name": "Vastgoed",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vastgoed",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vastgoed"
       },
-      "sort": "Vastgoed",
-      "description": {
+      "definition": {
         "nl": "Vastgoed is de grond en de gebouwen (opstal) op deze grond."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail",
-      "name": "Vastgoeddetail",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vastgoeddetail"
       },
-      "sort": "Vastgoeddetail",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier",
-      "name": "Vastgoeddossier",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vastgoeddossier"
       },
-      "sort": "Vastgoeddossier",
-      "description": {
+      "definition": {
         "nl": "Een samenhangend geheel van documenten en inlichtingen die betrekking hebben op een vastgoed."
       },
       "usage": {
         "nl": "Een vastgoeddossier bestaat uit maximaal één kadastraalplanperceel en de gebouwen opstal."
       },
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting",
-      "name": "Vergunninginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vergunninginlichting"
       },
-      "sort": "Vergunninginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Vergunning voor het Vastgoed."
       },
       "usage": {
         "nl": "Een toelating om in een bepaalde tijdspanne een bepaalde activiteit uit te voeren die anders verboden is. e.g. Omgevingsvergunning ..."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vergunningstatus",
-      "name": "Vergunningstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vergunningstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vergunningstatus"
       },
-      "sort": "Vergunningstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vergunningtype",
-      "name": "Vergunningtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vergunningtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vergunningtype"
       },
-      "sort": "Vergunningtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Veroordelingtype",
-      "name": "Veroordelingstype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Veroordelingtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Veroordelingstype"
       },
-      "sort": "Veroordelingstype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting",
-      "name": "Verordeninginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Verordeninginlichting"
       },
-      "sort": "Verordeninginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Verordening die mbt het Vastgoed is uitgevaardigd."
       },
       "usage": {
         "nl": "Een verordening is een overheidsbesluit van algemene strekking."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Verordeningtype",
-      "name": "Verordeningstype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Verordeningtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Verordeningstype"
       },
-      "sort": "Verordeningstype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Verstrekker",
-      "name": "Verstrekker",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Verstrekker",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Verstrekker"
       },
-      "sort": "Verstrekker",
-      "description": {
+      "definition": {
         "nl": "Persoon of rechtspersoon die de inlichting verzameld en toevoegd aan het vastgoeddossier."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Voorschriftinlichting",
-      "name": "Voorschriftinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Voorschriftinlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Voorschriftinlichting"
       },
-      "sort": "Voorschriftinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Voorschrift dat geldt voor het Vastgoed."
       },
-      "usage": {},
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Voorschrifttype",
-      "name": "Voorschrifttype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Voorschrifttype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Voorschrifttype"
       },
-      "sort": "Voorschrifttype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting",
-      "name": "Vorderinginlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vorderinginlichting"
       },
-      "sort": "Vorderinginlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een Vordering die is gebeurd voor een Vastgoed."
       },
       "usage": {
         "nl": "Een vordering is, in informele zin, het aan een schuldenaar kenbaar maken, door een schuldeiser, van hetgeen er door die eiser van die schuldenaar wordt verwacht."
       },
-      "equivalent": [],
       "parents": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vorderingstatus",
-      "name": "Vorderingstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vorderingstatus",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vorderingstatus"
       },
-      "sort": "Vorderingstatus",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Vorderingtype",
-      "name": "Vorderingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Vorderingtype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Vorderingtype"
       },
-      "sort": "Vorderingtype",
-      "description": {},
-      "usage": {},
-      "equivalent": [],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#Waarde",
-      "name": "Waarde",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#Waarde",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Waarde"
       },
-      "sort": "Waarde",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
         "nl": "TODO"
       },
-      "equivalent": [],
       "parents": []
     }
   ],
+  "externals": [],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#waarde",
-      "name": "waarde",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "waarde"
       },
-      "sort": "waarde",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
@@ -1027,299 +1201,268 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Waarde"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vorderingtype",
-      "name": "vorderingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vorderingtype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vorderingtype"
       },
-      "sort": "vorderingtype",
-      "description": {
+      "definition": {
         "nl": "Type vordering."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderingtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vorderingStatus",
-      "name": "vorderingStatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vorderingStatus",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "vordering status"
       },
-      "sort": "vordering status",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin de vordering zich bevindt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vordering",
-      "name": "vordering",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vordering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vordering"
       },
-      "sort": "vordering",
-      "description": {
+      "definition": {
         "nl": "Vordering die volgt uit de overtreding."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#voorwaarden",
-      "name": "voorwaarden",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorwaarden",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "voorwaarden"
       },
-      "sort": "voorwaarden",
-      "description": {
+      "definition": {
         "nl": "Omstandigheid die noodzakelijk is of gemaakt wordt, wil iets anders plaats of geldigheid hebben."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Subsidieinlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#voorwaarde",
-      "name": "voorwaarde",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorwaarde",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "voorwaarde"
       },
-      "sort": "voorwaarde",
-      "description": {
+      "definition": {
         "nl": "De condities waaronder de vergunning geldig is."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#voorschrifttype",
-      "name": "voorschrifttype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorschrifttype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "voorschrifttype"
       },
-      "sort": "voorschrifttype",
-      "description": {
+      "definition": {
         "nl": "Type voorschrift."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Voorschriftinlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Voorschrifttype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#voorschrift",
-      "name": "voorschriften",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorschrift",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "voorschriften"
       },
-      "sort": "voorschriften",
-      "description": {
+      "definition": {
         "nl": "Grondbeginselen, regels of wetten met betrekking tot de erfdienstbaarheid."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#verstrekker",
-      "name": "verstrekker",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#verstrekker",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "verstrekker"
       },
-      "sort": "verstrekker",
-      "description": {
+      "definition": {
         "nl": "Een inlichting die een verband heeft met een andere inlichting."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Verstrekker"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#verordeningType",
-      "name": "verordeningType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#verordeningType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "verordening type"
       },
-      "sort": "verordening type",
-      "description": {
+      "definition": {
         "nl": "Type verordening."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Verordeningtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#veroordelingtype",
-      "name": "veroordelingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#veroordelingtype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "veroordelingtype"
       },
-      "sort": "veroordelingtype",
-      "description": {
+      "definition": {
         "nl": "Type veroorderling."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Veroordelingtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#veroordeling",
-      "name": "veroordeling",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#veroordeling",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "veroordeling"
       },
-      "sort": "veroordeling",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of er sprake is van een veroordeling."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vergunningstatus",
-      "name": "vergunningstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vergunningstatus",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vergunningstatus"
       },
-      "sort": "vergunningstatus",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin de vergunning zich bevindt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vergunningstatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vergunningType",
-      "name": "vergunningtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vergunningType",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "label": {
         "nl": "vergunningtype"
       },
-      "sort": "vergunningtype",
-      "description": {
+      "definition": {
         "nl": "Type vergunning."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vergunning",
-      "name": "vergunning",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vergunning",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vergunning"
       },
-      "sort": "vergunning",
-      "description": {
+      "definition": {
         "nl": "Een officiële toestemming van de overheid om een bepaald in principe verboden activiteit uit te voeren."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#vaststellingsdatum",
-      "name": "vaststellingsdatum",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vaststellingsdatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "vaststellingsdatum"
       },
-      "sort": "vaststellingsdatum",
-      "description": {
+      "definition": {
         "nl": "Datum van de vaststelling door de wooninspecteur."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#typeInlichting",
-      "name": "typeInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#typeInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type inlichting"
       },
-      "sort": "type inlichting",
-      "description": {
+      "definition": {
         "nl": "Naam van de inlichting."
       },
       "usage": {
@@ -1331,111 +1474,100 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#typeInlichting",
-      "name": "typeInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#typeInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type inlichting"
       },
-      "sort": "type inlichting",
-      "description": {
+      "definition": {
         "nl": "Type inlichting."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#typeBesluit",
-      "name": "typeBesluit",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#typeBesluit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type besluit"
       },
-      "sort": "type besluit",
-      "description": {
+      "definition": {
         "nl": "Type besluit."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Besluittype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#type",
-      "name": "type",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type"
       },
-      "sort": "type",
-      "description": {
+      "definition": {
         "nl": "Type inbreuk of misdrijf."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijfType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#type",
-      "name": "type",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type"
       },
-      "sort": "type",
-      "description": {
+      "definition": {
         "nl": "Type inrichting of activiteit."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteitType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#type",
-      "name": "type",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type"
       },
-      "sort": "type",
-      "description": {
+      "definition": {
         "nl": "Type verstrekker."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Verstrekker"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#TypeVerstrekker"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#type",
-      "name": "type",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "type"
       },
-      "sort": "type",
-      "description": {
+      "definition": {
         "nl": "Type aanvrager."
       },
       "usage": {
@@ -1447,16 +1579,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#TypeAanvrager"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#toekomstigEigenaar",
-      "name": "toekomstigEigenaar",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#toekomstigEigenaar",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "toekomstig eigenaar"
       },
-      "sort": "toekomstig eigenaar",
-      "description": {
+      "definition": {
         "nl": "De persoon of rechtspersoon aan wie het vastgoed toebehoort in een toekomstige periode."
       },
       "usage": {
@@ -1468,109 +1599,98 @@
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
-      "name": "tijdstip",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "label": {
         "nl": "tijdstip"
       },
-      "sort": "tijdstip",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de vordering is toegekend."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
-      "name": "tijdstip",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "tijdstip"
       },
-      "sort": "tijdstip",
-      "description": {
+      "definition": {
         "nl": "Tijdstip waarop de melding is geregistreerd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
-      "name": "tijdstip",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "tijdstip"
       },
-      "sort": "tijdstip",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de vergunning is toegekend."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
-      "name": "tijdstip",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "tijdstip"
       },
-      "sort": "tijdstip",
-      "description": {
+      "definition": {
         "nl": "Tijdstip waarop de overtreding plaatsvond."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#subsidietype",
-      "name": "subsidietype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#subsidietype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "subsidietype"
       },
-      "sort": "subsidietype",
-      "description": {
+      "definition": {
         "nl": "Type subsidie."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Subsidieinlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Subsidietype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#status",
-      "name": "status",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#status",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "status"
       },
-      "sort": "status",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin de aanvraag zich bevindt."
       },
       "usage": {
@@ -1582,35 +1702,32 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvraagstatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#status",
-      "name": "status",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#status",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "status"
       },
-      "sort": "status",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin de inlichting zich bevindt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichtingstatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#status",
-      "name": "status",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#status",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "status"
       },
-      "sort": "status",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin de aanvraag zich bevindt."
       },
       "usage": {
@@ -1622,16 +1739,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#DossierStatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#rol",
-      "name": "rol",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#rol",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "rol"
       },
-      "sort": "rol",
-      "description": {
+      "definition": {
         "nl": "De relatie die de inlichting heeft tegenover de andere inlichting."
       },
       "usage": {
@@ -1643,111 +1759,100 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#RelatieType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#risicoType",
-      "name": "risicoType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#risicoType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "risico type"
       },
-      "sort": "risico type",
-      "description": {
+      "definition": {
         "nl": "Type risico."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#RisicoInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#RisicoType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#resultaat",
-      "name": "resultaat",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#resultaat",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "resultaat"
       },
-      "sort": "resultaat",
-      "description": {
+      "definition": {
         "nl": "Resultaat van de aanvraag."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvraag"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#relatie",
-      "name": "relatie",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#relatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "relatie"
       },
-      "sort": "relatie",
-      "description": {
+      "definition": {
         "nl": "De relatie die een inlichting heeft ten opzichte van het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#RelatieType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#referentie",
-      "name": "referentie",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#referentie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "referentie"
       },
-      "sort": "referentie",
-      "description": {
+      "definition": {
         "nl": "Een verwijzing naar informatie ter ondersteuning van een inlichting."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#redenSchrapping",
-      "name": "redenSchrapping",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#redenSchrapping",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "reden schrapping"
       },
-      "sort": "reden schrapping",
-      "description": {
+      "definition": {
         "nl": "Toelichting van de oorzaak met als resultaat de verwijdering van het vastgoed uit een inventaris."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#redenRisico",
-      "name": "redenRisico",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#redenRisico",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "reden risico"
       },
-      "sort": "reden risico",
-      "description": {
+      "definition": {
         "nl": "Toelichting over de oorzaak van het risico."
       },
       "usage": {
@@ -1759,54 +1864,49 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#RedenRisicoType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#procesVerbaal",
-      "name": "procesVerbaal",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#procesVerbaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "proces verbaal"
       },
-      "sort": "proces verbaal",
-      "description": {
+      "definition": {
         "nl": "Verwijzing naar het procesverbaal in het kader van de vordering."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#procesVerbaal",
-      "name": "procesVerbaal",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#procesVerbaal",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "proces verbaal"
       },
-      "sort": "proces verbaal",
-      "description": {
+      "definition": {
         "nl": "Referentie naar het proces verbaal (verslag) dat werd opgesteld."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#prijs",
-      "name": "prijs",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#prijs",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "prijs"
       },
-      "sort": "prijs",
-      "description": {
+      "definition": {
         "nl": "Kostprijs verbonden aan het gebruik van de publieke dienstverlening."
       },
       "usage": {
@@ -1818,16 +1918,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Bedrag"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#planstatus",
-      "name": "planstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#planstatus",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "planstatus"
       },
-      "sort": "planstatus",
-      "description": {
+      "definition": {
         "nl": "Toestand waarin het plan zich bevindt."
       },
       "usage": {
@@ -1839,54 +1938,49 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Planstatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#planType",
-      "name": "plantype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#planType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "plantype"
       },
-      "sort": "plantype",
-      "description": {
+      "definition": {
         "nl": "Type plan."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Plantype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#perceel",
-      "name": "perceel",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#perceel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "perceel"
       },
-      "sort": "perceel",
-      "description": {
+      "definition": {
         "nl": "Een onroerend goed of onroerend recht dat in hoofde van één of meerdere titularissen van een zakelijk recht onderworpen is aan een bepaald eigendomsstatuut."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#overtredingstatus",
-      "name": "overtredingstatus",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtredingstatus",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "overtredingstatus"
       },
-      "sort": "overtredingstatus",
-      "description": {
+      "definition": {
         "nl": "Toestand van de overtreding."
       },
       "usage": {
@@ -1898,73 +1992,66 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Overtredingstatus"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#overtredingType",
-      "name": "overtredingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtredingType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "overtredingtype"
       },
-      "sort": "overtredingtype",
-      "description": {
+      "definition": {
         "nl": "Type overtreding"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Overtredingtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#overtreding",
-      "name": "overtreding",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtreding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "overtreding"
       },
-      "sort": "overtreding",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of de overtreding een inbreuk of een misdrijf is."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#over",
-      "name": "over",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#over",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "over"
       },
-      "sort": "over",
-      "description": {
+      "definition": {
         "nl": "Vastgoed waarvoor een vastgoeddossier wordt opgesteld."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#oppervlakte",
-      "name": "oppervlakte",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#oppervlakte",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "oppervlakte"
       },
-      "sort": "oppervlakte",
-      "description": {
+      "definition": {
         "nl": "Oppervlakte van het vastgoed."
       },
       "usage": {
@@ -1976,54 +2063,49 @@
       "range": [
         "https://schema.org/QuantitativeValue"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#opmaakdatum",
-      "name": "opmaakdatum",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#opmaakdatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "opmaakdatum"
       },
-      "sort": "opmaakdatum",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de verschillende inlichtingen in het dossier zijn samengebracht en vervolledigd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#date"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#opgenomenSinds",
-      "name": "opgenomenSinds",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#opgenomenSinds",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "opgenomen sinds"
       },
-      "sort": "opgenomen sinds",
-      "description": {
+      "definition": {
         "nl": "Datum waarop het vastgoed is opgenomen in een inventaris."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#onteigening",
-      "name": "onteigening",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#onteigening",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "label": {
         "nl": "onteigening"
       },
-      "sort": "onteigening",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of het vastgoed wordt onteigend."
       },
       "usage": {
@@ -2033,54 +2115,49 @@
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#omschrijving",
-      "name": "omschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#omschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "omschrijving"
       },
-      "sort": "omschrijving",
-      "description": {
+      "definition": {
         "nl": "Omschrijving van de erfdienstbaarheid."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#omschrijving",
-      "name": "omschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#omschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "omschrijving"
       },
-      "sort": "omschrijving",
-      "description": {
+      "definition": {
         "nl": "Omschrijving van de belasting of heffing."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#naam",
-      "name": "naam",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#naam",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "naam"
       },
-      "sort": "naam",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
@@ -2092,16 +2169,15 @@
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#naam",
-      "name": "naam",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#naam",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "naam"
       },
-      "sort": "naam",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
@@ -2113,73 +2189,66 @@
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#naam",
-      "name": "naam",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#naam",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "naam"
       },
-      "sort": "naam",
-      "description": {
+      "definition": {
         "nl": "Unieke benaming van de belasting of heffing."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#motivatie",
-      "name": "motivatie",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#motivatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "motivatie"
       },
-      "sort": "motivatie",
-      "description": {
+      "definition": {
         "nl": "Motivatie van de vordering."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Motivatietype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#meldingtype",
-      "name": "meldingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#meldingtype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "meldingtype"
       },
-      "sort": "meldingtype",
-      "description": {
+      "definition": {
         "nl": "Type melding."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Meldingtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#melding",
-      "name": "melding",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#melding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "melding"
       },
-      "sort": "melding",
-      "description": {
+      "definition": {
         "nl": "Een binnenkomende kennisgeving over een gebeurtenis, geconstateerde waarneming of een geconstateerd feit."
       },
       "usage": {
@@ -2191,16 +2260,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#melding",
-      "name": "melding",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#melding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "melding"
       },
-      "sort": "melding",
-      "description": {
+      "definition": {
         "nl": "Een terugmelding geeft aan of de inlichting foutieve gegevens bevat."
       },
       "usage": {
@@ -2212,16 +2280,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/melding#Terugmelding"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#lotnummer",
-      "name": "lotnummer",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#lotnummer",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "lotnummer"
       },
-      "sort": "lotnummer",
-      "description": {
+      "definition": {
         "nl": "Identificator van een perceel dat nog geen eigen perceelnummer heeft."
       },
       "usage": {
@@ -2233,73 +2300,66 @@
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#ligging",
-      "name": "ligging",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#ligging",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "ligging"
       },
-      "sort": "ligging",
-      "description": {
+      "definition": {
         "nl": "Situering op het plan."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting"
       ],
       "range": [
         "http://www.w3.org/ns/locn#Geometry"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#ligging",
-      "name": "ligging",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#ligging",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "ligging"
       },
-      "sort": "ligging",
-      "description": {
+      "definition": {
         "nl": "Geografische positie van het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "http://www.w3.org/ns/prov#Location"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#kwaliteit",
-      "name": "kwaliteit",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#kwaliteit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "kwaliteit"
       },
-      "sort": "kwaliteit",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#DQ-Dataquality"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#kadastraalInkomen",
-      "name": "kadastraalInkomen",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#kadastraalInkomen",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "kadastraal inkomen"
       },
-      "sort": "kadastraal inkomen",
-      "description": {
+      "definition": {
         "nl": "Een fictief inkomen dat overeenstemt met het gemiddelde jaarlijkse netto-inkomen dat het vastgoed zijn eigenaar zou opbrengen."
       },
       "usage": {
@@ -2311,263 +2371,236 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Bedrag"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#jaarlijksbedrag",
-      "name": "jaarlijksbedrag",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#jaarlijksbedrag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "jaarlijksbedrag"
       },
-      "sort": "jaarlijksbedrag",
-      "description": {
+      "definition": {
         "nl": "Het jaarlijks bedrag dat van toepassing is op de belasting of heffing van een vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Bedrag"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#inventarisType",
-      "name": "inventarisType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inventarisType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "inventaris type"
       },
-      "sort": "inventaris type",
-      "description": {
+      "definition": {
         "nl": "Type inventaris."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inventaristype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#inlichtingenOver",
-      "name": "inlichtingenOver",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inlichtingenOver",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "inlichtingen over"
       },
-      "sort": "inlichtingen over",
-      "description": {
+      "definition": {
         "nl": "Het object waar inlichtingen over worden aangevraagd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvraag"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#inlichting",
-      "name": "inlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inlichting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "inlichting"
       },
-      "sort": "inlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting die betrekking heeft op het vastgoeddossier."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#identificator",
-      "name": "identificator",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#identificator",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "identificator"
       },
-      "sort": "identificator",
-      "description": {
+      "definition": {
         "nl": "Unieke benaming die verwijst naar het vastgoeddossier."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#houder",
-      "name": "houder",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#houder",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "houder"
       },
-      "sort": "houder",
-      "description": {
+      "definition": {
         "nl": "De rechthebbende aan wie het recht toebehoort."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Rechtinlichting"
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#goedgekeurd",
-      "name": "goedgekeurd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#goedgekeurd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "goedgekeurd"
       },
-      "sort": "goedgekeurd",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of de verordening is goedgekeurd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#goedgekeurd",
-      "name": "goedgekeurd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#goedgekeurd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "goedgekeurd"
       },
-      "sort": "goedgekeurd",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de bestemming van het vastgoed werd goedgekeurd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#gewijzigd",
-      "name": "gewijzigd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gewijzigd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "gewijzigd"
       },
-      "sort": "gewijzigd",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de verordening een wijziging heeft ondergaan."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#gewijzigd",
-      "name": "gewijzigd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gewijzigd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "gewijzigd"
       },
-      "sort": "gewijzigd",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de bestemming van het vastgoed werd gewijzigd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geweigerd",
-      "name": "geweigerd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geweigerd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "geweigerd"
       },
-      "sort": "geweigerd",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of het attest geweigerd werd."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geschraptSinds",
-      "name": "geschraptSinds",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geschraptSinds",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "geschrapt sinds"
       },
-      "sort": "geschrapt sinds",
-      "description": {
+      "definition": {
         "nl": "Datum waarop het vastgoed is verwijderd uit een inventaris."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geometrie",
-      "name": "geometrie",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geometrie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geometrie"
       },
-      "sort": "geometrie",
-      "description": {
+      "definition": {
         "nl": "Geometrie van het perceel of een deel van het perceel."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [
         "http://www.w3.org/ns/locn#Geometry"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geometrie",
-      "name": "geometrie",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geometrie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geometrie"
       },
-      "sort": "geometrie",
-      "description": {
+      "definition": {
         "nl": "Geometrie van het perceel."
       },
       "usage": {
@@ -2579,225 +2612,202 @@
       "range": [
         "http://www.w3.org/ns/locn#Geometry"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheidsperiode",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheidsperiode"
       },
-      "sort": "geldigheidsperiode",
-      "description": {
+      "definition": {
         "nl": "Periode waarin het beheerplan geldig is op een vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Beheerinlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin het attest geldig is."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin de melding geldig is op het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin de vergunning geldig is op het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin het voorschrift geldig of van toepassing is op het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Voorschriftinlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin een besluit geldig is over het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin de beschermingsmaatregelen van toepassing zijn op een vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
-      "name": "geldigheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geldigheid"
       },
-      "sort": "geldigheid",
-      "description": {
+      "definition": {
         "nl": "Periode waarin het recht geldig is op het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Rechtinlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#gebouweenheid",
-      "name": "gebouweenheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gebouweenheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "gebouweenheid"
       },
-      "sort": "gebouweenheid",
-      "description": {
+      "definition": {
         "nl": "De kleinste eenheid binnen een gebouw die geschikt is voor woon-, bedrijfsmatige, of recreatieve doeleinden en die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde circulatieruimte. Een gebouweenheid is in functioneel opzicht zelfstandig. Daarnaast kan een gebouweenheid ook een gemeenschappelijk deel zijn."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#gebouw",
-      "name": "gebouw",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gebouw",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "gebouw"
       },
-      "sort": "gebouw",
-      "description": {
+      "definition": {
         "nl": "Een gesloten en/of overdekt, bovengronds of ondergronds bouwwerk, dat dient of bestemd is, ofwel om mensen, dieren en voorwerpen onder te brengen, ofwel om economische goederen te vervaardigen of diensten te verstrekken. Een gebouw verwijst naar gelijk welke structuur die op blijvende wijze op een terrein opgetrokken of gebouwd wordt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/gebouw#Gebouw"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#geassocieerdeInlichting",
-      "name": "geassocieerdeInlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geassocieerdeInlichting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "geassocieerde inlichting"
       },
-      "sort": "geassocieerde inlichting",
-      "description": {
+      "definition": {
         "nl": "Een inlichting die een verband heeft met een andere inlichting."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#functioneelEigenaar",
-      "name": "functioneeleigenaar",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#functioneelEigenaar",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "functioneelEigenaar"
       },
-      "sort": "functioneelEigenaar",
-      "description": {
+      "definition": {
         "nl": "De rechthebbende aan ie een zakelijk recht toebehoort om gebruik te maken van het eigendom (vastgoed) van een andere rechthebbende."
       },
       "usage": {
@@ -2809,52 +2819,47 @@
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#erfdienstbaarheid",
-      "name": "erfdienstbaarheid",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#erfdienstbaarheid",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "label": {
         "nl": "erfdienstbaarheid"
       },
-      "sort": "erfdienstbaarheid",
-      "description": {
+      "definition": {
         "nl": "Beschrijft de beperking die van toepassing is op het private eigendomsrecht."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#einddatum",
-      "name": "einddatum",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#einddatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "einddatum"
       },
-      "sort": "einddatum",
-      "description": {
+      "definition": {
         "nl": "Datum die aangeeft wanneer de bijbehorende herstelvordering voltooid moet zijn."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#eigenaar",
-      "name": "eigenaar",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#eigenaar",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "eigenaar"
       },
-      "sort": "eigenaar",
-      "description": {
+      "definition": {
         "nl": "De rechthebbende aan wie het vastgoed toebehoort."
       },
       "usage": {
@@ -2866,16 +2871,15 @@
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#doel",
-      "name": "doel",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#doel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "doel"
       },
-      "sort": "doel",
-      "description": {
+      "definition": {
         "nl": "Doel van de aanvraag."
       },
       "usage": {
@@ -2887,130 +2891,117 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#DoelAanvraag"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#document",
-      "name": "document",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#document",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "document"
       },
-      "sort": "document",
-      "description": {
+      "definition": {
         "nl": "Bijgevoegd document."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "http://xmlns.com/foaf/0.1/Document"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#detail",
-      "name": "detail",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#detail",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "detail"
       },
-      "sort": "detail",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#detail",
-      "name": "detail",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#detail",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "detail"
       },
-      "sort": "detail",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#BenoemdeWaarde"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#datum",
-      "name": "datum",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#datum",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "datum"
       },
-      "sort": "datum",
-      "description": {
+      "definition": {
         "nl": "Periode waarin de erfdienstbaarheid van openbaarnut van toepassing is op het geheeld of een deel van het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [
         "http://data.europa.eu/m8g/PeriodOfTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#datum",
-      "name": "datum",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#datum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "datum"
       },
-      "sort": "datum",
-      "description": {
+      "definition": {
         "nl": "Datum waarop de aanvraag ingediend is."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvraag"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#dagvaarding",
-      "name": "dagvaarding",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#dagvaarding",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "dagvaarding"
       },
-      "sort": "dagvaarding",
-      "description": {
+      "definition": {
         "nl": "Geeft aan of er sprake is van een dagvaardiging."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#code",
-      "name": "code",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#code",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "code"
       },
-      "sort": "code",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
       "usage": {
@@ -3022,339 +3013,304 @@
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#bron",
-      "name": "bron",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#bron",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "bron"
       },
-      "sort": "bron",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#LI_Citation"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#bijlage",
-      "name": "bijlage",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#bijlage",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "bijlage"
       },
-      "sort": "bijlage",
-      "description": {
+      "definition": {
         "nl": "Een bijlage waarnaar verwezen wordt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "http://xmlns.com/foaf/0.1/Document"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#bestemming",
-      "name": "bestemming",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#bestemming",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "bestemming"
       },
-      "sort": "bestemming",
-      "description": {
+      "definition": {
         "nl": "Beschrijft de activiteiten die (niet) mogen plaatsvinden op het vastgoed."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Bestemming"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#besluit",
-      "name": "besluitinlichting",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#besluit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "Besluitinlichting"
       },
-      "sort": "Besluitinlichting",
-      "description": {
+      "definition": {
         "nl": "Inlichting over een officieel Besluit dat op het Vastgoed van toepassing is."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
-      "name": "beschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "beschrijving"
       },
-      "sort": "beschrijving",
-      "description": {
+      "definition": {
         "nl": "Beschrijving van de bestemming."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Bestemming"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
-      "name": "beschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "beschrijving"
       },
-      "sort": "beschrijving",
-      "description": {
+      "definition": {
         "nl": "Beschrijving van de inbreuk of misdrijf."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
-      "name": "beschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "beschrijving"
       },
-      "sort": "beschrijving",
-      "description": {
+      "definition": {
         "nl": "Beschrijving van de inrichting of activiteit."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
-      "name": "beschrijving",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "beschrijving"
       },
-      "sort": "beschrijving",
-      "description": {
+      "definition": {
         "nl": "Een samenhangende opsomming van alles wat men aan de te beschrijven inlichting kan waarnemen."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschermingtype",
-      "name": "beschermingtype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschermingtype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "beschermingtype"
       },
-      "sort": "beschermingtype",
-      "description": {
+      "definition": {
         "nl": "Type bescherming."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Beschermingtype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beschermingsmaatregel",
-      "name": "beschermingsmaatregel",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschermingsmaatregel",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "beschermingsmaatregel"
       },
-      "sort": "beschermingsmaatregel",
-      "description": {
+      "definition": {
         "nl": "Besluit over hoe een vastgoed beschermd wordt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#string"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#belastingType",
-      "name": "belastingType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#belastingType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "belasting type"
       },
-      "sort": "belasting type",
-      "description": {
+      "definition": {
         "nl": "Type van belasting."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#BelastingType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beheertype",
-      "name": "beheertype",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beheertype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "beheertype"
       },
-      "sort": "beheertype",
-      "description": {
+      "definition": {
         "nl": "Type van beheer."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Beheerinlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Beheertype"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#beheerder",
-      "name": "beheerder",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beheerder",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "beheerder"
       },
-      "sort": "beheerder",
-      "description": {
+      "definition": {
         "nl": "Beheerder van de erfdienstbaarheid."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut"
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#behandelaar",
-      "name": "behandelaar",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#behandelaar",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "behandelaar"
       },
-      "sort": "behandelaar",
-      "description": {
+      "definition": {
         "nl": "De publieke organisatie die de vergunning behandelt."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting"
       ],
       "range": [
         "http://data.europa.eu/m8g/PublicOrganisation"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#attestType",
-      "name": "attestType",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#attestType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "attest type"
       },
-      "sort": "attest type",
-      "description": {
+      "definition": {
         "nl": "Type van attest."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#AttestType"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#agent",
-      "name": "agent",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#agent",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "agent"
       },
-      "sort": "agent",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Verstrekker"
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#agent",
-      "name": "agent",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#agent",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "agent"
       },
-      "sort": "agent",
-      "description": {
+      "definition": {
         "nl": "TODO"
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvrager"
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#afgeleverd",
-      "name": "afgeleverd",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#afgeleverd",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "afgeleverd"
       },
-      "sort": "afgeleverd",
-      "description": {
+      "definition": {
         "nl": "Datum waarop het attest is afgeleverd."
       },
       "usage": {
@@ -3366,35 +3322,32 @@
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#adres",
-      "name": "adres",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#adres",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "adres"
       },
-      "sort": "adres",
-      "description": {
+      "definition": {
         "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid, een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
       ],
       "range": [
         "http://www.w3.org/ns/locn#Address"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#aardVastgoed",
-      "name": "aardVastgoed",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#aardVastgoed",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "aard vastgoed"
       },
-      "sort": "aard vastgoed",
-      "description": {
+      "definition": {
         "nl": "De aard van het vastgoed"
       },
       "usage": {
@@ -3406,16 +3359,15 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#TypeVastgoed"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#aardPerceel",
-      "name": "aardPerceel",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#aardPerceel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "aard perceel"
       },
-      "sort": "aard perceel",
-      "description": {
+      "definition": {
         "nl": "De aard van het perceel."
       },
       "usage": {
@@ -3427,39 +3379,33 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#AardPerceel"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#aanvrager",
-      "name": "aanvrager",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#aanvrager",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "aanvrager"
       },
-      "sort": "aanvrager",
-      "description": {
+      "definition": {
         "nl": "Iemand die het proces van de aanvraag voor een publieke dienstverlening kan teweeg brengen."
       },
-      "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvraag"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Aanvrager"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.target",
-      "name": "inlichting(target)",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.target",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "Inlichting (target)"
       },
-      "sort": "Inlichting (target)",
-      "description": {
+      "definition": {
         "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
       },
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting"
@@ -3467,20 +3413,16 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
-      "parents": []
+      "generalization": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.source",
-      "name": "inlichting(source)",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.source",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "Inlichting (source)"
       },
-      "sort": "Inlichting (source)",
-      "description": {
+      "definition": {
         "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
       },
       "domain": [
         "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting"
@@ -3488,406 +3430,119 @@
       "range": [
         "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
       ],
-      "parents": []
+      "generalization": []
     }
   ],
-  "contributors": [
-    {
-      "role": "A",
-      "first_name": "Vincent",
-      "last_name": "Van Elsué",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      },
-      "email": "vincent.vanelsue@vlaanderen.be"
+  "externalproperties": [],
+  "@context": {
+    "vlaanderen": "http://data.vlaanderen.be/ns/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "void": "http://rdfs.org/ns/void#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "sdmx-dimension": "http://purl.org/linked-data/sdmx/2009/dimension#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sdmx-attribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sdmx-concept": "http://purl.org/linked-data/sdmx/2009/concept#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "person": "http://www.w3.org/ns/person#",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "vann": "http://purl.org/vocab/vann/",
+    "sh": "http://w3.org/ns/shacl#",
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
     },
-    {
-      "role": "A",
-      "first_name": "Sammy",
-      "last_name": "Parmentier",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      },
-      "email": "sammy.parmentier@vlaanderen.be"
+    "modified": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:date"
     },
-    {
-      "role": "E",
-      "first_name": "Laurens",
-      "last_name": "Vercauteren",
-      "affiliation": {
-        "name": "PwC",
-        "website": "https://www.pwc.be"
-      },
-      "email": "laurens.vercauteren@pwc.com"
+    "license": {
+      "@id": "dcterms:license",
+      "@type": "@id"
     },
-    {
-      "role": "E",
-      "first_name": "Anthony",
-      "last_name": "Van Heymbeeck",
-      "affiliation": {
-        "name": "PwC",
-        "website": "https://www.pwc.be"
-      },
-      "email": "anthony.van.heymbeeck@pwc.com"
+    "issued": {
+      "@id": "dcterms:issued"
     },
-    {
-      "role": "E",
-      "first_name": "Geert",
-      "last_name": "Thijs",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      },
-      "email": "geert.thijs@vlaanderen.be"
+    "authors": {
+      "@type": "person:Person",
+      "@id": "foaf:maker"
     },
-    {
-      "role": "E",
-      "first_name": "Matisse",
-      "last_name": "Ghesquiere",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen",
-        "website": "https://www.vlaanderen.be/digitaal-vlaanderen"
-      }
+    "editors": {
+      "@type": "person:Person",
+      "@id": "rec:editor"
     },
-    {
-      "role": "C",
-      "first_name": "Jacob",
-      "last_name": "Warris",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
+    "contributors": {
+      "@type": "person:Person",
+      "@id": "dcterms:contributor"
     },
-    {
-      "role": "C",
-      "first_name": "Wouter",
-      "last_name": "Verhelst",
-      "affiliation": {
-        "name": "West-Vlaamse Intercomunale"
-      }
+    "affiliation": {
+      "@id": "http://schema.org/affiliation"
     },
-    {
-      "role": "C",
-      "first_name": "Francis",
-      "last_name": "Verhaeghe",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen"
-      }
+    "classes": {
+      "@reverse": "rdfs:isDefinedBy"
     },
-    {
-      "role": "C",
-      "first_name": "Ann",
-      "last_name": "Verbeeck",
-      "affiliation": {
-        "name": "Gemeente Balen"
-      }
+    "datatypes": {
+      "@reverse": "rdfs:isDefinedBy"
     },
-    {
-      "role": "C",
-      "first_name": "Mireille",
-      "last_name": "Vansweevelt",
-      "affiliation": {
-        "name": "Gemeente Balen"
-      }
+    "name": {
+      "@id": "rdfs:label",
+      "@container": "@language"
     },
-    {
-      "role": "C",
-      "first_name": "Carole",
-      "last_name": "Vanheddeghem",
-      "affiliation": {
-        "name": "Notaris Binnemans Stein"
-      }
+    "definition": {
+      "@id": "rdfs:comment",
+      "@container": "@language"
     },
-    {
-      "role": "C",
-      "first_name": "Céline",
-      "last_name": "Van den Berghe",
-      "affiliation": {
-        "name": "Confederatie van Immobiliënberoepen Vlaanderen"
-      }
+    "properties": {
+      "@reverse": "rdfs:isDefinedBy"
     },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Van Troys",
-      "affiliation": {
-        "name": "Agentschap voor infrastructuur in het onderwijs"
-      }
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Gert",
-      "last_name": "Van Oost",
-      "affiliation": {
-        "name": "Stad Antwerpen"
-      }
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Van Maelsaeke",
-      "affiliation": {
-        "name": "TECCON"
-      }
+    "minCardinality": {
+      "@id": "sh:minCount"
     },
-    {
-      "role": "C",
-      "first_name": "Christophe",
-      "last_name": "Van Loo",
-      "affiliation": {
-        "name": "Het Facilitair Bedrijf"
-      }
+    "maxCardinality": {
+      "@id": "sh:maxCount"
     },
-    {
-      "role": "C",
-      "first_name": "Ward",
-      "last_name": "Van Hal",
-      "affiliation": {
-        "name": "Vereniging van Vlaamse Steden en Gemeenten vzw"
-      }
+    "generalization": {
+      "@id": "rdfs:subPropertyOf",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Bart",
-      "last_name": "Van Der Schueren",
-      "affiliation": {
-        "name": "Confederatie van Immobiliënberoepen Vlaanderen"
-      }
+    "externals": {
+      "@id": "rdfs:seeAlso"
     },
-    {
-      "role": "C",
-      "first_name": "Hendrik",
-      "last_name": "Tanghe",
-      "affiliation": {
-        "name": "Vinta aankoopbegeleiding"
-      }
+    "externalproperties": {
+      "@id": "rdfs:seeAlso"
     },
-    {
-      "role": "C",
-      "first_name": "Ann",
-      "last_name": "Smolders",
-      "affiliation": {
-        "name": "Stad Antwerpen"
-      }
+    "usage": {
+      "@id": "vann:usageNote",
+      "@container": "@language"
     },
-    {
-      "role": "C",
-      "first_name": "Sabrina",
-      "last_name": "Prieus",
-      "affiliation": {
-        "name": "Het Facilitair Bedrijf"
-      }
+    "parents": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Pascale",
-      "last_name": "Priem",
-      "affiliation": {
-        "name": "Stad Mechelen"
-      }
+    "foaf:homepage": {
+      "@id": "foaf:homepage",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Isabelle",
-      "last_name": "Pollé",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
+    "foaf:mbox": {
+      "@id": "foaf:mbox",
+      "@type": "@id"
     },
-    {
-      "role": "C",
-      "first_name": "Mathieu",
-      "last_name": "Nollet",
-      "affiliation": {
-        "name": "Stad Brugge"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Katleen",
-      "last_name": "Miserez",
-      "affiliation": {
-        "name": "Vlaamse Milieumaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Bruno",
-      "last_name": "Minnebo",
-      "affiliation": {
-        "name": "Stad Gent"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Dirk",
-      "last_name": "Mattheeuws",
-      "affiliation": {
-        "name": "NAV - De Vlaamse Architectenorganisatie"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Nathalie",
-      "last_name": "Leeuwerck",
-      "affiliation": {
-        "name": "Stad Gent"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stephanie",
-      "last_name": "Hermans",
-      "affiliation": {
-        "name": "Immo Haven"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Louis",
-      "last_name": "Gistelinck",
-      "affiliation": {
-        "name": "Agentschap Wonen-Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jürgen",
-      "last_name": "Dooms",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Sofie",
-      "last_name": "Demeulemeester",
-      "affiliation": {
-        "name": "Dewaele Vastgoedgroep"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Franky",
-      "last_name": "Deleu",
-      "affiliation": {
-        "name": "Open Real Estate Information Services"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Ans",
-      "last_name": "Deblauwe",
-      "affiliation": {
-        "name": "Agentschap Wonen-Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Hannes",
-      "last_name": "Debaveye",
-      "affiliation": {
-        "name": "TECCON"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stephan",
-      "last_name": "De Witte",
-      "affiliation": {
-        "name": "Confederatie van Immobiliënberoepen Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Katleen",
-      "last_name": "De Turck",
-      "affiliation": {
-        "name": "Openbare Vlaamse AfvalstoffenMaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Emma",
-      "last_name": "De Proft",
-      "affiliation": {
-        "name": "Interleuven"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Els",
-      "last_name": "De Keyser",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Martin",
-      "last_name": "De Beco",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Sonia",
-      "last_name": "De Backer",
-      "affiliation": {
-        "name": "Group B"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Aidan",
-      "last_name": "Coppens",
-      "affiliation": {
-        "name": "Confederatie van Immobiliënberoepen Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Dirk",
-      "last_name": "Coelus",
-      "affiliation": {
-        "name": "Confederatie van Immobiliënberoepen Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Patty",
-      "last_name": "Cant",
-      "affiliation": {
-        "name": "Digitaal Vlaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Marilyn",
-      "last_name": "Calewaert",
-      "affiliation": {
-        "name": "Gemeente Sint-Katelijne-Waver"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Joahn",
-      "last_name": "Boogaerts",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Matthias",
-      "last_name": "Boeraeve",
-      "affiliation": {
-        "name": "VlaNot / FedNot"
-      }
+    "equivalent": {
+      "@id": "owl:equivalentClass",
+      "@type": "@id"
     }
-  ],
-  "external_terms": [],
-  "documentroot": "/doc/vocabularium/vastgoed/ontwerpstandaard/2021-06-30"
+  }
 }
