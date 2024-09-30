@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3d4dc03abaf21bc5bc957fecb28a5ac4c2b4df4e",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3d4dc03abaf21bc5bc957fecb28a5ac4c2b4df4e/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/9d2bdbe610275186781455fbe713b99e802e67d0",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/9d2bdbe610275186781455fbe713b99e802e67d0/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -162,7 +162,7 @@
             "nl": "start"
           },
           "description": {
-            "nl": "De moment wanneer de vergunning zou starten."
+            "nl": "Het moment wanneer de vergunning zou starten."
           },
           "usage": {},
           "domain": [
@@ -190,7 +190,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "start",
-            "definition-nl": "De moment wanneer de vergunning zou starten."
+            "definition-nl": "Het moment wanneer de vergunning zou starten."
           }
         },
         {
@@ -200,7 +200,9 @@
           "label": {
             "nl": "policy"
           },
-          "description": {},
+          "description": {
+            "nl": "De Policy waarop de Aanvraag gebaseerd is."
+          },
           "usage": {},
           "domain": [
             {
@@ -226,7 +228,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "policy"
+            "label-nl": "policy",
+            "definition-nl": "De Policy waarop de Aanvraag gebaseerd is."
           }
         },
         {
@@ -236,7 +239,9 @@
           "label": {
             "nl": "nummerplaat"
           },
-          "description": {},
+          "description": {
+            "nl": "De nummerplaten van de voertuigen waarvoor de Aanvraag wordt ingediend."
+          },
           "usage": {},
           "domain": [
             {
@@ -262,8 +267,41 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "nummerplaat"
+            "label-nl": "nummerplaat",
+            "definition-nl": "De nummerplaten van de voertuigen waarvoor de Aanvraag wordt ingediend."
           }
+        },
+        {
+          "uri": "http://fixme.com#identificator",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanvraag",
+              "uri": "http://fixme.com#Aanvraag"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {}
         },
         {
           "uri": "http://fixme.com#einde",
@@ -273,7 +311,7 @@
             "nl": "einde"
           },
           "description": {
-            "nl": "De moment wanneer de vergunning zou eindigen."
+            "nl": "Het moment wanneer de vergunning zou eindigen."
           },
           "usage": {},
           "domain": [
@@ -301,7 +339,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "einde",
-            "definition-nl": "De moment wanneer de vergunning zou eindigen."
+            "definition-nl": "Het moment wanneer de vergunning zou eindigen."
           }
         },
         {
@@ -311,7 +349,9 @@
           "label": {
             "nl": "bewijsdocument"
           },
-          "description": {},
+          "description": {
+            "nl": "De benodigde documenten om een Vergunning te krijgen."
+          },
           "usage": {},
           "domain": [
             {
@@ -337,7 +377,8 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "bewijsdocument"
+            "label-nl": "bewijsdocument",
+            "definition-nl": "De benodigde documenten om een Vergunning te krijgen."
           }
         }
       ]
@@ -405,7 +446,9 @@
           "label": {
             "nl": "identificator"
           },
-          "description": {},
+          "description": {
+            "nl": "Een identificator voor een AanvraagSet."
+          },
           "usage": {},
           "domain": [
             {
@@ -413,12 +456,26 @@
               "uri": "http://fixme.com#AanvraagSet"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "identificator"
+            "label-nl": "identificator",
+            "definition-nl": "Een identificator voor een AanvraagSet."
           }
         },
         {
@@ -506,7 +563,9 @@
           "label": {
             "nl": "aanvraagtype"
           },
-          "description": {},
+          "description": {
+            "nl": "Het soort Aanvraag."
+          },
           "usage": {},
           "domain": [
             {
@@ -532,7 +591,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanvraagtype"
+            "label-nl": "aanvraagtype",
+            "definition-nl": "Het soort Aanvraag."
           }
         }
       ]
@@ -771,7 +831,7 @@
             "nl": "policytype"
           },
           "description": {
-            "nl": "De type van de policy."
+            "nl": "De type van de Policy."
           },
           "usage": {},
           "domain": [
@@ -799,7 +859,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "policytype",
-            "definition-nl": "De type van de policy."
+            "definition-nl": "De type van de Policy."
           }
         },
         {
@@ -809,7 +869,9 @@
           "label": {
             "nl": "aanvraag"
           },
-          "description": {},
+          "description": {
+            "nl": "De Aanvragen die relateerd zijn aan de Policy."
+          },
           "usage": {},
           "domain": [
             {
@@ -835,7 +897,8 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanvraag"
+            "label-nl": "aanvraag",
+            "definition-nl": "De Aanvragen die relateerd zijn aan de Policy."
           }
         }
       ]
@@ -1195,7 +1258,9 @@
           "label": {
             "nl": "identificator"
           },
-          "description": {},
+          "description": {
+            "nl": "Een identificator voor een Vergunning."
+          },
           "usage": {},
           "domain": [
             {
@@ -1208,7 +1273,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "identificator"
+            "label-nl": "identificator",
+            "definition-nl": "Een identificator voor een Vergunning."
           }
         },
         {
@@ -1315,8 +1381,12 @@
           "label": {
             "nl": "voorwaarde"
           },
-          "description": {},
-          "usage": {},
+          "description": {
+            "nl": "De Voorwaarde waartoe de vereisten behoren."
+          },
+          "usage": {
+            "nl": "De Voorwaarde is in dit geval altijd van het type vergunning."
+          },
           "domain": [
             {
               "EA-Name": "Vergunningsvereisten",
@@ -1341,6 +1411,8 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
+            "usageNote-nl": "De Voorwaarde is in dit geval altijd van het type vergunning.",
+            "definition-nl": "De Voorwaarde waartoe de vereisten behoren.",
             "label-nl": "voorwaarde"
           }
         },
@@ -1351,7 +1423,9 @@
           "label": {
             "nl": "vergunningsvoorwaarde"
           },
-          "description": {},
+          "description": {
+            "nl": "De Voorwaarden aan welke voldaan moeten worden om een Vergunning te krijgen."
+          },
           "usage": {},
           "domain": [
             {
@@ -1377,6 +1451,7 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De Voorwaarden aan welke voldaan moeten worden om een Vergunning te krijgen.",
             "label-nl": "vergunningsvoorwaarde"
           }
         }
@@ -1406,8 +1481,12 @@
           "label": {
             "nl": "waarde"
           },
-          "description": {},
-          "usage": {},
+          "description": {
+            "nl": "De waarde van de Voorwaarde."
+          },
+          "usage": {
+            "nl": "Dit is bijvoorbeeld het type van het voertuig als daar een beperking op is."
+          },
           "domain": [
             {
               "EA-Name": "Voorwaarde",
@@ -1432,7 +1511,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "waarde"
+            "label-nl": "waarde",
+            "definition-nl": "De waarde van de Voorwaarde.",
+            "usageNote-nl": "Dit is bijvoorbeeld het type van het voertuig als daar een beperking op is."
           }
         },
         {
@@ -1442,7 +1523,9 @@
           "label": {
             "nl": "voorwaardetype"
           },
-          "description": {},
+          "description": {
+            "nl": "Het soort Voorwaarde."
+          },
           "usage": {},
           "domain": [
             {
@@ -1468,7 +1551,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "voorwaardetype"
+            "label-nl": "voorwaardetype",
+            "definition-nl": "Het soort Voorwaarde."
           }
         },
         {
@@ -1478,8 +1562,12 @@
           "label": {
             "nl": "vereisten"
           },
-          "description": {},
-          "usage": {},
+          "description": {
+            "nl": "De vereisten die nodig zijn om een Vergunning te krijgen."
+          },
+          "usage": {
+            "nl": "Deze eigenschap is enkel van toepassinge als de Voorwaarde van het type vergunning is."
+          },
           "domain": [
             {
               "EA-Name": "Voorwaarde",
@@ -1504,7 +1592,9 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "vereisten"
+            "label-nl": "vereisten",
+            "usageNote-nl": "Deze eigenschap is enkel van toepassinge als de Voorwaarde van het type vergunning is.",
+            "definition-nl": "De vereisten die nodig zijn om een Vergunning te krijgen."
           }
         },
         {
@@ -1514,7 +1604,9 @@
           "label": {
             "nl": "policy"
           },
-          "description": {},
+          "description": {
+            "nl": "De Policy waartoe de Voorwaarde behoort."
+          },
           "usage": {},
           "domain": [
             {
@@ -1540,6 +1632,7 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De Policy waartoe de Voorwaarde behoort.",
             "label-nl": "policy"
           }
         }
@@ -1569,7 +1662,9 @@
           "label": {
             "nl": "vergunning"
           },
-          "description": {},
+          "description": {
+            "nl": "De vergunningen die uitegeven zijn voor de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1595,7 +1690,8 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "vergunning"
+            "label-nl": "vergunning",
+            "definition-nl": "De vergunningen die uitegeven zijn voor de Zone."
           }
         },
         {
@@ -1605,7 +1701,9 @@
           "label": {
             "nl": "verantwoordelijke"
           },
-          "description": {},
+          "description": {
+            "nl": "De Agent die verantwoordelijke is voor de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1631,7 +1729,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "verantwoordelijke"
+            "label-nl": "verantwoordelijke",
+            "definition-nl": "De Agent die verantwoordelijke is voor de Zone."
           }
         },
         {
@@ -1641,7 +1740,9 @@
           "label": {
             "nl": "status"
           },
-          "description": {},
+          "description": {
+            "nl": "De status van de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1667,7 +1768,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "status"
+            "label-nl": "status",
+            "definition-nl": "De status van de Zone."
           }
         },
         {
@@ -1677,7 +1779,9 @@
           "label": {
             "nl": "policies"
           },
-          "description": {},
+          "description": {
+            "nl": "De policies die van toepassingen zijn op de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1703,7 +1807,8 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "policies"
+            "label-nl": "policies",
+            "definition-nl": "De policies die van toepassingen zijn op de Zone."
           }
         },
         {
@@ -1713,7 +1818,9 @@
           "label": {
             "nl": "naam"
           },
-          "description": {},
+          "description": {
+            "nl": "De naam van de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1739,7 +1846,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "naam"
+            "label-nl": "naam",
+            "definition-nl": "De naam van de Zone."
           }
         },
         {
@@ -1749,7 +1857,9 @@
           "label": {
             "nl": "locatie"
           },
-          "description": {},
+          "description": {
+            "nl": "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."
+          },
           "usage": {},
           "domain": [
             {
@@ -1775,7 +1885,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "locatie"
+            "label-nl": "locatie",
+            "definition-nl": "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."
           }
         },
         {
@@ -1785,7 +1896,9 @@
           "label": {
             "nl": "aanvraag"
           },
-          "description": {},
+          "description": {
+            "nl": "De Aanvragen voor vergunninging voor de Zone."
+          },
           "usage": {},
           "domain": [
             {
@@ -1811,7 +1924,8 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanvraag"
+            "label-nl": "aanvraag",
+            "definition-nl": "De Aanvragen voor vergunninging voor de Zone."
           }
         }
       ]
@@ -2168,6 +2282,35 @@
       "name": {
         "nl": "locatie",
         "undefined": "locatie"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#identificator",
+      "name": {
+        "nl": "identificator",
+        "undefined": "identificator"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "http://fixme.com#identificator",
+      "name": {
+        "undefined": ""
       },
       "description": {},
       "domain": [
