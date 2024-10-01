@@ -1,0 +1,251 @@
+{
+  "@context": {
+    "Aanvraag": "http://fixme.com#Aanvraag",
+    "Aanvraag.einde": {
+      "@id": "http://fixme.com#einde",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Aanvraag.identificator": {
+      "@id": "http://fixme.com#identificator",
+      "@type": "@id"
+    },
+    "Aanvraag.nummerplaat": {
+      "@container": "@set",
+      "@id": "http://fixme.com#nummerplaat",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Aanvraag.policy": {
+      "@id": "http://fixme.com#policy",
+      "@type": "@id"
+    },
+    "Aanvraag.start": {
+      "@id": "http://fixme.com#start",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Aanvraag.status": {
+      "@id": "http://fixme.com#status",
+      "@type": "@id"
+    },
+    "Aanvraag.vergunning": {
+      "@container": "@set",
+      "@id": "http://fixme.com#vergunning",
+      "@type": "@id"
+    },
+    "Aanvraag.zone": {
+      "@id": "http://fixme.com#zone",
+      "@type": "@id"
+    },
+    "AanvraagSet": "http://fixme.com#AanvraagSet",
+    "AanvraagSet.aanvraagtype": {
+      "@id": "http://fixme.com#aanvraagtype",
+      "@type": "@id"
+    },
+    "AanvraagSet.aanvragen": {
+      "@container": "@set",
+      "@id": "http://fixme.com#aanvragen",
+      "@type": "@id"
+    },
+    "AanvraagSet.aanvrager": {
+      "@id": "http://fixme.com#aanvrager",
+      "@type": "@id"
+    },
+    "AanvraagSet.identificator": {
+      "@id": "http://fixme.com#identificator",
+      "@type": "@id"
+    },
+    "AanvraagSet.indienDatum": {
+      "@id": "http://fixme.com#indienDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Aanvraagstatus": "http://fixme.com#Aanvraagstatus",
+    "Aanvraagtype": "http://fixme.com#Aanvraagtype",
+    "Bewijs": "http://data.europa.eu/m8g/Evidence",
+    "Bewijs.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.datum": {
+      "@id": "http://fixme.com#Bewijs.datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Bewijs.documentatie": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bewijs.referentie": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "@id"
+    },
+    "Bewijs.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Bewijs.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.type": {
+      "@id": "http://purl.org/dc/terms/type"
+    },
+    "Criteriumvereiste": "http://data.europa.eu/m8g/CriterionRequirement",
+    "Criteriumvereiste.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Criteriumvereiste.type": {
+      "@id": "http://purl.org/dc/terms/type"
+    },
+    "Documenttype": "http://fixme.com#Bewijstype",
+    "Output": "http://data.europa.eu/m8g/Output",
+    "Output.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type"
+    },
+    "Policy": "http://fixme.com#Policy",
+    "Policy.aanvraag": {
+      "@container": "@set",
+      "@id": "http://fixme.com#aanvraag",
+      "@type": "@id"
+    },
+    "Policy.policytype": {
+      "@id": "http://fixme.com#policytype",
+      "@type": "@id"
+    },
+    "Policy.set": {
+      "@container": "@set",
+      "@id": "http://fixme.com#set",
+      "@type": "@id"
+    },
+    "Policy.voorwaarde": {
+      "@container": "@set",
+      "@id": "http://fixme.com#voorwaarde",
+      "@type": "@id"
+    },
+    "PolicySet": "http://fixme.com#PolicySet",
+    "PolicySet.policy": {
+      "@container": "@set",
+      "@id": "http://fixme.com#policy",
+      "@type": "@id"
+    },
+    "PolicySet.zone": {
+      "@container": "@set",
+      "@id": "http://fixme.com#zone",
+      "@type": "@id"
+    },
+    "Policytype": "http://fixme.com#Policytype",
+    "Vergunning": "http://fixme.com#Vergunning",
+    "Vergunning.aanvraag": {
+      "@id": "http://fixme.com#aanvraag",
+      "@type": "@id"
+    },
+    "Vergunning.eindDatum": {
+      "@id": "http://fixme.com#eindDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Vergunning.identificator": {
+      "@id": "http://fixme.com#identificator",
+      "@type": "@id"
+    },
+    "Vergunning.nummerplaat": {
+      "@container": "@set",
+      "@id": "http://fixme.com#nummerplaat",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Vergunning.startDatum": {
+      "@id": "http://fixme.com#startDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Vergunning.status": {
+      "@id": "http://fixme.com#status",
+      "@type": "@id"
+    },
+    "Vergunning.uitgever": {
+      "@id": "http://fixme.com#uitgever",
+      "@type": "@id"
+    },
+    "Vergunning.vergunningstype": {
+      "@id": "http://fixme.com#vergunningstype",
+      "@type": "@id"
+    },
+    "Vergunning.zone": {
+      "@id": "http://fixme.com#zone",
+      "@type": "@id"
+    },
+    "Vergunningstatus": "http://fixme.com#Vergunningstatus",
+    "Vergunningstype": "http://fixme.com#Vergunningstype",
+    "Vergunningsvereisten": "http://fixme.com#Vergunningsvereisten",
+    "Vergunningsvereisten.vergunningsvoorwaarde": {
+      "@container": "@set",
+      "@id": "http://fixme.com#vergunningsvoorwaarde",
+      "@type": "@id"
+    },
+    "Vergunningsvereisten.voorwaarde": {
+      "@container": "@set",
+      "@id": "http://fixme.com#voorwaarde",
+      "@type": "@id"
+    },
+    "Voorwaarde": "http://fixme.com#Voorwaarde",
+    "Voorwaarde.policy": {
+      "@container": "@set",
+      "@id": "http://fixme.com#policy",
+      "@type": "@id"
+    },
+    "Voorwaarde.vereisten": {
+      "@id": "http://fixme.com#vereisten",
+      "@type": "@id"
+    },
+    "Voorwaarde.voorwaardetype": {
+      "@id": "http://fixme.com#voorwaardetype",
+      "@type": "@id"
+    },
+    "Voorwaarde.waarde": {
+      "@id": "http://fixme.com#waarde",
+      "@type": "@id"
+    },
+    "Voorwaardetype": "http://fixme.com#Voorwaardetype",
+    "Zone": "http://fixme.com#Zone",
+    "Zone.aanvraag": {
+      "@container": "@set",
+      "@id": "http://fixme.com#aanvraag",
+      "@type": "@id"
+    },
+    "Zone.locatie": {
+      "@id": "http://fixme.com#locatie",
+      "@type": "@id"
+    },
+    "Zone.naam": {
+      "@id": "http://fixme.com#naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Zone.policies": {
+      "@container": "@set",
+      "@id": "http://fixme.com#policies",
+      "@type": "@id"
+    },
+    "Zone.status": {
+      "@id": "http://fixme.com#status",
+      "@type": "@id"
+    },
+    "Zone.verantwoordelijke": {
+      "@id": "http://fixme.com#verantwoordelijke",
+      "@type": "@id"
+    },
+    "Zone.vergunning": {
+      "@container": "@set",
+      "@id": "http://fixme.com#vergunning",
+      "@type": "@id"
+    },
+    "Zonestatus": "http://fixme.com#Zonestatus"
+  }
+}
