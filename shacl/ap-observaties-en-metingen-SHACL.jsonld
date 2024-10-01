@@ -103,20 +103,6 @@
   "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28",
   "shapes": [
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeneriekeNaamShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#NaamInNaamruimteShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://def.isotc211.org/iso19103/2005/Names#ScopedName"
-    },
-    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#RecordShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -187,6 +173,13 @@
       "sh:targetClass": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BereikShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieWaardepaarShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -206,7 +199,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieWaardepaarShape/722a1f18cabb107c684fe4ca857876ade00b0d01",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeometrieWaardepaar.geometrie",
-          "sh:class": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+          "sh:class": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
           "sh:description": {
             "nl": "Geometrie van het element."
           },
@@ -358,7 +351,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ClassificatieShape/09ed995683a26095de4577d13e597160f260ecb2",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Classificatie.resultaat",
-          "sh:class": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Resultaat van de Classificatie."
           },
@@ -527,6 +520,38 @@
       "sh:targetClass": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjectShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Domeinobject.type",
+          "sh:description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjectShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Domeinobject.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "sh:name": {
+            "nl": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObjectShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -639,18 +664,6 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BenoemdeWaardeShape/1399bd400d4637b15d5fe38202d6572f82150aac",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BenoemdeWaarde.naam",
-          "sh:class": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
-          "sh:description": {
-            "nl": "Naam vh type van de waarde."
-          },
-          "sh:name": {
-            "nl": "naam"
-          },
-          "sh:path": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name"
-        },
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BenoemdeWaardeShape/5fceb068938b8a837e254da418f45825d992aec8",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BenoemdeWaarde.naam",
@@ -1194,7 +1207,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatiecontextShape/e5ccf692ee38c28199531eb5e0c59554153a57c3",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Observatiecontext.rol",
-          "sh:class": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Aard van de samenhang."
           },
@@ -1299,6 +1312,30 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsobjectShape/59b9347ab72afa0c39a2c50ed656780c82fba2dc",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Bemonsteringsobject.bemonsterdObject",
+          "sh:class": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "sh:description": {
+            "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+          },
+          "sh:name": {
+            "nl": "bemonsterdObject"
+          },
+          "sh:path": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsobjectShape/7dc9be25e8708bd3eb46ed61288f2a193eea5d61",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Bemonsteringsobject.bemonsterdObject",
+          "sh:description": {
+            "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "bemonsterdObject"
+          },
+          "sh:path": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature"
+        },
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsobjectShape/bff6e3438377968c492a6ca0fe2e7df779731318",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Bemonsteringsobject.geassocieerdBemonsteringsobject",
@@ -1965,7 +2002,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/27746fec6c80c8d3f7ddb3639ef23b2fab16603f",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.materiaalklasse",
-          "sh:class": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Aard van het materiaal waaruit het Monster bestaat."
           },
@@ -1989,7 +2026,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonsterShape/18a2e186a5f9c252476fd785abe447b7413169ac",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.monstertype",
-          "sh:class": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Vorm waarin het Monster werd bekomen;"
           },
@@ -2015,7 +2052,7 @@
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Monster.verwerkingsdetails",
           "sh:class": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."
           },
           "sh:name": {
             "nl": "verwerkingsdetails"
@@ -2165,6 +2202,13 @@
       "sh:targetClass": "http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#AgentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://purl.org/dc/terms/Agent"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#VlakShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2208,6 +2252,48 @@
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#BemonsteringsobjecttypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingmethodeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DomeinobjecttypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MateriaalklasseShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MonstertypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#CategorieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatiecontexttypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
@@ -2367,6 +2453,112 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/ns/prov#Location"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpdrachtShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/6890e1def304cb2b3a13ab957c88611b3da3a34e",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c192eb0d5e5c85399936518a4f4503c049d71714",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/c5ab93f3649a701e1fefd1ffdb8529899ed6675c",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.methode",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "sh:name": {
+            "nl": "methode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/11d5c55a52d6fab8bf98ab18615920a40a48b7eb",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.opnamedatum",
+          "sh:description": {
+            "nl": "Datum waarop de Opmeting plaatsvond."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "opnamedatum"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#opnamedatum"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/f08b541038196b61b6b3337af76d5e56143400a5",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.opnamedatum",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "nl": "Datum waarop de Opmeting plaatsvond."
+          },
+          "sh:name": {
+            "nl": "opnamedatum"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#opnamedatum"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/a825ef9ed99d3af5d19a15985b5127033b6c35ab",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor",
+          "sh:class": "http://purl.org/dc/terms/Agent",
+          "sh:description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "sh:name": {
+            "nl": "uitgevoerdDoor"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#OpmetingShape/cca2c488938324b89e759dd60201a611e0f43485",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#Opmeting.uitgevoerdDoor",
+          "sh:description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "uitgevoerdDoor"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#DekkingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
     }
   ]
 }

@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/ce56e9a54f717b0ef813027a1a8cc908ec0cbf3d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/ce56e9a54f717b0ef813027a1a8cc908ec0cbf3d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/319f45a40aa5e22b3711c7833cdf053ee578ea49",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/319f45a40aa5e22b3711c7833cdf053ee578ea49/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-observaties-en-metingen/",
     "usesVocs": [],
@@ -75,14 +75,14 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse."
       },
       "parents": [],
       "rawTags": {
         "label-nl": "Kenmerktype",
         "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
         "ap-definition-nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
-        "ap-usageNote-nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier).",
+        "ap-usageNote-nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse.",
         "ap-label-nl": "Kenmerktype"
       },
       "properties": []
@@ -110,6 +110,28 @@
       "properties": []
     },
     {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
+      "name": "Bereik",
+      "label": {
+        "nl": "Bereik"
+      },
+      "sort": "Bereik",
+      "description": {
+        "nl": "Variatie van een fenomeen in ruimte of tijd."
+      },
+      "usage": {
+        "nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Variatie van een fenomeen in ruimte of tijd.",
+        "ap-usageNote-nl": "Voor situaties waarbij een fenomeen geen constante als waarde oplevert (bvb kleur),maar eerder hoe het fenomeen varieert in functie van locatie of tijd (bvb de temperatuur binnen een bepaald gebied of binnen een bepaalde periode). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken/\">Ruimtelijke Bereiken</a>.",
+        "label-nl": "Bereik",
+        "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
       "name": "Discreetbereik",
       "label": {
@@ -128,7 +150,7 @@
           "name": "Bereik",
           "package": "OSLO-RuimtelijkeBereiken",
           "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
-          "scoped_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+          "scoped_uri": "#Bereik"
         }
       ],
       "rawTags": {
@@ -268,7 +290,7 @@
         "nl": "Observatie waarbij het resultaat categorisch is."
       },
       "usage": {
-        "nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een naam in een of andere naamruimte, typisch een waarde uit een codelijst, bij voorkeur uniek aangeduid dmv een URI."
+        "nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een <a href=\"http://www.w3.org/2004/02/skos/core#Concept\">skos:Concept</a>, maw een waarde uit een codelijst."
       },
       "parents": [
         {
@@ -283,7 +305,7 @@
         "label-nl": "Classificatie",
         "uri": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation",
         "ap-definition-nl": "Observatie waarbij het resultaat categorisch is.",
-        "ap-usageNote-nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een naam in een of andere naamruimte, typisch een waarde uit een codelijst, bij voorkeur uniek aangeduid dmv een URI.",
+        "ap-usageNote-nl": "Typisch bij Observaties waarbij getracht wordt de geobserveerdeObjecten in te delen volgens een bepaald classificatiesysteem. Bv het determineren van een plant, het bepalen van het bodemtype, het klasseren op kleur. Datatype vh resultaat is een <a href=\"http://www.w3.org/2004/02/skos/core#Concept\">skos:Concept</a>, maw een waarde uit een codelijst.",
         "ap-label-nl": "Classificatie"
       },
       "properties": [
@@ -306,16 +328,16 @@
           ],
           "range": [
             {
-              "range_label": "NaamInNaamruimte",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/Names#ScopedName"
+              "range_label": "Categorie",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#NaamInNaamruimte",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
+              "range_uri": "#Categorie",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "NaamInNaamruimte"
+                "nl": "Categorie"
               }
             }
           ],
@@ -545,6 +567,79 @@
             "uri": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result",
             "ap-definition-nl": "Resultaat van de DiscreetBereikobservatie.",
             "ap-label-nl": "resultaat"
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "sort": "Domeinobject",
+      "description": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "parents": [
+        {
+          "label": "Object",
+          "name": "Object",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "scoped_uri": "#Object"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Domeinobject",
+        "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+        "ap-label-nl": "Domeinobject",
+        "ap-definition-nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+        "ap-usageNote-nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      },
+      "properties": [
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van het Domeinobject."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Domeinobject",
+              "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Domeinobjecttype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Domeinobjecttype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Domeinobjecttype"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "type",
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van het Domeinobject."
           }
         }
       ]
@@ -805,7 +900,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -847,7 +942,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+              "range_uri": "#Opdracht",
               "range_puri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
               "range_label": {
                 "nl": "Opdracht"
@@ -1295,7 +1390,7 @@
             "nl": "Kenmerk dat men observeert vh geobserveerdObject."
           },
           "usage": {
-            "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord."
+            "nl": "Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord."
           },
           "domain": [
             {
@@ -1323,7 +1418,7 @@
           "rawTags": {
             "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
             "ap-definition-nl": "Kenmerk dat men observeert vh geobserveerdObject.",
-            "ap-usageNote-nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
+            "ap-usageNote-nl": "NOTE$ea_notes=Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
             "label-nl": "geobserveerdKenmerk"
           }
         },
@@ -1423,14 +1518,14 @@
         "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
       },
       "usage": {
-        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
       },
       "parents": [],
       "rawTags": {
         "label-nl": "Proces",
         "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
         "ap-definition-nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen.",
-        "ap-usageNote-nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>."
+        "ap-usageNote-nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. "
       },
       "properties": [
         {
@@ -1607,16 +1702,16 @@
           ],
           "range": [
             {
-              "range_label": "GeneriekeNaam",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+              "range_label": "Observatiecontexttype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GeneriekeNaam",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+              "range_uri": "#Observatiecontexttype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "GeneriekeNaam"
+                "nl": "Observatiecontexttype"
               }
             }
           ],
@@ -1791,7 +1886,15 @@
       "usage": {
         "nl": "Het deel waarvan sprake kan fysiek zijn (een Monster) of ruimtelijk (een RuimtelijkBemonsteringsobject). Men observeert een Bemonsteringsobject ipv het werkelijk Object als dat laatste niet in zijn geheel geobserveerd kan worden (bv omdat exhaustieve observatie onpraktisch zou zijn). Het Bemonsteringsobject vormt samen met het Proces dat voor observatie is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
       },
-      "parents": [],
+      "parents": [
+        {
+          "label": "Object",
+          "name": "Object",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "scoped_uri": "#Object"
+        }
+      ],
       "rawTags": {
         "label-nl": "Bemonsteringsobject",
         "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
@@ -1925,6 +2028,50 @@
             "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
             "ap-label-nl": "geassocieerdBemonsteringsobject",
             "label-nl": "geassocieerdBemonsteringsobject"
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+          "name": "bemonsterdobject",
+          "sort": "bemonsterdObject",
+          "label": {
+            "nl": "bemonsterdObject"
+          },
+          "description": {
+            "nl": "Verwijzing naar het Object dat men wil bemonsteren."
+          },
+          "usage": {
+            "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme."
+          },
+          "domain": [
+            {
+              "EA-Name": "Bemonsteringsobject",
+              "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Object",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Object",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+              "range_label": {
+                "nl": "Object"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "bemonsterdObject",
+            "ap-definition-nl": "Verwijzing naar het Object dat men wil bemonsteren.",
+            "ap-usageNote-nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.",
+            "uri": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+            "label-nl": "bemonsterdObject"
           }
         },
         {
@@ -2513,7 +2660,9 @@
       "description": {
         "nl": "Het prepareren van een Monster voorafgaand aan de Observatie."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Deze klasse is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+      },
       "parents": [
         {
           "label": "Bemonstering",
@@ -2527,7 +2676,8 @@
         "label-nl": "Monstervoorbereiding",
         "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
         "ap-definition-nl": "Het prepareren van een Monster voorafgaand aan de Observatie.",
-        "ap-label-nl": "Monstervoorbereiding"
+        "ap-label-nl": "Monstervoorbereiding",
+        "ap-usageNote-nl": "Deze klasse is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
       },
       "properties": [
         {
@@ -2688,7 +2838,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -2780,16 +2930,16 @@
           ],
           "range": [
             {
-              "range_label": "GeneriekeNaam",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+              "range_label": "Monstertype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GeneriekeNaam",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+              "range_uri": "#Monstertype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "GeneriekeNaam"
+                "nl": "Monstertype"
               }
             }
           ],
@@ -2857,7 +3007,9 @@
           "description": {
             "nl": "Tijdstip waarop het monster werd verkregen uit het bemonsterdObject."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+          },
           "domain": [
             {
               "EA-Name": "Monster",
@@ -2885,7 +3037,8 @@
             "label-nl": "bemonsteringstijdstip",
             "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
             "ap-definition-nl": "Tijdstip waarop het monster werd verkregen uit het bemonsterdObject.",
-            "ap-label-nl": "bemonsteringstijdstip"
+            "ap-label-nl": "bemonsteringstijdstip",
+            "ap-usageNote-nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
           }
         },
         {
@@ -2898,7 +3051,9 @@
           "description": {
             "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
+          },
           "domain": [
             {
               "EA-Name": "Monster",
@@ -2926,7 +3081,8 @@
             "label-nl": "bemonsteringsmethode",
             "uri": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
             "ap-label-nl": "bemonsteringsmethode",
-            "ap-definition-nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object."
+            "ap-definition-nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object.",
+            "ap-usageNote-nl": "Dit attribuut is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
           }
         },
         {
@@ -2994,16 +3150,16 @@
           ],
           "range": [
             {
-              "range_label": "GeneriekeNaam",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+              "range_label": "Materiaalklasse",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GeneriekeNaam",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+              "range_uri": "#Materiaalklasse",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "GeneriekeNaam"
+                "nl": "Materiaalklasse"
               }
             }
           ],
@@ -3069,10 +3225,10 @@
             "nl": "verwerkingsdetails"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren."
           },
           "usage": {
-            "nl": "TODO"
+            "nl": "Dieze associatie is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering."
           },
           "domain": [
             {
@@ -3099,8 +3255,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
-            "ap-definition-nl": "TODO",
-            "ap-usageNote-nl": "TODO",
+            "ap-definition-nl": "Verwijzing naar het proces dat werd gevolgd bij het bemonsteren.",
+            "ap-usageNote-nl": "NOTE$ea_notes=Dieze associatie is overbodig als de Bemonstering waarmee het Monster tot stand kwam wordt meegegeven. Zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a< voor meer info hierover en over de klasse Bemonstering.",
             "ap-label-nl": "verwerkingsdetails",
             "label-nl": "verwerkingsdetails"
           }
@@ -3350,6 +3506,25 @@
       ]
     },
     {
+      "uri": "http://purl.org/dc/terms/Agent",
+      "name": "Agent",
+      "label": {
+        "nl": "Agent"
+      },
+      "sort": "Agent",
+      "description": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "label-nl": "Agent",
+        "uri": "http://purl.org/dc/terms/Agent"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
       "name": "Any",
       "label": {
@@ -3369,6 +3544,27 @@
         "label-nl": "Any",
         "uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
         "ap-label-nl": "Any"
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+      "name": "Opdracht",
+      "label": {
+        "nl": "Opdracht"
+      },
+      "sort": "Opdracht",
+      "description": {
+        "nl": "Toegewezen taak."
+      },
+      "usage": {
+        "nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
+      },
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Opdracht",
+        "definition-nl": "Toegewezen taak.",
+        "usageNote-nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
       },
       "properties": []
     }
@@ -4219,51 +4415,6 @@
   ],
   "datatypes": [
     {
-      "uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
-      "name": "Generiekenaam",
-      "label": {
-        "nl": "GeneriekeNaam"
-      },
-      "sort": "GeneriekeNaam",
-      "description": {
-        "nl": "Abstracte klasse van alle namen in een naamruimte."
-      },
-      "usage": {
-        "nl": "Subtypes zijn LokaleNaam en NaamInNaamruimte (resp een naam zonder en een naam met  vermelding van een naamruimte). Datatype van LokaleNaam is bvb String of Taalstring, datatype van NaamInNaamruimte is bvb URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>."
-      },
-      "parents": [],
-      "rawTags": {
-        "label-nl": "GeneriekeNaam",
-        "uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
-        "ap-definition-nl": "Abstracte klasse van alle namen in een naamruimte.",
-        "ap-usageNote-nl": "Subtypes zijn LokaleNaam en NaamInNaamruimte (resp een naam zonder en een naam met  vermelding van een naamruimte). Datatype van LokaleNaam is bvb String of Taalstring, datatype van NaamInNaamruimte is bvb URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>.",
-        "ap-label-nl": "GeneriekeNaam"
-      },
-      "properties": []
-    },
-    {
-      "uri": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
-      "name": "Naaminnaamruimte",
-      "label": {
-        "nl": "NaamInNaamruimte"
-      },
-      "sort": "NaamInNaamruimte",
-      "description": {
-        "nl": "Naam met vermelding van een naamruimte."
-      },
-      "usage": {
-        "nl": "Datatype is typisch een URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>."
-      },
-      "parents": [],
-      "rawTags": {
-        "label-nl": "NaamInNaamruimte",
-        "uri": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
-        "ap-definition-nl": "Naam met vermelding van een naamruimte.",
-        "ap-usageNote-nl": "Datatype is typisch een URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>."
-      },
-      "properties": []
-    },
-    {
       "uri": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
       "name": "Moment",
       "label": {
@@ -4327,8 +4478,8 @@
           "label": "Dekking",
           "name": "Dekking",
           "package": "DublinCore",
-          "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
-          "scoped_uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+          "uri": "http://purl.org/dc/elements/1.1/coverage",
+          "scoped_uri": "#Dekking"
         }
       ],
       "rawTags": {
@@ -4492,13 +4643,13 @@
           "range": [
             {
               "range_label": "Domeinobject",
-              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+              "range_uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
-              "range_puri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+              "range_uri": "#Domeinobject",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
               "range_label": {
                 "nl": "Domeinobject"
               }
@@ -4668,16 +4819,16 @@
           ],
           "range": [
             {
-              "range_label": "GeneriekeNaam",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+              "range_label": "Literal",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GeneriekeNaam",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "GeneriekeNaam"
+                "nl": "Literal"
               }
             }
           ],
@@ -4988,7 +5139,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -5049,7 +5200,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+              "range_uri": "#Opmeting",
               "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
               "range_label": {
                 "nl": "Opmeting"
@@ -5172,8 +5323,8 @@
           "label": "Dekking",
           "name": "Dekking",
           "package": "DublinCore",
-          "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
-          "scoped_uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking"
+          "uri": "http://purl.org/dc/elements/1.1/coverage",
+          "scoped_uri": "#Dekking"
         }
       ],
       "rawTags": {
@@ -5181,6 +5332,166 @@
         "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet dit datatype gesubstitueerd worden door klassen of datatypes zoals Geometrie, GeografischeNaam, Adres etc. OPMERKING: Meer info over deze klassen/datatypes in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/\">OSLO Generiek - basis</a>.",
         "label-nl": "Locatie",
         "uri": "http://www.w3.org/ns/prov#Location"
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+      "name": "Opmeting",
+      "label": {
+        "nl": "Opmeting"
+      },
+      "sort": "Opmeting",
+      "description": {
+        "nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "label-nl": "Opmeting",
+        "ap-definition-nl": "Het bepalen van de precieze omvang van iets door het te meten."
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+          "name": "opnamedatum",
+          "sort": "opnamedatum",
+          "label": {
+            "nl": "opnamedatum"
+          },
+          "description": {
+            "nl": "Datum waarop de Opmeting plaatsvond."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "opnamedatum",
+            "definition-nl": "Datum waarop de Opmeting plaatsvond."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "name": "uitgevoerddoor",
+          "sort": "uitgevoerdDoor",
+          "label": {
+            "nl": "uitgevoerdDoor"
+          },
+          "description": {
+            "nl": "Agent die de Opmeting heeft uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "uitgevoerdDoor",
+            "definition-nl": "Agent die de Opmeting heeft uitgevoerd.",
+            "name": "Opmeting.uitgevoerdDoor"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "name": "methode",
+          "sort": "methode",
+          "label": {
+            "nl": "methode"
+          },
+          "description": {
+            "nl": "Aard van de gebruikte methode."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Opmeting",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Opmetingmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Opmetingmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Opmetingmethode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "methode",
+            "name": "Opmeting.methode",
+            "definition-nl": "Aard van de gebruikte methode."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+      "name": "Dekking",
+      "label": {
+        "nl": "Dekking"
+      },
+      "sort": "Dekking",
+      "description": {
+        "nl": "Gebied of periode waarop de data betrekking heeft"
+      },
+      "usage": {
+        "nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
+      },
+      "parents": [],
+      "rawTags": {
+        "definition-nl": "Gebied of periode waarop de data betrekking heeft",
+        "label-nl": "Dekking",
+        "package": "OSLO-SensorenEnBemonstering",
+        "usageNote-nl": "Voorbeelden van een gebied: een jurisdictie of adminstratieve eenheid of een plaatsnaam of coördinaten. Voorbeelden van een periode: een benoemd tijdperk of datum of datumbereik. OPMERKING: Te substitueren door de klasse of het datatype dat van toepassing, bv Locatie in het geval van een gebied en Periode voor een tijdsaanduiding."
       },
       "properties": []
     }
