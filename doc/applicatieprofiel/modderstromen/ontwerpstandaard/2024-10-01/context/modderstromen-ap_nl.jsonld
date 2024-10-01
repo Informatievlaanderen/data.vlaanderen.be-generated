@@ -1,0 +1,329 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.bemonsterdObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.herkomst": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "BodemKenmerktype": "http://fixme.com#BodemKenmerktype",
+    "Deployment": "http://www.w3.org/ns/ssn/Deployment",
+    "Deployment.ingezetOpPlatform": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+      "@type": "@id"
+    },
+    "Deployment.ingezetSysteem": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/deployedSystem",
+      "@type": "@id"
+    },
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "Domeinobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ErosiebestrijdingDeployment": "http://fixme.com#ErosiebestrijdingDeployment",
+    "Erosiebestrijdingsmaatregel": "http://fixme.com#Erosiebestrijdingsmaatregel",
+    "Erosiebestrijdingsmaatregel.aanvoerzone": {
+      "@id": "http://fixme.com#aanvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.afvoerzone": {
+      "@id": "http://fixme.com#afvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.beschermdeZone": {
+      "@id": "http://fixme.com#beschermdeZone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.eigenaar": {
+      "@container": "@set",
+      "@id": "http://fixme.com#eigenaar",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.locatie": {
+      "@id": "http://fixme.com#location",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.onderhoud": {
+      "@container": "@set",
+      "@id": "http://fixme.com#onderhoud",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "http://fixme.com#verantwoordelijke",
+      "@type": "@id"
+    },
+    "Erosiepoel": "http://fixme.com#Erosiepoel",
+    "Erosiepoel.dimensie": {
+      "@id": "http://fixme.com#dimensie",
+      "@type": "@id"
+    },
+    "Erosiepoel.maxVolume": {
+      "@id": "http://fixme.com#maxVolume",
+      "@type": "@id"
+    },
+    "Erosiepoel.onderhoud": {
+      "@id": "http://fixme.com#^onderhoud",
+      "@type": "@id"
+    },
+    "ErosiepoelDeployment": "http://fixme.com#ErosiepoelDeployment",
+    "ErosiepoelDeployment.erosiepoelonderdeel": {
+      "@id": "http://fixme.com#erosiepoelonderdeel",
+      "@type": "@id"
+    },
+    "ErosiepoelKenmerktype": "http://fixme.com#ErosiepoelKenmerktype",
+    "Erosiepoelobservatie": "http://fixme.com#Erosiepoelobservatie",
+    "Erosiepoelobservatie.geobserveerdKenmerk": {
+      "@id": "http://fixme.com#geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Erosiepoelonderdeel": "http://fixme.com#Erosiepoelonderdeel",
+    "Erosiepoelonderhoud": "http://fixme.com#Erosiepoelonderhoud",
+    "Erosiepoelonderhoud.sedimentvolumeNa": {
+      "@id": "http://fixme.com#sedimentvolumeNa",
+      "@type": "@id"
+    },
+    "Erosiepoelonderhoud.sedimentvolumeVoor": {
+      "@id": "http://fixme.com#sedimentvolumeVoor",
+      "@type": "@id"
+    },
+    "Gebeurtenis": "https://schema.org/Event",
+    "Gebeurtenis.begindatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Gebeurtenis.begintijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Gebeurtenis.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Gebeurtenis.duur": {
+      "@id": "https://schema.org/duration",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Gebeurtenis.einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Gebeurtenis.eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Gebeurtenis.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Gebeurtenis.tijdschema": {
+      "@container": "@set",
+      "@id": "https://schema.org/eventSchedule",
+      "@type": "@id"
+    },
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "@id"
+    },
+    "Geometrie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "Graszone": "http://fixme.com#Graszone",
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Kenmerktype.isGeobserveerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "@id"
+    },
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Object.waardeverschaffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "@id"
+    },
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Onderhoud": "http://fixme.com#Onderhoud",
+    "Onderhoud.gedaanDoor": {
+      "@id": "http://fixme.com#gedaan door",
+      "@type": "@id"
+    },
+    "Onderhoud.uitgevoerdeTaken": {
+      "@container": "@set",
+      "@id": "http://fixme.com#uitgevoerde taken",
+      "@type": "@id"
+    },
+    "Onderhoudstaak": "http://fixme.com#Onderhoudstaak",
+    "Platform": "https://www.w3.org/ns/sosa/Platform",
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "RuimtelijkeEenheid.dimensie": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#dimensie",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.geldigheidsperiode": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#geldigheidsperiode",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.geometrie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.landgebruik": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#landgebruik",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.niveau": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#niveau",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "RuimtelijkeEenheid.oppervlakte": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.type": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.type",
+      "@type": "@id"
+    },
+    "SedimentvolumeObservatie": "http://fixme.com#SedimentvolumeObservatie",
+    "SedimentvolumeObservatie.geobserveerdKenmerk": {
+      "@id": "http://fixme.com#geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Sensor.observeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Zone": "http://fixme.com#Zone",
+    "Zone.eigenaar": {
+      "@container": "@set",
+      "@id": "http://fixme.com#eigenaar",
+      "@type": "@id"
+    },
+    "Zone.locatie": {
+      "@id": "http://fixme.com#locatie",
+      "@type": "@id"
+    },
+    "Zone.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "http://fixme.com#verantwoordelijke",
+      "@type": "@id"
+    }
+  }
+}
