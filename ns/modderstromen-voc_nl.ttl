@@ -1,0 +1,230 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/ns/ssn/Deployment> a rdfs:Class;
+  rdfs:label "Deployment"@nl .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#BodemKenmerktype> a owl:Class;
+  rdfs:label "BodemKenmerktype"@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Graszone> a owl:Class;
+  rdfs:label "Graszone"@nl;
+  rdfs:comment "Een zone met gras om bodemerosie te bestrijden."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Onderhoudstaak> a owl:Class;
+  rdfs:label "Onderhoudstaak"@nl;
+  rdfs:comment "Een taak dat deel uitmaakt van het onderhoud."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#aanvoerzone> a owl:ObjectProperty;
+  rdfs:label "aanvoerzone"@nl;
+  rdfs:comment "De zone waarvan water en sediment aangevoerd wordt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#Zone> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#afvoerzone> a owl:ObjectProperty;
+  rdfs:label "afvoerzone"@nl;
+  rdfs:comment "De zone waarnaar overtollig water en sediment afgevoerd wordt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#Zone> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#beschermdeZone> a owl:ObjectProperty;
+  rdfs:label "beschermde zone"@nl;
+  rdfs:comment "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#Zone> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#dimensie> a owl:ObjectProperty;
+  rdfs:label "dimensie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "http://purl.org/dc/elements/1.1/format"@nl;
+  rdfs:comment "De dimensie van de Erosiepoel."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#erosiepoelonderdeel> a owl:ObjectProperty;
+  rdfs:label "erosiepoelonderdeel"@nl;
+  rdfs:comment "Een onderdeel van een erosiepoel, zoals ingang en uitgang."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#ErosiepoelDeployment>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelonderdeel> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is altijd het sedimentvolume."@nl;
+  rdfs:comment "Het kenmerk dat geobserveerd wordt."@nl,
+    "Het kenmerk van de Erosiepoel dat geobserveerd wordt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#SedimentvolumeObservatie>,
+    <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelobservatie>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#ErosiepoelKenmerktype> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#maxVolume> a owl:ObjectProperty;
+  rdfs:label "maxVolume"@nl;
+  rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#onderhoud> a owl:ObjectProperty;
+  rdfs:label "onderhoud"@nl;
+  rdfs:comment "De onderhouden die gebeurd zijn voor een Erosiebestrijding."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#Onderhoud> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#sedimentvolumeNa> a owl:ObjectProperty;
+  rdfs:label "sedimentvolumeNa"@nl;
+  rdfs:comment "Het sedimentvolume van een erosiepoel na het onderhoud."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelonderhoud>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#SedimentvolumeObservatie> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#sedimentvolumeVoor> a owl:ObjectProperty;
+  rdfs:label "sedimentvolumeVoor"@nl;
+  rdfs:comment "Het sedimentvolume van een erosiepoel voor het onderhoud."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelonderhoud>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range <https://test.data.vlaanderen.be/nsl/modderstromen#SedimentvolumeObservatie> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#verantwoordelijke> a owl:ObjectProperty;
+  rdfs:label "verantwoordelijke"@nl;
+  rdfs:comment "De verantwoordelijke van een Erosiebestrijding."@nl,
+    "De verantwoordelijke van een Zone."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel>,
+    <https://test.data.vlaanderen.be/nsl/modderstromen#Zone>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:range dc:Agent .
+
+crm:P14_carried_out_by a rdf:Property;
+  rdfs:label "uitvoerder"@nl .
+
+crm:P52_has_current_owner a rdf:Property;
+  rdfs:label "eigenaar"@nl .
+
+prov:atLocation a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#ErosiebestrijdingsmaatregelDeployment> a owl:Class;
+  rdfs:label "ErosiebestrijdingsmaatregelDeployment"@nl;
+  rdfs:comment "Een deployment op een Erosiebestrijdingsmaatregel."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#ErosiepoelDeployment> a owl:Class;
+  rdfs:label "ErosiepoelDeployment"@nl;
+  rdfs:comment "Een Deployment op een erosiepoel."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/nsl/modderstromen#ErosiebestrijdingsmaatregelDeployment> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#ErosiepoelKenmerktype> a owl:Class;
+  rdfs:label "ErosiepoelKenmerktype"@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelonderdeel> a owl:Class;
+  rdfs:label "Erosiepoelonderdeel"@nl;
+  rdfs:comment "Een onderdeel van een erosiepoel, zoals ingang en uitgang."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoel> a owl:Class;
+  rdfs:label "Erosiepoel"@nl;
+  rdfs:comment "Erosiepoelen vangen afstromend (modder)water op en bufferen het tijdelijk zodat de meegevoerde modder kan bezinken. In een aarden dam met erosiepoel wordt water niet permanent gestockeerd. Bij een volgende regenbui moet er immers terug water kunnen worden opgevangen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelobservatie> a owl:Class;
+  rdfs:label "Erosiepoelobservatie"@nl;
+  rdfs:comment "Een observatie van (een deel van) een Erosiepoel."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelonderhoud> a owl:Class;
+  rdfs:label "Erosiepoelonderhoud"@nl;
+  rdfs:comment "Een onderhoud van een erosiepoel."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/nsl/modderstromen#Onderhoud> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Onderhoud> a owl:Class;
+  rdfs:label "Onderhoud"@nl;
+  rdfs:comment "Een onderhoud van een Erosiebestrijdingsmaatregel."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf schemas:Event .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#SedimentvolumeObservatie> a owl:Class;
+  rdfs:label "SedimentvolumeObservatie"@nl;
+  rdfs:comment "De observatie van het sedimentvolume."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/nsl/modderstromen#Erosiepoelobservatie> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Zone> a owl:Class;
+  rdfs:label "Zone"@nl;
+  rdfs:comment "Een gebied dat aan een Erosiebestrijdingsmaatregel ligt. Dit kan bijvoorbeeld het gebied zijn dat sediment en water aanvoert."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf prov:Location,
+    <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen#Erosiebestrijdingsmaatregel> a owl:Class;
+  rdfs:label "Erosiebestrijdingsmaatregel"@nl;
+  rdfs:comment "Werken of natuurlijke elementen die bodemerosie bestrijden, zoals erosiepoelen en graszones."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/nsl/modderstromen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://test.data.vlaanderen.be/nsl/modderstromen> a owl:Ontology;
+  rdfs:label "modderstromen-voc"@en,
+    "modderstromen-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://www.w3.org/ns/ssn/Deployment>,
+    prov:atLocation,
+    crm:P52_has_current_owner,
+    crm:P14_carried_out_by;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
