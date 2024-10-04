@@ -1,0 +1,315 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Activiteit": "http://www.w3.org/ns/prov#Activity",
+    "Activiteit.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Activiteit.periode": {
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": "@id"
+    },
+    "Activiteit.resultaat": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/generiek#resultaat",
+      "@type": "@id"
+    },
+    "Activiteit.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Activiteit.uitvoerder": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+      "@type": "@id"
+    },
+    "ActiviteitType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.bemonsterdObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "@id"
+    },
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name"
+    },
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "@id"
+    },
+    "BodemKenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BodemKenmerktype.isGeobserveerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "@id"
+    },
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Deployment": "http://www.w3.org/ns/ssn/Deployment",
+    "Deployment.ingezetOpPlatform": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/deployedOnPlatform",
+      "@type": "@id"
+    },
+    "Deployment.ingezetSysteem": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/deployedSystem",
+      "@type": "@id"
+    },
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "Domeinobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Eenheid": "http://qudt.org/2.1/schema/qudt/Unit",
+    "Erosiebestrijdingsmaatregel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel",
+    "Erosiebestrijdingsmaatregel.aanvoerzone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#aanvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.afvoerzone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.beschermdeZone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#beschermdeZone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.eigenaar": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.onderhoud": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke",
+      "@type": "@id"
+    },
+    "ErosiebestrijdingsmaatregelDeployment": "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiebestrijdingsmaatregelDeployment",
+    "Erosiepoel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel",
+    "Erosiepoel.dimensie": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#dimensie",
+      "@type": "@id"
+    },
+    "Erosiepoel.maxVolume": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume",
+      "@type": "@id"
+    },
+    "Erosiepoel.onderhoud": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
+      "@type": "@id"
+    },
+    "ErosiepoelDeployment": "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiepoelDeployment",
+    "ErosiepoelDeployment.erosiepoelonderdeel": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#erosiepoelonderdeel",
+      "@type": "@id"
+    },
+    "ErosiepoelKenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Erosiepoelobservatie": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelobservatie",
+    "Erosiepoelobservatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Erosiepoelonderdeel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel",
+    "Erosiepoelonderhoud": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud",
+    "Erosiepoelonderhoud.sedimentvolumeNa": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeNa",
+      "@type": "@id"
+    },
+    "Erosiepoelonderhoud.sedimentvolumeVoor": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeVoor",
+      "@type": "@id"
+    },
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "@id"
+    },
+    "Geometrie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "Graszone": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "KwantitatieveWaarde": "https://qudt.org/schema/qudt/QuantityValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://qudt.org/schema/qudt/hasUnit",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://qudt.org/schema/qudt/value"
+    },
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Object.waardeverschaffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "@id"
+    },
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Onderhoud": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
+    "Onderhoud.uitgevoerdeTaken": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#uitgevoerde taken",
+      "@type": "@id"
+    },
+    "Onderhoudstaak": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Platform": "https://www.w3.org/ns/sosa/Platform",
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "RuimtelijkeEenheid.dimensie": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#dimensie",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.geldigheidsperiode": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#geldigheidsperiode",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.geometrie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.landgebruik": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#landgebruik",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.niveau": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#niveau",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "RuimtelijkeEenheid.oppervlakte": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte",
+      "@type": "@id"
+    },
+    "RuimtelijkeEenheid.type": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.type",
+      "@type": "@id"
+    },
+    "SedimentvolumeObservatie": "https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie",
+    "SedimentvolumeObservatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Sensor.observeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Zone": "https://test.data.vlaanderen.be/ns/bodemerosie#Zone",
+    "Zone.eigenaar": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
+      "@type": "@id"
+    },
+    "Zone.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Zone.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "Zone.verantwoordelijke",
+      "@type": "@id"
+    }
+  }
+}
