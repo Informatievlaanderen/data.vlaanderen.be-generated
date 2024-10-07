@@ -1,0 +1,264 @@
+{
+  "@context": {
+    "Aanbod": "http://fixme.com#Aanbod",
+    "Aanbod.activiteit": {
+      "@container": "@set",
+      "@id": "http://fixme.com#activiteit",
+      "@type": "@id"
+    },
+    "Aanbod.beleidsdomein": {
+      "@id": "http://fixme.com#beleidsdomein",
+      "@type": "@id"
+    },
+    "Aanbod.beschrijving": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Aanbod.categorie": {
+      "@id": "http://fixme.com#categorie",
+      "@type": "@id"
+    },
+    "Aanbod.intake": {
+      "@id": "http://fixme.com#intake",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Aanbod.maximumAantalDeelnemers": {
+      "@id": "http://fixme.com#maximum aantal deelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Aanbod.medium": {
+      "@id": "http://fixme.com#medium",
+      "@type": "@id"
+    },
+    "Aanbod.naam": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Aanbod.subcategorie": {
+      "@id": "http://fixme.com#subcategorie",
+      "@type": "@id"
+    },
+    "Aanbod.taal": {
+      "@container": "@set",
+      "@id": "https://schema.org/inLanguage"
+    },
+    "Activiteit": "http://www.w3.org/ns/prov#Activity",
+    "Activiteit.aanbod": {
+      "@id": "http://fixme.com#aanbod",
+      "@type": "@id"
+    },
+    "Activiteit.aantalAanmeldingen": {
+      "@id": "http://fixme.com#aantalAanmeldingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.aantalInschrijvingen": {
+      "@id": "http://fixme.com#aantalInschrijvingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.annulatieReden": {
+      "@id": "http://fixme.com#annulatieReden",
+      "@type": "@id"
+    },
+    "Activiteit.doelgroep": {
+      "@container": "@set",
+      "@id": "http://fixme.com#doelgroep",
+      "@type": "@id"
+    },
+    "Activiteit.gerealiseerdDoor": {
+      "@container": "@set",
+      "@id": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+      "@type": "@id"
+    },
+    "Activiteit.infrastructuur": {
+      "@container": "@set",
+      "@id": "http://fixme.com#Activiteit.infrastructuur",
+      "@type": "@id"
+    },
+    "Activiteit.naam": {
+      "@container": "@set",
+      "@id": "http://fixme.com#name",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Activiteit.status": {
+      "@container": "@set",
+      "@id": "http://fixme.com#Activiteit.status",
+      "@type": "@id"
+    },
+    "Activiteit.subActiviteit": {
+      "@container": "@set",
+      "@id": "http://fixme.com#subActiviteit",
+      "@type": "@id"
+    },
+    "Activiteit.superActiviteit": {
+      "@id": "http://fixme.com#superActiviteit",
+      "@type": "@id"
+    },
+    "Activiteit.tijdschema": {
+      "@id": "http://fixme.com#tijdschema",
+      "@type": "@id"
+    },
+    "Activiteit.vervangenDoor": {
+      "@id": "http://fixme.com#vervangenDoor",
+      "@type": "@id"
+    },
+    "Activiteit.vervangt": {
+      "@id": "http://fixme.com#vervangt",
+      "@type": "@id"
+    },
+    "ActiviteitStatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "AnnulatieReden": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beleidsdomein": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Categorie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Doelgroep": "http://fixme.com#Doelgroep",
+    "Doelgroep.kenmerk": {
+      "@container": "@set",
+      "@id": "http://fixme.com#kenmerk",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk": "http://fixme.com#DoelgroepKenmerk",
+    "DoelgroepKenmerk.deelVan": {
+      "@container": "@set",
+      "@id": "http://fixme.com#deelVan",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.kenmerktype": {
+      "@id": "http://fixme.com#kenmerktype",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.waarde": {
+      "@id": "http://fixme.com#waarde",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Financiering": "http://fixme.com#Financiering",
+    "Financiering.bedrag": {
+      "@id": "http://fixme.com#bedrag",
+      "@type": "@id"
+    },
+    "Financiering.financieringstype": {
+      "@id": "http://fixme.com#financieringstype",
+      "@type": "@id"
+    },
+    "Financiering.gefinancierdDoor": {
+      "@id": "http://fixme.com#GefinancierdDoor",
+      "@type": "@id"
+    },
+    "Financiering.karakter": {
+      "@id": "http://fixme.com#karakter",
+      "@type": "@id"
+    },
+    "Financiering.uitbetalingsdatum": {
+      "@id": "http://fixme.com#uitbetalingsDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Financieringsbron": "http://fixme.com#Financieringsbron",
+    "Financieringsbron.beleidsdomein": {
+      "@id": "http://fixme.com#beleidsdomein",
+      "@type": "@id"
+    },
+    "Financieringsbron.financiert": {
+      "@container": "@set",
+      "@id": "http://fixme.com#financiert",
+      "@type": "@id"
+    },
+    "Financieringsbron.niveau": {
+      "@id": "http://fixme.com#niveau",
+      "@type": "@id"
+    },
+    "Financieringskarakter": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Financieringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Formaat": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GebruikteVte": "http://fixme.com#GebruikteVTE",
+    "GebruikteVte.aantal": {
+      "@id": "http://fixme.com#aantal",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "GebruikteVte.vteType": {
+      "@id": "http://fixme.com#vteType",
+      "@type": "@id"
+    },
+    "GevangenisVestiging": "http://fixme.com#GevangenisVestiging",
+    "GevangenisVestiging.capaciteit": {
+      "@id": "http://fixme.com#capaciteit",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GevangenisVestiging.effectievePopulatie": {
+      "@id": "http://fixme.com#effectieve populatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GroepsAanbod": "http://fixme.com#GroepsAanbod",
+    "GroepsAanbod.minimumAantalDeelnemers": {
+      "@id": "http://fixme.com#minimum aantal deelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IndividueelAanbod": "http://fixme.com#IndividueelAanbod",
+    "Infrastructuur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+    "Infrastructuur.beschrijving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschrijving",
+      "@type": "@id"
+    },
+    "Infrastructuur.capaciteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit",
+      "@type": "@id"
+    },
+    "Infrastructuur.naam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Infrastructuur.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+      "@type": "@id"
+    },
+    "Infrastructuurtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Niveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Organisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator",
+    "Realisatie": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
+    "Realisatie.activiteit": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.activiteit",
+      "@type": "@id"
+    },
+    "Realisatie.gebruiktObject": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.gebruiktObject"
+    },
+    "Realisatie.realisator": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.realisator",
+      "@type": "@id"
+    },
+    "Realisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator",
+    "Realisator.alternatieveNaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.beleidsdomein": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#beleidsdomein",
+      "@type": "@id"
+    },
+    "Realisator.naam": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.organisatievorm": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.organisatievorm",
+      "@type": "@id"
+    },
+    "Realisator.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Sessie": "http://fixme.com#Sessie",
+    "Sessiereeks": "http://fixme.com#Sessiereeks",
+    "Subcategorie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Uitvoerder": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder",
+    "VteType": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
+}
