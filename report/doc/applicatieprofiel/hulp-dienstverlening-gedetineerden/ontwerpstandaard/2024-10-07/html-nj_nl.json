@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/910fcc6c1dfdba6ac9b35ecaf088f7b471efd158",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/910fcc6c1dfdba6ac9b35ecaf088f7b471efd158/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/c5e0598115899395ca48649ec6a3589af6abc369",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/c5e0598115899395ca48649ec6a3589af6abc369/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -87,7 +87,7 @@
             "nl": "medium"
           },
           "description": {
-            "nl": "De manier waarop de activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+            "nl": "De manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
           },
           "usage": {},
           "domain": [
@@ -117,8 +117,8 @@
             "ap-label-nl": "medium",
             "label-nl": "medium",
             "name": "medium",
-            "definition-nl": "De manier waarop de activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride.",
-            "ap-definition-nl": "De manier waarop de activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+            "definition-nl": "De manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride.",
+            "ap-definition-nl": "De manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
           }
         },
         {
@@ -174,7 +174,7 @@
             "nl": "intake"
           },
           "description": {
-            "nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Activiteit"
+            "nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Aanbod"
           },
           "usage": {},
           "domain": [
@@ -203,8 +203,47 @@
           "rawTags": {
             "label-nl": "intake",
             "ap-label-nl": "intake",
-            "definition-nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Activiteit",
-            "ap-definition-nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Activiteit"
+            "definition-nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Aanbod",
+            "ap-definition-nl": "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Aanbod"
+          }
+        },
+        {
+          "uri": "http://fixme.com#doelgroep",
+          "name": "doelgroep",
+          "sort": "doelgroep",
+          "label": {
+            "nl": "doelgroep"
+          },
+          "description": {
+            "nl": "De groep van personen voor wie de Activiteit bedoeld is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "http://fixme.com#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Doelgroep",
+              "range_uri": "http://fixme.com#Doelgroep"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Doelgroep",
+              "range_puri": "http://fixme.com#Doelgroep",
+              "range_label": {
+                "nl": "Doelgroep"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De groep van personen voor wie de Activiteit bedoeld is.",
+            "label-nl": "doelgroep"
           }
         },
         {
@@ -256,7 +295,7 @@
             "nl": "beleidsdomein"
           },
           "description": {
-            "nl": "Een domein waartoe de activiteit behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
+            "nl": "Een domein waartoe het Aanbod behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
           },
           "usage": {},
           "domain": [
@@ -286,8 +325,8 @@
             "label-nl": "beleidsdomein",
             "ap-label-nl": "beleidsdomein",
             "name": "beleidsdomein",
-            "definition-nl": "Een domein waartoe de activiteit behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs.",
-            "ap-definition-nl": "Een domein waartoe de activiteit behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
+            "definition-nl": "Een domein waartoe het Aanbod behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs.",
+            "ap-definition-nl": "Een domein waartoe het Aanbod behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
           }
         },
         {
@@ -458,6 +497,52 @@
             "ap-definition-nl": "Een tekstuele beschrijving van de Activiteit.",
             "uri": "http://purl.org/dc/terms/description"
           }
+        },
+        {
+          "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
+          "label": {
+            "nl": "gerealiseerd door"
+          },
+          "description": {
+            "nl": "De Activiteit wordt uitgevoerd door een Realisator."
+          },
+          "usage": {
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "http://fixme.com#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator",
+              "range_label": {
+                "nl": "Realisator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+            "usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "name": "Activiteit.gerealiseerdDoor",
+            "definition-nl": "De Activiteit wordt uitgevoerd door een Realisator.",
+            "ap-definition-nl": "De Activiteit wordt uitgevoerd door een Realisator.",
+            "ap-label-nl": "gerealiseerd door",
+            "label-nl": "gerealiseerd door"
+          }
         }
       ]
     },
@@ -469,13 +554,13 @@
       },
       "sort": "Doelgroep",
       "description": {
-        "nl": "Het bedoelde of verwachte publiek van een Activiteit."
+        "nl": "Bedoelde of verwachte publiek van een Aanbod."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "Doelgroep",
-        "definition-nl": "Het bedoelde of verwachte publiek van een Activiteit."
+        "definition-nl": "Bedoelde of verwachte publiek van een Aanbod."
       },
       "properties": [
         {
@@ -486,7 +571,7 @@
             "nl": "kenmerk"
           },
           "description": {
-            "nl": "Een eigenschap die iedereen in de doelgroep heeft."
+            "nl": "Eigenschap die iedereen in de Doelgroep heeft."
           },
           "usage": {},
           "domain": [
@@ -514,7 +599,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "kenmerk",
-            "definition-nl": "Een eigenschap die iedereen in de doelgroep heeft."
+            "definition-nl": "Eigenschap die iedereen in de Doelgroep heeft."
           }
         }
       ]
@@ -527,13 +612,13 @@
       },
       "sort": "DoelgroepKenmerk",
       "description": {
-        "nl": "Een eigenschap die iedereen in de Doelgroep heeft."
+        "nl": "Eigenschap die iedereen in de Doelgroep heeft."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "DoelgroepKenmerk",
-        "definition-nl": "Een eigenschap die iedereen in de Doelgroep heeft."
+        "definition-nl": "Eigenschap die iedereen in de Doelgroep heeft."
       },
       "properties": [
         {
@@ -669,7 +754,7 @@
       },
       "sort": "Financiering",
       "description": {
-        "nl": "De verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een project, activiteit of onderneming."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
       },
       "usage": {
         "nl": "De Realisator kan hier bijvoorbeeld de aanbodverstrekker of uitvoerder van de activiteit zijn."
@@ -677,8 +762,8 @@
       "parents": [],
       "rawTags": {
         "label-nl": "Financiering",
-        "definition-nl": "De verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een project, activiteit of onderneming.",
-        "ap-definition-nl": "De verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een project, activiteit of onderneming.",
+        "definition-nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een project, activiteit of onderneming.",
+        "ap-definition-nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod.",
         "ap-label-nl": "Financiering",
         "name": "Financiering",
         "usageNote-nl": "De Realisator kan hier bijvoorbeeld de aanbodverstrekker of uitvoerder van de activiteit zijn."
@@ -900,7 +985,7 @@
       },
       "sort": "Financieringsbron",
       "description": {
-        "nl": "Een Agent die financiering voorziet."
+        "nl": "Een Person of Organstie die financiering voorziet."
       },
       "usage": {
         "nl": "Dit kan bijvoorbeeld een organisatie, onderneming, persoon of overheidsinstantie zijn."
@@ -917,7 +1002,7 @@
       "rawTags": {
         "label-nl": "Financieringsbron",
         "definition-nl": "Een Agent die financiering voorziet.",
-        "ap-definition-nl": "Een Agent die financiering voorziet.",
+        "ap-definition-nl": "Een Person of Organstie die financiering voorziet.",
         "ap-label-nl": "Financieringsbron",
         "name": "Financieringsbron",
         "usageNote-nl": "Dit kan bijvoorbeeld een organisatie, onderneming, persoon of overheidsinstantie zijn."
@@ -1057,13 +1142,13 @@
       },
       "sort": "GebruikteVTE",
       "description": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "GebruikteVTE",
-        "definition-nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+        "definition-nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod."
       },
       "properties": [
         {
@@ -1222,48 +1307,6 @@
             "ap-label-nl": "effectieve populatie",
             "name": "effectieve populatie"
           }
-        },
-        {
-          "uri": "http://fixme.com#capaciteit",
-          "name": "capaciteit",
-          "sort": "capaciteit",
-          "label": {
-            "nl": "capaciteit"
-          },
-          "description": {
-            "nl": "Het maximaal aantal gedetineerden in een gevangenis."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "GevangenisVestiging",
-              "uri": "http://fixme.com#GevangenisVestiging"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "capaciteit",
-            "definition-nl": "Het maximaal aantal gedetineerden in een gevangenis.",
-            "ap-definition-nl": "Het maximaal aantal gedetineerden in een gevangenis.",
-            "ap-label-nl": "capaciteit",
-            "name": "capaciteit"
-          }
         }
       ]
     },
@@ -1275,7 +1318,7 @@
       },
       "sort": "GroepsAanbod",
       "description": {
-        "nl": "Een Activiteit waaraan meerdere personen kunnen deelnemen."
+        "nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen."
       },
       "usage": {},
       "parents": [
@@ -1289,8 +1332,8 @@
       ],
       "rawTags": {
         "label-nl": "GroepsAanbod",
-        "definition-nl": "Een Activiteit waaraan meerdere personen kunnen deelnemen.",
-        "ap-definition-nl": "Een Activiteit waaraan meerdere personen kunnen deelnemen.",
+        "definition-nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen.",
+        "ap-definition-nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen.",
         "ap-label-nl": "GroepsAanbod",
         "name": "GroepsAanbod"
       },
@@ -1308,7 +1351,7 @@
           "usage": {},
           "domain": [
             {
-              "EA-Name": "GroepsActiviteit",
+              "EA-Name": "GroepsAanbod",
               "uri": "http://fixme.com#GroepsAanbod"
             }
           ],
@@ -1347,7 +1390,7 @@
       },
       "sort": "IndividueelAanbod",
       "description": {
-        "nl": "Een begeleide Activiteit waaraan slechts één gedetineerde kan deelnemen."
+        "nl": "Een begeleid Aanbod waaraan slechts één gedetineerde kan deelnemen."
       },
       "usage": {},
       "parents": [
@@ -1361,8 +1404,8 @@
       ],
       "rawTags": {
         "label-nl": "IndividueelAanbod",
-        "definition-nl": "Een begeleide Activiteit waaraan slechts één gedetineerde kan deelnemen.",
-        "ap-definition-nl": "Een begeleide Activiteit waaraan slechts één gedetineerde kan deelnemen.",
+        "definition-nl": "Een begeleid Aanbod waaraan slechts één gedetineerde kan deelnemen.",
+        "ap-definition-nl": "Een begeleid Aanbod waaraan slechts één gedetineerde kan deelnemen.",
         "ap-label-nl": "IndividueelAanbod",
         "name": "IndividueelAanbod"
       },
@@ -1376,7 +1419,7 @@
       },
       "sort": "Sessie",
       "description": {
-        "nl": "Een enkele sessie van een Activiteit."
+        "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
       },
       "usage": {},
       "parents": [
@@ -1390,7 +1433,7 @@
       ],
       "rawTags": {
         "label-nl": "Sessie",
-        "definition-nl": "Een enkele sessie van een Activiteit."
+        "definition-nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
       },
       "properties": []
     },
@@ -1402,7 +1445,7 @@
       },
       "sort": "Sessiereeks",
       "description": {
-        "nl": "Het concrete plaatsvinden van een Activiteit op een bepaald moment of in een bepaalde periode."
+        "nl": "Groep van 1 of meerdere Sessies."
       },
       "usage": {},
       "parents": [
@@ -1416,7 +1459,7 @@
       ],
       "rawTags": {
         "label-nl": "Sessiereeks",
-        "definition-nl": "Het concrete plaatsvinden van een Activiteit op een bepaald moment of in een bepaalde periode."
+        "definition-nl": "Groep van 1 of meerdere Sessies."
       },
       "properties": []
     },
@@ -1428,7 +1471,7 @@
       },
       "sort": "Activiteit",
       "description": {
-        "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen."
+        "nl": "Actie die bewust wordt georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van een specifiek Aanbod."
       },
       "usage": {
         "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden."
@@ -1438,7 +1481,7 @@
         "usageNote-nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden.",
         "definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
         "label-nl": "Activiteit",
-        "ap-definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
+        "ap-definition-nl": "Actie die bewust wordt georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van een specifiek Aanbod.",
         "ap-label-nl": "Activiteit",
         "uri": "http://www.w3.org/ns/prov#Activity"
       },
@@ -1451,9 +1494,11 @@
             "nl": "vervangt"
           },
           "description": {
-            "nl": "De Sessie die deze Sessie vervangt."
+            "nl": "De Activiteit die deze Activiteit vervangt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dit wordt gebruikt wanneer een nieuwe Sessie een geannuleerde Sessie vervangt."
+          },
           "domain": [
             {
               "EA-Name": "Activiteit",
@@ -1478,8 +1523,9 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
+            "usageNote-nl": "Dit wordt gebruikt wanneer een nieuwe Sessie een geannuleerde Sessie vervangt.",
             "label-nl": "vervangt",
-            "definition-nl": "De Sessie die deze Sessie vervangt."
+            "definition-nl": "De Activiteit die deze Activiteit vervangt."
           }
         },
         {
@@ -1492,7 +1538,9 @@
           "description": {
             "nl": "De andere Activiteit die deze Activiteit vervangt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Dit wordt gebruikt wanneer een nieuwe Sessie een geannuleerde Sessie vervangt."
+          },
           "domain": [
             {
               "EA-Name": "Activiteit",
@@ -1518,7 +1566,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "vervangenDoor",
-            "definition-nl": "De andere Activiteit die deze Activiteit vervangt."
+            "definition-nl": "De andere Activiteit die deze Activiteit vervangt.",
+            "usageNote-nl": "Dit wordt gebruikt wanneer een nieuwe Sessie een geannuleerde Sessie vervangt."
           }
         },
         {
@@ -1681,45 +1730,6 @@
           }
         },
         {
-          "uri": "http://fixme.com#doelgroep",
-          "name": "doelgroep",
-          "sort": "doelgroep",
-          "label": {
-            "nl": "doelgroep"
-          },
-          "description": {
-            "nl": "De groep van personen voor wie de Activiteit bedoeld is."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.w3.org/ns/prov#Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Doelgroep",
-              "range_uri": "http://fixme.com#Doelgroep"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Doelgroep",
-              "range_puri": "http://fixme.com#Doelgroep",
-              "range_label": {
-                "nl": "Doelgroep"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "De groep van personen voor wie de Activiteit bedoeld is.",
-            "label-nl": "doelgroep"
-          }
-        },
-        {
           "uri": "http://fixme.com#annulatieReden",
           "name": "annulatieReden",
           "sort": "annulatie reden",
@@ -1727,7 +1737,7 @@
             "nl": "annulatie reden"
           },
           "description": {
-            "nl": "De reden waarom een Activiteit geannuleerd werd."
+            "nl": "Reden waarom een Activiteit geannuleerd werd."
           },
           "usage": {},
           "domain": [
@@ -1755,9 +1765,9 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "annulatie reden",
-            "definition-nl": "De reden waarom een Activiteit geannuleerd werd.",
+            "definition-nl": "Reden waarom een Activiteit geannuleerd werd.",
             "ap-label-nl": "annulatie reden",
-            "ap-definition-nl": "De reden waarom een Activiteit geannuleerd werd."
+            "ap-definition-nl": "Reden waarom een Activiteit geannuleerd werd."
           }
         },
         {
@@ -1768,7 +1778,7 @@
             "nl": "aantal inschrijvingen"
           },
           "description": {
-            "nl": "Het aantal personen dat zich heeft ingeschreven voor een activiteit."
+            "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
           },
           "usage": {
             "nl": "In dit geval zijn de personen de gedetineerden."
@@ -1799,8 +1809,8 @@
           "rawTags": {
             "ap-label-nl": "aantal inschrijvingen",
             "label-nl": "aantal inschrijvingen",
-            "definition-nl": "Het aantal personen dat zich heeft ingeschreven voor een Activiteit.",
-            "ap-definition-nl": "Het aantal personen dat zich heeft ingeschreven voor een activiteit.",
+            "definition-nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
+            "ap-definition-nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
             "usageNote-nl": "In dit geval zijn de personen de gedetineerden."
           }
         },
@@ -1812,7 +1822,7 @@
             "nl": "aantal aanmeldingen"
           },
           "description": {
-            "nl": "Het aantal personen dat zich geeft aangemeld voor een Activiteit."
+            "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit."
           },
           "usage": {
             "nl": "In dit geval zijn de personen de gedetineerden."
@@ -1842,8 +1852,9 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "aantal aanmeldingen",
-            "definition-nl": "Het aantal personen dat zich geeft aangemeld voor een Activiteit.",
-            "usageNote-nl": "In dit geval zijn de personen de gedetineerden."
+            "definition-nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit.",
+            "usageNote-nl": "In dit geval zijn de personen de gedetineerden.",
+            "ap-definition-nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit."
           }
         },
         {
@@ -1893,7 +1904,7 @@
             "nl": "status"
           },
           "description": {
-            "nl": "Geeft de status van de activiteit weer."
+            "nl": "Geeft de status van de Activiteit weer."
           },
           "usage": {
             "nl": "Te gebruiken om zaken te registreren zoals activiteit die gepland is, afgelast is, etc."
@@ -1923,11 +1934,11 @@
           "codelist_uri": "",
           "rawTags": {
             "name": "Activiteit.status",
-            "definition-nl": "Geeft de status van de activiteit weer.",
+            "definition-nl": "Geeft de status van de Activiteit weer.",
             "label-nl": "status",
             "ap-usageNote-nl": "Te gebruiken om zaken te registreren zoals activiteit die gepland is, afgelast is, etc.",
             "ap-label-nl": "status",
-            "ap-definition-nl": "Geeft de status van de activiteit weer."
+            "ap-definition-nl": "Geeft de status van de Activiteit weer."
           }
         },
         {
@@ -1973,52 +1984,6 @@
             "ap-label-nl": "infrastructuur",
             "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat.",
             "usageNote-nl": "Dit is de vestiging van de gevangenis waar de activiteit doorgaat."
-          }
-        },
-        {
-          "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
-          "name": "gerealiseerdDoor",
-          "sort": "gerealiseerd door",
-          "label": {
-            "nl": "gerealiseerd door"
-          },
-          "description": {
-            "nl": "De Activiteit wordt uitgevoerd door een Realisator."
-          },
-          "usage": {
-            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.w3.org/ns/prov#Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
-            "usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-            "name": "Activiteit.gerealiseerdDoor",
-            "definition-nl": "De Activiteit wordt uitgevoerd door een Realisator.",
-            "ap-definition-nl": "De Activiteit wordt uitgevoerd door een Realisator.",
-            "ap-label-nl": "gerealiseerd door",
-            "label-nl": "gerealiseerd door"
           }
         }
       ]
@@ -2220,7 +2185,7 @@
       },
       "sort": "Organisator",
       "description": {
-        "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+        "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
       },
       "usage": {
         "nl": "Dit is de aanbodverstrekker, zoals een Centrum voor Volwassenenonderwijs."
@@ -2237,7 +2202,7 @@
       "rawTags": {
         "definition-nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert.",
         "label-nl": "Organisator",
-        "ap-definition-nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert.",
+        "ap-definition-nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert.",
         "ap-label-nl": "Organisator",
         "usageNote-nl": "Dit is de aanbodverstrekker, zoals een Centrum voor Volwassenenonderwijs."
       },
@@ -2251,14 +2216,14 @@
       },
       "sort": "Realisatie",
       "description": {
-        "nl": "De concrete realisering van een Realisator gekoppeld aan een Activiteit."
+        "nl": "De concrete realisering van een Realisator gekoppeld aan een Aanbod."
       },
       "usage": {
         "nl": "Te gebruiken om aan te duiden welke middelen een Uitvoerder of Organisator bijdraagt aan een Activiteit. Bijvoorbeeld het aantal werkuren van gevangenispersoneel of het aantal fatikken."
       },
       "parents": [],
       "rawTags": {
-        "ap-definition-nl": "De concrete realisering van een Realisator gekoppeld aan een Activiteit.",
+        "ap-definition-nl": "De concrete realisering van een Realisator gekoppeld aan een Aanbod.",
         "ap-label-nl": "Realisatie",
         "definition-nl": "De concrete realisering van een Realisator gekoppeld aan een Activiteit",
         "label-nl": "Realisatie",
@@ -2341,11 +2306,11 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.activiteit",
-          "name": "activiteit",
-          "sort": "Activiteit",
+          "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.aanbod",
+          "name": "aanbod",
+          "sort": "Aanbod",
           "label": {
-            "nl": "Activiteit"
+            "nl": "Aanbod"
           },
           "description": {
             "nl": "Referentie naar verbonden klasse."
@@ -2361,16 +2326,16 @@
           ],
           "range": [
             {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.w3.org/ns/prov#Activity"
+              "range_label": "Aanbod",
+              "range_uri": "http://fixme.com#Aanbod"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.w3.org/ns/prov#Activity",
+              "range_uri": "#Aanbod",
+              "range_puri": "http://fixme.com#Aanbod",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Aanbod"
               }
             }
           ],
@@ -2378,7 +2343,6 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "",
-            "ap-label-nl": "",
             "definition-nl": "",
             "ap-definition-nl": "",
             "usageNote-nl": "",
@@ -2634,7 +2598,7 @@
       },
       "sort": "Uitvoerder",
       "description": {
-        "nl": "Persoon of organisatie die de Activiteit uitvoert of begeleidt."
+        "nl": "Persoon of organisatie die de Aanbod uitvoert of begeleidt."
       },
       "usage": {
         "nl": "Dit is bijvoorbeeld de lesgever."
@@ -2649,7 +2613,7 @@
         }
       ],
       "rawTags": {
-        "ap-definition-nl": "Persoon of organisatie die de Activiteit uitvoert of begeleidt.",
+        "ap-definition-nl": "Persoon of organisatie die de Aanbod uitvoert of begeleidt.",
         "definition-nl": "Persoon of organisatie die de Activiteit uitvoert of begeleidt.",
         "ap-label-nl": "Uitvoerder",
         "label-nl": "Uitvoerder",
