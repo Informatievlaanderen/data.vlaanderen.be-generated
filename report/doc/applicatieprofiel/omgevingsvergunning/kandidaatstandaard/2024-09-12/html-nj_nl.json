@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/3e37736e47b3066db041e5654ff5a03ffd239771",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/3e37736e47b3066db041e5654ff5a03ffd239771/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/85acbc63cb9a53c9c0c5d2424cfec84667fedef6",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/85acbc63cb9a53c9c0c5d2424cfec84667fedef6/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-omgevingsvergunning/",
     "usesVocs": [],
@@ -814,7 +814,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "definition-nl": "Verwijzing naar het ingesteld rechtsmiddel.",
@@ -2348,165 +2348,6 @@
       ]
     },
     {
-      "uri": "http://data.europa.eu/eli/ontology#LegalResource",
-      "name": "Rechtsgrond",
-      "label": {
-        "nl": "Rechtsgrond"
-      },
-      "sort": "Rechtsgrond",
-      "description": {
-        "nl": "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."
-      },
-      "usage": {
-        "nl": "Een rechtsgrond kan zowel een geheel (bvb: wet, besluit) voorstellen als een onderdeel eruit (bvb: artikel)."
-      },
-      "parents": [
-        {
-          "label": "Juridisch Werk",
-          "name": "JuridischWerk",
-          "package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-          "scoped_uri": "#Juridisch Werk"
-        }
-      ],
-      "rawTags": {
-        "ap-definition-nl": "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee).",
-        "ap-usageNote-nl": "Een rechtsgrond kan zowel een geheel (bvb: wet, besluit) voorstellen als een onderdeel eruit (bvb: artikel).",
-        "label-nl": "Rechtsgrond",
-        "uri": "http://data.europa.eu/eli/ontology#LegalResource"
-      },
-      "properties": [
-        {
-          "uri": "http://data.europa.eu/eli/ontology#date_no_longer_in_force",
-          "name": "buitenwerkingtreding",
-          "sort": "buitenwerkingtreding",
-          "label": {
-            "nl": "buitenwerkingtreding"
-          },
-          "description": {
-            "nl": "De laatste dag waarop de regelgeving nog van kracht is."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Rechtsgrond",
-              "uri": "http://data.europa.eu/eli/ontology#LegalResource"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Datum",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Datum"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://data.europa.eu/eli/ontology#date_no_longer_in_force",
-            "label-nl": "datum buitenwerkingtreding",
-            "ap-label-nl": "buitenwerkingtreding",
-            "ap-definition-nl": "De laatste dag waarop de regelgeving nog van kracht is."
-          }
-        },
-        {
-          "uri": "http://data.europa.eu/eli/ontology#first_date_entry_in_force",
-          "name": "inwerkingtreding",
-          "sort": "inwerkingtreding",
-          "label": {
-            "nl": "inwerkingtreding"
-          },
-          "description": {
-            "nl": "De datum waarop de regelgeving van kracht wordt."
-          },
-          "usage": {
-            "nl": "Dit is niet hetzelfde als wanneer de regelgeving toepasbaar (in de praktijk uitvoerbaar) wordt. De toepasbaarheid van de regelgeving kan op of na de inwerkingtreding liggen."
-          },
-          "domain": [
-            {
-              "EA-Name": "Rechtsgrond",
-              "uri": "http://data.europa.eu/eli/ontology#LegalResource"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Date",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Datum",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
-              "range_label": {
-                "nl": "Datum"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://data.europa.eu/eli/ontology#first_date_entry_in_force",
-            "label-nl": "datum inwerkingtreding",
-            "ap-label-nl": "inwerkingtreding",
-            "ap-definition-nl": "De datum waarop de regelgeving van kracht wordt.",
-            "ap-usageNote-nl": "Dit is niet hetzelfde als wanneer de regelgeving toepasbaar (in de praktijk uitvoerbaar) wordt. De toepasbaarheid van de regelgeving kan op of na de inwerkingtreding liggen."
-          }
-        },
-        {
-          "uri": "http://data.europa.eu/eli/ontology#type_document",
-          "name": "typeDocument",
-          "sort": "type document",
-          "label": {
-            "nl": "type document"
-          },
-          "description": {
-            "nl": "Het type van de rechtsgrond."
-          },
-          "usage": {
-            "nl": "Bijvoorbeeld: reglement, wet, voorstel."
-          },
-          "domain": [
-            {
-              "EA-Name": "Rechtsgrond",
-              "uri": "http://data.europa.eu/eli/ontology#LegalResource"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "ResourceType",
-              "range_uri": "http://data.europa.eu/eli/ontology#ResourceType"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://data.europa.eu/eli/ontology#ResourceType",
-              "range_puri": "http://data.europa.eu/eli/ontology#ResourceType",
-              "range_label": {
-                "nl": "ResourceType"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://data.europa.eu/eli/ontology#type_document",
-            "label-nl": "type document",
-            "ap-definition-nl": "Het type van de rechtsgrond.",
-            "ap-usageNote-nl": "Bijvoorbeeld: reglement, wet, voorstel."
-          }
-        }
-      ]
-    },
-    {
       "uri": "http://data.europa.eu/m8g/PublicOrganisation",
       "name": "PubliekeOrganisatie",
       "label": {
@@ -2756,14 +2597,22 @@
       ]
     },
     {
-      "uri": "http://fixme.com#Locatie",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
+      "uri": "http://purl.org/dc/terms/Location",
+      "name": "Locatie",
+      "label": {
+        "nl": "Locatie"
+      },
+      "sort": "Locatie",
+      "description": {
+        "nl": "Generieke aanknopingspunt voor ruimtelijke data."
+      },
       "usage": {},
       "parents": [],
-      "rawTags": {},
+      "rawTags": {
+        "label-nl": "Locatie",
+        "uri": "http://purl.org/dc/terms/Location",
+        "definition-nl": "Generieke aanknopingspunt voor ruimtelijke data."
+      },
       "properties": [
         {
           "uri": "http://purl.org/dc/terms/type",
@@ -2772,12 +2621,14 @@
           "label": {
             "nl": "locatieType"
           },
-          "description": {},
+          "description": {
+            "nl": "De type van de Locatie."
+          },
           "usage": {},
           "domain": [
             {
               "EA-Name": "Locatie",
-              "uri": "http://fixme.com#Locatie"
+              "uri": "http://purl.org/dc/terms/Location"
             }
           ],
           "range": [
@@ -2799,7 +2650,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "locatieType",
-            "uri": "http://purl.org/dc/terms/type"
+            "uri": "http://purl.org/dc/terms/type",
+            "definition-nl": "De type van de Locatie."
           }
         },
         {
@@ -2816,7 +2668,7 @@
           "domain": [
             {
               "EA-Name": "Locatie",
-              "uri": "http://fixme.com#Locatie"
+              "uri": "http://purl.org/dc/terms/Location"
             }
           ],
           "range": [
@@ -2856,7 +2708,7 @@
           "domain": [
             {
               "EA-Name": "Locatie",
-              "uri": "http://fixme.com#Locatie"
+              "uri": "http://purl.org/dc/terms/Location"
             }
           ],
           "range": [
@@ -2896,7 +2748,7 @@
           "domain": [
             {
               "EA-Name": "Locatie",
-              "uri": "http://fixme.com#Locatie"
+              "uri": "http://purl.org/dc/terms/Location"
             }
           ],
           "range": [
