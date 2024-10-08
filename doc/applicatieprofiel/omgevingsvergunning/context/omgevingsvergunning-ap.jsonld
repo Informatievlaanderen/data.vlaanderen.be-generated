@@ -7,13 +7,8 @@
     },
     "Activiteit": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
     "Activiteit.beschrijving": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving",
+      "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Activiteit.betrokkene": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#betrokkene",
-      "@type": "@id"
     },
     "Activiteit.isDeelVan": {
       "@id": "http://purl.org/dc/terms/isPartOf",
@@ -26,12 +21,17 @@
     },
     "Activiteit.locatie": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#locatie",
+      "@id": "http://www.w3.org/ns/locn#location",
       "@type": "@id"
     },
     "Activiteit.tijdsbestek": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek",
+      "@type": "@id"
+    },
+    "Activiteit.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Bekendmaking": "https://data.vlaanderen.be/ns/omgevingsvergunning#Bekendmaking",
@@ -66,7 +66,7 @@
       "@type": "@id"
     },
     "Document.vindplaats": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#vindplaats",
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "@id"
     },
     "Document.waarmerk": {
@@ -88,22 +88,6 @@
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Feature": "http://www.opengis.net/ont/geosparql#Feature",
-    "Feature.adres": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "@id"
-    },
-    "Feature.geometrie": {
-      "@container": "@set",
-      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
-      "@type": "@id"
-    },
-    "Feature.identificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
-    },
     "Inhoud": "https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud",
     "InstellingBeroep": "https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep",
     "InstellingBeroep.ingesteldRechtsmiddel": {
@@ -123,15 +107,34 @@
     },
     "JuridischeCategorie": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie",
     "JuridischeGebeurtenis": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
-    "NormatieveBepaling": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
-    "NormatieveBepaling.rechtsobject": {
+    "Locatie": "http://fixme.com#Locatie",
+    "Locatie.adres": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "@id": "http://www.w3.org/ns/locn#address",
       "@type": "@id"
     },
+    "Locatie.geometrie": {
+      "@container": "@set",
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "Locatie.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Locatie.locatieType": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "NormatieveBepaling": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling",
     "NormatieveBepaling.tijdsbestek": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek",
+      "@type": "@id"
+    },
+    "NormatieveBepaling.voorwerp": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
       "@type": "@id"
     },
     "Organisatie": "http://www.w3.org/ns/org#Organization",
@@ -157,7 +160,7 @@
     "Procedure": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
     "Procedure.procedurestap": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap",
+      "@id": "http://purl.org/dc/terms/hasPart",
       "@type": "@id"
     },
     "Procedure.publiekeOrganisatie": {
@@ -275,17 +278,13 @@
     },
     "VergundeToestand.voorwerp": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "@id": "http://www.w3.org/ns/locn#location",
       "@type": "@id"
     },
     "Vergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#Vergunning",
     "VlaremRubriek": "http://www.w3.org/2004/02/skos/core#Concept",
     "Waarmerk": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk",
     "Zaak": "http://dbpedia.org/ontology/Case",
-    "Zaak.aanleiding": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding",
-      "@type": "@id"
-    },
     "Zaak.identificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
@@ -301,7 +300,7 @@
     },
     "Zaak.verwanteZaak": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verwanteZaak",
+      "@id": "http://purl.org/dc/terms/relation",
       "@type": "@id"
     },
     "Zaak.zaakhandeling": {

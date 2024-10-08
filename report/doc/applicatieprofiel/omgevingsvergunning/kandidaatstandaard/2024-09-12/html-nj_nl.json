@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "OSLO Omgevingsvergunning (Applicatieprofiel)",
+    "title": "Omgevingsvergunning (Applicatieprofiel)",
     "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning",
     "issued": "2024-09-12",
     "baseURI": "https://data.vlaanderen.be/ns/omgevingsvergunning#",
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/3160cacad91532f86ecb5129ab3016e40dd061a9",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/3160cacad91532f86ecb5129ab3016e40dd061a9/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/3e37736e47b3066db041e5654ff5a03ffd239771",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/3e37736e47b3066db041e5654ff5a03ffd239771/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-omgevingsvergunning/",
     "usesVocs": [],
@@ -198,7 +198,46 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "name": "verantwoordelijke",
+          "sort": "verantwoordelijke",
+          "label": {
+            "nl": "verantwoordelijke"
+          },
+          "description": {
+            "nl": "Rechtssubject verantwoordelijk voor de Activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Rechtssubject",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Rechtssubject",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
+              "range_label": {
+                "nl": "Rechtssubject"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "verantwoordelijke",
+            "definition-nl": "Rechtssubject verantwoordelijk voor de Activiteit."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/description",
           "name": "beschrijving",
           "sort": "beschrijving",
           "label": {
@@ -234,82 +273,8 @@
           "rawTags": {
             "label-nl": "beschrijving",
             "definition-nl": "De beschrijving van de Activiteit.",
-            "ap-label-nl": "beschrijving"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#betrokkene",
-          "name": "betrokkene",
-          "sort": "betrokkene",
-          "label": {
-            "nl": "betrokkene"
-          },
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Rechtssubject",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Rechtssubject",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
-              "range_label": {
-                "nl": "Rechtssubject"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "betrokkene"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#locatie",
-          "name": "locatie",
-          "sort": "locatie",
-          "label": {
-            "nl": "locatie"
-          },
-          "description": {
-            "nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Feature",
-              "range_uri": "http://www.opengis.net/ont/geosparql#Feature"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Feature",
-              "range_puri": "http://www.opengis.net/ont/geosparql#Feature",
-              "range_label": {
-                "nl": "Feature"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "locatie",
-            "definition-nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
+            "ap-label-nl": "beschrijving",
+            "uri": "http://purl.org/dc/terms/description"
           }
         },
         {
@@ -353,6 +318,46 @@
             "label-nl": "is deel van",
             "uri": "http://purl.org/dc/terms/isPartOf",
             "definition-nl": "Verwijzing naar omvattende Activiteit."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#location",
+          "name": "locatie",
+          "sort": "locatie",
+          "label": {
+            "nl": "locatie"
+          },
+          "description": {
+            "nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Locatie",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "locatie",
+            "definition-nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond.",
+            "uri": "http://www.w3.org/ns/locn#location"
           }
         }
       ]
@@ -530,7 +535,9 @@
           "label": {
             "nl": "verantwoordelijke"
           },
-          "description": {},
+          "description": {
+            "nl": "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."
+          },
           "usage": {},
           "domain": [
             {
@@ -557,7 +564,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verantwoordelijke",
-            "name": "BestuurlijkeRechtshandeling.verantwoordelijke"
+            "name": "BestuurlijkeRechtshandeling.verantwoordelijke",
+            "definition-nl": "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."
           }
         }
       ]
@@ -582,45 +590,6 @@
         "label-nl": "Document"
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#vindplaats",
-          "name": "vindplaats",
-          "sort": "vindplaats",
-          "label": {
-            "nl": "vindplaats"
-          },
-          "description": {
-            "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Document",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Locatie",
-              "range_uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
-              "range_puri": "http://www.w3.org/ns/prov#Location",
-              "range_label": {
-                "nl": "Locatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "vindplaats",
-            "definition-nl": "De fysieke of digitale locatie waar het Document zich bevindt."
-          }
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk",
           "name": "waarmerk",
@@ -698,6 +667,46 @@
             "label-nl": "identificator",
             "definition-nl": "Gestructureerde identificator van het Document.",
             "uri": "http://www.w3.org/ns/adms#identifier"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "vindplaats",
+          "sort": "vindplaats",
+          "label": {
+            "nl": "vindplaats"
+          },
+          "description": {
+            "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Document",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Locatie",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "vindplaats",
+            "definition-nl": "De fysieke of digitale locatie waar het Document zich bevindt.",
+            "uri": "http://www.w3.org/ns/prov#atLocation"
           }
         }
       ]
@@ -1041,11 +1050,11 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
-          "name": "rechtsobject",
-          "sort": "rechtsobject",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
+          "name": "voorwerp",
+          "sort": "voorwerp",
           "label": {
-            "nl": "rechtsobject"
+            "nl": "voorwerp"
           },
           "description": {
             "nl": "Het voorwerp van de Normatieve Bepaling."
@@ -1075,7 +1084,8 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "rechtsobject",
+            "name": "NormatieveBepaling.voorwerp",
+            "label-nl": "voorwerp",
             "definition-nl": "Het voorwerp van de Normatieve Bepaling."
           }
         }
@@ -1109,42 +1119,6 @@
         "usageNote-nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap",
-          "name": "procedurestap",
-          "sort": "procedurestap",
-          "label": {
-            "nl": "procedurestap"
-          },
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Procedure",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Procedurestap",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Procedurestap",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
-              "range_label": {
-                "nl": "Procedurestap"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "procedurestap"
-          }
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#publiekeOrganisatie",
           "name": "publiekeorganisatie",
@@ -1265,6 +1239,46 @@
             "label-nl": "termijn",
             "definition-nl": "Termijn binnen dewelke de Procedure toegepast mag worden."
           }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/hasPart",
+          "name": "procedurestap",
+          "sort": "procedurestap",
+          "label": {
+            "nl": "procedurestap"
+          },
+          "description": {
+            "nl": "De Procedurestappen die deel uitmaken van een Procedure."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Procedure",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Procedurestap",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Procedurestap",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
+              "range_label": {
+                "nl": "Procedurestap"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "procedurestap",
+            "definition-nl": "De Procedurestappen die deel uitmaken van een Procedure.",
+            "uri": "http://purl.org/dc/terms/hasPart"
+          }
         }
       ]
     },
@@ -1350,7 +1364,9 @@
           "label": {
             "nl": "rechtscollege"
           },
-          "description": {},
+          "description": {
+            "nl": "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."
+          },
           "usage": {},
           "domain": [
             {
@@ -1376,7 +1392,8 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "rechtscollege"
+            "label-nl": "rechtscollege",
+            "definition-nl": "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."
           }
         }
       ]
@@ -1453,7 +1470,9 @@
           "label": {
             "nl": "juridische kwalificatie"
           },
-          "description": {},
+          "description": {
+            "nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
+          },
           "usage": {},
           "domain": [
             {
@@ -1480,7 +1499,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "juridische kwalificatie",
-            "name": "Rechtshandeling.juridischeKwalificatie"
+            "name": "Rechtshandeling.juridischeKwalificatie",
+            "definition-nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
           }
         },
         {
@@ -1608,7 +1628,9 @@
           "label": {
             "nl": "ingangsdatum"
           },
-          "description": {},
+          "description": {
+            "nl": "Datum vanaf dewelke de Rechtshandeling rechtskracht krijgt."
+          },
           "usage": {
             "nl": "Bijvoorbeeld, de datum van een arrest."
           },
@@ -1636,9 +1658,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-label": "Datum vanaf dewelke de Rechtshandeling rechtskracht krijgt.",
             "label-nl": "ingangsdatum",
-            "usageNote-nl": "Bijvoorbeeld, de datum van een arrest."
+            "usageNote-nl": "Bijvoorbeeld, de datum van een arrest.",
+            "definition-nl": "Datum vanaf dewelke de Rechtshandeling rechtskracht krijgt."
           }
         },
         {
@@ -1648,7 +1670,9 @@
           "label": {
             "nl": "inhoud"
           },
-          "description": {},
+          "description": {
+            "nl": "De Inhoud van de Rechtshandeling."
+          },
           "usage": {},
           "domain": [
             {
@@ -1674,6 +1698,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De Inhoud van de Rechtshandeling.",
             "label-nl": "inhoud"
           }
         },
@@ -1684,7 +1709,9 @@
           "label": {
             "nl": "identificator"
           },
-          "description": {},
+          "description": {
+            "nl": "De Identificator van de Rechtshandeling."
+          },
           "usage": {},
           "domain": [
             {
@@ -1711,7 +1738,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "identificator",
-            "uri": "http://www.w3.org/ns/adms#identifier"
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "definition-nl": "De Identificator van de Rechtshandeling."
           }
         }
       ]
@@ -1938,7 +1966,9 @@
           "label": {
             "nl": "normatieve bepaling"
           },
-          "description": {},
+          "description": {
+            "nl": "De Normatieve Bepalingen die geldig zijn in de context van een bepaalde Vergunde Toestand."
+          },
           "usage": {},
           "domain": [
             {
@@ -1964,6 +1994,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De Normatieve Bepalingen die geldig zijn in de context van een bepaalde Vergunde Toestand.",
             "label-nl": "normatieve bepaling"
           }
         },
@@ -2013,7 +2044,9 @@
           "label": {
             "nl": "vaststelling vergunde toestand"
           },
-          "description": {},
+          "description": {
+            "nl": "De handeling waarmee de Vergunde Toestand is vastgelegd."
+          },
           "usage": {},
           "domain": [
             {
@@ -2039,11 +2072,12 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De handeling waarmee de Vergunde Toestand is vastgelegd.",
             "label-nl": "vaststelling vergunde toestand"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+          "uri": "http://www.w3.org/ns/locn#location",
           "name": "voorwerp",
           "sort": "voorwerp",
           "label": {
@@ -2061,16 +2095,16 @@
           ],
           "range": [
             {
-              "range_label": "Feature",
-              "range_uri": "http://www.opengis.net/ont/geosparql#Feature"
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Feature",
-              "range_puri": "http://www.opengis.net/ont/geosparql#Feature",
+              "range_uri": "#Locatie",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
-                "nl": "Feature"
+                "nl": "Locatie"
               }
             }
           ],
@@ -2078,7 +2112,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "voorwerp",
-            "definition-nl": "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."
+            "definition-nl": "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld.",
+            "uri": "http://www.w3.org/ns/locn#location"
           }
         }
       ]
@@ -2161,7 +2196,9 @@
           "label": {
             "nl": "verantwoordelijke"
           },
-          "description": {},
+          "description": {
+            "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
+          },
           "usage": {},
           "domain": [
             {
@@ -2188,7 +2225,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verantwoordelijke",
-            "name": "Zaakhandeling.verantwoordelijke"
+            "name": "Zaakhandeling.verantwoordelijke",
+            "definition-nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
           }
         },
         {
@@ -2198,7 +2236,9 @@
           "label": {
             "nl": "zaak"
           },
-          "description": {},
+          "description": {
+            "nl": "De zaak waarin de Zaakhandeling wordt gesteld."
+          },
           "usage": {},
           "domain": [
             {
@@ -2225,7 +2265,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "zaak",
-            "name": "Zaakhandeling.zaak"
+            "name": "Zaakhandeling.zaak",
+            "definition-nl": "De zaak waarin de Zaakhandeling wordt gesteld."
           }
         },
         {
@@ -2271,7 +2312,9 @@
           "label": {
             "nl": "type"
           },
-          "description": {},
+          "description": {
+            "nl": "Classificering van de Zaakhandeling aan de hand van een gecontroleerde codelijst."
+          },
           "usage": {},
           "domain": [
             {
@@ -2298,7 +2341,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "type",
-            "uri": "http://purl.org/dc/terms/type"
+            "uri": "http://purl.org/dc/terms/type",
+            "definition-nl": "Classificering van de Zaakhandeling aan de hand van een gecontroleerde codelijst."
           }
         }
       ]
@@ -2546,49 +2590,15 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding",
-          "name": "aanleiding",
-          "sort": "aanleiding",
-          "label": {
-            "nl": "aanleiding"
-          },
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaak",
-              "uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "JuridischWerk",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Juridisch Werk",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-              "range_label": {
-                "nl": "Juridisch Werk"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "aanleiding"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedure",
           "name": "procedure",
           "sort": "procedure",
           "label": {
             "nl": "procedure"
           },
-          "description": {},
+          "description": {
+            "nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld."
+          },
           "usage": {},
           "domain": [
             {
@@ -2614,11 +2624,51 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld.",
             "label-nl": "procedure"
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verwanteZaak",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+          "name": "zaakhandeling",
+          "sort": "zaakhandeling",
+          "label": {
+            "nl": "zaakhandeling"
+          },
+          "description": {
+            "nl": "De Zaakhandelingen die worden gesteld in het kader van de Zaak."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Zaakhandeling",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Zaakhandeling",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling",
+              "range_label": {
+                "nl": "Zaakhandeling"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De Zaakhandelingen die worden gesteld in het kader van de Zaak.",
+            "label-nl": "zaakhandeling"
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/relation",
           "name": "verwantezaak",
           "sort": "verwanteZaak",
           "label": {
@@ -2656,43 +2706,8 @@
           "rawTags": {
             "usageNote-nl": "Verwantschappen kunnen verschillende doelstellingen hebben. De doelstelling mag een aangegeven worden in een gekwalificeerde relatie.",
             "label-nl": "verwanteZaak",
+            "uri": "http://purl.org/dc/terms/relation",
             "definition-nl": "Verwijzingen naar verwante Zaken."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-          "name": "zaakhandeling",
-          "sort": "zaakhandeling",
-          "label": {
-            "nl": "zaakhandeling"
-          },
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaak",
-              "uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Zaakhandeling",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Zaakhandeling",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling",
-              "range_label": {
-                "nl": "Zaakhandeling"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "zaakhandeling"
           }
         },
         {
@@ -2741,23 +2756,52 @@
       ]
     },
     {
-      "uri": "http://www.opengis.net/ont/geosparql#Feature",
-      "name": "Feature",
-      "label": {
-        "nl": "Feature"
-      },
-      "sort": "Feature",
-      "description": {
-        "nl": "Een discreet ruimtelijk fenomeen binnen het beschouwde domein."
-      },
+      "uri": "http://fixme.com#Locatie",
+      "name": "",
+      "label": {},
+      "sort": "",
+      "description": {},
       "usage": {},
       "parents": [],
-      "rawTags": {
-        "uri": "http://www.opengis.net/ont/geosparql#Feature",
-        "definition-nl": "Een discreet ruimtelijk fenomeen binnen het beschouwde domein.",
-        "label-nl": "Feature"
-      },
+      "rawTags": {},
       "properties": [
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "locatietype",
+          "sort": "locatieType",
+          "label": {
+            "nl": "locatieType"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Locatie",
+              "uri": "http://fixme.com#Locatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Code",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Code"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "locatieType",
+            "uri": "http://purl.org/dc/terms/type"
+          }
+        },
         {
           "uri": "http://www.opengis.net/ont/geosparql#hasGeometry",
           "name": "geometrie",
@@ -2766,13 +2810,13 @@
             "nl": "geometrie"
           },
           "description": {
-            "nl": "Een ruimtelijke voorstelling voor een welbepaalde Feature."
+            "nl": "Een ruimtelijke voorstelling voor een welbepaalde Locatie"
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Feature",
-              "uri": "http://www.opengis.net/ont/geosparql#Feature"
+              "EA-Name": "Locatie",
+              "uri": "http://fixme.com#Locatie"
             }
           ],
           "range": [
@@ -2794,7 +2838,7 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.opengis.net/ont/geosparql#hasGeometry",
-            "definition-nl": "Een ruimtelijke voorstelling voor een welbepaalde Feature.",
+            "definition-nl": "Een ruimtelijke voorstelling voor een welbepaalde Locatie",
             "label-nl": "geometrie"
           }
         },
@@ -2806,15 +2850,13 @@
             "nl": "identificator"
           },
           "description": {
-            "nl": "De identificator van de Feature."
+            "nl": "De identificator van de Locatie."
           },
-          "usage": {
-            "nl": "Gebruik bijvoorbeeld een CaPaKey als het gaat om een perceel."
-          },
+          "usage": {},
           "domain": [
             {
-              "EA-Name": "Feature",
-              "uri": "http://www.opengis.net/ont/geosparql#Feature"
+              "EA-Name": "Locatie",
+              "uri": "http://fixme.com#Locatie"
             }
           ],
           "range": [
@@ -2832,13 +2874,12 @@
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/adms#identifier",
-            "definition-nl": "De identificator van de Feature.",
             "label-nl": "identificator",
-            "usageNote-nl": "Gebruik bijvoorbeeld een CaPaKey als het gaat om een perceel."
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "definition-nl": "De identificator van de Locatie."
           }
         },
         {
@@ -2849,13 +2890,13 @@
             "nl": "adres"
           },
           "description": {
-            "nl": "Associeert de Feature met het bijbehorende adres."
+            "nl": "Associeert de Locatie met het bijbehorende adres."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Feature",
-              "uri": "http://www.opengis.net/ont/geosparql#Feature"
+              "EA-Name": "Locatie",
+              "uri": "http://fixme.com#Locatie"
             }
           ],
           "range": [
@@ -2878,7 +2919,7 @@
           "rawTags": {
             "uri": "http://www.w3.org/ns/locn#address",
             "label-nl": "adres",
-            "definition-nl": "Associeert de Feature met het bijbehorende adres."
+            "definition-nl": "Associeert de Locatie met het bijbehorende adres."
           }
         }
       ]
@@ -2939,7 +2980,9 @@
           "label": {
             "nl": "waarde"
           },
-          "description": {},
+          "description": {
+            "nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
+          },
           "usage": {},
           "domain": [
             {
@@ -2967,7 +3010,8 @@
           "rawTags": {
             "label-nl": "waarde",
             "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#numericDuration"
+            "uri": "http://www.w3.org/2006/time#numericDuration",
+            "definition-nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
           }
         },
         {
@@ -2977,7 +3021,9 @@
           "label": {
             "nl": "tijdseenheid"
           },
-          "description": {},
+          "description": {
+            "nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
+          },
           "usage": {},
           "domain": [
             {
@@ -3005,7 +3051,8 @@
           "rawTags": {
             "label-nl": "tijdseenheid",
             "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#unitType"
+            "uri": "http://www.w3.org/2006/time#unitType",
+            "definition-nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
           }
         }
       ]
@@ -3097,7 +3144,9 @@
           "label": {
             "nl": "begintijdstip"
           },
-          "description": {},
+          "description": {
+            "nl": "Begin van het tijdsinterval."
+          },
           "usage": {},
           "domain": [
             {
@@ -3125,7 +3174,8 @@
           "rawTags": {
             "label-nl": "begintijdstip",
             "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#hasBeginning"
+            "uri": "http://www.w3.org/2006/time#hasBeginning",
+            "definition-nl": "Begin van het tijdsinterval."
           }
         },
         {
@@ -3135,7 +3185,9 @@
           "label": {
             "nl": "eindtijdstip"
           },
-          "description": {},
+          "description": {
+            "nl": "Einde van het tijdsinterval."
+          },
           "usage": {},
           "domain": [
             {
@@ -3163,7 +3215,8 @@
           "rawTags": {
             "label-nl": "eindtijdstip",
             "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#hasEnd"
+            "uri": "http://www.w3.org/2006/time#hasEnd",
+            "definition-nl": "Einde van het tijdsinterval."
           }
         }
       ]
@@ -3635,6 +3688,21 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
+      "name": {
+        "nl": "voorwerp",
+        "undefined": "voorwerp"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie",
       "name": {
         "nl": "juridische kwalificatie",
@@ -3725,21 +3793,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding",
-      "name": {
-        "nl": "aanleiding",
-        "undefined": "aanleiding"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager",
       "name": {
         "nl": "aanvrager",
@@ -3774,21 +3827,6 @@
       "name": {
         "nl": "bekendmaking",
         "undefined": "bekendmaking"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#betrokkene",
-      "name": {
-        "nl": "betrokkene",
-        "undefined": "betrokkene"
       },
       "description": {},
       "domain": [
@@ -3860,21 +3898,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#locatie",
-      "name": {
-        "nl": "locatie",
-        "undefined": "locatie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#normatieveBepaling",
       "name": {
         "nl": "normatieve bepaling",
@@ -3894,21 +3917,6 @@
       "name": {
         "nl": "procedure",
         "undefined": "procedure"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap",
-      "name": {
-        "nl": "procedurestap",
-        "undefined": "procedurestap"
       },
       "description": {},
       "domain": [
@@ -4025,10 +4033,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verwanteZaak",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "name": {
-        "nl": "verwanteZaak",
-        "undefined": "verwantezaak"
+        "nl": "verantwoordelijke",
+        "undefined": "verantwoordelijke"
       },
       "description": {},
       "domain": [
@@ -4044,51 +4052,6 @@
       "name": {
         "nl": "verzoekende partij",
         "undefined": "verzoekendePartij"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#vindplaats",
-      "name": {
-        "nl": "vindplaats",
-        "undefined": "vindplaats"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
-      "name": {
-        "nl": "rechtsobject",
-        "undefined": "rechtsobject"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
-      "name": {
-        "nl": "voorwerp",
-        "undefined": "voorwerp"
       },
       "description": {},
       "domain": [
