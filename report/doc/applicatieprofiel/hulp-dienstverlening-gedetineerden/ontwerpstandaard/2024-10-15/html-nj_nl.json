@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/992a7a08fc8f62aaf7a9fda411431654bb6158a8",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/992a7a08fc8f62aaf7a9fda411431654bb6158a8/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/1047fde27a2566d88c49a62d90af7af763066688",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/1047fde27a2566d88c49a62d90af7af763066688/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -527,11 +527,11 @@
       },
       "properties": [
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#niveau",
-          "name": "niveau",
-          "sort": "niveau",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsniveau",
+          "name": "beleidsniveau",
+          "sort": "beleidsniveau",
           "label": {
-            "nl": "niveau"
+            "nl": "beleidsniveau"
           },
           "description": {
             "nl": "Beleidsniveau van de Financieringsbron, zoals bijvoorbeeld Vlaams of federaal."
@@ -561,11 +561,11 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "niveau",
+            "label-nl": "beleidsniveau",
             "definition-nl": "Beleidsniveau van de Financieringsbron, zoals bijvoorbeeld Vlaams of federaal.",
             "ap-definition-nl": "Beleidsniveau van de Financieringsbron, zoals bijvoorbeeld Vlaams of federaal.",
-            "ap-label-nl": "niveau",
-            "name": "niveau"
+            "ap-label-nl": "beleidsniveau",
+            "name": "beleidsniveau"
           }
         },
         {
@@ -1564,48 +1564,6 @@
           "description": {
             "nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat."
           },
-          "usage": {
-            "nl": "Dit is de vestiging van de gevangenis waar de Activiteit doorgaat."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "https://schema.org/Event"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Infrastructuur",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Infrastructuur",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
-              "range_label": {
-                "nl": "Infrastructuur"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "Activiteit.infrastructuur",
-            "definition-nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat.",
-            "label-nl": "infrastructuur",
-            "ap-label-nl": "infrastructuur",
-            "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat.",
-            "usageNote-nl": "Dit is de vestiging van de gevangenis waar de Activiteit doorgaat.",
-            "uri": "https://www.w3.org/ns/prov#atLocation"
-          }
-        },
-        {
-          "uri": "https://www.w3.org/ns/prov#atLocation",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
           "usage": {},
           "domain": [
             {
@@ -1631,6 +1589,9 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
+            "ap-label-nl": "infrastructuur",
+            "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat.",
+            "label-nl": "locatie",
             "uri": "https://www.w3.org/ns/prov#atLocation"
           }
         },
@@ -2527,6 +2488,47 @@
           }
         },
         {
+          "uri": "https://www.w3.org/ns/prov#atLocation",
+          "name": "infrastructuur",
+          "sort": "infrastructuur",
+          "label": {
+            "nl": "infrastructuur"
+          },
+          "description": {
+            "nl": "Informatie rond de infrastructuur waarrond of waarin het Aanbod doorgaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://schema.org/Service"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Infrastructuur",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Infrastructuur",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+              "range_label": {
+                "nl": "Infrastructuur"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "infrastructuur",
+            "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin het Aanbod doorgaat.",
+            "label-nl": "locatie",
+            "uri": "https://www.w3.org/ns/prov#atLocation"
+          }
+        },
+        {
           "uri": "https://schema.org/provider",
           "name": "gerealiseerdDoor",
           "sort": "gerealiseerd door",
@@ -2804,21 +2806,6 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#niveau",
-      "name": {
-        "nl": "niveau",
-        "undefined": "niveau"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "name": {
         "nl": "medium",
@@ -2838,6 +2825,21 @@
       "name": {
         "nl": "karakter",
         "undefined": "karakter"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsniveau",
+      "name": {
+        "nl": "beleidsniveau",
+        "undefined": "beleidsniveau"
       },
       "description": {},
       "domain": [
