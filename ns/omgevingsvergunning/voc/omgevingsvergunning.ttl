@@ -28,13 +28,6 @@ foaf:Document a rdfs:Class;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>,
     <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling> .
 
-<https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid> a owl:ObjectProperty;
-  rdfs:label "bevoegde overheid"@nl;
-  rdfs:comment "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
-  rdfs:range <http://data.europa.eu/m8g/PublicOrganisation> .
-
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht> a owl:Class;
   rdfs:label "Recht"@nl;
   rdfs:comment "De toestemming om een bepaalde activiteit uit te voeren op een bepaalde locatie, waarvoor, op het moment van aanvraag of melding, een specifieke vergunning of melding vereist is volgens de geldende regelgeving op het gebied van ruimtelijke ordening en milieu."@nl;
@@ -89,12 +82,26 @@ foaf:Document a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Bekendmaking> .
 
+<https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid> a owl:ObjectProperty;
+  rdfs:label "bevoegde overheid"@nl;
+  rdfs:comment "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
+  rdfs:range <http://data.europa.eu/m8g/PublicOrganisation> .
+
 <https://data.vlaanderen.be/ns/omgevingsvergunning#document> a owl:ObjectProperty;
   rdfs:label "document"@nl;
   rdfs:comment "Neerslag van de Rechtshandeling in een Document."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range foaf:Document .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> a owl:ObjectProperty;
+  rdfs:label "dossier"@nl;
+  rdfs:comment "Het dossier waarin deze zaak wordt behandeld."@nl;
+  rdfs:domain dbo:Case;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
+  rdfs:range <https://data.vlaanderen.be/ns/dossier#Dossier> .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#gebeurtenis> a owl:ObjectProperty;
   rdfs:label "gebeurtenis"@nl;

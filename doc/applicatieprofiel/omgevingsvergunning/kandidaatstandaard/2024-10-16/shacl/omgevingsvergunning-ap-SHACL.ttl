@@ -408,7 +408,7 @@
   shacl:path dc:type .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#LocatieShape/6b8ad9a4e61afad86e292464e3d7a6d4369a2899> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Locatie.locatieType";
-  shacl:class skos:Concept;
+  shacl:class <http://fixme.com#Concept>;
   shacl:description "De type van de Locatie."@nl;
   shacl:name "locatieType"@nl;
   shacl:path dc:type .
@@ -794,7 +794,9 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/4758b17a72ce652025b76b6047a8c34ffc86c908>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/aa491d6e16e984f495c525bd890a0348d622a7ee>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/a6b82045e2b0570810c9150bcfe56b9e6c29e4e7>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/d1634e5f725006f2c1375affe48b2731cfa94dc2>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/25eec7676674c9257a3333d5295b669d5ab2c824>,
@@ -814,6 +816,12 @@
   shacl:description "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."@nl;
   shacl:name "verantwoordelijke"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/4758b17a72ce652025b76b6047a8c34ffc86c908> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.dossier";
+  shacl:class <https://data.vlaanderen.be/ns/dossier#Dossier>;
+  shacl:description "Het dossier waarin deze zaak wordt behandeld."@nl;
+  shacl:name "dossier"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/669337e4ea7ef401c24721617ecb0dfa60193b2b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.verwanteZaak";
   shacl:class dbo:Case;
@@ -838,6 +846,12 @@
   shacl:maxCount 1;
   shacl:name "procedure"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#procedure> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/aa491d6e16e984f495c525bd890a0348d622a7ee> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.dossier";
+  shacl:description "Het dossier waarin deze zaak wordt behandeld."@nl;
+  shacl:maxCount 1;
+  shacl:name "dossier"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/d1634e5f725006f2c1375affe48b2731cfa94dc2> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.procedure";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>;

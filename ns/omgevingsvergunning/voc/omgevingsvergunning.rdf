@@ -1000,28 +1000,6 @@
       </owl:Class>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">bevoegde overheid</rdfs:label>
-    <rdfs:comment xml:lang="nl">De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-        <rdfs:label xml:lang="nl">Beroepsmogelijkheid</rdfs:label>
-        <rdfs:comment xml:lang="nl">Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">Mogelijkheid om in beroep te gaaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg.</ns1:usageNote>
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap">
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-            <rdfs:label xml:lang="nl">Procedurestap</rdfs:label>
-            <rdfs:comment xml:lang="nl">Een Procedurestap is een voorgeschreven handeling binnen een Procedure.</rdfs:comment>
-            <ns1:usageNote xml:lang="nl">Wordt gebruikt om aan te geven welke soort handeling de Procedure voorschrijft. De Zaakhandeling geeft uitvoering aan de Procedurestap met betrekking tot een concrete Zaak.</ns1:usageNote>
-          </owl:Class>
-        </rdfs:subClassOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
-  </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Recht">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">Recht</rdfs:label>
@@ -1090,7 +1068,22 @@
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">aanwendingstermijn</rdfs:label>
     <rdfs:comment xml:lang="nl">Termijn binnen dewelke het Rechtsmiddel aangewend mag worden.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+        <rdfs:label xml:lang="nl">Beroepsmogelijkheid</rdfs:label>
+        <rdfs:comment xml:lang="nl">Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">Mogelijkheid om in beroep te gaaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg.</ns1:usageNote>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+            <rdfs:label xml:lang="nl">Procedurestap</rdfs:label>
+            <rdfs:comment xml:lang="nl">Een Procedurestap is een voorgeschreven handeling binnen een Procedure.</rdfs:comment>
+            <ns1:usageNote xml:lang="nl">Wordt gebruikt om aan te geven welke soort handeling de Procedure voorschrijft. De Zaakhandeling geeft uitvoering aan de Procedurestap met betrekking tot een concrete Zaak.</ns1:usageNote>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#bekendmaking">
@@ -1108,12 +1101,26 @@
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+    <rdfs:label xml:lang="nl">bevoegde overheid</rdfs:label>
+    <rdfs:comment xml:lang="nl">De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"/>
+    <rdfs:range rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#document">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">document</rdfs:label>
     <rdfs:comment xml:lang="nl">Neerslag van de Rechtshandeling in een Document.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"/>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#dossier">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+    <rdfs:label xml:lang="nl">dossier</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het dossier waarin deze zaak wordt behandeld.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Case"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/dossier#Dossier"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#gebeurtenis">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>

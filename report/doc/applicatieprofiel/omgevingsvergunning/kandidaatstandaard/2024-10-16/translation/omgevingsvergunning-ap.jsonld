@@ -1190,7 +1190,7 @@
             "uri": "null"
           }
         ],
-        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, 3a1397ef:19296ae0039:-7fff",
+        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, 682df53d:19296ea6843:-7fff",
         "label": {
           "nl": "Inhoud"
         },
@@ -1231,7 +1231,7 @@
       "name": "Inhoud",
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-        "3a1397ef:19296ae0039:-7fff"
+        "682df53d:19296ea6843:-7fff"
       ]
     },
     {
@@ -1975,7 +1975,7 @@
             "uri": "null"
           }
         ],
-        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis, 3a1397ef:19296ae0039:-7ffd",
+        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis, 682df53d:19296ea6843:-7ffd",
         "label": {
           "nl": "Rechtshandeling"
         },
@@ -2017,7 +2017,7 @@
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
-        "3a1397ef:19296ae0039:-7ffd"
+        "682df53d:19296ea6843:-7ffd"
       ]
     },
     {
@@ -2808,6 +2808,110 @@
       "generalization": [],
       "minCardinality": "0",
       "maxCardinality": "*"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "name": "dossier",
+      "inpackage": "ACTIVE_PACKAGE",
+      "definition": {
+        "nl": "Het dossier waarin deze zaak wordt behandeld."
+      },
+      "label": {
+        "nl": "dossier"
+      },
+      "ap-label-nl": {
+        "nl": "dossier"
+      },
+      "ap-definition-nl": {
+        "nl": "Het dossier waarin deze zaak wordt behandeld."
+      },
+      "extra": {
+        "EA-Name": "dossier",
+        "EA-Guid": "{420FF9AC-6FBA-41b3-9A7E-AF616360CF0A}",
+        "derived": "false",
+        "EA-Package": "",
+        "EA-Type": "connector",
+        "EA-Domain": "Zaak",
+        "EA-Domain-Guid": "{71585C64-2590-4b0a-8A09-4ED9C7888629}",
+        "EA-Range": "Dossier",
+        "RangeData": {
+          "EA-Name": "Dossier",
+          "EA-GUID": "{D2D2B682-C96B-490a-9929-5F9C6CBAADD3}",
+          "EA-Package": "OSLO-Dossier",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Dossier"
+        },
+        "sourceRole": "null",
+        "destRole": "dossier",
+        "label": {
+          "nl": "dossier"
+        },
+        "definition": {
+          "nl": "Het dossier waarin deze zaak wordt behandeld."
+        },
+        "usage": "",
+        "ap-label-nl": {
+          "nl": "dossier"
+        },
+        "ap-definition-nl": {
+          "nl": "Het dossier waarin deze zaak wordt behandeld."
+        },
+        "ap-usageNote-nl": "",
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "definition-nl",
+            "value": "NOTE",
+            "note": "Het dossier waarin deze zaak wordt behandeld."
+          },
+          {
+            "key": "package",
+            "value": "NOTE",
+            "note": "OSLO-Omgevingsvergunning"
+          },
+          {
+            "key": "label-nl",
+            "value": "NOTE",
+            "note": "dossier"
+          }
+        ],
+        "DestRoleTags": [
+          {
+            "key": "definition-nl",
+            "value": "NOTE",
+            "note": "Het dossier waarin deze zaak wordt behandeld."
+          },
+          {
+            "key": "package",
+            "value": "NOTE",
+            "note": "OSLO-Omgevingsvergunning"
+          },
+          {
+            "key": "label-nl",
+            "value": "NOTE",
+            "note": "dossier"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "http://dbpedia.org/ontology/Case",
+          "EA-Name": "Zaak"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Dossier",
+          "EA-GUID": "{D2D2B682-C96B-490a-9929-5F9C6CBAADD3}",
+          "EA-Package": "OSLO-Dossier",
+          "uri": "https://data.vlaanderen.be/ns/dossier#Dossier"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#gebeurtenis",
@@ -6957,12 +7061,12 @@
         "EA-Type": "attribute",
         "EA-Domain": "Locatie",
         "EA-Domain-Guid": "{23E0131B-00BF-4b0e-9F6C-08E4773B5E78}",
-        "EA-Range": "Code",
+        "EA-Range": "Concept",
         "RangeData": {
-          "EA-Name": "Code",
-          "EA-GUID": "{E052E2A8-E33D-4c5d-BD5B-BC855707DF51}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+          "EA-Name": "Concept",
+          "EA-GUID": "{1B94B17E-799D-4cca-A6C0-2928CAB97532}",
+          "EA-Package": "SKOS",
+          "uri": "http://fixme.com#Concept"
         },
         "label": {
           "nl": "locatieType"
@@ -7007,10 +7111,10 @@
       ],
       "range": [
         {
-          "EA-Name": "Code",
-          "EA-GUID": "{E052E2A8-E33D-4c5d-BD5B-BC855707DF51}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+          "EA-Name": "Concept",
+          "EA-GUID": "{1B94B17E-799D-4cca-A6C0-2928CAB97532}",
+          "EA-Package": "SKOS",
+          "uri": "http://fixme.com#Concept"
         }
       ],
       "generalization": [],
@@ -8705,15 +8809,15 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html",
   "config": "config/config-ap.json",
   "branchtag": "master-node-toolchain",
-  "dummy": "010",
+  "dummy": "011",
   "filename": "config/omgevingsvergunning-ap.json",
   "navigation": {
     "prev": "/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-16"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning",
   "urlref": "/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16",
-  "documentcommit": "12cc846e305e3d32dafd7633e9cc64d538ac2123",
-  "toolchaincommit": "67e36068df371ec98cdb98f3272c79b32e67ed6b",
+  "documentcommit": "aae1e87244fc06629461825f867ab9bf2853958d",
+  "toolchaincommit": "b0dc83ad6a9bcd443640d111922ed1dbc831c19b",
   "hostname": "https://data.test-vlaanderen.be",
   "translation": [
     {
