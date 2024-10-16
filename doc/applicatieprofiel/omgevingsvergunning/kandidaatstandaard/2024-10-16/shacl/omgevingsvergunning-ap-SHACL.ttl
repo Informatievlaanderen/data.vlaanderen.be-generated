@@ -5,7 +5,6 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -408,7 +407,7 @@
   shacl:path dc:type .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#LocatieShape/6b8ad9a4e61afad86e292464e3d7a6d4369a2899> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Locatie.locatieType";
-  shacl:class <http://fixme.com#Concept>;
+  shacl:class skos:Concept;
   shacl:description "De type van de Locatie."@nl;
   shacl:name "locatieType"@nl;
   shacl:path dc:type .
@@ -457,44 +456,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/4b124f0924fab01fc5967b50aacaf82bcf846710>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/bd32c9364485a2a85965fbee55f90a75d8d8fdef>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/b567f41f6cac602586580d2c01ee8221e0ba5fd0>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/dec1490408b1bea457bc40436431406882288252>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/f8712dd0e04b5c6b79d939432a639019c7295c6f>;
   shacl:targetClass org:Organization .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/4b124f0924fab01fc5967b50aacaf82bcf846710> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Organisatie.contactinfo";
-  shacl:class schema:ContactPoint;
-  shacl:description """Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.
-"""@nl;
-  shacl:name "contactinfo"@nl;
-  shacl:path schema:contactPoint .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/b567f41f6cac602586580d2c01ee8221e0ba5fd0> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Organisatie.voorkeurslabel";
-  shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
-  shacl:minCount 1;
-  shacl:name "voorkeurslabel"@nl;
-  shacl:path skos:prefLabel .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/bd32c9364485a2a85965fbee55f90a75d8d8fdef> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Organisatie.contactinfo";
-  shacl:description """Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.
-"""@nl;
-  shacl:maxCount 1;
-  shacl:name "contactinfo"@nl;
-  shacl:path schema:contactPoint .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/dec1490408b1bea457bc40436431406882288252> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Organisatie.voorkeurslabel";
-  shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
-  shacl:maxCount 1;
-  shacl:name "voorkeurslabel"@nl;
-  shacl:path skos:prefLabel .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape/f8712dd0e04b5c6b79d939432a639019c7295c6f> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Organisatie.voorkeurslabel";
-  shacl:datatype rdf:langString;
-  shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
-  shacl:name "voorkeurslabel"@nl;
-  shacl:path skos:prefLabel .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#PersoonShape> a shacl:NodeShape;
   shacl:closed false;

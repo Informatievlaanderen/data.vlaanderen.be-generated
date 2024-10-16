@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/aae1e87244fc06629461825f867ab9bf2853958d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/aae1e87244fc06629461825f867ab9bf2853958d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/6a4dac815d1cd86c9de40cb494ce1a3dcc6394c8",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/6a4dac815d1cd86c9de40cb494ce1a3dcc6394c8/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html",
     "usesVocs": [],
@@ -806,12 +806,19 @@
       "usage": {
         "nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
       },
-      "parents": [],
+      "parents": [
+        {
+          "label": "Concept",
+          "name": "Concept",
+          "package": "SKOS",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+          "scoped_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ],
       "rawTags": {
         "label-nl": "Juridische Categorie",
         "definition-nl": "Onder Juridische Categorie verstaan we rubrieken, klasseringen of juridisch-verankerde typeringen.",
-        "usageNote-nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen.",
-        "parentURI": "http://www.w3.org/2004/02/skos/core#Concept"
+        "usageNote-nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
       },
       "properties": [
         {
@@ -2573,13 +2580,13 @@
           "range": [
             {
               "range_label": "Concept",
-              "range_uri": "http://fixme.com#Concept"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://fixme.com#Concept",
-              "range_puri": "http://fixme.com#Concept",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
                 "nl": "Concept"
               }
@@ -2740,89 +2747,7 @@
         "label-nl": "Organisatie",
         "uri": "http://www.w3.org/ns/org#Organization"
       },
-      "properties": [
-        {
-          "uri": "http://schema.org/contactPoint",
-          "name": "contactinfo",
-          "sort": "contactinfo",
-          "label": {
-            "nl": "contactinfo"
-          },
-          "description": {
-            "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Organisatie",
-              "uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "ContactInfo",
-              "range_uri": "http://schema.org/ContactPoint"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://schema.org/ContactPoint",
-              "range_puri": "http://schema.org/ContactPoint",
-              "range_label": {
-                "nl": "ContactInfo"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "contactpunt",
-            "ap-definition-nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n",
-            "uri": "http://schema.org/contactPoint",
-            "ap-label-nl": "contactinfo"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "name": "voorkeurslabel",
-          "sort": "voorkeurslabel",
-          "label": {
-            "nl": "voorkeurslabel"
-          },
-          "description": {
-            "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Organisatie",
-              "uri": "http://www.w3.org/ns/org#Organization"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "TaalString",
-              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-              "range_label": {
-                "nl": "TaalString"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
-            "label-nl": "voorkeurslabel",
-            "ap-definition-nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-          }
-        }
-      ]
+      "properties": []
     },
     {
       "uri": "http://www.w3.org/ns/person#Person",

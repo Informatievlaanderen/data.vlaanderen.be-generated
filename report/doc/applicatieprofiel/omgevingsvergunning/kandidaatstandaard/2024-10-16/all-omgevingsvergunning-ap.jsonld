@@ -1190,7 +1190,7 @@
             "uri": "null"
           }
         ],
-        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, 35fa26e3:192974b0d88:-7fff",
+        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, 44023e9d:1929787f139:-7fff",
         "label": {
           "nl": "Inhoud"
         },
@@ -1231,7 +1231,7 @@
       "name": "Inhoud",
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-        "35fa26e3:192974b0d88:-7fff"
+        "44023e9d:1929787f139:-7fff"
       ]
     },
     {
@@ -1406,8 +1406,15 @@
         "EA-Package": "OSLO-Omgevingsvergunning",
         "EA-Type": "CLASS",
         "EA-Parents": "",
-        "EA-Parents2": [],
-        "parentclasses": "",
+        "EA-Parents2": [
+          {
+            "name": "Concept",
+            "label": "Concept",
+            "package": "SKOS",
+            "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+          }
+        ],
+        "parentclasses": "http://www.w3.org/2004/02/skos/core#Concept",
         "label": {
           "nl": "Juridische Categorie"
         },
@@ -1440,18 +1447,15 @@
             "key": "usageNote-nl",
             "value": "NOTE",
             "note": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
-          },
-          {
-            "key": "parentURI",
-            "value": "http://www.w3.org/2004/02/skos/core#Concept",
-            "note": "null"
           }
         ],
         "Scope": "FULL_DEFINITON"
       },
       "inpackage": "ACTIVE_PACKAGE",
       "name": "JuridischeCategorie",
-      "parents": []
+      "parents": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
@@ -1975,7 +1979,7 @@
             "uri": "null"
           }
         ],
-        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis, 35fa26e3:192974b0d88:-7ffd",
+        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk, https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis, 44023e9d:1929787f139:-7ffd",
         "label": {
           "nl": "Rechtshandeling"
         },
@@ -2017,7 +2021,7 @@
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
-        "35fa26e3:192974b0d88:-7ffd"
+        "44023e9d:1929787f139:-7ffd"
       ]
     },
     {
@@ -7066,7 +7070,7 @@
           "EA-Name": "Concept",
           "EA-GUID": "{1B94B17E-799D-4cca-A6C0-2928CAB97532}",
           "EA-Package": "SKOS",
-          "uri": "http://fixme.com#Concept"
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "label": {
           "nl": "locatieType"
@@ -7114,100 +7118,11 @@
           "EA-Name": "Concept",
           "EA-GUID": "{1B94B17E-799D-4cca-A6C0-2928CAB97532}",
           "EA-Package": "SKOS",
-          "uri": "http://fixme.com#Concept"
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
         }
       ],
       "generalization": [],
       "minCardinality": "1",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "name": "contactinfo",
-      "inpackage": "OTHER_PACKAGE",
-      "definition": {
-        "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
-      },
-      "label": {
-        "nl": "contactinfo"
-      },
-      "ap-label-nl": {
-        "nl": "contactinfo"
-      },
-      "ap-definition-nl": {
-        "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
-      },
-      "extra": {
-        "EA-Name": "contactinfo",
-        "EA-Guid": "{BB30C65B-7E6A-446e-A764-31DF973B0581}",
-        "EA-Package": "OSLO-Organisatie",
-        "EA-Type": "attribute",
-        "EA-Domain": "Organisatie",
-        "EA-Domain-Guid": "{97967501-FF7A-42c9-A4BF-951FE4EE92BC}",
-        "EA-Range": "ContactInfo",
-        "RangeData": {
-          "EA-Name": "ContactInfo",
-          "EA-GUID": "{1425DF18-BC32-420a-8274-AAADEF848732}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://schema.org/ContactPoint"
-        },
-        "label": {
-          "nl": "contactinfo"
-        },
-        "definition": {
-          "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
-        },
-        "usage": "",
-        "ap-label-nl": {
-          "nl": "contactinfo"
-        },
-        "ap-definition-nl": {
-          "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "value": "contactpunt",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n",
-            "note": "null"
-          },
-          {
-            "key": "uri",
-            "value": "http://schema.org/contactPoint",
-            "note": "Uit CPOV."
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "contactinfo",
-            "note": "null"
-          }
-        ],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/org#Organization",
-          "EA-Name": "Organisatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "ContactInfo",
-          "EA-GUID": "{1425DF18-BC32-420a-8274-AAADEF848732}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://schema.org/ContactPoint"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
       "maxCardinality": "1"
     },
     {
@@ -7396,90 +7311,6 @@
       ],
       "generalization": [],
       "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "voorkeurslabel",
-      "inpackage": "OTHER_PACKAGE",
-      "definition": {
-        "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-      },
-      "label": {
-        "nl": "voorkeurslabel"
-      },
-      "ap-label-nl": {
-        "nl": "voorkeurslabel"
-      },
-      "ap-definition-nl": {
-        "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-      },
-      "extra": {
-        "EA-Name": "voorkeursNaam",
-        "EA-Guid": "{EC500D88-A8F3-4ba8-BC81-553CD85D2177}",
-        "EA-Package": "OSLO-Organisatie",
-        "EA-Type": "attribute",
-        "EA-Domain": "Organisatie",
-        "EA-Domain-Guid": "{97967501-FF7A-42c9-A4BF-951FE4EE92BC}",
-        "EA-Range": "TaalString",
-        "RangeData": {
-          "EA-Name": "TaalString",
-          "EA-GUID": "{527085CB-79BC-4703-925B-A73E38A6182B}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "label": {
-          "nl": "voorkeurslabel"
-        },
-        "definition": {
-          "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-        },
-        "usage": "",
-        "ap-label-nl": {
-          "nl": "voorkeurslabel"
-        },
-        "ap-definition-nl": {
-          "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "uri",
-            "value": "http://www.w3.org/2004/02/skos/core#prefLabel",
-            "note": "In de Usage Note staat: \"It is recommended that SKOS lexical labels should be used to label the Organization. In particular skos:prefLabel for the primary (e.g. legally recognized name), skos:altLabel for alternative names (trading names, colloquial names) and skos:notation to denote codes from a code list. Alternative names: Collective, Body, Group.\" Komt in CPOV letterlijk voor."
-          },
-          {
-            "key": "label-nl",
-            "value": "voorkeurslabel",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
-            "note": "null"
-          }
-        ],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/org#Organization",
-          "EA-Name": "Organisatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "TaalString",
-          "EA-GUID": "{527085CB-79BC-4703-925B-A73E38A6182B}",
-          "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "1",
       "maxCardinality": "1"
     },
     {
@@ -8809,14 +8640,14 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html",
   "config": "config/config-ap.json",
   "branchtag": "master-node-toolchain",
-  "dummy": "012",
+  "dummy": "013",
   "filename": "config/omgevingsvergunning-ap.json",
   "navigation": {
     "prev": "/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-16"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning",
   "urlref": "/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16",
-  "documentcommit": "aae1e87244fc06629461825f867ab9bf2853958d",
-  "toolchaincommit": "1e44128a6fb63dd06f331ccf93bd54c74bf6582a",
+  "documentcommit": "6a4dac815d1cd86c9de40cb494ce1a3dcc6394c8",
+  "toolchaincommit": "34cba9d27679b6e817be3347a55ed7a8e5069bff",
   "hostname": "https://data.test-vlaanderen.be"
 }
