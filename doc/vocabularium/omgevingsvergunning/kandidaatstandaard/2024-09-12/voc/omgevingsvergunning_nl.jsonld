@@ -750,7 +750,7 @@
         "nl": "Beroepsmogelijkheid"
       },
       "definition": {
-        "nl": "Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
+        "nl": "Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
       },
       "usage": {
         "nl": "Mogelijkheid om in beroep te gaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
@@ -803,7 +803,7 @@
       },
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-        "-5439c60e:192703eb13b:-7fff"
+        "f7cf200:19295c6896c:-7fff"
       ]
     },
     {
@@ -849,9 +849,7 @@
       "usage": {
         "nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
       },
-      "parents": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
-      ]
+      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
@@ -895,9 +893,7 @@
       "usage": {
         "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
       },
-      "parents": [
-        "http://purl.org/vocab/cpsv#Rule"
-      ]
+      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
@@ -970,7 +966,7 @@
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
-        "-5439c60e:192703eb13b:-7ffd"
+        "f7cf200:19295c6896c:-7ffd"
       ]
     },
     {
@@ -1077,13 +1073,6 @@
       },
       "@id": "http://dbpedia.org/ontology/Case",
       "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Vlarem Rubriek"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
     }
   ],
   "properties": [
@@ -1101,23 +1090,6 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "tijdsbestek"
-      },
-      "definition": {
-        "nl": "Aanduiding van het tijdsbestek van de Activiteit."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
-      ],
-      "range": [
-        "http://www.w3.org/2006/time#Interval"
       ],
       "generalization": []
     },
@@ -1152,26 +1124,6 @@
       ],
       "range": [
         "http://data.europa.eu/m8g/PublicOrganisation"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "tijdsbestek"
-      },
-      "definition": {
-        "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
-      },
-      "usage": {
-        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "range": [
-        "http://www.w3.org/2006/time#Interval"
       ],
       "generalization": []
     },
@@ -1321,7 +1273,7 @@
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"
       ],
       "range": [
-        "http://www.w3.org/2006/time#Interval"
+        "http://www.w3.org/2006/time#TemporalDuration"
       ],
       "generalization": []
     },
@@ -1397,13 +1349,13 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "ingesteld rechtsmiddel"
+        "nl": "ingestelde beroepsmogelijkheid"
       },
       "definition": {
-        "nl": "Verwijzing naar het ingesteld rechtsmiddel."
+        "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep"
@@ -1545,7 +1497,7 @@
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
       ],
       "range": [
-        "http://www.w3.org/2006/time#Interval"
+        "http://www.w3.org/2006/time#TemporalDuration"
       ],
       "generalization": []
     },
@@ -1568,7 +1520,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "vaststellingtijdstip"
       },
@@ -1579,7 +1531,7 @@
         "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"
       ],
       "range": [
-        "http://www.w3.org/2006/time#Instant"
+        "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
       "generalization": []
     },
@@ -1679,6 +1631,20 @@
     },
     {
       "name": {
+        "nl": "tijdsbestek"
+      },
+      "@id": "http://purl.org/dc/terms/extent",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "tijdsbestek"
+      },
+      "@id": "http://purl.org/dc/terms/extent",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
         "nl": "procedurestap"
       },
       "@id": "http://purl.org/dc/terms/hasPart",
@@ -1703,6 +1669,13 @@
         "nl": "type"
       },
       "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "juridisch werk"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#note",
       "@type": "rdf:Property"
     },
     {

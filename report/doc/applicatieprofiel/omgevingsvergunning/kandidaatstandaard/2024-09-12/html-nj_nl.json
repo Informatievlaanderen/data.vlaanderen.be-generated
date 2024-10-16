@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/bbc18e06b463a8b23b892ced04ea27fdda592a27",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/bbc18e06b463a8b23b892ced04ea27fdda592a27/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/ed4f38fb748811dfd7bcd416b7cef3b303d976c4",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/ed4f38fb748811dfd7bcd416b7cef3b303d976c4/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-omgevingsvergunning/",
     "usesVocs": [],
@@ -158,46 +158,6 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek",
-          "name": "tijdsbestek",
-          "sort": "tijdsbestek",
-          "label": {
-            "nl": "tijdsbestek"
-          },
-          "description": {
-            "nl": "Aanduiding van het tijdsbestek van de Activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#Interval"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#Interval",
-              "range_label": {
-                "nl": "Tijdsduur"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "tijdsbestek",
-            "definition-nl": "Aanduiding van het tijdsbestek van de Activiteit.",
-            "name": "Activiteit.tijdsbestek"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "verantwoordelijke",
           "sort": "verantwoordelijke",
@@ -275,6 +235,46 @@
             "definition-nl": "De beschrijving van de Activiteit.",
             "ap-label-nl": "beschrijving",
             "uri": "http://purl.org/dc/terms/description"
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/extent",
+          "name": "tijdsbestek",
+          "sort": "tijdsbestek",
+          "label": {
+            "nl": "tijdsbestek"
+          },
+          "description": {
+            "nl": "Aanduiding van het tijdsbestek van de Activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Tijdsduur",
+              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Tijdsduur",
+              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
+              "range_label": {
+                "nl": "Tijdsduur"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "tijdsbestek",
+            "definition-nl": "Aanduiding van het tijdsbestek van de Activiteit.",
+            "uri": "http://purl.org/dc/terms/extent"
           }
         },
         {
@@ -399,7 +399,7 @@
       },
       "sort": "Beroepsmogelijkheid",
       "description": {
-        "nl": "Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
+        "nl": "Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
       },
       "usage": {
         "nl": "Mogelijkheid om in beroep te gaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
@@ -415,7 +415,7 @@
       ],
       "rawTags": {
         "label-nl": "Beroepsmogelijkheid",
-        "definition-nl": "Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.",
+        "definition-nl": "Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.",
         "usageNote-nl": "Mogelijkheid om in beroep te gaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
       },
       "properties": [
@@ -479,13 +479,13 @@
           "range": [
             {
               "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#Interval"
+              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#Interval",
+              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
               "range_label": {
                 "nl": "Tijdsduur"
               }
@@ -783,14 +783,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel",
-          "name": "ingesteldRechtsmiddel",
-          "sort": "ingesteld rechtsmiddel",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid",
+          "name": "ingesteldeBeroepsmogelijkheid",
+          "sort": "ingestelde beroepsmogelijkheid",
           "label": {
-            "nl": "ingesteld rechtsmiddel"
+            "nl": "ingestelde beroepsmogelijkheid"
           },
           "description": {
-            "nl": "Verwijzing naar het ingesteld rechtsmiddel."
+            "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
           },
           "usage": {},
           "domain": [
@@ -817,9 +817,8 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar het ingesteld rechtsmiddel.",
-            "name": "ingesteldRechtsmiddel",
-            "label-nl": "ingesteld rechtsmiddel"
+            "definition-nl": "Verwijzing naar de ingestelde beroepsmogelijkheid.",
+            "label-nl": "ingestelde beroepsmogelijkheid"
           }
         },
         {
@@ -941,21 +940,55 @@
       "usage": {
         "nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
       },
-      "parents": [
-        {
-          "label": "Juridisch Werk",
-          "name": "JuridischWerk",
-          "package": "OSLO-Omgevingsvergunning",
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-          "scoped_uri": "#Juridisch Werk"
-        }
-      ],
+      "parents": [],
       "rawTags": {
         "label-nl": "Juridische Categorie",
         "definition-nl": "Onder Juridische Categorie verstaan we rubrieken, klasseringen of juridisch-verankerde typeringen.",
-        "usageNote-nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
+        "usageNote-nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen.",
+        "parentURI": "http://www.w3.org/2004/02/skos/core#Concept"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://www.w3.org/2004/02/skos/core#note",
+          "name": "juridischWerk",
+          "sort": "juridisch werk",
+          "label": {
+            "nl": "juridisch werk"
+          },
+          "description": {
+            "nl": "De rechtsbron van de Juridische Categorie.\n\n\n\n\n\n\n"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "JuridischeCategorie",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "JuridischWerk",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Juridisch Werk",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
+              "range_label": {
+                "nl": "Juridisch Werk"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "juridisch werk",
+            "definition-nl": "De rechtsbron van de Juridische Categorie.\n\n\n\n\n\n\n",
+            "uri": "http://www.w3.org/2004/02/skos/core#note"
+          }
+        }
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
@@ -1007,49 +1040,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek",
-          "name": "tijdsbestek",
-          "sort": "tijdsbestek",
-          "label": {
-            "nl": "tijdsbestek"
-          },
-          "description": {
-            "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
-          },
-          "usage": {
-            "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
-          },
-          "domain": [
-            {
-              "EA-Name": "NormatieveBepaling",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#Interval"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#Interval",
-              "range_label": {
-                "nl": "Tijdsduur"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "tijdsbestek",
-            "definition-nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling.",
-            "usageNote-nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd.",
-            "name": "NormatieveBepaling.tijdsbestek"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
           "name": "voorwerp",
           "sort": "voorwerp",
@@ -1088,6 +1078,49 @@
             "label-nl": "voorwerp",
             "definition-nl": "Het voorwerp van de Normatieve Bepaling."
           }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/extent",
+          "name": "tijdsbestek",
+          "sort": "tijdsbestek",
+          "label": {
+            "nl": "tijdsbestek"
+          },
+          "description": {
+            "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
+          },
+          "usage": {
+            "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+          },
+          "domain": [
+            {
+              "EA-Name": "NormatieveBepaling",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Tijdsduur",
+              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Tijdsduur",
+              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
+              "range_label": {
+                "nl": "Tijdsduur"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "tijdsbestek",
+            "definition-nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling.",
+            "usageNote-nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd.",
+            "uri": "http://purl.org/dc/terms/extent"
+          }
         }
       ]
     },
@@ -1104,15 +1137,7 @@
       "usage": {
         "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
       },
-      "parents": [
-        {
-          "label": "Regel",
-          "name": "Rule",
-          "package": "CPSV",
-          "uri": "http://purl.org/vocab/cpsv#Rule",
-          "scoped_uri": "http://purl.org/vocab/cpsv#Rule"
-        }
-      ],
+      "parents": [],
       "rawTags": {
         "label-nl": "Procedure",
         "definition-nl": "Een Procedure is de blauwdruk voor de afhandeling van een Zaak.",
@@ -1221,13 +1246,13 @@
           "range": [
             {
               "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#Interval"
+              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#Interval",
+              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
               "range_label": {
                 "nl": "Tijdsduur"
               }
@@ -1891,16 +1916,16 @@
           ],
           "range": [
             {
-              "range_label": "Tijdstip",
-              "range_uri": "http://www.w3.org/2006/time#Instant"
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Tijdstip",
-              "range_puri": "http://www.w3.org/2006/time#Instant",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
               "range_label": {
-                "nl": "Tijdstip"
+                "nl": "DateTime"
               }
             }
           ],
@@ -2791,15 +2816,7 @@
       "sort": "Datum",
       "description": {},
       "usage": {},
-      "parents": [
-        {
-          "label": "Tijdstip",
-          "name": "Tijdstip",
-          "package": "time",
-          "uri": "http://www.w3.org/2006/time#Instant",
-          "scoped_uri": "#Tijdstip"
-        }
-      ],
+      "parents": [],
       "rawTags": {
         "label-nl": "Datum",
         "uri": "http://www.w3.org/2001/XMLSchema#date"
@@ -2807,295 +2824,46 @@
       "properties": []
     },
     {
-      "uri": "http://www.w3.org/2006/time#DurationDescription",
-      "name": "Tijdsduurbeschrijving",
+      "uri": "http://www.w3.org/2006/time#Interval",
+      "name": "Tijdsinterval",
       "label": {
-        "nl": "Tijdsduurbeschrijving"
+        "nl": "Tijdsinterval"
       },
-      "sort": "Tijdsduurbeschrijving",
+      "sort": "Tijdsinterval",
       "description": {
-        "nl": "Een tijdsspanne beschreven aan de hand van een tijdseenheid (schaal) en waarde."
+        "nl": "Een temporele entiteit met een omvang of duur.\n\n\n\n\n\n\n"
       },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Tijdsduur",
-          "name": "Tijdsduur",
-          "package": "time",
-          "uri": "http://www.w3.org/2006/time#Interval",
-          "scoped_uri": "#Tijdsduur"
-        }
-      ],
+      "usage": {
+        "nl": "Zie gebruik in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
+      },
+      "parents": [],
       "rawTags": {
-        "label-nl": "Tijdsduurbeschrijving",
-        "uri": "http://www.w3.org/2006/time#DurationDescription",
-        "definition-nl": "Een tijdsspanne beschreven aan de hand van een tijdseenheid (schaal) en waarde."
-      },
-      "properties": [
-        {
-          "uri": "http://www.w3.org/2006/time#numericDuration",
-          "name": "waarde",
-          "sort": "waarde",
-          "label": {
-            "nl": "waarde"
-          },
-          "description": {
-            "nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "TijdsduurBeschrijving",
-              "uri": "http://www.w3.org/2006/time#DurationDescription"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "waarde",
-            "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#numericDuration",
-            "definition-nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/2006/time#unitType",
-          "name": "tijdseenheid",
-          "sort": "tijdseenheid",
-          "label": {
-            "nl": "tijdseenheid"
-          },
-          "description": {
-            "nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "TijdsduurBeschrijving",
-              "uri": "http://www.w3.org/2006/time#DurationDescription"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Tijdseenheid",
-              "range_uri": "http://www.w3.org/2006/time#TemporalUnit"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2006/time#TemporalUnit",
-              "range_puri": "http://www.w3.org/2006/time#TemporalUnit",
-              "range_label": {
-                "nl": "Tijdseenheid"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "tijdseenheid",
-            "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#unitType",
-            "definition-nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
-          }
-        }
-      ]
-    },
-    {
-      "uri": "http://www.w3.org/2006/time#Instant",
-      "name": "Tijdstip",
-      "label": {
-        "nl": "Tijdstip"
-      },
-      "sort": "Tijdstip",
-      "description": {
-        "nl": "Een Tijdsbepaling zonder omvang of duur."
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Tijdsbepaling",
-          "name": "Tijdsbepaling",
-          "package": "time",
-          "uri": "http://www.w3.org/2006/time#TemporalEntity",
-          "scoped_uri": "#Tijdsbepaling"
-        }
-      ],
-      "rawTags": {
-        "label-nl": "Tijdstip",
-        "definition-nl": "Een Tijdsbepaling zonder omvang of duur.",
-        "uri": "http://www.w3.org/2006/time#Instant"
+        "label-nl": "Tijdsinterval",
+        "uri": "http://www.w3.org/2006/time#Interval",
+        "definition-nl": "Een temporele entiteit met een omvang of duur.\n\n\n\n\n\n\n",
+        "usageNote-nl": "Zie gebruik in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
       },
       "properties": []
     },
     {
-      "uri": "http://www.w3.org/2006/time#Interval",
+      "uri": "http://www.w3.org/2006/time#TemporalDuration",
       "name": "Tijdsduur",
       "label": {
         "nl": "Tijdsduur"
       },
       "sort": "Tijdsduur",
       "description": {
-        "nl": "Een Tijdsbepaling met een omvang of duur."
+        "nl": "Een tijdsspanne."
       },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Tijdsbepaling",
-          "name": "Tijdsbepaling",
-          "package": "time",
-          "uri": "http://www.w3.org/2006/time#TemporalEntity",
-          "scoped_uri": "#Tijdsbepaling"
-        }
-      ],
-      "rawTags": {
-        "label-nl": "Tijdsduur",
-        "definition-nl": "Een Tijdsbepaling met een omvang of duur.",
-        "uri": "http://www.w3.org/2006/time#Interval"
+      "usage": {
+        "nl": "Zie specialisaties in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
       },
-      "properties": []
-    },
-    {
-      "uri": "http://www.w3.org/2006/time#ProperInterval",
-      "name": "Datetimeinterval",
-      "label": {
-        "nl": "DateTimeInterval"
-      },
-      "sort": "DateTimeInterval",
-      "description": {
-        "nl": "Een tijdsspanne vastgelegd aan de hand van begin- en eindtijdstippen."
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Tijdsduur",
-          "name": "Tijdsduur",
-          "package": "time",
-          "uri": "http://www.w3.org/2006/time#Interval",
-          "scoped_uri": "#Tijdsduur"
-        }
-      ],
-      "rawTags": {
-        "label-nl": "DateTimeInterval",
-        "uri": "http://www.w3.org/2006/time#ProperInterval",
-        "definition-nl": "Een tijdsspanne vastgelegd aan de hand van begin- en eindtijdstippen."
-      },
-      "properties": [
-        {
-          "uri": "http://www.w3.org/2006/time#hasBeginning",
-          "name": "begintijdstip",
-          "sort": "begintijdstip",
-          "label": {
-            "nl": "begintijdstip"
-          },
-          "description": {
-            "nl": "Begin van het tijdsinterval."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DateTimeInterval",
-              "uri": "http://www.w3.org/2006/time#ProperInterval"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Tijdstip",
-              "range_uri": "http://www.w3.org/2006/time#Instant"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Tijdstip",
-              "range_puri": "http://www.w3.org/2006/time#Instant",
-              "range_label": {
-                "nl": "Tijdstip"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "begintijdstip",
-            "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#hasBeginning",
-            "definition-nl": "Begin van het tijdsinterval."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/2006/time#hasEnd",
-          "name": "eindtijdstip",
-          "sort": "eindtijdstip",
-          "label": {
-            "nl": "eindtijdstip"
-          },
-          "description": {
-            "nl": "Einde van het tijdsinterval."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "DateTimeInterval",
-              "uri": "http://www.w3.org/2006/time#ProperInterval"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Tijdstip",
-              "range_uri": "http://www.w3.org/2006/time#Instant"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Tijdstip",
-              "range_puri": "http://www.w3.org/2006/time#Instant",
-              "range_label": {
-                "nl": "Tijdstip"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "eindtijdstip",
-            "parentURI": "True",
-            "uri": "http://www.w3.org/2006/time#hasEnd",
-            "definition-nl": "Einde van het tijdsinterval."
-          }
-        }
-      ]
-    },
-    {
-      "uri": "http://www.w3.org/2006/time#TemporalEntity",
-      "name": "Tijdsbepaling",
-      "label": {
-        "nl": "Tijdsbepaling"
-      },
-      "sort": "Tijdsbepaling",
-      "description": {
-        "nl": "Een tijdstip of tijdsinterval."
-      },
-      "usage": {},
       "parents": [],
       "rawTags": {
-        "label-nl": "Tijdsbepaling",
-        "definition-nl": "Een tijdstip of tijdsinterval.",
-        "uri": "http://www.w3.org/2006/time#TemporalEntity"
+        "label-nl": "Tijdsduur",
+        "uri": "http://www.w3.org/2006/time#TemporalDuration",
+        "definition-nl": "Een tijdsspanne.",
+        "usageNote-nl": "Zie specialisaties in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
       },
       "properties": []
     },
@@ -3486,21 +3254,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek",
-      "name": {
-        "nl": "tijdsbestek",
-        "undefined": "tijdsbestek"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid",
       "name": {
         "nl": "bevoegde overheid",
@@ -3520,21 +3273,6 @@
       "name": {
         "nl": "verantwoordelijke",
         "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek",
-      "name": {
-        "nl": "tijdsbestek",
-        "undefined": "tijdsbestek"
       },
       "description": {},
       "domain": [
@@ -3726,10 +3464,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid",
       "name": {
-        "nl": "ingesteld rechtsmiddel",
-        "undefined": "ingesteldRechtsmiddel"
+        "nl": "ingestelde beroepsmogelijkheid",
+        "undefined": "ingesteldeBeroepsmogelijkheid"
       },
       "description": {},
       "domain": [
@@ -3850,21 +3588,6 @@
       "name": {
         "nl": "termijn",
         "undefined": "termijn"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip",
-      "name": {
-        "nl": "vaststellingtijdstip",
-        "undefined": "vaststellingtijdstip"
       },
       "description": {},
       "domain": [

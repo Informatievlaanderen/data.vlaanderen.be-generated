@@ -214,14 +214,14 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#ActiviteitShape/d982ae870b8c7f97b68d4c407ae00ecea0b31821",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Activiteit.tijdsbestek",
-          "sh:class": "http://www.w3.org/2006/time#Interval",
+          "sh:class": "http://www.w3.org/2006/time#TemporalDuration",
           "sh:description": {
             "nl": "Aanduiding van het tijdsbestek van de Activiteit."
           },
           "sh:name": {
             "nl": "tijdsbestek"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek"
+          "sh:path": "http://purl.org/dc/terms/extent"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#ActiviteitShape/25eec7676674c9257a3333d5295b669d5ab2c824",
@@ -265,7 +265,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#BeroepsmogelijkheidShape/e705b2c431e68bd4d527713ee7bdc960bf65d1d8",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Beroepsmogelijkheid.aanwendingstermijn",
-          "sh:class": "http://www.w3.org/2006/time#Interval",
+          "sh:class": "http://www.w3.org/2006/time#TemporalDuration",
           "sh:description": {
             "nl": "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."
           },
@@ -402,28 +402,28 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroepShape/092f55d084a7a9d6c0e8e1d2f3ce0a3ba027769a",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroep.ingesteldrechtsmiddel",
-          "sh:class": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid",
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroepShape/423050fe0444bb43630d345c603d65ebeb80074e",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroep.ingesteldeberoepsmogelijkheid",
           "sh:description": {
-            "nl": "Verwijzing naar het ingesteld rechtsmiddel."
-          },
-          "sh:name": {
-            "nl": "ingesteld rechtsmiddel"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroepShape/1cb022445ac59bb64da711a4123961342f2c8675",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroep.ingesteldrechtsmiddel",
-          "sh:description": {
-            "nl": "Verwijzing naar het ingesteld rechtsmiddel."
+            "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
           },
           "sh:maxCount": "1",
           "sh:name": {
-            "nl": "ingesteld rechtsmiddel"
+            "nl": "ingestelde beroepsmogelijkheid"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel"
+          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroepShape/5fa9ce530ba22cb77647bb5559ab036196124cb0",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroep.ingesteldeberoepsmogelijkheid",
+          "sh:class": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid",
+          "sh:description": {
+            "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
+          },
+          "sh:name": {
+            "nl": "ingestelde beroepsmogelijkheid"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#InstellingBeroepShape/a871a5867cb238ba7993aee9d434f2cba69f9999",
@@ -476,7 +476,32 @@
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#JuridischeCategorieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#JuridischeCategorieShape/02c7edd0feb5b80b55b34edf20e5c97922004053",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#JuridischeCategorie.juridischwerk",
+          "sh:class": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
+          "sh:description": {
+            "nl": "De rechtsbron van de Juridische Categorie.\n\n\n\n\n\n\n"
+          },
+          "sh:name": {
+            "nl": "juridisch werk"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#note"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#JuridischeCategorieShape/0ebf8c458dfa52845cfa4da0516ca045effb442e",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#JuridischeCategorie.juridischwerk",
+          "sh:description": {
+            "nl": "De rechtsbron van de Juridische Categorie.\n\n\n\n\n\n\n"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "juridisch werk"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#note"
+        }
+      ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
     },
     {
@@ -494,14 +519,14 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#NormatieveBepalingShape/d982ae870b8c7f97b68d4c407ae00ecea0b31821",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#NormatieveBepaling.tijdsbestek",
-          "sh:class": "http://www.w3.org/2006/time#Interval",
+          "sh:class": "http://www.w3.org/2006/time#TemporalDuration",
           "sh:description": {
             "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
           },
           "sh:name": {
             "nl": "tijdsbestek"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek"
+          "sh:path": "http://purl.org/dc/terms/extent"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#NormatieveBepalingShape/6fa5673564522b1e65c5bef6f04cf1201cc459b0",
@@ -574,7 +599,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#ProcedureShape/39390b57d436bb7f59bff800ce8f77eae01019ce",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Procedure.termijn",
-          "sh:class": "http://www.w3.org/2006/time#Interval",
+          "sh:class": "http://www.w3.org/2006/time#TemporalDuration",
           "sh:description": {
             "nl": "Termijn binnen dewelke de Procedure toegepast mag worden."
           },
@@ -794,7 +819,7 @@
         {
           "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#VaststellingVergundeToestandShape/f988739495cf1b382f1fd96b7cff83a7a9a6cf4f",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#VaststellingVergundeToestand.vaststellingtijdstip",
-          "sh:class": "http://www.w3.org/2006/time#Instant",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:description": {
             "nl": "Tijdstip van vaststelling."
           },
@@ -1234,144 +1259,18 @@
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#date"
     },
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#VlaremRubriekShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurBeschrijvingShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurBeschrijvingShape/5242fb26cd0697ff6f8009d3d4adf649fb852e6d",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Tijdsduurbeschrijving.tijdseenheid",
-          "sh:description": {
-            "nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "tijdseenheid"
-          },
-          "sh:path": "http://www.w3.org/2006/time#unitType"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurBeschrijvingShape/bded2eb3b250cdea7877f534c01c3e63b838fe9c",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Tijdsduurbeschrijving.tijdseenheid",
-          "sh:class": "http://www.w3.org/2006/time#TemporalUnit",
-          "sh:description": {
-            "nl": "De temporele eenheid die de precisie van een datum-tijdwaarde of de schaal van een TijdsduurBeschrijving aangeeft."
-          },
-          "sh:name": {
-            "nl": "tijdseenheid"
-          },
-          "sh:path": "http://www.w3.org/2006/time#unitType"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurBeschrijvingShape/09b9910c25556782aaecc7a4c636d19c1ffcf8a6",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Tijdsduurbeschrijving.waarde",
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
-          "sh:description": {
-            "nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
-          },
-          "sh:name": {
-            "nl": "waarde"
-          },
-          "sh:path": "http://www.w3.org/2006/time#numericDuration"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurBeschrijvingShape/762f5094731b213d88d8a29332598749ea0eaa46",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#Tijdsduurbeschrijving.waarde",
-          "sh:description": {
-            "nl": "Waarde van een TijdsduurBeschrijving uitgedrukt als een integer geschaald door een Tijdseenheid."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "waarde"
-          },
-          "sh:path": "http://www.w3.org/2006/time#numericDuration"
-        }
-      ],
-      "sh:targetClass": "http://www.w3.org/2006/time#DurationDescription"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdstipShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://www.w3.org/2006/time#Instant"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurShape",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsintervalShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2006/time#Interval"
     },
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeIntervalShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeIntervalShape/3a640497a6655bb21d5f216cca1dd616a270948e",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeInterval.begintijdstip",
-          "sh:class": "http://www.w3.org/2006/time#Instant",
-          "sh:description": {
-            "nl": "Begin van het tijdsinterval."
-          },
-          "sh:name": {
-            "nl": "begintijdstip"
-          },
-          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeIntervalShape/c15be7526009adb10e62881c3a8290214787096e",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeInterval.begintijdstip",
-          "sh:description": {
-            "nl": "Begin van het tijdsinterval."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "begintijdstip"
-          },
-          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeIntervalShape/40ab2edacb55638785470c9bb1c8f7d04e375f01",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeInterval.eindtijdstip",
-          "sh:class": "http://www.w3.org/2006/time#Instant",
-          "sh:description": {
-            "nl": "Einde van het tijdsinterval."
-          },
-          "sh:name": {
-            "nl": "eindtijdstip"
-          },
-          "sh:path": "http://www.w3.org/2006/time#hasEnd"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeIntervalShape/74948a30379ffa880b954109d19c42e0b069111e",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#DateTimeInterval.eindtijdstip",
-          "sh:description": {
-            "nl": "Einde van het tijdsinterval."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "eindtijdstip"
-          },
-          "sh:path": "http://www.w3.org/2006/time#hasEnd"
-        }
-      ],
-      "sh:targetClass": "http://www.w3.org/2006/time#ProperInterval"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsbepalingShape",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#TijdsduurShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
+      "sh:targetClass": "http://www.w3.org/2006/time#TemporalDuration"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12#OrganisatieShape",

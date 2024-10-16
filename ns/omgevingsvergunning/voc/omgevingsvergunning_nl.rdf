@@ -908,13 +908,13 @@
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
-            <rdfs:label xml:lang="nl">Vlarem Rubriek</rdfs:label>
-          </rdfs:Class>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/description">
             <rdfs:label xml:lang="nl">beschrijving</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/terms/extent">
+            <rdfs:label xml:lang="nl">tijdsbestek</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -935,6 +935,11 @@
         <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/type">
             <rdfs:label xml:lang="nl">type</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://www.w3.org/2004/02/skos/core#note">
+            <rdfs:label xml:lang="nl">juridisch werk</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -971,23 +976,8 @@
         <rdfs:label xml:lang="nl">Juridische Categorie</rdfs:label>
         <rdfs:comment xml:lang="nl">Onder Juridische Categorie verstaan we rubrieken, klasseringen of juridisch-verankerde typeringen.</rdfs:comment>
         <ns1:usageNote xml:lang="nl">Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen.</ns1:usageNote>
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk">
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-            <rdfs:label xml:lang="nl">Juridisch Werk</rdfs:label>
-            <rdfs:comment xml:lang="nl">Werken opgemaakt voor juridische doeleinden.</rdfs:comment>
-            <ns1:usageNote xml:lang="nl">Omvat o.a. wetgeving en regelgeving, publiek- en privaatrechtelijke rechtshandelingen van rechtscolleges, bestuurlijke instanties en andere rechtssubjecten. Rechtsleer valt hier ook onder, alsook juridische typologieën (Juridische Categorie). Technocratische instrumenten, zoals standaarden, specificaties en implementaties daarvan die een juridische functie vervullen zijn door deze entiteit gedekt. Een Juridisch Werk vindt doorgaans zijn neerslag in één of meer Documenten. De rechtswaarde van een Juridisch Werk hangt o.a. af van het bestaan van een authentieke versie (Document) die is bekendgemaakt volgens de voorziene voorschriften. Breder dan http://data.europa.eu/eli/ontology#LegalResource die beperkt is tot wetgevende werken.</ns1:usageNote>
-          </owl:Class>
-        </rdfs:subClassOf>
       </owl:Class>
     </rdfs:range>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">tijdsbestek</rdfs:label>
-    <rdfs:comment xml:lang="nl">Aanduiding van het tijdsbestek van de Activiteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -997,7 +987,7 @@
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
         <rdfs:label xml:lang="nl">Beroepsmogelijkheid</rdfs:label>
-        <rdfs:comment xml:lang="nl">Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten.</rdfs:comment>
         <ns1:usageNote xml:lang="nl">Mogelijkheid om in beroep te gaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg.</ns1:usageNote>
         <rdfs:subClassOf>
           <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap">
@@ -1027,7 +1017,14 @@
             <rdfs:label xml:lang="nl">Rechtshandeling</rdfs:label>
             <rdfs:comment xml:lang="nl">Handeling met beoogde rechtsgevolgen. Bewuste actie die gericht is op het tot stand brengen, wijzigen, overdragen, beëindigen of bevestigen van juridische verplichtingen of rechten.</rdfs:comment>
             <ns1:usageNote xml:lang="nl">Omvat Bestuurlijke Handeling en Rechterlijke Uitspraken. Omvat ook aanvragen, meldingen, formele vastleggingen en andere administratieve en gerechtelijke rechtshandelingen gepleegd door zowel overheidsinstanties als ook burgers en bedrijven. Omvat ook stilzwijgende handelingen, zoals stilzwijgende aktename of weigering.</ns1:usageNote>
-            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"/>
+            <rdfs:subClassOf>
+              <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk">
+                <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
+                <rdfs:label xml:lang="nl">Juridisch Werk</rdfs:label>
+                <rdfs:comment xml:lang="nl">Werken opgemaakt voor juridische doeleinden.</rdfs:comment>
+                <ns1:usageNote xml:lang="nl">Omvat o.a. wetgeving en regelgeving, publiek- en privaatrechtelijke rechtshandelingen van rechtscolleges, bestuurlijke instanties en andere rechtssubjecten. Rechtsleer valt hier ook onder, alsook juridische typologieën (Juridische Categorie). Technocratische instrumenten, zoals standaarden, specificaties en implementaties daarvan die een juridische functie vervullen zijn door deze entiteit gedekt. Een Juridisch Werk vindt doorgaans zijn neerslag in één of meer Documenten. De rechtswaarde van een Juridisch Werk hangt o.a. af van het bestaan van een authentieke versie (Document) die is bekendgemaakt volgens de voorziene voorschriften. Breder dan http://data.europa.eu/eli/ontology#LegalResource die beperkt is tot wetgevende werken.</ns1:usageNote>
+              </owl:Class>
+            </rdfs:subClassOf>
             <rdfs:subClassOf>
               <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis">
                 <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1036,17 +1033,17 @@
                 <ns1:usageNote xml:lang="nl">Is een abstract klasse: gebruik specialisaties. Deze gebeurtenissen vormen de basis waarop de Vergunde Toestand wordt bepaald.</ns1:usageNote>
               </owl:Class>
             </rdfs:subClassOf>
+            <rdfs:subClassOf rdf:resource="f7cf200:19295c6896c:-7ffd"/>
           </owl:Class>
         </rdfs:subClassOf>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">tijdsbestek</rdfs:label>
-    <rdfs:comment xml:lang="nl">Aanduiding van het tijdsbestek van de Normatieve Bepaling.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd.</ns1:usageNote>
+    <rdfs:label xml:lang="nl">voorwerp</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het voorwerp van de Normatieve Bepaling.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1060,17 +1057,11 @@
             <rdfs:comment xml:lang="nl">Dat wat een rechtshandeling inhoudt.</rdfs:comment>
             <ns1:usageNote xml:lang="nl">Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden. Gebruikers worden aangezet om het soort inhoud te classificeren volgens gemeenschappelijke codelijsten.</ns1:usageNote>
             <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"/>
+            <rdfs:subClassOf rdf:resource="f7cf200:19295c6896c:-7fff"/>
           </owl:Class>
         </rdfs:subClassOf>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">voorwerp</rdfs:label>
-    <rdfs:comment xml:lang="nl">Het voorwerp van de Normatieve Bepaling.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"/>
   </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#Recht">
@@ -1176,7 +1167,7 @@
     <rdfs:label xml:lang="nl">aanwendingstermijn</rdfs:label>
     <rdfs:comment xml:lang="nl">Termijn binnen dewelke het Rechtsmiddel aangewend mag worden.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#bekendmaking">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1215,10 +1206,10 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
-    <rdfs:label xml:lang="nl">ingesteld rechtsmiddel</rdfs:label>
-    <rdfs:comment xml:lang="nl">Verwijzing naar het ingesteld rechtsmiddel.</rdfs:comment>
+    <rdfs:label xml:lang="nl">ingestelde beroepsmogelijkheid</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de ingestelde beroepsmogelijkheid.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1263,7 +1254,6 @@
         <rdfs:label xml:lang="nl">Procedure</rdfs:label>
         <rdfs:comment xml:lang="nl">Een Procedure is de blauwdruk voor de afhandeling van een Zaak.</rdfs:comment>
         <ns1:usageNote xml:lang="nl">Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel.</ns1:usageNote>
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#Rule"/>
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
@@ -1315,7 +1305,7 @@
     <rdfs:label xml:lang="nl">termijn</rdfs:label>
     <rdfs:comment xml:lang="nl">Termijn binnen dewelke de Procedure toegepast mag worden.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#toestandDatum">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
@@ -1324,13 +1314,13 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip">
+  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">vaststellingtijdstip</rdfs:label>
     <rdfs:comment xml:lang="nl">Tijdstip van vaststelling.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
-  </owl:ObjectProperty>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingVergundeToestand">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning"/>
     <rdfs:label xml:lang="nl">vaststelling vergunde toestand</rdfs:label>
