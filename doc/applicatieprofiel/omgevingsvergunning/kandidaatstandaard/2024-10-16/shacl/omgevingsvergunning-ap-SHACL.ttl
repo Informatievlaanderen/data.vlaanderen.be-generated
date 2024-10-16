@@ -15,7 +15,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#BekendmakingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#BeroepsmogelijkheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#BestuurlijkeRechtshandelingShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#InhoudShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#InstellingBeroepShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#JuridischWerkShape>,
@@ -46,6 +45,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#TijdsbepalingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#PersoonShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DossierShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#AanvraagShape> a shacl:NodeShape;
@@ -58,13 +58,13 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject>;
   shacl:description "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."@nl;
   shacl:name "aanvrager"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#AanvraagShape/24738cfef016e656308ba6a39ee600ab3c78d211> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Aanvraag.aanvrager";
   shacl:description "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."@nl;
   shacl:maxCount 1;
   shacl:name "aanvrager"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -118,7 +118,7 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie>;
   shacl:description "De Juridische Kwalificatie van de Activiteit."@nl;
   shacl:name "juridische kwalificatie"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ActiviteitShape/d982ae870b8c7f97b68d4c407ae00ecea0b31821> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Activiteit.tijdsbestek";
   shacl:class <http://www.w3.org/2006/time#Interval>;
@@ -172,13 +172,13 @@
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."@nl;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#BestuurlijkeRechtshandelingShape/6f6f64db25021594dfd8c5d0aa1242a13ba5ad58> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#BestuurlijkeRechtshandeling.verantwoordelijke";
   shacl:description "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."@nl;
   shacl:maxCount 1;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DateShape> a shacl:NodeShape;
   shacl:closed false;
@@ -222,7 +222,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape/74e4b7df66d1f8e79ee804d7a75adbe10713f8d9>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape/ff4ac49a85a841ca6810ac31a4b86fe6d9b7c6b9>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape/9d71d58a4fec4be940aeace1d244d8d5af5a31e0>;
-  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Document> .
+  shacl:targetClass foaf:Document .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#DocumentShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Document.identificator";
   shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -322,13 +322,13 @@
   shacl:description "Partij die het Rechtsmiddel aanwendt."@nl;
   shacl:maxCount 1;
   shacl:name "verzoekende partij"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#InstellingBeroepShape/cb5b96e8268d0ed2e5388e774253598a23ba57d9> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#InstellingBeroep.verzoekendepartij";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject>;
   shacl:description "Partij die het Rechtsmiddel aanwendt."@nl;
   shacl:name "verzoekende partij"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#JuridischWerkShape> a shacl:NodeShape;
   shacl:closed false;
@@ -447,7 +447,7 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
   shacl:description "Het voorwerp van de Normatieve Bepaling."@nl;
   shacl:name "voorwerp"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#NormatieveBepalingShape/d982ae870b8c7f97b68d4c407ae00ecea0b31821> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#NormatieveBepaling.tijdsbestek";
   shacl:class <http://www.w3.org/2006/time#Interval>;
@@ -582,13 +582,13 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtscollege>;
   shacl:description "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."@nl;
   shacl:name "rechtscollege"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#RechterlijkeUitspraakShape/13e7ddbed1b985aa84a2bdd6eed1cd09823a2814> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#RechterlijkeUitspraak.rechtscollege";
   shacl:description "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."@nl;
   shacl:maxCount 1;
   shacl:name "rechtscollege"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#RechtscollegeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -641,7 +641,7 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie>;
   shacl:description "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."@nl;
   shacl:name "juridische kwalificatie"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#RechtshandelingShape/9f596b9031ea547e1e4460ed7d0c1b2501a4d3e7> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Rechtshandeling.bekendmaking";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Bekendmaking>;
@@ -722,7 +722,7 @@
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."@nl;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#VaststellingVergundeToestandShape/69274fdede2e8731fbaa58f7b24d28fa3ec72d59> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#VaststellingVergundeToestand.gebeurtenis";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis>;
@@ -734,7 +734,7 @@
   shacl:description "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."@nl;
   shacl:maxCount 1;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#VaststellingVergundeToestandShape/76dfa9563b6d36fce246758a15446e104b15506f> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#VaststellingVergundeToestand.vaststellingtijdstip";
   shacl:description "Tijdstip van vaststelling."@nl;
@@ -834,7 +834,7 @@
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."@nl;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/669337e4ea7ef401c24721617ecb0dfa60193b2b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.verwanteZaak";
   shacl:class dbo:Case;
@@ -846,7 +846,7 @@
   shacl:description "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."@nl;
   shacl:maxCount 1;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakShape/709c2bcd18a314952fdff295cb49b0f723fcbf1a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaak.zaakhandeling";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>;
@@ -886,7 +886,7 @@
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject>;
   shacl:description "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."@nl;
   shacl:name "verantwoordelijke"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.verantwoordelijke> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakhandelingShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaakhandeling.type";
   shacl:class skos:Concept;
@@ -904,10 +904,10 @@
   shacl:class dbo:Case;
   shacl:description "De zaak waarin de Zaakhandeling wordt gesteld."@nl;
   shacl:name "zaak"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#zaak> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#ZaakhandelingShape/fdd26bb099a4aa0d0a639eafcfe9ea11ef6abc40> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-10-16#Zaakhandeling.zaak";
   shacl:description "De zaak waarin de Zaakhandeling wordt gesteld."@nl;
   shacl:maxCount 1;
   shacl:name "zaak"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak> .
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#zaak> .

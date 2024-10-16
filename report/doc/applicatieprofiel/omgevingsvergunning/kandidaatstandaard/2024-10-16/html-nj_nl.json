@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/2feed58dfcc53def5db97bc8c3d911789705e37c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/2feed58dfcc53def5db97bc8c3d911789705e37c/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/6d9b5d036bca69c4f12447c25da0ea2ce9f2ae89",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/6d9b5d036bca69c4f12447c25da0ea2ce9f2ae89/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html",
     "usesVocs": [],
@@ -58,7 +58,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "aanvrager",
           "sort": "aanvrager",
           "label": {
@@ -93,7 +93,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "aanvrager",
-            "definition-nl": "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."
+            "definition-nl": "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend.",
+            "name": "verantwoordelijke"
           }
         }
       ]
@@ -119,7 +120,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
           "name": "juridischeKwalificatie",
           "sort": "juridische kwalificatie",
           "label": {
@@ -128,7 +129,9 @@
           "description": {
             "nl": "De Juridische Kwalificatie van de Activiteit."
           },
-          "usage": {},
+          "usage": {
+            "nl": "De gebruikte codelijst kan een andere zijn dan die gebruikt wordt voor Rechtshandelingen."
+          },
           "domain": [
             {
               "EA-Name": "Activiteit",
@@ -155,7 +158,8 @@
           "rawTags": {
             "label-nl": "juridische kwalificatie",
             "definition-nl": "De Juridische Kwalificatie van de Activiteit.",
-            "name": "Activiteit.juridischeKwalificatie"
+            "name": "juridischeKwalificatie",
+            "ap-usageNote-nl": "De gebruikte codelijst kan een andere zijn dan die gebruikt wordt voor Rechtshandelingen."
           }
         },
         {
@@ -194,7 +198,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verantwoordelijke",
-            "definition-nl": "Rechtssubject verantwoordelijk voor de Activiteit."
+            "definition-nl": "Rechtssubject verantwoordelijk voor de Activiteit.",
+            "name": "verantwoordelijke"
           }
         },
         {
@@ -530,7 +535,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "verantwoordelijke",
           "sort": "verantwoordelijke",
           "label": {
@@ -565,149 +570,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verantwoordelijke",
-            "name": "BestuurlijkeRechtshandeling.verantwoordelijke",
+            "name": "verantwoordelijke",
             "definition-nl": "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."
-          }
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document",
-      "name": "Document",
-      "label": {
-        "nl": "Document"
-      },
-      "sort": "Document",
-      "description": {
-        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
-      },
-      "usage": {
-        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
-      },
-      "parents": [],
-      "rawTags": {
-        "definition-nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook.",
-        "usageNote-nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten.",
-        "label-nl": "Document"
-      },
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk",
-          "name": "waarmerk",
-          "sort": "waarmerk",
-          "label": {
-            "nl": "waarmerk"
-          },
-          "description": {
-            "nl": "Waarheidskenmerk van het Document."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Document",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Waarmerk",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Waarmerk",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk",
-              "range_label": {
-                "nl": "Waarmerk"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "waarmerk",
-            "definition-nl": "Waarheidskenmerk van het Document."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/adms#identifier",
-          "name": "identificator",
-          "sort": "identificator",
-          "label": {
-            "nl": "identificator"
-          },
-          "description": {
-            "nl": "Gestructureerde identificator van het Document."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Document",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Identificator",
-              "range_uri": "http://www.w3.org/ns/adms#Identifier"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/ns/adms#Identifier",
-              "range_puri": "http://www.w3.org/ns/adms#Identifier",
-              "range_label": {
-                "nl": "Identificator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "identificator",
-            "definition-nl": "Gestructureerde identificator van het Document.",
-            "uri": "http://www.w3.org/ns/adms#identifier"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#atLocation",
-          "name": "vindplaats",
-          "sort": "vindplaats",
-          "label": {
-            "nl": "vindplaats"
-          },
-          "description": {
-            "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Document",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Locatie",
-              "range_uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Locatie",
-              "range_puri": "http://www.w3.org/ns/prov#Location",
-              "range_label": {
-                "nl": "Locatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "vindplaats",
-            "definition-nl": "De fysieke of digitale locatie waar het Document zich bevindt.",
-            "uri": "http://www.w3.org/ns/prov#atLocation"
           }
         }
       ]
@@ -823,7 +687,7 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "verzoekendePartij",
           "sort": "verzoekende partij",
           "label": {
@@ -858,7 +722,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verzoekende partij",
-            "definition-nl": "Partij die het Rechtsmiddel aanwendt."
+            "definition-nl": "Partij die het Rechtsmiddel aanwendt.",
+            "name": "verantwoordelijke"
           }
         }
       ]
@@ -1041,7 +906,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
           "name": "voorwerp",
           "sort": "voorwerp",
           "label": {
@@ -1075,7 +940,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "name": "NormatieveBepaling.voorwerp",
+            "name": "voorwerp",
             "label-nl": "voorwerp",
             "definition-nl": "Het voorwerp van de Normatieve Bepaling."
           }
@@ -1384,7 +1249,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "rechtscollege",
           "sort": "rechtscollege",
           "label": {
@@ -1419,7 +1284,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "rechtscollege",
-            "definition-nl": "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."
+            "definition-nl": "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak.",
+            "name": "verantwoordelijke"
           }
         }
       ]
@@ -1492,46 +1358,6 @@
         "usageNote-nl": "Omvat Bestuurlijke Handeling en Rechterlijke Uitspraken. Omvat ook aanvragen, meldingen, formele vastleggingen en andere administratieve en gerechtelijke rechtshandelingen gepleegd door zowel overheidsinstanties als ook burgers en bedrijven. Omvat ook stilzwijgende handelingen, zoals stilzwijgende aktename of weigering."
       },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie",
-          "name": "juridischeKwalificatie",
-          "sort": "juridische kwalificatie",
-          "label": {
-            "nl": "juridische kwalificatie"
-          },
-          "description": {
-            "nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Rechtshandeling",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "JuridischeCategorie",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Juridische Categorie",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie",
-              "range_label": {
-                "nl": "Juridische Categorie"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "juridische kwalificatie",
-            "name": "Rechtshandeling.juridischeKwalificatie",
-            "definition-nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
-          }
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.verantwoordelijke",
           "name": "verantwoordelijke",
@@ -1732,6 +1558,47 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
+          "name": "juridischeKwalificatie",
+          "sort": "juridische kwalificatie",
+          "label": {
+            "nl": "juridische kwalificatie"
+          },
+          "description": {
+            "nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Rechtshandeling",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "JuridischeCategorie",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Juridische Categorie",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie",
+              "range_label": {
+                "nl": "Juridische Categorie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "juridische kwalificatie",
+            "name": "juridischeKwalificatie",
+            "definition-nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden.",
+            "ap-usageNote-NL": "De gebruikte codelijst kan een verschillende zijn van degene die gebruikt wordt voor een Activiteit."
+          }
+        },
+        {
           "uri": "http://www.w3.org/ns/adms#identifier",
           "name": "identificator",
           "sort": "identificator",
@@ -1820,46 +1687,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke",
-          "name": "verantwoordelijke",
-          "sort": "verantwoordelijke",
-          "label": {
-            "nl": "verantwoordelijke"
-          },
-          "description": {
-            "nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "VaststellingVergundeToestand",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PubliekeOrganisatie",
-              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Publieke Organisatie",
-              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
-              "range_label": {
-                "nl": "Publieke Organisatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "verantwoordelijke",
-            "definition-nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand.",
-            "name": "VaststellingVergundeToestand.verantwoordelijke"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#gebeurtenis",
           "name": "gebeurtenis",
           "sort": "gebeurtenis",
@@ -1935,6 +1762,46 @@
           "rawTags": {
             "label-nl": "vaststellingtijdstip",
             "definition-nl": "Tijdstip van vaststelling."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "name": "verantwoordelijke",
+          "sort": "verantwoordelijke",
+          "label": {
+            "nl": "verantwoordelijke"
+          },
+          "description": {
+            "nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "VaststellingVergundeToestand",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PubliekeOrganisatie",
+              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Publieke Organisatie",
+              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
+              "range_label": {
+                "nl": "Publieke Organisatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "verantwoordelijke",
+            "definition-nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand.",
+            "name": "verantwoordelijke"
           }
         }
       ]
@@ -2219,86 +2086,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.verantwoordelijke",
-          "name": "verantwoordelijke",
-          "sort": "verantwoordelijke",
-          "label": {
-            "nl": "verantwoordelijke"
-          },
-          "description": {
-            "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaakhandeling",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Rechtssubject",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Rechtssubject",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
-              "range_label": {
-                "nl": "Rechtssubject"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "verantwoordelijke",
-            "name": "Zaakhandeling.verantwoordelijke",
-            "definition-nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak",
-          "name": "zaak",
-          "sort": "zaak",
-          "label": {
-            "nl": "zaak"
-          },
-          "description": {
-            "nl": "De zaak waarin de Zaakhandeling wordt gesteld."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaakhandeling",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Zaak",
-              "range_uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Zaak",
-              "range_puri": "http://dbpedia.org/ontology/Case",
-              "range_label": {
-                "nl": "Zaak"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "zaak",
-            "name": "Zaakhandeling.zaak",
-            "definition-nl": "De zaak waarin de Zaakhandeling wordt gesteld."
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap",
           "name": "procedurestap",
           "sort": "procedurestap",
@@ -2335,6 +2122,86 @@
           "rawTags": {
             "label-nl": "procedurestap",
             "definition-nl": "De Procedurestap volgens dewelke de Zaakhandeling wordt gesteld."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "name": "verantwoordelijke",
+          "sort": "verantwoordelijke",
+          "label": {
+            "nl": "verantwoordelijke"
+          },
+          "description": {
+            "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaakhandeling",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Rechtssubject",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Rechtssubject",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
+              "range_label": {
+                "nl": "Rechtssubject"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "verantwoordelijke",
+            "name": "verantwoordelijke",
+            "definition-nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "name": "zaak",
+          "sort": "zaak",
+          "label": {
+            "nl": "zaak"
+          },
+          "description": {
+            "nl": "De zaak waarin de Zaakhandeling wordt gesteld."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaakhandeling",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Zaak",
+              "range_uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Zaak",
+              "range_puri": "http://dbpedia.org/ontology/Case",
+              "range_label": {
+                "nl": "Zaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "zaak",
+            "name": "zaak",
+            "definition-nl": "De zaak waarin de Zaakhandeling wordt gesteld."
           }
         },
         {
@@ -2423,46 +2290,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke",
-          "name": "verantwoordelijke",
-          "sort": "verantwoordelijke",
-          "label": {
-            "nl": "verantwoordelijke"
-          },
-          "description": {
-            "nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaak",
-              "uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PubliekeOrganisatie",
-              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Publieke Organisatie",
-              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
-              "range_label": {
-                "nl": "Publieke Organisatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "verantwoordelijke",
-            "ap-definition-nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak.",
-            "name": "Zaak.verantwoordelijke"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedure",
           "name": "procedure",
           "sort": "procedure",
@@ -2499,6 +2326,46 @@
           "rawTags": {
             "definition-nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld.",
             "label-nl": "procedure"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "name": "verantwoordelijke",
+          "sort": "verantwoordelijke",
+          "label": {
+            "nl": "verantwoordelijke"
+          },
+          "description": {
+            "nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PubliekeOrganisatie",
+              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Publieke Organisatie",
+              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
+              "range_label": {
+                "nl": "Publieke Organisatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "verantwoordelijke",
+            "ap-definition-nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak.",
+            "name": "verantwoordelijke"
           }
         },
         {
@@ -3355,6 +3222,148 @@
       ]
     },
     {
+      "uri": "http://xmlns.com/foaf/0.1/Document",
+      "name": "Document",
+      "label": {
+        "nl": "Document"
+      },
+      "sort": "Document",
+      "description": {
+        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
+      },
+      "usage": {
+        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
+      },
+      "parents": [],
+      "rawTags": {
+        "definition-nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook.",
+        "usageNote-nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten.",
+        "label-nl": "Document",
+        "uri": "http://xmlns.com/foaf/0.1/Document"
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk",
+          "name": "waarmerk",
+          "sort": "waarmerk",
+          "label": {
+            "nl": "waarmerk"
+          },
+          "description": {
+            "nl": "Waarheidskenmerk van het Document."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Document",
+              "uri": "http://xmlns.com/foaf/0.1/Document"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Waarmerk",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Waarmerk",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk",
+              "range_label": {
+                "nl": "Waarmerk"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "waarmerk",
+            "definition-nl": "Waarheidskenmerk van het Document."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "Gestructureerde identificator van het Document."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Document",
+              "uri": "http://xmlns.com/foaf/0.1/Document"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "identificator",
+            "definition-nl": "Gestructureerde identificator van het Document.",
+            "uri": "http://www.w3.org/ns/adms#identifier"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "vindplaats",
+          "sort": "vindplaats",
+          "label": {
+            "nl": "vindplaats"
+          },
+          "description": {
+            "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Document",
+              "uri": "http://xmlns.com/foaf/0.1/Document"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Locatie",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "vindplaats",
+            "definition-nl": "De fysieke of digitale locatie waar het Document zich bevindt.",
+            "uri": "http://www.w3.org/ns/prov#atLocation"
+          }
+        }
+      ]
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/dossier#Dossier",
       "name": "Dossier",
       "label": {
@@ -3497,21 +3506,6 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie",
-      "name": {
-        "nl": "juridische kwalificatie",
-        "undefined": "juridischeKwalificatie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid",
       "name": {
         "nl": "bevoegde overheid",
@@ -3527,130 +3521,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke",
-      "name": {
-        "nl": "verantwoordelijke",
-        "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
-      "name": {
-        "nl": "voorwerp",
-        "undefined": "voorwerp"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie",
-      "name": {
-        "nl": "juridische kwalificatie",
-        "undefined": "juridischeKwalificatie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.verantwoordelijke",
       "name": {
         "nl": "verantwoordelijke",
         "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke",
-      "name": {
-        "nl": "verantwoordelijke",
-        "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke",
-      "name": {
-        "nl": "verantwoordelijke",
-        "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.verantwoordelijke",
-      "name": {
-        "nl": "verantwoordelijke",
-        "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak",
-      "name": {
-        "nl": "zaak",
-        "undefined": "zaak"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager",
-      "name": {
-        "nl": "aanvrager",
-        "undefined": "aanvrager"
       },
       "description": {},
       "domain": [
@@ -3752,6 +3626,36 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
+      "name": {
+        "nl": "juridische kwalificatie",
+        "undefined": "juridischeKwalificatie"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
+      "name": {
+        "nl": "juridische kwalificatie",
+        "undefined": "juridischeKwalificatie"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#normatieveBepaling",
       "name": {
         "nl": "normatieve bepaling",
@@ -3801,21 +3705,6 @@
       "name": {
         "nl": "publiekeOrganisatie",
         "undefined": "publiekeorganisatie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege",
-      "name": {
-        "nl": "rechtscollege",
-        "undefined": "rechtscollege"
       },
       "description": {},
       "domain": [
@@ -3902,10 +3791,115 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "verantwoordelijke",
+        "undefined": "verantwoordelijke"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "rechtscollege",
+        "undefined": "rechtscollege"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "verantwoordelijke",
+        "undefined": "verantwoordelijke"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "name": {
         "nl": "verzoekende partij",
         "undefined": "verzoekendePartij"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "aanvrager",
+        "undefined": "aanvrager"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "verantwoordelijke",
+        "undefined": "verantwoordelijke"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "name": {
+        "nl": "verantwoordelijke",
+        "undefined": "verantwoordelijke"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "name": {
+        "nl": "voorwerp",
+        "undefined": "voorwerp"
       },
       "description": {},
       "domain": [
@@ -3921,6 +3915,21 @@
       "name": {
         "nl": "waarmerk",
         "undefined": "waarmerk"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+      "name": {
+        "nl": "zaak",
+        "undefined": "zaak"
       },
       "description": {},
       "domain": [
