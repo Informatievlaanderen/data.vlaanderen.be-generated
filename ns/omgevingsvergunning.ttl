@@ -2,6 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -118,9 +119,9 @@ foaf:Document a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range xsd:date .
 
-<https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel> a owl:ObjectProperty;
-  rdfs:label "ingesteld rechtsmiddel"@nl;
-  rdfs:comment "Verwijzing naar het ingesteld rechtsmiddel."@nl;
+<https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid> a owl:ObjectProperty;
+  rdfs:label "ingestelde beroepsmogelijkheid"@nl;
+  rdfs:comment "Verwijzing naar de ingestelde beroepsmogelijkheid."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/omgevingsvergunning>;
   rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid> .
@@ -272,6 +273,9 @@ skos:note a rdf:Property;
 
 <http://www.w3.org/ns/locn#location> a rdf:Property;
   rdfs:label "voorwerp"@nl .
+
+prov:atLocation a rdf:Property;
+  rdfs:label "vindplaats"@nl .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#Bekendmaking> a owl:Class;
   rdfs:label "Bekendmaking"@nl;
@@ -901,7 +905,8 @@ skos:note a rdf:Property;
     dc:type,
     skos:note,
     <http://www.w3.org/ns/adms#identifier>,
-    <http://www.w3.org/ns/locn#location>;
+    <http://www.w3.org/ns/locn#location>,
+    prov:atLocation;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
