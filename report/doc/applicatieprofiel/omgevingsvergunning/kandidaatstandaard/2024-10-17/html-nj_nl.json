@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/57706229553256caa8e0de6c756c4e2367873b60",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/57706229553256caa8e0de6c756c4e2367873b60/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/tree/1a7e1b6755b2ecfe4cf0a0e45acf926a0cd3c302",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/blob/1a7e1b6755b2ecfe4cf0a0e45acf926a0cd3c302/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-omgevingsvergunning/",
     "usesVocs": [],
@@ -425,14 +425,55 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanwendingstermijn",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
+          "name": "bevoegdeOverheid",
+          "sort": "bevoegde overheid",
+          "label": {
+            "nl": "bevoegde overheid"
+          },
+          "description": {
+            "nl": "De Publieke Organisatie bevoegd om zich over de Beroepsmogelijkheid uit te spreken."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Beroepsmogelijkheid",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PubliekeOrganisatie",
+              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Publieke Organisatie",
+              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
+              "range_label": {
+                "nl": "Publieke Organisatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "bevoegdeOverheid",
+            "ap-definition-nl": "De Publieke Organisatie bevoegd om zich over de Beroepsmogelijkheid uit te spreken.",
+            "package": "OSLO-Omgevingsvergunning",
+            "ap-label-nl": "bevoegde overheid"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#termijn",
           "name": "aanwendingstermijn",
           "sort": "aanwendingstermijn",
           "label": {
             "nl": "aanwendingstermijn"
           },
           "description": {
-            "nl": "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."
+            "nl": "Termijn binnen dewelke de Beroepsmogelijkheid aangewend mag worden."
           },
           "usage": {},
           "domain": [
@@ -459,48 +500,9 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aanwendingstermijn",
-            "definition-nl": "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
-          "name": "bevoegdeOverheid",
-          "sort": "bevoegde overheid",
-          "label": {
-            "nl": "bevoegde overheid"
-          },
-          "description": {
-            "nl": "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Beroepsmogelijkheid",
-              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "PubliekeOrganisatie",
-              "range_uri": "http://data.europa.eu/m8g/PublicOrganisation"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Publieke Organisatie",
-              "range_puri": "http://data.europa.eu/m8g/PublicOrganisation",
-              "range_label": {
-                "nl": "Publieke Organisatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "bevoegde overheid",
-            "definition-nl": "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken.",
-            "name": "bevoegdeOverheid"
+            "name": "termijn",
+            "ap-definition-nl": "Termijn binnen dewelke de Beroepsmogelijkheid aangewend mag worden.",
+            "ap-label-nl": "aanwendingstermijn"
           }
         }
       ]
@@ -1017,11 +1019,11 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#publiekeOrganisatie",
-          "name": "publiekeorganisatie",
-          "sort": "publiekeOrganisatie",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
+          "name": "bevoegdeOverheid",
+          "sort": "bevoegde overheid",
           "label": {
-            "nl": "publiekeOrganisatie"
+            "nl": "bevoegde overheid"
           },
           "description": {
             "nl": "De Publieke Organisaties die bevoegdheid kunnen hebben over de Procedure."
@@ -1052,7 +1054,8 @@
           "codelist_uri": "",
           "rawTags": {
             "package": "OSLO-Omgevingsvergunning",
-            "label-nl": "publiekeOrganisatie",
+            "label-nl": "bevoegde overheid",
+            "name": "bevoegdeOverheid",
             "ap-definition-nl": "De Publieke Organisaties die bevoegdheid kunnen hebben over de Procedure."
           }
         },
@@ -1134,7 +1137,8 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "termijn",
-            "definition-nl": "Termijn binnen dewelke de Procedure toegepast mag worden."
+            "name": "termijn",
+            "ap-definition-nl": "Termijn binnen dewelke de Procedure toegepast mag worden."
           }
         },
         {
@@ -3063,10 +3067,10 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanwendingstermijn",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bekendmaking",
       "name": {
-        "nl": "aanwendingstermijn",
-        "undefined": "aanwendingstermijn"
+        "nl": "bekendmaking",
+        "undefined": "bekendmaking"
       },
       "description": {},
       "domain": [
@@ -3078,10 +3082,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bekendmaking",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
       "name": {
-        "nl": "bekendmaking",
-        "undefined": "bekendmaking"
+        "nl": "bevoegde overheid",
+        "undefined": "bevoegdeOverheid"
       },
       "description": {},
       "domain": [
@@ -3258,10 +3262,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#publiekeOrganisatie",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsgrond",
       "name": {
-        "nl": "publiekeOrganisatie",
-        "undefined": "publiekeorganisatie"
+        "nl": "rechtsgrond",
+        "undefined": "rechtsgrond"
       },
       "description": {},
       "domain": [
@@ -3273,10 +3277,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsgrond",
+      "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#termijn",
       "name": {
-        "nl": "rechtsgrond",
-        "undefined": "rechtsgrond"
+        "nl": "aanwendingstermijn",
+        "undefined": "aanwendingstermijn"
       },
       "description": {},
       "domain": [
