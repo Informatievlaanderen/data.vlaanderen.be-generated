@@ -2,7 +2,8 @@
   "@context": {
     "Aanvraag": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
     "Aanvraag.aanvrager": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager",
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Activiteit": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
@@ -16,7 +17,7 @@
     },
     "Activiteit.juridischeKwalificatie": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
       "@type": "@id"
     },
     "Activiteit.locatie": {
@@ -41,16 +42,16 @@
       "@type": "@id"
     },
     "Beroepsmogelijkheid.bevoegdeOverheid": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
       "@type": "@id"
     },
     "BestuurlijkeRechtshandeling": "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling",
     "BestuurlijkeRechtshandeling.verantwoordelijke": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Datum": "http://www.w3.org/2001/XMLSchema#date",
-    "Document": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document",
+    "Document": "http://xmlns.com/foaf/0.1/Document",
     "Document.identificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
@@ -86,7 +87,8 @@
       "@type": "@id"
     },
     "InstellingBeroep.verzoekendePartij": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij",
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "JuridischWerk": "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
@@ -128,29 +130,11 @@
     },
     "NormatieveBepaling.voorwerp": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.voorwerp",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
       "@type": "@id"
     },
     "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie.contactinfo": {
-      "@id": "http://schema.org/contactPoint",
-      "@type": "@id"
-    },
-    "Organisatie.voorkeurslabel": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
     "Persoon": "http://www.w3.org/ns/person#Person",
-    "Persoon.alternatieveNaam": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/persoon#alternatieveNaam",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Persoon.voornaam": {
-      "@container": "@set",
-      "@id": "http://xmlns.com/foaf/0.1/givenName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
     "Procedure": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
     "Procedure.procedurestap": {
       "@container": "@set",
@@ -176,7 +160,7 @@
     "Recht": "https://data.vlaanderen.be/ns/omgevingsvergunning#Recht",
     "RechterlijkeUitspraak": "https://data.vlaanderen.be/ns/omgevingsvergunning#RechterlijkeUitspraak",
     "RechterlijkeUitspraak.rechtscollege": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Rechtscollege": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtscollege",
@@ -207,17 +191,17 @@
     },
     "Rechtshandeling.juridischeKwalificatie": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
       "@type": "@id"
     },
     "Rechtshandeling.verantwoordelijke": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Rechtssubject": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
     "Tijdsduur": "http://www.w3.org/2006/time#TemporalDuration",
-    "Tijdsinterval": "http://www.w3.org/2006/time#Interval",
+    "Tijdsinterval": "http://www.w3.org/2006/time#ProperInterval",
     "VaststellingVergundeToestand": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand",
     "VaststellingVergundeToestand.gebeurtenis": {
       "@container": "@set",
@@ -229,7 +213,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "VaststellingVergundeToestand.verantwoordelijke": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Verbintenis": "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis",
@@ -255,6 +239,10 @@
     "Vergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#Vergunning",
     "Waarmerk": "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk",
     "Zaak": "http://dbpedia.org/ontology/Case",
+    "Zaak.dossier": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+      "@type": "@id"
+    },
     "Zaak.identificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
@@ -265,7 +253,7 @@
       "@type": "@id"
     },
     "Zaak.verantwoordelijke": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Zaak.verwanteZaak": {
@@ -290,11 +278,11 @@
     },
     "Zaakhandeling.verantwoordelijke": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
       "@type": "@id"
     },
     "Zaakhandeling.zaak": {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
       "@type": "@id"
     }
   }
