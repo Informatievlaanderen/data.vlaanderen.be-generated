@@ -4,7 +4,7 @@
     "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte",
     "issued": "2024-05-23",
     "baseURI": "https://data.vlaanderen.be/ns/overlijdensaangifte#",
-    "filename": "overlijdensaangifte-ap",
+    "filename": "overlijdensaangifte",
     "navigation": {
       "self": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/kandidaatstandaard/2024-10-23"
     },
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/8d11c5351188bf9d874141b5ddd8f9fa6af7ddcb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/8d11c5351188bf9d874141b5ddd8f9fa6af7ddcb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/aa15fa070f79079d7078a33649b99bdc364f9132",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/aa15fa070f79079d7078a33649b99bdc364f9132/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html",
     "usesVocs": [],
@@ -820,78 +820,21 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
+      "name": "Ongeval",
+      "label": {
+        "nl": "Ongeval"
+      },
+      "sort": "Ongeval",
+      "description": {
+        "nl": "Onverwachte gebeurtenis die schade of letsel veroorzaakt"
+      },
       "usage": {},
       "parents": [],
-      "rawTags": {},
+      "rawTags": {
+        "label-nl": "Ongeval",
+        "definition-nl": "Onverwachte gebeurtenis die schade of letsel veroorzaakt"
+      },
       "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Ongeval",
-              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Overlijdenstoestand",
-              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Overlijdenstoestand",
-              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand",
-              "range_label": {
-                "nl": "Overlijdenstoestand"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Ongeval",
-              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Overlijdenstoestand",
-              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Overlijdenstoestand",
-              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand",
-              "range_label": {
-                "nl": "Overlijdenstoestand"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {}
-        },
         {
           "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
           "name": "",
@@ -923,6 +866,46 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {}
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor",
+          "name": "veroorzaaktDoor",
+          "sort": "veroorzaakt door",
+          "label": {
+            "nl": "veroorzaakt door"
+          },
+          "description": {
+            "nl": "De Overlijdenstoestand wordt veroorzaakt door het Ongeval."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Ongeval",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Overlijdenstoestand",
+              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Overlijdenstoestand",
+              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand",
+              "range_label": {
+                "nl": "Overlijdenstoestand"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "Overlijdenstoestand.veroorzaaktDoor",
+            "definition-nl": "De Overlijdenstoestand wordt veroorzaakt door het Ongeval.",
+            "label-nl": "veroorzaakt door"
+          }
         }
       ]
     },
@@ -1248,6 +1231,46 @@
             "ap-definition-nl": "Specifieke omstandigheden die hebben geleid tot het overlijden van een Persoon.",
             "name": "Overlijdenstoestand.aard",
             "ap-label-nl": "aard"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt",
+          "name": "veroorzaakt",
+          "sort": "veroorzaakt",
+          "label": {
+            "nl": "veroorzaakt"
+          },
+          "description": {
+            "nl": "Het Ongeval veroorzaakt de Overlijdenstoestand."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Overlijdenstoestand",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Ongeval",
+              "range_uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Ongeval",
+              "range_puri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
+              "range_label": {
+                "nl": "Ongeval"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "veroorzaakt",
+            "definition-nl": "Het Ongeval veroorzaakt de Overlijdenstoestand.",
+            "name": "Ongeval.veroorzaakt"
           }
         }
       ]
@@ -9535,34 +9558,6 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-      "name": {
-        "undefined": ""
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-      "name": {
-        "undefined": ""
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
       "name": {
         "undefined": ""
@@ -9847,6 +9842,21 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor",
+      "name": {
+        "nl": "veroorzaakt door",
+        "undefined": "veroorzaaktDoor"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak",
       "name": {
         "nl": "doodsoorzaak",
@@ -9881,6 +9891,21 @@
       "name": {
         "nl": "type",
         "undefined": "type"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt",
+      "name": {
+        "nl": "veroorzaakt",
+        "undefined": "veroorzaakt"
       },
       "description": {},
       "domain": [

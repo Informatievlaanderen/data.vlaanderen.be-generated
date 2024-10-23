@@ -498,6 +498,12 @@
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
       "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Ongeval"
+      },
+      "definition": {
+        "nl": "Onverwachte gebeurtenis die schade of letsel veroorzaakt"
+      },
       "parents": []
     },
     {
@@ -823,28 +829,6 @@
     }
   ],
   "properties": [
-    {
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
-      ],
-      "generalization": []
-    },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -1265,6 +1249,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "veroorzaakt door"
+      },
+      "definition": {
+        "nl": "De Overlijdenstoestand wordt veroorzaakt door het Ongeval."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -1329,6 +1330,23 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "veroorzaakt"
+      },
+      "definition": {
+        "nl": "Het Ongeval veroorzaakt de Overlijdenstoestand."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
       ],
       "generalization": []
     },

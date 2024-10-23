@@ -91,6 +91,8 @@
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> <http://www.w3.org/2000/01/rdf-schema#label> "Ongeval"@nl .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> <http://www.w3.org/2000/01/rdf-schema#comment> "Onverwachte gebeurtenis die schade of letsel veroorzaakt"@nl .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie> <http://www.w3.org/2000/01/rdf-schema#label> "Orgaandonatie"@nl .
@@ -140,10 +142,6 @@
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking> <http://www.w3.org/2000/01/rdf-schema#comment> "Een verzameling van bepalingen rond het Overlijden van een Persoon."@nl .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fixme.com#Output> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fixme.com#Bewijs> .
-<https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
-<https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> .
-<https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#range> <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#locatie> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#locatie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#locatie> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> .
@@ -318,6 +316,12 @@
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.datum> <http://www.w3.org/2000/01/rdf-schema#comment> "Datum van de start van de Persoonsrelatie."@nl .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.datum> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/persoon#Persoonsrelatie> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.datum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#label> "veroorzaakt door"@nl .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#comment> "De Overlijdenstoestand wordt veroorzaakt door het Ongeval."@nl .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> <http://www.w3.org/2000/01/rdf-schema#range> <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak> <http://www.w3.org/2000/01/rdf-schema#label> "doodsoorzaak"@nl .
@@ -342,6 +346,12 @@
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingOutput.type> <http://www.w3.org/2000/01/rdf-schema#comment> "De aard van de OverlijdensafhandelingOutput."@nl .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingOutput.type> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingOutput.type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/2000/01/rdf-schema#label> "veroorzaakt"@nl .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/2000/01/rdf-schema#comment> "Het Ongeval veroorzaakt de Overlijdenstoestand."@nl .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> .
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> <http://www.w3.org/2000/01/rdf-schema#range> <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.risico> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.risico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.risico> <http://www.w3.org/2000/01/rdf-schema#label> "risico"@nl .

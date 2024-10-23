@@ -135,6 +135,13 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range skos:Concept .
 
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt> a owl:ObjectProperty;
+  rdfs:label "veroorzaakt"@nl;
+  rdfs:comment "Het Ongeval veroorzaakt de Overlijdenstoestand."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> .
+
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingDienst> a owl:Class;
   rdfs:label "Overlijdensafhandeling Dienst"@nl;
   rdfs:comment "Het proces van het afhandelen van administratieve taken, procedures en formaliteiten rond het Overlijden van een Persoon."@nl;
@@ -168,6 +175,13 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak> .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor> a owl:ObjectProperty;
+  rdfs:label "veroorzaakt door"@nl;
+  rdfs:comment "De Overlijdenstoestand wordt veroorzaakt door het Ongeval."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.datum> a owl:DatatypeProperty;
   rdfs:label "datum"@nl;
@@ -348,11 +362,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range prov:Location .
 
-<https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor> a owl:ObjectProperty;
-  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
-  rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> .
-
 dc:relation a rdf:Property;
   rdfs:label "gerelateerd aan"@nl .
 
@@ -367,9 +376,6 @@ dc:type a rdf:Property;
 <https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak> a owl:Class;
   rdfs:label "Geassocieerde Oorzaak"@nl;
   rdfs:comment "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
-
-<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput> a owl:Class;
@@ -396,17 +402,16 @@ dc:type a rdf:Property;
   rdfs:range skos:Concept;
   rdfs:subClassOf <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport> .
 
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> a owl:Class;
+  rdfs:label "Ongeval"@nl;
+  rdfs:comment "Onverwachte gebeurtenis die schade of letsel veroorzaakt"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
+
 <https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden> a owl:Class;
   rdfs:label "FoetaalOverlijden"@nl;
   rdfs:comment "Het Overlijden van een Foetus in de baarmoeder vóór de Geboorte."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:subClassOf <http://fixme.com#Gebeurtenis> .
-
-<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> a owl:Class;
-  rdfs:label "Overlijdenstoestand"@nl;
-  rdfs:comment "De medische toestand bij het Overlijden van de Persoon"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest> a owl:Class;
   rdfs:label "Stoffelijke Rest"@nl;
@@ -417,6 +422,12 @@ dc:type a rdf:Property;
   rdfs:label "Uitvaartcontract"@nl;
   rdfs:comment "Juridisch bindende overeenkomst tussen een Persoon en een uitvaartonderneming of verzekeringsmaatschappij met betrekking op de vooraf geplande regelingen en financiële aspecten van een Uitvaart."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> a owl:Class;
+  rdfs:label "Overlijdenstoestand"@nl;
+  rdfs:comment "De medische toestand bij het Overlijden van de Persoon"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking> a owl:Class;
   rdfs:label "Stoffelijke Restverwerking"@nl;
