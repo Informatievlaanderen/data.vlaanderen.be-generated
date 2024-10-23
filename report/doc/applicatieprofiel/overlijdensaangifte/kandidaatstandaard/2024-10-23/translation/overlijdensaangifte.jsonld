@@ -962,8 +962,15 @@
         "EA-Package": "OSLO_Overlijdensaangifte",
         "EA-Type": "CLASS",
         "EA-Parents": "",
-        "EA-Parents2": [],
-        "parentclasses": "",
+        "EA-Parents2": [
+          {
+            "name": "Persoonsgebeurtenis",
+            "label": "",
+            "package": "Hulppakket",
+            "uri": "http://fixme.com#Persoonsgebeurtenis"
+          }
+        ],
+        "parentclasses": "http://fixme.com#Persoonsgebeurtenis",
         "label": {
           "nl": "Ongeval"
         },
@@ -995,7 +1002,9 @@
       },
       "inpackage": "ACTIVE_PACKAGE",
       "name": "Ongeval",
-      "parents": []
+      "parents": [
+        "http://fixme.com#Persoonsgebeurtenis"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie",
@@ -5272,12 +5281,6 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "name": "leidtTot",
       "inpackage": "ACTIVE_PACKAGE",
-      "ap-usageNote-nl": {
-        "nl": "TODO"
-      },
-      "usage": {
-        "nl": "TODO"
-      },
       "definition": {
         "nl": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
       },
@@ -5313,18 +5316,14 @@
         "definition": {
           "nl": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
         },
-        "usage": {
-          "nl": "TODO"
-        },
+        "usage": "",
         "ap-label-nl": {
           "nl": "leidt tot"
         },
         "ap-definition-nl": {
           "nl": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
         },
-        "ap-usageNote-nl": {
-          "nl": "TODO"
-        },
+        "ap-usageNote-nl": "",
         "ap-codelist": "",
         "RawTags": [
           {
@@ -5336,11 +5335,6 @@
             "key": "definition-nl",
             "value": "NOTE",
             "note": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "NOTE",
-            "note": "null"
           },
           {
             "key": "label-nl",
@@ -5358,11 +5352,6 @@
             "key": "definition-nl",
             "value": "NOTE",
             "note": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "NOTE",
-            "note": "null"
           },
           {
             "key": "label-nl",
@@ -5990,12 +5979,6 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "name": "gevolgVan",
       "inpackage": "ACTIVE_PACKAGE",
-      "ap-usageNote-nl": {
-        "nl": "TODO"
-      },
-      "usage": {
-        "nl": "TODO"
-      },
       "definition": {
         "nl": "De Doodsoorzaak is mee een gevolg van een Geassocieerde Oorzaak."
       },
@@ -6031,29 +6014,20 @@
         "definition": {
           "nl": "De Doodsoorzaak is mee een gevolg van een Geassocieerde Oorzaak."
         },
-        "usage": {
-          "nl": "TODO"
-        },
+        "usage": "",
         "ap-label-nl": {
           "nl": "gevolg van"
         },
         "ap-definition-nl": {
           "nl": "De Doodsoorzaak is mee een gevolg van een Geassocieerde Oorzaak."
         },
-        "ap-usageNote-nl": {
-          "nl": "TODO"
-        },
+        "ap-usageNote-nl": "",
         "ap-codelist": "",
         "RawTags": [
           {
             "key": "name",
             "value": "NOTE",
             "note": "Doodsoorzaak.gevolgVan"
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "NOTE",
-            "note": "null"
           },
           {
             "key": "definition-nl",
@@ -6071,11 +6045,6 @@
             "key": "name",
             "value": "NOTE",
             "note": "Doodsoorzaak.gevolgVan"
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "NOTE",
-            "note": "null"
           },
           {
             "key": "definition-nl",
@@ -8380,6 +8349,12 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "inpackage": "OTHER_PACKAGE",
       "ap-codelist": "http://publications.europa.eu/mdr/authority/country/",
+      "label": {
+        "nl": "Nationaliteitscode"
+      },
+      "ap-label-nl": {
+        "nl": "Nationaliteitscode"
+      },
       "ap-definition-nl": {
         "nl": "TODO"
       },
@@ -8391,10 +8366,14 @@
         "EA-Parents": "",
         "EA-Parents2": [],
         "parentclasses": "",
-        "label": "",
+        "label": {
+          "nl": "Nationaliteitscode"
+        },
         "definition": "",
         "usage": "",
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Nationaliteitscode"
+        },
         "ap-definition-nl": {
           "nl": "TODO"
         },
@@ -8410,11 +8389,16 @@
             "key": "uri",
             "value": "http://www.w3.org/2004/02/skos/core#Concept",
             "note": "null"
+          },
+          {
+            "key": "label-nl",
+            "value": "Nationaliteitscode",
+            "note": "null"
           }
         ],
         "Scope": "NOTHING"
       },
-      "name": ""
+      "name": "Nationaliteitscode"
     },
     {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -17566,14 +17550,14 @@
         "derived": "false",
         "EA-Package": "",
         "EA-Type": "connector",
-        "EA-Domain": "MedischeObservatie",
-        "EA-Domain-Guid": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
-        "EA-Range": "Gezondheidstoestand",
+        "EA-Domain": "Gezondheidstoestand",
+        "EA-Domain-Guid": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
+        "EA-Range": "MedischeObservatie",
         "RangeData": {
-          "EA-Name": "Gezondheidstoestand",
-          "EA-GUID": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
+          "EA-Name": "MedischeObservatie",
+          "EA-GUID": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
           "EA-Package": "OSLO-Gezondheidstoestand",
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+          "uri": "https://build.fhir.org/observation-definitions.html#Observation"
         },
         "sourceRole": "vastgesteld",
         "destRole": "vastgesteldDoor",
@@ -17651,16 +17635,16 @@
       "codelist": [],
       "domain": [
         {
-          "uri": "https://build.fhir.org/observation-definitions.html#Observation",
-          "EA-Name": "MedischeObservatie"
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
+          "EA-Name": "Gezondheidstoestand"
         }
       ],
       "range": [
         {
-          "EA-Name": "Gezondheidstoestand",
-          "EA-GUID": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
+          "EA-Name": "MedischeObservatie",
+          "EA-GUID": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
           "EA-Package": "OSLO-Gezondheidstoestand",
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+          "uri": "https://build.fhir.org/observation-definitions.html#Observation"
         }
       ],
       "generalization": [],
@@ -17690,14 +17674,14 @@
         "derived": "false",
         "EA-Package": "",
         "EA-Type": "connector",
-        "EA-Domain": "Gezondheidstoestand",
-        "EA-Domain-Guid": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
-        "EA-Range": "MedischeObservatie",
+        "EA-Domain": "MedischeObservatie",
+        "EA-Domain-Guid": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
+        "EA-Range": "Gezondheidstoestand",
         "RangeData": {
-          "EA-Name": "MedischeObservatie",
-          "EA-GUID": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
+          "EA-Name": "Gezondheidstoestand",
+          "EA-GUID": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
           "EA-Package": "OSLO-Gezondheidstoestand",
-          "uri": "https://build.fhir.org/observation-definitions.html#Observation"
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
         },
         "sourceRole": "vastgesteldDoor",
         "destRole": "vastgesteld",
@@ -17765,16 +17749,16 @@
       "codelist": [],
       "domain": [
         {
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
-          "EA-Name": "Gezondheidstoestand"
+          "uri": "https://build.fhir.org/observation-definitions.html#Observation",
+          "EA-Name": "MedischeObservatie"
         }
       ],
       "range": [
         {
-          "EA-Name": "MedischeObservatie",
-          "EA-GUID": "{E874E71E-E5EB-4072-9FB9-65D0717D7792}",
+          "EA-Name": "Gezondheidstoestand",
+          "EA-GUID": "{1F054DC9-3BAC-43ec-A326-286D89FF1089}",
           "EA-Package": "OSLO-Gezondheidstoestand",
-          "uri": "https://build.fhir.org/observation-definitions.html#Observation"
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
         }
       ],
       "generalization": [],
@@ -21228,57 +21212,6 @@
       ],
       "generalization": [],
       "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/generiek#type",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "",
-      "inpackage": "OTHER_PACKAGE",
-      "ap-definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Name": "type",
-        "EA-Guid": "{C4368A25-C3D2-4607-A59F-64F2D385F4AB}",
-        "EA-Package": "OSLO-Generiek",
-        "EA-Type": "attribute",
-        "EA-Domain": "Locatie",
-        "EA-Domain-Guid": "{73F19255-85D7-4354-B7EE-0AACB1EAD9BD}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": "",
-        "definition": "",
-        "usage": "",
-        "ap-label-nl": "",
-        "ap-definition-nl": {
-          "nl": "TODO"
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/prov#Location",
-          "EA-Name": "Locatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "1",
       "maxCardinality": "1"
     },
     {
@@ -26135,6 +26068,95 @@
       "maxCardinality": "1"
     },
     {
+      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "omstandigheden",
+      "inpackage": "OTHER_PACKAGE",
+      "definition": {
+        "nl": "Een beschrijving van de omstandigheden."
+      },
+      "label": {
+        "nl": "omstandigheden"
+      },
+      "ap-label-nl": {
+        "nl": "omstandigheden"
+      },
+      "ap-definition-nl": {
+        "nl": "Een beschrijving van de omstandigheden."
+      },
+      "extra": {
+        "EA-Name": "omstandigheden",
+        "EA-Guid": "{21630D82-AE9C-4df8-AE7E-C12CFBFB541E}",
+        "EA-Package": "OSLO_Overlijdensaangifte",
+        "EA-Type": "attribute",
+        "EA-Domain": "Ongeval",
+        "EA-Domain-Guid": "{044DEFEB-35E2-404e-A085-65919B7A5950}",
+        "EA-Range": "TaalString",
+        "RangeData": {
+          "EA-Name": "TaalString",
+          "EA-GUID": "{36913838-ECCD-4df2-A8B7-FD44FDAB5A23}",
+          "EA-Package": "OSLO-Generiek",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "label": {
+          "nl": "omstandigheden"
+        },
+        "definition": {
+          "nl": "Een beschrijving van de omstandigheden."
+        },
+        "usage": "",
+        "ap-label-nl": {
+          "nl": "omstandigheden"
+        },
+        "ap-definition-nl": {
+          "nl": "Een beschrijving van de omstandigheden."
+        },
+        "ap-usageNote-nl": "",
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "omstandigheden",
+            "note": "null"
+          },
+          {
+            "key": "name",
+            "value": "Ongeval.omstandigheden",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Een beschrijving van de omstandigheden.",
+            "note": "null"
+          },
+          {
+            "key": "uri",
+            "value": "http://purl.org/dc/elements/1.1/description",
+            "note": "null"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
+          "EA-Name": "Ongeval"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "TaalString",
+          "EA-GUID": "{36913838-ECCD-4df2-A8B7-FD44FDAB5A23}",
+          "EA-Package": "OSLO-Generiek",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "*"
+    },
+    {
       "@id": "http://data.europa.eu/m8g/startTime",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "name": "begin",
@@ -27360,7 +27382,7 @@
   "template": "overlijdensaangifte-ap.j2",
   "title": "Applicatieprofiel Overlijdensaangifte",
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "2024-05-23",
+  "publication-date": "2024-10-23",
   "contributors-file": "stakeholders.csv",
   "contributors-column": "MijnKolom",
   "site": "site-skeleton/overlijdensaangifte-ap",
@@ -27369,13 +27391,13 @@
   "config": "config/config-ap.json",
   "branchtag": "DAO-0.2.0",
   "disabled": false,
-  "dummy": "026",
+  "dummy": "027",
   "filename": "config/overlijdensaangifte-ap.json",
   "navigation": {},
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte",
   "urlref": "/doc/applicatieprofiel/overlijdensaangifte/kandidaatstandaard/2024-10-23",
-  "documentcommit": "8eec9954d2f36145f3e4911bd452bd4f4f13d4d1",
-  "toolchaincommit": "1ea4e45e59f27e3a6017afcbb944e58bf8afc911",
+  "documentcommit": "0b2c3775c02deba92bf1477f06c42fccf2d7d72e",
+  "toolchaincommit": "990207bc8537cc0b4674929693ba57063f0c24ac",
   "hostname": "https://data.vlaanderen.be",
   "translation": [
     {

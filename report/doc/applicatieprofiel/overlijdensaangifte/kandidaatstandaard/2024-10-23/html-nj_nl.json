@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Applicatieprofiel Overlijdensaangifte",
     "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte",
-    "issued": "2024-05-23",
+    "issued": "2024-10-23",
     "baseURI": "https://data.vlaanderen.be/ns/overlijdensaangifte#",
     "filename": "overlijdensaangifte",
     "navigation": {
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/8eec9954d2f36145f3e4911bd452bd4f4f13d4d1",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/8eec9954d2f36145f3e4911bd452bd4f4f13d4d1/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/0b2c3775c02deba92bf1477f06c42fccf2d7d72e",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/0b2c3775c02deba92bf1477f06c42fccf2d7d72e/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html",
     "usesVocs": [],
@@ -191,9 +191,7 @@
           "description": {
             "nl": "De Doodsoorzaak is mee een gevolg van een Geassocieerde Oorzaak."
           },
-          "usage": {
-            "nl": "TODO"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Doodsoorzaak",
@@ -219,7 +217,6 @@
           "codelist_uri": "",
           "rawTags": {
             "name": "Doodsoorzaak.gevolgVan",
-            "ap-usageNote-nl": "null",
             "definition-nl": "De Doodsoorzaak is mee een gevolg van een Geassocieerde Oorzaak.",
             "label-nl": "gevolg van"
           }
@@ -539,9 +536,7 @@
           "description": {
             "nl": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak."
           },
-          "usage": {
-            "nl": "TODO"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "GeassocieerdeOorzaak",
@@ -568,7 +563,6 @@
           "rawTags": {
             "name": "GeassocieerdeOorzaak.leidtTot",
             "definition-nl": "De Geassocieerde oorzaak leidt mee tot de Doodsoorzaak.",
-            "ap-usageNote-nl": "null",
             "label-nl": "leidt tot"
           }
         },
@@ -829,7 +823,15 @@
         "nl": "Onverwachte gebeurtenis die schade of letsel veroorzaakt"
       },
       "usage": {},
-      "parents": [],
+      "parents": [
+        {
+          "label": "Persoonsgebeurtenis",
+          "name": "Persoonsgebeurtenis",
+          "package": "Hulppakket",
+          "uri": "http://fixme.com#Persoonsgebeurtenis",
+          "scoped_uri": "#Persoonsgebeurtenis"
+        }
+      ],
       "rawTags": {
         "label-nl": "Ongeval",
         "definition-nl": "Onverwachte gebeurtenis die schade of letsel veroorzaakt"
@@ -913,6 +915,47 @@
             "definition-nl": "De locatie van het Ongeval.",
             "label-nl": "locatie",
             "name": "Ongeval.locatie"
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/elements/1.1/description",
+          "name": "omstandigheden",
+          "sort": "omstandigheden",
+          "label": {
+            "nl": "omstandigheden"
+          },
+          "description": {
+            "nl": "Een beschrijving van de omstandigheden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Ongeval",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "omstandigheden",
+            "name": "Ongeval.omstandigheden",
+            "definition-nl": "Een beschrijving van de omstandigheden.",
+            "uri": "http://purl.org/dc/elements/1.1/description"
           }
         }
       ]
@@ -5342,14 +5385,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteldDoor",
-          "name": "vastgesteldDoor",
-          "sort": "vastgesteld door",
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld",
+          "name": "vastgesteld",
+          "sort": "vastgesteld",
           "label": {
-            "nl": "vastgesteld door"
+            "nl": "vastgesteld"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "De Medische Observatie stelt een Gezondheidstoestand vast."
           },
           "usage": {},
           "domain": [
@@ -5376,10 +5419,10 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "name": "MedischeObservatie.vastgesteldDoor",
-            "definition-nl": "null",
-            "label-nl": "vastgesteld door",
-            "package": "OSLO-Gezondheidstoestand"
+            "package": "OSLO-Gezondheidstoestand",
+            "label-nl": "vastgesteld",
+            "definition-nl": "De Medische Observatie stelt een Gezondheidstoestand vast.",
+            "name": "MedischeObservatie.vastgesteld"
           }
         },
         {
@@ -7377,14 +7420,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld",
-          "name": "vastgesteld",
-          "sort": "vastgesteld",
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteldDoor",
+          "name": "vastgesteldDoor",
+          "sort": "vastgesteld door",
           "label": {
-            "nl": "vastgesteld"
+            "nl": "vastgesteld door"
           },
           "description": {
-            "nl": "De Medische Observatie stelt een Gezondheidstoestand vast."
+            "nl": "TODO"
           },
           "usage": {},
           "domain": [
@@ -7411,10 +7454,10 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "package": "OSLO-Gezondheidstoestand",
-            "label-nl": "vastgesteld",
-            "definition-nl": "De Medische Observatie stelt een Gezondheidstoestand vast.",
-            "name": "MedischeObservatie.vastgesteld"
+            "name": "MedischeObservatie.vastgesteldDoor",
+            "definition-nl": "null",
+            "label-nl": "vastgesteld door",
+            "package": "OSLO-Gezondheidstoestand"
           }
         },
         {
@@ -10735,40 +10778,7 @@
         "label-nl": "Locatie",
         "uri": "http://www.w3.org/ns/prov#Location"
       },
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/generiek#type",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Locatie",
-              "uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {}
-        }
-      ]
+      "properties": []
     },
     {
       "uri": "https://schema.org/QuantitativeValue",

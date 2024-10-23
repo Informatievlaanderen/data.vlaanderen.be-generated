@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:schema="http://schema.org/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dc11="http://purl.org/dc/elements/1.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:schema="http://schema.org/">
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/overlijdensaangifte#Bewijs.datum">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/overlijdensaangifte">
@@ -586,6 +586,11 @@
             <rdfs:label xml:lang="nl">gerelateerd aan</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/description">
+            <rdfs:label xml:lang="nl">omstandigheden</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
     <rdfs:label xml:lang="nl">datum</rdfs:label>
@@ -736,6 +741,7 @@
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/overlijdensaangifte"/>
         <rdfs:label xml:lang="nl">Ongeval</rdfs:label>
         <rdfs:comment xml:lang="nl">Onverwachte gebeurtenis die schade of letsel veroorzaakt</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://fixme.com#Persoonsgebeurtenis"/>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>

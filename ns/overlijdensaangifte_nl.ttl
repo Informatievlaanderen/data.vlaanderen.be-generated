@@ -1,5 +1,6 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -364,6 +365,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range <https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking> .
 
+dc11:description a rdf:Property;
+  rdfs:label "omstandigheden"@nl .
+
 dc:relation a rdf:Property;
   rdfs:label "gerelateerd aan"@nl .
 
@@ -407,7 +411,8 @@ dc:type a rdf:Property;
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval> a owl:Class;
   rdfs:label "Ongeval"@nl;
   rdfs:comment "Onverwachte gebeurtenis die schade of letsel veroorzaakt"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden> a owl:Class;
   rdfs:label "FoetaalOverlijden"@nl;
@@ -726,7 +731,8 @@ dc:type a rdf:Property;
   rdfs:seeAlso crm:E52_Time-Span,
     skos:Concept,
     dc:type,
-    dc:relation;
+    dc:relation,
+    dc11:description;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
