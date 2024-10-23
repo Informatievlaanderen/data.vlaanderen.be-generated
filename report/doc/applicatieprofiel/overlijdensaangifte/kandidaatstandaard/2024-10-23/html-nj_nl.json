@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/aa15fa070f79079d7078a33649b99bdc364f9132",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/aa15fa070f79079d7078a33649b99bdc364f9132/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/8eec9954d2f36145f3e4911bd452bd4f4f13d4d1",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/8eec9954d2f36145f3e4911bd452bd4f4f13d4d1/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-overlijdensaangifte.html",
     "usesVocs": [],
@@ -836,38 +836,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Ongeval",
-              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Locatie",
-              "range_uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Locatie",
-              "range_puri": "http://www.w3.org/ns/prov#Location",
-              "range_label": {
-                "nl": "Locatie"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor",
           "name": "veroorzaaktDoor",
           "sort": "veroorzaakt door",
@@ -905,6 +873,46 @@
             "name": "Overlijdenstoestand.veroorzaaktDoor",
             "definition-nl": "De Overlijdenstoestand wordt veroorzaakt door het Ongeval.",
             "label-nl": "veroorzaakt door"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.locatie",
+          "name": "locatie",
+          "sort": "locatie",
+          "label": {
+            "nl": "locatie"
+          },
+          "description": {
+            "nl": "De locatie van het Ongeval."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Ongeval",
+              "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Locatie",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De locatie van het Ongeval.",
+            "label-nl": "locatie",
+            "name": "Ongeval.locatie"
           }
         }
       ]
@@ -5334,6 +5342,47 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteldDoor",
+          "name": "vastgesteldDoor",
+          "sort": "vastgesteld door",
+          "label": {
+            "nl": "vastgesteld door"
+          },
+          "description": {
+            "nl": "TODO"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "MedischeObservatie",
+              "uri": "https://build.fhir.org/observation-definitions.html#Observation"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gezondheidstoestand",
+              "range_uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Gezondheidstoestand",
+              "range_puri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
+              "range_label": {
+                "nl": "Gezondheidstoestand"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "MedischeObservatie.vastgesteldDoor",
+            "definition-nl": "null",
+            "label-nl": "vastgesteld door",
+            "package": "OSLO-Gezondheidstoestand"
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.gedocumenteerdDoor",
           "name": "gedocumenteerdDoor",
           "sort": "gedocumenteerd door",
@@ -7325,6 +7374,47 @@
             "definition-nl": "De lengte van een Persoon.",
             "ap-definition-nl": "De lengte van een Persoon.",
             "name": "MedischeToestand.lengte"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld",
+          "name": "vastgesteld",
+          "sort": "vastgesteld",
+          "label": {
+            "nl": "vastgesteld"
+          },
+          "description": {
+            "nl": "De Medische Observatie stelt een Gezondheidstoestand vast."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Gezondheidstoestand",
+              "uri": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "MedischeObservatie",
+              "range_uri": "https://build.fhir.org/observation-definitions.html#Observation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Medische Observatie",
+              "range_puri": "https://build.fhir.org/observation-definitions.html#Observation",
+              "range_label": {
+                "nl": "Medische Observatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "package": "OSLO-Gezondheidstoestand",
+            "label-nl": "vastgesteld",
+            "definition-nl": "De Medische Observatie stelt een Gezondheidstoestand vast.",
+            "name": "MedischeObservatie.vastgesteld"
           }
         },
         {
@@ -9558,20 +9648,6 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
-      "name": {
-        "undefined": ""
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.wordtBepaaldDoor",
       "name": {
         "nl": "wordt bepaald door",
@@ -9906,6 +9982,21 @@
       "name": {
         "nl": "veroorzaakt",
         "undefined": "veroorzaakt"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.locatie",
+      "name": {
+        "nl": "locatie",
+        "undefined": "locatie"
       },
       "description": {},
       "domain": [
