@@ -36,6 +36,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/9234063bc3f88ef0f115e60fe043b4a382b74008>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/ba43c3d188022f476c8ec09c23252e50af5c54b6>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/e021b3c1242f4b5e2f3ce2bdde50e8d299386b70>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/e78273d31d571acb6b18af1770b639d90436690c>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/74feba662f4f65577bf45a8dd94f8faec0f03592>;
@@ -98,6 +99,11 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/e021b3c1242f4b5e2f3ce2bdde50e8d299386b70> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Aanvraag.inhoud";
   shacl:class <http://fixme.com#Toegang>;
+  shacl:name "inhoud"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#AanvraagShape/e78273d31d571acb6b18af1770b639d90436690c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Aanvraag.inhoud";
+  shacl:maxCount 1;
   shacl:name "inhoud"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> .
 
@@ -389,25 +395,30 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/0f6cb927d0d26f3819cba3fb903a075cd426180d> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.status";
   shacl:class skos:Concept;
+  shacl:description "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."@nl;
   shacl:name "status"@nl;
   shacl:path <http://www.w3.org/ns/adms#status> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/23779a18a5c2f44c8b0dab3a46507d75ba9170f7> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.heeftvoorwaarde";
   shacl:class <http://data.europa.eu/m8g/Requirement>;
+  shacl:description "Voorwaarden aan voldaan moet worden om gebruik te maken van de Publieke Dienstverlening."@nl;
   shacl:name "heeft voorwaarde"@nl;
   shacl:path <http://vocab.belgif.be/ns/publicservice#hasRequirement> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.status";
+  shacl:description "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."@nl;
   shacl:maxCount 1;
   shacl:name "status"@nl;
   shacl:path <http://www.w3.org/ns/adms#status> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/3cd92a8c85c13c401a726a8fc60fabd757127c96> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.heeftcompetenteautoriteit";
   shacl:class <http://fixme.com#PubliekeOrganisatie>;
+  shacl:description "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."@nl;
   shacl:name "heeft competente autoriteit"@nl;
   shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/559dab14a90a8ddc0150dd1d09a443ecb37b90dd> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.status";
+  shacl:description "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."@nl;
   shacl:minCount 1;
   shacl:name "status"@nl;
   shacl:path <http://www.w3.org/ns/adms#status> .
@@ -415,20 +426,25 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/5bfc49675eef06366e6309009f937f9d904ac377> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.produceert";
   shacl:class <http://data.vlaanderen.be/ns/besluit#Vergunning>,
     <http://fixme.com#Toegang>;
+  shacl:description "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."@nl,
+    "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."@nl;
   shacl:name "produceert"@nl;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/bbfb2e957314443e6e645ec5524adec92985a9e1> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.heeftcompetenteautoriteit";
+  shacl:description "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."@nl;
   shacl:maxCount 1;
   shacl:name "heeft competente autoriteit"@nl;
   shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/d85ada83fe1a0861efd71a691b59b7b479524d74> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.volgt";
   shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>;
+  shacl:description "Procedure die de Publieke Dienstverlening volgt."@nl;
   shacl:name "volgt"@nl;
   shacl:path <http://purl.org/vocab/cpsv#follows> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverleningShape/ebda113bd4dfd35899ac83fe5ff51f0759df9c1b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#PubliekeDienstverlening.heeftcompetenteautoriteit";
+  shacl:description "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."@nl;
   shacl:minCount 1;
   shacl:name "heeft competente autoriteit"@nl;
   shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority> .
@@ -441,9 +457,16 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/001e53b7e065bdc038738e3878dba39e52640165>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/95686c86902fbfa5609e6dae7f2d151db909ed3a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/6fa5673564522b1e65c5bef6f04cf1201cc459b0>;
   shacl:targetClass <http://fixme.com#Toegang> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/001e53b7e065bdc038738e3878dba39e52640165> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Toegang.voertuig";
+  shacl:description "Voertuig op welke het recht van toepassing is."@nl;
+  shacl:maxCount 1;
+  shacl:name "voertuig"@nl;
+  shacl:path <http://fixme.com#voertuig> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ToegangShape/0d44248bd2abd8d49e8bccaa16d31a225702264e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Toegang.tijdsbestek";
   shacl:minCount 1;
@@ -491,7 +514,7 @@
   shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/10238f20248c4a8851251daa05d9a6f17ba672d5>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/d0cf7407b091f6511da927ca074d2dcebd9aa793>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/f750c43834adf6de85a201545f2ebc803fc9e11a>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/e7a001b38d1df5ca774adb7b522ed43c30f53c70>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/7ffb384b53c0821108c321c364af0fb9b8b16818>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/972d73e7a13100b66c0c2f44466edac47aa1ab28>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/bb43a48c77e7d98609af3d3bb1b1648370465308>,
@@ -499,6 +522,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/9234063bc3f88ef0f115e60fe043b4a382b74008>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/ba43c3d188022f476c8ec09c23252e50af5c54b6>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/e021b3c1242f4b5e2f3ce2bdde50e8d299386b70>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/e78273d31d571acb6b18af1770b639d90436690c>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/25eec7676674c9257a3333d5295b669d5ab2c824>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/358ce6c130ed0d9389323aa02404dec91c77c747>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/6f6f64db25021594dfd8c5d0aa1242a13ba5ad58>;
@@ -534,6 +558,11 @@
   shacl:name "ingangsdatum"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/7ffb384b53c0821108c321c364af0fb9b8b16818> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Vergunning.gebruiktals";
+  shacl:class <http://data.europa.eu/m8g/Evidence>;
+  shacl:name "gebruikt als"@nl;
+  shacl:path <http://vocab.belgif.be/ns/publicservice#isUsedAs> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/9234063bc3f88ef0f115e60fe043b4a382b74008> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Vergunning.ingangsdatum";
   shacl:minCount 1;
   shacl:name "ingangsdatum"@nl;
@@ -564,10 +593,10 @@
   shacl:name "inhoud"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/e7a001b38d1df5ca774adb7b522ed43c30f53c70> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Vergunning.gebruiktsals";
-  shacl:class <http://data.europa.eu/m8g/Evidence>;
-  shacl:name "gebruikts als"@nl;
-  shacl:path <http://vocab.belgif.be/ns/publicservice#isUsedAs> .
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/e78273d31d571acb6b18af1770b639d90436690c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Vergunning.inhoud";
+  shacl:maxCount 1;
+  shacl:name "inhoud"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#VergunningShape/f750c43834adf6de85a201545f2ebc803fc9e11a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Vergunning.document";
   shacl:maxCount 1;
@@ -698,9 +727,16 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/75dad84b06c5cf7626915ea99f2ab89a09e17951>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/496e8990377cd381a322f6db001ca5bf2b3b3a4d>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/75dad84b06c5cf7626915ea99f2ab89a09e17951>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/709c2bcd18a314952fdff295cb49b0f723fcbf1a>;
   shacl:targetClass dbo:Case .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/496e8990377cd381a322f6db001ca5bf2b3b3a4d> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Zaak.dissier";
+  shacl:description "Het dossier waarin deze zaak wordt behandeld."@nl;
+  shacl:maxCount 1;
+  shacl:name "dissier"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/709c2bcd18a314952fdff295cb49b0f723fcbf1a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Zaak.zaakhandeling";
   shacl:class <http://data.vlaanderen.be/ns/besluit#Vergunning>,
@@ -710,6 +746,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#ZaakShape/75dad84b06c5cf7626915ea99f2ab89a09e17951> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-04#Zaak.dissier";
   shacl:class <https://data.vlaanderen.be/ns/dossier#Dossier>;
+  shacl:description "Het dossier waarin deze zaak wordt behandeld."@nl;
   shacl:name "dissier"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> .
 

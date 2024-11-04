@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/6405dc2d6af7881d07696c4dda81f5380dc793a3",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/6405dc2d6af7881d07696c4dda81f5380dc793a3/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/b43722d56685f965cc203a2b449d1ee4d91068a8",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/b43722d56685f965cc203a2b449d1ee4d91068a8/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -180,7 +180,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "name": "voertuig",
@@ -218,7 +218,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "voorwerp",
@@ -568,7 +568,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "vervult",
@@ -733,7 +733,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://data.europa.eu/m8g/isRequirementOf",
@@ -770,7 +770,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "heeft ondersteunend bewijs",
@@ -807,7 +807,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://data.europa.eu/m8g/hasRequirement",
@@ -920,7 +920,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "inhoud",
@@ -1040,10 +1040,10 @@
         },
         {
           "uri": "http://vocab.belgif.be/ns/publicservice#isUsedAs",
-          "name": "gebruiktsAls",
-          "sort": "gebruikts als",
+          "name": "gebruiktAls",
+          "sort": "gebruikt als",
           "label": {
-            "nl": "gebruikts als"
+            "nl": "gebruikt als"
           },
           "description": {},
           "usage": {},
@@ -1068,10 +1068,10 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "gebruikts als",
+            "ap-label-nl": "gebruikt als",
             "uri": "http://vocab.belgif.be/ns/publicservice#isUsedAs"
           }
         }
@@ -1122,7 +1122,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
@@ -1159,7 +1159,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
@@ -1173,7 +1173,9 @@
           "label": {
             "nl": "dissier"
           },
-          "description": {},
+          "description": {
+            "nl": "Het dossier waarin deze zaak wordt behandeld."
+          },
           "usage": {},
           "domain": [
             {
@@ -1196,11 +1198,12 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
-            "ap-label-nl": "dissier"
+            "ap-label-nl": "dissier",
+            "ap-definition-nl": "Het dossier waarin deze zaak wordt behandeld."
           }
         }
       ]
@@ -1303,12 +1306,15 @@
         "nl": "Publieke Dienstverlening"
       },
       "sort": "Publieke Dienstverlening",
-      "description": {},
+      "description": {
+        "nl": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
+      },
       "usage": {},
       "parents": [],
       "rawTags": {
         "uri": "http://purl.org/vocab/cpsv#PublicService",
-        "ap-label-nl": "Publieke Dienstverlening"
+        "ap-label-nl": "Publieke Dienstverlening",
+        "ap-definition-nl": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
       },
       "properties": [
         {
@@ -1318,7 +1324,9 @@
           "label": {
             "nl": "status"
           },
-          "description": {},
+          "description": {
+            "nl": "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."
+          },
           "usage": {},
           "domain": [
             {
@@ -1345,7 +1353,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.w3.org/ns/adms#status",
-            "ap-label-nl": "status"
+            "ap-label-nl": "status",
+            "ap-definition-nl": "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."
           }
         },
         {
@@ -1355,7 +1364,9 @@
           "label": {
             "nl": "heeft voorwaarde"
           },
-          "description": {},
+          "description": {
+            "nl": "Voorwaarden aan voldaan moet worden om gebruik te maken van de Publieke Dienstverlening."
+          },
           "usage": {},
           "domain": [
             {
@@ -1378,9 +1389,10 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "Voorwaarden aan voldaan moet worden om gebruik te maken van de Publieke Dienstverlening.",
             "ap-label-nl": "heeft voorwaarde",
             "uri": "http://vocab.belgif.be/ns/publicservice#hasRequirement"
           }
@@ -1392,7 +1404,9 @@
           "label": {
             "nl": "produceert"
           },
-          "description": {},
+          "description": {
+            "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          },
           "usage": {},
           "domain": [
             {
@@ -1419,6 +1433,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "produceert",
+            "ap-definition-nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening.",
             "uri": "http://purl.org/vocab/cpsv#produces"
           }
         },
@@ -1429,7 +1444,9 @@
           "label": {
             "nl": "produceert"
           },
-          "description": {},
+          "description": {
+            "nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          },
           "usage": {},
           "domain": [
             {
@@ -1456,7 +1473,8 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "produceert",
-            "uri": "http://purl.org/vocab/cpsv#produces"
+            "uri": "http://purl.org/vocab/cpsv#produces",
+            "ap-definition-nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
           }
         },
         {
@@ -1466,7 +1484,9 @@
           "label": {
             "nl": "volgt"
           },
-          "description": {},
+          "description": {
+            "nl": "Procedure die de Publieke Dienstverlening volgt."
+          },
           "usage": {},
           "domain": [
             {
@@ -1489,10 +1509,11 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/vocab/cpsv#follows",
+            "ap-definition-nl": "Procedure die de Publieke Dienstverlening volgt.",
             "ap-label-nl": "volgt"
           }
         },
@@ -1503,7 +1524,9 @@
           "label": {
             "nl": "heeft competente autoriteit"
           },
-          "description": {},
+          "description": {
+            "nl": "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."
+          },
           "usage": {},
           "domain": [
             {
@@ -1530,7 +1553,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://data.europa.eu/m8g/hasCompetentAuthority",
-            "ap-label-nl": "heeft competente autoriteit"
+            "ap-label-nl": "heeft competente autoriteit",
+            "ap-definition-nl": "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."
           }
         }
       ]
@@ -1673,7 +1697,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "inhoud",
@@ -1928,7 +1952,9 @@
         "nl": "Procedure"
       },
       "sort": "Procedure",
-      "description": {},
+      "description": {
+        "nl": "Reeks stappen die de officiële of geaccepteerde manier is om iets te doen."
+      },
       "usage": {},
       "parents": [
         {
@@ -1941,7 +1967,8 @@
       ],
       "rawTags": {
         "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
-        "ap-label-nl": "Procedure"
+        "ap-label-nl": "Procedure",
+        "ap-definition-nl": "Reeks stappen die de officiële of geaccepteerde manier is om iets te doen."
       },
       "properties": [
         {
@@ -2044,7 +2071,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "toegang",
