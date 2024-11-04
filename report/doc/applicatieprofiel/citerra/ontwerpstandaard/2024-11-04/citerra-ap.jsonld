@@ -1,0 +1,4982 @@
+{
+    "@context": {
+        "vlaanderen": "http://data.vlaanderen.be/ns/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "void": "http://rdfs.org/ns/void#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "sdmx-dimension": "http://purl.org/linked-data/sdmx/2009/dimension#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sdmx-attribute": "http://purl.org/linked-data/sdmx/2009/attribute#",
+        "qb": "http://purl.org/linked-data/cube#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "sdmx-concept": "http://purl.org/linked-data/sdmx/2009/concept#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "person": "http://www.w3.org/ns/person#",
+        "rec": "http://www.w3.org/2001/02pd/rec54#",
+        "vann": "http://purl.org/vocab/vann/",
+        "sh": "http://w3.org/ns/shacl#",
+        "label": {
+            "@id": "rdfs:label",
+            "@container": "@language"
+        },
+        "modified": {
+            "@id": "dcterms:modified",
+            "@type": "xsd:date"
+        },
+        "issued": {
+            "@id": "dcterms:issued"
+        },
+        "authors": {
+            "@type": "foaf:Person",
+            "@id": "foaf:maker"
+        },
+        "editors": {
+            "@type": "foaf:Person",
+            "@id": "rec:editor"
+        },
+        "contributors": {
+            "@type": "foaf:Person",
+            "@id": "dcterms:contributor"
+        },
+        "affiliation": {
+            "@id": "http://schema.org/affiliation"
+        },
+        "classes": {
+            "@reverse": "rdfs:isDefinedBy"
+        },
+        "datatypes": {
+            "@reverse": "rdfs:isDefinedBy"
+        },
+        "name": {
+            "@id": "rdfs:label"
+        },
+        "properties": {
+            "@reverse": "rdfs:isDefinedBy"
+        },
+        "domain": {
+            "@id": "rdfs:domain"
+        },
+        "range": {
+            "@id": "rdfs:range"
+        },
+        "minCardinality": {
+            "@id": "sh:minCount"
+        },
+        "maxCardinality": {
+            "@id": "sh:maxCount"
+        },
+        "generalization": {
+            "@id": "rdfs:subPropertyOf"
+        },
+        "externals": {
+            "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+            "@id": "rdfs:seeAlso"
+        }
+    },
+    "@id": "http://fixme.com",
+    "@type": "http://www.w3.org/2002/07/owl#Ontology",
+    "label": {
+        "nl": "citerra-ap",
+        "en": "citerra-ap"
+    },
+    "issued": "TODO",
+    "license": "TODO",
+    "extra": {
+        "EA-Name": "Mobiliteitsvergunning",
+        "EA-Guid": "{1F06B427-843A-41ec-8DF2-FA31F5A7C832}",
+        "issued": "TODO",
+        "license": "TODO",
+        "RawTags": []
+    },
+    "authors": [
+        {
+            "foaf:firstName": "AuteurVoornaam",
+            "foaf:lastName": "AuteurNaam",
+            "affiliation": {
+                "foaf:name": "AuteurAffiliatie",
+                "foaf:homepage": "https://auteurwebsiteurl"
+            },
+            "foaf:mbox": "auteurvoornaam.auteurnaam@auteurdomein",
+            "@type": "foaf:Person"
+        }
+    ],
+    "editors": [
+        {
+            "foaf:firstName": "EditorVoornaam",
+            "foaf:lastName": "EditorNaam",
+            "affiliation": {
+                "foaf:name": "EditorAffiliatie",
+                "foaf:homepage": "https://editorwebsiteurl"
+            },
+            "foaf:mbox": "editorvoornaam.editornaam@editordomein",
+            "@type": "foaf:Person"
+        }
+    ],
+    "contributors": [
+        {
+            "foaf:firstName": "MedewerkerVoornaam",
+            "foaf:lastName": "MedewerkerNaam",
+            "affiliation": {
+                "foaf:name": "MedewerkerAffiliatie",
+                "foaf:homepage": "https://medewerkerwebsiteurl"
+            },
+            "foaf:mbox": "medewerkervoornaam.medewerkernaam@medewerkerdomein",
+            "@type": "foaf:Person"
+        }
+    ],
+    "classes": [
+        {
+            "@id": "http://fixme.com#ConsumeerPubliekeDienstverleningstap",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "definition": {
+                "nl": "Een Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
+            },
+            "label": {
+                "nl": "ConsumeerPubliekeDienstverleningstap"
+            },
+            "ap-label-nl": {
+                "nl": "ConsumeerPubliekeDienstverleningstap"
+            },
+            "ap-definition-nl": {
+                "nl": "Een Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
+            },
+            "extra": {
+                "EA-Name": "ConsumeerPubliekeDienstverleningstap",
+                "EA-Guid": "{D00E8AF0-3A78-4ddc-A306-FC51BCE74A25}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "CLASS",
+                "EA-Parents": "Procedurestap",
+                "EA-Parents2": [
+                    {
+                        "name": "Procedurestap",
+                        "label": "Procedurestap",
+                        "package": "Dossier",
+                        "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+                    }
+                ],
+                "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
+                "label": {
+                    "nl": "ConsumeerPubliekeDienstverleningstap"
+                },
+                "definition": {
+                    "nl": "Een Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "ConsumeerPubliekeDienstverleningstap"
+                },
+                "ap-definition-nl": {
+                    "nl": "Een Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "ConsumeerPubliekeDienstverleningstap",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "ConsumeerPubliekeDienstverleningstap",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Een Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "inpackage": "ACTIVE_PACKAGE",
+            "name": "Consumeerpubliekedienstverleningstap",
+            "parents": [
+                "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+            ]
+        },
+        {
+            "@id": "http://fixme.com#LogischeVoorwaarde",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "definition": {
+                "nl": "Een Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."
+            },
+            "label": {
+                "nl": "Logische voorwaarde"
+            },
+            "ap-label-nl": {
+                "nl": "Logische voorwaarde"
+            },
+            "ap-definition-nl": {
+                "nl": "Een Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."
+            },
+            "extra": {
+                "EA-Name": "LogischeVoorwaarde",
+                "EA-Guid": "{39465F81-4B66-4f85-B85E-2C418FC7455E}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "CLASS",
+                "EA-Parents": "Voorwaarde",
+                "EA-Parents2": [
+                    {
+                        "name": "Voorwaarde",
+                        "label": "Voorwaarde",
+                        "package": "CCCEV",
+                        "uri": "http://data.europa.eu/m8g/Requirement"
+                    }
+                ],
+                "parentclasses": "http://data.europa.eu/m8g/Requirement",
+                "label": {
+                    "nl": "Logische voorwaarde"
+                },
+                "definition": {
+                    "nl": "Een Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Logische voorwaarde"
+                },
+                "ap-definition-nl": {
+                    "nl": "Een Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "LogischeVoorwaarde",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Logische voorwaarde",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Een Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "inpackage": "ACTIVE_PACKAGE",
+            "name": "LogischeVoorwaarde",
+            "parents": [
+                "http://data.europa.eu/m8g/Requirement"
+            ]
+        },
+        {
+            "@id": "http://fixme.com#Toegang",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "definition": {
+                "nl": "Het recht op Toegang tot een Locatie."
+            },
+            "label": {
+                "nl": "Toegang"
+            },
+            "ap-label-nl": {
+                "nl": "Toegang"
+            },
+            "ap-definition-nl": {
+                "nl": "Het recht op Toegang tot een Locatie."
+            },
+            "extra": {
+                "EA-Name": "Toegang",
+                "EA-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [
+                    {
+                        "name": "Recht",
+                        "label": "",
+                        "package": "OV",
+                        "uri": "http://fixme.com#Recht"
+                    },
+                    {
+                        "name": "Output",
+                        "label": "",
+                        "package": "CPSV-AP",
+                        "uri": "http://fixme.com#Output"
+                    }
+                ],
+                "parentclasses": "http://fixme.com#Recht, http://fixme.com#Output",
+                "label": {
+                    "nl": "Toegang"
+                },
+                "definition": {
+                    "nl": "Het recht op Toegang tot een Locatie."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Toegang"
+                },
+                "ap-definition-nl": {
+                    "nl": "Het recht op Toegang tot een Locatie."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "Toegang",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Toegang",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Het recht op Toegang tot een Locatie.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "inpackage": "ACTIVE_PACKAGE",
+            "name": "Toegang",
+            "parents": [
+                "http://fixme.com#Recht",
+                "http://fixme.com#Output"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "@id": "http://fixme.com#voertuig",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "voertuig",
+            "inpackage": "ACTIVE_PACKAGE",
+            "definition": {
+                "nl": "Voertuig op welke het recht van toepassing is."
+            },
+            "label": {
+                "nl": "voertuig"
+            },
+            "ap-label-nl": {
+                "nl": "voertuig"
+            },
+            "ap-definition-nl": {
+                "nl": "Voertuig op welke het recht van toepassing is."
+            },
+            "extra": {
+                "EA-Name": "voertuig",
+                "EA-Guid": "{320F8C86-AE97-4e61-9C3A-07AE195500CD}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Toegang",
+                "EA-Domain-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                "EA-Range": "Voertuig",
+                "RangeData": {
+                    "EA-Name": "Voertuig",
+                    "EA-GUID": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://schema.org/Vehicle"
+                },
+                "sourceRole": "toegang",
+                "destRole": "voertuig",
+                "label": {
+                    "nl": "voertuig"
+                },
+                "definition": {
+                    "nl": "Voertuig op welke het recht van toepassing is."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "voertuig"
+                },
+                "ap-definition-nl": {
+                    "nl": "Voertuig op welke het recht van toepassing is."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "voertuig"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "Voertuig op welke het recht van toepassing is."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "voertuig"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "voertuig"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "Voertuig op welke het recht van toepassing is."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "voertuig"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://fixme.com#Toegang",
+                    "EA-Name": "Toegang"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voertuig",
+                    "EA-GUID": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://schema.org/Vehicle"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://fixme.com#toegang",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "toegang",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label": {
+                "nl": "toegang"
+            },
+            "ap-label-nl": {
+                "nl": "toegang"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "toegang",
+                "EA-Guid": "{320F8C86-AE97-4e61-9C3A-07AE195500CD}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Voertuig",
+                "EA-Domain-Guid": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                "EA-Range": "Toegang",
+                "RangeData": {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                },
+                "sourceRole": "voertuig",
+                "destRole": "toegang",
+                "label": {
+                    "nl": "toegang"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "toegang"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "toegang"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "toegang"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "toegang"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "toegang"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://schema.org/Vehicle",
+                    "EA-Name": "Voertuig"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://fixme.com#operatie",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "operatie",
+            "inpackage": "ACTIVE_PACKAGE",
+            "definition": {
+                "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
+            },
+            "label": {
+                "nl": "operatie"
+            },
+            "ap-label-nl": {
+                "nl": "operatie"
+            },
+            "ap-definition-nl": {
+                "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
+            },
+            "extra": {
+                "EA-Name": "operatie",
+                "EA-Guid": "{906A2C94-BFA1-43fa-8A95-0207EEA79CDF}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "LogischeVoorwaarde",
+                "EA-Domain-Guid": "{39465F81-4B66-4f85-B85E-2C418FC7455E}",
+                "EA-Range": "LogischeOperatie",
+                "RangeData": {
+                    "EA-Name": "LogischeOperatie",
+                    "EA-GUID": "{525CC03C-4497-4a4f-9A03-3481F0F4F746}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "operatie"
+                },
+                "definition": {
+                    "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "operatie"
+                },
+                "ap-definition-nl": {
+                    "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "operatie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "operatie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Logische operatie die toegepast wordt op de Voorwaarden.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://fixme.com#LogischeVoorwaarde",
+                    "EA-Name": "LogischeVoorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "LogischeOperatie",
+                    "EA-GUID": "{525CC03C-4497-4a4f-9A03-3481F0F4F746}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        }
+    ],
+    "externals": [
+        {
+            "@id": "http://data.europa.eu/m8g/Evidence",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+            },
+            "usage": {
+                "nl": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+            },
+            "definition": {
+                "nl": "Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet."
+            },
+            "label": {
+                "nl": "Bewijs"
+            },
+            "ap-label-nl": {
+                "nl": "Bewijs"
+            },
+            "ap-definition-nl": {
+                "nl": "Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet."
+            },
+            "extra": {
+                "EA-Name": "Bewijs",
+                "EA-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Bewijs"
+                },
+                "definition": {
+                    "nl": "Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet."
+                },
+                "usage": {
+                    "nl": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+                },
+                "ap-label-nl": {
+                    "nl": "Bewijs"
+                },
+                "ap-definition-nl": {
+                    "nl": "Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+                },
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://data.europa.eu/m8g/Evidence",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Bewijs",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "NOTE",
+                        "note": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Bewijs",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Bewijs"
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/Requirement",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Voorwaarde"
+            },
+            "ap-label-nl": {
+                "nl": "Voorwaarde"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Voorwaarde",
+                "EA-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Package": "CCCEV",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Voorwaarde"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Voorwaarde"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://data.europa.eu/m8g/Requirement",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Voorwaarde",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Voorwaarde"
+        },
+        {
+            "@id": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Vergunning"
+            },
+            "ap-label-nl": {
+                "nl": "Vergunning"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Vergunning",
+                "EA-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Package": "OV",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [
+                    {
+                        "name": "Rechtshandeling",
+                        "label": "",
+                        "package": "OV",
+                        "uri": "http://fixme.com#Rechtshandeling"
+                    },
+                    {
+                        "name": "Zaakhandeling",
+                        "label": "",
+                        "package": "OV",
+                        "uri": "http://fixme.com#Zaakhandeling"
+                    },
+                    {
+                        "name": "Output",
+                        "label": "",
+                        "package": "CPSV-AP",
+                        "uri": "http://fixme.com#Output"
+                    }
+                ],
+                "parentclasses": "http://fixme.com#Rechtshandeling, http://fixme.com#Zaakhandeling, http://fixme.com#Output",
+                "label": {
+                    "nl": "Vergunning"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Vergunning"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Vergunning",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Vergunning"
+        },
+        {
+            "@id": "http://dbpedia.org/ontology/Case",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Zaak"
+            },
+            "ap-label-nl": {
+                "nl": "Zaak"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Zaak",
+                "EA-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+                "EA-Package": "Dossier",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Zaak"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Zaak"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://dbpedia.org/ontology/Case",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Zaak",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Zaak"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/Location",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Zone"
+            },
+            "ap-label-nl": {
+                "nl": "Zone"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Zone",
+                "EA-Guid": "{4EF1C4B0-81D8-488e-BD50-38F4053F584A}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Zone"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Zone"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/Location",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Zone",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "name": "Zone"
+        },
+        {
+            "@id": "http://purl.org/vocab/cpsv#PublicService",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Publieke Dienstverlening"
+            },
+            "ap-label-nl": {
+                "nl": "Publieke Dienstverlening"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "PubliekeDienstverlening",
+                "EA-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Package": "CPSV-AP",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Publieke Dienstverlening"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Publieke Dienstverlening"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/vocab/cpsv#PublicService",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Publieke Dienstverlening",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "PubliekeDienstverlening"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/dossier#Dossier",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Dossier"
+            },
+            "ap-label-nl": {
+                "nl": "Dossier"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Dossier",
+                "EA-Guid": "{3CE6A03C-1F67-499a-850B-DFD357EE61CA}",
+                "EA-Package": "Dossier",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Dossier"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Dossier"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/dossier#Dossier",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Dossier",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Dossier"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Aanvraag"
+            },
+            "ap-label-nl": {
+                "nl": "Aanvraag"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Aanvraag",
+                "EA-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Package": "OV",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [
+                    {
+                        "name": "Rechtshandeling",
+                        "label": "",
+                        "package": "OV",
+                        "uri": "http://fixme.com#Rechtshandeling"
+                    },
+                    {
+                        "name": "Zaakhandeling",
+                        "label": "",
+                        "package": "OV",
+                        "uri": "http://fixme.com#Zaakhandeling"
+                    }
+                ],
+                "parentclasses": "http://fixme.com#Rechtshandeling, http://fixme.com#Zaakhandeling",
+                "label": {
+                    "nl": "Aanvraag"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Aanvraag"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Aanvraag",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Aanvraag"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Activiteit"
+            },
+            "ap-label-nl": {
+                "nl": "Activiteit"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Activiteit",
+                "EA-Guid": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                "EA-Package": "OV",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Activiteit"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Activiteit"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Activiteit",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Activiteit"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Procedure"
+            },
+            "ap-label-nl": {
+                "nl": "Procedure"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Procedure",
+                "EA-Guid": "{C3058756-3C1C-4675-ACC3-34A558D87C9F}",
+                "EA-Package": "OV",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [
+                    {
+                        "name": "Rule",
+                        "label": "",
+                        "package": "CPSV-AP",
+                        "uri": "http://fixme.com#Rule"
+                    }
+                ],
+                "parentclasses": "http://fixme.com#Rule",
+                "label": {
+                    "nl": "Procedure"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Procedure"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Procedure",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Procedure"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Procedurestap"
+            },
+            "ap-label-nl": {
+                "nl": "Procedurestap"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Procedurestap",
+                "EA-Guid": "{55FE233B-7EC0-4b12-A3BE-C34EF58D8CF9}",
+                "EA-Package": "Dossier",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Procedurestap"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Procedurestap"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Procedurestap",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Procedurestap"
+        },
+        {
+            "@id": "https://schema.org/Vehicle",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Voertuig"
+            },
+            "ap-label-nl": {
+                "nl": "Voertuig"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "Voertuig",
+                "EA-Guid": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Voertuig"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Voertuig"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://schema.org/Vehicle",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Voertuig",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "name": "Voertuig"
+        },
+        {
+            "@id": "https://www.w3.org/2004/02/skos/core#Concept",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "Logische operatie"
+            },
+            "ap-label-nl": {
+                "nl": "Logische operatie"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "LogischeOperatie",
+                "EA-Guid": "{525CC03C-4497-4a4f-9A03-3481F0F4F746}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "ENUMERATION",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Logische operatie"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "Logische operatie"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://www.w3.org/2004/02/skos/core#Concept",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Logische operatie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "name",
+                        "value": "LogischeOperatie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Logische operatie",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "name": "LogischeOperatie"
+        }
+    ],
+    "externalproperties": [
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "zaakhandeling",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "zaakhandeling"
+            },
+            "ap-label-nl": {
+                "nl": "zaakhandeling"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^zaakhandeling",
+                "EA-Guid": "{831B094C-6559-45ce-AC0E-FB2919FC18D5}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Zaak",
+                "EA-Domain-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+                "EA-Range": "Vergunning",
+                "RangeData": {
+                    "EA-Name": "Vergunning",
+                    "EA-GUID": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                    "EA-Package": "OV",
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+                },
+                "sourceRole": "null",
+                "destRole": "^zaakhandeling",
+                "label": {
+                    "nl": "zaakhandeling"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "zaakhandeling"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "zaakhandeling"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "zaakhandeling"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://dbpedia.org/ontology/Case",
+                    "EA-Name": "Zaak"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Vergunning",
+                    "EA-GUID": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                    "EA-Package": "OV",
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "zaakhandeling",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "zaakhandeling"
+            },
+            "ap-label-nl": {
+                "nl": "zaakhandeling"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^zaakhandeling",
+                "EA-Guid": "{3AAC051B-6A46-45bc-8913-B50362D7A659}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Zaak",
+                "EA-Domain-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+                "EA-Range": "Aanvraag",
+                "RangeData": {
+                    "EA-Name": "Aanvraag",
+                    "EA-GUID": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+                },
+                "sourceRole": "null",
+                "destRole": "^zaakhandeling",
+                "label": {
+                    "nl": "zaakhandeling"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "zaakhandeling"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "zaakhandeling"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "zaakhandeling"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://dbpedia.org/ontology/Case",
+                    "EA-Name": "Zaak"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Aanvraag",
+                    "EA-GUID": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "voorwerp",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "voorwerp"
+            },
+            "ap-label-nl": {
+                "nl": "voorwerp"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^voorwerp",
+                "EA-Guid": "{691A65FE-8EA4-4ac7-B3CF-7C26A632AEF1}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Toegang",
+                "EA-Domain-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                "EA-Range": "Activiteit",
+                "RangeData": {
+                    "EA-Name": "Activiteit",
+                    "EA-GUID": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+                },
+                "sourceRole": "null",
+                "destRole": "^voorwerp",
+                "label": {
+                    "nl": "voorwerp"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "voorwerp"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "voorwerp"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "voorwerp"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://fixme.com#Toegang",
+                    "EA-Name": "Toegang"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activiteit",
+                    "EA-GUID": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "verantwoordelijke",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "verantwoordelijke"
+            },
+            "ap-label-nl": {
+                "nl": "verantwoordelijke"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^verantwoordelijke",
+                "EA-Guid": "{D3C7FFCC-65F9-4cd6-AB9B-2D46CDACF3B5}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "PubliekeOrganisatie",
+                "RangeData": {
+                    "EA-Name": "PubliekeOrganisatie",
+                    "EA-GUID": "{82A98D85-8025-4d31-BC99-DDB6C967B9CE}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://fixme.com#PubliekeOrganisatie"
+                },
+                "label": {
+                    "nl": "verantwoordelijke"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "verantwoordelijke"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "verantwoordelijke",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "PubliekeOrganisatie",
+                    "EA-GUID": "{82A98D85-8025-4d31-BC99-DDB6C967B9CE}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://fixme.com#PubliekeOrganisatie"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "name": "aanvrager",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "aanvrager"
+            },
+            "ap-label-nl": {
+                "nl": "aanvrager"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "aanvrager",
+                "EA-Guid": "{DA9D7DBD-32BC-4e39-BA40-678F74A6B483}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Aanvraag",
+                "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Range": "null",
+                "RangeData": {
+                    "EA-Name": "",
+                    "EA-Package": "",
+                    "uri": "null"
+                },
+                "label": {
+                    "nl": "aanvrager"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "aanvrager"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "aanvrager",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                    "EA-Name": "Aanvraag"
+                }
+            ],
+            "range": [],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "inhoud",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "inhoud"
+            },
+            "ap-label-nl": {
+                "nl": "inhoud"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^inhoud",
+                "EA-Guid": "{F059B645-F3E9-4a74-A068-2E237C74C863}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Aanvraag",
+                "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Range": "Toegang",
+                "RangeData": {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                },
+                "sourceRole": "null",
+                "destRole": "^inhoud",
+                "label": {
+                    "nl": "inhoud"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "inhoud"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "inhoud"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "inhoud"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                    "EA-Name": "Aanvraag"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "inhoud",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "inhoud"
+            },
+            "ap-label-nl": {
+                "nl": "inhoud"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^inhoud",
+                "EA-Guid": "{58ACC41D-07C7-4b21-9835-CCBE7DE381AA}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "Toegang",
+                "RangeData": {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                },
+                "sourceRole": "null",
+                "destRole": "^inhoud",
+                "label": {
+                    "nl": "inhoud"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "inhoud"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "inhoud"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "inhoud"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "ingangsdatum",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "ingangsdatum"
+            },
+            "ap-label-nl": {
+                "nl": "ingangsdatum"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^ingangsdatum",
+                "EA-Guid": "{61656D10-F644-4cfd-9A1F-947C3FC01B1B}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Aanvraag",
+                "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Range": "Date",
+                "RangeData": {
+                    "EA-Name": "Date",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "label": {
+                    "nl": "ingangsdatum"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "ingangsdatum"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "ingangsdatum",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                    "EA-Name": "Aanvraag"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Date",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#date"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "ingangsdatum",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "ingangsdatum"
+            },
+            "ap-label-nl": {
+                "nl": "ingangsdatum"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^ingangsdatum",
+                "EA-Guid": "{81B6C22D-76E2-4555-A0F3-23544905199F}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "Date",
+                "RangeData": {
+                    "EA-Name": "Date",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                "label": {
+                    "nl": "ingangsdatum"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "ingangsdatum"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "ingangsdatum",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Date",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#date"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "dissier",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "dissier"
+            },
+            "ap-label-nl": {
+                "nl": "dissier"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "dossier",
+                "EA-Guid": "{FB6CF23B-9025-43e0-B745-53227D433F75}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Zaak",
+                "EA-Domain-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+                "EA-Range": "Dossier",
+                "RangeData": {
+                    "EA-Name": "Dossier",
+                    "EA-GUID": "{3CE6A03C-1F67-499a-850B-DFD357EE61CA}",
+                    "EA-Package": "Dossier",
+                    "uri": "https://data.vlaanderen.be/ns/dossier#Dossier"
+                },
+                "sourceRole": "null",
+                "destRole": "dossier",
+                "label": {
+                    "nl": "dissier"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "dissier"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "dissier"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "dissier"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://dbpedia.org/ontology/Case",
+                    "EA-Name": "Zaak"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Dossier",
+                    "EA-GUID": "{3CE6A03C-1F67-499a-850B-DFD357EE61CA}",
+                    "EA-Package": "Dossier",
+                    "uri": "https://data.vlaanderen.be/ns/dossier#Dossier"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#document",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "document",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "document"
+            },
+            "ap-label-nl": {
+                "nl": "document"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^document",
+                "EA-Guid": "{8D8F3F40-B247-4c5c-BFE6-F933BBF67072}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "Document",
+                "RangeData": {
+                    "EA-Name": "Document",
+                    "EA-GUID": "{D581E35D-D626-4af6-BBC0-98B543F959DB}",
+                    "EA-Package": "FOAF",
+                    "uri": "http://fixme.com#Document"
+                },
+                "label": {
+                    "nl": "document"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "document"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#document",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "document",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Document",
+                    "EA-GUID": "{D581E35D-D626-4af6-BBC0-98B543F959DB}",
+                    "EA-Package": "FOAF",
+                    "uri": "http://fixme.com#Document"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/ns/dossier#Dossier.bestaatUit",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "bestaatUit",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "bestaat uit"
+            },
+            "ap-label-nl": {
+                "nl": "bestaat uit"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "bestaat uit",
+                "EA-Guid": "{C25C4DF2-D10F-449d-A675-4D1F664D7500}",
+                "EA-Package": "Dossier",
+                "EA-Type": "attribute",
+                "EA-Domain": "Dossier",
+                "EA-Domain-Guid": "{3CE6A03C-1F67-499a-850B-DFD357EE61CA}",
+                "EA-Range": "Stuk",
+                "RangeData": {
+                    "EA-Name": "Stuk",
+                    "EA-GUID": "{D379E2A4-0290-4971-8FE6-4DAF411F8A06}",
+                    "EA-Package": "Dossier",
+                    "uri": "http://fixme.com#Stuk"
+                },
+                "label": {
+                    "nl": "bestaat uit"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "bestaat uit"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "https://data.vlaanderen.be/ns/dossier#Dossier.bestaatUit",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "bestaat uit",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/dossier#Dossier",
+                    "EA-Name": "Dossier"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Stuk",
+                    "EA-GUID": "{D379E2A4-0290-4971-8FE6-4DAF411F8A06}",
+                    "EA-Package": "Dossier",
+                    "uri": "http://fixme.com#Stuk"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://xmlns.com/foaf/0.1/page",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "pagina",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Bvb template van een administratief document of aanvraagformulier of aanwijzingen voor het invullen ervan."
+            },
+            "usage": {
+                "nl": "Bvb template van een administratief document of aanvraagformulier of aanwijzingen voor het invullen ervan."
+            },
+            "definition": {
+                "nl": "Documentatie gerelateerd ah Bewiijs."
+            },
+            "label": {
+                "nl": "pagina"
+            },
+            "ap-label-nl": {
+                "nl": "pagina"
+            },
+            "ap-definition-nl": {
+                "nl": "Documentatie gerelateerd ah Bewiijs."
+            },
+            "extra": {
+                "EA-Name": "documentatie",
+                "EA-Guid": "{E82E27DC-A178-4659-8C46-0380D256D4C3}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "URI",
+                "RangeData": {
+                    "EA-Name": "URI",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#anyURI"
+                },
+                "label": {
+                    "nl": "pagina"
+                },
+                "definition": {
+                    "nl": "Documentatie gerelateerd ah Bewiijs."
+                },
+                "usage": {
+                    "nl": "Bvb template van een administratief document of aanvraagformulier of aanwijzingen voor het invullen ervan."
+                },
+                "ap-label-nl": {
+                    "nl": "pagina"
+                },
+                "ap-definition-nl": {
+                    "nl": "Documentatie gerelateerd ah Bewiijs."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "Bvb template van een administratief document of aanvraagformulier of aanwijzingen voor het invullen ervan."
+                },
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Documentatie gerelateerd ah Bewiijs.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "Bvb template van een administratief document of aanvraagformulier of aanwijzingen voor het invullen ervan.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "pagina",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://xmlns.com/foaf/0.1/page",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "pagina",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "URI",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#anyURI"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/locn#location",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "locatie",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "locatie"
+            },
+            "ap-label-nl": {
+                "nl": "locatie"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "locatie",
+                "EA-Guid": "{D39D40C1-625C-4aea-8109-82FAD1AB456D}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activiteit",
+                "EA-Domain-Guid": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                "EA-Range": "Locatie",
+                "RangeData": {
+                    "EA-Name": "Locatie",
+                    "EA-GUID": "{0E353DEB-197E-4194-8707-A285B24FC6DD}",
+                    "EA-Package": "PROV",
+                    "uri": "http://fixme.com#Locatie"
+                },
+                "label": {
+                    "nl": "locatie"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "locatie"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/locn#location",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "locatie",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+                    "EA-Name": "Activiteit"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Locatie",
+                    "EA-GUID": "{0E353DEB-197E-4194-8707-A285B24FC6DD}",
+                    "EA-Package": "PROV",
+                    "uri": "http://fixme.com#Locatie"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/locn#geometry",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "geometrie",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "geometrie"
+            },
+            "ap-label-nl": {
+                "nl": "geometrie"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "geometrie",
+                "EA-Guid": "{45DB4651-9FBF-404b-ADE3-0CB1F2C1F75E}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Zone",
+                "EA-Domain-Guid": "{4EF1C4B0-81D8-488e-BD50-38F4053F584A}",
+                "EA-Range": "Geometrie",
+                "RangeData": {
+                    "EA-Name": "Geometrie",
+                    "EA-GUID": "{45C9B985-B3CF-4aec-9049-F27F3C1735D0}",
+                    "EA-Package": "locn",
+                    "uri": "http://fixme.com#Geometrie"
+                },
+                "label": {
+                    "nl": "geometrie"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "geometrie"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/locn#geometry",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "geometrie",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/dc/terms/Location",
+                    "EA-Name": "Zone"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Geometrie",
+                    "EA-GUID": "{45C9B985-B3CF-4aec-9049-F27F3C1735D0}",
+                    "EA-Package": "locn",
+                    "uri": "http://fixme.com#Geometrie"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/adms#status",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "status",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "status"
+            },
+            "ap-label-nl": {
+                "nl": "status"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "status",
+                "EA-Guid": "{FFCDAE6A-C31E-4d33-813B-1EFDD020E996}",
+                "EA-Package": "CPSV-AP",
+                "EA-Type": "attribute",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "Status",
+                "RangeData": {
+                    "EA-Name": "Status",
+                    "EA-GUID": "{30566187-CCD2-4a77-A550-DD1DBECE6656}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "status"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "status"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#status",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "status",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Status",
+                    "EA-GUID": "{30566187-CCD2-4a77-A550-DD1DBECE6656}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/adms#identifier",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "referentie",
+            "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Identificator van het object."
+            },
+            "label": {
+                "nl": "referentie"
+            },
+            "ap-label-nl": {
+                "nl": "referentie"
+            },
+            "ap-definition-nl": {
+                "nl": "Identificator van het object."
+            },
+            "extra": {
+                "EA-Name": "referentie",
+                "EA-Guid": "{4A4645FF-E57D-47c6-A093-AF790BDE7609}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "Identificator",
+                "RangeData": {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                },
+                "label": {
+                    "nl": "referentie"
+                },
+                "definition": {
+                    "nl": "Identificator van het object."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "referentie"
+                },
+                "ap-definition-nl": {
+                    "nl": "Identificator van het object."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#identifier",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "referentie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Identificator van het object.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "package",
+                        "value": "OSLO-Transactie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "referentie",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/adms#identifier",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "identificator",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "identificator"
+            },
+            "ap-label-nl": {
+                "nl": "identificator"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^identificator",
+                "EA-Guid": "{A10743BB-9786-4b0b-A96F-9F1B8D9F6E32}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Aanvraag",
+                "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Range": "Identificator",
+                "RangeData": {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                },
+                "label": {
+                    "nl": "identificator"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "identificator"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#identifier",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "identificator",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                    "EA-Name": "Aanvraag"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/adms#identifier",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "identificator",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "identificator"
+            },
+            "ap-label-nl": {
+                "nl": "identificator"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^identificator",
+                "EA-Guid": "{AAFB8B2F-383E-4d75-8E20-33D48A562F41}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "Identificator",
+                "RangeData": {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                },
+                "label": {
+                    "nl": "identificator"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "identificator"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#identifier",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "identificator",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/ns/adms#identifier",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "identificator",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "identificator"
+            },
+            "ap-label-nl": {
+                "nl": "identificator"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "identificator",
+                "EA-Guid": "{12095AA8-1A10-4b00-9F71-42281AD4134A}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Voertuig",
+                "EA-Domain-Guid": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                "EA-Range": "Identificator",
+                "RangeData": {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                },
+                "label": {
+                    "nl": "identificator"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "identificator"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "identificator",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#identifier",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://schema.org/Vehicle",
+                    "EA-Name": "Voertuig"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Identificator",
+                    "EA-GUID": "{043EFA94-2BA1-484c-9B60-880437A4220C}",
+                    "EA-Package": "ADMS",
+                    "uri": "http://fixme.com#Identificator"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "naam",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "naam"
+            },
+            "ap-label-nl": {
+                "nl": "naam"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "naam",
+                "EA-Guid": "{EBF7538C-E760-4bd2-91B9-1BFB0EBE884E}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Zone",
+                "EA-Domain-Guid": "{4EF1C4B0-81D8-488e-BD50-38F4053F584A}",
+                "EA-Range": "Literal",
+                "RangeData": {
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+                },
+                "label": {
+                    "nl": "naam"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "naam"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/2000/01/rdf-schema#label",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "naam",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/dc/terms/Location",
+                    "EA-Name": "Zone"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Literal",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://vocab.belgif.be/ns/publicservice#isUsedAs",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "gebruiktsAls",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "gebruikts als"
+            },
+            "ap-label-nl": {
+                "nl": "gebruikts als"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^gebruikt als",
+                "EA-Guid": "{DFBEEEAA-EFEC-41dd-B8EA-0D0A4F8C5FB1}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Vergunning",
+                "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                "EA-Range": "Bewijs",
+                "RangeData": {
+                    "EA-Name": "Bewijs",
+                    "EA-GUID": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                    "EA-Package": "OSLO-Dienst",
+                    "uri": "http://data.europa.eu/m8g/Evidence"
+                },
+                "sourceRole": "null",
+                "destRole": "^gebruikt als",
+                "label": {
+                    "nl": "gebruikts als"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "gebruikts als"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "gebruikts als"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://vocab.belgif.be/ns/publicservice#isUsedAs"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "gebruikts als"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://vocab.belgif.be/ns/publicservice#isUsedAs"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+                    "EA-Name": "Vergunning"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Bewijs",
+                    "EA-GUID": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                    "EA-Package": "OSLO-Dienst",
+                    "uri": "http://data.europa.eu/m8g/Evidence"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "heeftVoorwaarde",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "heeft voorwaarde"
+            },
+            "ap-label-nl": {
+                "nl": "heeft voorwaarde"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "heeftVoorwaarde",
+                "EA-Guid": "{11D99974-1EB1-48ed-86C1-649FEB51EBBB}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "Voorwaarde",
+                "RangeData": {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                },
+                "sourceRole": "null",
+                "destRole": "heeftVoorwaarde",
+                "label": {
+                    "nl": "heeft voorwaarde"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "heeft voorwaarde"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft voorwaarde"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://vocab.belgif.be/ns/publicservice#hasRequirement"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft voorwaarde"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://vocab.belgif.be/ns/publicservice#hasRequirement"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://purl.org/vocab/cpsv#produces",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "produceert",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "produceert"
+            },
+            "ap-label-nl": {
+                "nl": "produceert"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^produceert",
+                "EA-Guid": "{C22F8EE8-2514-4d22-8B45-159F294A90E3}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "Vergunning",
+                "RangeData": {
+                    "EA-Name": "Vergunning",
+                    "EA-GUID": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                    "EA-Package": "OV",
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+                },
+                "sourceRole": "null",
+                "destRole": "^produceert",
+                "label": {
+                    "nl": "produceert"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "produceert"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "produceert"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#produces"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "produceert"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#produces"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Vergunning",
+                    "EA-GUID": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+                    "EA-Package": "OV",
+                    "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://purl.org/vocab/cpsv#produces",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "produceert",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "produceert"
+            },
+            "ap-label-nl": {
+                "nl": "produceert"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^produceert",
+                "EA-Guid": "{DD18EF64-51B3-4ed9-8357-FF0FCB479D5B}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "Toegang",
+                "RangeData": {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                },
+                "sourceRole": "null",
+                "destRole": "^produceert",
+                "label": {
+                    "nl": "produceert"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "produceert"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "produceert"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#produces"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "produceert"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#produces"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Toegang",
+                    "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Toegang"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://purl.org/vocab/cpsv#follows",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "volgt",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "volgt"
+            },
+            "ap-label-nl": {
+                "nl": "volgt"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^volgt",
+                "EA-Guid": "{75321DA0-6E29-4692-BBAB-D3C20403A702}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "Procedure",
+                "RangeData": {
+                    "EA-Name": "Procedure",
+                    "EA-GUID": "{C3058756-3C1C-4675-ACC3-34A558D87C9F}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+                },
+                "sourceRole": "null",
+                "destRole": "^volgt",
+                "label": {
+                    "nl": "volgt"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "volgt"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#follows"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "volgt"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/vocab/cpsv#follows"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "volgt"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Procedure",
+                    "EA-GUID": "{C3058756-3C1C-4675-ACC3-34A558D87C9F}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{B510A5D7-F37E-4b72-96DD-2DECB440D167}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Toegang",
+                "EA-Domain-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                "EA-Range": "Toegangstype",
+                "RangeData": {
+                    "EA-Name": "Toegangstype",
+                    "EA-GUID": "{17F44DCB-316F-47c2-8A74-51B21D965A39}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://fixme.com#Toegang",
+                    "EA-Name": "Toegang"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Toegangstype",
+                    "EA-GUID": "{17F44DCB-316F-47c2-8A74-51B21D965A39}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{503BA4EB-6949-4a57-8430-EDB1CAD6EB70}",
+                "EA-Package": "CCCEV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "Voorwaardetype",
+                "RangeData": {
+                    "EA-Name": "Voorwaardetype",
+                    "EA-GUID": "{2047A06A-CEEF-4a44-8E68-AB5B9F17FBD6}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Voorwaardetype"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voorwaardetype",
+                    "EA-GUID": "{2047A06A-CEEF-4a44-8E68-AB5B9F17FBD6}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Voorwaardetype"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{9E6FDC98-1CB5-4308-A762-84FE41B024D9}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Aanvraag",
+                "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+                "EA-Range": "Aanvraagtype",
+                "RangeData": {
+                    "EA-Name": "Aanvraagtype",
+                    "EA-GUID": "{837405E6-4EEE-4e64-9E05-8788895D6741}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Aanvraagtype"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+                    "EA-Name": "Aanvraag"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Aanvraagtype",
+                    "EA-GUID": "{837405E6-4EEE-4e64-9E05-8788895D6741}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://fixme.com#Aanvraagtype"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{31985F4C-0E5E-443f-9E8F-D70778BA95A7}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Voertuig",
+                "EA-Domain-Guid": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+                "EA-Range": "Voertuigtype",
+                "RangeData": {
+                    "EA-Name": "Voertuigtype",
+                    "EA-GUID": "{3401A6F0-7DDD-4ea5-B4CA-7DBA8C11C81F}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://schema.org/Vehicle",
+                    "EA-Name": "Voertuig"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voertuigtype",
+                    "EA-GUID": "{3401A6F0-7DDD-4ea5-B4CA-7DBA8C11C81F}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{0A668F00-D5B0-4718-9A4A-D80041945D5D}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activiteit",
+                "EA-Domain-Guid": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                "EA-Range": "Activiteitstype",
+                "RangeData": {
+                    "EA-Name": "Activiteitstype",
+                    "EA-GUID": "{957746A2-E1E1-424a-A85A-65FD4A2A0DD7}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+                    "EA-Name": "Activiteit"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activiteitstype",
+                    "EA-GUID": "{957746A2-E1E1-424a-A85A-65FD4A2A0DD7}",
+                    "EA-Package": "Mobiliteitsvergunning",
+                    "uri": "https://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "name": "type",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-codelist": "https://data.vlaanderen.be/doc/conceptscheme/BewijsType",
+            "ap-usageNote-nl": {
+                "nl": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst."
+            },
+            "usage": {
+                "nl": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst."
+            },
+            "definition": {
+                "nl": "Aard van het Bewijs."
+            },
+            "label": {
+                "nl": "type"
+            },
+            "ap-label-nl": {
+                "nl": "type"
+            },
+            "ap-definition-nl": {
+                "nl": "Aard van het Bewijs."
+            },
+            "extra": {
+                "EA-Name": "type",
+                "EA-Guid": "{FA477F23-F2F2-4cff-83E7-E04D08179F15}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "BewijsType",
+                "RangeData": {
+                    "EA-Name": "",
+                    "EA-Package": "",
+                    "uri": "null"
+                },
+                "label": {
+                    "nl": "type"
+                },
+                "definition": {
+                    "nl": "Aard van het Bewijs."
+                },
+                "usage": {
+                    "nl": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst."
+                },
+                "ap-label-nl": {
+                    "nl": "type"
+                },
+                "ap-definition-nl": {
+                    "nl": "Aard van het Bewijs."
+                },
+                "ap-usageNote-nl": {
+                    "nl": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst."
+                },
+                "ap-codelist": "https://data.vlaanderen.be/doc/conceptscheme/BewijsType",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Aard van het Bewijs.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-codelist",
+                        "value": "https://data.vlaanderen.be/doc/conceptscheme/BewijsType",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "type",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/title",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "name": "titel",
+            "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Officiële naam van het Bewijs."
+            },
+            "label": {
+                "nl": "titel"
+            },
+            "ap-label-nl": {
+                "nl": "titel"
+            },
+            "ap-definition-nl": {
+                "nl": "Officiële naam van het Bewijs."
+            },
+            "extra": {
+                "EA-Name": "naam",
+                "EA-Guid": "{84D9DA72-1952-498f-97DC-365B0F2C623A}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "TaalString",
+                "RangeData": {
+                    "EA-Name": "",
+                    "EA-Package": "",
+                    "uri": "null"
+                },
+                "label": {
+                    "nl": "titel"
+                },
+                "definition": {
+                    "nl": "Officiële naam van het Bewijs."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "titel"
+                },
+                "ap-definition-nl": {
+                    "nl": "Officiële naam van het Bewijs."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Officiële naam van het Bewijs.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "titel",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/title",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "titel",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/publisher",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "uitgever",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "uitgever"
+            },
+            "ap-label-nl": {
+                "nl": "uitgever"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "uitgegevenDoor",
+                "EA-Guid": "{B12F1652-0E8E-485b-A8C3-049DA83FCAC9}",
+                "EA-Package": "CCCEV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "Agent",
+                "RangeData": {
+                    "EA-Name": "Agent",
+                    "EA-GUID": "{96367096-9E17-4609-A8F3-9E64C528D3F4}",
+                    "EA-Package": "PROV",
+                    "uri": "https://www.w3.org/ns/prov#Agent"
+                },
+                "label": {
+                    "nl": "uitgever"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "uitgever"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/publisher",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "uitgever",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Agent",
+                    "EA-GUID": "{96367096-9E17-4609-A8F3-9E64C528D3F4}",
+                    "EA-Package": "PROV",
+                    "uri": "https://www.w3.org/ns/prov#Agent"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/language",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "name": "taal",
+            "inpackage": "OTHER_PACKAGE",
+            "ap-codelist": "http://publications.europa.eu/mdr/authority/language/",
+            "definition": {
+                "nl": "Taal waarin het aangeboden Bewijs moet zijn gesteld."
+            },
+            "label": {
+                "nl": "taal"
+            },
+            "ap-label-nl": {
+                "nl": "taal"
+            },
+            "ap-definition-nl": {
+                "nl": "Taal waarin het aangeboden Bewijs moet zijn gesteld."
+            },
+            "extra": {
+                "EA-Name": "taal",
+                "EA-Guid": "{4B12B3DF-AD32-48ce-9DF4-CD99449EFE80}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "Taalcode",
+                "RangeData": {
+                    "EA-Name": "",
+                    "EA-Package": "",
+                    "uri": "null"
+                },
+                "label": {
+                    "nl": "taal"
+                },
+                "definition": {
+                    "nl": "Taal waarin het aangeboden Bewijs moet zijn gesteld."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "taal"
+                },
+                "ap-definition-nl": {
+                    "nl": "Taal waarin het aangeboden Bewijs moet zijn gesteld."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "http://publications.europa.eu/mdr/authority/language/",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Taal waarin het aangeboden Bewijs moet zijn gesteld.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "taal",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/language",
+                        "note": "Op zich verkeerde term qua semantiek, maar overgenomen van cpsv-ap."
+                    },
+                    {
+                        "key": "ap-codelist",
+                        "value": "http://publications.europa.eu/mdr/authority/language/",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "taal",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/hasPart",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "procedurestap",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "procedurestap"
+            },
+            "ap-label-nl": {
+                "nl": "procedurestap"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "procedurestap",
+                "EA-Guid": "{FCA634DA-4E24-4f82-AC4C-0CE314EA8FA0}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Procedure",
+                "EA-Domain-Guid": "{C3058756-3C1C-4675-ACC3-34A558D87C9F}",
+                "EA-Range": "Procedurestap",
+                "RangeData": {
+                    "EA-Name": "Procedurestap",
+                    "EA-GUID": "{55FE233B-7EC0-4b12-A3BE-C34EF58D8CF9}",
+                    "EA-Package": "Dossier",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+                },
+                "sourceRole": "null",
+                "destRole": "procedurestap",
+                "label": {
+                    "nl": "procedurestap"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "procedurestap"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "procedurestap"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/dc/terms/hasPart"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "procedurestap"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://purl.org/dc/terms/hasPart"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
+                    "EA-Name": "Procedure"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Procedurestap",
+                    "EA-GUID": "{55FE233B-7EC0-4b12-A3BE-C34EF58D8CF9}",
+                    "EA-Package": "Dossier",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://purl.org/dc/terms/extent",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "tijdsbestek",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "tijdsbestek"
+            },
+            "ap-label-nl": {
+                "nl": "tijdsbestek"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "^tijdbestek",
+                "EA-Guid": "{DA6229BA-8668-44af-8741-88E2AE55F038}",
+                "EA-Package": "Mobiliteitsvergunning",
+                "EA-Type": "attribute",
+                "EA-Domain": "Toegang",
+                "EA-Domain-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+                "EA-Range": "Tijdsduur",
+                "RangeData": {
+                    "EA-Name": "Tijdsduur",
+                    "EA-GUID": "{2C81AA56-172F-4078-930A-62D820E2F25F}",
+                    "EA-Package": "W3Ctime",
+                    "uri": "http://www.w3.org/2006/time#TemporalDuration"
+                },
+                "label": {
+                    "nl": "tijdsbestek"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "tijdsbestek"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/extent",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "tijdsbestek",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "TRANSLATIONS_ONLY"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://fixme.com#Toegang",
+                    "EA-Name": "Toegang"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Tijdsduur",
+                    "EA-GUID": "{2C81AA56-172F-4078-930A-62D820E2F25F}",
+                    "EA-Package": "W3Ctime",
+                    "uri": "http://www.w3.org/2006/time#TemporalDuration"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/extent",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "tijdsbestek",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "tijdsbestek"
+            },
+            "ap-label-nl": {
+                "nl": "tijdsbestek"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "tijdsbestek",
+                "EA-Guid": "{60C5A743-D997-4e5c-A64A-2CCE552897A0}",
+                "EA-Package": "OV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activiteit",
+                "EA-Domain-Guid": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+                "EA-Range": "Tijdsduur",
+                "RangeData": {
+                    "EA-Name": "Tijdsduur",
+                    "EA-GUID": "{2C81AA56-172F-4078-930A-62D820E2F25F}",
+                    "EA-Package": "W3Ctime",
+                    "uri": "http://www.w3.org/2006/time#TemporalDuration"
+                },
+                "label": {
+                    "nl": "tijdsbestek"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "tijdsbestek"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/extent",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "tijdsbestek",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+                    "EA-Name": "Activiteit"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Tijdsduur",
+                    "EA-GUID": "{2C81AA56-172F-4078-930A-62D820E2F25F}",
+                    "EA-Package": "W3Ctime",
+                    "uri": "http://www.w3.org/2006/time#TemporalDuration"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/description",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "beschrijving",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "beschrijving"
+            },
+            "ap-label-nl": {
+                "nl": "beschrijving"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "beschrijving",
+                "EA-Guid": "{9F43D6F6-95F8-4e8f-A868-484EA8C8F9C8}",
+                "EA-Package": "CCCEV",
+                "EA-Type": "attribute",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "String",
+                "RangeData": {
+                    "EA-Name": "String",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "label": {
+                    "nl": "beschrijving"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "beschrijving"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/description",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "beschrijving",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "String",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://purl.org/dc/terms/description",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "name": "beschrijving",
+            "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Beschrijving van het Bewijs."
+            },
+            "label": {
+                "nl": "beschrijving"
+            },
+            "ap-label-nl": {
+                "nl": "beschrijving"
+            },
+            "ap-definition-nl": {
+                "nl": "Beschrijving van het Bewijs."
+            },
+            "extra": {
+                "EA-Name": "beschrijving",
+                "EA-Guid": "{004783B4-4865-476c-B9E4-781162315B19}",
+                "EA-Package": "OSLO-Dienst",
+                "EA-Type": "attribute",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "TaalString",
+                "RangeData": {
+                    "EA-Name": "",
+                    "EA-Package": "",
+                    "uri": "null"
+                },
+                "label": {
+                    "nl": "beschrijving"
+                },
+                "definition": {
+                    "nl": "Beschrijving van het Bewijs."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "beschrijving"
+                },
+                "ap-definition-nl": {
+                    "nl": "Beschrijving van het Bewijs."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Beschrijving van het Bewijs.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "beschrijving",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/description",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "beschrijving",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/supportsRequirement",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "vervult",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "vervult"
+            },
+            "ap-label-nl": {
+                "nl": "vervult"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "vervult",
+                "EA-Guid": "{4A26BD75-3796-4105-B341-C3D81C66F882}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Bewijs",
+                "EA-Domain-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                "EA-Range": "Voorwaarde",
+                "RangeData": {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                },
+                "sourceRole": "isVervuldDoor",
+                "destRole": "vervult",
+                "label": {
+                    "nl": "vervult"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "vervult"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "vervult"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/supportsRequirement"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "vervult"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/supportsRequirement"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Evidence",
+                    "EA-Name": "Bewijs"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/isRequirementOf",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "isVoorwaardeVan",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "is voorwaarde van"
+            },
+            "ap-label-nl": {
+                "nl": "is voorwaarde van"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "isVoorwaardeVan",
+                "EA-Guid": "{381BF5C4-DE53-4083-AA4B-1FEDDB5CCCE1}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "Voorwaarde",
+                "RangeData": {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                },
+                "sourceRole": "heeftVoorwaarde",
+                "destRole": "isVoorwaardeVan",
+                "label": {
+                    "nl": "is voorwaarde van"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "is voorwaarde van"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/isRequirementOf"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "is voorwaarde van"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/isRequirementOf"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "is voorwaarde van"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "heeftOndersteunendBewijs",
+            "inpackage": "UNKNOWN",
+            "label": {
+                "nl": "heeft ondersteunend bewijs"
+            },
+            "ap-label-nl": {
+                "nl": "heeft ondersteunend bewijs"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "isVervuldDoor",
+                "EA-Guid": "{4A26BD75-3796-4105-B341-C3D81C66F882}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "Bewijs",
+                "RangeData": {
+                    "EA-Name": "Bewijs",
+                    "EA-GUID": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                    "EA-Package": "OSLO-Dienst",
+                    "uri": "http://data.europa.eu/m8g/Evidence"
+                },
+                "sourceRole": "vervult",
+                "destRole": "isVervuldDoor",
+                "label": {
+                    "nl": "heeft ondersteunend bewijs"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "heeft ondersteunend bewijs"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft ondersteunend bewijs"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/hasSupportingEvidence"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft ondersteunend bewijs"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/hasSupportingEvidence"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Bewijs",
+                    "EA-GUID": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+                    "EA-Package": "OSLO-Dienst",
+                    "uri": "http://data.europa.eu/m8g/Evidence"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/hasRequirement",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "heeftVoorwaarde",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "heeft voorwaarde"
+            },
+            "ap-label-nl": {
+                "nl": "heeft voorwaarde"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "heeftVoorwaarde",
+                "EA-Guid": "{381BF5C4-DE53-4083-AA4B-1FEDDB5CCCE1}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Voorwaarde",
+                "EA-Domain-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                "EA-Range": "Voorwaarde",
+                "RangeData": {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                },
+                "sourceRole": "isVoorwaardeVan",
+                "destRole": "heeftVoorwaarde",
+                "label": {
+                    "nl": "heeft voorwaarde"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "heeft voorwaarde"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/hasRequirement"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft voorwaarde"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "http://data.europa.eu/m8g/hasRequirement"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "heeft voorwaarde"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://data.europa.eu/m8g/Requirement",
+                    "EA-Name": "Voorwaarde"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Voorwaarde",
+                    "EA-GUID": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+                    "EA-Package": "CCCEV",
+                    "uri": "http://data.europa.eu/m8g/Requirement"
+                }
+            ],
+            "generalization": []
+        },
+        {
+            "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "heeftCompetenteAutoriteit",
+            "inpackage": "OTHER_PACKAGE",
+            "label": {
+                "nl": "heeft competente autoriteit"
+            },
+            "ap-label-nl": {
+                "nl": "heeft competente autoriteit"
+            },
+            "ap-definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "heeftCompetenteAutoriteit",
+                "EA-Guid": "{E910C8AC-EBCC-42ae-B6C0-3E1876BFCBE5}",
+                "EA-Package": "CPSV-AP",
+                "EA-Type": "attribute",
+                "EA-Domain": "PubliekeDienstverlening",
+                "EA-Domain-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+                "EA-Range": "PubliekeOrganisatie",
+                "RangeData": {
+                    "EA-Name": "PubliekeOrganisatie",
+                    "EA-GUID": "{82A98D85-8025-4d31-BC99-DDB6C967B9CE}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://fixme.com#PubliekeOrganisatie"
+                },
+                "label": {
+                    "nl": "heeft competente autoriteit"
+                },
+                "definition": "",
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "heeft competente autoriteit"
+                },
+                "ap-definition-nl": {
+                    "nl": "TODO"
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://data.europa.eu/m8g/hasCompetentAuthority",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "heeft competente autoriteit",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://purl.org/vocab/cpsv#PublicService",
+                    "EA-Name": "PubliekeDienstverlening"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "PubliekeOrganisatie",
+                    "EA-GUID": "{82A98D85-8025-4d31-BC99-DDB6C967B9CE}",
+                    "EA-Package": "CPSV-AP",
+                    "uri": "http://fixme.com#PubliekeOrganisatie"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        }
+    ]
+}
