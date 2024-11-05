@@ -271,8 +271,14 @@
         {
             "@id": "http://fixme.com#Toegang",
             "@type": "http://www.w3.org/2002/07/owl#Class",
+            "ap-usageNote-nl": {
+                "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+            },
+            "usage": {
+                "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+            },
             "definition": {
-                "nl": "Recht op Toegang tot een Locatie."
+                "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
             },
             "label": {
                 "nl": "Toegang"
@@ -281,7 +287,7 @@
                 "nl": "Toegang"
             },
             "ap-definition-nl": {
-                "nl": "Recht op Toegang tot een Locatie."
+                "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
             },
             "extra": {
                 "EA-Name": "Toegang",
@@ -308,16 +314,20 @@
                     "nl": "Toegang"
                 },
                 "definition": {
-                    "nl": "Recht op Toegang tot een Locatie."
+                    "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
                 },
-                "usage": "",
+                "usage": {
+                    "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+                },
                 "ap-label-nl": {
                     "nl": "Toegang"
                 },
                 "ap-definition-nl": {
-                    "nl": "Recht op Toegang tot een Locatie."
+                    "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
                 },
-                "ap-usageNote-nl": "",
+                "ap-usageNote-nl": {
+                    "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+                },
                 "ap-codelist": "",
                 "RawTags": [
                     {
@@ -332,7 +342,12 @@
                     },
                     {
                         "key": "definition-nl",
-                        "value": "Recht op Toegang tot een Locatie.",
+                        "value": "Recht op Toegang om een bepaalde zone binnen te mogen.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\".",
                         "note": "null"
                     }
                 ],
@@ -921,11 +936,20 @@
             "name": "Zaak"
         },
         {
-            "@id": "http://fixme.com#Project",
+            "@id": "http://dbpedia.org/ontology/Project",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
+            "definition": {
+                "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+            },
+            "label": {
+                "nl": "Project"
+            },
+            "ap-label-nl": {
+                "nl": "Project"
+            },
             "ap-definition-nl": {
-                "nl": "TODO"
+                "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
             },
             "extra": {
                 "EA-Name": "Project",
@@ -935,19 +959,41 @@
                 "EA-Parents": "",
                 "EA-Parents2": [],
                 "parentclasses": "",
-                "label": "",
-                "definition": "",
+                "label": {
+                    "nl": "Project"
+                },
+                "definition": {
+                    "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+                },
                 "usage": "",
-                "ap-label-nl": "",
+                "ap-label-nl": {
+                    "nl": "Project"
+                },
                 "ap-definition-nl": {
-                    "nl": "TODO"
+                    "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
                 },
                 "ap-usageNote-nl": "",
                 "ap-codelist": "",
-                "RawTags": [],
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "http://dbpedia.org/ontology/Project",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "Project",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.",
+                        "note": "null"
+                    }
+                ],
                 "Scope": "NOTHING"
             },
-            "name": ""
+            "name": "Project"
         },
         {
             "@id": "http://purl.org/dc/terms/Location",
@@ -1924,7 +1970,7 @@
         },
         {
             "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "aanvrager",
             "inpackage": "OTHER_PACKAGE",
             "definition": {
@@ -1946,11 +1992,12 @@
                 "EA-Type": "attribute",
                 "EA-Domain": "Aanvraag",
                 "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
-                "EA-Range": "null",
+                "EA-Range": "Rechtssubject",
                 "RangeData": {
-                    "EA-Name": "",
-                    "EA-Package": "",
-                    "uri": "null"
+                    "EA-Name": "Rechtssubject",
+                    "EA-GUID": "{F3FFED1C-B575-40c5-9532-BBFBFEFB8C27}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
                 },
                 "label": {
                     "nl": "aanvrager"
@@ -1993,7 +2040,14 @@
                     "EA-Name": "Aanvraag"
                 }
             ],
-            "range": [],
+            "range": [
+                {
+                    "EA-Name": "Rechtssubject",
+                    "EA-GUID": "{F3FFED1C-B575-40c5-9532-BBFBFEFB8C27}",
+                    "EA-Package": "OV",
+                    "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+                }
+            ],
             "generalization": [],
             "minCardinality": "1",
             "maxCardinality": "1"
@@ -4710,7 +4764,7 @@
                     "EA-Name": "Project",
                     "EA-GUID": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
                     "EA-Package": "Dossier",
-                    "uri": "http://fixme.com#Project"
+                    "uri": "http://dbpedia.org/ontology/Project"
                 },
                 "sourceRole": "null",
                 "destRole": "is deel van",
@@ -4777,10 +4831,12 @@
                     "EA-Name": "Project",
                     "EA-GUID": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
                     "EA-Package": "Dossier",
-                    "uri": "http://fixme.com#Project"
+                    "uri": "http://dbpedia.org/ontology/Project"
                 }
             ],
-            "generalization": []
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
         },
         {
             "@id": "http://purl.org/dc/terms/hasPart",

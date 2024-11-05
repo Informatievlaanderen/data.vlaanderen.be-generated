@@ -239,13 +239,16 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
       "ap-definition-nl": {
-        "nl": "Recht op Toegang tot een Locatie."
+        "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
       },
       "ap-label-nl": {
         "nl": "Toegang"
       },
+      "ap-usageNote-nl": {
+        "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+      },
       "definition": {
-        "nl": "Recht op Toegang tot een Locatie."
+        "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
       },
       "extra": {
         "EA-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
@@ -281,26 +284,35 @@
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "Recht op Toegang tot een Locatie."
+            "value": "Recht op Toegang om een bepaalde zone binnen te mogen."
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
           }
         ],
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Recht op Toegang tot een Locatie."
+          "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
         },
         "ap-label-nl": {
           "nl": "Toegang"
         },
-        "ap-usageNote-nl": "",
+        "ap-usageNote-nl": {
+          "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+        },
         "definition": {
-          "nl": "Recht op Toegang tot een Locatie."
+          "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
         },
         "label": {
           "nl": "Toegang"
         },
         "parentclasses": "http://fixme.com#Recht, http://fixme.com#Output",
-        "usage": ""
+        "usage": {
+          "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+        }
       },
       "inpackage": "ACTIVE_PACKAGE",
       "label": {
@@ -310,7 +322,10 @@
       "parents": [
         "http://fixme.com#Recht",
         "http://fixme.com#Output"
-      ]
+      ],
+      "usage": {
+        "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+      }
     }
   ],
   "config": "config/config-ap.json",
@@ -330,8 +345,8 @@
   "contributors-file": "stakeholders.csv",
   "diagram": "Mobiliteitsvergunning-v2",
   "disabled": false,
-  "documentcommit": "5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb",
-  "dummy": "8",
+  "documentcommit": "915a95b520e0dae76fd9349421eae5751eb98c55",
+  "dummy": "9",
   "eap": "Mobiliteitsvergunning.eap",
   "editors": [
     {
@@ -748,7 +763,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{DA9D7DBD-32BC-4e39-BA40-678F74A6B483}",
       "ap-definition-nl": {
         "nl": "Agent die de Aanvraag heeft ingediend."
@@ -772,12 +787,13 @@
         "EA-Guid": "{DA9D7DBD-32BC-4e39-BA40-678F74A6B483}",
         "EA-Name": "aanvrager",
         "EA-Package": "OV",
-        "EA-Range": "null",
+        "EA-Range": "Rechtssubject",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
+          "EA-GUID": "{F3FFED1C-B575-40c5-9532-BBFBFEFB8C27}",
+          "EA-Name": "Rechtssubject",
+          "EA-Package": "OV",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
         },
         "RawTags": [
           {
@@ -821,7 +837,14 @@
       "maxCardinality": "1",
       "minCardinality": "1",
       "name": "aanvrager",
-      "range": []
+      "range": [
+        {
+          "EA-GUID": "{F3FFED1C-B575-40c5-9532-BBFBFEFB8C27}",
+          "EA-Name": "Rechtssubject",
+          "EA-Package": "OV",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        }
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
@@ -3583,7 +3606,7 @@
           "EA-GUID": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
           "EA-Name": "Project",
           "EA-Package": "Dossier",
-          "uri": "http://fixme.com#Project"
+          "uri": "http://dbpedia.org/ontology/Project"
         },
         "RawTags": [
           {
@@ -3627,13 +3650,15 @@
       "label": {
         "nl": "is deel van"
       },
+      "maxCardinality": "*",
+      "minCardinality": "0",
       "name": "isDeelVan",
       "range": [
         {
           "EA-GUID": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
           "EA-Name": "Project",
           "EA-Package": "Dossier",
-          "uri": "http://fixme.com#Project"
+          "uri": "http://dbpedia.org/ontology/Project"
         }
       ]
     },
@@ -4851,11 +4876,17 @@
       "name": "Zaak"
     },
     {
-      "@id": "http://fixme.com#Project",
+      "@id": "http://dbpedia.org/ontology/Project",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
       "ap-definition-nl": {
-        "nl": "TODO"
+        "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+      },
+      "ap-label-nl": {
+        "nl": "Project"
+      },
+      "definition": {
+        "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
       },
       "extra": {
         "EA-Guid": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
@@ -4864,21 +4895,46 @@
         "EA-Parents": "",
         "EA-Parents2": [],
         "EA-Type": "CLASS",
-        "RawTags": [],
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://dbpedia.org/ontology/Project"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Project"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+          }
+        ],
         "Scope": "NOTHING",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "TODO"
+          "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "Project"
+        },
         "ap-usageNote-nl": "",
-        "definition": "",
-        "label": "",
+        "definition": {
+          "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+        },
+        "label": {
+          "nl": "Project"
+        },
         "parentclasses": "",
         "usage": ""
       },
       "inpackage": "OTHER_PACKAGE",
-      "name": ""
+      "label": {
+        "nl": "Project"
+      },
+      "name": "Project"
     },
     {
       "@id": "http://purl.org/dc/terms/Location",
@@ -5797,7 +5853,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "OSLO Citerra",
-  "toolchaincommit": "817bf6350def32e062e91b608e5bc15e8812513b",
+  "toolchaincommit": "737554f1b576559b403c0fbec6ecba5426bb639f",
   "translation": [
     {
       "language": "nl",

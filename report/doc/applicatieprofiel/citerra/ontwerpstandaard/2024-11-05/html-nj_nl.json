@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/915a95b520e0dae76fd9349421eae5751eb98c55",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/915a95b520e0dae76fd9349421eae5751eb98c55/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -123,9 +123,11 @@
       },
       "sort": "Toegang",
       "description": {
-        "nl": "Recht op Toegang tot een Locatie."
+        "nl": "Recht op Toegang om een bepaalde zone binnen te mogen."
       },
-      "usage": {},
+      "usage": {
+        "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+      },
       "parents": [
         {
           "label": "Recht",
@@ -145,7 +147,8 @@
       "rawTags": {
         "name": "Toegang",
         "label-nl": "Toegang",
-        "definition-nl": "Recht op Toegang tot een Locatie."
+        "definition-nl": "Recht op Toegang om een bepaalde zone binnen te mogen.",
+        "ap-usageNote-nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
       },
       "properties": [
         {
@@ -1266,14 +1269,22 @@
       ]
     },
     {
-      "uri": "http://fixme.com#Project",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
+      "uri": "http://dbpedia.org/ontology/Project",
+      "name": "Project",
+      "label": {
+        "nl": "Project"
+      },
+      "sort": "Project",
+      "description": {
+        "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+      },
       "usage": {},
       "parents": [],
-      "rawTags": {},
+      "rawTags": {
+        "uri": "http://dbpedia.org/ontology/Project",
+        "ap-label-nl": "Project",
+        "ap-definition-nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+      },
       "properties": []
     },
     {
@@ -1714,19 +1725,19 @@
           "range": [
             {
               "range_label": "Project",
-              "range_uri": "http://fixme.com#Project"
+              "range_uri": "http://dbpedia.org/ontology/Project"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Project",
-              "range_puri": "http://fixme.com#Project",
+              "range_puri": "http://dbpedia.org/ontology/Project",
               "range_label": {
                 "nl": "Project"
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/dc/terms/isPartOf",
@@ -1786,8 +1797,21 @@
               "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Rechtssubject",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject",
+              "range_label": {
+                "nl": "Rechtssubject"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {

@@ -130,8 +130,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/5b1e21059d6f6bffaed777c3c7657b2cb4b3feeb/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/915a95b520e0dae76fd9349421eae5751eb98c55">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/915a95b520e0dae76fd9349421eae5751eb98c55</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/915a95b520e0dae76fd9349421eae5751eb98c55/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/915a95b520e0dae76fd9349421eae5751eb98c55/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/issues">https://github.com/Informatievlaanderen/OSLOthema-citerra/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html</a></dd>
 
@@ -202,7 +202,6 @@
                     <p>In dit document wordt correct gebruik van de volgende entiteiten toegelicht:
                       <br />
                       |
-                      <a href="#"></a> |
                       <a href="#Aanvraag">Aanvraag</a> |
                       <a href="#Activiteit">Activiteit</a> |
                       <a href="#Bewijs">Bewijs</a> |
@@ -211,6 +210,7 @@
                       <a href="#LogischeVoorwaarde">Logische voorwaarde</a> |
                       <a href="#Procedure">Procedure</a> |
                       <a href="#Procedurestap">Procedurestap</a> |
+                      <a href="#Project">Project</a> |
                       <a href="#PubliekeDienstverlening">Publieke Dienstverlening</a> |
                       <a href="#Toegang">Toegang</a> |
                       <a href="#Vergunning">Vergunning</a> |
@@ -233,22 +233,6 @@
             </div>
             <div class="region region--no-space-top">
               <h2 class="h2">Entiteiten</h2>
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id=""><a href="http://fixme.com#Project" data-toggle="tooltip" data-content="http://fixme.com#Project" data-placement="right"></a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd></dd>
-                    
-		    
-                    <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-                    
-                  </dl>
-                </div>
-		
             </div>
             
               <div class="region region--no-space-top">
@@ -298,6 +282,10 @@
                           </code>
                         </td>
                         <td>
+                          
+			     
+			    <a href="https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject" data-placement="right">Rechtssubject</a>
+                            
                           
                         </td>
                         <td>1</td>
@@ -740,7 +728,7 @@
 			    
                           
                         </td>
-                        <td></td>
+                        <td>0..*</td>
                         <td property="rdfs:comment">Een gerelateerde entiteit waar de beschreven entiteit een fysiek of logisch onderdeel van is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -877,6 +865,22 @@
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een procedurestap is het geheel aan werk gedaan binnen een specifiek chronologisch, logisch, organisatorisch of wettelijk bepaald onderdeel van een procedure.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Project"><a href="http://dbpedia.org/ontology/Project" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Project" data-placement="right">Project</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1053,7 +1057,9 @@
               <h3 class="h3" id="Toegang"><a href="http://fixme.com#Toegang" data-toggle="tooltip" data-content="http://fixme.com#Toegang" data-placement="right">Toegang</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Recht op Toegang tot een Locatie.</dd>
+                    <dt>Beschrijving</dt><dd>Recht op Toegang om een bepaalde zone binnen te mogen.</dd>
+                    
+                    <dt>Gebruik</dt><dd>De bijhorende Activiteit bevat de Zone via de eigenschap "locatie".</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
