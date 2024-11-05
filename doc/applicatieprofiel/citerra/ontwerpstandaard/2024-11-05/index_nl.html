@@ -130,8 +130,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/aeb53a736ebb0ea136839b92312ae7b15559a5b8">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/aeb53a736ebb0ea136839b92312ae7b15559a5b8</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/aeb53a736ebb0ea136839b92312ae7b15559a5b8/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/aeb53a736ebb0ea136839b92312ae7b15559a5b8/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b2e31cbd1c90c0ac9564940956a734772ff3690">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b2e31cbd1c90c0ac9564940956a734772ff3690</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b2e31cbd1c90c0ac9564940956a734772ff3690/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b2e31cbd1c90c0ac9564940956a734772ff3690/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/issues">https://github.com/Informatievlaanderen/OSLOthema-citerra/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html</a></dd>
 
@@ -655,12 +655,52 @@
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#ConsumeerPubliekeDienstverleningstap%3Adienstverlening">dienstverlening</a>.</dd>
                     
                   </dl>
                 </div>
-		
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="ConsumeerPubliekeDienstverleningstap%3Adienstverlening" typeof="rdfs:Property" resource="https://test.data.vlaanderen.be/ns/citerra#dienstverlening">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://test.data.vlaanderen.be/ns/citerra#dienstverlening" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#dienstverlening" data-placement="right">
+                            dienstverlening</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Publieke Dienstverlening" data-placement="right">Publieke Dienstverlening</a>
+			    
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">Publieke Dienstverlening die geconsumeerd wordt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
               <div class="region region--no-space-top">
@@ -902,6 +942,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#PubliekeDienstverlening%3AgeconsumeerdIn">geconsumeerd in</a>, 
                       <a href="#PubliekeDienstverlening%3AheeftCompetenteAutoriteit">heeft competente autoriteit</a>, 
                       <a href="#PubliekeDienstverlening%3AheeftVoorwaarde">heeft voorwaarde</a>, 
                       <a href="#PubliekeDienstverlening%3Aproduceert">produceert</a>, 
@@ -926,6 +967,26 @@
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="PubliekeDienstverlening%3AgeconsumeerdIn" typeof="rdfs:Property" resource="https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn" data-placement="right">
+                            geconsumeerd in</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Consumeer Publieke Dienstverleningstap" data-placement="right">Consumeer Publieke Dienstverleningstap</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Procedurestap waar de Publieke Dienstverlening geconsumeerd wordt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="PubliekeDienstverlening%3AheeftCompetenteAutoriteit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasCompetentAuthority">
                         <td>

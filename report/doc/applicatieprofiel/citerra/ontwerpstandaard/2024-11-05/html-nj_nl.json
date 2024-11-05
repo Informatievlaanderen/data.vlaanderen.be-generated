@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/aeb53a736ebb0ea136839b92312ae7b15559a5b8",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/aeb53a736ebb0ea136839b92312ae7b15559a5b8/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b2e31cbd1c90c0ac9564940956a734772ff3690",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b2e31cbd1c90c0ac9564940956a734772ff3690/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -46,7 +46,49 @@
         "label-nl": "Consumeer Publieke Dienstverleningstap",
         "definition-nl": "Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#dienstverlening",
+          "name": "dienstverlening",
+          "sort": "dienstverlening",
+          "label": {
+            "nl": "dienstverlening"
+          },
+          "description": {
+            "nl": "Publieke Dienstverlening die geconsumeerd wordt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "ConsumeerPubliekeDienstverleningstap",
+              "uri": "https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "PubliekeDienstverlening",
+              "range_uri": "http://purl.org/vocab/cpsv#PublicService"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Publieke Dienstverlening",
+              "range_puri": "http://purl.org/vocab/cpsv#PublicService",
+              "range_label": {
+                "nl": "Publieke Dienstverlening"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "https://test.data.vlaanderen.be/ns/citerra#dienstverlening",
+            "definition-nl": "Publieke Dienstverlening die geconsumeerd wordt.",
+            "label-nl": "dienstverlening",
+            "name": "dienstverlening"
+          }
+        }
+      ]
     },
     {
       "uri": "https://test.data.vlaanderen.be/ns/citerra#LogischeVoorwaarde",
@@ -1406,6 +1448,47 @@
         "ap-definition-nl": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
       },
       "properties": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn",
+          "name": "geconsumeerdIn",
+          "sort": "geconsumeerd in",
+          "label": {
+            "nl": "geconsumeerd in"
+          },
+          "description": {
+            "nl": "Procedurestap waar de Publieke Dienstverlening geconsumeerd wordt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "PubliekeDienstverlening",
+              "uri": "http://purl.org/vocab/cpsv#PublicService"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "ConsumeerPubliekeDienstverleningstap",
+              "range_uri": "https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Consumeer Publieke Dienstverleningstap",
+              "range_puri": "https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap",
+              "range_label": {
+                "nl": "Consumeer Publieke Dienstverleningstap"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "geconsumeerdIn",
+            "label-nl": "geconsumeerd in",
+            "definition-nl": "Procedurestap waar de Publieke Dienstverlening geconsumeerd wordt.",
+            "uri": "https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn"
+          }
+        },
         {
           "uri": "http://www.w3.org/ns/adms#status",
           "name": "status",
