@@ -130,8 +130,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b2e31cbd1c90c0ac9564940956a734772ff3690">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b2e31cbd1c90c0ac9564940956a734772ff3690</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b2e31cbd1c90c0ac9564940956a734772ff3690/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b2e31cbd1c90c0ac9564940956a734772ff3690/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/fc99350691daedb6cf96a0eb2f6d6177326386a1">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/fc99350691daedb6cf96a0eb2f6d6177326386a1</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/fc99350691daedb6cf96a0eb2f6d6177326386a1/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/fc99350691daedb6cf96a0eb2f6d6177326386a1/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/issues">https://github.com/Informatievlaanderen/OSLOthema-citerra/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html</a></dd>
 
@@ -207,7 +207,6 @@
                       <a href="#Bewijs">Bewijs</a> |
                       <a href="#ConsumeerPubliekeDienstverleningstap">Consumeer Publieke Dienstverleningstap</a> |
                       <a href="#Dossier">Dossier</a> |
-                      <a href="#LogischeVoorwaarde">Logische voorwaarde</a> |
                       <a href="#Procedure">Procedure</a> |
                       <a href="#Procedurestap">Procedurestap</a> |
                       <a href="#Project">Project</a> |
@@ -216,6 +215,7 @@
                       <a href="#Vergunning">Vergunning</a> |
                       <a href="#Voertuig">Voertuig</a> |
                       <a href="#Voorwaarde">Voorwaarde</a> |
+                      <a href="#VoorwaardeCollectie">Voorwaarde Collectie</a> |
                       <a href="#Zaak">Zaak</a> |
                       <a href="#Zone">Zone</a> |
                     </p>
@@ -289,7 +289,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Agent die de Aanvraag heeft ingediend.</td>
+                        <td property="rdfs:comment">Rechtssubject die de Aanvraag heeft ingediend.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -484,18 +484,21 @@
               <h3 class="h3" id="Bewijs"><a href="http://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Evidence" data-placement="right">Bewijs</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Elk stuk waarmee kan worden aangetoond dat men aan een CriteriumVereiste voldoet.</dd>
+                    <dt>Beschrijving</dt><dd>Elk stuk waarmee kan worden aangetoond dat men aan een Voorwaarde voldoet.</dd>
                     
                     <dt>Gebruik</dt><dd>In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening.</dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="http://fixme.com#Stuk">Stuk</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Bewijs%3Abeschrijving">beschrijving</a>, 
-                      <a href="#Bewijs%3Areferentie">referentie</a>, 
-                      <a href="#Bewijs%3Ataal">taal</a>, 
-                      <a href="#Bewijs%3Atitel">titel</a>, 
+                      <a href="#Bewijs%3Aidentificator">identificator</a>, 
+                      <a href="#Bewijs%3Anaam">naam</a>, 
                       <a href="#Bewijs%3Atype">type</a>, 
                       <a href="#Bewijs%3Avervult">vervult</a>.</dd>
                     
@@ -537,11 +540,11 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Bewijs%3Areferentie" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
+                      <tr id="Bewijs%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
-                            referentie</a>
+                            identificator</a>
                           </code>
                         </td>
                         <td>
@@ -557,31 +560,11 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Bewijs%3Ataal" typeof="rdfs:Property" resource="http://purl.org/dc/terms/language">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/language" data-toggle="tooltip" data-content="http://purl.org/dc/terms/language" data-placement="right">
-                            taal</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Taalcode</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Taal waarin het aangeboden Bewijs moet zijn gesteld.</td>
-                        <td property="vann:usageNote"></td>
-                        <td><a href="http://publications.europa.eu/mdr/authority/language/">Link</a></td>
-                      </tr>
-                    
-                      <tr id="Bewijs%3Atitel" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
+                      <tr id="Bewijs%3Anaam" typeof="rdfs:Property" resource="http://purl.org/dc/terms/title">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/title" data-toggle="tooltip" data-content="http://purl.org/dc/terms/title" data-placement="right">
-                            titel</a>
+                            naam</a>
                           </code>
                         </td>
                         <td>
@@ -713,8 +696,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Dossier%3AbestaatUit">bestaat uit</a>, 
-                      <a href="#Dossier%3AisDeelVan">is deel van</a>.</dd>
+                      <a href="#Dossier%3AbestaatUit">bestaat uit</a>.</dd>
                     
                   </dl>
                 </div>
@@ -750,86 +732,6 @@
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Een dossier bestaat uit dossierstukken.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Dossier%3AisDeelVan" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip" data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
-                            is deel van</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Project" data-placement="right">Project</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">Een gerelateerde entiteit waar de beschreven entiteit een fysiek of logisch onderdeel van is.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="LogischeVoorwaarde"><a href="https://test.data.vlaanderen.be/ns/citerra#LogischeVoorwaarde" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#LogischeVoorwaarde" data-placement="right">Logische voorwaarde</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.</dd>
-                    
-		     
-		    <dt>Subklasse van <dt><dd>
-                        <a href="#Voorwaarde">Voorwaarde</a>
-		   </dd>
-                    
-                    <dt>Eigenschappen</dt>
-		     
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#LogischeVoorwaarde%3Aoperatie">operatie</a>.</dd>
-                    
-                  </dl>
-                </div>
-		 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="LogischeVoorwaarde%3Aoperatie" typeof="rdfs:Property" resource="https://test.data.vlaanderen.be/ns/citerra#operatie">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://test.data.vlaanderen.be/ns/citerra#operatie" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#operatie" data-placement="right">
-                            operatie</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Logische operatie" data-placement="right">Logische operatie</a>
-			    
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Logische operatie die toegepast wordt op de Voorwaarden.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1118,7 +1020,7 @@
               <h3 class="h3" id="Toegang"><a href="https://test.data.vlaanderen.be/ns/citerra#Toegang" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#Toegang" data-placement="right">Toegang</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Recht op Toegang om een bepaalde zone binnen te mogen.</dd>
+                    <dt>Beschrijving</dt><dd>Recht om een bepaalde zone binnen te mogen.</dd>
                     
                     <dt>Gebruik</dt><dd>De bijhorende Activiteit bevat de Zone via de eigenschap "locatie".</dd>
                     
@@ -1396,7 +1298,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling.</td>
+                        <td property="rdfs:comment">Publieke Organisatie die juridisch verantwoordelijk is voor de Vergunning.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1509,7 +1411,7 @@
               <h3 class="h3" id="Voorwaarde"><a href="http://data.europa.eu/m8g/Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Requirement" data-placement="right">Voorwaarde</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd></dd>
+                    <dt>Beschrijving</dt><dd>Iets dat nodig is of waarvan vereist is dat het gebeurt voordat iets anders gebeurt.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1517,7 +1419,6 @@
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Voorwaarde%3Abeschrijving">beschrijving</a>, 
                       <a href="#Voorwaarde%3AheeftOndersteunendBewijs">heeft ondersteunend bewijs</a>, 
-                      <a href="#Voorwaarde%3AheeftVoorwaarde">heeft voorwaarde</a>, 
                       <a href="#Voorwaarde%3AisVoorwaardeVan">is voorwaarde van</a>, 
                       <a href="#Voorwaarde%3Atype">type</a>, 
                       <a href="#Voorwaarde%3Auitgever">uitgever</a>.</dd>
@@ -1580,26 +1481,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Voorwaarde%3AheeftVoorwaarde" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasRequirement">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hasRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasRequirement" data-placement="right">
-                            heeft voorwaarde</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Voorwaarde" data-placement="right">Voorwaarde</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">Subvoorwaarde van de Voorwaarde.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Voorwaarde%3AisVoorwaardeVan" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/isRequirementOf">
                         <td>
                           <code property="rdfs:label">
@@ -1610,7 +1491,7 @@
                         <td>
                           
 			    
-			    <a href="#Voorwaarde" data-placement="right">Voorwaarde</a>
+			    <a href="#Voorwaarde Collectie" data-placement="right">Voorwaarde Collectie</a>
 			    
                           
                         </td>
@@ -1667,6 +1548,87 @@
             </div>
             
               <div class="region region--no-space-top">
+              <h3 class="h3" id="VoorwaardeCollectie"><a href="https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie" data-placement="right">Voorwaarde Collectie</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.</dd>
+                    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Voorwaarde">Voorwaarde</a>
+		   </dd>
+                    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#VoorwaardeCollectie%3AheeftVoorwaarde">heeft voorwaarde</a>, 
+                      <a href="#VoorwaardeCollectie%3Aoperatie">operatie</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="VoorwaardeCollectie%3AheeftVoorwaarde" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasRequirement">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasRequirement" data-placement="right">
+                            heeft voorwaarde</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Voorwaarde" data-placement="right">Voorwaarde</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Subvoorwaarde van de Voorwaarde.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="VoorwaardeCollectie%3Aoperatie" typeof="rdfs:Property" resource="https://test.data.vlaanderen.be/ns/citerra#operatie">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://test.data.vlaanderen.be/ns/citerra#operatie" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/citerra#operatie" data-placement="right">
+                            operatie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Logische operatie" data-placement="right">Logische operatie</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Logische operatie die toegepast wordt op de Voorwaarden.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
               <h3 class="h3" id="Zaak"><a href="http://dbpedia.org/ontology/Case" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Case" data-placement="right">Zaak</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -1677,6 +1639,7 @@
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Zaak%3Adossier">dossier</a>, 
+                      <a href="#Zaak%3AisDeelVan">is deel van</a>, 
                       <a href="#Zaak%3Azaakhandeling">zaakhandeling</a>, 
                       <a href="#Zaak%3Azaakhandeling">zaakhandeling</a>.</dd>
                     
@@ -1714,6 +1677,26 @@
                         </td>
                         <td>0..1</td>
                         <td property="rdfs:comment">Het dossier waarin deze zaak wordt behandeld.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Zaak%3AisDeelVan" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip" data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
+                            is deel van</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Project" data-placement="right">Project</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Een gerelateerde entiteit waar de beschreven entiteit een fysiek of logisch onderdeel van is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>

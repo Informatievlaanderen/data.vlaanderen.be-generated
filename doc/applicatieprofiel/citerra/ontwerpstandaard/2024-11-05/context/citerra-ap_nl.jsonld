@@ -40,15 +40,11 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Bewijs.referentie": {
+    "Bewijs.identificator": {
       "@id": "http://www.w3.org/ns/adms#identifier",
       "@type": "@id"
     },
-    "Bewijs.taal": {
-      "@id": "http://purl.org/dc/terms/language",
-      "@type": "@id"
-    },
-    "Bewijs.titel": {
+    "Bewijs.naam": {
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -71,17 +67,7 @@
       "@id": "https://data.vlaanderen.be/ns/dossier#Dossier.bestaatUit",
       "@type": "@id"
     },
-    "Dossier.isDeelVan": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/isPartOf",
-      "@type": "@id"
-    },
     "LogischeOperatie": "https://www.w3.org/2004/02/skos/core#Concept",
-    "LogischeVoorwaarde": "https://test.data.vlaanderen.be/ns/citerra#LogischeVoorwaarde",
-    "LogischeVoorwaarde.operatie": {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#operatie",
-      "@type": "@id"
-    },
     "Procedure": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
     "Procedure.procedurestap": {
       "@container": "@set",
@@ -187,11 +173,6 @@
       "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
       "@type": "@id"
     },
-    "Voorwaarde.heeftVoorwaarde": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasRequirement",
-      "@type": "@id"
-    },
     "Voorwaarde.isVoorwaardeVan": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/isRequirementOf",
@@ -205,9 +186,24 @@
       "@id": "http://purl.org/dc/terms/publisher",
       "@type": "@id"
     },
+    "VoorwaardeCollectie": "https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie",
+    "VoorwaardeCollectie.heeftVoorwaarde": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasRequirement",
+      "@type": "@id"
+    },
+    "VoorwaardeCollectie.operatie": {
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#operatie",
+      "@type": "@id"
+    },
     "Zaak": "http://dbpedia.org/ontology/Case",
     "Zaak.dossier": {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+      "@type": "@id"
+    },
+    "Zaak.isDeelVan": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "@id"
     },
     "Zaak.zaakhandeling": {
