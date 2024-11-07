@@ -7,6 +7,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://def.isotc211.org/iso19103/2005/Names#GenericName> a rdfs:Class;
+  rdfs:label "GeneriekeNaam"@nl .
+
+<http://def.isotc211.org/iso19103/2005/Names#ScopedName> a rdfs:Class;
+  rdfs:label "NaamInNaamruimte"@nl .
+
+<http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any> a rdfs:Class;
+  rdfs:label "Any"@nl .
+
 <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> a rdfs:Class;
   rdfs:label "Maat"@nl .
 
@@ -21,6 +30,9 @@
 
 <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> a rdfs:Class;
   rdfs:label "Kenmerktype"@nl .
+
+<http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty> a rdfs:Class;
+  rdfs:label "BetrokkenPartij"@nl .
 
 <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> a rdfs:Class;
   rdfs:label "Kwaliteitselement"@nl .
@@ -46,9 +58,6 @@
 <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation> a rdfs:Class;
   rdfs:label "DiscreetBereikObservatie"@nl .
 
-<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> a rdfs:Class;
-  rdfs:label "Domeinobject"@nl .
-
 <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> a rdfs:Class;
   rdfs:label "Object"@nl .
 
@@ -64,7 +73,7 @@
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> a rdfs:Class;
   rdfs:label "Observatie"@nl .
 
-<http://def.isotc211.org/iso19156/2011/Observation#OM_Process> a rdfs:Class;
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process> a rdfs:Class;
   rdfs:label "Proces"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext> a rdfs:Class;
@@ -81,6 +90,9 @@
 
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection> a rdfs:Class;
   rdfs:label "Bemonsteringsobjectverzameling"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex> a rdfs:Class;
+  rdfs:label "BemonsteringsobjectComplex"@nl .
 
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> a rdfs:Class;
   rdfs:label "Bemonsteringspunt"@nl .
@@ -115,17 +127,29 @@
 <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation> a rdfs:Class;
   rdfs:label "WaarheidsObservatie"@nl .
 
-rdfs:Resource a rdfs:Class;
-  rdfs:label "Any"@nl .
+skos:Concept a rdfs:Class .
 
-skos:Concept a rdfs:Class;
-  rdfs:label "Observatietype"@nl,
-    "Bemonsteringsobjecttype"@nl,
-    "Domeinobjecttype"@nl,
-    "Materiaalklasse"@nl,
-    "Monstertype"@nl,
-    "Categorie"@nl,
-    "Observatiecontexttype"@nl .
+<https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator> a owl:ObjectProperty;
+  rdfs:label "identificator"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv het uniek nummer dat aan een Monster wordt toegekend of het numer van een meetstation."@nl;
+  rdfs:comment "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source> a owl:ObjectProperty;
+  rdfs:label "Bemonsteringsobject (source)"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target> a owl:ObjectProperty;
+  rdfs:label "Bemonsteringsobject (target)"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces> a owl:ObjectProperty;
   rdfs:label "BemonsteringsProces"@nl;
@@ -147,6 +171,13 @@ skos:Concept a rdfs:Class;
   rdfs:domain <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
   rdfs:range <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator> a owl:ObjectProperty;
+  rdfs:label "identificator"@nl;
+  rdfs:comment "De persoon of het ding dat dient om de observatie vast te stellen."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht> a owl:ObjectProperty;
   rdfs:label "opdracht"@nl;
@@ -180,9 +211,12 @@ skos:Concept a rdfs:Class;
   rdfs:label "gegenereerdeObservatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Het Proces dat gebruikt werd om het resultaat van de Observatie te verkrijgen levert mogelijk ook resultaten voor andere Observaties."@nl;
   rdfs:comment "Verwijzing naar de verkregen Observatie."@nl;
-  rdfs:domain <http://def.isotc211.org/iso19156/2011/Observation#OM_Process>;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/observaties-en-metingen>;
   rdfs:range <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value> a rdf:Property;
+  rdfs:label "maat"@nl .
 
 <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
@@ -262,6 +296,12 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member> a rdf:Property;
   rdfs:label "lid"@nl .
 
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature> a rdf:Property;
+  rdfs:label "geassocieerdBemonsteringsobject"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role> a rdf:Property;
+  rdfs:label "rol"@nl .
+
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape> a rdf:Property;
   rdfs:label "geometrie"@nl .
 
@@ -319,375 +359,21 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
 
-dc:type a rdf:Property;
+<http://purl.org/cd/terms/type> a rdf:Property;
   rdfs:label "type"@nl .
-
-<http://www.w3.org/ns/adms#identifier> a rdf:Property;
-  rdfs:label "identificator"@nl .
 
 <https://data.vlaanderen.be/ns/observaties-en-metingen> a owl:Ontology;
   rdfs:label "observaties-en-metingen"@en,
     "observaties-en-metingen"@nl;
   dc:contributor [
     a foaf:Person;
-    schema:affiliation [foaf:name "Algemeen Boerensyndicaat"];
-    foaf:firstName "Mark";
-    foaf:lastName "Wulfrancke"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Koninklijk Belgisch Instituur voor Natuurwetenschappen – Belgische Geologische Dienst"];
-    foaf:firstName "Jan";
-    foaf:lastName "Walstra"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Instituur voor Natuur- en Bosonderzoek"];
-    foaf:firstName "Mathias";
-    foaf:lastName "Wackenier"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken (Geotechniek)"];
-    foaf:firstName "Leen";
-    foaf:lastName "Vincke"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken"];
-    foaf:firstName "Wouter";
-    foaf:lastName "Vervaele"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Andere"];
-    foaf:firstName "Peter";
-    foaf:lastName "Verspecht"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "VZW Grondbank"];
-    foaf:firstName "Elisa";
-    foaf:lastName "Vermeulen"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
-    foaf:firstName "Gert";
-    foaf:lastName "Vermeersch"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Smet GWT Europe"];
-    foaf:firstName "Joris";
-    foaf:lastName "Vermeer"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
-    foaf:firstName "Davy";
-    foaf:lastName "Vanhoudt"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
-    foaf:firstName "Jan";
-    foaf:lastName "Vangestel"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Boerenbond"];
-    foaf:firstName "Caroline";
-    foaf:lastName "Van der Heyden"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Universiteit Antwerpen – CurieuzeNeuzen In De Tuin"];
-    foaf:firstName "Stijn";
-    foaf:lastName "Van de Vondel"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vanhecke NV"];
-    foaf:firstName "Naten";
-    foaf:lastName "Van Hemelrijck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Geert";
-    foaf:lastName "Van Haute"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Tom";
-    foaf:lastName "Van Gulck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Fluves – pydov"];
-    foaf:firstName "Johan";
-    foaf:lastName "Van De Wauw"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Grondwijzer VZW"];
-    foaf:firstName "Geerts";
-    foaf:lastName "Timothy"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "AC partners"];
-    foaf:firstName "Joris";
-    foaf:lastName "Synaeve"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Universiteit Gent"];
-    foaf:firstName "Bruno";
-    foaf:lastName "Stuyts"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Tractebel – International Marine and Dredging Consultants"];
-    foaf:firstName "Raf";
-    foaf:lastName "Somers"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Openbare Vlaamse Afvalstoffenmaatschappij"];
-    foaf:firstName "Koen";
-    foaf:lastName "Smeets"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"];
-    foaf:firstName "Frank";
-    foaf:lastName "Sleeuwaert"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Openbare Vlaamse Afvalstoffenmaatschappij"];
-    foaf:firstName "Erwin";
-    foaf:lastName "Sevens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Citizens"];
-    foaf:firstName "Piet";
-    foaf:lastName "Seuntjens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Colas Noord NV"];
-    foaf:firstName "Stijn";
-    foaf:lastName "Scheepers"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Instituut voor Landbouw- Visserij- en Voedingsonderzoek"];
-    foaf:firstName "Greet";
-    foaf:lastName "Ruysschaert"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Landmaatschappij"];
-    foaf:firstName "Elisabeth";
-    foaf:lastName "Rutten"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Liesbeth";
-    foaf:lastName "Rombouts"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Bodemkundige Dienst van België vzw"];
-    foaf:firstName "Sofie";
-    foaf:lastName "Reynaert"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Bodemkundige Dienst van België"];
-    foaf:firstName "Michaël";
-    foaf:lastName "Rens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Onroerend Erfgoed"];
-    foaf:firstName "Marnix";
-    foaf:lastName "Pieters"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Koninklijk Belgisch Instituut voor Natuurwetenschappen"];
-    foaf:firstName "Kris";
-    foaf:lastName "Piessens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Putboringen Van Deynse NV"];
-    foaf:firstName "Nadia";
-    foaf:lastName "Paridaen"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "GeSolutions"];
-    foaf:firstName "Killian";
-    foaf:lastName "Paenen"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "GEBO"];
-    foaf:firstName "Olivier";
-    foaf:lastName "Olyslaegers"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Openbare Vlaamse Afvalstoffenmaatschappij"];
-    foaf:firstName "Geert";
-    foaf:lastName "Nys"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken"];
-    foaf:firstName "Jeroen";
-    foaf:lastName "Nyckees"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Stad Gent"];
-    foaf:firstName "Pieter";
-    foaf:lastName "Nieuwlaet"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Milieumaatschappij"];
-    foaf:firstName "Willem";
-    foaf:lastName "Maetens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Citizens"];
-    foaf:firstName "Jan";
-    foaf:lastName "Maertens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Milieumaatschappij"];
-    foaf:firstName "Frank";
-    foaf:lastName "Lavens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Studiebureau voor Bouwkunde en Expertise (SBE) NV"];
-    foaf:firstName "Tom";
-    foaf:lastName "Jottier"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "De Watergroep"];
-    foaf:firstName "Pieter";
-    foaf:lastName "Jan Haest"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vrije Universiteit Brussel"];
-    foaf:firstName "Marijke";
-    foaf:lastName "Huysmans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Votquenne Foundations & Revyson"];
-    foaf:firstName "Ludovic";
-    foaf:lastName "Huysentruyt"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Citizens"];
-    foaf:firstName "Stijn";
-    foaf:lastName "Huyghe"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Grondwijzer vzw"];
-    foaf:firstName "Jente";
-    foaf:lastName "Hanssens"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Koninklijk Belgisch Instituut voor Natuurwetenschappen"];
-    foaf:firstName "Stijn";
-    foaf:lastName "Goolaerts"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"];
-    foaf:firstName "Katrijn";
-    foaf:lastName "Dirix"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Andere"];
-    foaf:firstName "Geert";
-    foaf:lastName "Devriese"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Andere"];
-    foaf:firstName "Filip";
-    foaf:lastName "Dehaese"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Instituut voor Natuur- en Bosonderzoek"];
-    foaf:firstName "Aaike";
-    foaf:lastName "De Wever"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vrouwen van het Algemeen Boerensyndicaat"];
-    foaf:firstName "Lieven";
-    foaf:lastName "De Stoppeleire"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Milieumaatschappij"];
-    foaf:firstName "Tinneke";
-    foaf:lastName "De Rouck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Geosparc"];
-    foaf:firstName "Berdien";
-    foaf:lastName "De Ro"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Openbare Vlaamse Afvalstoffenmaatschappij"];
-    foaf:firstName "Sandra";
-    foaf:lastName "De Loore"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"];
-    foaf:firstName "Roel";
-    foaf:lastName "De Koninck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Milieumaatschappij"];
-    foaf:firstName "Ywan";
-    foaf:lastName "De Jonghe"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Andere"];
-    foaf:firstName "Flor";
-    foaf:lastName "De Cock"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken"];
-    foaf:firstName "Patrick";
-    foaf:lastName "De Baets"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Aseptic Excellence Partner"];
-    foaf:firstName "Marnix";
-    foaf:lastName "Coulier"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Inagrvzw"];
-    foaf:firstName "Franky";
-    foaf:lastName "Coopman"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Instituut voor Natuur- en Bosonderzoek"];
-    foaf:firstName "Nathalie";
-    foaf:lastName "Cools"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
-    foaf:firstName "Maxim";
-    foaf:lastName "Broos"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken"];
-    foaf:firstName "Sophie";
-    foaf:lastName "Bordere"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "FOD Financiën"];
-    foaf:firstName "Reinhilde";
-    foaf:lastName "Blondeel"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Grondbank Tracimat"];
-    foaf:firstName "Christine";
-    foaf:lastName "Berchmans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
-    foaf:firstName "Simon";
-    foaf:lastName "Baert"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Canalcnv"];
-    foaf:firstName "Ilse";
-    foaf:lastName "Baeck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Universiteit Antwerpen – CurieuzeNeuzen In De Tuin"];
-    foaf:firstName "Camille";
-    foaf:lastName "Allonsius"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit en Openbare Werken"];
-    foaf:firstName "Chandra";
-    foaf:lastName "Algoe"
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -697,11 +383,15 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>,
+  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/Names#GenericName>,
+    <http://def.isotc211.org/iso19103/2005/Names#ScopedName>,
+    <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>,
+    <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>,
     <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>,
+    <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>,
     <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>,
     <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>,
     <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>,
@@ -710,18 +400,18 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/ComplexObservation#OM_ComplexObservation>,
     <http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation>,
     <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation>,
-    <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>,
     <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>,
     <http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation>,
     <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement>,
     <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Process>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process>,
     <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext>,
     <http://def.isotc211.org/iso19156/2011/PointCoverageObservation#OM_PointCoverageObservation>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection>,
+    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint>,
     <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid>,
     <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface>,
@@ -733,10 +423,8 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/TemporalObservation#OM_TemporalObservation>,
     <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation>,
     <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation>,
-    rdfs:Resource,
     skos:Concept,
-    <http://www.w3.org/ns/adms#identifier>,
-    dc:type,
+    <http://purl.org/cd/terms/type>,
     <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation.result>,
     <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation.result>,
     <http://def.isotc211.org/iso19156/2011/TemporalObservation#OM_TemporalObservation.result>,
@@ -756,6 +444,8 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface.shape>,
     <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid.shape>,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>,
+    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role>,
+    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>,
@@ -781,96 +471,25 @@ dc:type a rdf:Property;
     <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result>,
     <http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation.result>,
     <http://def.isotc211.org/iso19156/2011/ComplexObservation#OM_ComplexObservation.result>,
-    <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result>;
+    <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result>,
+    <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Eveline";
-    foaf:lastName "Vlassenroot"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Laurens";
-    foaf:lastName "Vercauteren"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Ziggy";
-    foaf:lastName "Vanlishout"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Martin";
-    foaf:lastName "Vanbrabant"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Dwight";
-    foaf:lastName "Van Lancker"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Anthony";
-    foaf:lastName "Van Heymbeeck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Geert";
-    foaf:lastName "Thijs"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Dimitri";
-    foaf:lastName "Schepers"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Raf";
-    foaf:lastName "Buyle"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vaanderen"];
-    foaf:firstName "Veerle";
-    foaf:lastName "Beyaert"
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
   ];
   foaf:maker [
     a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Jasper";
-    foaf:lastName "Verhaegen"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Veerle";
-    foaf:lastName "Vanwesenbeeck"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Marleen";
-    foaf:lastName "Van Damme"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Frieke";
-    foaf:lastName "Segers"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Katrien";
-    foaf:lastName "Oorts"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Petra";
-    foaf:lastName "Deproost"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Katrien";
-    foaf:lastName "De Nil"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Departement Omgeving"];
-    foaf:firstName "Sabine";
-    foaf:lastName "Buyle"
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
   ] .
