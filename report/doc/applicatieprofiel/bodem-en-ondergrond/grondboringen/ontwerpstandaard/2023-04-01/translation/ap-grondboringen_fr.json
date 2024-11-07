@@ -137,7 +137,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd).",
+        "nl": "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd). OPMERKING: Grondboring is hier gedefinieerd in de context vh nemen van stalen uit de grond of het uitvoeren van ondergrondse metingen, maw met het oog op Bemonstering en niet bvb voor exploitatie of andere doeleinden.",
         "fr": "Enter your translation here"
       }
     },
@@ -232,6 +232,18 @@
       }
     },
     {
+      "EA-Guid": "{A1A40C09-96B8-43db-84F6-EA252F1D5C67}",
+      "name": "resultaat",
+      "label": {
+        "nl": "resultaat",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Het resultaat van de uitgevoerde grondboring.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{26EAC0E5-4ED7-4273-93D2-CDE876519D47}",
       "name": "materiaal",
       "label": {
@@ -240,6 +252,18 @@
       },
       "definition": {
         "nl": "Materiaal waaruit de Bekisting bestaat.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{A1A40C09-96B8-43db-84F6-EA252F1D5C67}",
+      "name": "isresultaatvan",
+      "label": {
+        "nl": "isResultaatVan",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Grondboring waarvan het Boorgat het resultaat is.",
         "fr": "Enter your translation here"
       }
     },
@@ -366,22 +390,6 @@
   ],
   "externals": [
     {
-      "EA-Guid": "{6EC54B7E-E776-4854-949B-B1E8F6B7445C}",
-      "name": "Generiekenaam",
-      "label": {
-        "nl": "GeneriekeNaam",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Abstracte klasse van alle namen in een naamruimte.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Subtypes zijn LokaleNaam en NaamInNaamruimte (resp een naam zonder en een naam met  vermelding van een naamruimte). Datatype van LokaleNaamaam is bvb String of Taalstring, datatype van NaamInNaamruimte is bvb URI. OPMERKING: Meer info over dit datatype in  <a href=\"https://www.iso.org/standard/56734.html\">ISO 19103 Geographic Information - Conceptual schema language</a>.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
       "name": "Maat",
       "label": {
@@ -473,7 +481,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Een CurveWaardepaar beschrijft de geometrie van een stuk van de ruimte voorgesteld door een Curve en de waarde van een continu variërend fenomeen die men voor die Curve heeft vastgesteld. Bv de straatnaam langs een stuk van een wegsegment of de stratigrafie van een diepteinterval bij een boring.",
+        "nl": "Een CurveWaardepaar beschrijft de geometrie van een stuk van de ruimte voorgesteld door een Curve en de waarde van een continu variërend fenomeen die men voor die Curve heeft vastgesteld. Bv de straatnaam langs een stuk van een wegsegment of de stratigrafie van een diepteinterval bij een boring.OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken\">AP Ruimtelijke Bereiken</a>.",
         "fr": "Enter your translation here"
       }
     },
@@ -489,7 +497,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Het fenomeen komt enkel voor langs bepaalde lijnen in een gebied (bv straatnamen van wegsegmenten of bodemlagen in een boorgat) of werd enkel bepaald voor een welgekozen set van curves (bv regelmatige intervallen langs een traject of een profiel).",
+        "nl": "Het fenomeen komt enkel voor langs bepaalde lijnen in een gebied (bv straatnamen van wegsegmenten of bodemlagen in een boorgat) of werd enkel bepaald voor een welgekozen set van curves (bv regelmatige intervallen langs een traject of een profiel); OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken\">AP Ruimtelijke Bereiken</a>.",
         "fr": "Enter your translation here"
       }
     },
@@ -510,7 +518,23 @@
       }
     },
     {
-      "EA-Guid": "{2EF09692-121C-45ea-8F7A-0FDAA8FD2462}",
+      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{2755A4AE-FE29-4950-8975-3C828B732715}",
       "name": "Object",
       "label": {
         "nl": "Object",
@@ -521,7 +545,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit het geobserveerdObject waarvan een kenmerk wordt geobserveerd. Het geobserveerdObject kan ook een Object zijn dat de werkelijkheid bemonstert (subklasse Bemonsteringsobject). OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>.",
+        "nl": "In de context van Observaties en Metingen is dit het geobserveerdObject waarvan een kenmerk wordt geobserveerd. Het geobserveerdObject kan ook een Object zijn dat de werkelijkheid bemonstert (subklasse Bemonsteringsobject). OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein.",
         "fr": "Enter your translation here"
       }
     },
@@ -553,7 +577,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein.",
+        "nl": "In deze contextde manier waarop het resultaat van een Observatie is verkregen. Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">OSLO Observaties en Metingen</a>.",
         "fr": "Enter your translation here"
       }
     },
@@ -622,22 +646,6 @@
       }
     },
     {
-      "EA-Guid": "{E0AF353D-8CB6-414b-A7F2-7FAB08409253}",
-      "name": "Domeinobject",
-      "label": {
-        "nl": "Domeinobject",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{41322168-5A85-4353-93F3-291FFF4805C6}",
       "name": "Agent",
       "label": {
@@ -661,7 +669,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.",
+        "nl": "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft dus een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt.",
         "fr": "Enter your translation here"
       }
     },
@@ -819,13 +827,37 @@
     },
     {
       "EA-Guid": "{0758B4BB-A510-43a0-8185-895644A5EC4B}",
-      "name": ""
+      "name": "Legaleverschijningsvormtype",
+      "label": {
+        "nl": "LegaleVerschijningsvormtype",
+        "fr": "Enter your translation here"
+      }
     },
     {
       "EA-Guid": "{5B873956-B910-4762-9FBA-1A0C9ED8127E}",
       "name": "Opmetingmethode",
       "label": {
         "nl": "Opmetingmethode",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "TODO",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{2076858F-784E-4260-A880-7D354E4B97F1}",
+      "name": "Inputtype",
+      "label": {
+        "nl": "InputType",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{892171DF-EA4B-4e01-9A0A-F605D401D6E0}",
+      "name": "Outputtype",
+      "label": {
+        "nl": "OutputType",
         "fr": "Enter your translation here"
       }
     },
@@ -841,7 +873,7 @@
         "fr": "Enter your translation here"
       },
       "usage": {
-        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. OPMERKING: Meer info over dit datatype in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/\">OSLO Generiek - basis</a>.",
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem.",
         "fr": "Enter your translation here"
       }
     },
@@ -1042,18 +1074,6 @@
       }
     },
     {
-      "EA-Guid": "{2F646ECE-32AB-4301-8A89-0F6F7D410F68}",
-      "name": "Diepte",
-      "label": {
-        "nl": "Diepte",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Verticale maat naar beneden vanaf het grondoppervlak.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{737B1EB5-9A9A-4efa-A85E-B5A06D59A8D3}",
       "name": "Erkenning",
       "label": {
@@ -1126,22 +1146,6 @@
       }
     },
     {
-      "EA-Guid": "{03980252-8847-4e5c-8004-726E2C8E50B1}",
-      "name": "Standaardeenheid",
-      "label": {
-        "nl": "StandaardEenheid",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Eenheid vastgelegd door een standaardiserende organisatie.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Datatype kan een URI zijn of een GetypeerdeString. In het eerste geval wordt verwezen naar op het web gepubliceerde eenheden, bij voorkeur deze van qudt, bv. voor <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. In het geval van een GetypeerdeString gaat de voorkeur naar de UCUM-codes, bv <a href=\"http://w3id.org/lindt/custom_datatypes#ucumunit\">km/h</a>.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{F1A18898-6EEA-40e6-8EF1-6792AF6379CC}",
       "name": "Wettelijkkader",
       "label": {
@@ -1150,38 +1154,6 @@
       },
       "definition": {
         "nl": "Het kader dat vastlegt wat behoort tot de wet.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{43C7CF52-F9B7-49f5-A068-50D5351139C8}",
-      "name": "Getal",
-      "label": {
-        "nl": "Getal",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Aanduiding van een hoeveelheid.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "OPMERKING: Te substitueren door de primitieve datatypes waarmee een hoeveelheid kan worden aangeduid. Zie <a href=\"https://www.w3.org/TR/xmlschema-2/\">xsd datatypes</a> Integer, Float, Decimal, Double etc.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{5756CEDF-1C21-48b3-9F6B-D5AFA1BAF9AC}",
-      "name": "Kwantitatievewaarde",
-      "label": {
-        "nl": "KwantitatieveWaarde",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Aanduiding van de kwantiteit van een bepaald kenmerk van een object.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Bv de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag ed vallen hier dus niet onder.",
         "fr": "Enter your translation here"
       }
     },
@@ -1203,46 +1175,6 @@
     }
   ],
   "externalproperties": [
-    {
-      "EA-Guid": "{695FE943-3564-451a-B7F4-3C06DBB47B33}",
-      "name": "waarde",
-      "label": {
-        "nl": "waarde",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{250F947B-1A2B-4b1d-B8F1-AA8E66DD8ED3}",
-      "name": "eenheid",
-      "label": {
-        "nl": "eenheid",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "De eenheid waarin de waarde is uitgedrukt.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Te gebruiken als geen standaard eenheid gekend is.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{A0866BF1-5A5E-4dd4-A095-7491A1661B08}",
-      "name": "standaardEenheid",
-      "label": {
-        "nl": "standaard eenheid",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt.",
-        "fr": "Enter your translation here"
-      }
-    },
     {
       "EA-Guid": "{A63692B3-1E46-4e6e-9867-854E67639D67}",
       "name": "referentie",
@@ -1392,34 +1324,14 @@
       }
     },
     {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(target)",
+      "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+      "name": "opnamedatum",
       "label": {
-        "nl": "Bemonsteringsobject (target)",
+        "nl": "opnamedatum",
         "fr": "Enter your translation here"
       },
       "definition": {
-        "nl": "Referentie naar verbonden klasse.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject(source)",
-      "label": {
-        "nl": "Bemonsteringsobject (source)",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse.",
-        "fr": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "",
+        "nl": "Datum waarop de Opmeting plaatsvond.",
         "fr": "Enter your translation here"
       }
     },
@@ -1472,6 +1384,22 @@
       }
     },
     {
+      "EA-Guid": "{100014F8-C40F-41c8-B56C-99498BEEDB59}",
+      "name": "aanvangspeil",
+      "label": {
+        "nl": "aanvangspeil",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Geeft aan waar tov het Maaiveld het Boorgat start.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{DEF94715-84B1-4cf1-B2CF-B2C9015CEF4D}",
       "name": "hoogte",
       "label": {
@@ -1484,7 +1412,7 @@
       }
     },
     {
-      "EA-Guid": "{03D73409-5465-4107-9B81-12455A201CC0}",
+      "EA-Guid": "{4D6A2812-FA2F-4f92-B624-3B759BF162D4}",
       "name": "maaiveld",
       "label": {
         "nl": "maaiveld",
@@ -1492,6 +1420,10 @@
       },
       "definition": {
         "nl": "Het maaiveld van het Boorgat.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men de geometrie van het Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld.",
         "fr": "Enter your translation here"
       }
     },
@@ -1508,7 +1440,7 @@
       }
     },
     {
-      "EA-Guid": "{6CD2F53D-FC3B-4c4c-90B6-1EF0EB54C73C}",
+      "EA-Guid": "{FA8F4D6E-F744-4e58-8F8C-595895E9C941}",
       "name": "diepte",
       "label": {
         "nl": "diepte",
@@ -1516,6 +1448,10 @@
       },
       "definition": {
         "nl": "De diepte van het Boorgat.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van het Boorgat heeft en wil aangeven hoe diep er geboord is.",
         "fr": "Enter your translation here"
       }
     },
@@ -1628,18 +1564,6 @@
       }
     },
     {
-      "EA-Guid": "{A1A40C09-96B8-43db-84F6-EA252F1D5C67}",
-      "name": "isresultaatvan",
-      "label": {
-        "nl": "isResultaatVan",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Grondboring waarvan het Boorgat het resultaat is.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{7F49631F-BD1E-4a44-9838-0D87E1CF7C95}",
       "name": "isresultaatvan",
       "label": {
@@ -1648,18 +1572,6 @@
       },
       "definition": {
         "nl": "Verwijzing naar de Bemonstering waarvan dit Bemonsteringsobject het resultaat is.",
-        "fr": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{A1A40C09-96B8-43db-84F6-EA252F1D5C67}",
-      "name": "resultaat",
-      "label": {
-        "nl": "resultaat",
-        "fr": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Het resultaat van de uitgevoerde grondboring.",
         "fr": "Enter your translation here"
       }
     },
@@ -1676,14 +1588,30 @@
       }
     },
     {
-      "EA-Guid": "{AB2CDDE3-8633-481d-B2E9-EE0F9219D71C}",
+      "EA-Guid": "{48D5FFCA-843D-44ef-97D1-A99D8FB623A3}",
       "name": "bemonsterdobject",
       "label": {
         "nl": "bemonsterdObject",
         "fr": "Enter your translation here"
       },
       "definition": {
-        "nl": "Het Grondobject dat wordt bemonsterd.",
+        "nl": "Object dat wordt bemonsterd.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bv de Persoon waarvan een bloedstaal wordt genomen.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{A4CB330C-3849-4f95-88CC-6933EA5B6FA4}",
+      "name": "toegekendDoor(string)",
+      "label": {
+        "nl": "toegekend door (String)",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Naam vd agent die de identificator heeft toegekend.",
         "fr": "Enter your translation here"
       }
     },
@@ -1728,6 +1656,22 @@
       },
       "definition": {
         "nl": "Informatie waarme de LegaleVerschijningsvorm uniek kan worden geïdentificeerd.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{66756B82-7C96-4e3c-8166-85C1FF11DAAF}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "String gebruikt om het object uniek te identificeren.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
         "fr": "Enter your translation here"
       }
     },
@@ -1920,6 +1864,18 @@
       }
     },
     {
+      "EA-Guid": "{39F96FD0-8A54-4d39-94D2-66ADDF4850A5}",
+      "name": "type",
+      "label": {
+        "nl": "type",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Aard van het Domeinobject.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{7B02338B-D323-4f2e-9AE4-9139519DB66B}",
       "name": "categorie",
       "label": {
@@ -1928,6 +1884,30 @@
       },
       "definition": {
         "nl": "Classificatie van de LegaleVerschijningsvorm.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{A158B091-A5BE-43f7-B1EC-445EFE480A6D}",
+      "name": "toegekendOp",
+      "label": {
+        "nl": "toegekend op",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Tijdstip waarop de identificator werd uitgegeven.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{4FAE8804-F472-41ad-8BEE-A0AE10098A1E}",
+      "name": "toegekendDoor",
+      "label": {
+        "nl": "toegekend door",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Link naar de agent die de identificator heeft uitgegeven.",
         "fr": "Enter your translation here"
       }
     },
@@ -1984,6 +1964,18 @@
       },
       "definition": {
         "nl": "Moment waarop het Grondmonster is genomen.",
+        "fr": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{009ABEE2-13FC-4570-9736-D49FCF3D2218}",
+      "name": "bemonsteringsmethode",
+      "label": {
+        "nl": "bemonsteringsmethode",
+        "fr": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Manier waarop het Monster is verkregen uit het bemonsterd Object.",
         "fr": "Enter your translation here"
       }
     },
@@ -2092,14 +2084,18 @@
       }
     },
     {
-      "EA-Guid": "{D5BDE302-63FE-49b7-9784-D9ED2BAB7AFD}",
+      "EA-Guid": "{E73168B3-6A67-488f-9111-E9739E7E434F}",
       "name": "bemonsterdobject",
       "label": {
         "nl": "bemonsterdObject",
         "fr": "Enter your translation here"
       },
       "definition": {
-        "nl": "Het Grondobject dat wordt bemonsterd.",
+        "nl": "Verwijzing naar het Object dat men wil bemonsteren.",
+        "fr": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bv een profiel bemonstert een water- of atmosferische kolom, een peilput bemonstert het water in een watervoerende laag, een weefselstaal bemonstert een deel van een organisme.",
         "fr": "Enter your translation here"
       }
     },

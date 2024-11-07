@@ -2,7 +2,7 @@
   "classes": [
     {
       "EA-Guid": "{A84BCC1E-5B15-4f6f-AA9F-E5128B508D74}",
-      "name": "BO_CurveWaardepaar",
+      "name": "Bo_curvewaardepaar",
       "label": {
         "nl": "BO_CurveWaardepaar"
       },
@@ -15,7 +15,7 @@
     },
     {
       "EA-Guid": "{62D5F5F6-12D7-4aa3-B6FF-6BA39AAE8BEC}",
-      "name": "BO_RuimtelijkBemonsteringsobject",
+      "name": "Bo_ruimtelijkbemonsteringsobject",
       "label": {
         "nl": "BO_RuimtelijkBemonsteringsobject"
       },
@@ -37,16 +37,6 @@
       },
       "usage": {
         "nl": "In het vocabularium Bodem & Ondergrond gebruiken we deze klasse louter als generalisatie van Grondboringen en Bodemboringen."
-      }
-    },
-    {
-      "EA-Guid": "{2F646ECE-32AB-4301-8A89-0F6F7D410F68}",
-      "name": "Diepte",
-      "label": {
-        "nl": "Diepte"
-      },
-      "definition": {
-        "nl": "Verticale maat naar beneden vanaf het grondoppervlak."
       }
     },
     {
@@ -83,6 +73,9 @@
       },
       "definition": {
         "nl": "Resultaat van een Fractiemeting."
+      },
+      "usage": {
+        "nl": "Aangezien de Fractiemeting een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."
       }
     },
     {
@@ -95,7 +88,7 @@
         "nl": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."
       },
       "usage": {
-        "nl": "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."
+        "nl": "Een fractie (in de betekenis van \"aandeel\") houdt in dat een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. De ondergrens kan daarbij ook gefixeerd worden, bvb bij een cummulatieve Korrelverdeling waar fractie=f(maximum korreldiameter) en bij oplopende range van korrelgrootte (=diameter van de zeefopeningen) een oplopende fractie krijgt, bvb korreldiameter 0-0.42mm=0%, 0-0.149mm=25% en 0-0.076mm=100%."
       }
     },
     {
@@ -108,7 +101,7 @@
         "nl": "Persoonlijk beredeneerd oordeel over de betekenis van iets."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een \"gewone\" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer \"semantische lading\") omdat er meer theorie en/of verwerking aan te pas kwam."
+        "nl": "In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een \"gewone\" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer \"semantische lading\") omdat er meer theorie en/of verwerking aan te pas komt."
       }
     },
     {
@@ -118,10 +111,10 @@
         "nl": "Laag"
       },
       "definition": {
-        "nl": "Laag in de bodem met een zekere verticale omvang, onstaan door niet-pedogene processen en die een verandering in structuur en/of samenstelling vertoont met boven- of onderliggende lagen."
+        "nl": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject."
       },
       "usage": {
-        "nl": "Kan ook een groepering zijn van bodemhorizonten of andere sublagen met een speciaal doel."
+        "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv het Interval gevormd door de doorsnede van een geologische laag. OPMERKING: We noemen dit laaginterval hier gemakshalve Laag, de werkelijke laag is eerder het type laag en/of driedimensioneel object dat de ganse laag omvat."
       }
     },
     {
@@ -144,7 +137,7 @@
         "nl": "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."
       },
       "usage": {
-        "nl": "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."
+        "nl": "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat ze apart werden gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd (zie het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">AP Observaties & Metingen</a> voor meer info over deze klasse)."
       }
     },
     {
@@ -202,6 +195,19 @@
   ],
   "properties": [
     {
+      "EA-Guid": "{C6ECBDA5-5B8B-414c-8328-2332E0C5C19F}",
+      "name": "aanvangspeil",
+      "label": {
+        "nl": "aanvangspeil"
+      },
+      "definition": {
+        "nl": "Geeft aan waar tov het Maaiveld het Bemonsteringsobject start."
+      },
+      "usage": {
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven dat het boren boven of onder het Maaiveld is gestart."
+      }
+    },
+    {
       "EA-Guid": "{BCECAB91-FB36-40ed-937D-43C294766360}",
       "name": "meetwaarde",
       "label": {
@@ -212,6 +218,26 @@
       },
       "usage": {
         "nl": "Datatype is te substitueren door het datatype vd meetwaarde."
+      }
+    },
+    {
+      "EA-Guid": "{073EC02E-B58B-45b5-979F-A9CD2ECA450E}",
+      "name": "meetpuntondergrens",
+      "label": {
+        "nl": "meetpuntOndergrens"
+      },
+      "definition": {
+        "nl": "Ondergrens van een klasse van waarden van meetpunten."
+      }
+    },
+    {
+      "EA-Guid": "{B32082C0-BEAE-491c-AE0F-23D75FB647F6}",
+      "name": "meetpuntbovengrens",
+      "label": {
+        "nl": "meetpuntBovengrens"
+      },
+      "definition": {
+        "nl": "Bovengrens van een klasse van waarden van meetpunten."
       }
     },
     {
@@ -238,23 +264,13 @@
       }
     },
     {
-      "EA-Guid": "{D9B30E15-4DC6-4a20-82C7-BC274FBA9DE5}",
-      "name": "meetwaardeparameter",
+      "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
+      "name": "fractiemetingwaarde",
       "label": {
-        "nl": "meetwaardeparameter"
+        "nl": "fractiemetingwaarde"
       },
       "definition": {
-        "nl": "Het geobserveerdKenmerk."
-      }
-    },
-    {
-      "EA-Guid": "{9A14A96E-80AA-4210-B0D6-AE34FD41B738}",
-      "name": "meetreeksresultaat",
-      "label": {
-        "nl": "meetreeksresultaat"
-      },
-      "definition": {
-        "nl": "Het resultaat van de Meetreeks."
+        "nl": "Waarde ve individuele Meting in de Meetreeks.."
       }
     },
     {
@@ -278,73 +294,16 @@
       }
     },
     {
-      "EA-Guid": "{B1992E98-5080-4659-9DFF-42DF654136CB}",
-      "name": "meetwaardeparameter",
+      "EA-Guid": "{149464F6-B1B4-4a66-8B37-629D3139AD30}",
+      "name": "waarde",
       "label": {
-        "nl": "meetwaardeparameter"
+        "nl": "waarde"
       },
       "definition": {
-        "nl": "Waarde van de fractie."
-      }
-    },
-    {
-      "EA-Guid": "{073EC02E-B58B-45b5-979F-A9CD2ECA450E}",
-      "name": "meetpuntOndergrens",
-      "label": {
-        "nl": "meetpuntOndergrens"
+        "nl": "Verwijzing naar een record dat de laal beschrijft."
       },
-      "definition": {
-        "nl": "Ondergrens van een klasse van waarden van meetpunten."
-      }
-    },
-    {
-      "EA-Guid": "{B32082C0-BEAE-491c-AE0F-23D75FB647F6}",
-      "name": "meetpuntBovengrens",
-      "label": {
-        "nl": "meetpuntBovengrens"
-      },
-      "definition": {
-        "nl": "Bovengrens van een klasse van waarden van meetpunten."
-      }
-    },
-    {
-      "EA-Guid": "{30613E53-5C83-441e-B3AE-86F0BB9AEC86}",
-      "name": "meetpunt",
-      "label": {
-        "nl": "meetpunt"
-      },
-      "definition": {
-        "nl": "Waarde van het meetpunt."
-      }
-    },
-    {
-      "EA-Guid": "{E4D6C886-24A1-4b04-AB62-FEA406201AAC}",
-      "name": "fractiemetingwaarde",
-      "label": {
-        "nl": "fractiemetingwaarde"
-      },
-      "definition": {
-        "nl": "Eén waarde in het resultaat van een Fractiemeting."
-      }
-    },
-    {
-      "EA-Guid": "{105E37D9-C174-4093-B9E3-8329696370E8}",
-      "name": "meetwaardeparameter",
-      "label": {
-        "nl": "meetwaardeparameter"
-      },
-      "definition": {
-        "nl": "Het geobserveerdKenmerk."
-      }
-    },
-    {
-      "EA-Guid": "{68976AF8-214E-4729-B713-6DAA670BC4F2}",
-      "name": "fractiemetingresultaat",
-      "label": {
-        "nl": "fractiemetingresultaat"
-      },
-      "definition": {
-        "nl": "Het resultaat van de fractiemeting."
+      "usage": {
+        "nl": "Bvb een skos:Concept met het laagtype of een Record zoals GecodeerdeLithologieWaarde."
       }
     },
     {
@@ -354,10 +313,10 @@
         "nl": "maaiveld"
       },
       "definition": {
-        "nl": "Het Maaiveld vh Bemonsteringsobject."
+        "nl": "Ligging van het grondoppervlak."
       },
       "usage": {
-        "nl": "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring)."
+        "nl": "Bvb nuttig in het geval wanneer men de geometrie van een Boorgat  enkel met xy-coördinaten en diepte weergeeft en afzonderlijk de z-coördinaat van het Maaiveld."
       }
     },
     {
@@ -380,10 +339,10 @@
         "nl": "diepte"
       },
       "definition": {
-        "nl": "De Diepte vh Bemonsteringsobject."
+        "nl": "Geeft aan tot welke Diepte het Bemonsteringsobject reikt."
       },
       "usage": {
-        "nl": "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."
+        "nl": "Bvb nuttig in het geval wanneer men enkel de xy-coördinaten van een Boorgat heeft en wil aangeven hoe diep er geboord is."
       }
     },
     {
@@ -399,24 +358,17 @@
   ],
   "externals": [
     {
-      "EA-Guid": "{6EC54B7E-E776-4854-949B-B1E8F6B7445C}",
-      "name": "GeneriekeNaam",
-      "label": {
-        "nl": "GeneriekeNaam"
-      }
-    },
-    {
-      "EA-Guid": "{72F67A3D-E2A1-449c-8D39-7493C3E3F717}",
-      "name": "Any",
-      "label": {
-        "nl": "Any"
-      }
-    },
-    {
       "EA-Guid": "{35770AC3-5ED2-4f3d-A981-7385D27474FA}",
       "name": "Record",
       "label": {
         "nl": "Record"
+      }
+    },
+    {
+      "EA-Guid": "{F87FFF6F-4E3E-4aee-A694-44D62AED3E63}",
+      "name": "Maat",
+      "label": {
+        "nl": "Maat"
       }
     },
     {
@@ -428,7 +380,7 @@
     },
     {
       "EA-Guid": "{E4513A1B-8FBA-4876-939B-41DD9137DD80}",
-      "name": "PositioneleNauwkeurigheid",
+      "name": "Positionelenauwkeurigheid",
       "label": {
         "nl": "PositioneleNauwkeurigheid"
       }
@@ -441,10 +393,23 @@
       }
     },
     {
-      "EA-Guid": "{D83995DB-BBF1-4a54-B7EE-13DBF733A044}",
-      "name": "Domeinobject",
+      "EA-Guid": "{846E7212-B3FF-4f29-84EF-44BFA99A84B7}",
+      "name": "Curvewaardepaar",
       "label": {
-        "nl": "Domeinobject"
+        "nl": "CurveWaardepaar"
+      },
+      "definition": {
+        "nl": "Element van een DiscreetCurveBereik."
+      },
+      "usage": {
+        "nl": "Een CurveWaardepaar beschrijft de geometrie van een stuk van de ruimte voorgesteld door een Curve en de waarde van een continu variërend fenomeen die men voor die Curve heeft vastgesteld. Bv de straatnaam langs een stuk van een wegsegment of de stratigrafie van een diepteinterval bij een boring.OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-bereiken\">AP Ruimtelijke Bereiken</a>."
+      }
+    },
+    {
+      "EA-Guid": "{79801ECE-2155-430c-8D69-674DE73DF575}",
+      "name": "Interval",
+      "label": {
+        "nl": "Interval"
       }
     },
     {
@@ -463,7 +428,7 @@
     },
     {
       "EA-Guid": "{66CCCA38-BABD-4a65-BFD2-DC9876668734}",
-      "name": "BenoemdeWaarde",
+      "name": "Benoemdewaarde",
       "label": {
         "nl": "BenoemdeWaarde"
       }
@@ -498,7 +463,7 @@
     },
     {
       "EA-Guid": "{B248EB95-9F93-416c-A9FA-733F2791383C}",
-      "name": "RuimtelijkBemonsteringsobject",
+      "name": "Ruimtelijkbemonsteringsobject",
       "label": {
         "nl": "RuimtelijkBemonsteringsobject"
       }
@@ -511,13 +476,17 @@
       }
     },
     {
-      "EA-Guid": "{03980252-8847-4e5c-8004-726E2C8E50B1}",
-      "name": "StandaardEenheid",
+      "EA-Guid": "{5E886B75-925B-47d3-A8B9-3F59DA728974}",
+      "name": "Vlak",
       "label": {
-        "nl": "StandaardEenheid"
-      },
-      "definition": {
-        "nl": "Eenheid vastgelegd door een standaardiserende organisatie."
+        "nl": "Vlak"
+      }
+    },
+    {
+      "EA-Guid": "{D0E1B435-5BD1-4ea5-A3F6-BEE110B02860}",
+      "name": "3dobject",
+      "label": {
+        "nl": "3Dobject"
       }
     },
     {
@@ -528,24 +497,17 @@
       }
     },
     {
-      "EA-Guid": "{5E886B75-925B-47d3-A8B9-3F59DA728974}",
-      "name": "Vlak",
-      "label": {
-        "nl": "Vlak"
-      }
-    },
-    {
-      "EA-Guid": "{D0E1B435-5BD1-4ea5-A3F6-BEE110B02860}",
-      "name": "3Dobject",
-      "label": {
-        "nl": "3Dobject"
-      }
-    },
-    {
       "EA-Guid": "{2E30B0B7-414D-4da8-969F-A803BC0DC716}",
       "name": "Punt",
       "label": {
         "nl": "Punt"
+      }
+    },
+    {
+      "EA-Guid": "{72F67A3D-E2A1-449c-8D39-7493C3E3F717}",
+      "name": "Any",
+      "label": {
+        "nl": "Any"
       }
     },
     {
@@ -571,7 +533,10 @@
     },
     {
       "EA-Guid": "{12E069BE-2642-4d04-A24E-04B9A99BEA1D}",
-      "name": ""
+      "name": "Erkenningtype",
+      "label": {
+        "nl": "Erkenningtype"
+      }
     },
     {
       "EA-Guid": "{5B873956-B910-4762-9FBA-1A0C9ED8127E}",
@@ -603,7 +568,7 @@
     },
     {
       "EA-Guid": "{55506D79-2E1E-4ca4-8A7A-26553B1AE415}",
-      "name": "DirectePositie",
+      "name": "Directepositie",
       "label": {
         "nl": "DirectePositie"
       },
@@ -620,86 +585,22 @@
       "label": {
         "nl": "Opmeting"
       }
-    },
-    {
-      "EA-Guid": "{43C7CF52-F9B7-49f5-A068-50D5351139C8}",
-      "name": "Getal",
-      "label": {
-        "nl": "Getal"
-      }
-    },
-    {
-      "EA-Guid": "{5756CEDF-1C21-48b3-9F6B-D5AFA1BAF9AC}",
-      "name": "KwantitatieveWaarde",
-      "label": {
-        "nl": "KwantitatieveWaarde"
-      }
     }
   ],
   "externalproperties": [
     {
-      "EA-Guid": "{695FE943-3564-451a-B7F4-3C06DBB47B33}",
-      "name": "waarde",
+      "EA-Guid": "{D2730F27-C617-4a6d-A2BB-2F38989513EA}",
+      "name": "opnamedatum",
       "label": {
-        "nl": "waarde"
-      }
-    },
-    {
-      "EA-Guid": "{250F947B-1A2B-4b1d-B8F1-AA8E66DD8ED3}",
-      "name": "eenheid",
-      "label": {
-        "nl": "eenheid"
-      }
-    },
-    {
-      "EA-Guid": "{A0866BF1-5A5E-4dd4-A095-7491A1661B08}",
-      "name": "standaardEenheid",
-      "label": {
-        "nl": "standaardEenheid"
-      }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject (target)",
-      "label": {
-        "nl": "Bemonsteringsobject (target)"
+        "nl": "opnamedatum"
       },
       "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
-      }
-    },
-    {
-      "EA-Guid": "Derived:{75348108-6968-4eeb-9169-6DC6418A1052}->{C684A48D-5F7E-4f30-813C-520EDB9C6EB6}",
-      "name": "bemonsteringsobject (source)",
-      "label": {
-        "nl": "Bemonsteringsobject (source)"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
-      }
-    },
-    {
-      "EA-Guid": "{C6D15072-FE4B-4bae-9638-CBFFF8906A8E}",
-      "name": "identificator",
-      "label": {
-        "nl": "identificator"
-      },
-      "definition": {
-        "nl": "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."
-      },
-      "usage": {
-        "nl": "Bv het uniek nummer dat aan een Monster wordt toegekend of het numer van een meetstation."
+        "nl": "Datum waarop de Opmeting plaatsvond."
       }
     },
     {
       "EA-Guid": "{EB48EB0C-3E46-48a0-9276-AB2492ECD655}",
-      "name": "uitgevoerdDoor",
+      "name": "uitgevoerddoor",
       "label": {
         "nl": "uitgevoerdDoor"
       },
@@ -735,6 +636,34 @@
       },
       "definition": {
         "nl": "De manier waarop de positie werd bepaald."
+      }
+    },
+    {
+      "EA-Guid": "{B1992E98-5080-4659-9DFF-42DF654136CB}",
+      "name": "meetwaarde",
+      "label": {
+        "nl": "meetwaarde"
+      }
+    },
+    {
+      "EA-Guid": "{A4CB330C-3849-4f95-88CC-6933EA5B6FA4}",
+      "name": "toegekenddoorstring",
+      "label": {
+        "nl": "toegekendDoorString"
+      }
+    },
+    {
+      "EA-Guid": "{C6D15072-FE4B-4bae-9638-CBFFF8906A8E}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      }
+    },
+    {
+      "EA-Guid": "{66756B82-7C96-4e3c-8166-85C1FF11DAAF}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
       }
     },
     {
@@ -796,6 +725,20 @@
       }
     },
     {
+      "EA-Guid": "{A158B091-A5BE-43f7-B1EC-445EFE480A6D}",
+      "name": "toegekendop",
+      "label": {
+        "nl": "toegekendOp"
+      }
+    },
+    {
+      "EA-Guid": "{4FAE8804-F472-41ad-8BEE-A0AE10098A1E}",
+      "name": "toegekenddoor",
+      "label": {
+        "nl": "toegekendDoor"
+      }
+    },
+    {
       "EA-Guid": "{7EAA18CD-0831-47d7-9BA3-798168C3E9D1}",
       "name": "geometrie",
       "label": {
@@ -804,14 +747,14 @@
     },
     {
       "EA-Guid": "{70119F61-4A51-40d9-A0AC-245316CE6C77}",
-      "name": "positioneleNauwkeurigheid",
+      "name": "positionelenauwkeurigheid",
       "label": {
         "nl": "positioneleNauwkeurigheid"
       }
     },
     {
       "EA-Guid": "{5A3888D3-8217-4310-8D17-852660192864}",
-      "name": "gehostPlatform",
+      "name": "gehostplatform",
       "label": {
         "nl": "gehostPlatform"
       }
@@ -835,7 +778,7 @@
     },
     {
       "EA-Guid": "{1D2F0991-A37B-4c99-8DD9-0D5AB922F6F4}",
-      "name": "geassocieerdBemonsteringsobject",
+      "name": "geassocieerdbemonsteringsobject",
       "label": {
         "nl": "geassocieerdBemonsteringsobject"
       }
@@ -855,6 +798,46 @@
       }
     },
     {
+      "EA-Guid": "{9A14A96E-80AA-4210-B0D6-AE34FD41B738}",
+      "name": "meetreeksresultaat",
+      "label": {
+        "nl": "meetreeksresultaat"
+      },
+      "definition": {
+        "nl": "Het resultaat van de Meetreeks."
+      }
+    },
+    {
+      "EA-Guid": "{68976AF8-214E-4729-B713-6DAA670BC4F2}",
+      "name": "fractiemetingresultaat",
+      "label": {
+        "nl": "fractiemetingresultaat"
+      },
+      "definition": {
+        "nl": "Het resultaat van de Fractiemeting."
+      }
+    },
+    {
+      "EA-Guid": "{105E37D9-C174-4093-B9E3-8329696370E8}",
+      "name": "meetwaardeparameter",
+      "label": {
+        "nl": "meetwaardeparameter"
+      },
+      "definition": {
+        "nl": "Het geobserveerdKenmerk."
+      }
+    },
+    {
+      "EA-Guid": "{D9B30E15-4DC6-4a20-82C7-BC274FBA9DE5}",
+      "name": "meetwaardeparameter",
+      "label": {
+        "nl": "meetwaardeparameter"
+      },
+      "definition": {
+        "nl": "Het geobserveerdKenmerk."
+      }
+    },
+    {
       "EA-Guid": "{9D01CDFE-4EBC-4018-AE28-CFFBDA5E54B0}",
       "name": "waarde",
       "label": {
@@ -866,16 +849,6 @@
       "name": "naam",
       "label": {
         "nl": "naam"
-      }
-    },
-    {
-      "EA-Guid": "{3AC5C34B-DE78-4c62-AEB8-9B1962CECDEF}",
-      "name": "ruimtelijkeSamenstelling",
-      "label": {
-        "nl": "ruimtelijkeSamenstelling"
-      },
-      "definition": {
-        "nl": "TODO"
       }
     },
     {
