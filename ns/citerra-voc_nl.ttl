@@ -1,0 +1,105 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schemas:Vehicle a rdfs:Class .
+
+<https://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class;
+  rdfs:label "Logische operatie"@nl .
+
+<https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap> a owl:Class;
+  rdfs:label "Consumeer Publieke Dienstverleningstap"@nl;
+  rdfs:comment "Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap> .
+
+<https://test.data.vlaanderen.be/ns/citerra#operatie> a owl:ObjectProperty;
+  rdfs:label "operatie"@nl;
+  rdfs:comment "Logische operatie die toegepast wordt op de Voorwaarden."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:range <https://www.w3.org/2004/02/skos/core#Concept> .
+
+<https://test.data.vlaanderen.be/ns/citerra#toegang> a owl:ObjectProperty;
+  rdfs:label "toegang"@nl;
+  rdfs:domain schemas:Vehicle;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/citerra#Toegang> .
+
+<https://test.data.vlaanderen.be/ns/citerra#voertuig> a owl:ObjectProperty;
+  rdfs:label "voertuig"@nl;
+  rdfs:comment "Voertuig op welke het recht van toepassing is."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#Toegang>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:range schemas:Vehicle .
+
+dc:extent a rdf:Property .
+
+dc:type a rdf:Property .
+
+<http://www.w3.org/ns/adms#identifier> a rdf:Property .
+
+<https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie> a owl:Class;
+  rdfs:label "Voorwaarde Collectie"@nl;
+  rdfs:comment "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:subClassOf <http://data.europa.eu/m8g/Requirement> .
+
+<https://test.data.vlaanderen.be/ns/citerra#Toegang> a owl:Class;
+  rdfs:label "Toegang"@nl;
+  rdfs:comment "Recht om een bepaalde zone binnen te mogen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>,
+    <http://data.europa.eu/m8g/Output> .
+
+<https://test.data.vlaanderen.be/ns/citerra> a owl:Ontology;
+  rdfs:label "citerra-voc"@en,
+    "citerra-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso schemas:Vehicle,
+    <https://www.w3.org/2004/02/skos/core#Concept>,
+    <http://www.w3.org/ns/adms#identifier>,
+    dc:type,
+    dc:extent;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
