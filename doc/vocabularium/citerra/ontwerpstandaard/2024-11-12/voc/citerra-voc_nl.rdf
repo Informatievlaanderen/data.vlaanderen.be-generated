@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:schema="http://schema.org/">
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap">
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/citerra">
+        <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
+        <dc:license rdf:resource="https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0"/>
+        <dc:mediator>
+          <rdf:Description rdf:nodeID="g459360">
+            <foaf:homepage rdf:resource="https://data.vlaanderen.be"/>
+            <foaf:mbox rdf:resource="mailto:oslo@kb.vlaanderen.be"/>
+            <foaf:name>Data Vlaanderen</foaf:name>
+          </rdf:Description>
+        </dc:mediator>
+        <rdfs:label xml:lang="en">citerra-voc</rdfs:label>
+        <rdfs:label xml:lang="nl">citerra-voc</rdfs:label>
+        <foaf:maker>
+          <foaf:Person rdf:nodeID="g459380">
+            <schema:affiliation>
+              <rdf:Description rdf:nodeID="g459400">
+                <foaf:homepage rdf:resource="https://auteurwebsiteurl"/>
+                <foaf:name>AuteurAffiliatie</foaf:name>
+              </rdf:Description>
+            </schema:affiliation>
+            <foaf:firstName>AuteurVoornaam</foaf:firstName>
+            <foaf:lastName>AuteurNaam</foaf:lastName>
+            <foaf:mbox rdf:resource="mailto:auteurvoornaam.auteurnaam@auteurdomein"/>
+          </foaf:Person>
+        </foaf:maker>
+        <ns0:editor>
+          <foaf:Person rdf:nodeID="g459420">
+            <schema:affiliation>
+              <rdf:Description rdf:nodeID="g459440">
+                <foaf:homepage rdf:resource="https://editorwebsiteurl"/>
+                <foaf:name>EditorAffiliatie</foaf:name>
+              </rdf:Description>
+            </schema:affiliation>
+            <foaf:firstName>EditorVoornaam</foaf:firstName>
+            <foaf:lastName>EditorNaam</foaf:lastName>
+            <foaf:mbox rdf:resource="mailto:editorvoornaam.editornaam@editordomein"/>
+          </foaf:Person>
+        </ns0:editor>
+        <dc:contributor>
+          <foaf:Person rdf:nodeID="g459460">
+            <schema:affiliation>
+              <rdf:Description rdf:nodeID="g459480">
+                <foaf:homepage rdf:resource="https://medewerkerwebsiteurl"/>
+                <foaf:name>MedewerkerAffiliatie</foaf:name>
+              </rdf:Description>
+            </schema:affiliation>
+            <foaf:firstName>MedewerkerVoornaam</foaf:firstName>
+            <foaf:lastName>MedewerkerNaam</foaf:lastName>
+            <foaf:mbox rdf:resource="mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein"/>
+          </foaf:Person>
+        </dc:contributor>
+        <dc:issued>TODO</dc:issued>
+        <rdfs:seeAlso>
+          <rdfs:Class rdf:about="https://schema.org/Vehicle">
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdfs:Class rdf:about="https://www.w3.org/2004/02/skos/core#Concept">
+            <rdfs:label xml:lang="nl">Logische operatie</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://www.w3.org/ns/adms#identifier">
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/terms/type">
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/terms/extent">
+          </rdf:Property>
+        </rdfs:seeAlso>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="nl">Consumeer Publieke Dienstverleningstap</rdfs:label>
+    <rdfs:comment xml:lang="nl">Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#operatie">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+    <rdfs:label xml:lang="nl">operatie</rdfs:label>
+    <rdfs:comment xml:lang="nl">Logische operatie die toegepast wordt op de Voorwaarden.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie">
+        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+        <rdfs:label xml:lang="nl">Voorwaarde Collectie</rdfs:label>
+        <rdfs:comment xml:lang="nl">Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Requirement"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#toegang">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+    <rdfs:label xml:lang="nl">toegang</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#Toegang">
+        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+        <rdfs:label xml:lang="nl">Toegang</rdfs:label>
+        <rdfs:comment xml:lang="nl">Recht om een bepaalde zone binnen te mogen.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Recht"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Output"/>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#voertuig">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+    <rdfs:label xml:lang="nl">voertuig</rdfs:label>
+    <rdfs:comment xml:lang="nl">Voertuig op welke het recht van toepassing is.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/citerra#Toegang"/>
+    <rdfs:range rdf:resource="https://schema.org/Vehicle"/>
+  </owl:ObjectProperty>
+</rdf:RDF>

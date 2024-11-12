@@ -1,0 +1,224 @@
+{
+  "@context": {
+    "Aanvraag": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+    "Aanvraag.aanvrager": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "@type": "@id"
+    },
+    "Aanvraag.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Aanvraag.ingangsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Aanvraag.inhoud": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+      "@type": "@id"
+    },
+    "Aanvraag.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Activiteit": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit",
+    "Activiteit.locatie": {
+      "@id": "http://www.w3.org/ns/locn#location",
+      "@type": "@id"
+    },
+    "Activiteit.tijdsbestek": {
+      "@id": "http://purl.org/dc/terms/extent",
+      "@type": "@id"
+    },
+    "Activiteit.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Bewijs": "http://data.europa.eu/m8g/Evidence",
+    "Bewijs.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Bewijs.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Bewijs.vervult": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/supportsRequirement",
+      "@type": "@id"
+    },
+    "ConsumeerPubliekeDienstverleningstap": "https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap",
+    "ConsumeerPubliekeDienstverleningstap.dienstverlening": {
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#dienstverlening",
+      "@type": "@id"
+    },
+    "Dossier": "https://data.vlaanderen.be/ns/dossier#Dossier",
+    "Dossier.bestaatUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/dossier#Dossier.bestaatUit",
+      "@type": "@id"
+    },
+    "LogischeOperatie": "https://www.w3.org/2004/02/skos/core#Concept",
+    "Procedure": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
+    "Procedure.procedurestap": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "@type": "@id"
+    },
+    "Procedurestap": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
+    "Project": "http://dbpedia.org/ontology/Project",
+    "PubliekeDienstverlening": "http://purl.org/vocab/cpsv#PublicService",
+    "PubliekeDienstverlening.geconsumeerdIn": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#geconsumeerdIn",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.heeftCompetenteAutoriteit": {
+      "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.heeftVoorwaarde": {
+      "@container": "@set",
+      "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.produceert": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.volgt": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#follows",
+      "@type": "@id"
+    },
+    "Stuk": "https://data.vlaanderen.be/ns/dossier#Stuk",
+    "Toegang": "https://test.data.vlaanderen.be/ns/citerra#Toegang",
+    "Toegang.tijdsbestek": {
+      "@id": "http://purl.org/dc/terms/extent",
+      "@type": "@id"
+    },
+    "Toegang.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Toegang.voertuig": {
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#voertuig",
+      "@type": "@id"
+    },
+    "Toegang.voorwerp": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "@type": "@id"
+    },
+    "Vergunning": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+    "Vergunning.document": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#document",
+      "@type": "@id"
+    },
+    "Vergunning.gebruiktAls": {
+      "@container": "@set",
+      "@id": "http://vocab.belgif.be/ns/publicservice#isUsedAs",
+      "@type": "@id"
+    },
+    "Vergunning.identificator": {
+      "@id": "http://www.w3.org/ns/adams#identifier",
+      "@type": "@id"
+    },
+    "Vergunning.ingangsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Vergunning.inhoud": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+      "@type": "@id"
+    },
+    "Vergunning.verantwoordelijke": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "@type": "@id"
+    },
+    "Voertuig": "https://schema.org/Vehicle",
+    "Voertuig.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Voertuig.toegang": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#toegang",
+      "@type": "@id"
+    },
+    "Voertuig.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Voorwaarde": "http://data.europa.eu/m8g/Requirement",
+    "Voorwaarde.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Voorwaarde.heeftOndersteunendBewijs": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
+      "@type": "@id"
+    },
+    "Voorwaarde.isVoorwaardeVan": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/isRequirementOf",
+      "@type": "@id"
+    },
+    "Voorwaarde.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Voorwaarde.uitgever": {
+      "@id": "http://purl.org/dc/terms/publisher",
+      "@type": "@id"
+    },
+    "VoorwaardeCollectie": "https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie",
+    "VoorwaardeCollectie.heeftVoorwaarde": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasRequirement",
+      "@type": "@id"
+    },
+    "VoorwaardeCollectie.operatie": {
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#operatie",
+      "@type": "@id"
+    },
+    "Zaak": "http://dbpedia.org/ontology/Case",
+    "Zaak.dossier": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+      "@type": "@id"
+    },
+    "Zaak.isDeelVan": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "@id"
+    },
+    "Zaak.zaakhandeling": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+      "@type": "@id"
+    },
+    "Zone": "https://data.vlaanderen.be/ns/mobiliteit#Zone",
+    "Zone.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Zone.naam": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+    }
+  }
+}
