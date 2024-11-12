@@ -2,16 +2,15 @@
   "@context": {
     "3Dobject": "http://www.opengis.net/ont/gml#Solid",
     "Agent": "http://purl.org/dc/terms/Agent",
-    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "Any": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
     "Bemonsteraar": "http://www.w3.org/ns/sosa/Sampler",
     "Bemonsteraar.implementeert": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implements",
       "@type": "@id"
     },
     "Bemonsteraar.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Bemonsteraar.uitgevoerdeBemonstering": {
@@ -51,12 +50,12 @@
     },
     "Bemonstering.resultaat": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@id": "http://www.w3.org/ns/sosa/hasresult",
       "@type": "@id"
     },
     "Bemonstering.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Bemonstering.uitgevoerdDoor": {
@@ -98,12 +97,12 @@
     },
     "Bemonsteringsobject.identificator": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
       "@type": "@id"
     },
     "Bemonsteringsobject.isResultaatVan": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@id": "http://www.w3.org/ns/sosa/isresultOf",
       "@type": "@id"
     },
     "Bemonsteringsobject.parameter": {
@@ -112,7 +111,20 @@
       "@type": "@id"
     },
     "Bemonsteringsobject.type": {
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
+    "BemonsteringsobjectComplex.bemonsteringsobject(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex.bemonsteringsobject(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex.rol": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
       "@type": "@id"
     },
     "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -122,7 +134,7 @@
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member",
       "@type": "@id"
     },
-    "Bemonsteringsprocedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Bemonsteringsprocedure": "http://www.w3.org/sosa/om#SamplingProcedure",
     "Bemonsteringsprocedure.geïmplementeerdDoor": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
@@ -150,7 +162,7 @@
     },
     "Bemonsteringsprocedure.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Bemonsteringsproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -159,25 +171,27 @@
     "Bemonsteringsvlak": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
     "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
     "BenoemdeWaarde.naam": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name"
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "@id"
     },
     "BenoemdeWaarde.waarde": {
       "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
       "@type": "@id"
     },
     "Bestandsformaat": "http://purl.org/dc/terms/FileFormat",
+    "BetrokkenPartij": "http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty",
     "Boorgat": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
     "Boorgat.geometrie": {
       "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
       "@type": "@id"
     },
     "Conditie": "http://www.w3.org/ns/ssn/systems/Condition",
-    "Curve": "http://www.opengis.net/ont/sf#Curve",
-    "Dekking": "http://purl.org/dc/elements/1.1/coverage",
-    "Dimensie": "https://data.vlaanderen.be/ns/generiek#Dimensie",
-    "Domeinobject": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+    "Curve": "http://www.opengis.net/ont/geosparql#Curve",
+    "Dekking": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+    "Dimensie": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie",
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
     "Domeinobject.type": {
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Domeinobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -186,9 +200,10 @@
       "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
       "@type": "@id"
     },
-    "Formaat": "https://data.vlaanderen.be/ns/generiek#Formaat",
+    "Formaat": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
     "Functie": "https://saref.etsi.org/core/Function",
     "Gegevensdrager": "http://purl.org/dc/terms/PhysicalMedium",
+    "GeneriekeNaam": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
     "Geometrie": "http://www.w3.org/ns/locn#Geometry",
     "Geometrie.gml": {
       "@id": "http://www.opengis.net/ont/geosparql#asGML"
@@ -200,31 +215,17 @@
     "Geometrie.wkt": {
       "@id": "http://www.opengis.net/ont/geosparql#asWKT"
     },
+    "Getal": "https://schema.org/Number",
     "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
     "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Identificator.identificator": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation"
-    },
-    "Identificator.toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "@id"
-    },
-    "Identificator.toegekendDoor (string)": {
-      "@id": "http://www.w3.org/ns/adms#schemaAgency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Identificator.toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Informatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Informatietype": "http://fixme.com#Informatietype",
     "Input": "http://www.w3.org/ns/ssn/Input",
     "Input.referentie": {
       "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "Input.type": {
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -250,6 +251,19 @@
       "@type": "@id"
     },
     "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "KwantitatieveWaarde.standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "@id"
+    },
     "LidaRpuntenwolk": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#LidarCloud",
     "LidaRpuntenwolk.geometrie": {
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
@@ -257,7 +271,10 @@
     },
     "Locatie": "http://www.w3.org/ns/prov#Location",
     "Maat": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
-    "Materiaalklasse": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Maat.maat": {
+      "@id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
+      "@type": "@id"
+    },
     "Metadata": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
     "Metadata.auteur": {
       "@container": "@set",
@@ -374,7 +391,6 @@
       "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
       "@type": "@id"
     },
-    "Monstertype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Monstervoorbereiding": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
     "Monstervoorbereiding.procesoperator": {
       "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
@@ -419,7 +435,7 @@
     },
     "Observatie.identificator": {
       "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
       "@type": "@id"
     },
     "Observatie.metadata": {
@@ -451,7 +467,7 @@
     },
     "Observatie.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Observatie.uitgevoerdDoor": {
@@ -476,8 +492,7 @@
       "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
       "@type": "@id"
     },
-    "Observatiecontexttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Observatieprocedure": "http://www.w3.org/ns/sosa/om#ObservationProcedure",
+    "Observatieprocedure": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
     "Observatieprocedure.geïmplementeerdMet": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
@@ -505,7 +520,7 @@
     },
     "Observatieprocedure.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -515,7 +530,7 @@
       "@type": "@id"
     },
     "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Observatieverzameling": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "Observatieverzameling": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
     "Observatieverzameling.fenomeentijd": {
       "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
       "@type": "@id"
@@ -555,27 +570,13 @@
     },
     "Ontsluiting": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Outcrop",
     "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
-    "Opmeting": "https://data.vlaanderen.be/ns/generiek#Opmeting",
-    "Opmeting.methode": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
-      "@type": "@id"
-    },
-    "Opmeting.opnamedatum": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Opmeting.uitgevoerdDoor": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
-      "@type": "@id"
-    },
-    "Opmetingmethode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Output": "http://www.w3.org/ns/ssn/Output",
     "Output.referentie": {
       "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "Output.type": {
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -603,19 +604,18 @@
       "@type": "@id"
     },
     "Platform.type": {
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Platformtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
     "Procedure": "http://www.w3.org/ns/sosa/Procedure",
-    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process",
     "Profiel": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
     "Profiel.geometrie": {
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape",
       "@type": "@id"
     },
-    "Punt": "http://www.opengis.net/ont/sf#Point",
     "RuimtelijkBemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
     "RuimtelijkBemonsteringsobject.gehostPlatform": {
       "@container": "@set",
@@ -651,12 +651,13 @@
       "@id": "http://www.w3.org/ns/sosa/madeObservation",
       "@type": "@id"
     },
+    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
     "Station": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Station",
     "Station.geometrie": {
       "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
       "@type": "@id"
     },
-    "Systeem": "http://www.w3.org/ns/ssn/System",
+    "Systeem": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
     "Systeem.capaciteit": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
@@ -674,7 +675,7 @@
     },
     "Systeem.type": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
+      "@id": "http://purl.org/cd/terms/type",
       "@type": "@id"
     },
     "Systeem.werkingsbereik": {
@@ -737,7 +738,7 @@
       "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
       "@type": "@id"
     },
-    "Werkingskenmerk": "http://www.w3.org/ns/ssn/systems/OperatingProperty",
+    "Werkingskenmerk": "http://www.w3.org/ns/ssn/systems/OperatingRange",
     "WettelijkKader": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
     "Zwad": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Swath",
     "Zwad.geometrie": {
