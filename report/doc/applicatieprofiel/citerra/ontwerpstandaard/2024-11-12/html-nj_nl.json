@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/29554ee29e2059586dccfc9ff643a92a4b72dffb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/29554ee29e2059586dccfc9ff643a92a4b72dffb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/61adf6c3f9aa11ba55378d3766e80b888972fd56",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/61adf6c3f9aa11ba55378d3766e80b888972fd56/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -163,8 +163,7 @@
           "codelist_uri": "",
           "rawTags": {
             "name": "voertuig",
-            "ap-definition-nl": "Voertuig waarvoor de Toegang geldt.",
-            "definition-nl": "Voertuig op welke het recht van toepassing is.",
+            "definition-nl": "Voertuig waarvoor de Toegang geldt.",
             "label-nl": "voertuig"
           }
         },
@@ -1060,7 +1059,7 @@
           }
         },
         {
-          "uri": "http://www.w3.org/ns/adams#identifier",
+          "uri": "http://www.w3.org/ns/adms#identifier",
           "name": "identificator",
           "sort": "identificator",
           "label": {
@@ -1094,7 +1093,7 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/adams#identifier",
+            "uri": "http://www.w3.org/ns/adms#identifier",
             "ap-label-nl": "identificator",
             "ap-definition-nl": "De Identificator van de Vergunning."
           }
@@ -1237,6 +1236,46 @@
             "ap-definition-nl": "Aanvraag die bij de Zaak hoort.",
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
             "ap-label-nl": "zaakhandeling"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedure",
+          "name": "procedure",
+          "sort": "procedure",
+          "label": {
+            "nl": "procedure"
+          },
+          "description": {
+            "nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Procedure",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Procedure",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure",
+              "range_label": {
+                "nl": "Procedure"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld.",
+            "ap-label-nl": "procedure",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedure"
           }
         },
         {
@@ -2357,9 +2396,9 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "definition-nl": "Rechten voor toegang dewelke het Voertuig heeft.",
             "label-nl": "toegang",
-            "name": "toegang",
-            "ap-definition-nl": "Rechten voor toegang dewelke het Voertuig heeft."
+            "name": "toegang"
           }
         },
         {

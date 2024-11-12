@@ -503,7 +503,7 @@
   shacl:class <http://www.w3.org/ns/adms#Identifier>;
   shacl:description "De Identificator van de Vergunning."@nl;
   shacl:name "identificator"@nl;
-  shacl:path <http://www.w3.org/ns/adams#identifier> .
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#VergunningShape/10238f20248c4a8851251daa05d9a6f17ba672d5> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Vergunning.document";
   shacl:class foaf:Document;
@@ -551,7 +551,7 @@
   shacl:description "De Identificator van de Vergunning."@nl;
   shacl:minCount 1;
   shacl:name "identificator"@nl;
-  shacl:path <http://www.w3.org/ns/adams#identifier> .
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#VergunningShape/ba43c3d188022f476c8ec09c23252e50af5c54b6> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Vergunning.ingangsdatum";
   shacl:description "Datum vanaf dewelke de Vergunning rechtskracht krijgt."@nl;
@@ -563,7 +563,7 @@
   shacl:description "De Identificator van de Vergunning."@nl;
   shacl:maxCount 1;
   shacl:name "identificator"@nl;
-  shacl:path <http://www.w3.org/ns/adams#identifier> .
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#VergunningShape/d0cf7407b091f6511da927ca074d2dcebd9aa793> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Vergunning.document";
   shacl:description "Neerslag van de Vergunning in een Document."@nl;
@@ -760,6 +760,8 @@
   shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/4758b17a72ce652025b76b6047a8c34ffc86c908>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/aa491d6e16e984f495c525bd890a0348d622a7ee>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/20fc127c7d294b91eee511f7dacb75683e00ee75>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/a6b82045e2b0570810c9150bcfe56b9e6c29e4e7>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/d1634e5f725006f2c1375affe48b2731cfa94dc2>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/5753cb6f0bfd05fb7114f765e046a1c3b9ed7945>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/709c2bcd18a314952fdff295cb49b0f723fcbf1a>;
   shacl:targetClass dbo:Case .
@@ -791,11 +793,23 @@
   shacl:name "zaakhandeling"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/a6b82045e2b0570810c9150bcfe56b9e6c29e4e7> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Zaak.procedure";
+  shacl:description "De Procedure volgens dewelke de Zaak wordt afgehandeld."@nl;
+  shacl:maxCount 1;
+  shacl:name "procedure"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#procedure> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/aa491d6e16e984f495c525bd890a0348d622a7ee> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Zaak.dossier";
   shacl:description "Het dossier waarin deze zaak wordt behandeld."@nl;
   shacl:maxCount 1;
   shacl:name "dossier"@nl;
   shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#dossier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZaakShape/d1634e5f725006f2c1375affe48b2731cfa94dc2> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#Zaak.procedure";
+  shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure>;
+  shacl:description "De Procedure volgens dewelke de Zaak wordt afgehandeld."@nl;
+  shacl:name "procedure"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#procedure> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/citerra/ontwerpstandaard/2024-11-12#ZoneShape> a shacl:NodeShape;
   shacl:closed false;
