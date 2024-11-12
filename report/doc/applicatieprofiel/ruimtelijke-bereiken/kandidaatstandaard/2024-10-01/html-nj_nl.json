@@ -84,16 +84,18 @@
       },
       "properties": [
         {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
-          "name": "typebereik",
-          "sort": "typeBereik",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
+          "name": "crs",
+          "sort": "crs",
           "label": {
-            "nl": "typeBereik"
+            "nl": "crs"
           },
           "description": {
-            "nl": "Datatype van het Record dat een waarde voorstelt."
+            "nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
           },
-          "usage": {},
+          "usage": {
+            "nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie."
+          },
           "domain": [
             {
               "EA-Name": "Bereik",
@@ -102,151 +104,27 @@
           ],
           "range": [
             {
-              "range_label": "Recordtype",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
+              "range_label": "CRS",
+              "range_uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Recordtype",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
+              "range_uri": "#CRS",
+              "range_puri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
               "range_label": {
-                "nl": "Recordtype"
+                "nl": "CRS"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "typeBereik",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
-            "ap-definition-nl": "Datatype van het Record dat een waarde voorstelt."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
-          "name": "bereikelement",
-          "sort": "bereikElement",
-          "label": {
-            "nl": "bereikElement"
-          },
-          "description": {
-            "nl": "Verwijzing naar een Attribuutwaarde van het Bereik."
-          },
-          "usage": {
-            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
-          },
-          "domain": [
-            {
-              "EA-Name": "Bereik",
-              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Attribuutwaarde",
-              "range_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Attribuutwaarde",
-              "range_puri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
-              "range_label": {
-                "nl": "Attribuutwaarde"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "bereikElement",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
-            "ap-definition-nl": "Verwijzing naar een Attribuutwaarde van het Bereik.",
-            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
-          "name": "domeinomvang",
-          "sort": "domeinOmvang",
-          "label": {
-            "nl": "domeinOmvang"
-          },
-          "description": {
-            "nl": "Uiterste grenzen in tijd en/of ruimte van het Bereik."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Bereik",
-              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Omvang",
-              "range_uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Omvang",
-              "range_puri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
-              "range_label": {
-                "nl": "Omvang"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "domeinOmvang",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
-            "ap-definition-nl": "Uiterste grenzen in tijd en/of ruimte van het Bereik."
-          }
-        },
-        {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
-          "name": "domeinelement",
-          "sort": "domeinElement",
-          "label": {
-            "nl": "domeinElement"
-          },
-          "description": {
-            "nl": "Verwijzing naar een DomeinObject van het Bereik."
-          },
-          "usage": {
-            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
-          },
-          "domain": [
-            {
-              "EA-Name": "Bereik",
-              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Domeinobject",
-              "range_uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Domeinobject",
-              "range_puri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
-              "range_label": {
-                "nl": "Domeinobject"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "domeinElement",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
-            "ap-definition-nl": "Verwijzing naar een DomeinObject van het Bereik.",
-            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+            "definition-nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd.",
+            "label-nl": "crs",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie.",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
+            "ap-definition-nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
           }
         },
         {
@@ -293,17 +171,17 @@
           }
         },
         {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
-          "name": "crs",
-          "sort": "crs",
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
+          "name": "domeinelement",
+          "sort": "domeinElement",
           "label": {
-            "nl": "crs"
+            "nl": "domeinElement"
           },
           "description": {
-            "nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
+            "nl": "Verwijzing naar een DomeinObject van het Bereik."
           },
           "usage": {
-            "nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie."
+            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
           },
           "domain": [
             {
@@ -313,27 +191,149 @@
           ],
           "range": [
             {
-              "range_label": "CRS",
-              "range_uri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
+              "range_label": "Domeinobject",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#CRS",
-              "range_puri": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
+              "range_uri": "#Domeinobject",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
               "range_label": {
-                "nl": "CRS"
+                "nl": "Domeinobject"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "domeinElement",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
+            "ap-definition-nl": "Verwijzing naar een DomeinObject van het Bereik.",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
+          "name": "domeinomvang",
+          "sort": "domeinOmvang",
+          "label": {
+            "nl": "domeinOmvang"
+          },
+          "description": {
+            "nl": "Uiterste grenzen in tijd en/of ruimte van het Bereik."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bereik",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Omvang",
+              "range_uri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Omvang",
+              "range_puri": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
+              "range_label": {
+                "nl": "Omvang"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "domeinOmvang",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
+            "ap-definition-nl": "Uiterste grenzen in tijd en/of ruimte van het Bereik."
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+          "name": "bereikelement",
+          "sort": "bereikElement",
+          "label": {
+            "nl": "bereikElement"
+          },
+          "description": {
+            "nl": "Verwijzing naar een Attribuutwaarde van het Bereik."
+          },
+          "usage": {
+            "nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+          },
+          "domain": [
+            {
+              "EA-Name": "Bereik",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Attribuutwaarde",
+              "range_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Attribuutwaarde",
+              "range_puri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
+              "range_label": {
+                "nl": "Attribuutwaarde"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "bereikElement",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+            "ap-definition-nl": "Verwijzing naar een Attribuutwaarde van het Bereik.",
+            "ap-usageNote-nl": "OPMERKING: Vervalt als met GeometrieWaardeparen wordt gewerkt."
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
+          "name": "typebereik",
+          "sort": "typeBereik",
+          "label": {
+            "nl": "typeBereik"
+          },
+          "description": {
+            "nl": "Datatype van het Record dat een waarde voorstelt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Bereik",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Recordtype",
+              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Recordtype",
+              "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
+              "range_label": {
+                "nl": "Recordtype"
               }
             }
           ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd.",
-            "label-nl": "crs",
-            "ap-usageNote-nl": "OPMERKING: Vervalt als het Coördinaatsysteem vermeld wordt in de serialisatie van de Geometrie.",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
-            "ap-definition-nl": "Coördinaatsysteem waarin de posities in het Bereik zijn gedefinieerd."
+            "label-nl": "typeBereik",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
+            "ap-definition-nl": "Datatype van het Record dat een waarde voorstelt."
           }
         }
       ]
@@ -584,32 +584,8 @@
   "contributors": [
     {
       "role": "A",
-      "first_name": "Jasper",
-      "last_name": "Verhaegen",
-      "affiliation": {
-        "name": "Departement Omgeving"
-      }
-    },
-    {
-      "role": "A",
-      "first_name": "Veerle",
-      "last_name": "Vanwesenbeeck",
-      "affiliation": {
-        "name": "Departement Omgeving"
-      }
-    },
-    {
-      "role": "A",
-      "first_name": "Marleen",
-      "last_name": "Van Damme",
-      "affiliation": {
-        "name": "Departement Omgeving"
-      }
-    },
-    {
-      "role": "A",
-      "first_name": "Frieke",
-      "last_name": "Segers",
+      "first_name": "Sabine",
+      "last_name": "Buyle",
       "affiliation": {
         "name": "Departement Omgeving"
       }
@@ -617,7 +593,7 @@
     {
       "role": "A",
       "first_name": "Katrien",
-      "last_name": "Oorts",
+      "last_name": "De Nil",
       "affiliation": {
         "name": "Departement Omgeving"
       }
@@ -633,71 +609,55 @@
     {
       "role": "A",
       "first_name": "Katrien",
-      "last_name": "De Nil",
+      "last_name": "Oorts",
       "affiliation": {
         "name": "Departement Omgeving"
       }
     },
     {
       "role": "A",
-      "first_name": "Sabine",
-      "last_name": "Buyle",
+      "first_name": "Frieke",
+      "last_name": "Segers",
+      "affiliation": {
+        "name": "Departement Omgeving"
+      }
+    },
+    {
+      "role": "A",
+      "first_name": "Marleen",
+      "last_name": "Van Damme",
+      "affiliation": {
+        "name": "Departement Omgeving"
+      }
+    },
+    {
+      "role": "A",
+      "first_name": "Veerle",
+      "last_name": "Vanwesenbeeck",
+      "affiliation": {
+        "name": "Departement Omgeving"
+      }
+    },
+    {
+      "role": "A",
+      "first_name": "Jasper",
+      "last_name": "Verhaegen",
       "affiliation": {
         "name": "Departement Omgeving"
       }
     },
     {
       "role": "E",
-      "first_name": "Eveline",
-      "last_name": "Vlassenroot",
+      "first_name": "Veerle",
+      "last_name": "Beyaert",
       "affiliation": {
         "name": "Digitaal Vaanderen"
       }
     },
     {
       "role": "E",
-      "first_name": "Laurens",
-      "last_name": "Vercauteren",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Ziggy",
-      "last_name": "Vanlishout",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Martin",
-      "last_name": "Vanbrabant",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Dwight",
-      "last_name": "Van Lancker",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Anthony",
-      "last_name": "Van Heymbeeck",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "E",
-      "first_name": "Geert",
-      "last_name": "Thijs",
+      "first_name": "Raf",
+      "last_name": "Buyle",
       "affiliation": {
         "name": "Digitaal Vaanderen"
       }
@@ -712,336 +672,304 @@
     },
     {
       "role": "E",
-      "first_name": "Raf",
-      "last_name": "Buyle",
+      "first_name": "Geert",
+      "last_name": "Thijs",
       "affiliation": {
         "name": "Digitaal Vaanderen"
       }
     },
     {
       "role": "E",
-      "first_name": "Veerle",
-      "last_name": "Beyaert",
+      "first_name": "Anthony",
+      "last_name": "Van Heymbeeck",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Dwight",
+      "last_name": "Van Lancker",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Martin",
+      "last_name": "Vanbrabant",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Ziggy",
+      "last_name": "Vanlishout",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Laurens",
+      "last_name": "Vercauteren",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "E",
+      "first_name": "Eveline",
+      "last_name": "Vlassenroot",
       "affiliation": {
         "name": "Digitaal Vaanderen"
       }
     },
     {
       "role": "C",
-      "first_name": "Mark",
-      "last_name": "Wulfrancke",
-      "affiliation": {
-        "name": "Algemeen Boerensyndicaat"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jan",
-      "last_name": "Walstra",
-      "affiliation": {
-        "name": "Koninklijk Belgisch Instituur voor Natuurwetenschappen – Belgische Geologische Dienst"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Mathias",
-      "last_name": "Wackenier",
-      "affiliation": {
-        "name": "Instituur voor Natuur- en Bosonderzoek"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Leen",
-      "last_name": "Vincke",
-      "affiliation": {
-        "name": "Departement Mobiliteit en Openbare Werken (Geotechniek)"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Wouter",
-      "last_name": "Vervaele",
+      "first_name": "Chandra",
+      "last_name": "Algoe",
       "affiliation": {
         "name": "Departement Mobiliteit en Openbare Werken"
       }
     },
     {
       "role": "C",
-      "first_name": "Peter",
-      "last_name": "Verspecht",
-      "affiliation": {
-        "name": "Andere"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Elisa",
-      "last_name": "Vermeulen",
-      "affiliation": {
-        "name": "VZW Grondbank"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Gert",
-      "last_name": "Vermeersch",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Joris",
-      "last_name": "Vermeer",
-      "affiliation": {
-        "name": "Smet GWT Europe"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Davy",
-      "last_name": "Vanhoudt",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jan",
-      "last_name": "Vangestel",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Caroline",
-      "last_name": "Van der Heyden",
-      "affiliation": {
-        "name": "Boerenbond"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Van de Vondel",
+      "first_name": "Camille",
+      "last_name": "Allonsius",
       "affiliation": {
         "name": "Universiteit Antwerpen – CurieuzeNeuzen In De Tuin"
       }
     },
     {
       "role": "C",
-      "first_name": "Naten",
-      "last_name": "Van Hemelrijck",
+      "first_name": "Ilse",
+      "last_name": "Baeck",
       "affiliation": {
-        "name": "Vanhecke NV"
+        "name": "Canalcnv"
       }
     },
     {
       "role": "C",
-      "first_name": "Geert",
-      "last_name": "Van Haute",
+      "first_name": "Simon",
+      "last_name": "Baert",
       "affiliation": {
-        "name": "Departement Omgeving"
+        "name": "Agentschap Wegen en Verkeer"
       }
     },
     {
       "role": "C",
-      "first_name": "Tom",
-      "last_name": "Van Gulck",
+      "first_name": "Christine",
+      "last_name": "Berchmans",
       "affiliation": {
-        "name": "Departement Omgeving"
+        "name": "Grondbank Tracimat"
       }
     },
     {
       "role": "C",
-      "first_name": "Johan",
-      "last_name": "Van De Wauw",
+      "first_name": "Reinhilde",
+      "last_name": "Blondeel",
       "affiliation": {
-        "name": "Fluves – pydov"
+        "name": "FOD Financiën"
       }
     },
     {
       "role": "C",
-      "first_name": "Geerts",
-      "last_name": "Timothy",
-      "affiliation": {
-        "name": "Grondwijzer VZW"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Joris",
-      "last_name": "Synaeve",
-      "affiliation": {
-        "name": "AC partners"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Bruno",
-      "last_name": "Stuyts",
-      "affiliation": {
-        "name": "Universiteit Gent"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Raf",
-      "last_name": "Somers",
-      "affiliation": {
-        "name": "Tractebel – International Marine and Dredging Consultants"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Koen",
-      "last_name": "Smeets",
-      "affiliation": {
-        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Frank",
-      "last_name": "Sleeuwaert",
-      "affiliation": {
-        "name": "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Erwin",
-      "last_name": "Sevens",
-      "affiliation": {
-        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Piet",
-      "last_name": "Seuntjens",
-      "affiliation": {
-        "name": "Citizens"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Scheepers",
-      "affiliation": {
-        "name": "Colas Noord NV"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Greet",
-      "last_name": "Ruysschaert",
-      "affiliation": {
-        "name": "Instituut voor Landbouw- Visserij- en Voedingsonderzoek"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Elisabeth",
-      "last_name": "Rutten",
-      "affiliation": {
-        "name": "Vlaamse Landmaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Liesbeth",
-      "last_name": "Rombouts",
-      "affiliation": {
-        "name": "Digitaal Vaanderen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Sofie",
-      "last_name": "Reynaert",
-      "affiliation": {
-        "name": "Bodemkundige Dienst van België vzw"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Michaël",
-      "last_name": "Rens",
-      "affiliation": {
-        "name": "Bodemkundige Dienst van België"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Marnix",
-      "last_name": "Pieters",
-      "affiliation": {
-        "name": "Agentschap Onroerend Erfgoed"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Kris",
-      "last_name": "Piessens",
-      "affiliation": {
-        "name": "Koninklijk Belgisch Instituut voor Natuurwetenschappen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Nadia",
-      "last_name": "Paridaen",
-      "affiliation": {
-        "name": "Putboringen Van Deynse NV"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Killian",
-      "last_name": "Paenen",
-      "affiliation": {
-        "name": "GeSolutions"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Olivier",
-      "last_name": "Olyslaegers",
-      "affiliation": {
-        "name": "GEBO"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Geert",
-      "last_name": "Nys",
-      "affiliation": {
-        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jeroen",
-      "last_name": "Nyckees",
+      "first_name": "Sophie",
+      "last_name": "Bordere",
       "affiliation": {
         "name": "Departement Mobiliteit en Openbare Werken"
       }
     },
     {
       "role": "C",
-      "first_name": "Pieter",
-      "last_name": "Nieuwlaet",
+      "first_name": "Maxim",
+      "last_name": "Broos",
       "affiliation": {
-        "name": "Stad Gent"
+        "name": "Agentschap Wegen en Verkeer"
       }
     },
     {
       "role": "C",
-      "first_name": "Willem",
-      "last_name": "Maetens",
+      "first_name": "Nathalie",
+      "last_name": "Cools",
+      "affiliation": {
+        "name": "Instituut voor Natuur- en Bosonderzoek"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Franky",
+      "last_name": "Coopman",
+      "affiliation": {
+        "name": "Inagrvzw"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Marnix",
+      "last_name": "Coulier",
+      "affiliation": {
+        "name": "Aseptic Excellence Partner"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Patrick",
+      "last_name": "De Baets",
+      "affiliation": {
+        "name": "Departement Mobiliteit en Openbare Werken"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Flor",
+      "last_name": "De Cock",
+      "affiliation": {
+        "name": "Andere"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Ywan",
+      "last_name": "De Jonghe",
+      "affiliation": {
+        "name": "Vlaamse Milieumaatschappij"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Roel",
+      "last_name": "De Koninck",
+      "affiliation": {
+        "name": "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Sandra",
+      "last_name": "De Loore",
+      "affiliation": {
+        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Berdien",
+      "last_name": "De Ro",
+      "affiliation": {
+        "name": "Geosparc"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tinneke",
+      "last_name": "De Rouck",
+      "affiliation": {
+        "name": "Vlaamse Milieumaatschappij"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Lieven",
+      "last_name": "De Stoppeleire",
+      "affiliation": {
+        "name": "Vrouwen van het Algemeen Boerensyndicaat"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Aaike",
+      "last_name": "De Wever",
+      "affiliation": {
+        "name": "Instituut voor Natuur- en Bosonderzoek"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Filip",
+      "last_name": "Dehaese",
+      "affiliation": {
+        "name": "Andere"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Geert",
+      "last_name": "Devriese",
+      "affiliation": {
+        "name": "Andere"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Katrijn",
+      "last_name": "Dirix",
+      "affiliation": {
+        "name": "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Stijn",
+      "last_name": "Goolaerts",
+      "affiliation": {
+        "name": "Koninklijk Belgisch Instituut voor Natuurwetenschappen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jente",
+      "last_name": "Hanssens",
+      "affiliation": {
+        "name": "Grondwijzer vzw"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Stijn",
+      "last_name": "Huyghe",
+      "affiliation": {
+        "name": "Citizens"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Ludovic",
+      "last_name": "Huysentruyt",
+      "affiliation": {
+        "name": "Votquenne Foundations & Revyson"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Marijke",
+      "last_name": "Huysmans",
+      "affiliation": {
+        "name": "Vrije Universiteit Brussel"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Pieter",
+      "last_name": "Jan Haest",
+      "affiliation": {
+        "name": "De Watergroep"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tom",
+      "last_name": "Jottier",
+      "affiliation": {
+        "name": "Studiebureau voor Bouwkunde en Expertise (SBE) NV"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Frank",
+      "last_name": "Lavens",
       "affiliation": {
         "name": "Vlaamse Milieumaatschappij"
       }
@@ -1056,250 +984,322 @@
     },
     {
       "role": "C",
-      "first_name": "Frank",
-      "last_name": "Lavens",
+      "first_name": "Willem",
+      "last_name": "Maetens",
       "affiliation": {
         "name": "Vlaamse Milieumaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Tom",
-      "last_name": "Jottier",
-      "affiliation": {
-        "name": "Studiebureau voor Bouwkunde en Expertise (SBE) NV"
       }
     },
     {
       "role": "C",
       "first_name": "Pieter",
-      "last_name": "Jan Haest",
+      "last_name": "Nieuwlaet",
       "affiliation": {
-        "name": "De Watergroep"
+        "name": "Stad Gent"
       }
     },
     {
       "role": "C",
-      "first_name": "Marijke",
-      "last_name": "Huysmans",
+      "first_name": "Jeroen",
+      "last_name": "Nyckees",
       "affiliation": {
-        "name": "Vrije Universiteit Brussel"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Ludovic",
-      "last_name": "Huysentruyt",
-      "affiliation": {
-        "name": "Votquenne Foundations & Revyson"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Huyghe",
-      "affiliation": {
-        "name": "Citizens"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Jente",
-      "last_name": "Hanssens",
-      "affiliation": {
-        "name": "Grondwijzer vzw"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Stijn",
-      "last_name": "Goolaerts",
-      "affiliation": {
-        "name": "Koninklijk Belgisch Instituut voor Natuurwetenschappen"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Katrijn",
-      "last_name": "Dirix",
-      "affiliation": {
-        "name": "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"
+        "name": "Departement Mobiliteit en Openbare Werken"
       }
     },
     {
       "role": "C",
       "first_name": "Geert",
-      "last_name": "Devriese",
-      "affiliation": {
-        "name": "Andere"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Filip",
-      "last_name": "Dehaese",
-      "affiliation": {
-        "name": "Andere"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Aaike",
-      "last_name": "De Wever",
-      "affiliation": {
-        "name": "Instituut voor Natuur- en Bosonderzoek"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Lieven",
-      "last_name": "De Stoppeleire",
-      "affiliation": {
-        "name": "Vrouwen van het Algemeen Boerensyndicaat"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Tinneke",
-      "last_name": "De Rouck",
-      "affiliation": {
-        "name": "Vlaamse Milieumaatschappij"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Berdien",
-      "last_name": "De Ro",
-      "affiliation": {
-        "name": "Geosparc"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Sandra",
-      "last_name": "De Loore",
+      "last_name": "Nys",
       "affiliation": {
         "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
       }
     },
     {
       "role": "C",
-      "first_name": "Roel",
-      "last_name": "De Koninck",
+      "first_name": "Olivier",
+      "last_name": "Olyslaegers",
+      "affiliation": {
+        "name": "GEBO"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Killian",
+      "last_name": "Paenen",
+      "affiliation": {
+        "name": "GeSolutions"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Nadia",
+      "last_name": "Paridaen",
+      "affiliation": {
+        "name": "Putboringen Van Deynse NV"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Kris",
+      "last_name": "Piessens",
+      "affiliation": {
+        "name": "Koninklijk Belgisch Instituut voor Natuurwetenschappen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Marnix",
+      "last_name": "Pieters",
+      "affiliation": {
+        "name": "Agentschap Onroerend Erfgoed"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Michaël",
+      "last_name": "Rens",
+      "affiliation": {
+        "name": "Bodemkundige Dienst van België"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Sofie",
+      "last_name": "Reynaert",
+      "affiliation": {
+        "name": "Bodemkundige Dienst van België vzw"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Liesbeth",
+      "last_name": "Rombouts",
+      "affiliation": {
+        "name": "Digitaal Vaanderen"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Elisabeth",
+      "last_name": "Rutten",
+      "affiliation": {
+        "name": "Vlaamse Landmaatschappij"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Greet",
+      "last_name": "Ruysschaert",
+      "affiliation": {
+        "name": "Instituut voor Landbouw- Visserij- en Voedingsonderzoek"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Stijn",
+      "last_name": "Scheepers",
+      "affiliation": {
+        "name": "Colas Noord NV"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Piet",
+      "last_name": "Seuntjens",
+      "affiliation": {
+        "name": "Citizens"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Erwin",
+      "last_name": "Sevens",
+      "affiliation": {
+        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Frank",
+      "last_name": "Sleeuwaert",
       "affiliation": {
         "name": "Vlaamste Instelling voor Technologisch Onderzoek (VITO)"
       }
     },
     {
       "role": "C",
-      "first_name": "Ywan",
-      "last_name": "De Jonghe",
+      "first_name": "Koen",
+      "last_name": "Smeets",
       "affiliation": {
-        "name": "Vlaamse Milieumaatschappij"
+        "name": "Openbare Vlaamse Afvalstoffenmaatschappij"
       }
     },
     {
       "role": "C",
-      "first_name": "Flor",
-      "last_name": "De Cock",
+      "first_name": "Raf",
+      "last_name": "Somers",
       "affiliation": {
-        "name": "Andere"
+        "name": "Tractebel – International Marine and Dredging Consultants"
       }
     },
     {
       "role": "C",
-      "first_name": "Patrick",
-      "last_name": "De Baets",
+      "first_name": "Bruno",
+      "last_name": "Stuyts",
       "affiliation": {
-        "name": "Departement Mobiliteit en Openbare Werken"
+        "name": "Universiteit Gent"
       }
     },
     {
       "role": "C",
-      "first_name": "Marnix",
-      "last_name": "Coulier",
+      "first_name": "Joris",
+      "last_name": "Synaeve",
       "affiliation": {
-        "name": "Aseptic Excellence Partner"
+        "name": "AC partners"
       }
     },
     {
       "role": "C",
-      "first_name": "Franky",
-      "last_name": "Coopman",
+      "first_name": "Geerts",
+      "last_name": "Timothy",
       "affiliation": {
-        "name": "Inagrvzw"
+        "name": "Grondwijzer VZW"
       }
     },
     {
       "role": "C",
-      "first_name": "Nathalie",
-      "last_name": "Cools",
+      "first_name": "Johan",
+      "last_name": "Van De Wauw",
       "affiliation": {
-        "name": "Instituut voor Natuur- en Bosonderzoek"
+        "name": "Fluves – pydov"
       }
     },
     {
       "role": "C",
-      "first_name": "Maxim",
-      "last_name": "Broos",
+      "first_name": "Tom",
+      "last_name": "Van Gulck",
       "affiliation": {
-        "name": "Agentschap Wegen en Verkeer"
+        "name": "Departement Omgeving"
       }
     },
     {
       "role": "C",
-      "first_name": "Sophie",
-      "last_name": "Bordere",
+      "first_name": "Geert",
+      "last_name": "Van Haute",
       "affiliation": {
-        "name": "Departement Mobiliteit en Openbare Werken"
+        "name": "Departement Omgeving"
       }
     },
     {
       "role": "C",
-      "first_name": "Reinhilde",
-      "last_name": "Blondeel",
+      "first_name": "Naten",
+      "last_name": "Van Hemelrijck",
       "affiliation": {
-        "name": "FOD Financiën"
+        "name": "Vanhecke NV"
       }
     },
     {
       "role": "C",
-      "first_name": "Christine",
-      "last_name": "Berchmans",
-      "affiliation": {
-        "name": "Grondbank Tracimat"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Simon",
-      "last_name": "Baert",
-      "affiliation": {
-        "name": "Agentschap Wegen en Verkeer"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Ilse",
-      "last_name": "Baeck",
-      "affiliation": {
-        "name": "Canalcnv"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Camille",
-      "last_name": "Allonsius",
+      "first_name": "Stijn",
+      "last_name": "Van de Vondel",
       "affiliation": {
         "name": "Universiteit Antwerpen – CurieuzeNeuzen In De Tuin"
       }
     },
     {
       "role": "C",
-      "first_name": "Chandra",
-      "last_name": "Algoe",
+      "first_name": "Caroline",
+      "last_name": "Van der Heyden",
+      "affiliation": {
+        "name": "Boerenbond"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jan",
+      "last_name": "Vangestel",
+      "affiliation": {
+        "name": "Agentschap Wegen en Verkeer"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Davy",
+      "last_name": "Vanhoudt",
+      "affiliation": {
+        "name": "Agentschap Wegen en Verkeer"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Joris",
+      "last_name": "Vermeer",
+      "affiliation": {
+        "name": "Smet GWT Europe"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Gert",
+      "last_name": "Vermeersch",
+      "affiliation": {
+        "name": "Agentschap Wegen en Verkeer"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Elisa",
+      "last_name": "Vermeulen",
+      "affiliation": {
+        "name": "VZW Grondbank"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Peter",
+      "last_name": "Verspecht",
+      "affiliation": {
+        "name": "Andere"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Wouter",
+      "last_name": "Vervaele",
       "affiliation": {
         "name": "Departement Mobiliteit en Openbare Werken"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Leen",
+      "last_name": "Vincke",
+      "affiliation": {
+        "name": "Departement Mobiliteit en Openbare Werken (Geotechniek)"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Mathias",
+      "last_name": "Wackenier",
+      "affiliation": {
+        "name": "Instituur voor Natuur- en Bosonderzoek"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jan",
+      "last_name": "Walstra",
+      "affiliation": {
+        "name": "Koninklijk Belgisch Instituur voor Natuurwetenschappen – Belgische Geologische Dienst"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Mark",
+      "last_name": "Wulfrancke",
+      "affiliation": {
+        "name": "Algemeen Boerensyndicaat"
       }
     }
   ],
@@ -1498,46 +1498,6 @@
       },
       "properties": [
         {
-          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
-          "name": "waarde",
-          "sort": "waarde",
-          "label": {
-            "nl": "waarde"
-          },
-          "description": {
-            "nl": "Waarde van het element."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "GeometrieWaardepaar",
-              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Record",
-              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Record",
-              "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
-              "range_label": {
-                "nl": "Record"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "waarde",
-            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
-            "ap-definition-nl": "Waarde van het element."
-          }
-        },
-        {
           "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
           "name": "geometrie",
           "sort": "geometrie",
@@ -1578,6 +1538,46 @@
             "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
             "ap-definition-nl": "Geometrie van het element.",
             "ap-usageNote-nl": "Datatype is DomeinObject, te substitueren resp door Geometrie of subklassen daarvan of door TemporeleEntiteit of subklassen daarvan."
+          }
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+          "name": "waarde",
+          "sort": "waarde",
+          "label": {
+            "nl": "waarde"
+          },
+          "description": {
+            "nl": "Waarde van het element."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeometrieWaardepaar",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Record",
+              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Record",
+              "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+              "range_label": {
+                "nl": "Record"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "waarde",
+            "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+            "ap-definition-nl": "Waarde van het element."
           }
         }
       ]
@@ -1793,16 +1793,18 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
-          "name": "opmeting",
-          "sort": "opmeting",
+          "uri": "http://www.opengis.net/ont/geosparql#asGML",
+          "name": "gml",
+          "sort": "gml",
           "label": {
-            "nl": "opmeting"
+            "nl": "gml"
           },
           "description": {
-            "nl": "De manier waarop de geometrie werd bepaald."
+            "nl": "Geometrie uitgedrukt in gml-formaat."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype."
+          },
           "domain": [
             {
               "EA-Name": "Geometrie",
@@ -1811,25 +1813,27 @@
           ],
           "range": [
             {
-              "range_label": "Opmeting",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+              "range_label": "Literal",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Opmeting",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "Opmeting"
+                "nl": "Literal"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "opmeting",
-            "definition-nl": "De manier waarop de geometrie werd bepaald.",
-            "name": "Geometrie.opmeting"
+            "ap-label-nl": "gml",
+            "uri": "http://www.opengis.net/ont/geosparql#asGML",
+            "label-nl": "gml",
+            "ap-usageNote-nl": "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "ap-definition-nl": "Geometrie uitgedrukt in gml-formaat."
           }
         },
         {
@@ -1877,18 +1881,16 @@
           }
         },
         {
-          "uri": "http://www.opengis.net/ont/geosparql#asGML",
-          "name": "gml",
-          "sort": "gml",
+          "uri": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+          "name": "opmeting",
+          "sort": "opmeting",
           "label": {
-            "nl": "gml"
+            "nl": "opmeting"
           },
           "description": {
-            "nl": "Geometrie uitgedrukt in gml-formaat."
+            "nl": "De manier waarop de geometrie werd bepaald."
           },
-          "usage": {
-            "nl": "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Geometrie",
@@ -1897,27 +1899,25 @@
           ],
           "range": [
             {
-              "range_label": "Literal",
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+              "range_label": "Opmeting",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Opmeting"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
-              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_uri": "#Opmeting",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Opmeting",
               "range_label": {
-                "nl": "Literal"
+                "nl": "Opmeting"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "gml",
-            "uri": "http://www.opengis.net/ont/geosparql#asGML",
-            "label-nl": "gml",
-            "ap-usageNote-nl": "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
-            "ap-definition-nl": "Geometrie uitgedrukt in gml-formaat."
+            "label-nl": "opmeting",
+            "definition-nl": "De manier waarop de geometrie werd bepaald.",
+            "name": "Geometrie.opmeting"
           }
         }
       ]
@@ -1940,14 +1940,14 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
-          "name": "opnamedatum",
-          "sort": "opnamedatum",
+          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "name": "methode",
+          "sort": "methode",
           "label": {
-            "nl": "opnamedatum"
+            "nl": "methode"
           },
           "description": {
-            "nl": "Datum waarop de Opmeting plaatsvond."
+            "nl": "Aard van de gebruikte methode."
           },
           "usage": {},
           "domain": [
@@ -1958,24 +1958,25 @@
           ],
           "range": [
             {
-              "range_label": "DateTime",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "range_label": "Opmetingmethode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_uri": "#Opmetingmethode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "DateTime"
+                "nl": "Opmetingmethode"
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "opnamedatum",
-            "definition-nl": "Datum waarop de Opmeting plaatsvond."
+            "label-nl": "methode",
+            "name": "Opmeting.methode",
+            "definition-nl": "Aard van de gebruikte methode."
           }
         },
         {
@@ -2019,14 +2020,14 @@
           }
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
-          "name": "methode",
-          "sort": "methode",
+          "uri": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+          "name": "opnamedatum",
+          "sort": "opnamedatum",
           "label": {
-            "nl": "methode"
+            "nl": "opnamedatum"
           },
           "description": {
-            "nl": "Aard van de gebruikte methode."
+            "nl": "Datum waarop de Opmeting plaatsvond."
           },
           "usage": {},
           "domain": [
@@ -2037,25 +2038,24 @@
           ],
           "range": [
             {
-              "range_label": "Opmetingmethode",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Opmetingmethode",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
               "range_label": {
-                "nl": "Opmetingmethode"
+                "nl": "DateTime"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "methode",
-            "name": "Opmeting.methode",
-            "definition-nl": "Aard van de gebruikte methode."
+            "label-nl": "opnamedatum",
+            "definition-nl": "Datum waarop de Opmeting plaatsvond."
           }
         }
       ]
