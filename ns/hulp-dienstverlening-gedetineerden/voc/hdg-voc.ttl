@@ -1,0 +1,392 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:Agent a rdfs:Class;
+  rdfs:label "Financieringsbron"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Beleidsniveau"@nl,
+    "Annulatie Reden"@nl,
+    "Subcategorie"@nl,
+    "Categorie"@nl,
+    "Beleidsdomein"@nl,
+    "Medium"@nl,
+    "Financieringskarakter"@nl,
+    "VTEType"@nl,
+    "Financieringstype"@nl .
+
+prov:Agent a rdfs:Class;
+  rdfs:label "Realisator"@nl .
+
+schemas:Audience a rdfs:Class;
+  rdfs:label "Doelgroep"@nl .
+
+schemas:Event a rdfs:Class;
+  rdfs:label "Activiteit"@nl .
+
+schemas:MonetaryGrant a rdfs:Class;
+  rdfs:label "Financiering"@nl .
+
+schemas:Service a rdfs:Class .
+
+<https://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class .
+
+<https://www.w3.org/ns/prov#Activity> a rdfs:Class .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod.maxAantalDeelnemers> a owl:DatatypeProperty;
+  rdfs:label "maximum aantal deelnemers"@nl;
+  rdfs:comment "Maximaal aantal deelnemers voor het Aanbod."@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aanbod> a owl:ObjectProperty;
+  rdfs:label "aanbod"@nl;
+  rdfs:comment "Het Aanbod dat de Activiteit verwezenlijkt."@nl;
+  rdfs:domain schemas:Event;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range schemas:Service .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen> a owl:DatatypeProperty;
+  rdfs:label "aantal aanmeldingen"@nl;
+  rdfs:comment "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."@nl;
+  rdfs:domain schemas:Event;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen> a owl:DatatypeProperty;
+  rdfs:label "aantal inschrijvingen"@nl;
+  rdfs:comment "Aantal personen dat zich heeft ingeschreven voor een Activiteit."@nl;
+  rdfs:domain schemas:Event;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.annulatieReden> a owl:ObjectProperty;
+  rdfs:label "annulatie reden"@nl;
+  rdfs:comment "Reden waarom een Activiteit geannuleerd werd."@nl;
+  rdfs:domain schemas:Event;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad> a owl:ObjectProperty;
+  rdfs:label "participatiegraad"@nl;
+  rdfs:comment "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DetentiehuisVestiging> a owl:Class;
+  rdfs:label "Detentiehuis Vestiging"@nl;
+  rdfs:comment "Een kleinschalige, gesloten inrichting met een capaciteit van 20 tot 60 gedetineerden. Het biedt opvang aan personen met een gevangenisstraf van maximum 3 jaar en een laag veiligheidsrisico."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>,
+    org:Site .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk.waarde> a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is bijvoorbeeld 65+ voor de eigenschap leeftijd."@nl;
+  rdfs:comment "De waarde van de eigenschap."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GefinancierdDoor> a owl:ObjectProperty;
+  rdfs:label "gefinancierd door"@nl;
+  rdfs:comment "De verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een project, activiteit of onderneming."@nl;
+  rdfs:domain prov:Agent;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range schemas:MonetaryGrant .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GevangenisVestiging> a owl:Class;
+  rdfs:label "Gevangenis Vestiging"@nl;
+  rdfs:comment "Een beveiligde faciliteit waar personen verblijven die van hun vrijheid zijn beroofd."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf org:Site,
+    <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod.minAantalDeelnemers> a owl:DatatypeProperty;
+  rdfs:label "minimum aantal deelnemers"@nl;
+  rdfs:comment "Minimaal aantal personen die deelnemen voor een GroepsAanbod kan plaatsvinden."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod> a owl:Class;
+  rdfs:label "Individueel Aanbod"@nl;
+  rdfs:comment "Begeleid Aanbod waaraan slechts één persoon kan deelnemen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf schemas:Service .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Organisator> a owl:Class;
+  rdfs:label "Organisator"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is de aanbodverstrekker, zoals een Centrum voor Volwassenenonderwijs."@nl;
+  rdfs:comment "Persoon of Organisatie die een Aanbod organiseert of coördineert."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf prov:Agent .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.naam> a owl:DatatypeProperty;
+  rdfs:label "naam"@nl;
+  rdfs:comment "De naam van de Realisator."@nl;
+  rdfs:domain prov:Agent;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range rdf:langString .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie> a owl:Class;
+  rdfs:label "Sessie"@nl;
+  rdfs:comment "Het concreet plaatsvinden van een Aanbod op een bepaald moment."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf schemas:Event .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks> a owl:Class;
+  rdfs:label "Sessiereeks"@nl;
+  rdfs:comment "Groep van 1 of meerdere Sessies."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf schemas:Event .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Uitvoerder> a owl:Class;
+  rdfs:label "Uitvoerder"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is bijvoorbeeld de lesgever."@nl;
+  rdfs:comment "Persoon of organisatie die het Aanbod uitvoert of begeleidt."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf prov:Agent .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantal> a owl:DatatypeProperty;
+  rdfs:label "aantal"@nl;
+  rdfs:comment "Het aantal VTE´s die gebruikt werden."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:double .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#activiteit> a owl:ObjectProperty;
+  rdfs:label "activiteit"@nl;
+  rdfs:comment "Concrete Activiteiten die het Aanbod verwezenlijken."@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range schemas:Event .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein> a owl:ObjectProperty;
+  rdfs:label "beleidsdomein"@nl;
+  rdfs:comment "Domein waarin de Agent actief is."@nl,
+    "Een domein waartoe het Aanbod behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."@nl,
+    "Een domein waartoe de activiteiten van de Realisator behoren in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."@nl;
+  rdfs:domain dc:Agent,
+    schemas:Service,
+    prov:Agent;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsniveau> a owl:ObjectProperty;
+  rdfs:label "beleidsniveau"@nl;
+  rdfs:comment "Beleidsniveau van de Financieringsbron, zoals bijvoorbeeld Vlaams of federaal."@nl;
+  rdfs:domain dc:Agent;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#effectievePopulatie> a owl:DatatypeProperty;
+  rdfs:label "effectieve populatie"@nl;
+  rdfs:comment "Het huidige aantal personen in de Infrastructuur."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake> a owl:DatatypeProperty;
+  rdfs:label "intake"@nl;
+  rdfs:comment "Eerste gesprek waarbij info verzameld wordt om eventueel deel te nemen aan een Aanbod"@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:boolean .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#karakter> a owl:ObjectProperty;
+  rdfs:label "karakter"@nl;
+  rdfs:comment "Hoe vaak de financiering gebeurt. Bijvoorbeeld eenmalig of structureel."@nl;
+  rdfs:domain schemas:MonetaryGrant;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium> a owl:ObjectProperty;
+  rdfs:label "medium"@nl;
+  rdfs:comment "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#subcategorie> a owl:ObjectProperty;
+  rdfs:label "subcategorie"@nl;
+  rdfs:comment "Subcategorie van het Aanbod."@nl;
+  rdfs:domain schemas:Service;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
+<http://purl.org/cerif/frapo/funds> a rdf:Property;
+  rdfs:label "financiert"@nl .
+
+dc:description a rdf:Property;
+  rdfs:label "beschrijving"@nl .
+
+dc:isPartOf a rdf:Property .
+
+dc:isReplacedBy a rdf:Property;
+  rdfs:label "vervangen door"@nl .
+
+dc:language a rdf:Property;
+  rdfs:label "taal"@nl .
+
+dc:replaces a rdf:Property;
+  rdfs:label "vervangt"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl,
+    "kenmerktype"@nl,
+    "financieringstype"@nl .
+
+<http://qudt.org/schema/qudt/hasQuantity> a rdf:Property;
+  rdfs:label "bedrag"@nl .
+
+<http://www.w3.org/ns/adms#status> a rdf:Property;
+  rdfs:label "status"@nl .
+
+prov:atLocation a rdf:Property .
+
+prov:endedAtTime a rdf:Property;
+  rdfs:label "uitbetaling einde"@nl .
+
+prov:qualifiedUsingActivity a rdf:Property .
+
+prov:startedAtTime a rdf:Property;
+  rdfs:label "uitbetaling start"@nl .
+
+prov:wasAssociatedWith a rdf:Property .
+
+prov:wasInfluencedBy a rdf:Property .
+
+schemas:audience a rdf:Property;
+  rdfs:label "doelgroep"@nl .
+
+schemas:category a rdf:Property;
+  rdfs:label "categorie"@nl .
+
+schemas:eventSchedule a rdf:Property;
+  rdfs:label "tijdschema"@nl .
+
+schemas:fundedItem a rdf:Property;
+  rdfs:label "financiert"@nl .
+
+schemas:funder a rdf:Property;
+  rdfs:label "gefinancierd door"@nl .
+
+schemas:provider a rdf:Property;
+  rdfs:label "gerealiseerd door"@nl .
+
+schemas:subEvent a rdf:Property;
+  rdfs:label "subactiviteit"@nl .
+
+schemas:superEvent a rdf:Property;
+  rdfs:label "superactiviteit"@nl .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk> a owl:Class;
+  rdfs:label "Doelgroep Kenmerk"@nl;
+  rdfs:comment "Eigenschap die iedereen in de Doelgroep heeft."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod> a owl:Class;
+  rdfs:label "Groeps Aanbod"@nl;
+  rdfs:comment "Een Aanbod waaraan meerdere personen kunnen deelnemen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf schemas:Service .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert> a rdf:Property;
+  rdfs:label "realiseert"@nl .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik> a owl:Class;
+  rdfs:label "VTE Gebruik"@nl;
+  rdfs:comment "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod. Dit gaat over de gebudgetteerde inzit en niet de effectieve inzet."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf prov:Usage .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> a owl:Ontology;
+  rdfs:label "hdg-voc"@en,
+    "hdg-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso dc:Agent,
+    skos:Concept,
+    prov:Agent,
+    schemas:Audience,
+    schemas:Event,
+    schemas:MonetaryGrant,
+    schemas:Service,
+    <https://www.w3.org/2004/02/skos/core#Concept>,
+    <https://www.w3.org/ns/prov#Activity>,
+    <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert>,
+    schemas:superEvent,
+    schemas:subEvent,
+    schemas:provider,
+    schemas:funder,
+    schemas:fundedItem,
+    schemas:eventSchedule,
+    schemas:category,
+    schemas:audience,
+    prov:wasInfluencedBy,
+    prov:wasAssociatedWith,
+    prov:startedAtTime,
+    prov:qualifiedUsingActivity,
+    prov:endedAtTime,
+    prov:atLocation,
+    <http://www.w3.org/ns/adms#status>,
+    <http://qudt.org/schema/qudt/hasQuantity>,
+    dc:type,
+    dc:title,
+    dc:replaces,
+    dc:language,
+    dc:isReplacedBy,
+    dc:isPartOf,
+    dc:description,
+    <http://purl.org/cerif/frapo/funds>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
