@@ -1,0 +1,703 @@
+{
+  "baseURI": "https://test.data.vlaanderen.be/ns/citerra#",
+  "classes": [
+    {
+      "EA-Guid": "{D00E8AF0-3A78-4ddc-A306-FC51BCE74A25}",
+      "name": "ConsumeerPubliekeDienstverleningstap",
+      "label": {
+        "nl": "Consumeer Publieke Dienstverleningstap"
+      },
+      "definition": {
+        "nl": "Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."
+      }
+    },
+    {
+      "EA-Guid": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+      "name": "Toegang",
+      "label": {
+        "nl": "Toegang"
+      },
+      "definition": {
+        "nl": "Recht om een bepaalde zone binnen te mogen."
+      },
+      "usage": {
+        "nl": "De bijhorende Activiteit bevat de Zone via de eigenschap \"locatie\"."
+      }
+    },
+    {
+      "EA-Guid": "{39465F81-4B66-4f85-B85E-2C418FC7455E}",
+      "name": "VoorwaardeCollectie",
+      "label": {
+        "nl": "Voorwaarde Collectie"
+      },
+      "definition": {
+        "nl": "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."
+      }
+    }
+  ],
+  "properties": [
+    {
+      "EA-Guid": "{320F8C86-AE97-4e61-9C3A-07AE195500CD}",
+      "name": "voertuig",
+      "label": {
+        "nl": "voertuig"
+      },
+      "definition": {
+        "nl": "Voertuig waarvoor de Toegang geldt."
+      }
+    },
+    {
+      "EA-Guid": "{320F8C86-AE97-4e61-9C3A-07AE195500CD}",
+      "name": "toegang",
+      "label": {
+        "nl": "toegang"
+      },
+      "definition": {
+        "nl": "Rechten voor toegang dewelke het Voertuig heeft."
+      }
+    },
+    {
+      "EA-Guid": "{906A2C94-BFA1-43fa-8A95-0207EEA79CDF}",
+      "name": "operatie",
+      "label": {
+        "nl": "operatie"
+      },
+      "definition": {
+        "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
+      }
+    }
+  ],
+  "externals": [
+    {
+      "EA-Guid": "{1DE65C8D-31AF-4f43-B739-9B5D0B8E9118}",
+      "name": "Bewijs",
+      "label": {
+        "nl": "Bewijs"
+      },
+      "definition": {
+        "nl": "Elk stuk waarmee kan worden aangetoond dat men aan een Voorwaarde voldoet."
+      },
+      "usage": {
+        "nl": "In het kader van publieke dienstverlening gaat het meestal om administratieve documenten of ingevulde aanvraagformulieren. Zonder het nodige Bewijs kan de dienstverlening niet worden afgeleverd. Soms levert de Output van een Publieke Dienstverlening het Bewijs nodig voor een andere Publieke Dienstverlening."
+      }
+    },
+    {
+      "EA-Guid": "{E6658724-B8D2-4cb7-A059-5698BB1D308E}",
+      "name": "Voorwaarde",
+      "label": {
+        "nl": "Voorwaarde"
+      },
+      "definition": {
+        "nl": "Iets dat nodig is of waarvan vereist is dat het gebeurt voordat iets anders gebeurt."
+      }
+    },
+    {
+      "EA-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+      "name": "Vergunning",
+      "label": {
+        "nl": "Vergunning"
+      },
+      "definition": {
+        "nl": "Rechtshandeling, zijnde een beslissing, die toelating inhoudt voor een Activiteit."
+      }
+    },
+    {
+      "EA-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+      "name": "Zaak",
+      "label": {
+        "nl": "Zaak"
+      },
+      "definition": {
+        "nl": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten."
+      }
+    },
+    {
+      "EA-Guid": "{E05E2D7A-D78B-4977-94D8-A74CEF3EAA8D}",
+      "name": "Project",
+      "label": {
+        "nl": "Project"
+      },
+      "definition": {
+        "nl": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken."
+      }
+    },
+    {
+      "EA-Guid": "{610FE6A4-7E43-4574-9EDC-4F5DA5075C0D}",
+      "name": "PubliekeDienstverlening",
+      "label": {
+        "nl": "Publieke Dienstverlening"
+      },
+      "definition": {
+        "nl": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
+      }
+    },
+    {
+      "EA-Guid": "{3CE6A03C-1F67-499a-850B-DFD357EE61CA}",
+      "name": "Dossier",
+      "label": {
+        "nl": "Dossier"
+      },
+      "definition": {
+        "nl": "Samenhangend geheel van stukken die betrekking hebben op een bepaalde zaak."
+      }
+    },
+    {
+      "EA-Guid": "{D379E2A4-0290-4971-8FE6-4DAF411F8A06}",
+      "name": "Stuk",
+      "label": {
+        "nl": "Stuk"
+      },
+      "definition": {
+        "nl": "Eenheid van bewijs ter ondersteuning van een feit."
+      }
+    },
+    {
+      "EA-Guid": "{4EF1C4B0-81D8-488e-BD50-38F4053F584A}",
+      "name": "Zone",
+      "label": {
+        "nl": "Zone"
+      },
+      "definition": {
+        "nl": "Een geografische gebied waar een beperking is op de toegang."
+      }
+    },
+    {
+      "EA-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+      "name": "Aanvraag",
+      "label": {
+        "nl": "Aanvraag"
+      },
+      "definition": {
+        "nl": "Aanspraak op de uitoefening van een bevoegdheid; formeel verzoek van een rechtssubject aan een bevoegde instantie om informatie te verstrekken of een beslissing te nemen, in het bijzonder een beslissing om ergens toelating voor te verlenen."
+      }
+    },
+    {
+      "EA-Guid": "{B9E9C604-2F4D-4f2c-88CE-1CD48663EFD3}",
+      "name": "Activiteit",
+      "label": {
+        "nl": "Activiteit"
+      },
+      "definition": {
+        "nl": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën."
+      },
+      "usage": {
+        "nl": "Maakt het voorwerp uit van vergunningsaanvragen, meldingen, vergunningsbesluiten, vaststellingen."
+      }
+    },
+    {
+      "EA-Guid": "{C3058756-3C1C-4675-ACC3-34A558D87C9F}",
+      "name": "Procedure",
+      "label": {
+        "nl": "Procedure"
+      },
+      "definition": {
+        "nl": "Reeks stappen die de officiële of geaccepteerde manier is om iets te doen."
+      }
+    },
+    {
+      "EA-Guid": "{55FE233B-7EC0-4b12-A3BE-C34EF58D8CF9}",
+      "name": "Procedurestap",
+      "label": {
+        "nl": "Procedurestap"
+      },
+      "definition": {
+        "nl": "Een procedurestap is het geheel aan werk gedaan binnen een specifiek chronologisch, logisch, organisatorisch of wettelijk bepaald onderdeel van een procedure."
+      }
+    },
+    {
+      "EA-Guid": "{2446EF0F-9442-4272-9E4B-5B4EC69921D4}",
+      "name": "Voertuig",
+      "label": {
+        "nl": "Voertuig"
+      },
+      "definition": {
+        "nl": "Apparaat dat is ontworpen of wordt gebruikt om mensen of vracht te vervoeren over land, water, lucht of door de ruimte."
+      }
+    },
+    {
+      "EA-Guid": "{525CC03C-4497-4a4f-9A03-3481F0F4F746}",
+      "name": "LogischeOperatie",
+      "label": {
+        "nl": "Logische operatie"
+      }
+    }
+  ],
+  "externalproperties": [
+    {
+      "EA-Guid": "{4C188526-8E36-4dad-860F-2BCCABA5C442}",
+      "name": "geconsumeerdIn",
+      "label": {
+        "nl": "geconsumeerd in"
+      },
+      "definition": {
+        "nl": "Procedurestap waar de Publieke Dienstverlening geconsumeerd wordt."
+      }
+    },
+    {
+      "EA-Guid": "{4C188526-8E36-4dad-860F-2BCCABA5C442}",
+      "name": "dienstverlening",
+      "label": {
+        "nl": "dienstverlening"
+      },
+      "definition": {
+        "nl": "Publieke Dienstverlening die geconsumeerd wordt."
+      }
+    },
+    {
+      "EA-Guid": "{831B094C-6559-45ce-AC0E-FB2919FC18D5}",
+      "name": "zaakhandeling",
+      "label": {
+        "nl": "zaakhandeling"
+      },
+      "definition": {
+        "nl": "Vergunning die bij de Zaak hoort."
+      }
+    },
+    {
+      "EA-Guid": "{3AAC051B-6A46-45bc-8913-B50362D7A659}",
+      "name": "zaakhandeling",
+      "label": {
+        "nl": "zaakhandeling"
+      },
+      "definition": {
+        "nl": "Aanvraag die bij de Zaak hoort."
+      }
+    },
+    {
+      "EA-Guid": "{691A65FE-8EA4-4ac7-B3CF-7C26A632AEF1}",
+      "name": "voorwerp",
+      "label": {
+        "nl": "voorwerp"
+      },
+      "definition": {
+        "nl": "Activiteit waarvoor de Toegang nodig is."
+      }
+    },
+    {
+      "EA-Guid": "{D3C7FFCC-65F9-4cd6-AB9B-2D46CDACF3B5}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "Publieke Organisatie die juridisch verantwoordelijk is voor de Vergunning."
+      }
+    },
+    {
+      "EA-Guid": "{DA9D7DBD-32BC-4e39-BA40-678F74A6B483}",
+      "name": "aanvrager",
+      "label": {
+        "nl": "aanvrager"
+      },
+      "definition": {
+        "nl": "Rechtssubject die de Aanvraag heeft ingediend."
+      }
+    },
+    {
+      "EA-Guid": "{2993A714-7DFA-44fa-AA3A-F576D7A427E2}",
+      "name": "procedure",
+      "label": {
+        "nl": "procedure"
+      },
+      "definition": {
+        "nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld."
+      }
+    },
+    {
+      "EA-Guid": "{F059B645-F3E9-4a74-A068-2E237C74C863}",
+      "name": "inhoud",
+      "label": {
+        "nl": "inhoud"
+      },
+      "definition": {
+        "nl": "Inhoud van de Aanvraag."
+      },
+      "usage": {
+        "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+      }
+    },
+    {
+      "EA-Guid": "{58ACC41D-07C7-4b21-9835-CCBE7DE381AA}",
+      "name": "inhoud",
+      "label": {
+        "nl": "inhoud"
+      },
+      "definition": {
+        "nl": "Inhoud van de Vergunning."
+      },
+      "usage": {
+        "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+      }
+    },
+    {
+      "EA-Guid": "{61656D10-F644-4cfd-9A1F-947C3FC01B1B}",
+      "name": "ingangsdatum",
+      "label": {
+        "nl": "ingangsdatum"
+      },
+      "definition": {
+        "nl": "Datum vanaf dewelke de Aanvraag rechtskracht krijgt."
+      }
+    },
+    {
+      "EA-Guid": "{81B6C22D-76E2-4555-A0F3-23544905199F}",
+      "name": "ingangsdatum",
+      "label": {
+        "nl": "ingangsdatum"
+      },
+      "definition": {
+        "nl": "Datum vanaf dewelke de Vergunning rechtskracht krijgt."
+      }
+    },
+    {
+      "EA-Guid": "{FB6CF23B-9025-43e0-B745-53227D433F75}",
+      "name": "dossier",
+      "label": {
+        "nl": "dossier"
+      },
+      "definition": {
+        "nl": "Het dossier waarin deze zaak wordt behandeld."
+      }
+    },
+    {
+      "EA-Guid": "{8D8F3F40-B247-4c5c-BFE6-F933BBF67072}",
+      "name": "document",
+      "label": {
+        "nl": "document"
+      },
+      "definition": {
+        "nl": "Neerslag van de Vergunning in een Document."
+      }
+    },
+    {
+      "EA-Guid": "{AD0395F0-149A-49c8-8EAF-3A60EAE880FA}",
+      "name": "bestaatUit",
+      "label": {
+        "nl": "bestaat uit"
+      },
+      "definition": {
+        "nl": "Een dossier bestaat uit dossierstukken."
+      }
+    },
+    {
+      "EA-Guid": "{0F8A02FA-6F1A-49a8-8806-52EC44386A14}",
+      "name": "locatie",
+      "label": {
+        "nl": "locatie"
+      },
+      "definition": {
+        "nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
+      }
+    },
+    {
+      "EA-Guid": "{45DB4651-9FBF-404b-ADE3-0CB1F2C1F75E}",
+      "name": "geometrie",
+      "label": {
+        "nl": "geometrie"
+      },
+      "definition": {
+        "nl": "Ruimtelijke voorstelling van de Zone."
+      }
+    },
+    {
+      "EA-Guid": "{FFCDAE6A-C31E-4d33-813B-1EFDD020E996}",
+      "name": "status",
+      "label": {
+        "nl": "status"
+      },
+      "definition": {
+        "nl": "Geeft aan of de Publieke Dienstverlening bijvoorbeeld actief, inactief, of in ontwikkeling is, op basis van een codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{A10743BB-9786-4b0b-A96F-9F1B8D9F6E32}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "De Identificator van de Aanvraag."
+      }
+    },
+    {
+      "EA-Guid": "{AAFB8B2F-383E-4d75-8E20-33D48A562F41}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "De Identificator van de Vergunning."
+      }
+    },
+    {
+      "EA-Guid": "{12095AA8-1A10-4b00-9F71-42281AD4134A}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "Identificator van het Voertuig."
+      }
+    },
+    {
+      "EA-Guid": "{4A4645FF-E57D-47c6-A093-AF790BDE7609}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "Identificator van het object."
+      }
+    },
+    {
+      "EA-Guid": "{EBF7538C-E760-4bd2-91B9-1BFB0EBE884E}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      },
+      "definition": {
+        "nl": "Naam van de Zone."
+      }
+    },
+    {
+      "EA-Guid": "{DFBEEEAA-EFEC-41dd-B8EA-0D0A4F8C5FB1}",
+      "name": "gebruiktAls",
+      "label": {
+        "nl": "gebruikt als"
+      },
+      "definition": {
+        "nl": "Deze eigenschap kan worden gebruikt wanneer een Publieke Dienst de Vergunning als Bewijs gebruikt."
+      }
+    },
+    {
+      "EA-Guid": "{11D99974-1EB1-48ed-86C1-649FEB51EBBB}",
+      "name": "heeftVoorwaarde",
+      "label": {
+        "nl": "heeft voorwaarde"
+      },
+      "definition": {
+        "nl": "Voorwaarden aan voldaan moet worden om gebruik te maken van de Publieke Dienstverlening."
+      }
+    },
+    {
+      "EA-Guid": "{C22F8EE8-2514-4d22-8B45-159F294A90E3}",
+      "name": "produceert",
+      "label": {
+        "nl": "produceert"
+      },
+      "definition": {
+        "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+      }
+    },
+    {
+      "EA-Guid": "{DD18EF64-51B3-4ed9-8357-FF0FCB479D5B}",
+      "name": "produceert",
+      "label": {
+        "nl": "produceert"
+      },
+      "definition": {
+        "nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+      }
+    },
+    {
+      "EA-Guid": "{75321DA0-6E29-4692-BBAB-D3C20403A702}",
+      "name": "volgt",
+      "label": {
+        "nl": "volgt"
+      },
+      "definition": {
+        "nl": "Procedure die de Publieke Dienstverlening volgt."
+      }
+    },
+    {
+      "EA-Guid": "{B510A5D7-F37E-4b72-96DD-2DECB440D167}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Classificering van de Toegang aan de hand van een gecontroleerde codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{503BA4EB-6949-4a57-8430-EDB1CAD6EB70}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Classificering van de Voorwaarde aan de hand van een gecontroleerde codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{9E6FDC98-1CB5-4308-A762-84FE41B024D9}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Classificering van de Aanvraag aan de hand van een gecontroleerde codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{31985F4C-0E5E-443f-9E8F-D70778BA95A7}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Classificering van het Voertuig aan de hand van een gecontroleerde codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{0A668F00-D5B0-4718-9A4A-D80041945D5D}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Classificering van de Activiteit aan de hand van een gecontroleerde codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{FA477F23-F2F2-4cff-83E7-E04D08179F15}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Aard van het Bewijs."
+      },
+      "usage": {
+        "nl": "Het gebruik van een codelijst wordt aanbevolen. Illustratief wordt verwezen naar een eenvoudige codelijst."
+      }
+    },
+    {
+      "EA-Guid": "{84D9DA72-1952-498f-97DC-365B0F2C623A}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      },
+      "definition": {
+        "nl": "Officiële naam van het Bewijs."
+      }
+    },
+    {
+      "EA-Guid": "{B12F1652-0E8E-485b-A8C3-049DA83FCAC9}",
+      "name": "uitgever",
+      "label": {
+        "nl": "uitgever"
+      },
+      "definition": {
+        "nl": "Agent die de Voorwaarde heeft uitgegeven."
+      }
+    },
+    {
+      "EA-Guid": "{6DF74937-F932-4d09-97E5-D440CC0A045B}",
+      "name": "isDeelVan",
+      "label": {
+        "nl": "is deel van"
+      },
+      "definition": {
+        "nl": "Een gerelateerde entiteit waar de beschreven entiteit een fysiek of logisch onderdeel van is."
+      }
+    },
+    {
+      "EA-Guid": "{FCA634DA-4E24-4f82-AC4C-0CE314EA8FA0}",
+      "name": "procedurestap",
+      "label": {
+        "nl": "procedurestap"
+      },
+      "definition": {
+        "nl": "Procedurestappen die deel uitmaken van de Procedure."
+      }
+    },
+    {
+      "EA-Guid": "{DA6229BA-8668-44af-8741-88E2AE55F038}",
+      "name": "tijdsbestek",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Toegang."
+      }
+    },
+    {
+      "EA-Guid": "{60C5A743-D997-4e5c-A64A-2CCE552897A0}",
+      "name": "tijdsbestek",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Activiteit."
+      }
+    },
+    {
+      "EA-Guid": "{9F43D6F6-95F8-4e8f-A868-484EA8C8F9C8}",
+      "name": "beschrijving",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "definition": {
+        "nl": "Korte uitleg over de aard, kenmerken, toepassingen of andere aanvullende informatie die helpt bij het verduidelijken van de Voorwaarde."
+      }
+    },
+    {
+      "EA-Guid": "{004783B4-4865-476c-B9E4-781162315B19}",
+      "name": "beschrijving",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "definition": {
+        "nl": "Beschrijving van het Bewijs."
+      }
+    },
+    {
+      "EA-Guid": "{4A26BD75-3796-4105-B341-C3D81C66F882}",
+      "name": "vervult",
+      "label": {
+        "nl": "vervult"
+      }
+    },
+    {
+      "EA-Guid": "{381BF5C4-DE53-4083-AA4B-1FEDDB5CCCE1}",
+      "name": "isVoorwaardeVan",
+      "label": {
+        "nl": "is voorwaarde van"
+      },
+      "definition": {
+        "nl": "Supervoorwaarde van de Voorwaarde."
+      }
+    },
+    {
+      "EA-Guid": "{4A26BD75-3796-4105-B341-C3D81C66F882}",
+      "name": "heeftOndersteunendBewijs",
+      "label": {
+        "nl": "heeft ondersteunend bewijs"
+      },
+      "definition": {
+        "nl": "Bewijs dat informatie/ondersteuning biedt voor de Voorwaarde."
+      }
+    },
+    {
+      "EA-Guid": "{381BF5C4-DE53-4083-AA4B-1FEDDB5CCCE1}",
+      "name": "heeftVoorwaarde",
+      "label": {
+        "nl": "heeft voorwaarde"
+      },
+      "definition": {
+        "nl": "Subvoorwaarde van de Voorwaarde."
+      }
+    },
+    {
+      "EA-Guid": "{E910C8AC-EBCC-42ae-B6C0-3E1876BFCBE5}",
+      "name": "heeftCompetenteAutoriteit",
+      "label": {
+        "nl": "heeft competente autoriteit"
+      },
+      "definition": {
+        "nl": "Verbindt de Publieke Dienstverlening met een Publieke Organisatie, die verantwoordelijk is voor de levering van de dienst."
+      }
+    }
+  ]
+}
