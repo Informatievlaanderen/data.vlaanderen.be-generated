@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/ecf826e66e1338b01f10751b85dbc7f4c7cddf22",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/ecf826e66e1338b01f10751b85dbc7f4c7cddf22/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/8851fe3c207d8750e8244edf4fc2228c4a299147",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/8851fe3c207d8750e8244edf4fc2228c4a299147/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -233,11 +233,50 @@
       "rawTags": {
         "label-nl": "Gevangenis Vestiging",
         "definition-nl": "Een beveiligde faciliteit waar personen verblijven die van hun vrijheid zijn beroofd.",
-        "ap-definition-nl": "Een beveiligde faciliteit waar personen verblijven die van hun vrijheid zijn beroofd.",
-        "ap-label-nl": "Gevangenis Vestiging",
         "name": "GevangenisVestiging"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Classificering van de Gevangenis Vestiging aan de hand van een gecontroleerde codelijst."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GevangenisVestiging",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GevangenisVestiging"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Infrastructuurtype",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Infrastructuurtype"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Infrastructuurtype",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Infrastructuurtype",
+              "range_label": {
+                "nl": "Infrastructuurtype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Classificering van de Gevangenis Vestiging aan de hand van een gecontroleerde codelijst."
+          }
+        }
+      ]
     },
     {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
@@ -478,54 +517,11 @@
       },
       "properties": [
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen",
-          "name": "aantalPersonen",
-          "sort": "aantal personen",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalVTE",
+          "name": "aantalVte´s",
+          "sort": "aantal VTE´s",
           "label": {
-            "nl": "aantal personen"
-          },
-          "description": {
-            "nl": "Aantal personen die de VTE´s uitvoeren."
-          },
-          "usage": {
-            "nl": "Dit zegt niet over de verdeling van de VTE´s tussen deze personen."
-          },
-          "domain": [
-            {
-              "EA-Name": "VTEGebruik",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "VTEGebruik.aantalPersonen",
-            "label-nl": "aantal personen",
-            "definition-nl": "Aantal personen die de VTE´s uitvoeren.",
-            "usageNote-nl": "Dit zegt niet over de verdeling van de VTE´s tussen deze personen."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantal",
-          "name": "aantal",
-          "sort": "aantal",
-          "label": {
-            "nl": "aantal"
+            "nl": "aantal VTE´s"
           },
           "description": {
             "nl": "Het aantal VTE´s die gebruikt werden."
@@ -555,9 +551,52 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "aantal",
+            "label-nl": "aantal VTE´s",
             "definition-nl": "Het aantal VTE´s die gebruikt werden.",
-            "name": "VTEGebruik.aantal"
+            "name": "VTEGebruik.aantalVTE"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen",
+          "name": "aantalPersonen",
+          "sort": "aantal personen",
+          "label": {
+            "nl": "aantal personen"
+          },
+          "description": {
+            "nl": "Aantal personen die de VTE´s uitvoeren."
+          },
+          "usage": {
+            "nl": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."
+          },
+          "domain": [
+            {
+              "EA-Name": "VTEGebruik",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "VTEGebruik.aantalPersonen",
+            "label-nl": "aantal personen",
+            "definition-nl": "Aantal personen die de VTE´s uitvoeren.",
+            "usageNote-nl": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."
           }
         },
         {
@@ -1214,7 +1253,7 @@
             "nl": "type"
           },
           "description": {
-            "nl": "Classificering van het Observeerbaar Kenmark aan de hand van een gecontroleerde codelijst."
+            "nl": "Classificering van het Observeerbaar Kenmerk aan de hand van een gecontroleerde codelijst."
           },
           "usage": {},
           "domain": [
@@ -1243,7 +1282,7 @@
           "rawTags": {
             "ap-label-nl": "type",
             "uri": "http://purl.org/dc/terms/type",
-            "ap-definition-nl": "Classificering van het Observeerbaar Kenmark aan de hand van een gecontroleerde codelijst."
+            "ap-definition-nl": "Classificering van het Observeerbaar Kenmerk aan de hand van een gecontroleerde codelijst."
           }
         }
       ]
@@ -1256,7 +1295,7 @@
       },
       "sort": "Observatie",
       "description": {
-        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen."
+        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van de populatie van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen."
       },
       "usage": {
         "nl": "Deze klasse wordt gebruikt om de populatiekenmerken van gevangenissen en detentiehuizen te weten."
@@ -1265,7 +1304,7 @@
       "rawTags": {
         "ap-label-nl": "Observatie",
         "uri": "http://www.w3.org/ns/sosa/Observation",
-        "ap-definition-nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen.",
+        "ap-definition-nl": "Het vaststellen van de waarde van een bepaald kenmerk van de populatie van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen.",
         "ap-usageNote-nl": "Deze klasse wordt gebruikt om de populatiekenmerken van gevangenissen en detentiehuizen te weten."
       },
       "properties": [
@@ -3635,7 +3674,7 @@
             "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
           },
           "usage": {
-            "nl": "Het aantal geplande VTE´s kan verschillende van het aantal gebruikte VTE´s."
+            "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
           },
           "domain": [
             {
@@ -3661,7 +3700,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-usageNote-nl": "Het aantal geplande VTE´s kan verschillende van het aantal gebruikte VTE´s.",
+            "ap-usageNote-nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s.",
             "name": "Realisatie.geplandeVTE",
             "label-nl": "geplande VTE",
             "definition-nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
@@ -3721,7 +3760,7 @@
             "nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
           },
           "usage": {
-            "nl": "Het aantal gebruikte VTE´s kan verschillen van het aantal geplande VTE´s."
+            "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
           },
           "domain": [
             {
@@ -3748,7 +3787,7 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.w3.org/ns/prov#qualifiedUsage",
-            "ap-usageNote-nl": "Het aantal gebruikte VTE´s kan verschillen van het aantal geplande VTE´s.",
+            "ap-usageNote-nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
             "ap-label-nl": "gebruikte VTE",
             "ap-definition-nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
           }

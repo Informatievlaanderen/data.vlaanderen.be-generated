@@ -163,20 +163,20 @@ schemas:Service a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf prov:Agent .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantal> a owl:DatatypeProperty;
-  rdfs:label "aantal"@nl;
-  rdfs:comment "Het aantal VTE´s die gebruikt werden."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:double .
-
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen> a owl:DatatypeProperty;
   rdfs:label "aantal personen"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Dit zegt niet over de verdeling van de VTE´s tussen deze personen."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."@nl;
   rdfs:comment "Aantal personen die de VTE´s uitvoeren."@nl;
   rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalVTE> a owl:DatatypeProperty;
+  rdfs:label "aantal VTE´s"@nl;
+  rdfs:comment "Het aantal VTE´s die gebruikt werden."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:double .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#activiteit> a owl:ObjectProperty;
   rdfs:label "activiteit"@nl;
@@ -279,6 +279,8 @@ prov:wasAssociatedWith a rdf:Property .
 
 prov:wasInfluencedBy a rdf:Property .
 
+<https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type> a rdf:Property .
+
 schemas:audience a rdf:Property;
   rdfs:label "doelgroep"@nl .
 
@@ -361,6 +363,7 @@ schemas:superEvent a rdf:Property;
     schemas:eventSchedule,
     schemas:category,
     schemas:audience,
+    <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type>,
     prov:wasInfluencedBy,
     prov:wasAssociatedWith,
     prov:startedAtTime,
