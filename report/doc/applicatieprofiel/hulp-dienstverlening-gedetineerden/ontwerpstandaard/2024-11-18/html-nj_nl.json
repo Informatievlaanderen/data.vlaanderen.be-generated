@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/b5ca382002049938adf364a0b66aeffb09fed048",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/b5ca382002049938adf364a0b66aeffb09fed048/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/ecf826e66e1338b01f10751b85dbc7f4c7cddf22",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/ecf826e66e1338b01f10751b85dbc7f4c7cddf22/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -797,7 +797,9 @@
         "nl": "Kwantitatieve Waarde"
       },
       "sort": "Kwantitatieve Waarde",
-      "description": {},
+      "description": {
+        "nl": "Dit drukt de grootte en het soort van een hoeveelheid uit."
+      },
       "usage": {},
       "parents": [
         {
@@ -810,47 +812,20 @@
       ],
       "rawTags": {
         "uri": "http://qudt.org/schema/qudt/QuantityValue",
-        "ap-label-nl": "Kwantitatieve Waarde"
+        "ap-label-nl": "Kwantitatieve Waarde",
+        "ap-definition-nl": "Dit drukt de grootte en het soort van een hoeveelheid uit."
       },
       "properties": [
         {
-          "uri": "http://fixme.com#numerieke waarde",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Kwantitatieve Waarde",
-              "uri": "http://qudt.org/schema/qudt/QuantityValue"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Numerieke Unie",
-              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
-              "range_puri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
-              "range_label": {
-                "nl": "Numerieke Unie"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {}
-        },
-        {
-          "uri": "http://fixme.com#eenheid",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "uri": "http://qudt.org/schema/qudt/unit",
+          "name": "eenheid",
+          "sort": "eenheid",
+          "label": {
+            "nl": "eenheid"
+          },
+          "description": {
+            "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
+          },
           "usage": {},
           "domain": [
             {
@@ -875,7 +850,51 @@
           ],
           "cardinality": "1",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "uri": "http://qudt.org/schema/qudt/unit",
+            "ap-label-nl": "eenheid",
+            "ap-definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
+          }
+        },
+        {
+          "uri": "http://qudt.org/schema/qudt/numericValue",
+          "name": "numeriekWaarde",
+          "sort": "numeriek waarde",
+          "label": {
+            "nl": "numeriek waarde"
+          },
+          "description": {
+            "nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kwantitatieve Waarde",
+              "uri": "http://qudt.org/schema/qudt/QuantityValue"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Numerieke Unie",
+              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+              "range_puri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+              "range_label": {
+                "nl": "Numerieke Unie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://qudt.org/schema/qudt/numericValue",
+            "ap-label-nl": "numeriek waarde",
+            "ap-definition-nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
+          }
         }
       ]
     },
@@ -1176,12 +1195,15 @@
         "nl": "Observeerbaar Kenmerk"
       },
       "sort": "Observeerbaar Kenmerk",
-      "description": {},
+      "description": {
+        "nl": "Kenmerk van de populatie dat geobserveerd kan worden."
+      },
       "usage": {},
       "parents": [],
       "rawTags": {
         "ap-label-nl": "Observeerbaar Kenmerk",
-        "uri": "http://www.w3.org/ns/sosa/ObservableProperty"
+        "uri": "http://www.w3.org/ns/sosa/ObservableProperty",
+        "ap-definition-nl": "Kenmerk van de populatie dat geobserveerd kan worden."
       },
       "properties": [
         {
@@ -1191,7 +1213,9 @@
           "label": {
             "nl": "type"
           },
-          "description": {},
+          "description": {
+            "nl": "Classificering van het Observeerbaar Kenmark aan de hand van een gecontroleerde codelijst."
+          },
           "usage": {},
           "domain": [
             {
@@ -1218,7 +1242,8 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "type",
-            "uri": "http://purl.org/dc/terms/type"
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-definition-nl": "Classificering van het Observeerbaar Kenmark aan de hand van een gecontroleerde codelijst."
           }
         }
       ]
@@ -1230,20 +1255,30 @@
         "nl": "Observatie"
       },
       "sort": "Observatie",
-      "description": {},
-      "usage": {},
+      "description": {
+        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen."
+      },
+      "usage": {
+        "nl": "Deze klasse wordt gebruikt om de populatiekenmerken van gevangenissen en detentiehuizen te weten."
+      },
       "parents": [],
       "rawTags": {
         "ap-label-nl": "Observatie",
-        "uri": "http://www.w3.org/ns/sosa/Observation"
+        "uri": "http://www.w3.org/ns/sosa/Observation",
+        "ap-definition-nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Vestiging op een bepaald tijdstip of tussen twee tijdstippen.",
+        "ap-usageNote-nl": "Deze klasse wordt gebruikt om de populatiekenmerken van gevangenissen en detentiehuizen te weten."
       },
       "properties": [
         {
           "uri": "http://www.w3.org/ns/sosa/observedProperty",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "geobserveerdKenmerk",
+          "sort": "geobserveerd kenmerk",
+          "label": {
+            "nl": "geobserveerd kenmerk"
+          },
+          "description": {
+            "nl": "Kenmerk van de populatie dat geobserveerd kan worden."
+          },
           "usage": {},
           "domain": [
             {
@@ -1269,7 +1304,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/sosa/observedProperty"
+            "uri": "http://www.w3.org/ns/sosa/observedProperty",
+            "ap-definition-nl": "Kenmerk van de populatie dat geobserveerd kan worden.",
+            "ap-label-nl": "geobserveerd kenmerk"
           }
         },
         {
@@ -1279,7 +1316,9 @@
           "label": {
             "nl": "heeft resultaat"
           },
-          "description": {},
+          "description": {
+            "nl": "Resultaat van de Observatie."
+          },
           "usage": {},
           "domain": [
             {
@@ -1305,6 +1344,7 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "Resultaat van de Observatie.",
             "uri": "http://www.w3.org/ns/sosa/hasResult",
             "ap-label-nl": "heeft resultaat"
           }
@@ -1316,7 +1356,9 @@
           "label": {
             "nl": "vestiging"
           },
-          "description": {},
+          "description": {
+            "nl": "Vestiging waar de Observatie gedaan werd."
+          },
           "usage": {},
           "domain": [
             {
@@ -1342,16 +1384,21 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "Vestiging waar de Observatie gedaan werd.",
             "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
             "ap-label-nl": "vestiging"
           }
         },
         {
           "uri": "http://www.w3.org/ns/prov#startedAtTime",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "start",
+          "sort": "start",
+          "label": {
+            "nl": "start"
+          },
+          "description": {
+            "nl": "Moment waarop de Observatie gstart is."
+          },
           "usage": {},
           "domain": [
             {
@@ -1377,15 +1424,21 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#startedAtTime"
+            "uri": "http://www.w3.org/ns/prov#startedAtTime",
+            "ap-label-nl": "start",
+            "ap-definition-nl": "Moment waarop de Observatie gstart is."
           }
         },
         {
           "uri": "http://www.w3.org/ns/prov#endedAtTime",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "einde",
+          "sort": "einde",
+          "label": {
+            "nl": "einde"
+          },
+          "description": {
+            "nl": "Moment waarop de Observatie geëindigd is."
+          },
           "usage": {},
           "domain": [
             {
@@ -1411,7 +1464,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#endedAtTime"
+            "uri": "http://www.w3.org/ns/prov#endedAtTime",
+            "ap-label-nl": "einde",
+            "ap-definition-nl": "Moment waarop de Observatie geëindigd is."
           }
         }
       ]
