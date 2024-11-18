@@ -49,7 +49,9 @@
   ],
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-10-07"
+  },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-10-02",
   "classes": [
@@ -63,20 +65,17 @@
         "nl": "Werken of natuurlijke elementen die bodemerosie bestrijden, zoals erosiepoelen en graszones."
       },
       "parents": [
-        "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+        "http://www.w3.org/ns/sosa/FeatureOfInterest"
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiebestrijdingsmaatregelDeployment",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregelonderdeel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "ErosiebestrijdingsmaatregelDeployment"
-      },
-      "definition": {
-        "nl": "Een deployment op een Erosiebestrijdingsmaatregel."
+        "nl": "Erosiebestrijdingsmaatregelonderdeel"
       },
       "parents": [
-        "http://www.w3.org/ns/ssn/Deployment"
+        "http://www.w3.org/ns/sosa/Platform"
       ]
     },
     {
@@ -93,56 +92,6 @@
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiepoelDeployment",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "ErosiepoelDeployment"
-      },
-      "definition": {
-        "nl": "Een Deployment op een erosiepoel."
-      },
-      "parents": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiebestrijdingsmaatregelDeployment"
-      ]
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelobservatie",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Erosiepoelobservatie"
-      },
-      "definition": {
-        "nl": "Een observatie van (een deel van) een Erosiepoel."
-      },
-      "parents": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ]
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Erosiepoelonderdeel"
-      },
-      "definition": {
-        "nl": "Een onderdeel van een erosiepoel, zoals ingang en uitgang."
-      },
-      "parents": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Erosiepoelonderhoud"
-      },
-      "definition": {
-        "nl": "Een onderhoud van een erosiepoel."
-      },
-      "parents": [
-        "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-      ]
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -156,19 +105,6 @@
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "SedimentvolumeObservatie"
-      },
-      "definition": {
-        "nl": "De observatie van het sedimentvolume."
-      },
-      "parents": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelobservatie"
-      ]
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Zone",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -178,45 +114,11 @@
         "nl": "Een gebied dat aan een Erosiebestrijdingsmaatregel ligt. Dit kan bijvoorbeeld het gebied zijn dat sediment en water aanvoert."
       },
       "parents": [
-        "http://www.w3.org/ns/prov#Location",
-        "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+        "http://www.w3.org/ns/sosa/FeatureOfInterest"
       ]
     }
   ],
   "externals": [
-    {
-      "name": {
-        "nl": "Onderhoudstaak"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "ErosiepoelKenmerktype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "BodemKenmerktype"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {},
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Deployment"
-      },
-      "@id": "http://www.w3.org/ns/ssn/Deployment",
-      "@type": "rdfs:Class"
-    },
     {
       "name": {
         "nl": "Onderhoud"
@@ -226,80 +128,6 @@
     }
   ],
   "properties": [
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#uitgevoerde taken",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "uitgevoerde taken"
-      },
-      "definition": {
-        "nl": "De taken die uitgevoerd zijn als deel van het onderhoud."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#resultaat"
-      ]
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeVoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "sedimentvolumeVoor"
-      },
-      "definition": {
-        "nl": "Het sedimentvolume van een erosiepoel voor het onderhoud."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie"
-      ],
-      "generalization": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#resultaat"
-      ]
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeNa",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "sedimentvolumeNa"
-      },
-      "definition": {
-        "nl": "Het sedimentvolume van een erosiepoel na het onderhoud."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie"
-      ],
-      "generalization": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#resultaat"
-      ]
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "onderhoud"
-      },
-      "definition": {
-        "nl": "De onderhouden die gebeurd zijn voor een Erosiepoel."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud"
-      ],
-      "generalization": []
-    },
     {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -314,40 +142,6 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "maxVolume"
-      },
-      "definition": {
-        "nl": "Het maximaal volume voor er sediment en water afvloeit."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
-      ],
-      "range": [
-        "https://schema.org/QuantitativeValue"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#erosiepoelonderdeel",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "erosiepoelonderdeel"
-      },
-      "definition": {
-        "nl": "Een onderdeel van een erosiepoel, zoals ingang en uitgang."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#ErosiepoelDeployment"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel"
       ],
       "generalization": []
     },
@@ -372,23 +166,6 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#beschermdeZone",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "beschermde zone"
-      },
-      "definition": {
-        "nl": "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -406,19 +183,19 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#aanvoerzone",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "aanvoerzone"
+        "nl": "maxVolume"
       },
       "definition": {
-        "nl": "De zone waarvan water en sediment aangevoerd wordt."
+        "nl": "Het maximaal volume voor er sediment en water afvloeit."
       },
       "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
       ],
       "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
+        "http://qudt.org/schema/qudt/QuantityValue"
       ],
       "generalization": []
     },
@@ -438,49 +215,81 @@
         "http://purl.org/dc/terms/Agent"
       ],
       "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.beschermdeZone",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "beschermde zone"
+      },
+      "definition": {
+        "nl": "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.aanvoerzone",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanvoerzone"
+      },
+      "definition": {
+        "nl": "De zone waarvan water en sediment aangevoerd wordt."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
+      ],
+      "generalization": []
     }
   ],
   "externalproperties": [
     {
-      "name": {
-        "nl": "locatie"
-      },
+      "name": {},
       "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "locatie"
-      },
+      "name": {},
       "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "eigenaar"
-      },
+      "name": {},
       "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "eigenaar"
-      },
+      "name": {},
       "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "geobserveerdKenmerk"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "name": {},
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "geobserveerdKenmerk"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "name": {},
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "rdf:Property"
     },
     {

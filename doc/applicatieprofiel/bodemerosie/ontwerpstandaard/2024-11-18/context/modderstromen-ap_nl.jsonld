@@ -1,0 +1,144 @@
+{
+  "@context": {
+    "Actuatie": "http://www.w3.org/ns/sosa/Actuation",
+    "Actuatie.gemaaktDoor": {
+      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
+      "@type": "@id"
+    },
+    "Actuatie.heeftSimpelResultaat": {
+      "@id": "http://www.w3.org/ns/sosa/hasSimpleResult"
+    },
+    "Actuatie.object": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel",
+    "Erosiebestrijdingsmaatregel.aanvoerzone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.aanvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.afvoerzone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.beschermdeZone": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.beschermdeZone",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.bestaatUit": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.eigenaar": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.onderhoud": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregel.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregelonderdeel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregelonderdeel",
+    "Erosiebestrijdingsmaatregelonderdeel.deelVan": {
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "@id"
+    },
+    "Erosiebestrijdingsmaatregelonderdeel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Erosiepoel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel",
+    "Erosiepoel.dimensie": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#dimensie",
+      "@type": "@id"
+    },
+    "Erosiepoel.maxVolume": {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
+      "@type": "@id"
+    },
+    "Graszone": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
+    "Kenmerk": "http://www.w3.org/ns/ssn/Property",
+    "KwantitatieveWaarde": "http://qudt.org/schema/qudt/QuantityValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "http://qudt.org/schema/qudt/unit",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.numeriekeWaarde": {
+      "@id": "http://qudt.org/schema/qudt/numericValue"
+    },
+    "Object": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "Observatie": "http://www.w3.org/ns/sosa/Observation",
+    "Observatie.gemaaktDoorSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.heeftResultaat": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "Observatie.object": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Onderhoud": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
+    "Onderhoud.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Platform": "http://www.w3.org/ns/sosa/Platform",
+    "Platform.bevat": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@type": "@id"
+    },
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Resultaat": "http://www.w3.org/ns/sosa/Result",
+    "Sensor": "http://www.w3.org/ns/sosa/Sensor",
+    "Sensor.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Sensor.isHostedBy": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "@type": "@id"
+    },
+    "Zone": "https://test.data.vlaanderen.be/ns/bodemerosie#Zone",
+    "Zone.eigenaar": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
+      "@type": "@id"
+    },
+    "Zone.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Zone.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "Zone.verantwoordelijke",
+      "@type": "@id"
+    }
+  }
+}

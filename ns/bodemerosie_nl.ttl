@@ -6,20 +6,24 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix schemas: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-skos:Concept a rdfs:Class;
-  rdfs:label "Onderhoudstaak"@nl,
-    "ErosiepoelKenmerktype"@nl,
-    "BodemKenmerktype"@nl .
-
-<http://www.w3.org/ns/ssn/Deployment> a rdfs:Class;
-  rdfs:label "Deployment"@nl .
 
 <https://data.vlaanderen.be/ns/generiek#Onderhoud> a rdfs:Class;
   rdfs:label "Onderhoud"@nl .
+
+<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.aanvoerzone> a owl:ObjectProperty;
+  rdfs:label "aanvoerzone"@nl;
+  rdfs:comment "De zone waarvan water en sediment aangevoerd wordt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
+
+<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.beschermdeZone> a owl:ObjectProperty;
+  rdfs:label "beschermde zone"@nl;
+  rdfs:comment "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke> a owl:ObjectProperty;
   rdfs:label "verantwoordelijke"@nl;
@@ -28,29 +32,27 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:range dc:Agent .
 
+<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregelonderdeel> a owl:Class;
+  rdfs:label "Erosiebestrijdingsmaatregelonderdeel"@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> .
+
+<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume> a owl:ObjectProperty;
+  rdfs:label "maxVolume"@nl;
+  rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
+  rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+
 <https://test.data.vlaanderen.be/ns/bodemerosie#Graszone> a owl:Class;
   rdfs:label "Graszone"@nl;
   rdfs:comment "Een zone met gras om bodemerosie te bestrijden."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:subClassOf <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel> .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#aanvoerzone> a owl:ObjectProperty;
-  rdfs:label "aanvoerzone"@nl;
-  rdfs:comment "De zone waarvan water en sediment aangevoerd wordt."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
-
 <https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone> a owl:ObjectProperty;
   rdfs:label "afvoerzone"@nl;
   rdfs:comment "De zone waarnaar overtollig water en sediment afgevoerd wordt."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#beschermdeZone> a owl:ObjectProperty;
-  rdfs:label "beschermde zone"@nl;
-  rdfs:comment "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."@nl;
   rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
@@ -63,83 +65,20 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:range <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie> .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#erosiepoelonderdeel> a owl:ObjectProperty;
-  rdfs:label "erosiepoelonderdeel"@nl;
-  rdfs:comment "Een onderdeel van een erosiepoel, zoals ingang en uitgang."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#ErosiepoelDeployment>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume> a owl:ObjectProperty;
-  rdfs:label "maxVolume"@nl;
-  rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range schemas:QuantitativeValue .
-
 <https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud> a owl:ObjectProperty;
   rdfs:label "onderhoud"@nl;
-  rdfs:comment "De onderhouden die gebeurd zijn voor een Erosiepoel."@nl,
-    "De onderhouden die gebeurd zijn voor een Erosiebestrijding."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>,
-    <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
+  rdfs:comment "De onderhouden die gebeurd zijn voor een Erosiebestrijding."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud>,
-    <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
+  rdfs:range <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeNa> a owl:ObjectProperty;
-  rdfs:label "sedimentvolumeNa"@nl;
-  rdfs:comment "Het sedimentvolume van een erosiepoel na het onderhoud."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie>;
-  rdfs:subPropertyOf <https://test.data.vlaanderen.be/ns/bodemerosie#resultaat> .
+dc:isPartOf a rdf:Property .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#sedimentvolumeVoor> a owl:ObjectProperty;
-  rdfs:label "sedimentvolumeVoor"@nl;
-  rdfs:comment "Het sedimentvolume van een erosiepoel voor het onderhoud."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie>;
-  rdfs:subPropertyOf <https://test.data.vlaanderen.be/ns/bodemerosie#resultaat> .
+dc:type a rdf:Property .
 
-<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty> a rdf:Property;
-  rdfs:label "geobserveerdKenmerk"@nl .
+crm:P52_has_current_owner a rdf:Property .
 
-crm:P52_has_current_owner a rdf:Property;
-  rdfs:label "eigenaar"@nl .
-
-prov:atLocation a rdf:Property;
-  rdfs:label "locatie"@nl .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#ErosiebestrijdingsmaatregelDeployment> a owl:Class;
-  rdfs:label "ErosiebestrijdingsmaatregelDeployment"@nl;
-  rdfs:comment "Een deployment op een Erosiebestrijdingsmaatregel."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#ErosiepoelDeployment> a owl:Class;
-  rdfs:label "ErosiepoelDeployment"@nl;
-  rdfs:comment "Een Deployment op een erosiepoel."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/bodemerosie#ErosiebestrijdingsmaatregelDeployment> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelobservatie> a owl:Class;
-  rdfs:label "Erosiepoelobservatie"@nl;
-  rdfs:comment "Een observatie van (een deel van) een Erosiepoel."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel> a owl:Class;
-  rdfs:label "Erosiepoelonderdeel"@nl;
-  rdfs:comment "Een onderdeel van een erosiepoel, zoals ingang en uitgang."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#SedimentvolumeObservatie> a owl:Class;
-  rdfs:label "SedimentvolumeObservatie"@nl;
-  rdfs:comment "De observatie van het sedimentvolume."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelobservatie> .
+prov:atLocation a rdf:Property .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel> a owl:Class;
   rdfs:label "Erosiepoel"@nl;
@@ -147,24 +86,17 @@ prov:atLocation a rdf:Property;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:subClassOf <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel> .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderhoud> a owl:Class;
-  rdfs:label "Erosiepoelonderhoud"@nl;
-  rdfs:comment "Een onderhoud van een erosiepoel."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
-
 <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> a owl:Class;
   rdfs:label "Zone"@nl;
   rdfs:comment "Een gebied dat aan een Erosiebestrijdingsmaatregel ligt. Dit kan bijvoorbeeld het gebied zijn dat sediment en water aanvoert."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf prov:Location,
-    <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel> a owl:Class;
   rdfs:label "Erosiebestrijdingsmaatregel"@nl;
   rdfs:comment "Werken of natuurlijke elementen die bodemerosie bestrijden, zoals erosiepoelen en graszones."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie> a owl:Ontology;
   rdfs:label "bodemerosie"@en,
@@ -187,12 +119,11 @@ prov:atLocation a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso skos:Concept,
-    <http://www.w3.org/ns/ssn/Deployment>,
-    <https://data.vlaanderen.be/ns/generiek#Onderhoud>,
+  rdfs:seeAlso <https://data.vlaanderen.be/ns/generiek#Onderhoud>,
     prov:atLocation,
     crm:P52_has_current_owner,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>;
+    dc:type,
+    dc:isPartOf;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
