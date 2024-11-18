@@ -494,8 +494,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "Bodemerosie",
-  "documentcommit": "e24a6024ae53d33492772acc177c9bf72fffef48",
-  "dummy": "0",
+  "documentcommit": "0e69a8de24c91aeb507e1efe40de85acaac0bc4f",
+  "dummy": "1",
   "eap": "MijnApplicatieprofiel-AP.eap",
   "editors": [
     {
@@ -520,7 +520,7 @@
       },
       "domain": [
         {
-          "EA-Name": "Observation",
+          "EA-Name": "Observatie",
           "uri": "http://www.w3.org/ns/sosa/Observation"
         }
       ],
@@ -535,20 +535,25 @@
             "key": "uri",
             "note": "http://www.w3.org/ns/sosa/observedProperty",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Kenmerk dat geobserveerd werd tijdens de Observatie.",
+            "value": "NOTE"
           }
         ],
-        "EA-Domain": "Observation",
+        "EA-Domain": "Observatie",
         "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
         "EA-Guid": "{559CAF5F-B70B-4bf8-834F-4FF14ACA94A2}",
-        "EA-Name": "observedProperty",
+        "EA-Name": "geobserveerd kenmerk",
         "EA-Package": "",
-        "EA-Range": "Property",
+        "EA-Range": "GeobserveerdKenmerk",
         "EA-Type": "connector",
         "RangeData": {
           "EA-GUID": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
-          "EA-Name": "Property",
+          "EA-Name": "GeobserveerdKenmerk",
           "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/ssn/Property"
+          "uri": "http://www.w3.org/ns/sosa/ObservableProperty"
         },
         "RawTags": [
           {
@@ -560,6 +565,11 @@
             "key": "uri",
             "note": "http://www.w3.org/ns/sosa/observedProperty",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Kenmerk dat geobserveerd werd tijdens de Observatie.",
+            "value": "NOTE"
           }
         ],
         "Scope": "NOTHING",
@@ -569,7 +579,7 @@
           "nl": "TODO"
         },
         "derived": "false",
-        "destRole": "observedProperty",
+        "destRole": "geobserveerd kenmerk",
         "equivalent": "",
         "label": "",
         "label-en": "",
@@ -589,13 +599,15 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "",
       "range": [
         {
           "EA-GUID": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
-          "EA-Name": "Property",
+          "EA-Name": "GeobserveerdKenmerk",
           "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/ssn/Property"
+          "uri": "http://www.w3.org/ns/sosa/ObservableProperty"
         }
       ]
     },
@@ -609,15 +621,15 @@
       },
       "domain": [
         {
-          "EA-Name": "Observation",
+          "EA-Name": "Observatie",
           "uri": "http://www.w3.org/ns/sosa/Observation"
         }
       ],
       "extra": {
-        "EA-Domain": "Observation",
+        "EA-Domain": "Observatie",
         "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
         "EA-Guid": "{6D7E0AEA-BF3C-49d3-A6A2-9E70FF71754C}",
-        "EA-Name": "madeBySensor",
+        "EA-Name": "gedaanDoor",
         "EA-Package": "SSN/SOSA",
         "EA-Range": "Sensor",
         "EA-Type": "attribute",
@@ -636,7 +648,12 @@
           {
             "key": "ap-label-nl",
             "note": "null",
-            "value": "gemaakt door sensor"
+            "value": "gedaan door"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "De Sensor die de Observatie heeft gedaan."
           }
         ],
         "Scope": "NOTHING",
@@ -693,7 +710,7 @@
         "EA-Domain": "Actuatie",
         "EA-Domain-Guid": "{C73E466B-B465-479a-B647-B17BC590FF2B}",
         "EA-Guid": "{02594EB4-1AF4-4365-89B8-3ABBC8C6031F}",
-        "EA-Name": "madeByActuator",
+        "EA-Name": "uitgevoerd door",
         "EA-Package": "SSN/SOSA",
         "EA-Range": "Agent",
         "EA-Type": "attribute",
@@ -717,7 +734,12 @@
           {
             "key": "ap-label-nl",
             "note": "null",
-            "value": "gemaakt door"
+            "value": "uitgevoerd door"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "De Agent die de Actuatie heeft uitgevoerd."
           }
         ],
         "Scope": "NOTHING",
@@ -773,6 +795,11 @@
       "extra": {
         "DestRoleTags": [
           {
+            "key": "ap-definition-nl",
+            "note": "Het Platform waarop de Sensor zit.",
+            "value": "NOTE"
+          },
+          {
             "key": "ap-label-nl",
             "note": "gehost door",
             "value": "NOTE"
@@ -807,6 +834,11 @@
           "uri": "http://www.w3.org/ns/sosa/Platform"
         },
         "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Het Platform waarop de Sensor zit.",
+            "value": "NOTE"
+          },
           {
             "key": "ap-label-nl",
             "note": "gehost door",
@@ -855,6 +887,8 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "0",
       "name": "",
       "range": [
         {
@@ -882,6 +916,11 @@
       "extra": {
         "DestRoleTags": [
           {
+            "key": "ap-definition-nl",
+            "note": "Het Platform waarop de Sensor zit.",
+            "value": "NOTE"
+          },
+          {
             "key": "ap-label-nl",
             "note": "gehost door",
             "value": "NOTE"
@@ -916,6 +955,11 @@
           "uri": "http://www.w3.org/ns/sosa/Platform"
         },
         "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Het Platform waarop de Sensor zit.",
+            "value": "NOTE"
+          },
           {
             "key": "ap-label-nl",
             "note": "gehost door",
@@ -964,6 +1008,8 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "0",
       "name": "",
       "range": [
         {
@@ -992,7 +1038,7 @@
         "EA-Domain": "Actuatie",
         "EA-Domain-Guid": "{C73E466B-B465-479a-B647-B17BC590FF2B}",
         "EA-Guid": "{51EB412E-1C22-4988-A23D-4C22B755E8F6}",
-        "EA-Name": "hasSimpleResult",
+        "EA-Name": "heeft simpel resultaat",
         "EA-Package": "SSN/SOSA",
         "EA-Range": "null",
         "EA-Type": "attribute",
@@ -1052,7 +1098,7 @@
       },
       "domain": [
         {
-          "EA-Name": "Observation",
+          "EA-Name": "Observatie",
           "uri": "http://www.w3.org/ns/sosa/Observation"
         }
       ],
@@ -1067,18 +1113,23 @@
             "key": "ap-label-nl",
             "note": "heeft resultaat",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het resultaat van de Observatie.",
+            "value": "NOTE"
           }
         ],
-        "EA-Domain": "Observation",
+        "EA-Domain": "Observatie",
         "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
         "EA-Guid": "{41EC9DF9-CA41-4be4-9416-58280D631E7D}",
-        "EA-Name": "hasResult",
+        "EA-Name": "heeft resultaat",
         "EA-Package": "",
-        "EA-Range": "Result",
+        "EA-Range": "Resultaat",
         "EA-Type": "connector",
         "RangeData": {
           "EA-GUID": "{051B5FFC-0DAD-4f98-8B60-BB23B66172D3}",
-          "EA-Name": "Result",
+          "EA-Name": "Resultaat",
           "EA-Package": "SSN/SOSA",
           "uri": "http://www.w3.org/ns/sosa/Result"
         },
@@ -1092,6 +1143,11 @@
             "key": "ap-label-nl",
             "note": "heeft resultaat",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het resultaat van de Observatie.",
+            "value": "NOTE"
           }
         ],
         "Scope": "NOTHING",
@@ -1101,7 +1157,7 @@
           "nl": "TODO"
         },
         "derived": "false",
-        "destRole": "hasResult",
+        "destRole": "heeft resultaat",
         "equivalent": "",
         "label": "",
         "label-en": "",
@@ -1121,11 +1177,13 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "",
       "range": [
         {
           "EA-GUID": "{051B5FFC-0DAD-4f98-8B60-BB23B66172D3}",
-          "EA-Name": "Result",
+          "EA-Name": "Resultaat",
           "EA-Package": "SSN/SOSA",
           "uri": "http://www.w3.org/ns/sosa/Result"
         }
@@ -1156,12 +1214,17 @@
             "key": "ap-label-nl",
             "note": "object",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het object waarop de Actuatie is uitgevoerd.",
+            "value": "NOTE"
           }
         ],
         "EA-Domain": "Actuatie",
         "EA-Domain-Guid": "{C73E466B-B465-479a-B647-B17BC590FF2B}",
         "EA-Guid": "{7B3DD2C5-134B-448e-B797-0CA80F61DFF8}",
-        "EA-Name": "hasFeatureOfInterest",
+        "EA-Name": "object",
         "EA-Package": "",
         "EA-Range": "FeatureOfInterest",
         "EA-Type": "connector",
@@ -1181,6 +1244,11 @@
             "key": "ap-label-nl",
             "note": "object",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het object waarop de Actuatie is uitgevoerd.",
+            "value": "NOTE"
           }
         ],
         "Scope": "NOTHING",
@@ -1190,7 +1258,7 @@
           "nl": "TODO"
         },
         "derived": "false",
-        "destRole": "hasFeatureOfInterest",
+        "destRole": "object",
         "equivalent": "",
         "label": "",
         "label-en": "",
@@ -1210,6 +1278,8 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "",
       "range": [
         {
@@ -1230,7 +1300,7 @@
       },
       "domain": [
         {
-          "EA-Name": "Observation",
+          "EA-Name": "Observatie",
           "uri": "http://www.w3.org/ns/sosa/Observation"
         }
       ],
@@ -1245,12 +1315,17 @@
             "key": "uri",
             "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het Object waarop de observatie is uitgevoegd.",
+            "value": "NOTE"
           }
         ],
-        "EA-Domain": "Observation",
+        "EA-Domain": "Observatie",
         "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
         "EA-Guid": "{1E127431-679B-4c91-B16A-C36431588643}",
-        "EA-Name": "hasFeatureOfInterest",
+        "EA-Name": "object",
         "EA-Package": "",
         "EA-Range": "FeatureOfInterest",
         "EA-Type": "connector",
@@ -1270,6 +1345,11 @@
             "key": "uri",
             "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
             "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Het Object waarop de observatie is uitgevoegd.",
+            "value": "NOTE"
           }
         ],
         "Scope": "NOTHING",
@@ -1279,7 +1359,7 @@
           "nl": "TODO"
         },
         "derived": "false",
-        "destRole": "hasFeatureOfInterest",
+        "destRole": "object",
         "equivalent": "",
         "label": "",
         "label-en": "",
@@ -1299,6 +1379,8 @@
       "label-nl": {
         "nl": "TODO"
       },
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "",
       "range": [
         {
@@ -1472,9 +1554,90 @@
       ]
     },
     {
-      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "EA-Guid": "{F5C248E9-922C-4ec9-A135-41091D7F5EC0}",
+      "EA-Guid": "{31BB89A9-28F5-443c-904D-ABED867A2D73}",
+      "codelist": [],
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "domain": [
+        {
+          "EA-Name": "Erosiebestrijdingsmaatregelonderdeel",
+          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregelonderdeel"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Erosiebestrijdingsmaatregelonderdeel",
+        "EA-Domain-Guid": "{E4E24EF3-2639-4bde-A122-FDEC049D88E4}",
+        "EA-Guid": "{31BB89A9-28F5-443c-904D-ABED867A2D73}",
+        "EA-Name": "locatie",
+        "EA-Package": "Bodemerosie",
+        "EA-Range": "Locatie",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{FCF68A7F-66EB-447d-B907-B64B950C22D5}",
+          "EA-Name": "Locatie",
+          "EA-Package": "OSLO-Generiek",
+          "uri": "http://www.w3.org/ns/prov#Location"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/ns/prov#atLocation"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "locatie"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "De locatie van het Erosiebestrijdingsmaatregelonderdeel."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": "",
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "equivalent": "",
+        "label": "",
+        "label-en": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "",
+      "range": [
+        {
+          "EA-GUID": "{FCF68A7F-66EB-447d-B907-B64B950C22D5}",
+          "EA-Name": "Locatie",
+          "EA-Package": "OSLO-Generiek",
+          "uri": "http://www.w3.org/ns/prov#Location"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{44D71A1D-C817-4ed2-8A1F-722E59A4E25F}",
       "codelist": [],
       "definition-nl": {
         "nl": "TODO"
@@ -1488,32 +1651,32 @@
       "extra": {
         "EA-Domain": "Sensor",
         "EA-Domain-Guid": "{6938ABDC-9063-40d3-95E2-61E3B2714784}",
-        "EA-Guid": "{F5C248E9-922C-4ec9-A135-41091D7F5EC0}",
-        "EA-Name": "geometrie",
+        "EA-Guid": "{44D71A1D-C817-4ed2-8A1F-722E59A4E25F}",
+        "EA-Name": "locatie",
         "EA-Package": "SSN/SOSA",
-        "EA-Range": "Geometrie",
+        "EA-Range": "Locatie",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-GUID": "{5720A716-474C-4451-B7ED-50C2423DC51D}",
-          "EA-Name": "Geometrie",
+          "EA-GUID": "{FCF68A7F-66EB-447d-B907-B64B950C22D5}",
+          "EA-Name": "Locatie",
           "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/ns/locn#Geometry"
+          "uri": "http://www.w3.org/ns/prov#Location"
         },
         "RawTags": [
           {
-            "key": "uri",
-            "note": "null",
-            "value": "http://www.w3.org/ns/locn#geometry"
-          },
-          {
             "key": "ap-label-nl",
             "note": "null",
-            "value": "geometrie"
+            "value": "locatie"
           },
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "De geometrie van een Sensor."
+            "value": "De locatie van de Sensor."
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/ns/prov#atLocation"
           }
         ],
         "Scope": "NOTHING",
@@ -1545,10 +1708,10 @@
       "name": "",
       "range": [
         {
-          "EA-GUID": "{5720A716-474C-4451-B7ED-50C2423DC51D}",
-          "EA-Name": "Geometrie",
+          "EA-GUID": "{FCF68A7F-66EB-447d-B907-B64B950C22D5}",
+          "EA-Name": "Locatie",
           "EA-Package": "OSLO-Generiek",
-          "uri": "http://www.w3.org/ns/locn#Geometry"
+          "uri": "http://www.w3.org/ns/prov#Location"
         }
       ]
     },
@@ -1724,12 +1887,12 @@
       },
       "domain": [
         {
-          "EA-Name": "QuantityValue",
+          "EA-Name": "KwantitatieWaarde",
           "uri": "http://qudt.org/schema/qudt/QuantityValue"
         }
       ],
       "extra": {
-        "EA-Domain": "QuantityValue",
+        "EA-Domain": "KwantitatieWaarde",
         "EA-Domain-Guid": "{E9012451-5D5E-4c3a-BE5F-DB8F60F60EBE}",
         "EA-Guid": "{02F04D2E-628B-4e62-A671-B781FF0FB84B}",
         "EA-Name": "eenheid",
@@ -1752,6 +1915,11 @@
             "key": "ap-label-nl",
             "note": "null",
             "value": "eenheid"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
           }
         ],
         "Scope": "NOTHING",
@@ -1792,7 +1960,7 @@
     },
     {
       "@id": "http://qudt.org/schema/qudt/numericValue",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{676C0F9C-6591-4653-A199-B8C5A240E1EE}",
       "codelist": [],
       "definition-nl": {
@@ -1800,22 +1968,23 @@
       },
       "domain": [
         {
-          "EA-Name": "QuantityValue",
+          "EA-Name": "KwantitatieWaarde",
           "uri": "http://qudt.org/schema/qudt/QuantityValue"
         }
       ],
       "extra": {
-        "EA-Domain": "QuantityValue",
+        "EA-Domain": "KwantitatieWaarde",
         "EA-Domain-Guid": "{E9012451-5D5E-4c3a-BE5F-DB8F60F60EBE}",
         "EA-Guid": "{676C0F9C-6591-4653-A199-B8C5A240E1EE}",
         "EA-Name": "numerieke waarde",
         "EA-Package": "QUDT",
-        "EA-Range": "null",
+        "EA-Range": "NumeriekeUnie",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
+          "EA-GUID": "{2609B303-F3AD-48d7-8B1D-C988E453FC51}",
+          "EA-Name": "NumeriekeUnie",
+          "EA-Package": "DTYPE",
+          "uri": "http://www.linkedmodel.org/schema/dtype#numericUnion"
         },
         "RawTags": [
           {
@@ -1827,6 +1996,11 @@
             "key": "ap-label-nl",
             "note": "null",
             "value": "numerieke waarde"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
           }
         ],
         "Scope": "NOTHING",
@@ -1856,7 +2030,14 @@
       "maxCardinality": "1",
       "minCardinality": "1",
       "name": "",
-      "range": []
+      "range": [
+        {
+          "EA-GUID": "{2609B303-F3AD-48d7-8B1D-C988E453FC51}",
+          "EA-Name": "NumeriekeUnie",
+          "EA-Package": "DTYPE",
+          "uri": "http://www.linkedmodel.org/schema/dtype#numericUnion"
+        }
+      ]
     },
     {
       "@id": "http://purl.org/dc/terms/type",
@@ -1896,6 +2077,11 @@
             "key": "ap-label-nl",
             "note": "null",
             "value": "type"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
@@ -1923,7 +2109,7 @@
         "nl": "TODO"
       },
       "maxCardinality": "1",
-      "minCardinality": "1",
+      "minCardinality": "0",
       "name": "",
       "range": [
         {
@@ -1999,7 +2185,7 @@
         "nl": "TODO"
       },
       "maxCardinality": "1",
-      "minCardinality": "1",
+      "minCardinality": "0",
       "name": "",
       "range": [
         {
@@ -2052,7 +2238,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Aard van het Platform."
+            "value": "Classificering van het Platform aan de hand van een gecontroleerde codelijst."
           }
         ],
         "Scope": "NOTHING",
@@ -2080,7 +2266,7 @@
         "nl": "TODO"
       },
       "maxCardinality": "1",
-      "minCardinality": "1",
+      "minCardinality": "0",
       "name": "",
       "range": [
         {
@@ -2113,6 +2299,11 @@
             "value": "NOTE"
           },
           {
+            "key": "ap-definition-nl",
+            "note": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.",
+            "value": "NOTE"
+          },
+          {
             "key": "uri",
             "note": "http://purl.org/dc/terms/isPartOf",
             "value": "NOTE"
@@ -2135,6 +2326,11 @@
           {
             "key": "ap-label-nl",
             "note": "deel van",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.",
             "value": "NOTE"
           },
           {
@@ -2204,6 +2400,11 @@
             "value": "NOTE"
           },
           {
+            "key": "ap-definition-nl",
+            "note": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.",
+            "value": "NOTE"
+          },
+          {
             "key": "uri",
             "note": "http://purl.org/dc/terms/isPartOf",
             "value": "NOTE"
@@ -2226,6 +2427,11 @@
           {
             "key": "ap-label-nl",
             "note": "deel van",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.",
             "value": "NOTE"
           },
           {
@@ -2375,13 +2581,13 @@
       },
       "extra": {
         "EA-Guid": "{E9012451-5D5E-4c3a-BE5F-DB8F60F60EBE}",
-        "EA-Name": "QuantityValue",
+        "EA-Name": "KwantitatieWaarde",
         "EA-Package": "QUDT",
-        "EA-Parents": "Result",
+        "EA-Parents": "Resultaat",
         "EA-Parents2": [
           {
             "label": "",
-            "name": "Result",
+            "name": "Resultaat",
             "package": "SSN/SOSA",
             "uri": "http://www.w3.org/ns/sosa/Result"
           }
@@ -2552,6 +2758,63 @@
       "name": ""
     },
     {
+      "@id": "http://www.w3.org/ns/sosa/ObservableProperty",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "extra": {
+        "EA-Guid": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
+        "EA-Name": "GeobserveerdKenmerk",
+        "EA-Package": "SSN/SOSA",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/ns/sosa/ObservableProperty"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "Geobserveerd Kenmerk"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan zonder de entiteit."
+          }
+        ],
+        "Scope": "NOTHING",
+        "definition": "",
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "equivalent": "",
+        "label": "",
+        "label-en": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "name": ""
+    },
+    {
       "@id": "http://www.w3.org/ns/sosa/Observation",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
@@ -2560,7 +2823,7 @@
       },
       "extra": {
         "EA-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
-        "EA-Name": "Observation",
+        "EA-Name": "Observatie",
         "EA-Package": "SSN/SOSA",
         "EA-Parents": "",
         "EA-Parents2": [
@@ -2696,7 +2959,7 @@
       },
       "extra": {
         "EA-Guid": "{051B5FFC-0DAD-4f98-8B60-BB23B66172D3}",
-        "EA-Name": "Result",
+        "EA-Name": "Resultaat",
         "EA-Package": "SSN/SOSA",
         "EA-Parents": "",
         "EA-Parents2": [],
@@ -2828,63 +3091,6 @@
         "nl": "Sensor"
       },
       "name": "Sensor"
-    },
-    {
-      "@id": "http://www.w3.org/ns/ssn/Property",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "EA-Guid": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Guid": "{3902120C-3FCD-44da-AE40-0AFA291F8B08}",
-        "EA-Name": "Property",
-        "EA-Package": "SSN/SOSA",
-        "EA-Parents": "",
-        "EA-Parents2": [],
-        "EA-Type": "CLASS",
-        "RawTags": [
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "http://www.w3.org/ns/ssn/Property"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "Kenmerk"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan ??zonder de entiteit."
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": "",
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "equivalent": "",
-        "label": "",
-        "label-en": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "parentclasses": "",
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "name": ""
     },
     {
       "@id": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
@@ -3330,11 +3536,11 @@
         "EA-Guid": "{874A28C4-FC97-439b-AE14-03CC90A7BD16}",
         "EA-Name": "maxVolume",
         "EA-Package": "Bodemerosie",
-        "EA-Range": "QuantityValue",
+        "EA-Range": "KwantitatieWaarde",
         "EA-Type": "attribute",
         "RangeData": {
           "EA-GUID": "{E9012451-5D5E-4c3a-BE5F-DB8F60F60EBE}",
-          "EA-Name": "QuantityValue",
+          "EA-Name": "KwantitatieWaarde",
           "EA-Package": "QUDT",
           "uri": "http://qudt.org/schema/qudt/QuantityValue"
         },
@@ -3392,7 +3598,7 @@
       "range": [
         {
           "EA-GUID": "{E9012451-5D5E-4c3a-BE5F-DB8F60F60EBE}",
-          "EA-Name": "QuantityValue",
+          "EA-Name": "KwantitatieWaarde",
           "EA-Package": "QUDT",
           "uri": "http://qudt.org/schema/qudt/QuantityValue"
         }
@@ -3696,7 +3902,7 @@
   "title-nl": {
     "nl": "TODO"
   },
-  "toolchaincommit": "b27ed49ff2d5b1fbf54da9ad1b3a63142730dd18",
+  "toolchaincommit": "825be4f5edcfd9dda9d7aa866143f675e92adebd",
   "translation": [
     {
       "language": "nl",

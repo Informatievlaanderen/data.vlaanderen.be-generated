@@ -1,16 +1,15 @@
 {
   "@context": {
     "Actuatie": "http://www.w3.org/ns/sosa/Actuation",
-    "Actuatie.gemaaktDoor": {
-      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
-      "@type": "@id"
-    },
     "Actuatie.heeftSimpelResultaat": {
       "@id": "http://www.w3.org/ns/sosa/hasSimpleResult"
     },
     "Actuatie.object": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Actuatie.uitgevoerdDoor": {
+      "@id": "http://www.w3.org/ns/sosa/madeByActuator",
       "@type": "@id"
     },
     "Erosiebestrijdingsmaatregel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel",
@@ -55,6 +54,10 @@
       "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "@id"
     },
+    "Erosiebestrijdingsmaatregelonderdeel.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
     "Erosiebestrijdingsmaatregelonderdeel.type": {
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
@@ -68,34 +71,32 @@
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
       "@type": "@id"
     },
+    "GeobserveerdKenmerk": "http://www.w3.org/ns/sosa/ObservableProperty",
     "Graszone": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
-    "Kenmerk": "http://www.w3.org/ns/ssn/Property",
     "KwantitatieveWaarde": "http://qudt.org/schema/qudt/QuantityValue",
     "KwantitatieveWaarde.eenheid": {
       "@id": "http://qudt.org/schema/qudt/unit",
       "@type": "@id"
     },
     "KwantitatieveWaarde.numeriekeWaarde": {
-      "@id": "http://qudt.org/schema/qudt/numericValue"
+      "@id": "http://qudt.org/schema/qudt/numericValue",
+      "@type": "@id"
     },
     "Object": "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "Observatie": "http://www.w3.org/ns/sosa/Observation",
-    "Observatie.gemaaktDoorSensor": {
+    "Observatie.gedaanDoor": {
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
       "@type": "@id"
     },
     "Observatie.geobserveerdKenmerk": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/sosa/observedProperty",
       "@type": "@id"
     },
     "Observatie.heeftResultaat": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/sosa/hasResult",
       "@type": "@id"
     },
     "Observatie.object": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
@@ -116,13 +117,12 @@
     },
     "Resultaat": "http://www.w3.org/ns/sosa/Result",
     "Sensor": "http://www.w3.org/ns/sosa/Sensor",
-    "Sensor.geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
+    "Sensor.isHostedBy": {
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
       "@type": "@id"
     },
-    "Sensor.isHostedBy": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+    "Sensor.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "@id"
     },
     "Zone": "https://test.data.vlaanderen.be/ns/bodemerosie#Zone",

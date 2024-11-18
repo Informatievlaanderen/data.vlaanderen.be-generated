@@ -132,8 +132,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/e24a6024ae53d33492772acc177c9bf72fffef48">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/e24a6024ae53d33492772acc177c9bf72fffef48</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/e24a6024ae53d33492772acc177c9bf72fffef48/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/e24a6024ae53d33492772acc177c9bf72fffef48/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/0e69a8de24c91aeb507e1efe40de85acaac0bc4f">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/0e69a8de24c91aeb507e1efe40de85acaac0bc4f</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/0e69a8de24c91aeb507e1efe40de85acaac0bc4f/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/0e69a8de24c91aeb507e1efe40de85acaac0bc4f/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html</a></dd>
 
@@ -208,8 +208,8 @@
                       <a href="#Erosiebestrijdingsmaatregel">Erosiebestrijdingsmaatregel</a> |
                       <a href="#Erosiebestrijdingsmaatregelonderdeel">Erosiebestrijdingsmaatregelonderdeel</a> |
                       <a href="#Erosiepoel">Erosiepoel</a> |
+                      <a href="#GeobserveerdKenmerk">Geobserveerd Kenmerk</a> |
                       <a href="#Graszone">Graszone</a> |
-                      <a href="#Kenmerk">Kenmerk</a> |
                       <a href="#KwantitatieveWaarde">Kwantitatieve Waarde</a> |
                       <a href="#Object">Object</a> |
                       <a href="#Observatie">Observatie</a> |
@@ -249,9 +249,9 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Actuatie%3AgemaaktDoor">gemaakt door</a>, 
                       <a href="#Actuatie%3AheeftSimpelResultaat">heeft simpel resultaat</a>, 
-                      <a href="#Actuatie%3Aobject">object</a>.</dd>
+                      <a href="#Actuatie%3Aobject">object</a>, 
+                      <a href="#Actuatie%3AuitgevoerdDoor">uitgevoerd door</a>.</dd>
                     
                   </dl>
                 </div>
@@ -270,26 +270,6 @@
                     </thead>
 
                     <tbody class="supertype">
-                    
-                      <tr id="Actuatie%3AgemaaktDoor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeByActuator">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/sosa/madeByActuator" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/madeByActuator" data-placement="right">
-                            gemaakt door</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a>
-                            
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment"></td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
                     
                       <tr id="Actuatie%3AheeftSimpelResultaat" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/hasSimpleResult">
                         <td>
@@ -321,8 +301,28 @@
 			    
                           
                         </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het object waarop de Actuatie is uitgevoerd.</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
-                        <td property="rdfs:comment"></td>
+                      </tr>
+                    
+                      <tr id="Actuatie%3AuitgevoerdDoor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeByActuator">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/sosa/madeByActuator" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/madeByActuator" data-placement="right">
+                            uitgevoerd door</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a>
+                            
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De Agent die de Actuatie heeft uitgevoerd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -449,7 +449,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">De onderdelen waaruit een Erosiebestrijdingsmaatregel bestaat.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -555,6 +555,7 @@
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Erosiebestrijdingsmaatregelonderdeel%3AdeelVan">deel van</a>, 
+                      <a href="#Erosiebestrijdingsmaatregelonderdeel%3Alocatie">locatie</a>, 
                       <a href="#Erosiebestrijdingsmaatregelonderdeel%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -590,7 +591,27 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Erosiebestrijdingsmaatregelonderdeel%3Alocatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atLocation">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#atLocation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atLocation" data-placement="right">
+                            locatie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/ns/prov#Location" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Location" data-placement="right">Locatie</a>
+                            
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">De locatie van het Erosiebestrijdingsmaatregelonderdeel.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -609,7 +630,7 @@
                             
                           
                         </td>
-                        <td>1</td>
+                        <td>0..1</td>
                         <td property="rdfs:comment"></td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -703,16 +724,12 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Graszone"><a href="https://test.data.vlaanderen.be/ns/bodemerosie#Graszone" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/bodemerosie#Graszone" data-placement="right">Graszone</a></h3>
+              <h3 class="h3" id="GeobserveerdKenmerk"><a href="http://www.w3.org/ns/sosa/ObservableProperty" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/ObservableProperty" data-placement="right">Geobserveerd Kenmerk</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een zone met gras om bodemerosie te bestrijden.</dd>
+                    <dt>Beschrijving</dt><dd>Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan zonder de entiteit.</dd>
                     
-		     
-		    <dt>Subklasse van <dt><dd>
-                        <a href="#Erosiebestrijdingsmaatregel">Erosiebestrijdingsmaatregel</a>
-		   </dd>
-                    
+		    
                     <dt>Eigenschappen</dt>
 		    
                     <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
@@ -723,12 +740,16 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Kenmerk"><a href="http://www.w3.org/ns/ssn/Property" data-toggle="tooltip" data-content="http://www.w3.org/ns/ssn/Property" data-placement="right">Kenmerk</a></h3>
+              <h3 class="h3" id="Graszone"><a href="https://test.data.vlaanderen.be/ns/bodemerosie#Graszone" data-toggle="tooltip" data-content="https://test.data.vlaanderen.be/ns/bodemerosie#Graszone" data-placement="right">Graszone</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan ??zonder de entiteit.</dd>
+                    <dt>Beschrijving</dt><dd>Een zone met gras om bodemerosie te bestrijden.</dd>
                     
-		    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#Erosiebestrijdingsmaatregel">Erosiebestrijdingsmaatregel</a>
+		   </dd>
+                    
                     <dt>Eigenschappen</dt>
 		    
                     <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
@@ -788,7 +809,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -802,9 +823,13 @@
                         </td>
                         <td>
                           
+			     
+			    <a href="http://www.linkedmodel.org/schema/dtype#numericUnion" data-toggle="tooltip" data-content="http://www.linkedmodel.org/schema/dtype#numericUnion" data-placement="right">NumeriekeUnie</a>
+                            
+                          
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -845,7 +870,7 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Observatie%3AgemaaktDoorSensor">gemaakt door sensor</a>, 
+                      <a href="#Observatie%3AgedaanDoor">gedaan door</a>, 
                       <a href="#Observatie%3AgeobserveerdKenmerk">geobserveerd kenmerk</a>, 
                       <a href="#Observatie%3AheeftResultaat">heeft resultaat</a>, 
                       <a href="#Observatie%3Aobject">object</a>.</dd>
@@ -868,11 +893,11 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Observatie%3AgemaaktDoorSensor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeBySensor">
+                      <tr id="Observatie%3AgedaanDoor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeBySensor">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/sosa/madeBySensor" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/madeBySensor" data-placement="right">
-                            gemaakt door sensor</a>
+                            gedaan door</a>
                           </code>
                         </td>
                         <td>
@@ -883,7 +908,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">De Sensor die de Observatie heeft gedaan.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -898,12 +923,12 @@
                         <td>
                           
 			    
-			    <a href="#Kenmerk" data-placement="right">Kenmerk</a>
+			    <a href="#Geobserveerd Kenmerk" data-placement="right">Geobserveerd Kenmerk</a>
 			    
                           
                         </td>
-                        <td></td>
-                        <td property="rdfs:comment"></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Kenmerk dat geobserveerd werd tijdens de Observatie.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -922,8 +947,8 @@
 			    
                           
                         </td>
-                        <td></td>
-                        <td property="rdfs:comment"></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het resultaat van de Observatie.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -942,8 +967,8 @@
 			    
                           
                         </td>
-                        <td></td>
-                        <td property="rdfs:comment"></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Het Object waarop de observatie is uitgevoegd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1002,8 +1027,8 @@
                             
                           
                         </td>
-                        <td>1</td>
-                        <td property="rdfs:comment"></td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1062,7 +1087,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment"></td>
+                        <td property="rdfs:comment">De Sensor die het Platform bevat.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1081,8 +1106,8 @@
                             
                           
                         </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Aard van het Platform.</td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">Classificering van het Platform aan de hand van een gecontroleerde codelijst.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1126,8 +1151,8 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Sensor%3Ageometrie">geometrie</a>, 
-                      <a href="#Sensor%3AisHostedBy">is hosted by</a>.</dd>
+                      <a href="#Sensor%3AisHostedBy">is hosted by</a>, 
+                      <a href="#Sensor%3Alocatie">locatie</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1147,26 +1172,6 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Sensor%3Ageometrie" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geometry">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/locn#geometry" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#geometry" data-placement="right">
-                            geometrie</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/ns/locn#Geometry" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#Geometry" data-placement="right">Geometrie</a>
-                            
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">De geometrie van een Sensor.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Sensor%3AisHostedBy" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/isHostedBy">
                         <td>
                           <code property="rdfs:label">
@@ -1181,8 +1186,28 @@
 			    
                           
                         </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">Het Platform waarop de Sensor zit.</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
-                        <td property="rdfs:comment"></td>
+                      </tr>
+                    
+                      <tr id="Sensor%3Alocatie" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#atLocation">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/prov#atLocation" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#atLocation" data-placement="right">
+                            locatie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/ns/prov#Location" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Location" data-placement="right">Locatie</a>
+                            
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">De locatie van de Sensor.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>

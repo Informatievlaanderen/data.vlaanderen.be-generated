@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/e24a6024ae53d33492772acc177c9bf72fffef48",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/e24a6024ae53d33492772acc177c9bf72fffef48/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/0e69a8de24c91aeb507e1efe40de85acaac0bc4f",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/0e69a8de24c91aeb507e1efe40de85acaac0bc4f/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -340,7 +340,9 @@
           "label": {
             "nl": "bestaat uit"
           },
-          "description": {},
+          "description": {
+            "nl": "De onderdelen waaruit een Erosiebestrijdingsmaatregel bestaat."
+          },
           "usage": {},
           "domain": [
             {
@@ -367,6 +369,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "bestaat uit",
+            "ap-definition-nl": "De onderdelen waaruit een Erosiebestrijdingsmaatregel bestaat.",
             "uri": "http://purl.org/dc/terms/hasPart"
           }
         }
@@ -395,6 +398,46 @@
         "name": "Erosiebestrijdingsmaatregelonderdeel"
       },
       "properties": [
+        {
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "locatie",
+          "sort": "locatie",
+          "label": {
+            "nl": "locatie"
+          },
+          "description": {
+            "nl": "De locatie van het Erosiebestrijdingsmaatregelonderdeel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Erosiebestrijdingsmaatregelonderdeel",
+              "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregelonderdeel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#atLocation",
+            "ap-label-nl": "locatie",
+            "ap-definition-nl": "De locatie van het Erosiebestrijdingsmaatregelonderdeel."
+          }
+        },
         {
           "uri": "http://purl.org/dc/terms/type",
           "name": "type",
@@ -425,7 +468,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "type",
@@ -439,7 +482,9 @@
           "label": {
             "nl": "deel van"
           },
-          "description": {},
+          "description": {
+            "nl": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort."
+          },
           "usage": {},
           "domain": [
             {
@@ -466,6 +511,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "deel van",
+            "ap-definition-nl": "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort.",
             "uri": "http://purl.org/dc/terms/isPartOf"
           }
         }
@@ -561,7 +607,7 @@
           ],
           "range": [
             {
-              "range_label": "QuantityValue",
+              "range_label": "KwantitatieWaarde",
               "range_uri": "http://qudt.org/schema/qudt/QuantityValue"
             }
           ],
@@ -775,7 +821,7 @@
       "parents": [
         {
           "label": "Resultaat",
-          "name": "Result",
+          "name": "Resultaat",
           "package": "SSN/SOSA",
           "uri": "http://www.w3.org/ns/sosa/Result",
           "scoped_uri": "#Resultaat"
@@ -794,11 +840,13 @@
           "label": {
             "nl": "eenheid"
           },
-          "description": {},
+          "description": {
+            "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "QuantityValue",
+              "EA-Name": "KwantitatieWaarde",
               "uri": "http://qudt.org/schema/qudt/QuantityValue"
             }
           ],
@@ -821,7 +869,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://qudt.org/schema/qudt/unit",
-            "ap-label-nl": "eenheid"
+            "ap-label-nl": "eenheid",
+            "ap-definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
           }
         },
         {
@@ -831,21 +880,37 @@
           "label": {
             "nl": "numerieke waarde"
           },
-          "description": {},
+          "description": {
+            "nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "QuantityValue",
+              "EA-Name": "KwantitatieWaarde",
               "uri": "http://qudt.org/schema/qudt/QuantityValue"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "NumeriekeUnie",
+              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+              "range_puri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+              "range_label": {
+                "nl": "NumeriekeUnie"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://qudt.org/schema/qudt/numericValue",
-            "ap-label-nl": "numerieke waarde"
+            "ap-label-nl": "numerieke waarde",
+            "ap-definition-nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
           }
         }
       ]
@@ -875,12 +940,14 @@
       "properties": [
         {
           "uri": "http://www.w3.org/ns/sosa/madeByActuator",
-          "name": "gemaaktDoor",
-          "sort": "gemaakt door",
+          "name": "uitgevoerdDoor",
+          "sort": "uitgevoerd door",
           "label": {
-            "nl": "gemaakt door"
+            "nl": "uitgevoerd door"
           },
-          "description": {},
+          "description": {
+            "nl": "De Agent die de Actuatie heeft uitgevoerd."
+          },
           "usage": {},
           "domain": [
             {
@@ -908,7 +975,8 @@
           "rawTags": {
             "uri": "http://www.w3.org/ns/sosa/madeByActuator",
             "ap-label-en": "made by actuator",
-            "ap-label-nl": "gemaakt door"
+            "ap-label-nl": "uitgevoerd door",
+            "ap-definition-nl": "De Agent die de Actuatie heeft uitgevoerd."
           }
         },
         {
@@ -942,7 +1010,9 @@
           "label": {
             "nl": "object"
           },
-          "description": {},
+          "description": {
+            "nl": "Het object waarop de Actuatie is uitgevoerd."
+          },
           "usage": {},
           "domain": [
             {
@@ -965,11 +1035,12 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-            "ap-label-nl": "object"
+            "ap-label-nl": "object",
+            "ap-definition-nl": "Het object waarop de Actuatie is uitgevoerd."
           }
         }
       ]
@@ -991,6 +1062,25 @@
         "ap-definition-nl": "Het object waarvan de eigenschap wordt geschat of berekend tijdens een observatie om tot een resultaat te komen, of waarvan de eigenschap wordt gemanipuleerd door een actuator, of dat wordt bemonsterd of getransformeerd tijdens een bemonsteringshandeling.",
         "ap-label-nl": "Object",
         "ap-label-en": "Feature of Interest"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/ns/sosa/ObservableProperty",
+      "name": "GeobserveerdKenmerk",
+      "label": {
+        "nl": "Geobserveerd Kenmerk"
+      },
+      "sort": "Geobserveerd Kenmerk",
+      "description": {
+        "nl": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan zonder de entiteit."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "uri": "http://www.w3.org/ns/sosa/ObservableProperty",
+        "ap-label-nl": "Geobserveerd Kenmerk",
+        "ap-definition-nl": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan zonder de entiteit."
       },
       "properties": []
     },
@@ -1027,48 +1117,53 @@
           "label": {
             "nl": "geobserveerd kenmerk"
           },
-          "description": {},
+          "description": {
+            "nl": "Kenmerk dat geobserveerd werd tijdens de Observatie."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Observation",
+              "EA-Name": "Observatie",
               "uri": "http://www.w3.org/ns/sosa/Observation"
             }
           ],
           "range": [
             {
-              "range_label": "Property",
-              "range_uri": "http://www.w3.org/ns/ssn/Property"
+              "range_label": "GeobserveerdKenmerk",
+              "range_uri": "http://www.w3.org/ns/sosa/ObservableProperty"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Kenmerk",
-              "range_puri": "http://www.w3.org/ns/ssn/Property",
+              "range_uri": "#Geobserveerd Kenmerk",
+              "range_puri": "http://www.w3.org/ns/sosa/ObservableProperty",
               "range_label": {
-                "nl": "Kenmerk"
+                "nl": "Geobserveerd Kenmerk"
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "geobserveerd kenmerk",
-            "uri": "http://www.w3.org/ns/sosa/observedProperty"
+            "uri": "http://www.w3.org/ns/sosa/observedProperty",
+            "ap-definition-nl": "Kenmerk dat geobserveerd werd tijdens de Observatie."
           }
         },
         {
           "uri": "http://www.w3.org/ns/sosa/madeBySensor",
-          "name": "gemaaktDoorSensor",
-          "sort": "gemaakt door sensor",
+          "name": "gedaanDoor",
+          "sort": "gedaan door",
           "label": {
-            "nl": "gemaakt door sensor"
+            "nl": "gedaan door"
           },
-          "description": {},
+          "description": {
+            "nl": "De Sensor die de Observatie heeft gedaan."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Observation",
+              "EA-Name": "Observatie",
               "uri": "http://www.w3.org/ns/sosa/Observation"
             }
           ],
@@ -1091,7 +1186,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.w3.org/ns/sosa/madeBySensor",
-            "ap-label-nl": "gemaakt door sensor"
+            "ap-label-nl": "gedaan door",
+            "ap-definition-nl": "De Sensor die de Observatie heeft gedaan."
           }
         },
         {
@@ -1101,17 +1197,19 @@
           "label": {
             "nl": "heeft resultaat"
           },
-          "description": {},
+          "description": {
+            "nl": "Het resultaat van de Observatie."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Observation",
+              "EA-Name": "Observatie",
               "uri": "http://www.w3.org/ns/sosa/Observation"
             }
           ],
           "range": [
             {
-              "range_label": "Result",
+              "range_label": "Resultaat",
               "range_uri": "http://www.w3.org/ns/sosa/Result"
             }
           ],
@@ -1124,11 +1222,12 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.w3.org/ns/sosa/hasResult",
-            "ap-label-nl": "heeft resultaat"
+            "ap-label-nl": "heeft resultaat",
+            "ap-definition-nl": "Het resultaat van de Observatie."
           }
         },
         {
@@ -1138,11 +1237,13 @@
           "label": {
             "nl": "object"
           },
-          "description": {},
+          "description": {
+            "nl": "Het Object waarop de observatie is uitgevoegd."
+          },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Observation",
+              "EA-Name": "Observatie",
               "uri": "http://www.w3.org/ns/sosa/Observation"
             }
           ],
@@ -1161,11 +1262,12 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "object",
-            "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+            "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+            "ap-definition-nl": "Het Object waarop de observatie is uitgevoegd."
           }
         }
       ]
@@ -1199,7 +1301,9 @@
           "label": {
             "nl": "bevat"
           },
-          "description": {},
+          "description": {
+            "nl": "De Sensor die het Platform bevat."
+          },
           "usage": {},
           "domain": [
             {
@@ -1225,6 +1329,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "De Sensor die het Platform bevat.",
             "uri": "http://www.w3.org/ns/sosa/hosts",
             "ap-label-en": "hosts",
             "ap-label-nl": "bevat"
@@ -1238,7 +1343,7 @@
             "nl": "type"
           },
           "description": {
-            "nl": "Aard van het Platform."
+            "nl": "Classificering van het Platform aan de hand van een gecontroleerde codelijst."
           },
           "usage": {},
           "domain": [
@@ -1262,12 +1367,12 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/dc/terms/type",
             "ap-label-nl": "type",
-            "ap-definition-nl": "Aard van het Platform."
+            "ap-definition-nl": "Classificering van het Platform aan de hand van een gecontroleerde codelijst."
           }
         }
       ]
@@ -1335,7 +1440,9 @@
           "label": {
             "nl": "is hosted by"
           },
-          "description": {},
+          "description": {
+            "nl": "Het Platform waarop de Sensor zit."
+          },
           "usage": {},
           "domain": [
             {
@@ -1358,23 +1465,24 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "Het Platform waarop de Sensor zit.",
             "ap-label-nl": "is hosted by",
             "ap-label-en": "is hosted by",
             "uri": "http://www.w3.org/ns/sosa/isHostedBy"
           }
         },
         {
-          "uri": "http://www.w3.org/ns/locn#geometry",
-          "name": "geometrie",
-          "sort": "geometrie",
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "locatie",
+          "sort": "locatie",
           "label": {
-            "nl": "geometrie"
+            "nl": "locatie"
           },
           "description": {
-            "nl": "De geometrie van een Sensor."
+            "nl": "De locatie van de Sensor."
           },
           "usage": {},
           "domain": [
@@ -1385,47 +1493,28 @@
           ],
           "range": [
             {
-              "range_label": "Geometrie",
-              "range_uri": "http://www.w3.org/ns/locn#Geometry"
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/locn#Geometry",
-              "range_puri": "http://www.w3.org/ns/locn#Geometry",
+              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
-                "nl": "Geometrie"
+                "nl": "Locatie"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.w3.org/ns/locn#geometry",
-            "ap-label-nl": "geometrie",
-            "ap-definition-nl": "De geometrie van een Sensor."
+            "ap-label-nl": "locatie",
+            "ap-definition-nl": "De locatie van de Sensor.",
+            "uri": "http://www.w3.org/ns/prov#atLocation"
           }
         }
       ]
-    },
-    {
-      "uri": "http://www.w3.org/ns/ssn/Property",
-      "name": "Kenmerk",
-      "label": {
-        "nl": "Kenmerk"
-      },
-      "sort": "Kenmerk",
-      "description": {
-        "nl": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan ??zonder de entiteit."
-      },
-      "usage": {},
-      "parents": [],
-      "rawTags": {
-        "uri": "http://www.w3.org/ns/ssn/Property",
-        "ap-label-nl": "Kenmerk",
-        "ap-definition-nl": "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan ??zonder de entiteit."
-      },
-      "properties": []
     },
     {
       "uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
@@ -1462,7 +1551,9 @@
           "label": {
             "nl": "type"
           },
-          "description": {},
+          "description": {
+            "nl": "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."
+          },
           "usage": {},
           "domain": [
             {
@@ -1485,11 +1576,12 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/dc/terms/type",
-            "ap-label-nl": "type"
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."
           }
         }
       ]
