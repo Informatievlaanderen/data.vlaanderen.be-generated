@@ -49,7 +49,9 @@
   ],
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-11-13"
+  },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-11-13",
   "classes": [
@@ -93,10 +95,10 @@
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "Groeps Aanbod"
+        "nl": "Groepsaanbod"
       },
       "definition": {
         "nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen."
@@ -126,9 +128,6 @@
       },
       "definition": {
         "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
-      },
-      "usage": {
-        "nl": "Dit is de aanbodverstrekker, zoals een Centrum voor Volwassenenonderwijs."
       },
       "parents": [
         "http://www.w3.org/ns/prov#Agent"
@@ -183,7 +182,7 @@
         "nl": "VTE Gebruik"
       },
       "definition": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod. Dit gaat over de gebudgetteerde inzit en niet de effectieve inzet."
+        "nl": "Hoeveelheid voltijdse equivalenten die aan een bepaalde taak of functie zijn toegewezen."
       },
       "parents": [
         "http://www.w3.org/ns/prov#Usage"
@@ -192,9 +191,7 @@
   ],
   "externals": [
     {
-      "name": {
-        "nl": "Financieringsbron"
-      },
+      "name": {},
       "@id": "http://purl.org/dc/terms/Agent",
       "@type": "rdfs:Class"
     },
@@ -288,9 +285,7 @@
       "@type": "rdfs:Class"
     },
     {
-      "name": {
-        "nl": "Financiering"
-      },
+      "name": {},
       "@id": "https://schema.org/MonetaryGrant",
       "@type": "rdfs:Class"
     },
@@ -318,7 +313,7 @@
         "nl": "subcategorie"
       },
       "definition": {
-        "nl": "Subcategorie van het Aanbod."
+        "nl": "Specifieke groep binnen een bredere categorie die bepaalde gemeenschappelijke kenmerken of eigenschappen deelt."
       },
       "domain": [
         "https://schema.org/Service"
@@ -352,7 +347,7 @@
         "nl": "karakter"
       },
       "definition": {
-        "nl": "Hoe vaak de financiering gebeurt. Bijvoorbeeld eenmalig of structureel."
+        "nl": "Aard van de Financiering, bijvoorbeeld structureel of niet-structureel."
       },
       "domain": [
         "https://schema.org/MonetaryGrant"
@@ -403,7 +398,7 @@
         "nl": "beleidsniveau"
       },
       "definition": {
-        "nl": "Beleidsniveau van de Financieringsbron, zoals bijvoorbeeld Vlaams of federaal."
+        "nl": "Specifieke laag binnen een organisatie of overheid waar beleid wordt ontwikkeld, vastgesteld en uitgevoerd."
       },
       "domain": [
         "http://purl.org/dc/terms/Agent"
@@ -420,7 +415,7 @@
         "nl": "beleidsdomein"
       },
       "definition": {
-        "nl": "Domein waarin de Agent actief is."
+        "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
       },
       "domain": [
         "http://purl.org/dc/terms/Agent"
@@ -437,7 +432,7 @@
         "nl": "beleidsdomein"
       },
       "definition": {
-        "nl": "Een domein waartoe het Aanbod behoort in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
+        "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
       },
       "domain": [
         "https://schema.org/Service"
@@ -454,7 +449,7 @@
         "nl": "beleidsdomein"
       },
       "definition": {
-        "nl": "Een domein waartoe de activiteiten van de Realisator behoren in het kader van een specifiek beleid, zoals bijvoorbeeld cultuur of onderwijs."
+        "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
       },
       "domain": [
         "http://www.w3.org/ns/prov#Agent"
@@ -482,6 +477,26 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aantal personen"
+      },
+      "definition": {
+        "nl": "Aantal personen die de VTE´s uitvoeren."
+      },
+      "usage": {
+        "nl": "Dit zegt niet over de verdeling van de VTE´s tussen deze personen."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantal",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
@@ -499,6 +514,23 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "geplande VTE"
+      },
+      "definition": {
+        "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
+      },
+      "domain": [
+        "https://www.w3.org/ns/prov#Activity"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod.minAantalDeelnemers",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
@@ -508,7 +540,7 @@
         "nl": "Minimaal aantal personen die deelnemen voor een GroepsAanbod kan plaatsvinden."
       },
       "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -604,6 +636,23 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aantal deelnames"
+      },
+      "definition": {
+        "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
+      },
+      "domain": [
+        "https://schema.org/Event"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
@@ -678,9 +727,7 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "gerealiseerd door"
-      },
+      "name": {},
       "@id": "https://schema.org/provider",
       "@type": "rdf:Property"
     },
@@ -776,9 +823,7 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {
-        "nl": "bedrag"
-      },
+      "name": {},
       "@id": "http://qudt.org/schema/qudt/hasQuantity",
       "@type": "rdf:Property"
     },
@@ -791,7 +836,7 @@
     },
     {
       "name": {
-        "nl": "kenmerktype"
+        "nl": "type"
       },
       "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"

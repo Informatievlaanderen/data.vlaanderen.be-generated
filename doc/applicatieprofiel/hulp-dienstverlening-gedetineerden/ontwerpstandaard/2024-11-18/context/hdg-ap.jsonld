@@ -1,0 +1,382 @@
+{
+  "@context": {
+    "Aanbod": "https://schema.org/Service",
+    "Aanbod.activiteit": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#activiteit",
+      "@type": "@id"
+    },
+    "Aanbod.beleidsdomein": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+      "@type": "@id"
+    },
+    "Aanbod.beschrijving": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Aanbod.beïnvloedDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasInfluencedBy",
+      "@type": "@id"
+    },
+    "Aanbod.categorie": {
+      "@id": "https://schema.org/category",
+      "@type": "@id"
+    },
+    "Aanbod.doelgroep": {
+      "@container": "@set",
+      "@id": "https://schema.org/audience",
+      "@type": "@id"
+    },
+    "Aanbod.gerealiseerdDoor": {
+      "@container": "@set",
+      "@id": "https://schema.org/provider",
+      "@type": "@id"
+    },
+    "Aanbod.infrastructuur": {
+      "@id": "https://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Aanbod.intake": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Aanbod.maximumAantalDeelnemers": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod.maxAantalDeelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Aanbod.medium": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
+      "@type": "@id"
+    },
+    "Aanbod.naam": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Aanbod.participatiegraad": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad",
+      "@type": "@id"
+    },
+    "Aanbod.subcategorie": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#subcategorie",
+      "@type": "@id"
+    },
+    "Aanbod.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language"
+    },
+    "Activiteit": "https://schema.org/Event",
+    "Activiteit.aanbod": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aanbod",
+      "@type": "@id"
+    },
+    "Activiteit.aantalAanmeldingen": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.aantalDeelnames": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.aantalInschrijvingen": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Activiteit.annulatieReden": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.annulatieReden",
+      "@type": "@id"
+    },
+    "Activiteit.infrastructuur": {
+      "@id": "https://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Activiteit.naam": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Activiteit.status": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "Activiteit.subactiviteit": {
+      "@container": "@set",
+      "@id": "https://schema.org/subEvent",
+      "@type": "@id"
+    },
+    "Activiteit.superactiviteit": {
+      "@id": "https://schema.org/superEvent",
+      "@type": "@id"
+    },
+    "Activiteit.tijdschema": {
+      "@id": "https://schema.org/eventSchedule",
+      "@type": "@id"
+    },
+    "Activiteit.vervangenDoor": {
+      "@id": "http://purl.org/dc/terms/isReplacedBy",
+      "@type": "@id"
+    },
+    "Activiteit.vervangt": {
+      "@id": "http://purl.org/dc/terms/replaces",
+      "@type": "@id"
+    },
+    "ActiviteitStatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "AnnulatieReden": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beleidsdomein": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beleidsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Binnenruimte": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte",
+    "Binnenruimte.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Categorie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DetentiehuisVestiging": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DetentiehuisVestiging",
+    "Doelgroep": "https://schema.org/Audience",
+    "Doelgroep.kenmerk": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk",
+    "DoelgroepKenmerk.deelVan": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "DoelgroepKenmerk.waarde": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk.waarde",
+      "@type": "@id"
+    },
+    "Faciliteit": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit",
+    "Faciliteit.beschrijving": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Faciliteit.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Financiering": "https://schema.org/MonetaryGrant",
+    "Financiering.bedrag": {
+      "@id": "http://qudt.org/schema/qudt/hasQuantity",
+      "@type": "@id"
+    },
+    "Financiering.financieringstype": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Financiering.financiert": {
+      "@container": "@set",
+      "@id": "https://schema.org/fundedItem",
+      "@type": "@id"
+    },
+    "Financiering.gefinancierdDoor": {
+      "@id": "https://schema.org/funder",
+      "@type": "@id"
+    },
+    "Financiering.karakter": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#karakter",
+      "@type": "@id"
+    },
+    "Financiering.uitbetalingEinde": {
+      "@id": "http://www.w3.org/ns/prov#endedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Financiering.uitbetalingStart": {
+      "@id": "http://www.w3.org/ns/prov#startedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Financieringsbron": "http://purl.org/dc/terms/Agent",
+    "Financieringsbron.beleidsdomein": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+      "@type": "@id"
+    },
+    "Financieringsbron.beleidsniveau": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsniveau",
+      "@type": "@id"
+    },
+    "Financieringsbron.financiert": {
+      "@container": "@set",
+      "@id": "http://purl.org/cerif/frapo/funds",
+      "@type": "@id"
+    },
+    "Financieringskarakter": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Financieringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GevangenisVestiging": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GevangenisVestiging",
+    "Groepsaanbod": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
+    "Groepsaanbod.minimumAantalDeelnemers": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GroepsAanbod.minAantalDeelnemers",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IndividueelAanbod": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod",
+    "Infrastructuur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+    "Infrastructuur.beschrijving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschrijving",
+      "@type": "@id"
+    },
+    "Infrastructuur.capaciteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit",
+      "@type": "@id"
+    },
+    "Infrastructuur.effectievePopulatie": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#effectievePopulatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Infrastructuur.faciliteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.faciliteit",
+      "@type": "@id"
+    },
+    "Infrastructuur.naam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Infrastructuur.subinfrastructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.subinfrastructuur",
+      "@type": "@id"
+    },
+    "Infrastructuur.superinfrastructuur": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.superinfrastructuur",
+      "@type": "@id"
+    },
+    "Infrastructuur.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+      "@type": "@id"
+    },
+    "Infrastructuurtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KwantitatieveWaarde": "http://qudt.org/schema/qudt/QuantityValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "http://fixme.com#eenheid",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.numerieke waarde": {
+      "@id": "http://fixme.com#numerieke waarde",
+      "@type": "@id"
+    },
+    "Medium": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatie": "http://www.w3.org/ns/sosa/Observation",
+    "Observatie.einde": {
+      "@id": "http://www.w3.org/ns/prov#endedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Observatie.geobserveerd kenmerk": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.heeftResultaat": {
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "Observatie.start": {
+      "@id": "http://www.w3.org/ns/prov#startedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Observatie.vestiging": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "ObserveerbaarKenmerk": "http://www.w3.org/ns/sosa/ObservableProperty",
+    "ObserveerbaarKenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Organisator": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Organisator",
+    "Populatiekenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Realisatie": "https://www.w3.org/ns/prov#Activity",
+    "Realisatie.beïnvloedt": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#influenced",
+      "@type": "@id"
+    },
+    "Realisatie.gebruikteVte": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#qualifiedUsage",
+      "@type": "@id"
+    },
+    "Realisatie.geplandeVte": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
+      "@type": "@id"
+    },
+    "Realisatie.gerealiseerdDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "@type": "@id"
+    },
+    "Realisatie.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Realisatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Realisatietype": "https://www.w3.org/2004/02/skos/core#Concept",
+    "Realisator": "http://www.w3.org/ns/prov#Agent",
+    "Realisator.beleidsdomein": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+      "@type": "@id"
+    },
+    "Realisator.gefinancierdDoor": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GefinancierdDoor",
+      "@type": "@id"
+    },
+    "Realisator.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.realisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasAssociateFor",
+      "@type": "@id"
+    },
+    "Realisator.realiseert": {
+      "@container": "@set",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
+      "@type": "@id"
+    },
+    "Sessie": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
+    "Sessiereeks": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks",
+    "Subcategorie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Uitvoerder": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Uitvoerder",
+    "Vestiging": "http://www.w3.org/ns/org#Site",
+    "Vestiging.vestigingsadres": {
+      "@id": "http://www.w3.org/ns/org#siteAddress",
+      "@type": "@id"
+    },
+    "VteGebruik": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
+    "VteGebruik.aantal": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantal",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "VteGebruik.aantalPersonen": {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "VteGebruik.realisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#qualifiedUsingActivity",
+      "@type": "@id"
+    },
+    "VteGebruik.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "VteType": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
+}
