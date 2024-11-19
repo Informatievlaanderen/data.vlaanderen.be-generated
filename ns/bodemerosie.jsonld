@@ -74,6 +74,9 @@
       "label": {
         "nl": "Erosiebestrijdingsmaatregelonderdeel"
       },
+      "definition": {
+        "nl": "Deel van een Erosiebestrijdingsmaatregel."
+      },
       "parents": [
         "http://www.w3.org/ns/sosa/Platform"
       ]
@@ -128,23 +131,6 @@
     }
   ],
   "properties": [
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "onderhoud"
-      },
-      "definition": {
-        "nl": "De onderhouden die gebeurd zijn voor een Erosiebestrijding."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-      ],
-      "generalization": []
-    },
     {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#dimensie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -223,13 +209,30 @@
         "nl": "verantwoordelijke"
       },
       "definition": {
-        "nl": "De verantwoordelijke van een Erosiebestrijding."
+        "nl": "De verantwoordelijke van een Erosiebestrijdingsmaatregel."
       },
       "domain": [
         "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "onderhoud"
+      },
+      "definition": {
+        "nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/generiek#Onderhoud"
       ],
       "generalization": []
     },

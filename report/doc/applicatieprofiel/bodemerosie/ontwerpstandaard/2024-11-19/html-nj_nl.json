@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/59092c1f00c765c2ea915499bda116dbe75ba83f",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/59092c1f00c765c2ea915499bda116dbe75ba83f/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/724b2bb3e03a65967ebea8d2d7bed2e1ab0c64d0",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/724b2bb3e03a65967ebea8d2d7bed2e1ab0c64d0/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -48,47 +48,6 @@
         "definition-nl": "Werken of natuurlijke elementen die bodemerosie bestrijden, zoals erosiepoelen en graszones."
       },
       "properties": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
-          "name": "onderhoud",
-          "sort": "onderhoud",
-          "label": {
-            "nl": "onderhoud"
-          },
-          "description": {
-            "nl": "De onderhouden die gebeurd zijn voor een Erosiebestrijding."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Erosiebestrijdingsmaatregel",
-              "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Onderhoud",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Onderhoud",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
-              "range_label": {
-                "nl": "Onderhoud"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "onderhoud",
-            "ap-label-nl": "onderhoud",
-            "definition-nl": "De onderhouden die gebeurd zijn voor een Erosiebestrijding.",
-            "ap-definition-nl": "De onderhouden die gebeurd zijn voor een Erosiebestrijding."
-          }
-        },
         {
           "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
           "name": "afvoerzone",
@@ -138,7 +97,7 @@
             "nl": "verantwoordelijke"
           },
           "description": {
-            "nl": "De verantwoordelijke van een Erosiebestrijding."
+            "nl": "De verantwoordelijke van een Erosiebestrijdingsmaatregel."
           },
           "usage": {},
           "domain": [
@@ -166,10 +125,48 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verantwoordelijke",
-            "ap-label-nl": "verantwoordelijke",
-            "definition-nl": "De verantwoordelijke van een Erosiebestrijding.",
-            "ap-definition-nl": "De verantwoordelijke van een Erosiebestrijding.",
+            "definition-nl": "De verantwoordelijke van een Erosiebestrijdingsmaatregel.",
             "name": "Erosiebestrijdingsmaatregel.verantwoordelijke"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
+          "name": "onderhoud",
+          "sort": "onderhoud",
+          "label": {
+            "nl": "onderhoud"
+          },
+          "description": {
+            "nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Erosiebestrijdingsmaatregel",
+              "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Onderhoud",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Onderhoud",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
+              "range_label": {
+                "nl": "Onderhoud"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "onderhoud",
+            "definition-nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel.",
+            "name": "Erosiebestrijdingsmaatregel.onderhoud"
           }
         },
         {
@@ -382,7 +379,9 @@
         "nl": "Erosiebestrijdingsmaatregelonderdeel"
       },
       "sort": "Erosiebestrijdingsmaatregelonderdeel",
-      "description": {},
+      "description": {
+        "nl": "Deel van een Erosiebestrijdingsmaatregel."
+      },
       "usage": {},
       "parents": [
         {
@@ -395,7 +394,8 @@
       ],
       "rawTags": {
         "label-nl": "Erosiebestrijdingsmaatregelonderdeel",
-        "name": "Erosiebestrijdingsmaatregelonderdeel"
+        "name": "Erosiebestrijdingsmaatregelonderdeel",
+        "definition-nl": "Deel van een Erosiebestrijdingsmaatregel."
       },
       "properties": [
         {
@@ -1529,7 +1529,7 @@
       },
       "sort": "Onderhoud",
       "description": {
-        "nl": "Een onderhoud van een Erosiebestrijdingsmaatregel."
+        "nl": "Het in goede staat brengen van een Erosiebestrijdingsmaatregel."
       },
       "usage": {},
       "parents": [
@@ -1544,8 +1544,8 @@
       "rawTags": {
         "label-nl": "Onderhoud",
         "name": "Onderhoud",
-        "definition-nl": "Een onderhoud van een object.",
-        "ap-definition-nl": "Een onderhoud van een Erosiebestrijdingsmaatregel.",
+        "definition-nl": "Het in goede staat brengen van een object.",
+        "ap-definition-nl": "Het in goede staat brengen van een Erosiebestrijdingsmaatregel.",
         "uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
       },
       "properties": [
@@ -1593,21 +1593,6 @@
     }
   ],
   "properties": [
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#onderhoud",
-      "name": {
-        "nl": "onderhoud",
-        "undefined": "onderhoud"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
     {
       "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#dimensie",
       "name": {
@@ -1673,6 +1658,21 @@
       "name": {
         "nl": "verantwoordelijke",
         "undefined": "verantwoordelijke"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
+      "name": {
+        "nl": "onderhoud",
+        "undefined": "onderhoud"
       },
       "description": {},
       "domain": [
