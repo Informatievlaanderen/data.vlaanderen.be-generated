@@ -86,18 +86,6 @@
       }
     },
     {
-      "EA-Guid": "{05E700CE-98F3-494c-ACE2-9C7C03F3460B}",
-      "name": "Realisatie",
-      "label": {
-        "nl": "Realisatie",
-        "en": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "De concrete realisering van een Aanbod door een Realisator.",
-        "en": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{0A35B12F-86AA-4694-A16E-31396A38CE69}",
       "name": "Sessie",
       "label": {
@@ -129,12 +117,24 @@
         "en": "Enter your translation here"
       },
       "definition": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod. Dit gaat over de gebudgetteerde inzit en niet de effectieve inzet.",
+        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit.",
         "en": "Enter your translation here"
       }
     }
   ],
   "properties": [
+    {
+      "EA-Guid": "{A99C7B02-23CE-4fd7-B13F-E48236E95E8C}",
+      "name": "minimaalAantalDeelnemersPerInstantie",
+      "label": {
+        "nl": "minimaal aantal deelnemers per instantie",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Minimaal aantal gedetineerden die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden.",
+        "en": "Enter your translation here"
+      }
+    },
     {
       "EA-Guid": "{FA53611E-E071-4054-B3BF-33BE528B19BD}",
       "name": "medium",
@@ -148,6 +148,18 @@
       }
     },
     {
+      "EA-Guid": "{0A474932-D3C6-4010-AE98-E9881C1DFE1D}",
+      "name": "maximaalAantalDeelnemersPerInstantie",
+      "label": {
+        "nl": "maximaal aantal deelnemers per instantie",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit.",
+        "en": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{6A0B51CB-9E95-464a-A88B-847343AAF0D7}",
       "name": "karakter",
       "label": {
@@ -156,6 +168,22 @@
       },
       "definition": {
         "nl": "Aard van de Financiering, bijvoorbeeld structureel of niet-structureel.",
+        "en": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{178E08F4-8558-4cfe-A3B8-EA2F12FB7F52}",
+      "name": "instantiemethode",
+      "label": {
+        "nl": "instantiemethode",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Manier waarop instanties van de Activiteit worden georganiseerd.",
+        "en": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "De methode kanbijvoorbeeld  ad-hoc zijn omdat bepaalde zorgverleningen enkel plaatsvinden waneer er een nood is voor een specifieke gedetineerde.",
         "en": "Enter your translation here"
       }
     },
@@ -248,18 +276,6 @@
       },
       "usage": {
         "nl": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen.",
-        "en": "Enter your translation here"
-      }
-    },
-    {
-      "EA-Guid": "{22746432-B94D-4b15-94E3-11D4D00CE458}",
-      "name": "realiseert",
-      "label": {
-        "nl": "realiseert",
-        "en": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "De Realisator realiseert het Aanbod.",
         "en": "Enter your translation here"
       }
     },
@@ -392,22 +408,6 @@
       }
     },
     {
-      "EA-Guid": "{22746432-B94D-4b15-94E3-11D4D00CE458}",
-      "name": "gerealiseerdDoor",
-      "label": {
-        "nl": "gerealiseerd door",
-        "en": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "De Activiteit wordt uitgevoerd door een Realisator.",
-        "en": "Enter your translation here"
-      },
-      "usage": {
-        "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-        "en": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{1DA9CA27-FEC5-4aa2-9C07-C8E819D3C135}",
       "name": "deelname",
       "label": {
@@ -489,7 +489,7 @@
         "en": "Enter your translation here"
       },
       "usage": {
-        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden.",
+        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten.",
         "en": "Enter your translation here"
       }
     },
@@ -626,6 +626,14 @@
       }
     },
     {
+      "EA-Guid": "{740A9A6C-1E5B-4820-B6EC-BDFB0452C8BA}",
+      "name": "Instantiemethodetype",
+      "label": {
+        "nl": "Instantiemethodetype",
+        "en": "Enter your translation here"
+      }
+    },
+    {
       "EA-Guid": "{44009AF0-84F2-4439-9383-C05845C48F15}",
       "name": "Organisatie",
       "label": {
@@ -681,7 +689,7 @@
         "en": "Enter your translation here"
       },
       "usage": {
-        "nl": "Deze klasse kan gebruikt worden om aan te duiden of er WiFi beschikbaar is.",
+        "nl": "Deze klasse kan gebruikt worden om aan te duiden of er Internettoegang is.",
         "en": "Enter your translation here"
       }
     },
@@ -706,6 +714,18 @@
       },
       "definition": {
         "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert.",
+        "en": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{05E700CE-98F3-494c-ACE2-9C7C03F3460B}",
+      "name": "Realisatie",
+      "label": {
+        "nl": "Realisatie",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Het tot stand brengen van een Activiteit door een Realisator.",
         "en": "Enter your translation here"
       }
     },
@@ -840,6 +860,18 @@
       },
       "definition": {
         "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is.",
+        "en": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{22746432-B94D-4b15-94E3-11D4D00CE458}",
+      "name": "realiseert",
+      "label": {
+        "nl": "realiseert",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Activiteit die de Realisator tot stand brengt.",
         "en": "Enter your translation here"
       }
     },
@@ -1336,6 +1368,22 @@
       },
       "definition": {
         "nl": "Financiering die een Financieringsbron aanbiedt.",
+        "en": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{22746432-B94D-4b15-94E3-11D4D00CE458}",
+      "name": "gerealiseerdDoor",
+      "label": {
+        "nl": "gerealiseerd door",
+        "en": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Realisator die de Activiteit tot stand brengt.",
+        "en": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
         "en": "Enter your translation here"
       }
     }

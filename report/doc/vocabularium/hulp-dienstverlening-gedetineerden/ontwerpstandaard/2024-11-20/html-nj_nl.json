@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/96f3fc91d3cea5201880dba10361a45e7a706cfc",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/96f3fc91d3cea5201880dba10361a45e7a706cfc/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/2a958414c262b83700e1251a02ab9664fe909037",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/2a958414c262b83700e1251a02ab9664fe909037/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -124,22 +124,6 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
-      "name": "Realisatie",
-      "label": {
-        "nl": "Realisatie"
-      },
-      "sort": "Realisatie",
-      "description": {
-        "nl": "De concrete realisering van een Aanbod door een Realisator."
-      },
-      "usage": {},
-      "equivalent": [],
-      "parents": [
-        "http://www.w3.org/ns/prov#Activity"
-      ]
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
       "name": "Sessie",
       "label": {
@@ -190,6 +174,25 @@
   ],
   "properties": [
     {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie",
+      "name": "minimaalAantalDeelnemersPerInstantie",
+      "label": {
+        "nl": "minimaal aantal deelnemers per instantie"
+      },
+      "sort": "minimaal aantal deelnemers per instantie",
+      "description": {
+        "nl": "Minimaal aantal personen die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
+      },
+      "usage": {},
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "name": "medium",
       "label": {
@@ -209,6 +212,25 @@
       "parents": []
     },
     {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
+      "name": "maximaalAantalDeelnemersPerInstantie",
+      "label": {
+        "nl": "maximaal aantal deelnemers per instantie"
+      },
+      "sort": "maximaal aantal deelnemers per instantie",
+      "description": {
+        "nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit."
+      },
+      "usage": {},
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#karakter",
       "name": "karakter",
       "label": {
@@ -221,6 +243,27 @@
       "usage": {},
       "domain": [
         "https://schema.org/MonetaryGrant"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#instantiemethode",
+      "name": "instantiemethode",
+      "label": {
+        "nl": "instantiemethode"
+      },
+      "sort": "instantiemethode",
+      "description": {
+        "nl": "Manier waarop instanties van de Activiteit worden georganiseerd."
+      },
+      "usage": {
+        "nl": "De methode kanbijvoorbeeld  ad-hoc zijn omdat bepaalde zorgverleningen enkel plaatsvinden waneer er een nood is voor een specifieke gedetineerde."
+      },
+      "domain": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -363,25 +406,6 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-      "name": "realiseert",
-      "label": {
-        "nl": "realiseert"
-      },
-      "sort": "realiseert",
-      "description": {
-        "nl": "De Realisator realiseert het Aanbod."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-      ],
-      "range": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
       "name": "geplandeVte",
       "label": {
@@ -393,7 +417,7 @@
       },
       "usage": {},
       "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
       ],
       "range": [
         "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
@@ -570,25 +594,6 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.gerealiseerdDoor",
-      "name": "gerealiseerdDoor",
-      "label": {
-        "nl": "gerealiseerd door"
-      },
-      "sort": "gerealiseerd door",
-      "description": {
-        "nl": "De Activiteit wordt uitgevoerd door een Realisator."
-      },
-      "usage": {},
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
       ],
       "parents": []
     },
@@ -839,6 +844,20 @@
       },
       "usage": {},
       "sort": "Participatiegraad",
+      "indvl": false,
+      "inpackage": false,
+      "inscope": true,
+      "show": true
+    },
+    {
+      "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+      "name": "Instantiemethodetype",
+      "label": {
+        "nl": "Instantiemethodetype"
+      },
+      "description": {},
+      "usage": {},
+      "sort": "Instantiemethodetype",
       "indvl": false,
       "inpackage": false,
       "inscope": true,

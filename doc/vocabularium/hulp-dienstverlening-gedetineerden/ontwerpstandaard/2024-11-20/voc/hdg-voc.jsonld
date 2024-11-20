@@ -136,19 +136,6 @@
       "parents": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Realisatie"
-      },
-      "definition": {
-        "nl": "De concrete realisering van een Aanbod door een Realisator."
-      },
-      "parents": [
-        "http://www.w3.org/ns/prov#Activity"
-      ]
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -273,8 +260,20 @@
       "@type": "rdfs:Class"
     },
     {
+      "name": {
+        "nl": "Instantiemethodetype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
       "name": {},
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
       "@type": "rdfs:Class"
     },
     {
@@ -305,6 +304,23 @@
   ],
   "properties": [
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "minimaal aantal deelnemers per instantie"
+      },
+      "definition": {
+        "nl": "Minimaal aantal personen die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -322,6 +338,23 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "maximaal aantal deelnemers per instantie"
+      },
+      "definition": {
+        "nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#karakter",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -332,6 +365,26 @@
       },
       "domain": [
         "https://schema.org/MonetaryGrant"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#instantiemethode",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "instantiemethode"
+      },
+      "definition": {
+        "nl": "Manier waarop instanties van de Activiteit worden georganiseerd."
+      },
+      "usage": {
+        "nl": "De methode kanbijvoorbeeld  ad-hoc zijn omdat bepaalde zorgverleningen enkel plaatsvinden waneer er een nood is voor een specifieke gedetineerde."
+      },
+      "domain": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -461,23 +514,6 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "realiseert"
-      },
-      "definition": {
-        "nl": "De Realisator realiseert het Aanbod."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-      ],
-      "range": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -487,7 +523,7 @@
         "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
       },
       "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
       ],
       "range": [
         "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
@@ -651,23 +687,6 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.gerealiseerdDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gerealiseerd door"
-      },
-      "definition": {
-        "nl": "De Activiteit wordt uitgevoerd door een Realisator."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.deelname",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -768,6 +787,11 @@
         "nl": "doelgroep"
       },
       "@id": "https://schema.org/audience",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert",
       "@type": "rdf:Property"
     },
     {
@@ -920,6 +944,11 @@
         "nl": "financiert"
       },
       "@id": "http://purl.org/cerif/frapo/funds",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert",
       "@type": "rdf:Property"
     }
   ],

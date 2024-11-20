@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/96f3fc91d3cea5201880dba10361a45e7a706cfc",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/96f3fc91d3cea5201880dba10361a45e7a706cfc/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/2a958414c262b83700e1251a02ab9664fe909037",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/2a958414c262b83700e1251a02ab9664fe909037/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -315,284 +315,6 @@
       ]
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
-      "name": "Realisatie",
-      "label": {
-        "nl": "Realisatie"
-      },
-      "sort": "Realisatie",
-      "description": {
-        "nl": "De concrete realisering van een Aanbod door een Realisator."
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Activiteit",
-          "name": "Activiteit",
-          "package": "PROV",
-          "uri": "http://www.w3.org/ns/prov#Activity",
-          "scoped_uri": "#Activiteit"
-        }
-      ],
-      "rawTags": {
-        "name": "Realisatie",
-        "definition-nl": "De concrete realisering van een Aanbod door een Realisator.",
-        "label-nl": "Realisatie"
-      },
-      "properties": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
-          "name": "geplandeVte",
-          "sort": "geplande VTE",
-          "label": {
-            "nl": "geplande VTE"
-          },
-          "description": {
-            "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
-          },
-          "usage": {
-            "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
-          },
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "VTEGebruik",
-              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#VTE Gebruik",
-              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
-              "range_label": {
-                "nl": "VTE Gebruik"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s.",
-            "name": "Realisatie.geplandeVTE",
-            "label-nl": "geplande VTE",
-            "definition-nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
-          "name": "gerealiseerdDoor",
-          "sort": "gerealiseerd door",
-          "label": {
-            "nl": "gerealiseerd door"
-          },
-          "description": {
-            "nl": "De Realisatie wordt uitgevoerd door een Realisator."
-          },
-          "usage": {
-            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "gerealiseerd door",
-            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-            "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
-            "name": "Realisatie.gerealiseerdDoor",
-            "ap-definition-nl": "De Realisatie wordt uitgevoerd door een Realisator."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#qualifiedUsage",
-          "name": "gebruikteVte",
-          "sort": "gebruikte VTE",
-          "label": {
-            "nl": "gebruikte VTE"
-          },
-          "description": {
-            "nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
-          },
-          "usage": {
-            "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
-          },
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "VTEGebruik",
-              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#VTE Gebruik",
-              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
-              "range_label": {
-                "nl": "VTE Gebruik"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#qualifiedUsage",
-            "ap-usageNote-nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
-            "ap-label-nl": "gebruikte VTE",
-            "ap-definition-nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#influenced",
-          "name": "beïnvloedt",
-          "sort": "beïnvloedt",
-          "label": {
-            "nl": "beïnvloedt"
-          },
-          "description": {
-            "nl": "Activiteit waarop de Realisatie een effect heeft."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-              "range_label": {
-                "nl": "Activiteit"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Activiteit waarop de Realisatie een effect heeft.",
-            "ap-label-nl": "beïnvloedt",
-            "uri": "http://www.w3.org/ns/prov#influenced"
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#atLocation",
-          "name": "locatie",
-          "sort": "locatie",
-          "label": {
-            "nl": "locatie"
-          },
-          "description": {
-            "nl": "Locatie waar de Realisatie plaatsvindt."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Locatie",
-              "range_uri": "http://www.w3.org/ns/prov#Location"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
-              "range_puri": "http://www.w3.org/ns/prov#Location",
-              "range_label": {
-                "nl": "Locatie"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#atLocation",
-            "ap-label-nl": "locatie",
-            "ap-definition-nl": "Locatie waar de Realisatie plaatsvindt."
-          }
-        },
-        {
-          "uri": "http://purl.org/dc/terms/type",
-          "name": "type",
-          "sort": "type",
-          "label": {
-            "nl": "type"
-          },
-          "description": {
-            "nl": "Classificering van de Realisatie aan de hand van een gecontroleerde codelijst."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisatietype",
-              "range_uri": "https://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisatietype",
-              "range_puri": "https://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Realisatietype"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://purl.org/dc/terms/type",
-            "ap-label-nl": "type",
-            "ap-definition-nl": "Classificering van de Realisatie aan de hand van een gecontroleerde codelijst."
-          }
-        }
-      ]
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
       "name": "Sessie",
       "label": {
@@ -654,7 +376,7 @@
       },
       "sort": "VTE Gebruik",
       "description": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod. Dit gaat over de gebudgetteerde inzit en niet de effectieve inzet."
+        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
       },
       "usage": {},
       "parents": [
@@ -670,7 +392,7 @@
         "label-nl": "VTE Gebruik",
         "definition-nl": "Hoeveelheid voltijdse equivalenten die aan een bepaalde taak of functie zijn toegewezen.",
         "name": "VTEGebruik",
-        "ap-definition-nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Aanbod. Dit gaat over de gebudgetteerde inzit en niet de effectieve inzet."
+        "ap-definition-nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
       },
       "properties": [
         {
@@ -776,13 +498,13 @@
           "range": [
             {
               "range_label": "Realisatie",
-              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Realisatie",
-              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
               "range_label": {
                 "nl": "Realisatie"
               }
@@ -997,11 +719,11 @@
         "nl": "Actie die bewust wordt georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen."
       },
       "usage": {
-        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden."
+        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten."
       },
       "parents": [],
       "rawTags": {
-        "usageNote-nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden.",
+        "usageNote-nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten.",
         "ap-definition-nl": "Actie die bewust wordt georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen.",
         "ap-label-nl": "Activiteit",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
@@ -1046,6 +768,49 @@
             "label-nl": "medium",
             "name": "medium",
             "definition-nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#instantiemethode",
+          "name": "instantiemethode",
+          "sort": "instantiemethode",
+          "label": {
+            "nl": "instantiemethode"
+          },
+          "description": {
+            "nl": "Manier waarop instanties van de Activiteit worden georganiseerd."
+          },
+          "usage": {
+            "nl": "De methode kanbijvoorbeeld  ad-hoc zijn omdat bepaalde zorgverleningen enkel plaatsvinden waneer er een nood is voor een specifieke gedetineerde."
+          },
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Instantiemethodetype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Instantiemethodetype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Instantiemethodetype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "instantiemethode",
+            "label-nl": "instantiemethode",
+            "definition-nl": "Manier waarop instanties van de Activiteit worden georganiseerd.",
+            "usageNote-nl": "De methode kanbijvoorbeeld  ad-hoc zijn omdat bepaalde zorgverleningen enkel plaatsvinden waneer er een nood is voor een specifieke gedetineerde."
           }
         },
         {
@@ -1170,49 +935,6 @@
             "label-nl": "intake",
             "definition-nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst.",
             "name": "Activiteit.intake"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.gerealiseerdDoor",
-          "name": "gerealiseerdDoor",
-          "sort": "gerealiseerd door",
-          "label": {
-            "nl": "gerealiseerd door"
-          },
-          "description": {
-            "nl": "De Activiteit wordt uitgevoerd door een Realisator."
-          },
-          "usage": {
-            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-            "name": "Activiteit.gerealiseerdDoor",
-            "label-nl": "gerealiseerd door",
-            "definition-nl": "De Activiteit wordt uitgevoerd door een Realisator."
           }
         },
         {
@@ -1521,13 +1243,13 @@
           "range": [
             {
               "range_label": "Realisatie",
-              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Realisatie",
-              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
               "range_label": {
                 "nl": "Realisatie"
               }
@@ -1792,6 +1514,49 @@
             "ap-definition-nl": "Een tekstuele beschrijving van de Activiteit.",
             "uri": "http://purl.org/dc/terms/description"
           }
+        },
+        {
+          "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
+          "label": {
+            "nl": "gerealiseerd door"
+          },
+          "description": {
+            "nl": "Realisator die de Activiteit tot stand brengt."
+          },
+          "usage": {
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
+              "range_label": {
+                "nl": "Realisator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "ap-label-nl": "gerealiseerd door",
+            "ap-definition-nl": "Realisator die de Activiteit tot stand brengt.",
+            "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by"
+          }
         }
       ]
     },
@@ -2037,7 +1802,7 @@
         "nl": "Middel dat ergens voor gebruikt kan worden, een voorziening, aanwezig in de Infrastructuur of hiervoor aangewend kan worden."
       },
       "usage": {
-        "nl": "Deze klasse kan gebruikt worden om aan te duiden of er WiFi beschikbaar is."
+        "nl": "Deze klasse kan gebruikt worden om aan te duiden of er Internettoegang is."
       },
       "parents": [],
       "rawTags": {
@@ -2045,7 +1810,7 @@
         "ap-label-nl": "Faciliteit",
         "label-nl": "Faciliteit",
         "definition-nl": "Middel dat ergens voor gebruikt kan worden, een voorziening, aanwezig in de Infrastructuur of hiervoor aangewend kan worden.",
-        "ap-usageNote-nl": "Deze klasse kan gebruikt worden om aan te duiden of er WiFi beschikbaar is."
+        "ap-usageNote-nl": "Deze klasse kan gebruikt worden om aan te duiden of er Internettoegang is."
       },
       "properties": [
         {
@@ -2523,6 +2288,284 @@
       "properties": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
+      "name": "Realisatie",
+      "label": {
+        "nl": "Realisatie"
+      },
+      "sort": "Realisatie",
+      "description": {
+        "nl": "Het tot stand brengen van een Activiteit door een Realisator."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Activiteit",
+          "name": "Activiteit",
+          "package": "PROV",
+          "uri": "http://www.w3.org/ns/prov#Activity",
+          "scoped_uri": "#Activiteit"
+        }
+      ],
+      "rawTags": {
+        "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
+        "ap-definition-nl": "Het tot stand brengen van een Activiteit door een Realisator.",
+        "ap-label-nl": "Realisatie"
+      },
+      "properties": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
+          "name": "geplandeVte",
+          "sort": "geplande VTE",
+          "label": {
+            "nl": "geplande VTE"
+          },
+          "description": {
+            "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
+          },
+          "usage": {
+            "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
+          },
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "VTEGebruik",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#VTE Gebruik",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
+              "range_label": {
+                "nl": "VTE Gebruik"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s.",
+            "name": "Realisatie.geplandeVTE",
+            "label-nl": "geplande VTE",
+            "definition-nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
+          "label": {
+            "nl": "gerealiseerd door"
+          },
+          "description": {
+            "nl": "De Realisatie wordt uitgevoerd door een Realisator."
+          },
+          "usage": {
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
+              "range_label": {
+                "nl": "Realisator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "gerealiseerd door",
+            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
+            "name": "Realisatie.gerealiseerdDoor",
+            "ap-definition-nl": "De Realisatie wordt uitgevoerd door een Realisator."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#qualifiedUsage",
+          "name": "gebruikteVte",
+          "sort": "gebruikte VTE",
+          "label": {
+            "nl": "gebruikte VTE"
+          },
+          "description": {
+            "nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
+          },
+          "usage": {
+            "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
+          },
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "VTEGebruik",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#VTE Gebruik",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
+              "range_label": {
+                "nl": "VTE Gebruik"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#qualifiedUsage",
+            "ap-usageNote-nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
+            "ap-label-nl": "gebruikte VTE",
+            "ap-definition-nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#influenced",
+          "name": "beïnvloedt",
+          "sort": "beïnvloedt",
+          "label": {
+            "nl": "beïnvloedt"
+          },
+          "description": {
+            "nl": "Activiteit waarop de Realisatie een effect heeft."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Activiteit waarop de Realisatie een effect heeft.",
+            "ap-label-nl": "beïnvloedt",
+            "uri": "http://www.w3.org/ns/prov#influenced"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "locatie",
+          "sort": "locatie",
+          "label": {
+            "nl": "locatie"
+          },
+          "description": {
+            "nl": "Locatie waar de Realisatie plaatsvindt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Locatie",
+              "range_uri": "http://www.w3.org/ns/prov#Location"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_puri": "http://www.w3.org/ns/prov#Location",
+              "range_label": {
+                "nl": "Locatie"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#atLocation",
+            "ap-label-nl": "locatie",
+            "ap-definition-nl": "Locatie waar de Realisatie plaatsvindt."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Classificering van de Realisatie aan de hand van een gecontroleerde codelijst."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisatietype",
+              "range_uri": "https://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisatietype",
+              "range_puri": "https://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Realisatietype"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://purl.org/dc/terms/type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Classificering van de Realisatie aan de hand van een gecontroleerde codelijst."
+          }
+        }
+      ]
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
       "name": "Realisator",
       "label": {
@@ -2584,46 +2627,6 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-          "name": "realiseert",
-          "sort": "realiseert",
-          "label": {
-            "nl": "realiseert"
-          },
-          "description": {
-            "nl": "De Realisator realiseert het Aanbod."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Realisator",
-              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-              "range_label": {
-                "nl": "Activiteit"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "De Realisator realiseert het Aanbod.",
-            "name": "Realisator.realiseert",
-            "label-nl": "realiseert"
-          }
-        },
-        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GefinancierdDoor",
           "name": "gefinancierdDoor",
           "sort": "gefinancierd door",
@@ -2665,6 +2668,46 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert",
+          "name": "realiseert",
+          "sort": "realiseert",
+          "label": {
+            "nl": "realiseert"
+          },
+          "description": {
+            "nl": "Activiteit die de Realisator tot stand brengt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisator",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Activiteit die de Realisator tot stand brengt.",
+            "ap-label-nl": "realiseert",
+            "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert"
+          }
+        },
+        {
           "uri": "http://www.w3.org/ns/prov#wasAssociateFor",
           "name": "realisatie",
           "sort": "realisatie",
@@ -2684,13 +2727,13 @@
           "range": [
             {
               "range_label": "Realisatie",
-              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Realisatie",
-              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
               "range_label": {
                 "nl": "Realisatie"
               }
@@ -3177,6 +3220,21 @@
       "parents": []
     },
     {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#instantiemethode",
+      "name": {
+        "nl": "instantiemethode",
+        "undefined": "instantiemethode"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsniveau",
       "name": {
         "nl": "beleidsniveau",
@@ -3226,21 +3284,6 @@
       "name": {
         "nl": "beleidsdomein",
         "undefined": "beleidsdomein"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-      "name": {
-        "nl": "realiseert",
-        "undefined": "realiseert"
       },
       "description": {},
       "domain": [
@@ -3372,21 +3415,6 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.gerealiseerdDoor",
-      "name": {
-        "nl": "gerealiseerd door",
-        "undefined": "gerealiseerdDoor"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.deelname",
       "name": {
         "nl": "deelname",
@@ -3482,7 +3510,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "name": "Activiteitsstatus.reden",
@@ -3551,6 +3579,88 @@
       },
       "properties": [
         {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie",
+          "name": "minimaalAantalDeelnemersPerInstantie",
+          "sort": "minimaal aantal deelnemers per instantie",
+          "label": {
+            "nl": "minimaal aantal deelnemers per instantie"
+          },
+          "description": {
+            "nl": "Minimaal aantal gedetineerden die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Deelname",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "minAantalDeelnemersPerInstantie",
+            "label-nl": "minimaal aantal deelnemers per instantie",
+            "definition-nl": "Minimaal aantal personen die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden.",
+            "ap-definition-nl": "Minimaal aantal gedetineerden die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
+          "name": "maximaalAantalDeelnemersPerInstantie",
+          "sort": "maximaal aantal deelnemers per instantie",
+          "label": {
+            "nl": "maximaal aantal deelnemers per instantie"
+          },
+          "description": {
+            "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Deelname",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "maxAantalDeelnemersPerInstantie",
+            "label-nl": "maximaal aantal deelnemers per instantie",
+            "definition-nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit.",
+            "ap-definition-nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit."
+          }
+        },
+        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers",
           "name": "minimumAantalDeelnemers",
           "sort": "minimum aantal deelnemers",
@@ -3582,7 +3692,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "minimum aantal deelnemers",
@@ -3623,7 +3733,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "maximum aantal deelnemers",
@@ -3707,7 +3817,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "name": "Activiteit.aantalDeelnames",
