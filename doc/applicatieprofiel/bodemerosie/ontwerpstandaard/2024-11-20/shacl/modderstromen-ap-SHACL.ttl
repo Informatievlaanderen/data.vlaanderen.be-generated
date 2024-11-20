@@ -3,6 +3,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,7 +13,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#GraszoneShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ZoneShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ActuatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#FeatureOfInterestShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#GeobserveerdKenmerkShape>,
@@ -99,7 +100,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/421d78c27acf98a3c52191db36ac97de764ae8b5>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/634c9034242d42f92452dc2ddbbe2a5f49265cbd>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/d000adb186880cbcc53d4d31cf1f6bfd06d1ae82>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/a24d0fdd2589b443e805d637ef2deac7d7f76f01>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/25eec7676674c9257a3333d5295b669d5ab2c824>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/358ce6c130ed0d9389323aa02404dec91c77c747>;
   shacl:targetClass <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel> .
@@ -175,12 +175,6 @@
   shacl:minCount 1;
   shacl:name "beschermde zone"@nl;
   shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.beschermdeZone> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/a24d0fdd2589b443e805d637ef2deac7d7f76f01> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiebestrijdingsmaatregel.onderhoud";
-  shacl:class <https://data.vlaanderen.be/ns/generiek#Onderhoud>;
-  shacl:description "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."@nl;
-  shacl:name "onderhoud"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiebestrijdingsmaatregelShape/a347e55bfdf82a12bc5d71d8b33a70a336cdba68> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiebestrijdingsmaatregel.afvoerzone";
   shacl:description "De zone waarnaar overtollig water en sediment afgevoerd wordt."@nl;
@@ -279,37 +273,37 @@
   shacl:description "Het maximaal volume voor er sediment en water afvloeit."@nl;
   shacl:minCount 1;
   shacl:name "maximaal volume"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume> .
+  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape/80a0d7607af13c23865bf8e0fac09ec1614c1183> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiepoel.dimensie";
   shacl:description "De dimensie van de Erosiepoel."@nl;
   shacl:minCount 1;
   shacl:name "dimensie"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie> .
+  shacl:path dc:format .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape/8452958e7e3ff4f372a2572514a9e5828932e062> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiepoel.dimensie";
   shacl:class <https://data.vlaanderen.be/ns/generiek#Dimensie>;
   shacl:description "De dimensie van de Erosiepoel."@nl;
   shacl:name "dimensie"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie> .
+  shacl:path dc:format .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape/85dd2fcbfc5e7e4a2fce56aca526a14d83cc522d> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiepoel.dimensie";
   shacl:description "De dimensie van de Erosiepoel."@nl;
   shacl:maxCount 1;
   shacl:name "dimensie"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie> .
+  shacl:path dc:format .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape/8d26380cfdfaede9754c21c1546d57944115a2f5> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiepoel.maximaalvolume";
-  shacl:class <http://qudt.org/schema/qudt/QuantityValue>;
+  shacl:class schemas:QuantitativeValue;
   shacl:description "Het maximaal volume voor er sediment en water afvloeit."@nl;
   shacl:name "maximaal volume"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume> .
+  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ErosiepoelShape/ba43f403d21dc53b9bcb5e22d45f8e2819f37d26> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Erosiepoel.maximaalvolume";
   shacl:description "Het maximaal volume voor er sediment en water afvloeit."@nl;
   shacl:maxCount 1;
   shacl:name "maximaal volume"@nl;
-  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume> .
+  shacl:path <https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#FeatureOfInterestShape> a shacl:NodeShape;
   shacl:closed false;
@@ -323,47 +317,47 @@
   shacl:closed false;
   shacl:targetClass <https://test.data.vlaanderen.be/ns/bodemerosie#Graszone> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/22cdf2735aea738bf5e7135e3f5b710e0093a66e>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/72c15e74c4d0cb3548d621c127b1090e77f8481e>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/8a7cf46c8506736f2b7d04fe32bd522933417037>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/47b3500a1e2acf685702be49e7c5e38d441bb90e>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/913a1ba985aedc7b685e86f0a837363b3225190c>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/d7ed4769a839e7da02cb11f51ff0495cdd67881b>;
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/22cdf2735aea738bf5e7135e3f5b710e0093a66e>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/72c15e74c4d0cb3548d621c127b1090e77f8481e>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/8a7cf46c8506736f2b7d04fe32bd522933417037>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/47b3500a1e2acf685702be49e7c5e38d441bb90e>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/913a1ba985aedc7b685e86f0a837363b3225190c>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/d7ed4769a839e7da02cb11f51ff0495cdd67881b>;
   shacl:targetClass <http://qudt.org/schema/qudt/QuantityValue> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/22cdf2735aea738bf5e7135e3f5b710e0093a66e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/22cdf2735aea738bf5e7135e3f5b710e0093a66e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
   shacl:description "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
   shacl:minCount 1;
   shacl:name "eenheid"@nl;
   shacl:path <http://qudt.org/schema/qudt/unit> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/47b3500a1e2acf685702be49e7c5e38d441bb90e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/47b3500a1e2acf685702be49e7c5e38d441bb90e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:minCount 1;
   shacl:name "numerieke waarde"@nl;
   shacl:path <http://qudt.org/schema/qudt/numericValue> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/72c15e74c4d0cb3548d621c127b1090e77f8481e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/72c15e74c4d0cb3548d621c127b1090e77f8481e> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
   shacl:class <http://qudt.org/2.1/schema/qudt/Unit>;
   shacl:description "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
   shacl:name "eenheid"@nl;
   shacl:path <http://qudt.org/schema/qudt/unit> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/8a7cf46c8506736f2b7d04fe32bd522933417037> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/8a7cf46c8506736f2b7d04fe32bd522933417037> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.eenheid";
   shacl:description "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
   shacl:maxCount 1;
   shacl:name "eenheid"@nl;
   shacl:path <http://qudt.org/schema/qudt/unit> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/913a1ba985aedc7b685e86f0a837363b3225190c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/913a1ba985aedc7b685e86f0a837363b3225190c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:maxCount 1;
   shacl:name "numerieke waarde"@nl;
   shacl:path <http://qudt.org/schema/qudt/numericValue> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieWaardeShape/d7ed4769a839e7da02cb11f51ff0495cdd67881b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaardeShape/d7ed4769a839e7da02cb11f51ff0495cdd67881b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#KwantitatieveWaarde.numeriekewaarde";
   shacl:class <http://www.linkedmodel.org/schema/dtype#numericUnion>;
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:name "numerieke waarde"@nl;
@@ -371,7 +365,10 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/26bd1538fb09c7343697db7f6752db148012d86d>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/094dd18cc860a8e3f406bb1ddb361cdbf686a120>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/5b308a496d299ca5e844de2d3520c815a468d00b>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/bce6139e94a794701cff8ee719d4289148b79381>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/26bd1538fb09c7343697db7f6752db148012d86d>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/c7a57c03e05c723dc039952bcae73e1838cdc789>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/e3de39da9cb5fd211b216193ff8b49dc0f0eedce>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/807789bc5a8ccc47aeb975cd6e77c00d3f14613c>,
@@ -382,8 +379,17 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/c8caefe16f26e243ae6c1922387b66bc0fd9f970>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/9b04564ea329b1ee67d639d575d19e0c3a613336>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/c24764a8fe1e0bed7d991adfcdbf1d954272cd84>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/f9da178c8b9a6c374aa8dcd8f3ac821cab98c925>;
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/f9da178c8b9a6c374aa8dcd8f3ac821cab98c925>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/bf5286ed74a5149a364360635ac3e0f54b64e106>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/deb219c6ec0987fbed639872246559f5f1989618>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/e2aa695935c78bbdc60e0b03ef4e306b162ddea8>;
   shacl:targetClass <http://www.w3.org/ns/sosa/Observation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/094dd18cc860a8e3f406bb1ddb361cdbf686a120> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.einde";
+  shacl:description "Moment waarop de Observatie gestopt is."@nl;
+  shacl:minCount 1;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/26bd1538fb09c7343697db7f6752db148012d86d> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.gedaandoor";
   shacl:description "De Sensor die de Observatie heeft gedaan."@nl;
@@ -396,6 +402,12 @@
   shacl:maxCount 1;
   shacl:name "heeft resultaat"@nl;
   shacl:path <http://www.w3.org/ns/sosa/hasResult> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/5b308a496d299ca5e844de2d3520c815a468d00b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.einde";
+  shacl:datatype xsd:dateTime;
+  shacl:description "Moment waarop de Observatie gestopt is."@nl;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/807789bc5a8ccc47aeb975cd6e77c00d3f14613c> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.geobserveerdkenmerk";
   shacl:description "Kenmerk dat geobserveerd werd tijdens de Observatie."@nl;
@@ -414,6 +426,18 @@
   shacl:maxCount 1;
   shacl:name "object"@nl;
   shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/bce6139e94a794701cff8ee719d4289148b79381> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.einde";
+  shacl:description "Moment waarop de Observatie gestopt is."@nl;
+  shacl:maxCount 1;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/bf5286ed74a5149a364360635ac3e0f54b64e106> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.start";
+  shacl:description "Moment waarop de Observatie gestart is."@nl;
+  shacl:minCount 1;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/bfa55c3bac0bbcfcd88b83c447af2a550081aff5> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.heeftresultaat";
   shacl:class <http://www.w3.org/ns/sosa/Result>;
@@ -439,6 +463,18 @@
   shacl:name "heeft resultaat"@nl;
   shacl:path <http://www.w3.org/ns/sosa/hasResult> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/deb219c6ec0987fbed639872246559f5f1989618> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.start";
+  shacl:description "Moment waarop de Observatie gestart is."@nl;
+  shacl:maxCount 1;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/e2aa695935c78bbdc60e0b03ef4e306b162ddea8> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.start";
+  shacl:datatype xsd:dateTime;
+  shacl:description "Moment waarop de Observatie gestart is."@nl;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#ObservatieShape/e3de39da9cb5fd211b216193ff8b49dc0f0eedce> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Observatie.gedaandoor";
   shacl:description "De Sensor die de Observatie heeft gedaan."@nl;
   shacl:minCount 1;
@@ -459,9 +495,20 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+  shacl:property <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/094dd18cc860a8e3f406bb1ddb361cdbf686a120>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/5b308a496d299ca5e844de2d3520c815a468d00b>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/bce6139e94a794701cff8ee719d4289148b79381>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/bf5286ed74a5149a364360635ac3e0f54b64e106>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/deb219c6ec0987fbed639872246559f5f1989618>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/e2aa695935c78bbdc60e0b03ef4e306b162ddea8>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/322371a77364a50f049d46180f6192532eea26dc>;
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/094dd18cc860a8e3f406bb1ddb361cdbf686a120> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.einde";
+  shacl:minCount 1;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.type";
   shacl:description "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."@nl;
@@ -474,6 +521,34 @@
   shacl:description "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."@nl;
   shacl:name "type"@nl;
   shacl:path dc:type .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/5b308a496d299ca5e844de2d3520c815a468d00b> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.einde";
+  shacl:datatype xsd:dateTime;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/bce6139e94a794701cff8ee719d4289148b79381> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.einde";
+  shacl:maxCount 1;
+  shacl:name "einde"@nl;
+  shacl:path prov:endedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/bf5286ed74a5149a364360635ac3e0f54b64e106> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.start";
+  shacl:description "Moment waarop het Onderhoud gestart is."@nl;
+  shacl:minCount 1;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/deb219c6ec0987fbed639872246559f5f1989618> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.start";
+  shacl:description "Moment waarop het Onderhoud gestart is."@nl;
+  shacl:maxCount 1;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#OnderhoudShape/e2aa695935c78bbdc60e0b03ef4e306b162ddea8> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#Onderhoud.start";
+  shacl:datatype xsd:dateTime;
+  shacl:description "Moment waarop het Onderhoud gestart is."@nl;
+  shacl:name "start"@nl;
+  shacl:path prov:startedAtTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-20#PlatformShape> a shacl:NodeShape;
   shacl:closed false;

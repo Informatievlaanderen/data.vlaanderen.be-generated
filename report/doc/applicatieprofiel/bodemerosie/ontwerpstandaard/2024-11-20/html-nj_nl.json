@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/cc9eb407b0257fdf5a73a6b665e2b51e65049c7d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/cc9eb407b0257fdf5a73a6b665e2b51e65049c7d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/ec510af1a585a724d38683ea72b742e087569c4f",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/ec510af1a585a724d38683ea72b742e087569c4f/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -127,46 +127,6 @@
             "label-nl": "verantwoordelijke",
             "definition-nl": "De verantwoordelijke van een Erosiebestrijdingsmaatregel.",
             "name": "Erosiebestrijdingsmaatregel.verantwoordelijke"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
-          "name": "onderhoud",
-          "sort": "onderhoud",
-          "label": {
-            "nl": "onderhoud"
-          },
-          "description": {
-            "nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Erosiebestrijdingsmaatregel",
-              "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Onderhoud",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Onderhoud",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Onderhoud",
-              "range_label": {
-                "nl": "Onderhoud"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "onderhoud",
-            "definition-nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel.",
-            "name": "Erosiebestrijdingsmaatregel.onderhoud"
           }
         },
         {
@@ -547,7 +507,7 @@
       },
       "properties": [
         {
-          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
+          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume",
           "name": "maximaalVolume",
           "sort": "maximaal volume",
           "label": {
@@ -565,14 +525,14 @@
           ],
           "range": [
             {
-              "range_label": "KwantitatieWaarde",
-              "range_uri": "http://qudt.org/schema/qudt/QuantityValue"
+              "range_label": "KwantitatieveWaarde",
+              "range_uri": "https://schema.org/QuantitativeValue"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Kwantitatieve Waarde",
-              "range_puri": "http://qudt.org/schema/qudt/QuantityValue",
+              "range_puri": "https://schema.org/QuantitativeValue",
               "range_label": {
                 "nl": "Kwantitatieve Waarde"
               }
@@ -582,12 +542,12 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "maximaal volume",
-            "name": "Erosiepoel.maxVolume",
+            "name": "maxVolume",
             "definition-nl": "Het maximaal volume voor er sediment en water afvloeit."
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie",
+          "uri": "http://purl.org/dc/terms/format",
           "name": "dimensie",
           "sort": "dimensie",
           "label": {
@@ -596,9 +556,7 @@
           "description": {
             "nl": "De dimensie van de Erosiepoel."
           },
-          "usage": {
-            "nl": "http://purl.org/dc/elements/1.1/format"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Erosiepoel",
@@ -623,10 +581,9 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "dimensie",
-            "name": "Erosiepoel.dimensie",
-            "definition-nl": "De dimensie van de Erosiepoel.",
-            "usageNote-nl": "http://purl.org/dc/elements/1.1/format"
+            "uri": "http://purl.org/dc/terms/format",
+            "ap-definition-nl": "De dimensie van de Erosiepoel.",
+            "ap-label-nl": "dimensie"
           }
         }
       ]
@@ -847,7 +804,7 @@
           "usage": {},
           "domain": [
             {
-              "EA-Name": "KwantitatieWaarde",
+              "EA-Name": "KwantitatieveWaarde",
               "uri": "http://qudt.org/schema/qudt/QuantityValue"
             }
           ],
@@ -887,7 +844,7 @@
           "usage": {},
           "domain": [
             {
-              "EA-Name": "KwantitatieWaarde",
+              "EA-Name": "KwantitatieveWaarde",
               "uri": "http://qudt.org/schema/qudt/QuantityValue"
             }
           ],
@@ -1292,6 +1249,86 @@
             "uri": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
             "ap-definition-nl": "Het Object waarop de observatie is uitgevoegd."
           }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#startedAtTime",
+          "name": "start",
+          "sort": "start",
+          "label": {
+            "nl": "start"
+          },
+          "description": {
+            "nl": "Moment waarop de Observatie gestart is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Observatie",
+              "uri": "http://www.w3.org/ns/sosa/Observation"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "start",
+            "uri": "http://www.w3.org/ns/prov#startedAtTime",
+            "ap-definition-nl": "Moment waarop de Observatie gestart is."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#endedAtTime",
+          "name": "einde",
+          "sort": "einde",
+          "label": {
+            "nl": "einde"
+          },
+          "description": {
+            "nl": "Moment waarop de Observatie gestopt is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Observatie",
+              "uri": "http://www.w3.org/ns/sosa/Observation"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Moment waarop de Observatie gestopt is.",
+            "ap-label-nl": "einde",
+            "uri": "http://www.w3.org/ns/prov#endedAtTime"
+          }
         }
       ]
     },
@@ -1567,6 +1604,84 @@
       },
       "properties": [
         {
+          "uri": "http://www.w3.org/ns/prov#startedAtTime",
+          "name": "start",
+          "sort": "start",
+          "label": {
+            "nl": "start"
+          },
+          "description": {
+            "nl": "Moment waarop het Onderhoud gestart is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Onderhoud",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "start",
+            "ap-definition-nl": "Moment waarop het Onderhoud gestart is.",
+            "uri": "http://www.w3.org/ns/prov#startedAtTime"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#endedAtTime",
+          "name": "einde",
+          "sort": "einde",
+          "label": {
+            "nl": "einde"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Onderhoud",
+              "uri": "https://data.vlaanderen.be/ns/generiek#Onderhoud"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#endedAtTime",
+            "ap-label-nl": "einde",
+            "ap-defintion-nl": "Moment waarop het Onderhound gestopt is."
+          }
+        },
+        {
           "uri": "http://purl.org/dc/terms/type",
           "name": "type",
           "sort": "type",
@@ -1611,6 +1726,21 @@
   ],
   "properties": [
     {
+      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume",
+      "name": {
+        "nl": "maximaal volume",
+        "undefined": "maximaalVolume"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
       "name": {
         "nl": "afvoerzone",
@@ -1641,55 +1771,10 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
-      "name": {
-        "nl": "maximaal volume",
-        "undefined": "maximaalVolume"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie",
-      "name": {
-        "nl": "dimensie",
-        "undefined": "dimensie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke",
       "name": {
         "nl": "verantwoordelijke",
         "undefined": "verantwoordelijke"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
-      "name": {
-        "nl": "onderhoud",
-        "undefined": "onderhoud"
       },
       "description": {},
       "domain": [
@@ -1734,33 +1819,238 @@
   "contributors": [
     {
       "role": "A",
-      "first_name": "AuteurVoornaam",
-      "last_name": "AuteurNaam",
+      "first_name": "Kenny",
+      "last_name": "Stevens",
       "affiliation": {
-        "name": "AuteurAffiliatie",
-        "website": "https://auteurwebsiteurl"
+        "name": "VERA",
+        "website": "https://www.vera.be/"
       },
-      "email": "auteurvoornaam.auteurnaam@auteurdomein"
+      "email": "kenny.stevens@vera.be"
+    },
+    {
+      "role": "A",
+      "first_name": "Jan",
+      "last_name": "Potemans",
+      "affiliation": {
+        "name": "VERA",
+        "website": "https://www.vera.be/"
+      },
+      "email": "jan.potemans@vera.be"
+    },
+    {
+      "role": "A",
+      "first_name": "Karen",
+      "last_name": "Peeters",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant ",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      },
+      "email": "karen.peeters@vlaamsbrabant.be"
     },
     {
       "role": "E",
-      "first_name": "EditorVoornaam",
-      "last_name": "EditorNaam",
+      "first_name": "Eveline",
+      "last_name": "Vlassenroot",
       "affiliation": {
-        "name": "EditorAffiliatie",
-        "website": "https://editorwebsiteurl"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002955"
       },
-      "email": "editorvoornaam.editornaam@editordomein"
+      "email": "eveline.vlassenroot@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Laurens",
+      "last_name": "Vercauteren",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002954"
+      },
+      "email": "laurens.vercauteren@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Aline",
+      "last_name": "Verbrugge",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002951"
+      },
+      "email": "aline.verbrugge@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Ziggy",
+      "last_name": "Vanlishout",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002953"
+      },
+      "email": "ziggy.vanlishout@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Geert",
+      "last_name": "Thijs",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002952"
+      },
+      "email": "geert.thijs@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Pieter",
+      "last_name": "Heyvaert",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
+      },
+      "email": "pieter.heyvaert@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Yaron",
+      "last_name": "Dassonneville",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002950"
+      },
+      "email": "yaron.dassonneville@vlaanderen.be"
     },
     {
       "role": "C",
-      "first_name": "MedewerkerVoornaam",
-      "last_name": "MedewerkerNaam",
+      "first_name": "Benjamin",
+      "last_name": "Vermeulen",
       "affiliation": {
-        "name": "MedewerkerAffiliatie",
-        "website": "https://medewerkerwebsiteurl"
-      },
-      "email": "medewerkervoornaam.medewerkernaam@medewerkerdomein"
+        "name": "Stad Mechelen",
+        "website": "https://www.mechelen.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jan",
+      "last_name": "Vermang",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Fien",
+      "last_name": "Vandekerckhove",
+      "affiliation": {
+        "name": "Boerenbond",
+        "website": "https://www.boerenbond.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Karel",
+      "last_name": "Vandaele",
+      "affiliation": {
+        "name": "Provincie Limburg",
+        "website": "https://limburg.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Nele",
+      "last_name": "Van Ransbeeck",
+      "affiliation": {
+        "name": "Vlaamse Milieumaatschappij",
+        "website": "https://www.vmm.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Geert",
+      "last_name": "Van Haute",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Dries",
+      "last_name": "Luts",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Johan",
+      "last_name": "Krist",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant ",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Sacha",
+      "last_name": "Gobeyn",
+      "affiliation": {
+        "name": "FLUVES",
+        "website": "https://www.fluves.com/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Bruno",
+      "last_name": "Depond",
+      "affiliation": {
+        "name": "Gemeente Zaventem",
+        "website": "https://www.zaventem.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Seth",
+      "last_name": "Callewaert",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tinne",
+      "last_name": "Cahy",
+      "affiliation": {
+        "name": "Sumaqua",
+        "website": "https://www.sumaqua.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Raf",
+      "last_name": "Bouteligier",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Margriet",
+      "last_name": "Baert",
+      "affiliation": {
+        "name": "Agentschap Landbouw en Zeevisserij",
+        "website": "https://lv.vlaanderen.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Youri",
+      "last_name": "Amerlinck",
+      "affiliation": {
+        "name": "Aquafin",
+        "website": "https://www.aquafin.be/"
+      }
     }
   ],
   "datatypes": [],

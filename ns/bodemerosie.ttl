@@ -6,6 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/ns/generiek#Onderhoud> a rdfs:Class;
@@ -25,13 +26,6 @@
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
 
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud> a owl:ObjectProperty;
-  rdfs:label "onderhoud"@nl;
-  rdfs:comment "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
-
 <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke> a owl:ObjectProperty;
   rdfs:label "verantwoordelijke"@nl;
   rdfs:comment "De verantwoordelijke van een Erosiebestrijdingsmaatregel."@nl;
@@ -44,21 +38,6 @@
   rdfs:comment "Deel van een Erosiebestrijdingsmaatregel."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie> a owl:ObjectProperty;
-  rdfs:label "dimensie"@nl;
-  <http://purl.org/vocab/vann/usageNote> "http://purl.org/dc/elements/1.1/format"@nl;
-  rdfs:comment "De dimensie van de Erosiepoel."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <https://data.vlaanderen.be/ns/generiek#Dimensie> .
-
-<https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume> a owl:ObjectProperty;
-  rdfs:label "maximaal volume"@nl;
-  rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
-  rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie#Graszone> a owl:Class;
   rdfs:label "Graszone"@nl;
@@ -80,6 +59,15 @@
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
   rdfs:range <https://test.data.vlaanderen.be/ns/bodemerosie#Zone> .
 
+<https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume> a owl:ObjectProperty;
+  rdfs:label "maximaal volume"@nl;
+  rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/bodemerosie>;
+  rdfs:range schemas:QuantitativeValue .
+
+dc:format a rdf:Property .
+
 dc:isPartOf a rdf:Property .
 
 dc:type a rdf:Property .
@@ -87,6 +75,10 @@ dc:type a rdf:Property .
 crm:P52_has_current_owner a rdf:Property .
 
 prov:atLocation a rdf:Property .
+
+prov:endedAtTime a rdf:Property .
+
+prov:startedAtTime a rdf:Property .
 
 <https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel> a owl:Class;
   rdfs:label "Erosiepoel"@nl;
@@ -112,12 +104,123 @@ prov:atLocation a rdf:Property .
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://medewerkerwebsiteurl>;
-      foaf:name "MedewerkerAffiliatie"
+      foaf:homepage <https://www.mechelen.be/>;
+      foaf:name "Stad Mechelen"
     ];
-    foaf:firstName "MedewerkerVoornaam";
-    foaf:lastName "MedewerkerNaam";
-    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+    foaf:firstName "Benjamin";
+    foaf:lastName "Vermeulen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/nl>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Vermang"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.boerenbond.be/>;
+      foaf:name "Boerenbond"
+    ];
+    foaf:firstName "Fien";
+    foaf:lastName "Vandekerckhove"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://limburg.be/>;
+      foaf:name "Provincie Limburg"
+    ];
+    foaf:firstName "Karel";
+    foaf:lastName "Vandaele"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vmm.be/>;
+      foaf:name "Vlaamse Milieumaatschappij"
+    ];
+    foaf:firstName "Nele";
+    foaf:lastName "Van Ransbeeck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/nl>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Van Haute"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/nl>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Dries";
+    foaf:lastName "Luts"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant "
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "Krist"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.fluves.com/>;
+      foaf:name "FLUVES"
+    ];
+    foaf:firstName "Sacha";
+    foaf:lastName "Gobeyn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.zaventem.be/>;
+      foaf:name "Gemeente Zaventem"
+    ];
+    foaf:firstName "Bruno";
+    foaf:lastName "Depond"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/nl>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Seth";
+    foaf:lastName "Callewaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.sumaqua.be/>;
+      foaf:name "Sumaqua"
+    ];
+    foaf:firstName "Tinne";
+    foaf:lastName "Cahy"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Bouteligier"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://lv.vlaanderen.be/>;
+      foaf:name "Agentschap Landbouw en Zeevisserij"
+    ];
+    foaf:firstName "Margriet";
+    foaf:lastName "Baert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.aquafin.be/>;
+      foaf:name "Aquafin"
+    ];
+    foaf:firstName "Youri";
+    foaf:lastName "Amerlinck"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -128,27 +231,102 @@ prov:atLocation a rdf:Property .
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso <https://data.vlaanderen.be/ns/generiek#Onderhoud>,
+    prov:startedAtTime,
+    prov:endedAtTime,
     prov:atLocation,
     crm:P52_has_current_owner,
     dc:type,
-    dc:isPartOf;
+    dc:isPartOf,
+    dc:format;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://editorwebsiteurl>;
-      foaf:name "EditorAffiliatie"
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002955>;
+      foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "EditorVoornaam";
-    foaf:lastName "EditorNaam";
-    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002954>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002951>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Aline";
+    foaf:lastName "Verbrugge";
+    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002953>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002952>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Pieter";
+    foaf:lastName "Heyvaert";
+    foaf:mbox <mailto:pieter.heyvaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002950>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville";
+    foaf:mbox <mailto:yaron.dassonneville@vlaanderen.be>
   ];
   foaf:maker [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://auteurwebsiteurl>;
-      foaf:name "AuteurAffiliatie"
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
     ];
-    foaf:firstName "AuteurVoornaam";
-    foaf:lastName "AuteurNaam";
-    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+    foaf:firstName "Kenny";
+    foaf:lastName "Stevens";
+    foaf:mbox <mailto:kenny.stevens@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Potemans";
+    foaf:mbox <mailto:jan.potemans@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant "
+    ];
+    foaf:firstName "Karen";
+    foaf:lastName "Peeters";
+    foaf:mbox <mailto:karen.peeters@vlaamsbrabant.be>
   ] .

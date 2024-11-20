@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/cc9eb407b0257fdf5a73a6b665e2b51e65049c7d",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/cc9eb407b0257fdf5a73a6b665e2b51e65049c7d/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/ec510af1a585a724d38683ea72b742e087569c4f",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/ec510af1a585a724d38683ea72b742e087569c4f/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -104,6 +104,25 @@
   ],
   "properties": [
     {
+      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume",
+      "name": "maximaalVolume",
+      "label": {
+        "nl": "maximaal volume"
+      },
+      "sort": "maximaal volume",
+      "description": {
+        "nl": "Het maximaal volume voor er sediment en water afvloeit."
+      },
+      "usage": {},
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
+      ],
+      "range": [
+        "https://schema.org/QuantitativeValue"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
       "name": "afvoerzone",
       "label": {
@@ -142,46 +161,6 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.maxVolume",
-      "name": "maximaalVolume",
-      "label": {
-        "nl": "maximaal volume"
-      },
-      "sort": "maximaal volume",
-      "description": {
-        "nl": "Het maximaal volume voor er sediment en water afvloeit."
-      },
-      "usage": {},
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
-      ],
-      "range": [
-        "http://qudt.org/schema/qudt/QuantityValue"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel.dimensie",
-      "name": "dimensie",
-      "label": {
-        "nl": "dimensie"
-      },
-      "sort": "dimensie",
-      "description": {
-        "nl": "De dimensie van de Erosiepoel."
-      },
-      "usage": {
-        "nl": "http://purl.org/dc/elements/1.1/format"
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/generiek#Dimensie"
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.verantwoordelijke",
       "name": "verantwoordelijke",
       "label": {
@@ -197,25 +176,6 @@
       ],
       "range": [
         "http://purl.org/dc/terms/Agent"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.onderhoud",
-      "name": "onderhoud",
-      "label": {
-        "nl": "onderhoud"
-      },
-      "sort": "onderhoud",
-      "description": {
-        "nl": "De onderhouden die gebeurd zijn voor de Erosiebestrijdingsmaatregel."
-      },
-      "usage": {},
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/generiek#Onderhoud"
       ],
       "parents": []
     },
@@ -261,33 +221,238 @@
   "contributors": [
     {
       "role": "A",
-      "first_name": "AuteurVoornaam",
-      "last_name": "AuteurNaam",
+      "first_name": "Kenny",
+      "last_name": "Stevens",
       "affiliation": {
-        "name": "AuteurAffiliatie",
-        "website": "https://auteurwebsiteurl"
+        "name": "VERA",
+        "website": "https://www.vera.be/"
       },
-      "email": "auteurvoornaam.auteurnaam@auteurdomein"
+      "email": "kenny.stevens@vera.be"
+    },
+    {
+      "role": "A",
+      "first_name": "Jan",
+      "last_name": "Potemans",
+      "affiliation": {
+        "name": "VERA",
+        "website": "https://www.vera.be/"
+      },
+      "email": "jan.potemans@vera.be"
+    },
+    {
+      "role": "A",
+      "first_name": "Karen",
+      "last_name": "Peeters",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant ",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      },
+      "email": "karen.peeters@vlaamsbrabant.be"
     },
     {
       "role": "E",
-      "first_name": "EditorVoornaam",
-      "last_name": "EditorNaam",
+      "first_name": "Eveline",
+      "last_name": "Vlassenroot",
       "affiliation": {
-        "name": "EditorAffiliatie",
-        "website": "https://editorwebsiteurl"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002955"
       },
-      "email": "editorvoornaam.editornaam@editordomein"
+      "email": "eveline.vlassenroot@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Laurens",
+      "last_name": "Vercauteren",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002954"
+      },
+      "email": "laurens.vercauteren@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Aline",
+      "last_name": "Verbrugge",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002951"
+      },
+      "email": "aline.verbrugge@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Ziggy",
+      "last_name": "Vanlishout",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002953"
+      },
+      "email": "ziggy.vanlishout@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Geert",
+      "last_name": "Thijs",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002952"
+      },
+      "email": "geert.thijs@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Pieter",
+      "last_name": "Heyvaert",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
+      },
+      "email": "pieter.heyvaert@vlaanderen.be"
+    },
+    {
+      "role": "E",
+      "first_name": "Yaron",
+      "last_name": "Dassonneville",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002950"
+      },
+      "email": "yaron.dassonneville@vlaanderen.be"
     },
     {
       "role": "C",
-      "first_name": "MedewerkerVoornaam",
-      "last_name": "MedewerkerNaam",
+      "first_name": "Benjamin",
+      "last_name": "Vermeulen",
       "affiliation": {
-        "name": "MedewerkerAffiliatie",
-        "website": "https://medewerkerwebsiteurl"
-      },
-      "email": "medewerkervoornaam.medewerkernaam@medewerkerdomein"
+        "name": "Stad Mechelen",
+        "website": "https://www.mechelen.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jan",
+      "last_name": "Vermang",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Fien",
+      "last_name": "Vandekerckhove",
+      "affiliation": {
+        "name": "Boerenbond",
+        "website": "https://www.boerenbond.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Karel",
+      "last_name": "Vandaele",
+      "affiliation": {
+        "name": "Provincie Limburg",
+        "website": "https://limburg.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Nele",
+      "last_name": "Van Ransbeeck",
+      "affiliation": {
+        "name": "Vlaamse Milieumaatschappij",
+        "website": "https://www.vmm.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Geert",
+      "last_name": "Van Haute",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Dries",
+      "last_name": "Luts",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Johan",
+      "last_name": "Krist",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant ",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Sacha",
+      "last_name": "Gobeyn",
+      "affiliation": {
+        "name": "FLUVES",
+        "website": "https://www.fluves.com/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Bruno",
+      "last_name": "Depond",
+      "affiliation": {
+        "name": "Gemeente Zaventem",
+        "website": "https://www.zaventem.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Seth",
+      "last_name": "Callewaert",
+      "affiliation": {
+        "name": "Departement Omgeving",
+        "website": "https://omgeving.vlaanderen.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tinne",
+      "last_name": "Cahy",
+      "affiliation": {
+        "name": "Sumaqua",
+        "website": "https://www.sumaqua.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Raf",
+      "last_name": "Bouteligier",
+      "affiliation": {
+        "name": "Provincie Vlaams-Brabant",
+        "website": "https://www.vlaamsbrabant.be/nl"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Margriet",
+      "last_name": "Baert",
+      "affiliation": {
+        "name": "Agentschap Landbouw en Zeevisserij",
+        "website": "https://lv.vlaanderen.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Youri",
+      "last_name": "Amerlinck",
+      "affiliation": {
+        "name": "Aquafin",
+        "website": "https://www.aquafin.be/"
+      }
     }
   ],
   "external_terms": [],
