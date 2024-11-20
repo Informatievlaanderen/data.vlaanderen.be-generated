@@ -226,10 +226,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
       "ap-definition-nl": {
-        "nl": "TODO"
+        "nl": "Beperkingen, inschrijvingen en deelnames aan een Activiteit."
       },
       "ap-label-nl": {
         "nl": "Deelname"
+      },
+      "definition": {
+        "nl": "Beperkingen, inschrijvingen en deelnames aan een Activiteit."
       },
       "extra": {
         "EA-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
@@ -248,18 +251,25 @@
             "key": "label-nl",
             "note": "null",
             "value": "Deelname"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Beperkingen, inschrijvingen en deelnames aan een Activiteit."
           }
         ],
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "TODO"
+          "nl": "Beperkingen, inschrijvingen en deelnames aan een Activiteit."
         },
         "ap-label-nl": {
           "nl": "Deelname"
         },
         "ap-usageNote-nl": "",
-        "definition": "",
+        "definition": {
+          "nl": "Beperkingen, inschrijvingen en deelnames aan een Activiteit."
+        },
         "label": {
           "nl": "Deelname"
         },
@@ -861,8 +871,8 @@
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-HDG",
   "disabled": false,
-  "documentcommit": "28912549cb2d8219cb65e41acd189e2b91a9edf0",
-  "dummy": "041",
+  "documentcommit": "96f3fc91d3cea5201880dba10361a45e7a706cfc",
+  "dummy": "042",
   "eap": "MijnApplicatieprofiel-AP.eap",
   "editors": [
     {
@@ -2582,6 +2592,11 @@
             "value": "NOTE"
           },
           {
+            "key": "ap-defintion-nl",
+            "note": "Realisatie die een effect heeft op de Activiteit.",
+            "value": "NOTE"
+          },
+          {
             "key": "ap-label-nl",
             "note": "beïnvloedDoor",
             "value": "NOTE"
@@ -2604,6 +2619,11 @@
           {
             "key": "uri",
             "note": "http://www.w3.org/ns/prov#wasInfluencedBy",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-defintion-nl",
+            "note": "Realisatie die een effect heeft op de Activiteit.",
             "value": "NOTE"
           },
           {
@@ -2635,6 +2655,8 @@
       "label": {
         "nl": "beïnvloedDoor"
       },
+      "maxCardinality": "*",
+      "minCardinality": "0",
       "name": "beïnvloeddoor",
       "range": [
         {
@@ -3208,9 +3230,15 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{3690FCA1-A925-4a2f-AA06-8B90B4597F16}",
       "ap-definition-nl": {
-        "nl": "TODO"
+        "nl": "Activiteit waarop de Realisatie een effect heeft."
+      },
+      "ap-label-nl": {
+        "nl": "beïnvloedt"
       },
       "codelist": [],
+      "definition": {
+        "nl": "Activiteit waarop de Realisatie een effect heeft."
+      },
       "domain": [
         {
           "EA-Name": "Realisatie",
@@ -3220,13 +3248,18 @@
       "extra": {
         "DestRoleTags": [
           {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#influenced",
+            "key": "ap-definition-nl",
+            "note": "Activiteit waarop de Realisatie een effect heeft.",
             "value": "NOTE"
           },
           {
-            "key": "ap--label-nl",
+            "key": "ap-label-nl",
             "note": "beïnvloedt",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://www.w3.org/ns/prov#influenced",
             "value": "NOTE"
           }
         ],
@@ -3245,33 +3278,49 @@
         },
         "RawTags": [
           {
-            "key": "uri",
-            "note": "http://www.w3.org/ns/prov#influenced",
+            "key": "ap-definition-nl",
+            "note": "Activiteit waarop de Realisatie een effect heeft.",
             "value": "NOTE"
           },
           {
-            "key": "ap--label-nl",
+            "key": "ap-label-nl",
             "note": "beïnvloedt",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "http://www.w3.org/ns/prov#influenced",
             "value": "NOTE"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "TODO"
+          "nl": "Activiteit waarop de Realisatie een effect heeft."
         },
-        "ap-label-nl": "",
+        "ap-label-nl": {
+          "nl": "beïnvloedt"
+        },
         "ap-usageNote-nl": "",
-        "definition": "",
+        "definition": {
+          "nl": "Activiteit waarop de Realisatie een effect heeft."
+        },
         "derived": "false",
         "destRole": "beïnvloedt",
-        "label": "",
+        "label": {
+          "nl": "beïnvloedt"
+        },
         "sourceRole": "beïnvloedDoor",
         "usage": ""
       },
       "generalization": [],
       "inpackage": "ACTIVE_PACKAGE",
-      "name": "",
+      "label": {
+        "nl": "beïnvloedt"
+      },
+      "maxCardinality": "*",
+      "minCardinality": "0",
+      "name": "beïnvloedt",
       "range": [
         {
           "EA-GUID": "{E8F2EE47-F4FE-4a90-BE3B-2B70492B9D25}",
@@ -4354,12 +4403,15 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{7D82E919-6AB4-4664-9B66-9C0DB053F04C}",
       "ap-definition-nl": {
-        "nl": "TODO"
+        "nl": "Classificering van de status aan de hand van een gecontroleerde codelijst."
       },
       "ap-label-nl": {
         "nl": "type"
       },
       "codelist": [],
+      "definition": {
+        "nl": "Classificering van de status aan de hand van een gecontroleerde codelijst."
+      },
       "domain": [
         {
           "EA-Name": "Activiteitsstatus",
@@ -4392,7 +4444,7 @@
             "value": "http://purl.org/dc/terms/type"
           },
           {
-            "key": "ap-definition.nl",
+            "key": "ap-definition-nl",
             "note": "null",
             "value": "Classificering van de status aan de hand van een gecontroleerde codelijst."
           }
@@ -4400,13 +4452,15 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "TODO"
+          "nl": "Classificering van de status aan de hand van een gecontroleerde codelijst."
         },
         "ap-label-nl": {
           "nl": "type"
         },
         "ap-usageNote-nl": "",
-        "definition": "",
+        "definition": {
+          "nl": "Classificering van de status aan de hand van een gecontroleerde codelijst."
+        },
         "label": {
           "nl": "type"
         },
@@ -9083,12 +9137,15 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{1DA9CA27-FEC5-4aa2-9C07-C8E819D3C135}",
       "ap-definition-nl": {
-        "nl": "TODO"
+        "nl": "Beperkingen, inschrijvingen en deelnames aan de Activiteit."
       },
       "ap-label-nl": {
         "nl": "deelname"
       },
       "codelist": [],
+      "definition": {
+        "nl": "Beperkingen, inschrijvingen en deelnames aan de Activiteit."
+      },
       "domain": [
         {
           "EA-Name": "Activiteit",
@@ -9119,18 +9176,25 @@
             "key": "name",
             "note": "null",
             "value": "Activiteit.deelname"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Beperkingen, inschrijvingen en deelnames aan de Activiteit."
           }
         ],
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "TODO"
+          "nl": "Beperkingen, inschrijvingen en deelnames aan de Activiteit."
         },
         "ap-label-nl": {
           "nl": "deelname"
         },
         "ap-usageNote-nl": "",
-        "definition": "",
+        "definition": {
+          "nl": "Beperkingen, inschrijvingen en deelnames aan de Activiteit."
+        },
         "label": {
           "nl": "deelname"
         },
@@ -9455,7 +9519,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "OSLO Hulp- en dienstverlening gedetineerden",
-  "toolchaincommit": "4ddb90e995072dbf37d320c9e14f43cc7cce5236",
+  "toolchaincommit": "8b2320ebac39bb17565cdb7ddf2428134997d2f1",
   "translation": [
     {
       "language": "nl",
