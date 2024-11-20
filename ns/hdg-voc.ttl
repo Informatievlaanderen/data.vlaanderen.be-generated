@@ -145,13 +145,6 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk> .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.activiteit> a owl:ObjectProperty;
-  rdfs:label ""@nl;
-  rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range crm:E7_Activity .
-
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE> a owl:ObjectProperty;
   rdfs:label "geplande VTE"@nl;
   rdfs:comment "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."@nl;
@@ -159,12 +152,17 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik> .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.realisator> a owl:ObjectProperty;
-  rdfs:label ""@nl;
-  rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie>;
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.gerealiseerdDoor> a owl:ObjectProperty;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert> a owl:ObjectProperty;
+  rdfs:label "realiseert"@nl;
+  rdfs:comment "De Realisator realiseert het Aanbod."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range crm:E7_Activity .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie> a owl:Class;
   rdfs:label "Sessie"@nl;
@@ -264,6 +262,10 @@ prov:qualifiedUsingActivity a rdf:Property .
 prov:startedAtTime a rdf:Property;
   rdfs:label "uitbetaling start"@nl .
 
+prov:wasAssociatedWith a rdf:Property .
+
+prov:wasInfluencedBy a rdf:Property .
+
 <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type> a rdf:Property .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit> a rdf:Property;
@@ -286,8 +288,6 @@ schemas:fundedItem a rdf:Property;
 schemas:funder a rdf:Property;
   rdfs:label "gefinancierd door"@nl .
 
-schemas:provider a rdf:Property .
-
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus> a owl:Class;
   rdfs:label "Activiteitsstatus"@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
@@ -297,19 +297,16 @@ schemas:provider a rdf:Property .
   rdfs:comment "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert> a rdf:Property;
-  rdfs:label "realiseert"@nl .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk> a owl:Class;
-  rdfs:label "Doelgroep Kenmerk"@nl;
-  rdfs:comment "Eigenschap die iedereen in de Doelgroep heeft."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
-
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie> a owl:Class;
   rdfs:label "Realisatie"@nl;
   rdfs:comment "De concrete realisering van een Aanbod door een Realisator."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf prov:Activity .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DoelgroepKenmerk> a owl:Class;
+  rdfs:label "Doelgroep Kenmerk"@nl;
+  rdfs:comment "Eigenschap die iedereen in de Doelgroep heeft."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik> a owl:Class;
   rdfs:label "VTE Gebruik"@nl;
@@ -350,8 +347,6 @@ schemas:provider a rdf:Property .
     schemas:Audience,
     schemas:MonetaryGrant,
     <https://www.w3.org/2004/02/skos/core#Concept>,
-    <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert>,
-    schemas:provider,
     schemas:funder,
     schemas:fundedItem,
     schemas:eventSchedule,
@@ -360,6 +355,8 @@ schemas:provider a rdf:Property .
     <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit>,
     <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit>,
     <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type>,
+    prov:wasInfluencedBy,
+    prov:wasAssociatedWith,
     prov:startedAtTime,
     prov:qualifiedUsingActivity,
     prov:endedAtTime,

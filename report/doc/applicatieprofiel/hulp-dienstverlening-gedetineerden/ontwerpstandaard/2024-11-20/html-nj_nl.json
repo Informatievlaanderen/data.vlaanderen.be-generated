@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/853f4813fe2a3e2cb2894ac74abdb1444faa9d45",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/853f4813fe2a3e2cb2894ac74abdb1444faa9d45/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/c600499512aad73e260ba4c4e469c64aa0f6701c",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/c600499512aad73e260ba4c4e469c64aa0f6701c/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -341,52 +341,6 @@
       },
       "properties": [
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.realisator",
-          "name": "realisator",
-          "sort": "Realisator",
-          "label": {
-            "nl": "Realisator"
-          },
-          "description": {
-            "nl": "Referentie naar verbonden klasse."
-          },
-          "usage": {
-            "nl": ""
-          },
-          "domain": [
-            {
-              "EA-Name": "Realisatie",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "",
-            "ap-label-nl": "",
-            "definition-nl": "",
-            "ap-definition-nl": "",
-            "usageNote-nl": "",
-            "ap-usageNote-nl": "",
-            "package": ""
-          }
-        },
-        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
           "name": "geplandeVte",
           "sort": "geplande VTE",
@@ -430,17 +384,17 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.activiteit",
-          "name": "activiteit",
-          "sort": "Activiteit",
+          "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
           "label": {
-            "nl": "Activiteit"
+            "nl": "gerealiseerd door"
           },
           "description": {
-            "nl": "Referentie naar verbonden klasse."
+            "nl": "De Realisatie wordt uitgevoerd door een Realisator."
           },
           "usage": {
-            "nl": ""
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
           },
           "domain": [
             {
@@ -450,29 +404,26 @@
           ],
           "range": [
             {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Realisator"
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "",
-            "ap-label-nl": "",
-            "definition-nl": "",
-            "ap-definition-nl": "",
-            "usageNote-nl": "",
-            "ap-usageNote-nl": "",
-            "package": ""
+            "ap-label-nl": "gerealiseerd door",
+            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "uri": "http://www.w3.org/ns/prov#wasAssociatedWith",
+            "ap-definition-nl": "De Realisatie wordt uitgevoerd door een Realisator."
           }
         },
         {
@@ -516,6 +467,41 @@
             "ap-usageNote-nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
             "ap-label-nl": "gebruikte VTE",
             "ap-definition-nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#influenced",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisatie",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#influenced",
+            "ap--label-nl": "beïnvloedt"
           }
         },
         {
@@ -1101,6 +1087,49 @@
           }
         },
         {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.gerealiseerdDoor",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
+          "label": {
+            "nl": "gerealiseerd door"
+          },
+          "description": {
+            "nl": "Het Aanbod wordt uitgevoerd door een Realisator."
+          },
+          "usage": {
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
+              "range_label": {
+                "nl": "Realisator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "name": "Realisator.gerealiseerdDoor",
+            "ap-definition-nl": "Het Aanbod wordt uitgevoerd door een Realisator.",
+            "ap-label-nl": "gerealiseerd door"
+          }
+        },
+        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad",
           "name": "participatiegraad",
           "sort": "participatiegraad",
@@ -1256,49 +1285,6 @@
             "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat.",
             "label-nl": "locatie",
             "uri": "https://www.w3.org/ns/prov#atLocation"
-          }
-        },
-        {
-          "uri": "https://schema.org/provider",
-          "name": "gerealiseerdDoor",
-          "sort": "gerealiseerd door",
-          "label": {
-            "nl": "gerealiseerd door"
-          },
-          "description": {
-            "nl": "Het Aanbod wordt uitgevoerd door een Realisator."
-          },
-          "usage": {
-            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-            "uri": "https://schema.org/provider",
-            "ap-definition-nl": "Het Aanbod wordt uitgevoerd door een Realisator.",
-            "ap-label-nl": "gerealiseerd door"
           }
         },
         {
@@ -1506,6 +1492,43 @@
             "definition-nl": "De Activiteit maakt deel uit van een overkoepelende Activiteit.",
             "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
             "usageNote-nl": "Dit wordt gebruikt om Sessies aan een Sessiereeks te hangen."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
+          "name": "beïnvloeddoor",
+          "sort": "beïnvloedDoor",
+          "label": {
+            "nl": "beïnvloedDoor"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisatie",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisatie",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
+              "range_label": {
+                "nl": "Realisatie"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
+            "ap-label-nl": "beïnvloedDoor"
           }
         },
         {
@@ -2551,6 +2574,46 @@
           }
         },
         {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
+          "name": "realiseert",
+          "sort": "realiseert",
+          "label": {
+            "nl": "realiseert"
+          },
+          "description": {
+            "nl": "De Realisator realiseert het Aanbod."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Realisator",
+              "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De Realisator realiseert het Aanbod.",
+            "name": "Realisator.realiseert",
+            "label-nl": "realiseert"
+          }
+        },
+        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#GefinancierdDoor",
           "name": "gefinancierdDoor",
           "sort": "gefinancierd door",
@@ -2592,14 +2655,14 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-          "name": "realiseert",
-          "sort": "realiseert",
+          "uri": "http://www.w3.org/ns/prov#wasAssociateFor",
+          "name": "realisatie",
+          "sort": "realisatie",
           "label": {
-            "nl": "realiseert"
+            "nl": "realisatie"
           },
           "description": {
-            "nl": "De Realisator realiseert het Aanbod."
+            "nl": "Realisaties waartoe de Realisator bijdraagt."
           },
           "usage": {},
           "domain": [
@@ -2610,26 +2673,25 @@
           ],
           "range": [
             {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+              "range_label": "Realisatie",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_uri": "#Realisatie",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Realisatie"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "De Realisator realiseert het Aanbod.",
-            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
-            "name": "Realisator.realiseert",
-            "label-nl": "realiseert"
+            "ap-label-nl": "realisatie",
+            "ap-definition-nl": "Realisaties waartoe de Realisator bijdraagt.",
+            "uri": "http://www.w3.org/ns/prov#wasAssociateFor"
           }
         },
         {
@@ -3165,10 +3227,25 @@
       "parents": []
     },
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.realisator",
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.realiseert",
       "name": {
-        "nl": "Realisator",
-        "undefined": "realisator"
+        "nl": "realiseert",
+        "undefined": "realiseert"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.gerealiseerdDoor",
+      "name": {
+        "nl": "gerealiseerd door",
+        "undefined": "gerealiseerdDoor"
       },
       "description": {},
       "domain": [
@@ -3184,21 +3261,6 @@
       "name": {
         "nl": "geplande VTE",
         "undefined": "geplandeVte"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.activiteit",
-      "name": {
-        "nl": "Activiteit",
-        "undefined": "activiteit"
       },
       "description": {},
       "domain": [

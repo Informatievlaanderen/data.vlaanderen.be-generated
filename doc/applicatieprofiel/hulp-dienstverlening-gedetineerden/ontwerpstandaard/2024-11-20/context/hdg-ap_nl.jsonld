@@ -10,6 +10,11 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "Activiteit.beïnvloedDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasInfluencedBy",
+      "@type": "@id"
+    },
     "Activiteit.categorie": {
       "@id": "https://schema.org/category",
       "@type": "@id"
@@ -25,7 +30,7 @@
     },
     "Activiteit.gerealiseerdDoor": {
       "@container": "@set",
-      "@id": "https://schema.org/provider",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisator.gerealiseerdDoor",
       "@type": "@id"
     },
     "Activiteit.infrastructuur": {
@@ -254,8 +259,9 @@
       "@type": "@id"
     },
     "Realisatie": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie",
-    "Realisatie.activiteit": {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.activiteit",
+    "Realisatie.beïnvloedt": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#influenced",
       "@type": "@id"
     },
     "Realisatie.gebruikteVte": {
@@ -268,12 +274,13 @@
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.geplandeVTE",
       "@type": "@id"
     },
-    "Realisatie.locatie": {
-      "@id": "http://www.w3.org/ns/prov#atLocation",
+    "Realisatie.gerealiseerdDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasAssociatedWith",
       "@type": "@id"
     },
-    "Realisatie.realisator": {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Realisatie.realisator",
+    "Realisatie.locatie": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "@id"
     },
     "Realisatie.type": {
@@ -294,6 +301,11 @@
     "Realisator.naam": {
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Realisator.realisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#wasAssociateFor",
+      "@type": "@id"
     },
     "Realisator.realiseert": {
       "@container": "@set",
