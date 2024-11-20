@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/2a958414c262b83700e1251a02ab9664fe909037",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/2a958414c262b83700e1251a02ab9664fe909037/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/b833e1333697e444e3fa1812f5e922ef4169a15d",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/b833e1333697e444e3fa1812f5e922ef4169a15d/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -322,7 +322,7 @@
       },
       "sort": "Sessie",
       "description": {
-        "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+        "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
       },
       "usage": {},
       "parents": [
@@ -336,7 +336,7 @@
       ],
       "rawTags": {
         "label-nl": "Sessie",
-        "definition-nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment.",
+        "definition-nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment.",
         "name": "Sessie"
       },
       "properties": []
@@ -1066,7 +1066,7 @@
             "nl": "categorie"
           },
           "description": {
-            "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
+            "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
           },
           "usage": {},
           "domain": [
@@ -1094,7 +1094,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "categorie",
-            "ap-definition-nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten.",
+            "ap-definition-nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten.",
             "uri": "https://schema.org/category"
           }
         },
@@ -1106,7 +1106,7 @@
             "nl": "doelgroep"
           },
           "description": {
-            "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+            "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
           },
           "usage": {},
           "domain": [
@@ -1133,8 +1133,8 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Groep van personen voor wie het Aanbod bedoeld is.",
-            "ap-definition-nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is.",
+            "definition-nl": "Groep van personen voor wie de Activiteit bedoeld is.",
+            "ap-definition-nl": "Groep van gedetineerden voor de Activiteit bedoeld is.",
             "uri": "https://schema.org/audience",
             "label-nl": "doelgroep"
           }
@@ -1400,7 +1400,7 @@
             "nl": "Taal waarin de Activiteit doorgaat."
           },
           "usage": {
-            "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Aanbod gebruikt worden."
+            "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
           },
           "domain": [
             {
@@ -1429,7 +1429,7 @@
             "ap-label-nl": "taal",
             "ap-definition-nl": "Taal waarin de Activiteit doorgaat.",
             "uri": "http://purl.org/dc/terms/language",
-            "usageNote-nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Aanbod gebruikt worden."
+            "usageNote-nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
           }
         },
         {
@@ -2887,12 +2887,12 @@
       },
       "sort": "Financiering",
       "description": {
-        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
       },
       "usage": {},
       "parents": [],
       "rawTags": {
-        "ap-definition-nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod.",
+        "ap-definition-nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit.",
         "ap-label-nl": "Financiering",
         "name": "Financiering",
         "uri": "https://schema.org/MonetaryGrant"
@@ -3620,6 +3620,47 @@
           }
         },
         {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+          "name": "minimumAantalDeelnemers",
+          "sort": "minimum aantal deelnemers",
+          "label": {
+            "nl": "minimum aantal deelnemers"
+          },
+          "description": {
+            "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Deelname",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "minimum aantal deelnemers",
+            "definition-nl": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.",
+            "ap-definition-nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden.",
+            "name": "minAantalDeelnemers"
+          }
+        },
+        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
           "name": "maximaalAantalDeelnemersPerInstantie",
           "sort": "maximaal aantal deelnemers per instantie",
@@ -3661,48 +3702,7 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers",
-          "name": "minimumAantalDeelnemers",
-          "sort": "minimum aantal deelnemers",
-          "label": {
-            "nl": "minimum aantal deelnemers"
-          },
-          "description": {
-            "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Deelname",
-              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "minimum aantal deelnemers",
-            "definition-nl": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.",
-            "ap-definition-nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden.",
-            "name": "Activiteit.minAantalDeelnemers"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.maxAantalDeelnemers",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
           "name": "maximumAantalDeelnemers",
           "sort": "maximum aantal deelnemers",
           "label": {
@@ -3739,11 +3739,11 @@
             "label-nl": "maximum aantal deelnemers",
             "definition-nl": "Maximaal aantal deelnemers voor de Activiteit.",
             "ap-definition-nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit.",
-            "name": "Activiteit.maxAantalDeelnemers"
+            "name": "maxAantalDeelnemers"
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
           "name": "aantalInschrijvingen",
           "sort": "aantal inschrijvingen",
           "label": {
@@ -3780,11 +3780,11 @@
             "label-nl": "aantal inschrijvingen",
             "definition-nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
             "ap-definition-nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
-            "name": "Activiteit.aantalInschrijvingen"
+            "name": "aantalInschrijvingen"
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames",
           "name": "aantalDeelnames",
           "sort": "aantal deelnames",
           "label": {
@@ -3820,7 +3820,7 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "name": "Activiteit.aantalDeelnames",
+            "name": "aantalDeelnames",
             "label-nl": "aantal deelnames",
             "definition-nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
             "ap-definition-nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit.",
@@ -3828,7 +3828,7 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
           "name": "aantalAanmeldingen",
           "sort": "aantal aanmeldingen",
           "label": {
@@ -3867,7 +3867,7 @@
             "label-nl": "aantal aanmeldingen",
             "definition-nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.",
             "ap-definition-nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
-            "name": "Activiteit.aantalAanmeldingen",
+            "name": "aantalAanmeldingen",
             "ap-usageNote-nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
           }
         }

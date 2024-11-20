@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:org="http://www.w3.org/ns/org#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:schema="http://schema.org/">
-  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen">
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.deelname">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -212,37 +212,16 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-    <rdfs:label xml:lang="nl">aantal aanmeldingen</rdfs:label>
-    <rdfs:comment xml:lang="nl">Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.</rdfs:comment>
-    <rdfs:domain>
+    <rdfs:label xml:lang="nl">deelname</rdfs:label>
+    <rdfs:comment xml:lang="nl">Beperkingen, inschrijvingen en deelnames aan de Activiteit.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+    <rdfs:range>
       <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname">
         <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
         <rdfs:label xml:lang="nl">Deelname</rdfs:label>
         <rdfs:comment xml:lang="nl">Beperkingen, inschrijvingen en deelnames aan een Activiteit.</rdfs:comment>
       </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
-    <rdfs:label xml:lang="nl">aantal deelnames</rdfs:label>
-    <rdfs:comment xml:lang="nl">Aantal personen die effectief hebben deelgenomen aan de Activiteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
-    <rdfs:label xml:lang="nl">aantal inschrijvingen</rdfs:label>
-    <rdfs:comment xml:lang="nl">Aantal personen dat zich heeft ingeschreven voor een Activiteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.deelname">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
-    <rdfs:label xml:lang="nl">deelname</rdfs:label>
-    <rdfs:comment xml:lang="nl">Beperkingen, inschrijvingen en deelnames aan de Activiteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
-    <rdfs:range rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    </rdfs:range>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
@@ -251,20 +230,6 @@
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.maxAantalDeelnemers">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
-    <rdfs:label xml:lang="nl">maximum aantal deelnemers</rdfs:label>
-    <rdfs:comment xml:lang="nl">Maximaal aantal deelnemers voor de Activiteit.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
-    <rdfs:label xml:lang="nl">minimum aantal deelnemers</rdfs:label>
-    <rdfs:comment xml:lang="nl">Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">participatiegraad</rdfs:label>
@@ -360,7 +325,7 @@
   <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">Sessie</rdfs:label>
-    <rdfs:comment xml:lang="nl">Het concreet plaatsvinden van een Aanbod op een bepaald moment.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Het concreet plaatsvinden van een Activiteit op een bepaald moment.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
   </owl:Class>
   <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks">
@@ -383,6 +348,27 @@
     <rdfs:comment xml:lang="nl">Het aantal VTE´s die gebruikt werden.</rdfs:comment>
     <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">aantal aanmeldingen</rdfs:label>
+    <rdfs:comment xml:lang="nl">Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">aantal deelnames</rdfs:label>
+    <rdfs:comment xml:lang="nl">Aantal personen die effectief hebben deelgenomen aan de Activiteit.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">aantal inschrijvingen</rdfs:label>
+    <rdfs:comment xml:lang="nl">Aantal personen dat zich heeft ingeschreven voor een Activiteit.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
@@ -422,6 +408,13 @@
     <rdfs:domain rdf:resource="https://schema.org/MonetaryGrant"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">maximum aantal deelnemers</rdfs:label>
+    <rdfs:comment xml:lang="nl">Maximaal aantal deelnemers voor de Activiteit.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">maximaal aantal deelnemers per instantie</rdfs:label>
@@ -436,6 +429,13 @@
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">minimum aantal deelnemers</rdfs:label>
+    <rdfs:comment xml:lang="nl">Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">minimaal aantal deelnemers per instantie</rdfs:label>

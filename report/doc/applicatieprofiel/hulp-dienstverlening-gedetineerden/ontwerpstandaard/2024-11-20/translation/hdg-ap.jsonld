@@ -604,7 +604,7 @@
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+        "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
       },
       "label": {
         "nl": "Sessie"
@@ -613,7 +613,7 @@
         "nl": "Sessie"
       },
       "ap-definition-nl": {
-        "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+        "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
       },
       "extra": {
         "EA-Name": "Sessie",
@@ -634,14 +634,14 @@
           "nl": "Sessie"
         },
         "definition": {
-          "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+          "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
         },
         "usage": "",
         "ap-label-nl": {
           "nl": "Sessie"
         },
         "ap-definition-nl": {
-          "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+          "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
         },
         "ap-usageNote-nl": "",
         "ap-codelist": "",
@@ -653,7 +653,7 @@
           },
           {
             "key": "definition-nl",
-            "value": "Het concreet plaatsvinden van een Aanbod op een bepaald moment.",
+            "value": "Het concreet plaatsvinden van een Activiteit op een bepaald moment.",
             "note": "null"
           },
           {
@@ -905,6 +905,93 @@
       "maxCardinality": "1"
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "minimumAantalDeelnemers",
+      "inpackage": "ACTIVE_PACKAGE",
+      "definition": {
+        "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
+      },
+      "label": {
+        "nl": "minimum aantal deelnemers"
+      },
+      "ap-label-nl": {
+        "nl": "minimum aantal deelnemers"
+      },
+      "ap-definition-nl": {
+        "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
+      },
+      "extra": {
+        "EA-Name": "minAantalDeelnemers",
+        "EA-Guid": "{008B4FEA-D974-4d28-B52F-93AF53B3795B}",
+        "EA-Package": "OSLO-HDG",
+        "EA-Type": "attribute",
+        "EA-Domain": "Deelname",
+        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
+        "EA-Range": "Integer",
+        "RangeData": {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "label": {
+          "nl": "minimum aantal deelnemers"
+        },
+        "definition": {
+          "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
+        },
+        "usage": "",
+        "ap-label-nl": {
+          "nl": "minimum aantal deelnemers"
+        },
+        "ap-definition-nl": {
+          "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
+        },
+        "ap-usageNote-nl": "",
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "minimum aantal deelnemers",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.",
+            "note": "null"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden.",
+            "note": "null"
+          },
+          {
+            "key": "name",
+            "value": "minAantalDeelnemers",
+            "note": "null"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
+          "EA-Name": "Deelname"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "name": "medium",
@@ -1052,6 +1139,93 @@
           {
             "key": "ap-definition-nl",
             "value": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit.",
+            "note": "null"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
+          "EA-Name": "Deelname"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "maximumAantalDeelnemers",
+      "inpackage": "ACTIVE_PACKAGE",
+      "definition": {
+        "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
+      },
+      "label": {
+        "nl": "maximum aantal deelnemers"
+      },
+      "ap-label-nl": {
+        "nl": "maximum aantal deelnemers"
+      },
+      "ap-definition-nl": {
+        "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
+      },
+      "extra": {
+        "EA-Name": "maxAantalDeelnemers",
+        "EA-Guid": "{94E2F854-606A-44a1-90A8-8DFC5C41C141}",
+        "EA-Package": "OSLO-HDG",
+        "EA-Type": "attribute",
+        "EA-Domain": "Deelname",
+        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
+        "EA-Range": "Integer",
+        "RangeData": {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "label": {
+          "nl": "maximum aantal deelnemers"
+        },
+        "definition": {
+          "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
+        },
+        "usage": "",
+        "ap-label-nl": {
+          "nl": "maximum aantal deelnemers"
+        },
+        "ap-definition-nl": {
+          "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
+        },
+        "ap-usageNote-nl": "",
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "maximum aantal deelnemers",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Maximaal aantal deelnemers voor de Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "name",
+            "value": "maxAantalDeelnemers",
             "note": "null"
           }
         ],
@@ -1699,6 +1873,297 @@
       ],
       "generalization": [],
       "minCardinality": "1",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "aantalInschrijvingen",
+      "inpackage": "ACTIVE_PACKAGE",
+      "definition": {
+        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+      },
+      "label": {
+        "nl": "aantal inschrijvingen"
+      },
+      "ap-label-nl": {
+        "nl": "aantal inschrijvingen"
+      },
+      "ap-definition-nl": {
+        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+      },
+      "extra": {
+        "EA-Name": "aantalInschrijvingen",
+        "EA-Guid": "{A20CBDD1-1179-46f1-9400-33F82B05B566}",
+        "EA-Package": "OSLO-HDG",
+        "EA-Type": "attribute",
+        "EA-Domain": "Deelname",
+        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
+        "EA-Range": "Integer",
+        "RangeData": {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "label": {
+          "nl": "aantal inschrijvingen"
+        },
+        "definition": {
+          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+        },
+        "usage": "",
+        "ap-label-nl": {
+          "nl": "aantal inschrijvingen"
+        },
+        "ap-definition-nl": {
+          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+        },
+        "ap-usageNote-nl": "",
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "aantal inschrijvingen",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "name",
+            "value": "aantalInschrijvingen",
+            "note": "null"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
+          "EA-Name": "Deelname"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "aantalDeelnames",
+      "inpackage": "ACTIVE_PACKAGE",
+      "ap-usageNote-nl": {
+        "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
+      },
+      "usage": {
+        "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
+      },
+      "definition": {
+        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+      },
+      "label": {
+        "nl": "aantal deelnames"
+      },
+      "ap-label-nl": {
+        "nl": "aantal deelnames"
+      },
+      "ap-definition-nl": {
+        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+      },
+      "extra": {
+        "EA-Name": "aantalDeelnames",
+        "EA-Guid": "{3FCCD6C4-8116-4887-BC39-A105F34AD094}",
+        "EA-Package": "OSLO-HDG",
+        "EA-Type": "attribute",
+        "EA-Domain": "Deelname",
+        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
+        "EA-Range": "Integer",
+        "RangeData": {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "label": {
+          "nl": "aantal deelnames"
+        },
+        "definition": {
+          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+        },
+        "usage": {
+          "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
+        },
+        "ap-label-nl": {
+          "nl": "aantal deelnames"
+        },
+        "ap-definition-nl": {
+          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+        },
+        "ap-usageNote-nl": {
+          "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
+        },
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "name",
+            "value": "aantalDeelnames",
+            "note": "null"
+          },
+          {
+            "key": "label-nl",
+            "value": "aantal deelnames",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit.",
+            "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen.",
+            "note": "null"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
+          "EA-Name": "Deelname"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "name": "aantalAanmeldingen",
+      "inpackage": "ACTIVE_PACKAGE",
+      "ap-usageNote-nl": {
+        "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
+      },
+      "usage": {
+        "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
+      },
+      "definition": {
+        "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+      },
+      "label": {
+        "nl": "aantal aanmeldingen"
+      },
+      "ap-label-nl": {
+        "nl": "aantal aanmeldingen"
+      },
+      "ap-definition-nl": {
+        "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+      },
+      "extra": {
+        "EA-Name": "aantalAanmeldingen",
+        "EA-Guid": "{E3D851A2-0DEA-46d8-B5E0-44A8B0F4CAF1}",
+        "EA-Package": "OSLO-HDG",
+        "EA-Type": "attribute",
+        "EA-Domain": "Deelname",
+        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
+        "EA-Range": "Integer",
+        "RangeData": {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "label": {
+          "nl": "aantal aanmeldingen"
+        },
+        "definition": {
+          "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+        },
+        "usage": {
+          "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
+        },
+        "ap-label-nl": {
+          "nl": "aantal aanmeldingen"
+        },
+        "ap-definition-nl": {
+          "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+        },
+        "ap-usageNote-nl": {
+          "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
+        },
+        "ap-codelist": "",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "value": "aantal aanmeldingen",
+            "note": "null"
+          },
+          {
+            "key": "definition-nl",
+            "value": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.",
+            "note": "null"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
+            "note": "null"
+          },
+          {
+            "key": "name",
+            "value": "aantalAanmeldingen",
+            "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn.",
+            "note": "null"
+          }
+        ],
+        "Scope": "FULL_DEFINITON"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
+          "EA-Name": "Deelname"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "Integer",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "0",
       "maxCardinality": "1"
     },
     {
@@ -2544,180 +3009,6 @@
       "maxCardinality": "1"
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "minimumAantalDeelnemers",
-      "inpackage": "ACTIVE_PACKAGE",
-      "definition": {
-        "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
-      },
-      "label": {
-        "nl": "minimum aantal deelnemers"
-      },
-      "ap-label-nl": {
-        "nl": "minimum aantal deelnemers"
-      },
-      "ap-definition-nl": {
-        "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
-      },
-      "extra": {
-        "EA-Name": "minAantalDeelnemers",
-        "EA-Guid": "{008B4FEA-D974-4d28-B52F-93AF53B3795B}",
-        "EA-Package": "OSLO-HDG",
-        "EA-Type": "attribute",
-        "EA-Domain": "Deelname",
-        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": {
-          "nl": "minimum aantal deelnemers"
-        },
-        "definition": {
-          "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
-        },
-        "usage": "",
-        "ap-label-nl": {
-          "nl": "minimum aantal deelnemers"
-        },
-        "ap-definition-nl": {
-          "nl": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden."
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "value": "minimum aantal deelnemers",
-            "note": "null"
-          },
-          {
-            "key": "definition-nl",
-            "value": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden.",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Minimaal aantal gedetineerden die deelnemen voor een Activiteit kan plaatsvinden.",
-            "note": "null"
-          },
-          {
-            "key": "name",
-            "value": "Activiteit.minAantalDeelnemers",
-            "note": "null"
-          }
-        ],
-        "Scope": "FULL_DEFINITON"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
-          "EA-Name": "Deelname"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.maxAantalDeelnemers",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "maximumAantalDeelnemers",
-      "inpackage": "ACTIVE_PACKAGE",
-      "definition": {
-        "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
-      },
-      "label": {
-        "nl": "maximum aantal deelnemers"
-      },
-      "ap-label-nl": {
-        "nl": "maximum aantal deelnemers"
-      },
-      "ap-definition-nl": {
-        "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
-      },
-      "extra": {
-        "EA-Name": "maxAantalDeelnemers",
-        "EA-Guid": "{94E2F854-606A-44a1-90A8-8DFC5C41C141}",
-        "EA-Package": "OSLO-HDG",
-        "EA-Type": "attribute",
-        "EA-Domain": "Deelname",
-        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": {
-          "nl": "maximum aantal deelnemers"
-        },
-        "definition": {
-          "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
-        },
-        "usage": "",
-        "ap-label-nl": {
-          "nl": "maximum aantal deelnemers"
-        },
-        "ap-definition-nl": {
-          "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit."
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "value": "maximum aantal deelnemers",
-            "note": "null"
-          },
-          {
-            "key": "definition-nl",
-            "value": "Maximaal aantal deelnemers voor de Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "name",
-            "value": "Activiteit.maxAantalDeelnemers",
-            "note": "null"
-          }
-        ],
-        "Scope": "FULL_DEFINITON"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
-          "EA-Name": "Deelname"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "name": "intake",
@@ -2883,297 +3174,6 @@
       ],
       "generalization": [],
       "minCardinality": "1",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "aantalInschrijvingen",
-      "inpackage": "ACTIVE_PACKAGE",
-      "definition": {
-        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
-      },
-      "label": {
-        "nl": "aantal inschrijvingen"
-      },
-      "ap-label-nl": {
-        "nl": "aantal inschrijvingen"
-      },
-      "ap-definition-nl": {
-        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
-      },
-      "extra": {
-        "EA-Name": "aantalInschrijvingen",
-        "EA-Guid": "{A20CBDD1-1179-46f1-9400-33F82B05B566}",
-        "EA-Package": "OSLO-HDG",
-        "EA-Type": "attribute",
-        "EA-Domain": "Deelname",
-        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": {
-          "nl": "aantal inschrijvingen"
-        },
-        "definition": {
-          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
-        },
-        "usage": "",
-        "ap-label-nl": {
-          "nl": "aantal inschrijvingen"
-        },
-        "ap-definition-nl": {
-          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
-        },
-        "ap-usageNote-nl": "",
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "value": "aantal inschrijvingen",
-            "note": "null"
-          },
-          {
-            "key": "definition-nl",
-            "value": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "name",
-            "value": "Activiteit.aantalInschrijvingen",
-            "note": "null"
-          }
-        ],
-        "Scope": "FULL_DEFINITON"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
-          "EA-Name": "Deelname"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "aantalDeelnames",
-      "inpackage": "ACTIVE_PACKAGE",
-      "ap-usageNote-nl": {
-        "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-      },
-      "usage": {
-        "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-      },
-      "definition": {
-        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
-      },
-      "label": {
-        "nl": "aantal deelnames"
-      },
-      "ap-label-nl": {
-        "nl": "aantal deelnames"
-      },
-      "ap-definition-nl": {
-        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
-      },
-      "extra": {
-        "EA-Name": "aantalDeelnames",
-        "EA-Guid": "{3FCCD6C4-8116-4887-BC39-A105F34AD094}",
-        "EA-Package": "OSLO-HDG",
-        "EA-Type": "attribute",
-        "EA-Domain": "Deelname",
-        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": {
-          "nl": "aantal deelnames"
-        },
-        "definition": {
-          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
-        },
-        "usage": {
-          "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-        },
-        "ap-label-nl": {
-          "nl": "aantal deelnames"
-        },
-        "ap-definition-nl": {
-          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
-        },
-        "ap-usageNote-nl": {
-          "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-        },
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "name",
-            "value": "Activiteit.aantalDeelnames",
-            "note": "null"
-          },
-          {
-            "key": "label-nl",
-            "value": "aantal deelnames",
-            "note": "null"
-          },
-          {
-            "key": "definition-nl",
-            "value": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit.",
-            "note": "null"
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen.",
-            "note": "null"
-          }
-        ],
-        "Scope": "FULL_DEFINITON"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
-          "EA-Name": "Deelname"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "name": "aantalAanmeldingen",
-      "inpackage": "ACTIVE_PACKAGE",
-      "ap-usageNote-nl": {
-        "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-      },
-      "usage": {
-        "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-      },
-      "definition": {
-        "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
-      },
-      "label": {
-        "nl": "aantal aanmeldingen"
-      },
-      "ap-label-nl": {
-        "nl": "aantal aanmeldingen"
-      },
-      "ap-definition-nl": {
-        "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
-      },
-      "extra": {
-        "EA-Name": "aantalAanmeldingen",
-        "EA-Guid": "{E3D851A2-0DEA-46d8-B5E0-44A8B0F4CAF1}",
-        "EA-Package": "OSLO-HDG",
-        "EA-Type": "attribute",
-        "EA-Domain": "Deelname",
-        "EA-Domain-Guid": "{66B9F6E2-82BC-430a-BE85-8240EADFFF2C}",
-        "EA-Range": "Integer",
-        "RangeData": {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        },
-        "label": {
-          "nl": "aantal aanmeldingen"
-        },
-        "definition": {
-          "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
-        },
-        "usage": {
-          "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-        },
-        "ap-label-nl": {
-          "nl": "aantal aanmeldingen"
-        },
-        "ap-definition-nl": {
-          "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
-        },
-        "ap-usageNote-nl": {
-          "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-        },
-        "ap-codelist": "",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "value": "aantal aanmeldingen",
-            "note": "null"
-          },
-          {
-            "key": "definition-nl",
-            "value": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.",
-            "note": "null"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
-            "note": "null"
-          },
-          {
-            "key": "name",
-            "value": "Activiteit.aantalAanmeldingen",
-            "note": "null"
-          },
-          {
-            "key": "ap-usageNote-nl",
-            "value": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn.",
-            "note": "null"
-          }
-        ],
-        "Scope": "FULL_DEFINITON"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname",
-          "EA-Name": "Deelname"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "Integer",
-          "EA-Package": "",
-          "uri": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "0",
       "maxCardinality": "1"
     }
   ],
@@ -4924,7 +4924,7 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "inpackage": "OTHER_PACKAGE",
       "definition": {
-        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
       },
       "label": {
         "nl": "Financiering"
@@ -4933,7 +4933,7 @@
         "nl": "Financiering"
       },
       "ap-definition-nl": {
-        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
       },
       "extra": {
         "EA-Name": "Financiering",
@@ -4947,21 +4947,21 @@
           "nl": "Financiering"
         },
         "definition": {
-          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
+          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
         },
         "usage": "",
         "ap-label-nl": {
           "nl": "Financiering"
         },
         "ap-definition-nl": {
-          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
+          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
         },
         "ap-usageNote-nl": "",
         "ap-codelist": "",
         "RawTags": [
           {
             "key": "ap-definition-nl",
-            "value": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod.",
+            "value": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit.",
             "note": "null"
           },
           {
@@ -5483,7 +5483,7 @@
       "name": "categorie",
       "inpackage": "OTHER_PACKAGE",
       "definition": {
-        "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
+        "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
       },
       "label": {
         "nl": "categorie"
@@ -5492,7 +5492,7 @@
         "nl": "categorie"
       },
       "ap-definition-nl": {
-        "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
+        "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
       },
       "extra": {
         "EA-Name": "categorie",
@@ -5512,14 +5512,14 @@
           "nl": "categorie"
         },
         "definition": {
-          "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
+          "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
         },
         "usage": "",
         "ap-label-nl": {
           "nl": "categorie"
         },
         "ap-definition-nl": {
-          "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
+          "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
         },
         "ap-usageNote-nl": "",
         "ap-codelist": "",
@@ -5531,7 +5531,7 @@
           },
           {
             "key": "ap-definition-nl",
-            "value": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten.",
+            "value": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten.",
             "note": "null"
           },
           {
@@ -5567,7 +5567,7 @@
       "name": "doelgroep",
       "inpackage": "ACTIVE_PACKAGE",
       "definition": {
-        "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+        "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
       },
       "label": {
         "nl": "doelgroep"
@@ -5576,7 +5576,7 @@
         "nl": "doelgroep"
       },
       "ap-definition-nl": {
-        "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+        "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
       },
       "extra": {
         "EA-Name": "doelgroep",
@@ -5599,14 +5599,14 @@
           "nl": "doelgroep"
         },
         "definition": {
-          "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+          "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
         },
         "usage": "",
         "ap-label-nl": {
           "nl": "doelgroep"
         },
         "ap-definition-nl": {
-          "nl": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+          "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
         },
         "ap-usageNote-nl": "",
         "ap-codelist": "",
@@ -5614,12 +5614,12 @@
           {
             "key": "definition-nl",
             "value": "NOTE",
-            "note": "Groep van personen voor wie het Aanbod bedoeld is."
+            "note": "Groep van personen voor wie de Activiteit bedoeld is."
           },
           {
             "key": "ap-definition-nl",
             "value": "NOTE",
-            "note": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+            "note": "Groep van gedetineerden voor de Activiteit bedoeld is."
           },
           {
             "key": "uri",
@@ -5636,12 +5636,12 @@
           {
             "key": "definition-nl",
             "value": "NOTE",
-            "note": "Groep van personen voor wie het Aanbod bedoeld is."
+            "note": "Groep van personen voor wie de Activiteit bedoeld is."
           },
           {
             "key": "ap-definition-nl",
             "value": "NOTE",
-            "note": "Groep van gedetineerden voor wie het Aanbod bedoeld is."
+            "note": "Groep van gedetineerden voor de Activiteit bedoeld is."
           },
           {
             "key": "uri",
@@ -9063,7 +9063,7 @@
       "name": "taal",
       "inpackage": "OTHER_PACKAGE",
       "usage": {
-        "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Aanbod gebruikt worden."
+        "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
       },
       "definition": {
         "nl": "Taal waarin de Activiteit doorgaat."
@@ -9097,7 +9097,7 @@
           "nl": "Taal waarin de Activiteit doorgaat."
         },
         "usage": {
-          "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Aanbod gebruikt worden."
+          "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
         },
         "ap-label-nl": {
           "nl": "taal"
@@ -9125,7 +9125,7 @@
           },
           {
             "key": "usageNote-nl",
-            "value": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Aanbod gebruikt worden.",
+            "value": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden.",
             "note": "null"
           }
         ],
@@ -9711,15 +9711,15 @@
   "config": "config/config-ap.json",
   "branchtag": "main",
   "disabled": false,
-  "dummy": "043",
+  "dummy": "044",
   "filename": "config/mijn-applicatieprofiel-ap.json",
   "navigation": {
     "prev": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-11-18"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden",
   "urlref": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-11-20",
-  "documentcommit": "2a958414c262b83700e1251a02ab9664fe909037",
-  "toolchaincommit": "e2957d637bcb89b83f4bec931368ebfbff33968f",
+  "documentcommit": "b833e1333697e444e3fa1812f5e922ef4169a15d",
+  "toolchaincommit": "4fac543ea5d2d15d4e723bebf2bbde3d9e4c91ea",
   "hostname": "https://data.test-vlaanderen.be",
   "translation": [
     {

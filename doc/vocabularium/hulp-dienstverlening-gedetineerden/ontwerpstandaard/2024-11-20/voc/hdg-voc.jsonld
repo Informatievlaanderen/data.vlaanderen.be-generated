@@ -142,7 +142,7 @@
         "nl": "Sessie"
       },
       "definition": {
-        "nl": "Het concreet plaatsvinden van een Aanbod op een bepaald moment."
+        "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
       },
       "parents": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
@@ -321,6 +321,23 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "minimum aantal deelnemers"
+      },
+      "definition": {
+        "nl": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -345,6 +362,23 @@
       },
       "definition": {
         "nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "maximum aantal deelnemers"
+      },
+      "definition": {
+        "nl": "Maximaal aantal deelnemers voor de Activiteit."
       },
       "domain": [
         "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
@@ -473,6 +507,57 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aantal inschrijvingen"
+      },
+      "definition": {
+        "nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aantal deelnames"
+      },
+      "definition": {
+        "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aantal aanmeldingen"
+      },
+      "definition": {
+        "nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
       ],
       "generalization": []
     },
@@ -636,40 +721,6 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "minimum aantal deelnemers"
-      },
-      "definition": {
-        "nl": "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.maxAantalDeelnemers",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "maximum aantal deelnemers"
-      },
-      "definition": {
-        "nl": "Maximaal aantal deelnemers voor de Activiteit."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -700,57 +751,6 @@
       ],
       "range": [
         "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "aantal inschrijvingen"
-      },
-      "definition": {
-        "nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "aantal deelnames"
-      },
-      "definition": {
-        "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "aantal aanmeldingen"
-      },
-      "definition": {
-        "nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
       ],
       "generalization": []
     }

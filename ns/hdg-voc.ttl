@@ -39,27 +39,6 @@ schemas:MonetaryGrant a rdfs:Class .
 
 <https://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalAanmeldingen> a owl:DatatypeProperty;
-  rdfs:label "aantal aanmeldingen"@nl;
-  rdfs:comment "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:integer .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalDeelnames> a owl:DatatypeProperty;
-  rdfs:label "aantal deelnames"@nl;
-  rdfs:comment "Aantal personen die effectief hebben deelgenomen aan de Activiteit."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:integer .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.aantalInschrijvingen> a owl:DatatypeProperty;
-  rdfs:label "aantal inschrijvingen"@nl;
-  rdfs:comment "Aantal personen dat zich heeft ingeschreven voor een Activiteit."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:integer .
-
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.deelname> a owl:ObjectProperty;
   rdfs:label "deelname"@nl;
   rdfs:comment "Beperkingen, inschrijvingen en deelnames aan de Activiteit."@nl;
@@ -73,20 +52,6 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range skos:Concept .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.maxAantalDeelnemers> a owl:DatatypeProperty;
-  rdfs:label "maximum aantal deelnemers"@nl;
-  rdfs:comment "Maximaal aantal deelnemers voor de Activiteit."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:integer .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.minAantalDeelnemers> a owl:DatatypeProperty;
-  rdfs:label "minimum aantal deelnemers"@nl;
-  rdfs:comment "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:range xsd:integer .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad> a owl:ObjectProperty;
   rdfs:label "participatiegraad"@nl;
@@ -158,7 +123,7 @@ schemas:MonetaryGrant a rdfs:Class .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie> a owl:Class;
   rdfs:label "Sessie"@nl;
-  rdfs:comment "Het concreet plaatsvinden van een Aanbod op een bepaald moment."@nl;
+  rdfs:comment "Het concreet plaatsvinden van een Activiteit op een bepaald moment."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf crm:E7_Activity .
 
@@ -182,6 +147,27 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range xsd:double .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen> a owl:DatatypeProperty;
+  rdfs:label "aantal aanmeldingen"@nl;
+  rdfs:comment "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames> a owl:DatatypeProperty;
+  rdfs:label "aantal deelnames"@nl;
+  rdfs:comment "Aantal personen die effectief hebben deelgenomen aan de Activiteit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen> a owl:DatatypeProperty;
+  rdfs:label "aantal inschrijvingen"@nl;
+  rdfs:comment "Aantal personen dat zich heeft ingeschreven voor een Activiteit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein> a owl:ObjectProperty;
   rdfs:label "beleidsdomein"@nl;
@@ -221,6 +207,13 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range skos:Concept .
 
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers> a owl:DatatypeProperty;
+  rdfs:label "maximum aantal deelnemers"@nl;
+  rdfs:comment "Maximaal aantal deelnemers voor de Activiteit."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
+
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie> a owl:DatatypeProperty;
   rdfs:label "maximaal aantal deelnemers per instantie"@nl;
   rdfs:comment "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit."@nl;
@@ -234,6 +227,13 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers> a owl:DatatypeProperty;
+  rdfs:label "minimum aantal deelnemers"@nl;
+  rdfs:comment "Minimaal aantal personen die deelnemen voor een Activiteit kan plaatsvinden."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Deelname>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie> a owl:DatatypeProperty;
   rdfs:label "minimaal aantal deelnemers per instantie"@nl;
