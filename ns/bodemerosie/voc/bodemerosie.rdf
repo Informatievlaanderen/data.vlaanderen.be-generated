@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:schemas="https://schema.org/" xmlns:schema="http://schema.org/">
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.aanvoerzone">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:schemas="https://schema.org/" xmlns:schema="http://schema.org/">
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#DateTime">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -326,6 +326,12 @@
         </dc:contributor>
         <dc:issued>TODO</dc:issued>
         <rdfs:seeAlso>
+          <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+            <rdfs:label xml:lang="nl">BodemKenmerktype</rdfs:label>
+            <rdfs:label xml:lang="nl">Onderhoudstaak</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdfs:Class rdf:about="https://data.vlaanderen.be/ns/generiek#Onderhoud">
             <rdfs:label xml:lang="nl">Onderhoud</rdfs:label>
           </rdfs:Class>
@@ -347,6 +353,10 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://qudt.org/schema/qudt/hasQuantity">
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/type">
           </rdf:Property>
         </rdfs:seeAlso>
@@ -356,6 +366,9 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.aanvoerzone">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
     <rdfs:label xml:lang="nl">aanvoerzone</rdfs:label>
     <rdfs:comment xml:lang="nl">De zone waarvan water en sediment aangevoerd wordt.</rdfs:comment>
     <rdfs:domain>
@@ -374,6 +387,13 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
       </owl:Class>
     </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.afvoerzone">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
+    <rdfs:label xml:lang="nl">afvoerzone</rdfs:label>
+    <rdfs:comment xml:lang="nl">De zone waarnaar overtollig water en sediment afgevoerd wordt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"/>
+    <rdfs:range rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Zone"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.beschermdeZone">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
@@ -395,11 +415,19 @@
     <rdfs:comment xml:lang="nl">Deel van een Erosiebestrijdingsmaatregel.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
   </owl:Class>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
+    <rdfs:label xml:lang="nl">Erosiepoelonderdeel</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een onderdeel van een erosiepoel, zoals ingang en uitgang.</rdfs:comment>
+  </owl:Class>
   <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Graszone">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
     <rdfs:label xml:lang="nl">Graszone</rdfs:label>
     <rdfs:comment xml:lang="nl">Een zone met gras om bodemerosie te bestrijden.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Literal">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#Zone.verantwoordelijke">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
@@ -407,13 +435,6 @@
     <rdfs:comment xml:lang="nl">De verantwoordelijke van de Zone.</rdfs:comment>
     <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Zone"/>
     <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>
-    <rdfs:label xml:lang="nl">afvoerzone</rdfs:label>
-    <rdfs:comment xml:lang="nl">De zone waarnaar overtollig water en sediment afgevoerd wordt.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"/>
-    <rdfs:range rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie#Zone"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/bodemerosie#maxVolume">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/bodemerosie"/>

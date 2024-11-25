@@ -255,11 +255,16 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-11-20"
+    "prev": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-11-21"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-10-02",
   "classes": [
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#DateTime",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
     {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
@@ -300,6 +305,17 @@
       ]
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Erosiepoelonderdeel"
+      },
+      "definition": {
+        "nl": "Een onderdeel van een erosiepoel, zoals ingang en uitgang."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -311,6 +327,11 @@
       "parents": [
         "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
       ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Literal",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
     },
     {
       "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Zone",
@@ -327,6 +348,20 @@
     }
   ],
   "externals": [
+    {
+      "name": {
+        "nl": "BodemKenmerktype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Onderhoudstaak"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
     {
       "name": {
         "nl": "Onderhoud"
@@ -350,23 +385,6 @@
       ],
       "range": [
         "https://schema.org/QuantitativeValue"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#afvoerzone",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "afvoerzone"
-      },
-      "definition": {
-        "nl": "De zone waarnaar overtollig water en sediment afgevoerd wordt."
-      },
-      "domain": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
-      ],
-      "range": [
-        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
       ],
       "generalization": []
     },
@@ -412,6 +430,23 @@
       },
       "definition": {
         "nl": "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/bodemerosie#Zone"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel.afvoerzone",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "afvoerzone"
+      },
+      "definition": {
+        "nl": "De zone waarnaar overtollig water en sediment afgevoerd wordt."
       },
       "domain": [
         "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiebestrijdingsmaatregel"
@@ -477,6 +512,11 @@
     },
     {
       "name": {},
+      "@id": "http://qudt.org/schema/qudt/hasQuantity",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
       "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     },
@@ -493,11 +533,6 @@
     {
       "name": {},
       "@id": "http://purl.org/dc/terms/isPartOf",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {},
-      "@id": "<http://qudt.org/schema/qudt/hasQuantity",
       "@type": "rdf:Property"
     }
   ],
