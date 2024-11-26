@@ -56,7 +56,7 @@
               <dt>Deze versie</dt><dd><a href="https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest">https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest</a></dd>
               
               
-              <dt>Vorige versie</dt><dd><a href="/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-21">/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-21</a></dd>
+              <dt>Vorige versie</dt><dd><a href="/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-25">/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-25</a></dd>
               
               </dl>
               </div>
@@ -388,8 +388,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/790a66da695f9c587a839d07ede503bb19c6cebd">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/790a66da695f9c587a839d07ede503bb19c6cebd</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/790a66da695f9c587a839d07ede503bb19c6cebd/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/790a66da695f9c587a839d07ede503bb19c6cebd/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html</a></dd>
 
@@ -427,8 +427,8 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
 <p>
-Dit appliatieprofiel richt zich op maatregelen die bodemerosie bestrijden, zoals bijvoorbeeld erosiepoelen.
-Wat volgt zijn een aantal use cases die hierzonder vallen:
+Dit applicatieprofiel richt zich op maatregelen die bodemerosie bestrijden, zoals bijvoorbeeld erosiepoelen.
+Wat volgt zijn een aantal use cases die hieronder vallen:
 
 <ul>
   <li>Het bekijken van de huidige toestand van een erosiebestrijdingsmaatregel.</li>
@@ -437,11 +437,11 @@ Wat volgt zijn een aantal use cases die hierzonder vallen:
       de zones die hierop betrekking hebben.
   </li>
   <li>
-    Het bijhouden van welke onderhoud er gebeurd is op welke erosiebestrijdingsmaatregelen.
+    Het bijhouden van welk onderhoud er gebeurd is op welke erosiebestrijdingsmaatregelen.
   </li>
   <li>
     Het beschrijven waar een bepaalde sensor staat ten op zichte van een erosiebestrijdingsmaatregel.
-    Dit kan bijvoorbeeld zijn in het geval dat een sensor aan de ingang staat van een erosiepoel. d
+    Dit kan bijvoorbeeld zijn in het geval dat een sensor aan de ingang staat van een erosiepoel.
     Dit heeft belang om de waarde van een observatie door die sensor correct te gebruiken.
   </li>
 </ul>
@@ -1029,12 +1029,15 @@ Je kan een aantal datavoorbeelden
               <h3 class="h3" id="Hoeveelheid"><a href="http://qudt.org/schema/qudt/Quantity" data-toggle="tooltip" data-content="http://qudt.org/schema/qudt/Quantity" data-placement="right">Hoeveelheid</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Metingresultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem.</dd>
+                    <dt>Beschrijving</dt><dd>Het resultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem.</dd>
+                    
+                    <dt>Gebruik</dt><dd>De klasse is gelijkaardig aan Resultaat maar heeft referentie naar het Hoeveelheidstype, terwijl Resultaat geen referentie heeft naar het Geobserveerd Kenmerk. We gebruiken deze klasse in dit applicatieprofiel niet voor uitkomsten van Observaties maar enkel voor de dimensies van een Erosiepoel.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Hoeveelheid%3Atype">type</a>, 
                       <a href="#Hoeveelheid%3Awaarde">waarde</a>.</dd>
                     
                   </dl>
@@ -1054,6 +1057,26 @@ Je kan een aantal datavoorbeelden
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Hoeveelheid%3Atype" typeof="rdfs:Property" resource="http://qudt.org/schema/qudt/hasQuantityKind">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://qudt.org/schema/qudt/hasQuantityKind" data-toggle="tooltip" data-content="http://qudt.org/schema/qudt/hasQuantityKind" data-placement="right">
+                            type</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://qudt.org/schema/qudt/QuantityKind" data-toggle="tooltip" data-content="http://qudt.org/schema/qudt/QuantityKind" data-placement="right">Hoeveelheidstype</a>
+                            
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden.</td>
+                        <td property="vann:usageNote">Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities.</td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Hoeveelheid%3Awaarde" typeof="rdfs:Property" resource="http://qudt.org/schema/qudt/quantityValue">
                         <td>
@@ -1508,6 +1531,8 @@ Je kan een aantal datavoorbeelden
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>De uitkomst van een observatie, actuatie of handeling van bemonstering.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Deze klasse heeft geen referentie naar het Geobserveerd Kenmerk.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

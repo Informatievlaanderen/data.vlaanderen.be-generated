@@ -6,7 +6,7 @@
     "baseURI": "https://test.data.vlaanderen.be/ns/bodemerosie#",
     "filename": "modderstromen-ap",
     "navigation": {
-      "prev": "/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-21",
+      "prev": "/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-25",
       "self": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest"
     },
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/93015c513b9ce4bc1e9371a3c3376b0f18ae0d14/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/790a66da695f9c587a839d07ede503bb19c6cebd",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/790a66da695f9c587a839d07ede503bb19c6cebd/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -775,14 +775,17 @@
       },
       "sort": "Hoeveelheid",
       "description": {
-        "nl": "Metingresultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem."
+        "nl": "Het resultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem."
       },
-      "usage": {},
+      "usage": {
+        "nl": "De klasse is gelijkaardig aan Resultaat maar heeft referentie naar het Hoeveelheidstype, terwijl Resultaat geen referentie heeft naar het Geobserveerd Kenmerk. We gebruiken deze klasse in dit applicatieprofiel niet voor uitkomsten van Observaties maar enkel voor de dimensies van een Erosiepoel."
+      },
       "parents": [],
       "rawTags": {
         "uri": "http://qudt.org/schema/qudt/Quantity",
         "ap-label-nl": "Hoeveelheid",
-        "ap-definition-nl": "Metingresultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem."
+        "ap-definition-nl": "Het resultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem.",
+        "ap-usageNote-nl": "De klasse is gelijkaardig aan Resultaat maar heeft referentie naar het Hoeveelheidstype, terwijl Resultaat geen referentie heeft naar het Geobserveerd Kenmerk. We gebruiken deze klasse in dit applicatieprofiel niet voor uitkomsten van Observaties maar enkel voor de dimensies van een Erosiepoel."
       },
       "properties": [
         {
@@ -823,6 +826,49 @@
             "uri": "http://qudt.org/schema/qudt/quantityValue",
             "ap-label-nl": "waarde",
             "ap-definition-nl": "Kwantitatieve waarde van de Hoeveelheid."
+          }
+        },
+        {
+          "uri": "http://qudt.org/schema/qudt/hasQuantityKind",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."
+          },
+          "usage": {
+            "nl": "Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities."
+          },
+          "domain": [
+            {
+              "EA-Name": "Hoeveelheid",
+              "uri": "http://qudt.org/schema/qudt/Quantity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Hoeveelheidstype",
+              "range_uri": "http://qudt.org/schema/qudt/QuantityKind"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://qudt.org/schema/qudt/QuantityKind",
+              "range_puri": "http://qudt.org/schema/qudt/QuantityKind",
+              "range_label": {
+                "nl": "Hoeveelheidstype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "type",
+            "uri": "http://qudt.org/schema/qudt/hasQuantityKind",
+            "ap-definition-nl": "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden.",
+            "ap-usageNote-nl": "Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities."
           }
         }
       ]
@@ -1469,12 +1515,15 @@
       "description": {
         "nl": "De uitkomst van een observatie, actuatie of handeling van bemonstering."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Deze klasse heeft geen referentie naar het Geobserveerd Kenmerk."
+      },
       "parents": [],
       "rawTags": {
         "uri": "http://www.w3.org/ns/sosa/Result",
         "ap-label-nl": "Resultaat",
-        "ap-definition-nl": "De uitkomst van een observatie, actuatie of handeling van bemonstering."
+        "ap-definition-nl": "De uitkomst van een observatie, actuatie of handeling van bemonstering.",
+        "ap-usageNote-nl": "Deze klasse heeft geen referentie naar het Geobserveerd Kenmerk."
       },
       "properties": []
     },
