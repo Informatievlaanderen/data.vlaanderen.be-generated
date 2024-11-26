@@ -28,6 +28,9 @@ schemas:QuantitativeValue a rdfs:Class;
   rdfs:label "Bedrag"@nl,
     "KwantitatieveWaarde"@nl .
 
+schemas:Service a rdfs:Class;
+  rdfs:label "Dienstverlening"@nl .
+
 <https://uri.semic.eu/m8g/Requirement> a rdfs:Class;
   rdfs:label "Criteriumvereiste"@nl .
 
@@ -145,6 +148,15 @@ foaf:page a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/incentiveringsplatform>;
   rdfs:subClassOf <http://data.europa.eu/m8g/Output> .
 
+schemas:description a rdf:Property;
+  rdfs:label "beschrijving"@nl .
+
+schemas:name a rdf:Property;
+  rdfs:label "naam"@nl .
+
+schemas:serviceType a rdf:Property;
+  rdfs:label "type"@nl .
+
 schemas:unitText a rdf:Property;
   rdfs:label "eenheid"@nl .
 
@@ -168,7 +180,7 @@ rdf:langString a rdf:Property;
   rdfs:label "Stimulansaanbod"@nl;
   rdfs:comment "Aanbod van een stimulans, waarbij een stimulans omschreven wordt als het investeren van een bepaald bedrag om gedrag te stimuleren dat een meerwaarde vormt voor de gemeenschap. Een meerwaarde hoeft niet altijd meetbaar te zijn zoals de verbetering  van de luchtkwaliteit, maar het kan ook bijvoorbeeld een verbetering van de sociale cohesie zijn."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/incentiveringsplatform>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/incentiveringsplatform#Dienstverlening> .
+  rdfs:subClassOf schemas:Service .
 
 <https://data.vlaanderen.be/ns/incentiveringsplatform> a owl:Ontology;
   rdfs:label "incentiveringsplatform"@en,
@@ -307,10 +319,14 @@ rdf:langString a rdf:Property;
     dc:Agent,
     skos:Concept,
     schemas:QuantitativeValue,
+    schemas:Service,
     <https://uri.semic.eu/m8g/Requirement>,
     <https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time>,
     schemas:value,
     schemas:unitText,
+    schemas:serviceType,
+    schemas:name,
+    schemas:description,
     foaf:page,
     rdf:langString,
     dc:type,

@@ -116,7 +116,7 @@
       "foaf:lastName": "Claes "
     }
   ],
-  "branchtag": "INPL-1.0.1",
+  "branchtag": "INPL-1.0.2",
   "classes": [
     {
       "@id": "https://data.vlaanderen.be/ns/incentiveringsplatform#Beloning",
@@ -306,13 +306,13 @@
         "EA-Guid": "{8857790E-F292-4628-9E5C-8980F9490EF3}",
         "EA-Name": "Stimulansaanbod",
         "EA-Package": "Model",
-        "EA-Parents": "",
+        "EA-Parents": "Dienstverlening",
         "EA-Parents2": [
           {
-            "label": "",
+            "label": "Dienstverlening",
             "name": "Dienstverlening",
             "package": "Model",
-            "uri": "https://data.vlaanderen.be/ns/incentiveringsplatform#Dienstverlening"
+            "uri": "https://schema.org/Service"
           }
         ],
         "EA-Type": "CLASS",
@@ -359,7 +359,7 @@
         "label-nl": {
           "nl": "Stimulansaanbod"
         },
-        "parentclasses": "https://data.vlaanderen.be/ns/incentiveringsplatform#Dienstverlening",
+        "parentclasses": "https://schema.org/Service",
         "sameAs": "",
         "subclass": "",
         "subclass1": "",
@@ -376,7 +376,7 @@
       },
       "name": "Stimulansaanbod",
       "parents": [
-        "https://data.vlaanderen.be/ns/incentiveringsplatform#Dienstverlening"
+        "https://schema.org/Service"
       ]
     },
     {
@@ -608,8 +608,8 @@
   "contributors-column": "MijnKolom",
   "contributors-file": "stakeholders.csv",
   "diagram": "Incentiveringsplatform",
-  "documentcommit": "ecf0c6152136c8c6e78327901d81eac528d2abfe",
-  "dummy": "011",
+  "documentcommit": "573f1ee0565314ee996087e59a010408f19a35c8",
+  "dummy": "012",
   "eap": "Incentiveringsplatform.eap",
   "editors": [
     {
@@ -1556,6 +1556,275 @@
           "EA-Name": "String",
           "EA-Package": "",
           "uri": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
+      "@id": "https://schema.org/serviceType",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{071A5F0E-3461-4e63-8B40-334018454FD7}",
+      "codelist": [],
+      "definition": {
+        "nl": "Het type dienstverlening dat wordt aangeboden."
+      },
+      "definition-nl": {
+        "nl": "Het type dienstverlening dat wordt aangeboden."
+      },
+      "domain": [
+        {
+          "EA-Name": "Dienstverlening",
+          "uri": "https://schema.org/Service"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Dienstverlening",
+        "EA-Domain-Guid": "{E1FCB058-82ED-4c42-9694-024960C3565C}",
+        "EA-Guid": "{071A5F0E-3461-4e63-8B40-334018454FD7}",
+        "EA-Name": "type",
+        "EA-Package": "Model",
+        "EA-Range": "DienstverleningsType",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{E700FD44-C34F-40ba-8BAB-D043B7D90017}",
+          "EA-Name": "DienstverleningsType",
+          "EA-Package": "Model",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://schema.org/serviceType"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Het type dienstverlening dat wordt aangeboden."
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "type"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Het type dienstverlening dat wordt aangeboden."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Het type dienstverlening dat wordt aangeboden."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "type"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "type"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "type"
+      },
+      "label-nl": {
+        "nl": "type"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "type",
+      "range": [
+        {
+          "EA-GUID": "{E700FD44-C34F-40ba-8BAB-D043B7D90017}",
+          "EA-Name": "DienstverleningsType",
+          "EA-Package": "Model",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ]
+    },
+    {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "EA-Guid": "{F06EAA6B-5E93-4711-804B-9BAFCC73BDA6}",
+      "codelist": [],
+      "definition": {
+        "nl": "De naam van het item."
+      },
+      "definition-nl": {
+        "nl": "De naam van het item."
+      },
+      "domain": [
+        {
+          "EA-Name": "Dienstverlening",
+          "uri": "https://schema.org/Service"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Dienstverlening",
+        "EA-Domain-Guid": "{E1FCB058-82ED-4c42-9694-024960C3565C}",
+        "EA-Guid": "{F06EAA6B-5E93-4711-804B-9BAFCC73BDA6}",
+        "EA-Name": "naam",
+        "EA-Package": "Model",
+        "EA-Range": "LangString",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-Name": "LangString",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://schema.org/name"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "naam"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "De naam van het item."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "De naam van het item."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "De naam van het item."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "naam"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "naam"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "naam"
+      },
+      "label-nl": {
+        "nl": "naam"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "naam",
+      "range": [
+        {
+          "EA-Name": "LangString",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      ]
+    },
+    {
+      "@id": "https://schema.org/description",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "EA-Guid": "{92B8C30C-9F58-46fc-A3A0-E94FAFED3C74}",
+      "codelist": [],
+      "definition": {
+        "nl": "Een beschrijving van het item."
+      },
+      "definition-nl": {
+        "nl": "Een beschrijving van het item."
+      },
+      "domain": [
+        {
+          "EA-Name": "Dienstverlening",
+          "uri": "https://schema.org/Service"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Dienstverlening",
+        "EA-Domain-Guid": "{E1FCB058-82ED-4c42-9694-024960C3565C}",
+        "EA-Guid": "{92B8C30C-9F58-46fc-A3A0-E94FAFED3C74}",
+        "EA-Name": "beschrijving",
+        "EA-Package": "Model",
+        "EA-Range": "LangString",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-Name": "LangString",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://schema.org/description"
+          },
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "beschrijving"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Een beschrijving van het item."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Een beschrijving van het item."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een beschrijving van het item."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "beschrijving"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "beschrijving"
+        },
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "label-nl": {
+        "nl": "beschrijving"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "beschrijving",
+      "range": [
+        {
+          "EA-Name": "LangString",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         }
       ]
     },
@@ -3838,7 +4107,7 @@
           {
             "key": "ap-usageNote-nl",
             "note": "null",
-            "value": "Typisch volgt de duur uit het opgeven van een begin- en eindtijdstip. Voorbeeld: een Stimulansaanbod waarbij je een Sobercoin kan verdienen bij een negatieve alcoholtest, kan enkel geconsumeerd worden tijdens de duratie van de fuif."
+            "value": "Typisch volgt de duur uit het opgeven van een begin- en eindtijdstip. Een Stimulansaanbod waarbij je een Sobercoin kan verdienen bij een negatieve alcoholtest, kan enkel geconsumeerd worden tijdens de duratie van de fuif."
           },
           {
             "key": "definition-nl",
@@ -4458,83 +4727,6 @@
     {
       "@id": "https://schema.org/Service",
       "@type": "http://www.w3.org/2002/07/owl#Class",
-      "EA-Guid": "{0B14E8FC-8905-4f29-A01F-4005A0A18C64}",
-      "definition": {
-        "nl": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-      },
-      "definition-nl": {
-        "nl": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-      },
-      "extra": {
-        "EA-Guid": "{0B14E8FC-8905-4f29-A01F-4005A0A18C64}",
-        "EA-Name": "Dienstverlening",
-        "EA-Package": "Hulppakket",
-        "EA-Parents": "",
-        "EA-Parents2": [],
-        "EA-Type": "CLASS",
-        "RawTags": [
-          {
-            "key": "label-nl",
-            "note": "null",
-            "value": "Dienstverlening"
-          },
-          {
-            "key": "ap-label-nl",
-            "note": "null",
-            "value": "Dienstverlening"
-          },
-          {
-            "key": "ap-definition-nl",
-            "note": "null",
-            "value": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-          },
-          {
-            "key": "uri",
-            "note": "null",
-            "value": "https://schema.org/Service"
-          },
-          {
-            "key": "definition-nl",
-            "note": "null",
-            "value": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-          }
-        ],
-        "Scope": "NOTHING",
-        "definition": {
-          "nl": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-        },
-        "definition-en": "",
-        "definition-nl": {
-          "nl": "Een Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
-        },
-        "equivalent": "",
-        "label": {
-          "nl": "Dienstverlening"
-        },
-        "label-en": "",
-        "label-nl": {
-          "nl": "Dienstverlening"
-        },
-        "parentclasses": "",
-        "sameAs": "",
-        "subclass": "",
-        "subclass1": "",
-        "usage": "",
-        "usageNote-en": "",
-        "usageNote-nl": ""
-      },
-      "inpackage": "OTHER_PACKAGE",
-      "label": {
-        "nl": "Dienstverlening"
-      },
-      "label-nl": {
-        "nl": "Dienstverlening"
-      },
-      "name": "Dienstverlening"
-    },
-    {
-      "@id": "https://schema.org/Service",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{E2837DA7-3D33-4fab-B29E-ED56DF7465A1}",
       "definition": {
         "nl": "De consumptie van een dienstverlening"
@@ -4608,6 +4800,78 @@
         "nl": "Dienstverlening (consumptie)"
       },
       "name": "Dienstverlening(consumptie)"
+    },
+    {
+      "@id": "https://schema.org/Service",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{E1FCB058-82ED-4c42-9694-024960C3565C}",
+      "definition": {
+        "nl": "Een dienst verleend door een organisatie."
+      },
+      "definition-nl": {
+        "nl": "Een dienst verleend door een organisatie."
+      },
+      "extra": {
+        "EA-Guid": "{E1FCB058-82ED-4c42-9694-024960C3565C}",
+        "EA-Name": "Dienstverlening",
+        "EA-Package": "Model",
+        "EA-Parents": "",
+        "EA-Parents2": [],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Dienstverlening"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Een dienst verleend door een organisatie."
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Abstracte klasse die zowel publieke als private dienstverlening bevat. Indien er sprake is van een PubliekeDienstverlening, moet deze geïnstantieerd worden aan de hand van de IPDC-LPDC InstancePublicService. "
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://schema.org/Service"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "definition": {
+          "nl": "Een dienst verleend door een organisatie."
+        },
+        "definition-en": "",
+        "definition-nl": {
+          "nl": "Een dienst verleend door een organisatie."
+        },
+        "equivalent": "",
+        "label": {
+          "nl": "Dienstverlening"
+        },
+        "label-en": "",
+        "label-nl": {
+          "nl": "Dienstverlening"
+        },
+        "parentclasses": "",
+        "sameAs": "",
+        "subclass": "",
+        "subclass1": "",
+        "usage": "",
+        "usageNote-en": "",
+        "usageNote-nl": ""
+      },
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "Dienstverlening"
+      },
+      "label-nl": {
+        "nl": "Dienstverlening"
+      },
+      "name": "Dienstverlening"
     },
     {
       "@id": "https://uri.semic.eu/m8g/Requirement",
@@ -6139,22 +6403,22 @@
       ]
     }
   ],
-  "publication-date": "2023-06-06",
+  "publication-date": "2024-10-03",
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-incentiveringsplatform",
-  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-incentiveringsplatform/",
+  "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-incentiveringsplatform",
   "template": "mijn-vocabularium-voc.j2",
-  "title": "OSLO Incentiveringsplatform (vocabularium)",
+  "title": "Vocabularium Incentiveringsplatform",
   "title-nl": {
     "nl": "TODO"
   },
-  "toolchaincommit": "88b38014b0777559b094d1d754e4f881d9ea3ba4",
+  "toolchaincommit": "4fdf1500af34bbd9122a2934b19a04ba595e0fd2",
   "translation": [
     {
       "language": "nl",
       "mergefile": "incentiveringsplatform_nl_merged.json",
       "template": "mijn-vocabularium-voc.j2",
-      "title": "OSLO Incentiveringsplatform (vocabularium)",
+      "title": "Vocabularium Incentiveringsplatform",
       "translationjson": "incentiveringsplatform_nl.json"
     }
   ],
