@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/0e577604524c1ecb66f224d345d69f2fd79f833c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/0e577604524c1ecb66f224d345d69f2fd79f833c/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/c0717ba6e3d8bbc6731f1d27186afcff2bb54c9b",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/c0717ba6e3d8bbc6731f1d27186afcff2bb54c9b/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
     "usesVocs": [],
@@ -73,7 +73,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -234,7 +234,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_uri": "#Locatie",
               "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
                 "nl": "Locatie"
@@ -274,7 +274,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -382,7 +382,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_uri": "#Locatie",
               "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
                 "nl": "Locatie"
@@ -670,7 +670,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -710,7 +710,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_uri": "#Locatie",
               "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
                 "nl": "Locatie"
@@ -750,7 +750,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -766,6 +766,52 @@
           }
         }
       ]
+    },
+    {
+      "uri": "http://purl.org/dc/terms/Agent",
+      "name": "Agent",
+      "label": {
+        "nl": "Agent"
+      },
+      "sort": "Agent",
+      "description": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "label-nl": "Agent",
+        "uri": "http://purl.org/dc/terms/Agent"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://qudt.org/2.1/schema/qudt/Unit",
+      "name": "Eenheid",
+      "label": {
+        "nl": "Eenheid"
+      },
+      "sort": "Eenheid",
+      "description": {
+        "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Concept",
+          "name": "Concept",
+          "package": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+          "scoped_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      ],
+      "rawTags": {
+        "uri": "http://qudt.org/2.1/schema/qudt/Unit",
+        "ap-definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
+        "ap-label-nl": "Eenheid"
+      },
+      "properties": []
     },
     {
       "uri": "http://qudt.org/schema/qudt/Quantity",
@@ -855,10 +901,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://qudt.org/schema/qudt/QuantityKind",
+              "range_uri": "#Hoeveelheidtype",
               "range_puri": "http://qudt.org/schema/qudt/QuantityKind",
               "range_label": {
-                "nl": "Hoeveelheidstype"
+                "nl": "Hoeveelheidtype"
               }
             }
           ],
@@ -872,6 +918,25 @@
           }
         }
       ]
+    },
+    {
+      "uri": "http://qudt.org/schema/qudt/QuantityKind",
+      "name": "Hoeveelheidtype",
+      "label": {
+        "nl": "Hoeveelheidtype"
+      },
+      "sort": "Hoeveelheidtype",
+      "description": {
+        "nl": "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-label-nl": "Hoeveelheidtype",
+        "uri": "http://qudt.org/schema/qudt/QuantityKind",
+        "ap-definition-nl": "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."
+      },
+      "properties": []
     },
     {
       "uri": "http://qudt.org/schema/qudt/QuantityValue",
@@ -924,7 +989,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://qudt.org/2.1/schema/qudt/Unit",
+              "range_uri": "#Eenheid",
               "range_puri": "http://qudt.org/2.1/schema/qudt/Unit",
               "range_label": {
                 "nl": "Eenheid"
@@ -964,10 +1029,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+              "range_uri": "#Numerieke Unie",
               "range_puri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
               "range_label": {
-                "nl": "NumeriekeUnie"
+                "nl": "Numerieke Unie"
               }
             }
           ],
@@ -980,6 +1045,25 @@
           }
         }
       ]
+    },
+    {
+      "uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+      "name": "NumeriekeUnie",
+      "label": {
+        "nl": "Numerieke Unie"
+      },
+      "sort": "Numerieke Unie",
+      "description": {
+        "nl": "Unie van de numerieke XSD datatypes."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-label-nl": "Numerieke Unie",
+        "uri": "http://www.linkedmodel.org/schema/dtype#numericUnion",
+        "ap-definition-nl": "Unie van de numerieke XSD datatypes."
+      },
+      "properties": []
     },
     {
       "uri": "http://www.w3.org/ns/sosa/Actuation",
@@ -1032,7 +1116,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://purl.org/dc/terms/Agent",
+              "range_uri": "#Agent",
               "range_puri": "http://purl.org/dc/terms/Agent",
               "range_label": {
                 "nl": "Agent"
@@ -1629,7 +1713,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/prov#Location",
+              "range_uri": "#Locatie",
               "range_puri": "http://www.w3.org/ns/prov#Location",
               "range_label": {
                 "nl": "Locatie"
@@ -2126,7 +2210,31 @@
       }
     }
   ],
-  "datatypes": [],
+  "datatypes": [
+    {
+      "uri": "http://www.w3.org/ns/prov#Location",
+      "name": "Locatie",
+      "label": {
+        "nl": "Locatie"
+      },
+      "sort": "Locatie",
+      "description": {
+        "nl": "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."
+      },
+      "usage": {
+        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres etc."
+      },
+      "parents": [],
+      "rawTags": {
+        "uri": "http://www.w3.org/ns/prov#Location",
+        "label-nl": "Locatie",
+        "definition-nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt, zoals d",
+        "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres etc.",
+        "ap-definition-nl": "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."
+      },
+      "properties": []
+    }
+  ],
   "parents": [],
   "documentroot": "/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest"
 }

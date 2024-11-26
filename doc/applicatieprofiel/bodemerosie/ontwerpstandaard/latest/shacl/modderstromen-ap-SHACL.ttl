@@ -14,10 +14,15 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#ErosiebestrijdingsmaatregelonderdeeltypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#GraszoneShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#ZoneShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#AgentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#EenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#HoeveelheidShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#HoeveelheidstypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#KwantitatieveWaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#NumeriekeUnieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#KenmerktypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#OnderhoudstaaktypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#ActuatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#FeatureOfInterestShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#GeobserveerdKenmerkShape>,
@@ -86,6 +91,14 @@
   shacl:minCount 1;
   shacl:name "object"@nl;
   shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#EenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://qudt.org/2.1/schema/qudt/Unit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#ErosiebestrijdingsmaatregelShape> a shacl:NodeShape;
   shacl:closed false;
@@ -357,6 +370,10 @@
   shacl:name "type"@nl;
   shacl:path <http://qudt.org/schema/qudt/hasQuantityKind> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#HoeveelheidstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://qudt.org/schema/qudt/QuantityKind> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#KenmerktypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -406,6 +423,14 @@
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:name "numerieke waarde"@nl;
   shacl:path <http://qudt.org/schema/qudt/numericValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#NumeriekeUnieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.linkedmodel.org/schema/dtype#numericUnion> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/latest#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
