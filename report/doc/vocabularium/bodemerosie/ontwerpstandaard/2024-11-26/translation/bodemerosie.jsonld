@@ -1594,6 +1594,11 @@
             "key": "ap-definition-nl",
             "value": "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden.",
             "note": "null"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "value": "Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities.",
+            "note": "null"
           }
         ],
         "Scope": "NOTHING"
@@ -2342,15 +2347,9 @@
             "label": "Systeem",
             "package": "SSN/SOSA",
             "uri": "http://www.w3.org/ns/ssn/System"
-          },
-          {
-            "name": "Proces",
-            "label": "Proces",
-            "package": "OSLO-ObservatiesEnMetingen",
-            "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
           }
         ],
-        "parentclasses": "http://www.w3.org/ns/ssn/System, http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+        "parentclasses": "http://www.w3.org/ns/ssn/System",
         "label": {
           "nl": "Sensor"
         },
@@ -3167,106 +3166,6 @@
       },
       "extra": {
         "EA-Name": "object",
-        "EA-Guid": "{7B3DD2C5-134B-448e-B797-0CA80F61DFF8}",
-        "derived": "false",
-        "EA-Package": "",
-        "EA-Type": "connector",
-        "EA-Domain": "Actuatie",
-        "EA-Domain-Guid": "{C73E466B-B465-479a-B647-B17BC590FF2B}",
-        "EA-Range": "FeatureOfInterest",
-        "RangeData": {
-          "EA-Name": "FeatureOfInterest",
-          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
-          "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        },
-        "sourceRole": "null",
-        "destRole": "object",
-        "label": "",
-        "definition": "",
-        "usage": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "usageNote-nl": "",
-        "label-en": "",
-        "definition-en": "",
-        "usageNote-en": "",
-        "equivalent": "",
-        "subclass": "",
-        "subclass1": "",
-        "sameAs": "",
-        "RawTags": [
-          {
-            "key": "uri",
-            "value": "NOTE",
-            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "NOTE",
-            "note": "object"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "NOTE",
-            "note": "Het object waarop de Actuatie is uitgevoerd."
-          }
-        ],
-        "DestRoleTags": [
-          {
-            "key": "uri",
-            "value": "NOTE",
-            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-          },
-          {
-            "key": "ap-label-nl",
-            "value": "NOTE",
-            "note": "object"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "NOTE",
-            "note": "Het object waarop de Actuatie is uitgevoerd."
-          }
-        ],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/sosa/Actuation",
-          "EA-Name": "Actuatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "FeatureOfInterest",
-          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
-          "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "1",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "name": "",
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Name": "object",
         "EA-Guid": "{1E127431-679B-4c91-B16A-C36431588643}",
         "derived": "false",
         "EA-Package": "",
@@ -3340,6 +3239,106 @@
         {
           "uri": "http://www.w3.org/ns/sosa/Observation",
           "EA-Name": "Observatie"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "FeatureOfInterest",
+          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
+          "EA-Package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "1",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "name": "",
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "extra": {
+        "EA-Name": "object",
+        "EA-Guid": "{7B3DD2C5-134B-448e-B797-0CA80F61DFF8}",
+        "derived": "false",
+        "EA-Package": "",
+        "EA-Type": "connector",
+        "EA-Domain": "Actuatie",
+        "EA-Domain-Guid": "{C73E466B-B465-479a-B647-B17BC590FF2B}",
+        "EA-Range": "FeatureOfInterest",
+        "RangeData": {
+          "EA-Name": "FeatureOfInterest",
+          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
+          "EA-Package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        },
+        "sourceRole": "null",
+        "destRole": "object",
+        "label": "",
+        "definition": "",
+        "usage": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "usageNote-nl": "",
+        "label-en": "",
+        "definition-en": "",
+        "usageNote-en": "",
+        "equivalent": "",
+        "subclass": "",
+        "subclass1": "",
+        "sameAs": "",
+        "RawTags": [
+          {
+            "key": "uri",
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+          },
+          {
+            "key": "ap-label-nl",
+            "value": "NOTE",
+            "note": "object"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "NOTE",
+            "note": "Het object waarop de Actuatie is uitgevoerd."
+          }
+        ],
+        "DestRoleTags": [
+          {
+            "key": "uri",
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+          },
+          {
+            "key": "ap-label-nl",
+            "value": "NOTE",
+            "note": "object"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "NOTE",
+            "note": "Het object waarop de Actuatie is uitgevoerd."
+          }
+        ],
+        "Scope": "NOTHING"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "http://www.w3.org/ns/sosa/Actuation",
+          "EA-Name": "Actuatie"
         }
       ],
       "range": [
@@ -4949,15 +4948,15 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
   "config": "config/config-voc.json",
   "branchtag": "main",
-  "dummy": "8",
+  "dummy": "9",
   "filename": "config/bodemerosie-voc.json",
   "navigation": {
     "prev": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-11-25"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen",
   "urlref": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-11-26",
-  "documentcommit": "c0717ba6e3d8bbc6731f1d27186afcff2bb54c9b",
-  "toolchaincommit": "9134b73a658cac4ade22b59355009b0c15278225",
+  "documentcommit": "ab2c58b6f5338e0de3bafc80a4dc45d6338190ac",
+  "toolchaincommit": "45275531740746d47dfdf493c1c7fb1b3f792c24",
   "hostname": "https://data.test-vlaanderen.be",
   "translation": [
     {
