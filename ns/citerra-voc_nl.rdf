@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:schema="http://schema.org/">
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#operatie">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/citerra">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -360,12 +360,18 @@
         </dc:contributor>
         <dc:issued>TODO</dc:issued>
         <rdfs:seeAlso>
+          <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+            <rdfs:label xml:lang="nl">Aanvraagtype</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdfs:Class rdf:about="https://schema.org/Vehicle">
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
           <rdfs:Class rdf:about="https://www.w3.org/2004/02/skos/core#Concept">
             <rdfs:label xml:lang="nl">Logische operatie</rdfs:label>
+            <rdfs:label xml:lang="nl">Toegangstype</rdfs:label>
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -382,18 +388,12 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-    <rdfs:label xml:lang="nl">Consumeer Publieke Dienstverleningstap</rdfs:label>
-    <rdfs:comment xml:lang="nl">Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#operatie">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
     <rdfs:label xml:lang="nl">operatie</rdfs:label>
     <rdfs:comment xml:lang="nl">Logische operatie die toegepast wordt op de Voorwaarden.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie">
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie">
         <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
-        <rdfs:label xml:lang="nl">Voorwaarde Collectie</rdfs:label>
+        <rdfs:label xml:lang="nl">Voorwaardecollectie</rdfs:label>
         <rdfs:comment xml:lang="nl">Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Requirement"/>
       </owl:Class>

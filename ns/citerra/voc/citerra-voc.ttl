@@ -5,23 +5,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Aanvraagtype"@nl .
 
 schemas:Vehicle a rdfs:Class .
 
 <https://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class;
-  rdfs:label "Logische operatie"@nl .
-
-<https://test.data.vlaanderen.be/ns/citerra#ConsumeerPubliekeDienstverleningstap> a owl:Class;
-  rdfs:label "Consumeer Publieke Dienstverleningstap"@nl;
-  rdfs:comment "Procedurestap die gebruikt wordt om aan te duiden welke Publieke Dienstverlening moet geconsumeerd worden als deel van een procedure."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap> .
+  rdfs:label "Logische operatie"@nl,
+    "Toegangstype"@nl .
 
 <https://test.data.vlaanderen.be/ns/citerra#operatie> a owl:ObjectProperty;
   rdfs:label "operatie"@nl;
   rdfs:comment "Logische operatie die toegepast wordt op de Voorwaarden."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie>;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
   rdfs:range <https://www.w3.org/2004/02/skos/core#Concept> .
 
@@ -45,8 +44,8 @@ dc:type a rdf:Property .
 
 <http://www.w3.org/ns/adms#identifier> a rdf:Property .
 
-<https://test.data.vlaanderen.be/ns/citerra#VoorwaardeCollectie> a owl:Class;
-  rdfs:label "Voorwaarde Collectie"@nl;
+<https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie> a owl:Class;
+  rdfs:label "Voorwaardecollectie"@nl;
   rdfs:comment "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
   rdfs:subClassOf <http://data.europa.eu/m8g/Requirement> .
@@ -219,7 +218,8 @@ dc:type a rdf:Property .
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso schemas:Vehicle,
+  rdfs:seeAlso skos:Concept,
+    schemas:Vehicle,
     <https://www.w3.org/2004/02/skos/core#Concept>,
     <http://www.w3.org/ns/adms#identifier>,
     dc:type,
