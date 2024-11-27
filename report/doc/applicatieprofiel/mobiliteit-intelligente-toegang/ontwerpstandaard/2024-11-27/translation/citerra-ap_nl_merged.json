@@ -266,6 +266,94 @@
       "parents": [
         "http://data.europa.eu/m8g/Requirement"
       ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "EA-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+      "ap-definition-nl": {
+        "nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+      },
+      "ap-label-nl": {
+        "nl": "Weigering"
+      },
+      "definition": {
+        "nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+      },
+      "extra": {
+        "EA-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+        "EA-Name": "Weigering",
+        "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+        "EA-Parents": "",
+        "EA-Parents2": [
+          {
+            "label": "",
+            "name": "Zaakhandeling",
+            "package": "OV",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+          },
+          {
+            "label": "",
+            "name": "Rechtshandeling",
+            "package": "OV",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+          }
+        ],
+        "EA-Type": "CLASS",
+        "RawTags": [
+          {
+            "key": "label-nl",
+            "note": "null",
+            "value": "Weigering"
+          },
+          {
+            "key": "name",
+            "note": "null",
+            "value": "Weigering"
+          },
+          {
+            "key": "definition-nl",
+            "note": "null",
+            "value": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+          },
+          {
+            "key": "usageNote-nl",
+            "note": "null",
+            "value": "Deze Activiteit kan de inhoud zijn van een Aanvraag."
+          }
+        ],
+        "Scope": "FULL_DEFINITON",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+        },
+        "ap-label-nl": {
+          "nl": "Weigering"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+        },
+        "label": {
+          "nl": "Weigering"
+        },
+        "parentclasses": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling, https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling",
+        "usage": {
+          "nl": "Deze Activiteit kan de inhoud zijn van een Aanvraag."
+        }
+      },
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "Weigering"
+      },
+      "name": "Weigering",
+      "parents": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling",
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+      ],
+      "usage": {
+        "nl": "Deze Activiteit kan de inhoud zijn van een Aanvraag."
+      }
     }
   ],
   "config": "config/config-ap.json",
@@ -445,8 +533,8 @@
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-Mobiliteit-Intelligente-Toegang-v2",
   "disabled": false,
-  "documentcommit": "58e6b31ecfbd8fc2e8e12e7631e2342b51028824",
-  "dummy": "18",
+  "documentcommit": "966d9261a7630520f6a4e88deaccb3435848140c",
+  "dummy": "19",
   "eap": "OSLO-Mobiliteit-Intelligente-Toegang.eap",
   "editors": [
     {
@@ -606,7 +694,7 @@
         "label": {
           "nl": "zaakhandeling"
         },
-        "sourceRole": "null",
+        "sourceRole": "^zaak",
         "usage": ""
       },
       "generalization": [],
@@ -623,6 +711,111 @@
           "EA-Name": "Aanvraag",
           "EA-Package": "OV",
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{BC7AFF3A-46AE-4788-AFEF-A4B371A0D970}",
+      "ap-definition-nl": {
+        "nl": "Weigering die bij de Zaak hoort."
+      },
+      "ap-label-nl": {
+        "nl": "zaakhandeling"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "Weigering die bij de Zaak hoort."
+      },
+      "domain": [
+        {
+          "EA-Name": "Zaak",
+          "uri": "http://dbpedia.org/ontology/Case"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaakhandeling",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Weigering die bij de Zaak hoort.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Zaak",
+        "EA-Domain-Guid": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+        "EA-Guid": "{BC7AFF3A-46AE-4788-AFEF-A4B371A0D970}",
+        "EA-Name": "^zaakhandeling",
+        "EA-Package": "",
+        "EA-Range": "Weigering",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+          "EA-Name": "Weigering",
+          "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaakhandeling",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Weigering die bij de Zaak hoort.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Weigering die bij de Zaak hoort."
+        },
+        "ap-label-nl": {
+          "nl": "zaakhandeling"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "Weigering die bij de Zaak hoort."
+        },
+        "derived": "false",
+        "destRole": "^zaakhandeling",
+        "label": {
+          "nl": "zaakhandeling"
+        },
+        "sourceRole": "^zaak",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "zaakhandeling"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "zaakhandeling",
+      "range": [
+        {
+          "EA-GUID": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+          "EA-Name": "Weigering",
+          "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
         }
       ]
     },
@@ -711,7 +904,7 @@
         "label": {
           "nl": "zaakhandeling"
         },
-        "sourceRole": "null",
+        "sourceRole": "^zaak",
         "usage": ""
       },
       "generalization": [],
@@ -728,6 +921,321 @@
           "EA-Name": "Vergunning",
           "EA-Package": "OV",
           "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{3AAC051B-6A46-45bc-8913-B50362D7A659}",
+      "ap-definition-nl": {
+        "nl": "De zaak waarin de Aanvraag wordt gesteld."
+      },
+      "ap-label-nl": {
+        "nl": "zaak"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "De zaak waarin de Aanvraag wordt gesteld."
+      },
+      "domain": [
+        {
+          "EA-Name": "Aanvraag",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Aanvraag wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Aanvraag",
+        "EA-Domain-Guid": "{5A8F4514-FC26-4696-988C-E85CC845E319}",
+        "EA-Guid": "{3AAC051B-6A46-45bc-8913-B50362D7A659}",
+        "EA-Name": "^zaak",
+        "EA-Package": "",
+        "EA-Range": "Zaak",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Aanvraag wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "De zaak waarin de Aanvraag wordt gesteld."
+        },
+        "ap-label-nl": {
+          "nl": "zaak"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "De zaak waarin de Aanvraag wordt gesteld."
+        },
+        "derived": "false",
+        "destRole": "^zaak",
+        "label": {
+          "nl": "zaak"
+        },
+        "sourceRole": "^zaakhandeling",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "zaak"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "zaak",
+      "range": [
+        {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{BC7AFF3A-46AE-4788-AFEF-A4B371A0D970}",
+      "ap-definition-nl": {
+        "nl": "De zaak waarin de Weigering wordt gesteld."
+      },
+      "ap-label-nl": {
+        "nl": "zaak"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "De zaak waarin de Weigering wordt gesteld."
+      },
+      "domain": [
+        {
+          "EA-Name": "Weigering",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Weigering wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Weigering",
+        "EA-Domain-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+        "EA-Guid": "{BC7AFF3A-46AE-4788-AFEF-A4B371A0D970}",
+        "EA-Name": "^zaak",
+        "EA-Package": "",
+        "EA-Range": "Zaak",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Weigering wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "De zaak waarin de Weigering wordt gesteld."
+        },
+        "ap-label-nl": {
+          "nl": "zaak"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "De zaak waarin de Weigering wordt gesteld."
+        },
+        "derived": "false",
+        "destRole": "^zaak",
+        "label": {
+          "nl": "zaak"
+        },
+        "sourceRole": "^zaakhandeling",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "zaak"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "zaak",
+      "range": [
+        {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{831B094C-6559-45ce-AC0E-FB2919FC18D5}",
+      "ap-definition-nl": {
+        "nl": "De zaak waarin de Vergunning wordt gesteld."
+      },
+      "ap-label-nl": {
+        "nl": "zaak"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "De zaak waarin de Vergunning wordt gesteld."
+      },
+      "domain": [
+        {
+          "EA-Name": "Vergunning",
+          "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Vergunning wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Vergunning",
+        "EA-Domain-Guid": "{FAE0656B-E8E7-428f-BAE5-F77765D0930B}",
+        "EA-Guid": "{831B094C-6559-45ce-AC0E-FB2919FC18D5}",
+        "EA-Name": "^zaak",
+        "EA-Package": "",
+        "EA-Range": "Zaak",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
+        },
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "note": "zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "De zaak waarin de Vergunning wordt gesteld.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "De zaak waarin de Vergunning wordt gesteld."
+        },
+        "ap-label-nl": {
+          "nl": "zaak"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "De zaak waarin de Vergunning wordt gesteld."
+        },
+        "derived": "false",
+        "destRole": "^zaak",
+        "label": {
+          "nl": "zaak"
+        },
+        "sourceRole": "^zaakhandeling",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "zaak"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "zaak",
+      "range": [
+        {
+          "EA-GUID": "{A01CB1AF-2C02-487e-92DF-194BD74E6631}",
+          "EA-Name": "Zaak",
+          "EA-Package": "Dossier",
+          "uri": "http://dbpedia.org/ontology/Case"
         }
       ]
     },
@@ -1090,6 +1598,131 @@
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
         }
       ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{A7A1F396-026F-4acc-8CE1-F5EC4FE04408}",
+      "ap-definition-nl": {
+        "nl": "Inhoud van de Weigering."
+      },
+      "ap-label-nl": {
+        "nl": "inhoud"
+      },
+      "ap-usageNote-nl": {
+        "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "Inhoud van de Weigering."
+      },
+      "domain": [
+        {
+          "EA-Name": "Weigering",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden.",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Inhoud van de Weigering.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "inhoud",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Weigering",
+        "EA-Domain-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+        "EA-Guid": "{A7A1F396-026F-4acc-8CE1-F5EC4FE04408}",
+        "EA-Name": "^inhoud",
+        "EA-Package": "",
+        "EA-Range": "Toegang",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+          "EA-Name": "Toegang",
+          "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Toegang"
+        },
+        "RawTags": [
+          {
+            "key": "ap-usageNote-nl",
+            "note": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden.",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "Inhoud van de Weigering.",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "inhoud",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Inhoud van de Weigering."
+        },
+        "ap-label-nl": {
+          "nl": "inhoud"
+        },
+        "ap-usageNote-nl": {
+          "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+        },
+        "definition": {
+          "nl": "Inhoud van de Weigering."
+        },
+        "derived": "false",
+        "destRole": "^inhoud",
+        "label": {
+          "nl": "inhoud"
+        },
+        "sourceRole": "null",
+        "usage": {
+          "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+        }
+      },
+      "generalization": [],
+      "inpackage": "ACTIVE_PACKAGE",
+      "label": {
+        "nl": "inhoud"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "0",
+      "name": "inhoud",
+      "range": [
+        {
+          "EA-GUID": "{7C08B107-DC48-45f2-8174-A2DCDA589DAB}",
+          "EA-Name": "Toegang",
+          "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Toegang"
+        }
+      ],
+      "usage": {
+        "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+      }
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
@@ -1485,6 +2118,89 @@
         "ap-usageNote-nl": "",
         "definition": {
           "nl": "Datum vanaf dewelke de Vergunning rechtskracht krijgt."
+        },
+        "label": {
+          "nl": "ingangsdatum"
+        },
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "ingangsdatum"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "ingangsdatum",
+      "range": [
+        {
+          "EA-Name": "Date",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "EA-Guid": "{FCA9BAF5-9725-4ffb-A45B-D82CC498229D}",
+      "ap-definition-nl": {
+        "nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
+      },
+      "ap-label-nl": {
+        "nl": "ingangsdatum"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
+      },
+      "domain": [
+        {
+          "EA-Name": "Weigering",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Weigering",
+        "EA-Domain-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+        "EA-Guid": "{FCA9BAF5-9725-4ffb-A45B-D82CC498229D}",
+        "EA-Name": "^ingangsdatum",
+        "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+        "EA-Range": "Date",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-Name": "Date",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "ingangsdatum"
+          },
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum"
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
+        },
+        "ap-label-nl": {
+          "nl": "ingangsdatum"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
         },
         "label": {
           "nl": "ingangsdatum"
@@ -2512,6 +3228,91 @@
         "ap-usageNote-nl": "",
         "definition": {
           "nl": "Identificator van het object."
+        },
+        "label": {
+          "nl": "identificator"
+        },
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "OTHER_PACKAGE",
+      "label": {
+        "nl": "identificator"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
+      "name": "identificator",
+      "range": [
+        {
+          "EA-GUID": "{D1FC2002-4A76-430f-B1C1-F38FE013DC54}",
+          "EA-Name": "Identificator",
+          "EA-Package": "ADMS",
+          "uri": "http://www.w3.org/ns/adms#Identifier"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{24CEBBD0-17BB-4811-8C5B-4075908C805F}",
+      "ap-definition-nl": {
+        "nl": "De Identificator van de Weigering."
+      },
+      "ap-label-nl": {
+        "nl": "identificator"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "De Identificator van de Weigering."
+      },
+      "domain": [
+        {
+          "EA-Name": "Weigering",
+          "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+        }
+      ],
+      "extra": {
+        "EA-Domain": "Weigering",
+        "EA-Domain-Guid": "{7FACF551-14C8-4175-B0B2-A5B7E711A594}",
+        "EA-Guid": "{24CEBBD0-17BB-4811-8C5B-4075908C805F}",
+        "EA-Name": "^identificator",
+        "EA-Package": "OSLO-Mobiliteit-Intelligente-Toegang",
+        "EA-Range": "Identificator",
+        "EA-Type": "attribute",
+        "RangeData": {
+          "EA-GUID": "{D1FC2002-4A76-430f-B1C1-F38FE013DC54}",
+          "EA-Name": "Identificator",
+          "EA-Package": "ADMS",
+          "uri": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "RawTags": [
+          {
+            "key": "uri",
+            "note": "null",
+            "value": "http://www.w3.org/ns/adms#identifier"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "null",
+            "value": "identificator"
+          },
+          {
+            "key": "ap-definition-nl",
+            "note": "null",
+            "value": "De Identificator van de Weigering."
+          }
+        ],
+        "Scope": "TRANSLATIONS_ONLY",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "De Identificator van de Weigering."
+        },
+        "ap-label-nl": {
+          "nl": "identificator"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "De Identificator van de Weigering."
         },
         "label": {
           "nl": "identificator"
@@ -7476,7 +8277,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "OSLO Citerra",
-  "toolchaincommit": "34d87571e24a0fe1f05bf6ae1ee2f4628a4d3c70",
+  "toolchaincommit": "aca6aa71a3348a1f9996acff3996d3f495229d0e",
   "translation": [
     {
       "language": "nl",

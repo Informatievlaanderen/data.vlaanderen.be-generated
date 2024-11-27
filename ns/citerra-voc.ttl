@@ -17,6 +17,14 @@ schemas:Vehicle a rdfs:Class .
   rdfs:label "Logische operatie"@nl,
     "Toegangstype"@nl .
 
+<https://test.data.vlaanderen.be/ns/citerra#Weigering> a owl:Class;
+  rdfs:label "Weigering"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Deze Activiteit kan de inhoud zijn van een Aanvraag."@nl;
+  rdfs:comment "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling> .
+
 <https://test.data.vlaanderen.be/ns/citerra#operatie> a owl:ObjectProperty;
   rdfs:label "operatie"@nl;
   rdfs:comment "Logische operatie die toegepast wordt op de Voorwaarden."@nl;
@@ -43,6 +51,10 @@ dc:extent a rdf:Property .
 dc:type a rdf:Property .
 
 <http://www.w3.org/ns/adms#identifier> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> a rdf:Property .
 
 <https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie> a owl:Class;
   rdfs:label "Voorwaardecollectie"@nl;
@@ -221,6 +233,8 @@ dc:type a rdf:Property .
   rdfs:seeAlso skos:Concept,
     schemas:Vehicle,
     <https://www.w3.org/2004/02/skos/core#Concept>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum>,
     <http://www.w3.org/ns/adms#identifier>,
     dc:type,
     dc:extent;

@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/58e6b31ecfbd8fc2e8e12e7631e2342b51028824",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/58e6b31ecfbd8fc2e8e12e7631e2342b51028824/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/966d9261a7630520f6a4e88deaccb3435848140c",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/966d9261a7630520f6a4e88deaccb3435848140c/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -324,6 +324,207 @@
             "ap-definition-nl": "Subvoorwaarde van de Voorwaarde.",
             "uri": "http://data.europa.eu/m8g/hasRequirement",
             "ap-label-nl": "heeft voorwaarde"
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
+      "name": "Weigering",
+      "label": {
+        "nl": "Weigering"
+      },
+      "sort": "Weigering",
+      "description": {
+        "nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."
+      },
+      "usage": {
+        "nl": "Deze Activiteit kan de inhoud zijn van een Aanvraag."
+      },
+      "parents": [
+        {
+          "label": "Zaakhandeling",
+          "name": "Zaakhandeling",
+          "package": "OV",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling",
+          "scoped_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+        },
+        {
+          "label": "Rechtshandeling",
+          "name": "Rechtshandeling",
+          "package": "OV",
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling",
+          "scoped_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Weigering",
+        "name": "Weigering",
+        "definition-nl": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat.",
+        "usageNote-nl": "Deze Activiteit kan de inhoud zijn van een Aanvraag."
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "name": "zaak",
+          "sort": "zaak",
+          "label": {
+            "nl": "zaak"
+          },
+          "description": {
+            "nl": "De zaak waarin de Weigering wordt gesteld."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Weigering",
+              "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Zaak",
+              "range_uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Zaak",
+              "range_puri": "http://dbpedia.org/ontology/Case",
+              "range_label": {
+                "nl": "Zaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "zaak",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "ap-definition-nl": "De zaak waarin de Weigering wordt gesteld."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+          "name": "inhoud",
+          "sort": "inhoud",
+          "label": {
+            "nl": "inhoud"
+          },
+          "description": {
+            "nl": "Inhoud van de Weigering."
+          },
+          "usage": {
+            "nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden."
+          },
+          "domain": [
+            {
+              "EA-Name": "Weigering",
+              "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Toegang",
+              "range_uri": "https://test.data.vlaanderen.be/ns/citerra#Toegang"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Toegang",
+              "range_puri": "https://test.data.vlaanderen.be/ns/citerra#Toegang",
+              "range_label": {
+                "nl": "Toegang"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Bijvoorbeeld de toegang om een autoluwe zone binnen te rijden.",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+            "ap-definition-nl": "Inhoud van de Weigering.",
+            "ap-label-nl": "inhoud"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+          "name": "ingangsdatum",
+          "sort": "ingangsdatum",
+          "label": {
+            "nl": "ingangsdatum"
+          },
+          "description": {
+            "nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Weigering",
+              "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Date",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#date",
+              "range_label": {
+                "nl": "Date"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Datum vanaf dewelke de Weigering rechtskracht krijgt.",
+            "ap-label-nl": "ingangsdatum",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "De Identificator van de Weigering."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Weigering",
+              "uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Identificator",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "ap-label-nl": "identificator",
+            "ap-definition-nl": "De Identificator van de Weigering."
           }
         }
       ]
@@ -972,6 +1173,46 @@
       },
       "properties": [
         {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "name": "zaak",
+          "sort": "zaak",
+          "label": {
+            "nl": "zaak"
+          },
+          "description": {
+            "nl": "De zaak waarin de Vergunning wordt gesteld."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Vergunning",
+              "uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Zaak",
+              "range_uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Zaak",
+              "range_puri": "http://dbpedia.org/ontology/Case",
+              "range_label": {
+                "nl": "Zaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "zaak",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "ap-definition-nl": "De zaak waarin de Vergunning wordt gesteld."
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "verantwoordelijke",
           "sort": "verantwoordelijke",
@@ -1272,6 +1513,46 @@
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
             "ap-definition-nl": "Vergunning die bij de Zaak hoort.",
             "ap-label-nl": "zaakhandeling"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+          "name": "zaakhandeling",
+          "sort": "zaakhandeling",
+          "label": {
+            "nl": "zaakhandeling"
+          },
+          "description": {
+            "nl": "Weigering die bij de Zaak hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Weigering",
+              "range_uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Weigering",
+              "range_puri": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
+              "range_label": {
+                "nl": "Weigering"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "zaakhandeling",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "ap-definition-nl": "Weigering die bij de Zaak hoort."
           }
         },
         {
@@ -1986,6 +2267,46 @@
         "ap-definition-nl": "Aanspraak op de uitoefening van een bevoegdheid; formeel verzoek van een rechtssubject aan een bevoegde instantie om informatie te verstrekken of een beslissing te nemen, in het bijzonder een beslissing om ergens toelating voor te verlenen."
       },
       "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "name": "zaak",
+          "sort": "zaak",
+          "label": {
+            "nl": "zaak"
+          },
+          "description": {
+            "nl": "De zaak waarin de Aanvraag wordt gesteld."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanvraag",
+              "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Zaak",
+              "range_uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Zaak",
+              "range_puri": "http://dbpedia.org/ontology/Case",
+              "range_label": {
+                "nl": "Zaak"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "zaak",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+            "ap-definition-nl": "De zaak waarin de Aanvraag wordt gesteld."
+          }
+        },
         {
           "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
           "name": "aanvrager",
