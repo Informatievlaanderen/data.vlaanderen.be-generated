@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/8dfce18c8288bc728466ae73b694c1656400f4b2",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/8dfce18c8288bc728466ae73b694c1656400f4b2/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/cffaea67f36af574239c5b6dc2c9b9418b9b480c",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/cffaea67f36af574239c5b6dc2c9b9418b9b480c/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -852,7 +852,9 @@
           "label": {
             "nl": "specificieert bewijstype"
           },
-          "description": {},
+          "description": {
+            "nl": "Bewijstypes die in de Bewijstypelijst zitten."
+          },
           "usage": {},
           "domain": [
             {
@@ -878,6 +880,7 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
+            "ap-definition-nl": "Bewijstypes die in de Bewijstypelijst zitten.",
             "uri": "http://data.europa.eu/m8g/specifiesEvidenceType",
             "ap-label-nl": "specificieert bewijstype"
           }
@@ -1535,46 +1538,6 @@
             "nl": "zaakhandeling"
           },
           "description": {
-            "nl": "Weigering die bij de Zaak hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaak",
-              "uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Weigering",
-              "range_uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Weigering",
-              "range_puri": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
-              "range_label": {
-                "nl": "Weigering"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "zaakhandeling",
-            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-            "ap-definition-nl": "Weigering die bij de Zaak hoort."
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-          "name": "zaakhandeling",
-          "sort": "zaakhandeling",
-          "label": {
-            "nl": "zaakhandeling"
-          },
-          "description": {
             "nl": "Aanvraag die bij de Zaak hoort."
           },
           "usage": {},
@@ -1605,6 +1568,46 @@
             "ap-definition-nl": "Aanvraag die bij de Zaak hoort.",
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
             "ap-label-nl": "zaakhandeling"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+          "name": "zaakhandeling",
+          "sort": "zaakhandeling",
+          "label": {
+            "nl": "zaakhandeling"
+          },
+          "description": {
+            "nl": "Weigering die bij de Zaak hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Weigering",
+              "range_uri": "https://test.data.vlaanderen.be/ns/citerra#Weigering"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Weigering",
+              "range_puri": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
+              "range_label": {
+                "nl": "Weigering"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "zaakhandeling",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "ap-definition-nl": "Weigering die bij de Zaak hoort."
           }
         },
         {
@@ -1854,46 +1857,6 @@
             "nl": "produceert"
           },
           "description": {
-            "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "PubliekeDienstverlening",
-              "uri": "http://purl.org/vocab/cpsv#PublicService"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vergunning",
-              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vergunning",
-              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
-              "range_label": {
-                "nl": "Vergunning"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "produceert",
-            "ap-definition-nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening.",
-            "uri": "http://purl.org/vocab/cpsv#produces"
-          }
-        },
-        {
-          "uri": "http://purl.org/vocab/cpsv#produces",
-          "name": "produceert",
-          "sort": "produceert",
-          "label": {
-            "nl": "produceert"
-          },
-          "description": {
             "nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
           },
           "usage": {},
@@ -1924,6 +1887,46 @@
             "ap-label-nl": "produceert",
             "uri": "http://purl.org/vocab/cpsv#produces",
             "ap-definition-nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          }
+        },
+        {
+          "uri": "http://purl.org/vocab/cpsv#produces",
+          "name": "produceert",
+          "sort": "produceert",
+          "label": {
+            "nl": "produceert"
+          },
+          "description": {
+            "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "PubliekeDienstverlening",
+              "uri": "http://purl.org/vocab/cpsv#PublicService"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vergunning",
+              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vergunning",
+              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+              "range_label": {
+                "nl": "Vergunning"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "produceert",
+            "ap-definition-nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening.",
+            "uri": "http://purl.org/vocab/cpsv#produces"
           }
         },
         {
