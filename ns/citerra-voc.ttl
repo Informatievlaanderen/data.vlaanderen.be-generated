@@ -17,33 +17,41 @@ schemas:Vehicle a rdfs:Class .
   rdfs:label "Logische operatie"@nl,
     "Toegangstype"@nl .
 
-<https://test.data.vlaanderen.be/ns/citerra#Weigering> a owl:Class;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering> a owl:Class;
   rdfs:label "Weigering"@nl;
   <http://purl.org/vocab/vann/usageNote> "Deze Activiteit kan de inhoud zijn van een Aanvraag."@nl;
   rdfs:comment "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>,
     <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling> .
 
-<https://test.data.vlaanderen.be/ns/citerra#operatie> a owl:ObjectProperty;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#heeftOutputtype> a owl:ObjectProperty;
+  rdfs:label "heeft outputtype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kunnen meerdere types zijn omdat een Publieke Dienstverlening verschillende soorten Output kan produceren. Deze types kunnen vergeleken worden met de Bewijstypes van een Voorwaarde. Op die manier kan bepaald worden welke Publieke Dienstverlening Bewijzen levert die gebruikt kunnen worden door een andere Publieke Dienstverlening."@nl;
+  rdfs:comment "De types die de Output van de Publieke Dienstverlening heeft. "@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#operatie> a owl:ObjectProperty;
   rdfs:label "operatie"@nl;
   rdfs:comment "Logische operatie die toegepast wordt op de Voorwaarden."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
   rdfs:range <https://www.w3.org/2004/02/skos/core#Concept> .
 
-<https://test.data.vlaanderen.be/ns/citerra#toegang> a owl:ObjectProperty;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#toegang> a owl:ObjectProperty;
   rdfs:label "toegang"@nl;
   rdfs:comment "Rechten voor toegang dewelke het Voertuig heeft."@nl;
   rdfs:domain schemas:Vehicle;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
-  rdfs:range <https://test.data.vlaanderen.be/ns/citerra#Toegang> .
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang> .
 
-<https://test.data.vlaanderen.be/ns/citerra#voertuig> a owl:ObjectProperty;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#voertuig> a owl:ObjectProperty;
   rdfs:label "voertuig"@nl;
   rdfs:comment "Voertuig waarvoor de Toegang geldt."@nl;
-  rdfs:domain <https://test.data.vlaanderen.be/ns/citerra#Toegang>;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
   rdfs:range schemas:Vehicle .
 
 dc:extent a rdf:Property .
@@ -56,20 +64,20 @@ dc:type a rdf:Property .
 
 <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> a rdf:Property .
 
-<https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie> a owl:Class;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie> a owl:Class;
   rdfs:label "Voorwaardecollectie"@nl;
   rdfs:comment "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
   rdfs:subClassOf <http://data.europa.eu/m8g/Requirement> .
 
-<https://test.data.vlaanderen.be/ns/citerra#Toegang> a owl:Class;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang> a owl:Class;
   rdfs:label "Toegang"@nl;
   rdfs:comment "Recht om een bepaalde zone binnen te mogen."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/citerra>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>,
     <http://data.europa.eu/m8g/Output> .
 
-<https://test.data.vlaanderen.be/ns/citerra> a owl:Ontology;
+<https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang> a owl:Ontology;
   rdfs:label "citerra-voc"@en,
     "citerra-voc"@nl;
   dc:contributor [

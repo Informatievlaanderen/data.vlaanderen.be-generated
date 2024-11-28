@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#Weigering">
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering">
     <rdfs:isDefinedBy>
-      <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/citerra">
+      <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
         <dc:license rdf:resource="https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0"/>
         <dc:mediator>
@@ -402,13 +402,21 @@
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"/>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#operatie">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#heeftOutputtype">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
+    <rdfs:label xml:lang="nl">heeft outputtype</rdfs:label>
+    <rdfs:comment xml:lang="nl">De types die de Output van de Publieke Dienstverlening heeft. </rdfs:comment>
+    <ns1:usageNote xml:lang="nl">Dit kunnen meerdere types zijn omdat een Publieke Dienstverlening verschillende soorten Output kan produceren. Deze types kunnen vergeleken worden met de Bewijstypes van een Voorwaarde. Op die manier kan bepaald worden welke Publieke Dienstverlening Bewijzen levert die gebruikt kunnen worden door een andere Publieke Dienstverlening.</ns1:usageNote>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#operatie">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
     <rdfs:label xml:lang="nl">operatie</rdfs:label>
     <rdfs:comment xml:lang="nl">Logische operatie die toegepast wordt op de Voorwaarden.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie">
-        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie">
+        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
         <rdfs:label xml:lang="nl">Voorwaardecollectie</rdfs:label>
         <rdfs:comment xml:lang="nl">Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Requirement"/>
@@ -416,14 +424,14 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="https://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#toegang">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#toegang">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
     <rdfs:label xml:lang="nl">toegang</rdfs:label>
     <rdfs:comment xml:lang="nl">Rechten voor toegang dewelke het Voertuig heeft.</rdfs:comment>
     <rdfs:domain rdf:resource="https://schema.org/Vehicle"/>
     <rdfs:range>
-      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/citerra#Toegang">
-        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang">
+        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
         <rdfs:label xml:lang="nl">Toegang</rdfs:label>
         <rdfs:comment xml:lang="nl">Recht om een bepaalde zone binnen te mogen.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/omgevingsvergunning#Recht"/>
@@ -431,11 +439,11 @@
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/citerra#voertuig">
-    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/citerra"/>
+  <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#voertuig">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang"/>
     <rdfs:label xml:lang="nl">voertuig</rdfs:label>
     <rdfs:comment xml:lang="nl">Voertuig waarvoor de Toegang geldt.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/citerra#Toegang"/>
+    <rdfs:domain rdf:resource="https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"/>
     <rdfs:range rdf:resource="https://schema.org/Vehicle"/>
   </owl:ObjectProperty>
 </rdf:RDF>

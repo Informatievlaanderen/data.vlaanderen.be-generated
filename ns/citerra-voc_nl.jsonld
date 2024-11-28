@@ -5,7 +5,7 @@
     "foaf:mbox": "mailto:oslo@kb.vlaanderen.be",
     "foaf:name": "Data Vlaanderen"
   },
-  "@id": "https://test.data.vlaanderen.be/ns/citerra",
+  "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang",
   "@type": "http://www.w3.org/2002/07/owl#Ontology",
   "label": {
     "en": "citerra-voc",
@@ -286,7 +286,7 @@
   "publication-date": "2024-11-07",
   "classes": [
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#Toegang",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Toegang"
@@ -300,7 +300,7 @@
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Voorwaardecollectie"
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#Weigering",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Weigering"
@@ -380,7 +380,7 @@
   ],
   "properties": [
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#voertuig",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#voertuig",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "voertuig"
@@ -389,7 +389,7 @@
         "nl": "Voertuig waarvoor de Toegang geldt."
       },
       "domain": [
-        "https://test.data.vlaanderen.be/ns/citerra#Toegang"
+        "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
       ],
       "range": [
         "https://schema.org/Vehicle"
@@ -397,7 +397,7 @@
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#toegang",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#toegang",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "toegang"
@@ -409,12 +409,12 @@
         "https://schema.org/Vehicle"
       ],
       "range": [
-        "https://test.data.vlaanderen.be/ns/citerra#Toegang"
+        "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
       ],
       "generalization": []
     },
     {
-      "@id": "https://test.data.vlaanderen.be/ns/citerra#operatie",
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#operatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "operatie"
@@ -423,10 +423,30 @@
         "nl": "Logische operatie die toegepast wordt op de Voorwaarden."
       },
       "domain": [
-        "https://test.data.vlaanderen.be/ns/citerra#Voorwaardecollectie"
+        "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie"
       ],
       "range": [
         "https://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#heeftOutputtype",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "heeft outputtype"
+      },
+      "definition": {
+        "nl": "De types die de Output van de Publieke Dienstverlening heeft. "
+      },
+      "usage": {
+        "nl": "Dit kunnen meerdere types zijn omdat een Publieke Dienstverlening verschillende soorten Output kan produceren. Deze types kunnen vergeleken worden met de Bewijstypes van een Voorwaarde. Op die manier kan bepaald worden welke Publieke Dienstverlening Bewijzen levert die gebruikt kunnen worden door een andere Publieke Dienstverlening."
+      },
+      "domain": [
+        "http://purl.org/vocab/cpsv#PublicService"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     }
