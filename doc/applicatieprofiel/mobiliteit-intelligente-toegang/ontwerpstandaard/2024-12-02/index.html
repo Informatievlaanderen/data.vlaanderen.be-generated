@@ -419,8 +419,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3ebb2e1148fef21512bc53d6167db78b9d4285a4">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3ebb2e1148fef21512bc53d6167db78b9d4285a4</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3ebb2e1148fef21512bc53d6167db78b9d4285a4/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3ebb2e1148fef21512bc53d6167db78b9d4285a4/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b33297b1a29965645c825699d2751c76a475502">https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b33297b1a29965645c825699d2751c76a475502</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b33297b1a29965645c825699d2751c76a475502/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b33297b1a29965645c825699d2751c76a475502/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-citerra/issues">https://github.com/Informatievlaanderen/OSLOthema-citerra/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html</a></dd>
 
@@ -548,7 +548,10 @@ kunt u een aantal datavoorbeelden terugvinden.
                       <br />
                       |
                       <a href="#Identificator">Identificator</a> |
+                      <a href="#Moment">Moment</a> |
+                      <a href="#Periode">Periode</a> |
                       <a href="#Taalstring">TaalString</a> |
+                      <a href="#Temporeleentiteit">TemporeleEntiteit</a> |
                       <a href="#Tijdsduur">Tijdsduur</a> |
                     </p>
                   </div>
@@ -745,7 +748,7 @@ kunt u een aantal datavoorbeelden terugvinden.
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Activiteit%3Alocatie">locatie</a>, 
-                      <a href="#Activiteit%3Atijdsbestek">tijdsbestek</a>, 
+                      <a href="#Activiteit%3Aperiode">periode</a>, 
                       <a href="#Activiteit%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -786,22 +789,22 @@ kunt u een aantal datavoorbeelden terugvinden.
                         <td></td>
                       </tr>
                     
-                      <tr id="Activiteit%3Atijdsbestek" typeof="rdfs:Property" resource="http://purl.org/dc/terms/extent">
+                      <tr id="Activiteit%3Aperiode" typeof="rdfs:Property" resource="http://purl.org/dc/terms/extent">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/extent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/extent" data-placement="right">
-                            tijdsbestek</a>
+                            periode</a>
                           </code>
                         </td>
                         <td>
                           
 			    
-			    <a href="#Tijdsduur" data-placement="right">Tijdsduur</a>
+			    <a href="#Periode" data-placement="right">Periode</a>
 			    
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Aanduiding van het tijdsbestek van de Activiteit.</td>
+                        <td property="rdfs:comment">Periode van de Activiteit.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2289,12 +2292,12 @@ kunt u een aantal datavoorbeelden terugvinden.
                         <td>
                           
 			    
-			    <a href="#Weigering" data-placement="right">Weigering</a>
+			    <a href="#Aanvraag" data-placement="right">Aanvraag</a>
 			    
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Weigering die bij de Zaak hoort.</td>
+                        <td property="rdfs:comment">Aanvraag die bij de Zaak hoort.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2309,12 +2312,12 @@ kunt u een aantal datavoorbeelden terugvinden.
                         <td>
                           
 			    
-			    <a href="#Aanvraag" data-placement="right">Aanvraag</a>
+			    <a href="#Weigering" data-placement="right">Weigering</a>
 			    
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Aanvraag die bij de Zaak hoort.</td>
+                        <td property="rdfs:comment">Weigering die bij de Zaak hoort.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2545,11 +2548,173 @@ kunt u een aantal datavoorbeelden terugvinden.
             
             <div class="region region--no-space-top">
               
+              <h3 class="h3" id="Moment"><a href="http://www.w3.org/2006/time#Instant" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#Instant" data-placement="right">Moment</a></h3>
+	      
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Moment met omvang en duur nul.</dd>
+                    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#TemporeleEntiteit">TemporeleEntiteit</a>
+		   </dd>
+                    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Moment%3Ainxsddatetime">inXSDDateTime</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                      
+                      <tr id="Moment%3Ainxsddatetime" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#inXSDDateTime">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#inXSDDateTime" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#inXSDDateTime" data-placement="right">inXSDDateTime</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a>
+                            
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Positie in de tijd uitgedrukt dmv xsd:dateTime.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
+              
+              <h3 class="h3" id="Periode"><a href="http://www.w3.org/2006/time#ProperInterval" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#ProperInterval" data-placement="right">Periode</a></h3>
+	      
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.</dd>
+                    
+		     
+		    <dt>Subklasse van <dt><dd>
+                        <a href="#TemporeleEntiteit">TemporeleEntiteit</a>
+		   </dd>
+                    
+                    <dt>Eigenschappen</dt>
+		     
+                    <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Periode%3Atot">tot</a>, 
+                      <a href="#Periode%3Avan">van</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                      
+                      <tr id="Periode%3Atot" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasEnd">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#hasEnd" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#hasEnd" data-placement="right">tot</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Moment" data-placement="right">Moment</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Einde ve TemporeleEntiteit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                      <tr id="Periode%3Avan" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasBeginning">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#hasBeginning" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#hasBeginning" data-placement="right">van</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Moment" data-placement="right">Moment</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Start ve TemporeleEntiteit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
+              
               <h3 class="h3" id="Taalstring"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">TaalString</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Combinatie van een string en de taal waarin de inhoud ervan is gesteld.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor dit datatype zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+            <div class="region region--no-space-top">
+              
+              <h3 class="h3" id="Temporeleentiteit"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">TemporeleEntiteit</a></h3>
+	      
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Abstracte klasse voor temporele objecten.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

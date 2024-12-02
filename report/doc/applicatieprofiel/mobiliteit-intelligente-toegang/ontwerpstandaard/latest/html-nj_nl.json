@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3ebb2e1148fef21512bc53d6167db78b9d4285a4",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3ebb2e1148fef21512bc53d6167db78b9d4285a4/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b33297b1a29965645c825699d2751c76a475502",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b33297b1a29965645c825699d2751c76a475502/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -1498,7 +1498,7 @@
             "nl": "zaakhandeling"
           },
           "description": {
-            "nl": "Weigering die bij de Zaak hoort."
+            "nl": "Vergunning die bij de Zaak hoort."
           },
           "usage": {},
           "domain": [
@@ -1509,25 +1509,25 @@
           ],
           "range": [
             {
-              "range_label": "Weigering",
-              "range_uri": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering"
+              "range_label": "Vergunning",
+              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Weigering",
-              "range_puri": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering",
+              "range_uri": "#Vergunning",
+              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
               "range_label": {
-                "nl": "Weigering"
+                "nl": "Vergunning"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "zaakhandeling",
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-            "ap-definition-nl": "Weigering die bij de Zaak hoort."
+            "ap-definition-nl": "Vergunning die bij de Zaak hoort.",
+            "ap-label-nl": "zaakhandeling"
           }
         },
         {
@@ -1578,7 +1578,7 @@
             "nl": "zaakhandeling"
           },
           "description": {
-            "nl": "Vergunning die bij de Zaak hoort."
+            "nl": "Weigering die bij de Zaak hoort."
           },
           "usage": {},
           "domain": [
@@ -1589,25 +1589,25 @@
           ],
           "range": [
             {
-              "range_label": "Vergunning",
-              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+              "range_label": "Weigering",
+              "range_uri": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Vergunning",
-              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+              "range_uri": "#Weigering",
+              "range_puri": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering",
               "range_label": {
-                "nl": "Vergunning"
+                "nl": "Weigering"
               }
             }
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
+            "ap-label-nl": "zaakhandeling",
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-            "ap-definition-nl": "Vergunning die bij de Zaak hoort.",
-            "ap-label-nl": "zaakhandeling"
+            "ap-definition-nl": "Weigering die bij de Zaak hoort."
           }
         },
         {
@@ -2631,13 +2631,13 @@
         },
         {
           "uri": "http://purl.org/dc/terms/extent",
-          "name": "tijdsbestek",
-          "sort": "tijdsbestek",
+          "name": "periode",
+          "sort": "periode",
           "label": {
-            "nl": "tijdsbestek"
+            "nl": "periode"
           },
           "description": {
-            "nl": "Aanduiding van het tijdsbestek van de Activiteit."
+            "nl": "Periode van de Activiteit."
           },
           "usage": {},
           "domain": [
@@ -2648,16 +2648,16 @@
           ],
           "range": [
             {
-              "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
+              "range_label": "Periode",
+              "range_uri": "http://www.w3.org/2006/time#ProperInterval"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
+              "range_uri": "#Periode",
+              "range_puri": "http://www.w3.org/2006/time#ProperInterval",
               "range_label": {
-                "nl": "Tijdsduur"
+                "nl": "Periode"
               }
             }
           ],
@@ -2665,8 +2665,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/dc/terms/extent",
-            "ap-label-nl": "tijdsbestek",
-            "ap-definition-nl": "Aanduiding van het tijdsbestek van de Activiteit."
+            "ap-label-nl": "periode",
+            "ap-definition-nl": "Periode van de Activiteit."
           }
         }
       ]
@@ -3185,6 +3185,192 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2006/time#Instant",
+      "name": "Moment",
+      "label": {
+        "nl": "Moment"
+      },
+      "sort": "Moment",
+      "description": {
+        "nl": "Moment met omvang en duur nul."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "TemporeleEntiteit",
+          "name": "TemporeleEntiteit",
+          "package": "W3Ctime",
+          "uri": "http://www.w3.org/2006/time#TemporalEntity",
+          "scoped_uri": "#TemporeleEntiteit"
+        }
+      ],
+      "rawTags": {
+        "uri": "http://www.w3.org/2006/time#Instant",
+        "label-nl": "Moment",
+        "definition-nl": "Moment met omvang en duur nul.",
+        "ap-label-nl": "Moment",
+        "ap-definition-nl": "Moment met omvang en duur nul."
+      },
+      "properties": [
+        {
+          "uri": "http://www.w3.org/2006/time#inXSDDateTime",
+          "name": "inxsddatetime",
+          "sort": "inXSDDateTime",
+          "label": {
+            "nl": "inXSDDateTime"
+          },
+          "description": {
+            "nl": "Positie in de tijd uitgedrukt dmv xsd:dateTime."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Moment",
+              "uri": "http://www.w3.org/2006/time#Instant"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "inXSDDateTime",
+            "uri": "http://www.w3.org/2006/time#inXSDDateTime",
+            "definition-nl": "Positie in de tijd uitgedrukt dmv xsd:dateTime.",
+            "ap-label-nl": "inXSDDateTime",
+            "ap-definition-nl": "Positie in de tijd uitgedrukt dmv xsd:dateTime."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://www.w3.org/2006/time#ProperInterval",
+      "name": "Periode",
+      "label": {
+        "nl": "Periode"
+      },
+      "sort": "Periode",
+      "description": {
+        "nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "TemporeleEntiteit",
+          "name": "TemporeleEntiteit",
+          "package": "W3Ctime",
+          "uri": "http://www.w3.org/2006/time#TemporalEntity",
+          "scoped_uri": "#TemporeleEntiteit"
+        }
+      ],
+      "rawTags": {
+        "uri": "http://www.w3.org/2006/time#ProperInterval",
+        "label-nl": "Periode",
+        "definition-nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.",
+        "ap-label-nl": "Periode",
+        "ap-definition-nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+      },
+      "properties": [
+        {
+          "uri": "http://www.w3.org/2006/time#hasEnd",
+          "name": "tot",
+          "sort": "tot",
+          "label": {
+            "nl": "tot"
+          },
+          "description": {
+            "nl": "Einde ve TemporeleEntiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Periode",
+              "uri": "http://www.w3.org/2006/time#ProperInterval"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Moment",
+              "range_uri": "http://www.w3.org/2006/time#Instant"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Moment",
+              "range_puri": "http://www.w3.org/2006/time#Instant",
+              "range_label": {
+                "nl": "Moment"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/2006/time#hasEnd",
+            "label-nl": "tot",
+            "definition-nl": "Einde ve TemporeleEntiteit.",
+            "ap-label-nl": "tot",
+            "ap-definition-nl": "Einde ve TemporeleEntiteit."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/2006/time#hasBeginning",
+          "name": "van",
+          "sort": "van",
+          "label": {
+            "nl": "van"
+          },
+          "description": {
+            "nl": "Start ve TemporeleEntiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Periode",
+              "uri": "http://www.w3.org/2006/time#ProperInterval"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Moment",
+              "range_uri": "http://www.w3.org/2006/time#Instant"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Moment",
+              "range_puri": "http://www.w3.org/2006/time#Instant",
+              "range_label": {
+                "nl": "Moment"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/2006/time#hasBeginning",
+            "label-nl": "van",
+            "definition-nl": "Start ve TemporeleEntiteit.",
+            "ap-label-nl": "van",
+            "ap-definition-nl": "Start ve TemporeleEntiteit."
+          }
+        }
+      ]
+    },
+    {
       "uri": "http://www.w3.org/2006/time#TemporalDuration",
       "name": "Tijdsduur",
       "label": {
@@ -3203,6 +3389,30 @@
         "ap-definition-nl": "Een tijdsspanne beschreven aan de hand van een tijdseenheid (schaal) en waarde.",
         "ap-label-nl": "Tijdsduur",
         "ap-usageNote-nl": "Zie specialisaties in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/2006/time#TemporalEntity",
+      "name": "Temporeleentiteit",
+      "label": {
+        "nl": "TemporeleEntiteit"
+      },
+      "sort": "TemporeleEntiteit",
+      "description": {
+        "nl": "Abstracte klasse voor temporele objecten."
+      },
+      "usage": {
+        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn."
+      },
+      "parents": [],
+      "rawTags": {
+        "uri": "http://www.w3.org/2006/time#TemporalEntity",
+        "label-nl": "TemporeleEntiteit",
+        "definition-nl": "Abstracte klasse voor temporele objecten.",
+        "ap-usageNote-nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn.",
+        "ap-label-nl": "TemporeleEntiteit",
+        "ap-definition-nl": "Abstracte klasse voor temporele objecten."
       },
       "properties": []
     },
