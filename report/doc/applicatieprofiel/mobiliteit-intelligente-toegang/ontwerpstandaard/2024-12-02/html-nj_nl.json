@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/3b33297b1a29965645c825699d2751c76a475502",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/3b33297b1a29965645c825699d2751c76a475502/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/bfb6951127c446384faf484b5b4b34554dcb4e53",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/bfb6951127c446384faf484b5b4b34554dcb4e53/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-citerra/index.html",
     "usesVocs": [],
@@ -180,13 +180,13 @@
         },
         {
           "uri": "http://purl.org/dc/terms/extent",
-          "name": "tijdsbestek",
-          "sort": "tijdsbestek",
+          "name": "periode",
+          "sort": "periode",
           "label": {
-            "nl": "tijdsbestek"
+            "nl": "periode"
           },
           "description": {
-            "nl": "Aanduiding van het tijdsbestek van de Toegang."
+            "nl": "Periode van de Toegang."
           },
           "usage": {},
           "domain": [
@@ -197,16 +197,16 @@
           ],
           "range": [
             {
-              "range_label": "Tijdsduur",
-              "range_uri": "http://www.w3.org/2006/time#TemporalDuration"
+              "range_label": "Periode",
+              "range_uri": "http://www.w3.org/2006/time#ProperInterval"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Tijdsduur",
-              "range_puri": "http://www.w3.org/2006/time#TemporalDuration",
+              "range_uri": "#Periode",
+              "range_puri": "http://www.w3.org/2006/time#ProperInterval",
               "range_label": {
-                "nl": "Tijdsduur"
+                "nl": "Periode"
               }
             }
           ],
@@ -214,8 +214,8 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://purl.org/dc/terms/extent",
-            "ap-label-nl": "tijdsbestek",
-            "ap-definition-nl": "Aanduiding van het tijdsbestek van de Toegang."
+            "ap-label-nl": "periode",
+            "ap-definition-nl": "Periode van de Toegang."
           }
         }
       ]
@@ -1538,46 +1538,6 @@
             "nl": "zaakhandeling"
           },
           "description": {
-            "nl": "Aanvraag die bij de Zaak hoort."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Zaak",
-              "uri": "http://dbpedia.org/ontology/Case"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Aanvraag",
-              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Aanvraag",
-              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
-              "range_label": {
-                "nl": "Aanvraag"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Aanvraag die bij de Zaak hoort.",
-            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-            "ap-label-nl": "zaakhandeling"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
-          "name": "zaakhandeling",
-          "sort": "zaakhandeling",
-          "label": {
-            "nl": "zaakhandeling"
-          },
-          "description": {
             "nl": "Weigering die bij de Zaak hoort."
           },
           "usage": {},
@@ -1608,6 +1568,46 @@
             "ap-label-nl": "zaakhandeling",
             "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
             "ap-definition-nl": "Weigering die bij de Zaak hoort."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+          "name": "zaakhandeling",
+          "sort": "zaakhandeling",
+          "label": {
+            "nl": "zaakhandeling"
+          },
+          "description": {
+            "nl": "Aanvraag die bij de Zaak hoort."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zaak",
+              "uri": "http://dbpedia.org/ontology/Case"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Aanvraag",
+              "range_uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Aanvraag",
+              "range_puri": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
+              "range_label": {
+                "nl": "Aanvraag"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Aanvraag die bij de Zaak hoort.",
+            "uri": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+            "ap-label-nl": "zaakhandeling"
           }
         },
         {
@@ -1901,46 +1901,6 @@
             "nl": "produceert"
           },
           "description": {
-            "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "PubliekeDienstverlening",
-              "uri": "http://purl.org/vocab/cpsv#PublicService"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vergunning",
-              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vergunning",
-              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
-              "range_label": {
-                "nl": "Vergunning"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "produceert",
-            "ap-definition-nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening.",
-            "uri": "http://purl.org/vocab/cpsv#produces"
-          }
-        },
-        {
-          "uri": "http://purl.org/vocab/cpsv#produces",
-          "name": "produceert",
-          "sort": "produceert",
-          "label": {
-            "nl": "produceert"
-          },
-          "description": {
             "nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
           },
           "usage": {},
@@ -1971,6 +1931,46 @@
             "ap-label-nl": "produceert",
             "uri": "http://purl.org/vocab/cpsv#produces",
             "ap-definition-nl": "Recht op toegang dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          }
+        },
+        {
+          "uri": "http://purl.org/vocab/cpsv#produces",
+          "name": "produceert",
+          "sort": "produceert",
+          "label": {
+            "nl": "produceert"
+          },
+          "description": {
+            "nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "PubliekeDienstverlening",
+              "uri": "http://purl.org/vocab/cpsv#PublicService"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vergunning",
+              "range_uri": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vergunning",
+              "range_puri": "http://data.vlaanderen.be/ns/besluit#Vergunning",
+              "range_label": {
+                "nl": "Vergunning"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "produceert",
+            "ap-definition-nl": "Vergunning dat verkregen wordt als resultaat van de uitvoering van de Publieke Dienstverlening.",
+            "uri": "http://purl.org/vocab/cpsv#produces"
           }
         },
         {
