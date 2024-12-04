@@ -6,7 +6,7 @@
     "baseURI": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#",
     "filename": "hdg-ap",
     "navigation": {
-      "prev": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-11-28",
+      "prev": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-02",
       "self": "https://data.test-vlaanderen.be/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/latest"
     },
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/7901f80fd56ab41add0e76899695927d3799c538",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/7901f80fd56ab41add0e76899695927d3799c538/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/tree/d9800916f3cce28c6d7f656a411c41527ecb54e0",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/blob/d9800916f3cce28c6d7f656a411c41527ecb54e0/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "usesVocs": [],
@@ -23,35 +23,765 @@
   },
   "classes": [
     {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsaanbieding",
-      "name": "Activiteitsaanbieding",
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+      "name": "Aanbod",
       "label": {
-        "nl": "Activiteitsaanbieding"
+        "nl": "Aanbod"
       },
-      "sort": "Activiteitsaanbieding",
+      "sort": "Aanbod",
       "description": {
-        "nl": "Het aanbieden van een activiteit."
+        "nl": "Het voorzien van een activiteit voor gedetineerden."
       },
-      "usage": {
-        "nl": "Deze klasse wordt gebruikt wanneer er nog geen concrete activiteiten gepland zijn. Bijvoorbeeld, we bieden psychologische zorg aan. Er wordt enkel iets georganiseerd als er een specfiieke nood is voor een gedetineerde. De instanties van de effectieve zorg voor een specifieke gedetineerde zijn nog niet bekend, dus we kunnen de klasse Activiteit nog niet gebruiken. Maar we willen wel aanduiden dat er een mogelijkheid is voor deze zorg. Hiervoor gebruik we de klasse Activiteitsaanbieiding."
-      },
-      "parents": [
-        {
-          "label": "Activiteit",
-          "name": "Activiteit",
-          "package": "OSLO-HDG",
-          "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-          "scoped_uri": "#Activiteit"
-        }
-      ],
+      "usage": {},
+      "parents": [],
       "rawTags": {
-        "ap-definition-nl": "Het aanbieden van een activiteit.",
-        "name": "Activiteitsaanbieding",
-        "definition-nl": "Het aanbieden van een activiteit.",
-        "label-nl": "Activiteitsaanbieding",
-        "usageNote-nl": "Deze klasse wordt gebruikt wanneer er nog geen concrete activiteiten gepland zijn. Bijvoorbeeld, we bieden psychologische zorg aan. Er wordt enkel iets georganiseerd als er een specfiieke nood is voor een gedetineerde. De instanties van de effectieve zorg voor een specifieke gedetineerde zijn nog niet bekend, dus we kunnen de klasse Activiteit nog niet gebruiken. Maar we willen wel aanduiden dat er een mogelijkheid is voor deze zorg. Hiervoor gebruik we de klasse Activiteitsaanbieiding."
+        "ap-definition-nl": "Het voorzien van een activiteit voor gedetineerden.",
+        "name": "Aanbod",
+        "definition-nl": "Het voorzien van een activiteit voor gedetineerden.",
+        "label-nl": "Aanbod"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad",
+          "name": "participatiegraad",
+          "sort": "participatiegraad",
+          "label": {
+            "nl": "participatiegraad"
+          },
+          "description": {
+            "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Participatiegraad",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Participatiegraad",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Participatiegraad"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "participatiegraad",
+            "definition-nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+          "name": "minimumAantalDeelnemers",
+          "sort": "minimum aantal deelnemers",
+          "label": {
+            "nl": "minimum aantal deelnemers"
+          },
+          "description": {
+            "nl": "Minimaal aantal gedetineerden die deelnemen voor het Aanbod kan plaatsvinden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "minimum aantal deelnemers",
+            "ap-definition-nl": "Minimaal aantal gedetineerden die deelnemen voor het Aanbod kan plaatsvinden.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
+          "name": "medium",
+          "sort": "medium",
+          "label": {
+            "nl": "medium"
+          },
+          "description": {
+            "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Medium",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Medium",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Medium"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "medium",
+            "definition-nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+          "name": "maximumAantalDeelnemers",
+          "sort": "maximum aantal deelnemers",
+          "label": {
+            "nl": "maximum aantal deelnemers"
+          },
+          "description": {
+            "nl": " \tMaximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": " \tMaximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod.",
+            "ap-label-nl": "maximum aantal deelnemers",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+          "name": "intake",
+          "sort": "intake",
+          "label": {
+            "nl": "intake"
+          },
+          "description": {
+            "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Intaketype",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Intaketype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Intaketype"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "intake",
+            "definition-nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#categorie",
+          "name": "categorie",
+          "sort": "categorie",
+          "label": {
+            "nl": "categorie"
+          },
+          "description": {
+            "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Categorie",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Categorie",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Categorie"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten.",
+            "label-nl": "categorie",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#categorie"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+          "name": "beleidsdomein",
+          "sort": "beleidsdomein",
+          "label": {
+            "nl": "beleidsdomein"
+          },
+          "description": {
+            "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
+          },
+          "usage": {
+            "nl": "Voorbeelden van Vlaamse beleidsdomeinen zijn Onderwijs en Vorming of Cultuur, Sport, Jeugd en Media."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Beleidsdomein",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Beleidsdomein",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Beleidsdomein"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "beleidsdomein",
+            "name": "beleidsdomein",
+            "definition-nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+            "ap-usageNote-nl": "Voorbeelden van Vlaamse beleidsdomeinen zijn Onderwijs en Vorming of Cultuur, Sport, Jeugd en Media."
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
+          "name": "aantalInschrijvingen",
+          "sort": "aantal inschrijvingen",
+          "label": {
+            "nl": "aantal inschrijvingen"
+          },
+          "description": {
+            "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "aantal inschrijvingen",
+            "definition-nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
+            "ap-definition-nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames",
+          "name": "aantalDeelnames",
+          "sort": "aantal deelnames",
+          "label": {
+            "nl": "aantal deelnames"
+          },
+          "description": {
+            "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+          },
+          "usage": {
+            "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "aantal deelnames",
+            "definition-nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
+            "ap-definition-nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit.",
+            "ap-usageNote-nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames"
+          }
+        },
+        {
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
+          "name": "aantalAanmeldingen",
+          "sort": "aantal aanmeldingen",
+          "label": {
+            "nl": "aantal aanmeldingen"
+          },
+          "description": {
+            "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+          },
+          "usage": {
+            "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Integer",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
+              "range_label": {
+                "nl": "Integer"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "aantal aanmeldingen",
+            "definition-nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.",
+            "ap-definition-nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
+            "ap-usageNote-nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn.",
+            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen"
+          }
+        },
+        {
+          "uri": "https://schema.org/audience",
+          "name": "doelgroep",
+          "sort": "doelgroep",
+          "label": {
+            "nl": "doelgroep"
+          },
+          "description": {
+            "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Doelgroep",
+              "range_uri": "https://schema.org/Audience"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Doelgroep",
+              "range_puri": "https://schema.org/Audience",
+              "range_label": {
+                "nl": "Doelgroep"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "definition-nl": "Groep van personen voor wie de Activiteit bedoeld is.",
+            "ap-definition-nl": "Groep van gedetineerden voor de Activiteit bedoeld is.",
+            "uri": "https://schema.org/audience",
+            "label-nl": "doelgroep"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
+          "name": "activiteit",
+          "sort": "activiteit",
+          "label": {
+            "nl": "activiteit"
+          },
+          "description": {
+            "nl": "Concrete Activiteiten die het Aanbod verwezenlijken."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Concrete Activiteiten die het Aanbod verwezenlijken.",
+            "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
+            "ap-label-nl": "activiteit"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
+          "name": "beïnvloedDoor",
+          "sort": "beïnvloed door",
+          "label": {
+            "nl": "beïnvloed door"
+          },
+          "description": {
+            "nl": "Realisatie die een effect heeft op het Aanbod."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisatie",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisatie",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
+              "range_label": {
+                "nl": "Realisatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
+            "ap-label-nl": "beïnvloed door",
+            "ap-definition-nl": "Realisatie die een effect heeft op het Aanbod."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/prov#atLocation",
+          "name": "infrastructuur",
+          "sort": "infrastructuur",
+          "label": {
+            "nl": "infrastructuur"
+          },
+          "description": {
+            "nl": "Informatie rond de infrastructuur waarrond of waarin het Aanbod doorgaat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Infrastructuur",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Infrastructuur",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+              "range_label": {
+                "nl": "Infrastructuur"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "infrastructuur",
+            "uri": "http://www.w3.org/ns/prov#atLocation",
+            "ap-definition-nl": "Informatie rond de infrastructuur waarrond of waarin het Aanbod doorgaat."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/title",
+          "name": "naam",
+          "sort": "naam",
+          "label": {
+            "nl": "naam"
+          },
+          "description": {
+            "nl": "Naam van het Aanbod."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#TaalString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://purl.org/dc/terms/title",
+            "ap-label-nl": "naam",
+            "ap-definition-nl": "Naam van het Aanbod."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/language",
+          "name": "taal",
+          "sort": "taal",
+          "label": {
+            "nl": "taal"
+          },
+          "description": {
+            "nl": "Taal waarin de Activiteit doorgaat."
+          },
+          "usage": {
+            "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Literal",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "Literal"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "taal",
+            "ap-definition-nl": "Taal waarin de Activiteit doorgaat.",
+            "uri": "http://purl.org/dc/terms/language",
+            "usageNote-nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/description",
+          "name": "beschrijving",
+          "sort": "beschrijving",
+          "label": {
+            "nl": "beschrijving"
+          },
+          "description": {
+            "nl": "Het voorzien van een activiteit voor gedetineerden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#TaalString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "beschrijving",
+            "ap-definition-nl": "Het voorzien van een activiteit voor gedetineerden.",
+            "uri": "http://purl.org/dc/terms/description"
+          }
+        },
+        {
+          "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+          "name": "gerealiseerdDoor",
+          "sort": "gerealiseerd door",
+          "label": {
+            "nl": "gerealiseerd door"
+          },
+          "description": {
+            "nl": "Realisator die het Aanbod tot stand brengt."
+          },
+          "usage": {
+            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Aanbod",
+              "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Realisator",
+              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Realisator",
+              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
+              "range_label": {
+                "nl": "Realisator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
+            "ap-label-nl": "gerealiseerd door",
+            "ap-definition-nl": "Realisator die het Aanbod tot stand brengt.",
+            "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by"
+          }
+        }
+      ]
     },
     {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#DetentiehuisVestiging",
@@ -107,6 +837,63 @@
         "definition-nl": "Een beveiligde faciliteit waar personen verblijven die van hun vrijheid zijn beroofd.",
         "name": "GevangenisVestiging",
         "ap-usageNote-nl": "Verdere Classificering van de Gevangenis Vestiging kan gebeuren via Infrastructuur.type aan de hand van een gecontroleerde codelijst."
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
+      "name": "Groepsaanbod",
+      "label": {
+        "nl": "Groepsaanbod"
+      },
+      "sort": "Groepsaanbod",
+      "description": {
+        "nl": "Een Aanbod waaraan meerdere gedetineerden kunnen deelnemen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Aanbod",
+          "name": "Aanbod",
+          "package": "OSLO-HDG",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+          "scoped_uri": "#Aanbod"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Groepsaanbod",
+        "definition-nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen.",
+        "ap-definition-nl": "Een Aanbod waaraan meerdere gedetineerden kunnen deelnemen.",
+        "name": "Groepsaanbod"
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod",
+      "name": "IndividueelAanbod",
+      "label": {
+        "nl": "Individueel Aanbod"
+      },
+      "sort": "Individueel Aanbod",
+      "description": {
+        "nl": "Begeleid Aanbod waaraan slechts één gedetineerde kan deelnemen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "Aanbod",
+          "name": "Aanbod",
+          "package": "OSLO-HDG",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+          "scoped_uri": "#Aanbod"
+        }
+      ],
+      "rawTags": {
+        "label-nl": "Individueel Aanbod",
+        "definition-nl": "Begeleid Aanbod waaraan slechts één persoon kan deelnemen.",
+        "ap-definition-nl": "Begeleid Aanbod waaraan slechts één gedetineerde kan deelnemen.",
+        "ap-label-nl": "Individueel Aanbod",
+        "name": "IndividueelAanbod"
       },
       "properties": []
     },
@@ -696,47 +1483,6 @@
       },
       "properties": [
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie",
-          "name": "minimaalAantalDeelnemersPerInstantie",
-          "sort": "minimaal aantal deelnemers per instantie",
-          "label": {
-            "nl": "minimaal aantal deelnemers per instantie"
-          },
-          "description": {
-            "nl": "Minimaal aantal gedetineerden die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "minAantalDeelnemersPerInstantie",
-            "label-nl": "minimaal aantal deelnemers per instantie",
-            "definition-nl": "Minimaal aantal personen die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden.",
-            "ap-definition-nl": "Minimaal aantal gedetineerden die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
-          }
-        },
-        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
           "name": "minimumAantalDeelnemers",
           "sort": "minimum aantal deelnemers",
@@ -778,87 +1524,6 @@
           }
         },
         {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
-          "name": "medium",
-          "sort": "medium",
-          "label": {
-            "nl": "medium"
-          },
-          "description": {
-            "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Medium",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Medium",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Medium"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "medium",
-            "name": "medium",
-            "definition-nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
-          "name": "maximaalAantalDeelnemersPerInstantie",
-          "sort": "maximaal aantal deelnemers per instantie",
-          "label": {
-            "nl": "maximaal aantal deelnemers per instantie"
-          },
-          "description": {
-            "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "maxAantalDeelnemersPerInstantie",
-            "label-nl": "maximaal aantal deelnemers per instantie",
-            "definition-nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit.",
-            "ap-definition-nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan 1 instantie van de Activiteit."
-          }
-        },
-        {
           "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
           "name": "maximumAantalDeelnemers",
           "sort": "maximum aantal deelnemers",
@@ -897,299 +1562,6 @@
             "definition-nl": "Maximaal aantal deelnemers voor de Activiteit.",
             "ap-definition-nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan de Activiteit.",
             "name": "maxAantalDeelnemers"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#categorie",
-          "name": "categorie",
-          "sort": "categorie",
-          "label": {
-            "nl": "categorie"
-          },
-          "description": {
-            "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Categorie",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Categorie",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Categorie"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "categorie",
-            "definition-nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten.",
-            "label-nl": "categorie"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
-          "name": "beleidsdomein",
-          "sort": "beleidsdomein",
-          "label": {
-            "nl": "beleidsdomein"
-          },
-          "description": {
-            "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
-          },
-          "usage": {
-            "nl": "Voorbeelden van Vlaamse beleidsdomeinen zijn Onderwijs en Vorming of Cultuur, Sport, Jeugd en Media."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Beleidsdomein",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Beleidsdomein",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Beleidsdomein"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "beleidsdomein",
-            "name": "beleidsdomein",
-            "definition-nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie.",
-            "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
-            "ap-usageNote-nl": "Voorbeelden van Vlaamse beleidsdomeinen zijn Onderwijs en Vorming of Cultuur, Sport, Jeugd en Media."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
-          "name": "aantalInschrijvingen",
-          "sort": "aantal inschrijvingen",
-          "label": {
-            "nl": "aantal inschrijvingen"
-          },
-          "description": {
-            "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "aantal inschrijvingen",
-            "definition-nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit.",
-            "ap-definition-nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit.",
-            "name": "aantalInschrijvingen"
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames",
-          "name": "aantalDeelnames",
-          "sort": "aantal deelnames",
-          "label": {
-            "nl": "aantal deelnames"
-          },
-          "description": {
-            "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
-          },
-          "usage": {
-            "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "aantalDeelnames",
-            "label-nl": "aantal deelnames",
-            "definition-nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
-            "ap-definition-nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit.",
-            "ap-usageNote-nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
-          "name": "aantalAanmeldingen",
-          "sort": "aantal aanmeldingen",
-          "label": {
-            "nl": "aantal aanmeldingen"
-          },
-          "description": {
-            "nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
-          },
-          "usage": {
-            "nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Integer",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#integer",
-              "range_label": {
-                "nl": "Integer"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "aantal aanmeldingen",
-            "definition-nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen.",
-            "ap-definition-nl": "Aantal gedetineerden dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
-            "name": "aantalAanmeldingen",
-            "ap-usageNote-nl": "Geldige aanmeldingen zijn gedetineerden die voldoen aan de eventuele voorwaarden die van toepassing zijn."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad",
-          "name": "participatiegraad",
-          "sort": "participatiegraad",
-          "label": {
-            "nl": "participatiegraad"
-          },
-          "description": {
-            "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Participatiegraad",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Participatiegraad",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Participatiegraad"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "name": "Activiteit.participatiegraad",
-            "label-nl": "participatiegraad",
-            "definition-nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
-          }
-        },
-        {
-          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake",
-          "name": "intake",
-          "sort": "intake",
-          "label": {
-            "nl": "intake"
-          },
-          "description": {
-            "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Intaketype",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Intaketype",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Intaketype"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "intake",
-            "definition-nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst.",
-            "name": "Activiteit.intake"
           }
         },
         {
@@ -1274,47 +1646,6 @@
           }
         },
         {
-          "uri": "https://schema.org/audience",
-          "name": "doelgroep",
-          "sort": "doelgroep",
-          "label": {
-            "nl": "doelgroep"
-          },
-          "description": {
-            "nl": "Groep van gedetineerden voor de Activiteit bedoeld is."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Doelgroep",
-              "range_uri": "https://schema.org/Audience"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Doelgroep",
-              "range_puri": "https://schema.org/Audience",
-              "range_label": {
-                "nl": "Doelgroep"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "definition-nl": "Groep van personen voor wie de Activiteit bedoeld is.",
-            "ap-definition-nl": "Groep van gedetineerden voor de Activiteit bedoeld is.",
-            "uri": "https://schema.org/audience",
-            "label-nl": "doelgroep"
-          }
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit",
           "name": "superactiviteit",
           "sort": "superactiviteit",
@@ -1358,6 +1689,46 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit",
+          "name": "aanbod",
+          "sort": "aanbod",
+          "label": {
+            "nl": "aanbod"
+          },
+          "description": {
+            "nl": "Het Aanbod dat de Activiteit verwezenlijkt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Activiteit",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Aanbod",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Aanbod",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+              "range_label": {
+                "nl": "Aanbod"
+              }
+            }
+          ],
+          "cardinality": "",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "aanbod",
+            "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit",
+            "ap-definition-nl": "Het Aanbod dat de Activiteit verwezenlijkt."
+          }
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
           "name": "subactiviteit",
           "sort": "subactiviteit",
@@ -1398,46 +1769,6 @@
             "definition-nl": "De Activiteit maakt deel uit van een overkoepelende Activiteit.",
             "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
             "usageNote-nl": "Dit wordt gebruikt om Sessies aan een Sessiereeks te hangen."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
-          "name": "beïnvloedDoor",
-          "sort": "beïnvloed door",
-          "label": {
-            "nl": "beïnvloed door"
-          },
-          "description": {
-            "nl": "Realisatie die een effect heeft op de Activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisatie",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisatie",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
-              "range_label": {
-                "nl": "Realisatie"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.w3.org/ns/prov#wasInfluencedBy",
-            "ap-label-nl": "beïnvloed door",
-            "ap-definition-nl": "Realisatie die een effect heeft op de Activiteit."
           }
         },
         {
@@ -1567,49 +1898,6 @@
           }
         },
         {
-          "uri": "http://purl.org/dc/terms/language",
-          "name": "taal",
-          "sort": "taal",
-          "label": {
-            "nl": "taal"
-          },
-          "description": {
-            "nl": "Taal waarin de Activiteit doorgaat."
-          },
-          "usage": {
-            "nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Literal",
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
-              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
-              "range_label": {
-                "nl": "Literal"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "taal",
-            "ap-definition-nl": "Taal waarin de Activiteit doorgaat.",
-            "uri": "http://purl.org/dc/terms/language",
-            "usageNote-nl": "Indien de Activiteit in verschillende talen wordt aangeboden, moeten verschillende instanties van Activiteit gebruikt worden."
-          }
-        },
-        {
           "uri": "http://purl.org/dc/terms/isReplacedBy",
           "name": "vervangenDoor",
           "sort": "vervangen door",
@@ -1690,49 +1978,6 @@
             "ap-label-nl": "beschrijving",
             "ap-definition-nl": "Een tekstuele beschrijving van de Activiteit.",
             "uri": "http://purl.org/dc/terms/description"
-          }
-        },
-        {
-          "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
-          "name": "gerealiseerdDoor",
-          "sort": "gerealiseerd door",
-          "label": {
-            "nl": "gerealiseerd door"
-          },
-          "description": {
-            "nl": "Realisator die de Activiteit tot stand brengt."
-          },
-          "usage": {
-            "nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn."
-          },
-          "domain": [
-            {
-              "EA-Name": "Activiteit",
-              "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Realisator",
-              "range_uri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Realisator",
-              "range_puri": "https://data.vlaanderen.be/ns/cultuurparticipatie/#Realisator",
-              "range_label": {
-                "nl": "Realisator"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": "Dit kan bijvoorbeeld een aanbodverstrekker zijn.",
-            "ap-label-nl": "gerealiseerd door",
-            "ap-definition-nl": "Realisator die de Activiteit tot stand brengt.",
-            "uri": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by"
           }
         }
       ]
@@ -2434,10 +2679,10 @@
       "parents": [
         {
           "label": "Activiteit",
-          "name": "Activiteit",
+          "name": "PROV::Activity",
           "package": "PROV",
           "uri": "http://www.w3.org/ns/prov#Activity",
-          "scoped_uri": "#Activiteit"
+          "scoped_uri": "http://www.w3.org/ns/prov#Activity"
         }
       ],
       "rawTags": {
@@ -2584,7 +2829,7 @@
             "nl": "beïnvloedt"
           },
           "description": {
-            "nl": "Activiteit waarop de Realisatie een effect heeft."
+            "nl": "Aanbod waarop de Realisatie een effect heeft."
           },
           "usage": {},
           "domain": [
@@ -2595,23 +2840,23 @@
           ],
           "range": [
             {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+              "range_label": "Aanbod",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_uri": "#Aanbod",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Aanbod"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Activiteit waarop de Realisatie een effect heeft.",
+            "ap-definition-nl": "Aanbod waarop de Realisatie een effect heeft.",
             "ap-label-nl": "beïnvloedt",
             "uri": "http://www.w3.org/ns/prov#influenced"
           }
@@ -2808,7 +3053,7 @@
             "nl": "realiseert"
           },
           "description": {
-            "nl": "Activiteit die de Realisator tot stand brengt."
+            "nl": "Aanbod die de Realisator tot stand brengt."
           },
           "usage": {},
           "domain": [
@@ -2819,23 +3064,23 @@
           ],
           "range": [
             {
-              "range_label": "Activiteit",
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+              "range_label": "Aanbod",
+              "range_uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Activiteit",
-              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_uri": "#Aanbod",
+              "range_puri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
               "range_label": {
-                "nl": "Activiteit"
+                "nl": "Aanbod"
               }
             }
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Activiteit die de Realisator tot stand brengt.",
+            "ap-definition-nl": "Aanbod die de Realisator tot stand brengt.",
             "ap-label-nl": "realiseert",
             "uri": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert"
           }
@@ -3323,6 +3568,21 @@
   ],
   "properties": [
     {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad",
+      "name": {
+        "nl": "participatiegraad",
+        "undefined": "participatiegraad"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#ondergrens",
       "name": {
         "nl": "ondergrens",
@@ -3372,6 +3632,21 @@
       "name": {
         "nl": "karakter",
         "undefined": "karakter"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+      "name": {
+        "nl": "intake",
+        "undefined": "intake"
       },
       "description": {},
       "domain": [
@@ -3582,36 +3857,6 @@
       "name": {
         "nl": "reden",
         "undefined": "reden"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad",
-      "name": {
-        "nl": "participatiegraad",
-        "undefined": "participatiegraad"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake",
-      "name": {
-        "nl": "intake",
-        "undefined": "intake"
       },
       "description": {},
       "domain": [

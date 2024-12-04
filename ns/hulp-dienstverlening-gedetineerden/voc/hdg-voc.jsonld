@@ -50,26 +50,21 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-11-28"
+    "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-02"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-11-13",
   "classes": [
     {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsaanbieding",
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "Activiteitsaanbieding"
+        "nl": "Aanbod"
       },
       "definition": {
-        "nl": "Het aanbieden van een activiteit."
+        "nl": "Het voorzien van een activiteit voor gedetineerden."
       },
-      "usage": {
-        "nl": "Deze klasse wordt gebruikt wanneer er nog geen concrete activiteiten gepland zijn. Bijvoorbeeld, we bieden psychologische zorg aan. Er wordt enkel iets georganiseerd als er een specfiieke nood is voor een gedetineerde. De instanties van de effectieve zorg voor een specifieke gedetineerde zijn nog niet bekend, dus we kunnen de klasse Activiteit nog niet gebruiken. Maar we willen wel aanduiden dat er een mogelijkheid is voor deze zorg. Hiervoor gebruik we de klasse Activiteitsaanbieiding."
-      },
-      "parents": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ]
+      "parents": []
     },
     {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus",
@@ -131,6 +126,32 @@
       },
       "parents": [
         "http://www.w3.org/ns/org#Site"
+      ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Groepsaanbod"
+      },
+      "definition": {
+        "nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen."
+      },
+      "parents": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Individueel Aanbod"
+      },
+      "definition": {
+        "nl": "Begeleid Aanbod waaraan slechts één persoon kan deelnemen."
+      },
+      "parents": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ]
     },
     {
@@ -324,6 +345,23 @@
   ],
   "properties": [
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "participatiegraad"
+      },
+      "definition": {
+        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#ondergrens",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -337,23 +375,6 @@
       ],
       "range": [
         "https://www.w3.org/2000/01/rdf-schema#Resource"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemersPerInstantie",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "minimaal aantal deelnemers per instantie"
-      },
-      "definition": {
-        "nl": "Minimaal aantal personen die moeten deelnemen aan 1 instantie van de Activiteit voor dat deze kan plaatsvinden."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
       ],
       "generalization": []
     },
@@ -375,6 +396,17 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -384,27 +416,10 @@
         "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemersPerInstantie",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "maximaal aantal deelnemers per instantie"
-      },
-      "definition": {
-        "nl": "Maximaal aantal personen die kunnen deelnemen aan 1 instantie van de Activiteit."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
       ],
       "generalization": []
     },
@@ -419,6 +434,17 @@
       },
       "domain": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -460,6 +486,23 @@
       "generalization": []
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "intake"
+      },
+      "definition": {
+        "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+      },
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#effectievePopulatie",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
@@ -486,7 +529,7 @@
         "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -554,7 +597,7 @@
         "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -588,7 +631,7 @@
         "nl": "Aantal personen dat zich heeft ingeschreven voor een Activiteit."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -605,7 +648,7 @@
         "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -622,7 +665,7 @@
         "nl": "Aantal personen dat zich geeft aangemeld voor een Activiteit. Dit betreft enkel geldige aanmeldingen."
       },
       "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#integer"
@@ -804,40 +847,6 @@
         "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.participatiegraad",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "participatiegraad"
-      },
-      "definition": {
-        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteit.intake",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "intake"
-      },
-      "definition": {
-        "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
     }
   ],
   "externalproperties": [
@@ -887,10 +896,20 @@
       "@type": "rdf:Property"
     },
     {
+      "name": {},
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit",
+      "@type": "rdf:Property"
+    },
+    {
       "name": {
         "nl": "subactiviteit"
       },
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit",
       "@type": "rdf:Property"
     },
     {
@@ -991,6 +1010,11 @@
       "@type": "rdf:Property"
     },
     {
+      "name": {},
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "rdf:Property"
+    },
+    {
       "name": {
         "nl": "vervangt"
       },
@@ -1007,6 +1031,11 @@
         "nl": "vervangen door"
       },
       "@id": "http://purl.org/dc/terms/isReplacedBy",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {},
+      "@id": "http://purl.org/dc/terms/description",
       "@type": "rdf:Property"
     },
     {
