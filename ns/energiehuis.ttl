@@ -1,0 +1,240 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Adviesverlening> a owl:Class;
+  rdfs:label "Adviesverlening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie."@nl;
+  rdfs:comment "Dienstverlening op maat. Dit kan in de vorm van een huisbezoek, een uitgebreide intake, advies op afspraak aan het loket, uitgebreide antwoorden op mail, etc."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Begeleiding> a owl:Class;
+  rdfs:label "Begeleiding"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Begeleiding kan enkel gegeven worden aan burgers uit inkomenscategorieën 2 en 3. De informatieoverdracht in deze fase is strikt persoonlijk, als ook pandgebonden, en niet vrij beschikbaar voor alle burgers. Deze fase is de overkoepelende fase voor 3 subfases."@nl;
+  rdfs:comment "Het ondersteunen van een Agent door stapsgewijs te helpen bij het ondernemen van acties of het doorlopen van langdurige trajecten, al dan niet met regelmatige contactmomenten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Energiehuis> a owl:Class;
+  rdfs:label "Energiehuis"@nl;
+  rdfs:comment "Een instantie die op het niveau van één of meer gemeenten diensten inzake energie en woningkwaliteit aanbiedt aan de klant."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening> a owl:Class;
+  rdfs:label "Informatievoorziening"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Deze fase kent bij een Energiehuis doorgaans de volgende activiteiten:
+<ul>
+
+<li>Medewerkers luisteren naar wat de burger te vertellen heeft, om een beter begrip te krijgen van hun situatie.</li>
+
+<li>Soms worden de wensen en noden van de burger in kaart gebracht, mogelijk via een intakegesprek, hoewel dit niet altijd noodzakelijk is.</li>
+  <li>Er wordt generieke informatie verstrekt, zoals uitleg over beschikbare energieleningen en premies voor bepaalde doelgroepen.</li>
+
+<li>De burger wordt naar de juiste dienst of dienstverlener verwezen voor verdere ondersteuning en specifieke hulp.</li>
+
+</ul>
+"""@nl;
+  rdfs:comment "Een eerste persoonlijk contact met een burger waarbij basis- of generieke informatie wordt gedeeld, met als doel burgers te informeren over de beschikbare diensten en mogelijkheden, en hen toe te leiden naar de juiste vervolgstappen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekken> a owl:Class;
+  rdfs:label "Interesse Opwekken"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld gaan over het verspreiden van flyers, deelnemen aan informatiemarkten, en het onderhouden van een informatieve website om een breed publiek te informeren over de diensten van een energiehuis."@nl;
+  rdfs:comment "Het verstrekken van algemene, laagdrempelige kennis en richtlijnen via diverse middelen zoals websites, videos, brochures, telefoon, mail, en loket, op grote schaal. Interesse opwekken is gericht op het creëren van bewustwording en het trekken van de aandacht van een breed publiek, zodat zij op de hoogte zijn van iets."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Klantencontact> a owl:Class;
+  rdfs:label "Klantencontact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hiermee bedoelen we elke interactie (telefoongesprek, hoe kort ook, e-mail, formulier, loket bezoek, huisbezoek, ...), inclusief interacties die niet in een CRM geregistreerd worden, maar bijvoorbeeld wel via streepjes geteld worden."@nl;
+  rdfs:comment "Elke interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Nazorg> a owl:Class;
+  rdfs:label "Nazorg"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Deze fase omvat activiteiten, zoals:
+<ul>
+<li>Beheer van de leningen</li>
+<li>Opvolgscan type 2</li>
+<li>Evaluatie (klantenbevraging) over het afgelopen traject en feedback</li>
+<li>Opmaken van de eindfactuur</li>
+<li>Individuele sensibilisering m.b.t. vervolgtraject</li>
+<li>Toeleiding naar volgende maatregel</li>
+</ul>
+"""@nl;
+  rdfs:comment "De reeks activiteiten en ondersteuning die wordt verleend na de voltooiing van een project of taak, gericht op het waarborgen van de duurzaamheid, tevredenheid en het correct functioneren van de geleverde diensten of producten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Premie> a owl:Class;
+  rdfs:label "Premie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een geldbedrag dat wordt toegekend aan huiseigenaren, huurders of bedrijven om hen aan te moedigen energiebesparende maatregelen of duurzame energieoplossingen te implementeren."@nl;
+  rdfs:comment "Een financiële tegemoetkoming of subsidie die wordt verstrekt om een specifieke activiteit of investering te ondersteunen en te stimuleren."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
+
+<https://data.vlaanderen.be/ns/energiehuis#ProfessioneelContact> a owl:Class;
+  rdfs:label "Professioneel Contact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Met professionele contacten bedoelen we alle contacten die een Energiehuis heeft met partnerorganisaties, aannemers en andere partijen die geen klanten zijn."@nl;
+  rdfs:comment "Een interactie of verbinding tussen individuen of organisaties binnen een werkcontext."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Projectontwerp> a owl:Class;
+  rdfs:label "Projectontwerp"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Deze fase omvat activiteiten zoals:
+<ul>
+<li>opvragen en vergelijken van offertes</li>
+<li>het gedetailleerd uitwerken van de financiële aspecten</li>
+<li>het aanvragen en analyseren van eventuele leningen</li>
+<li>De fase wordt afgesloten met de ondertekening van de gekozen offerte(s) door de klant en, indien van toepassing, de ondertekening van een leningsakte.</li>
+</ul>
+"""@nl;
+  rdfs:comment "Het stadium in een verbouwingsproject waarin de Agent besluit verder te gaan met de verbouwing en de voorbereidingen voor de uitvoering worden getroffen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Uitvoering> a owl:Class;
+  rdfs:label "Uitvoering"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Deze fase omvat activiteiten (vanuit het standpunt van Energiehuizen), zoals:
+<ul>
+<li>werfbezoek,</li> 
+<li>aanspreekpunt voor derden,</li>
+<li>doorverwijzing bij conflict,</li>
+<li>risicos tijdens de uitvoering analyseren en signaleren (bv. een aannemer die slechte reputatie heeft, bv. slechte uitvoering van een bepaald werk).</li>
+<li>eerste schijf van MVL opvragen</li>
+<li>aanlevering en betaling van de facturen</li>
+<li>ondersteuning van premie-aanvraag</li>
+</ul>
+"""@nl;
+  rdfs:comment "Het proces waarin de geplande activiteiten en werkzaamheden daadwerkelijk worden gerealiseerd om een project of taak te voltooien, vaak volgens vooraf opgestelde plannen en specificaties."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#WoonEnEnergieloket> a owl:Class;
+  rdfs:label "Woon- en Energieloket"@nl;
+  rdfs:comment "Een integrale dienst die inwoners van een gemeente ondersteunt bij een breed scala aan onderwerpen met betrekking tot wonen en energie (o.a. wonen, verhuren, bouwen, woningkwaliteit, klimaatadaptatie, energie)."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#categorieWerken> a owl:ObjectProperty;
+  rdfs:label "categorie werken"@nl;
+  rdfs:comment "Indeling van diverse renovatietaken en activiteiten."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Renovatieproject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/energiehuis#financiering> a owl:ObjectProperty;
+  rdfs:label "financiering"@nl;
+  rdfs:comment "Het geld of de financiële middelen die beschikbaar worden gesteld voor de uitvoering van een vastgoedproject."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Renovatieproject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
+
+<https://data.vlaanderen.be/ns/energiehuis#gefinancierdDoor> a owl:ObjectProperty;
+  rdfs:label "gefinancierd door"@nl;
+  rdfs:comment "Organisatie, onderneming, persoon of overheidsinstantie die financiert."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range dc:Agent .
+
+<https://data.vlaanderen.be/ns/energiehuis#looptijd> a owl:ObjectProperty;
+  rdfs:label "looptijd"@nl;
+  rdfs:comment "De periode gedurende welke de lening moet worden terugbetaald, meestal uitgedrukt in maanden of jaren."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Lening>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/energiehuis#onderwerp> a owl:ObjectProperty;
+  rdfs:label "onderwerp"@nl;
+  rdfs:comment "Het onderwerp verwijst naar het specifieke thema of de kwestie die tijdens het geregistreerde klantencontact wordt besproken."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#GeregistreerdKlantencontact>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/energiehuis#rentevoet> a owl:DatatypeProperty;
+  rdfs:label "rentevoet"@nl;
+  rdfs:comment "Het percentage van het geleende bedrag dat de lener periodiek betaalt aan de kredietverstrekker als vergoeding voor het gebruik van het geld, meestal uitgedrukt op jaarbasis (jaarlijkse rentevoet)."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Lening>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range xsd:decimal .
+
+<https://data.vlaanderen.be/ns/energiehuis#uitbetalingStart> a owl:DatatypeProperty;
+  rdfs:label "uitbetaling start"@nl;
+  rdfs:comment "Wanneer het bedrag uitbetaald wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:range xsd:date .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+<https://data.vlaanderen.be/ns/energiehuis#GeregistreerdKlantencontact> a owl:Class;
+  rdfs:label "Geregistreerd Klantencontact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een telefonisch gesprek, afspraak of huisbezoek omvatten waarin de klant vragen stelt, advies zoekt, of ondersteuning aanvraagt met betrekking tot energiebesparende maatregelen of diensten."@nl;
+  rdfs:comment "Een geregistreerd klantencontact is een interactie tussen een klant en een organisatie die formeel wordt vastgelegd en gedocumenteerd in een systeem voor toekomstige referentie en opvolging."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+schemas:amount a rdf:Property;
+  rdfs:label "bedrag"@nl .
+
+<https://data.vlaanderen.be/ns/energiehuis#Lening> a owl:Class;
+  rdfs:label "Lening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In het geval van Energiehuizen verwijst dit voornamelijk naar de Mijn VerbouwLening waarbij de rentevoet jaarlijks is vastgelegd en de lening een maximum looptijd van 25 jaar heeft."@nl;
+  rdfs:comment "Een geldbedrag dat een partij aan een andere partij geeft, op voorwaarde dat die laatste op termijn het geld terugbetaalt. Vaak gaat de terugbetaling van het geleende bedrag gepaard met de betaling van een vergoeding (rente)."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Renovatieproject> a owl:Class;
+  rdfs:label "Renovatieproject"@nl;
+  rdfs:comment "Een plan of onderneming gericht op de vernieuwing van onroerend goed, zoals woningen, commerciële gebouwen of industriële panden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis#Financiering> a owl:Class;
+  rdfs:label "Financiering"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de context van energiehuizen verwijst Financiering naar het verstrekken van leningen, subsidies, of andere financiële ondersteuning om energiebesparende maatregelen, duurzame energieprojecten, of renovaties te bekostigen."@nl;
+  rdfs:comment "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+<https://data.vlaanderen.be/ns/energiehuis> a owl:Ontology;
+  rdfs:label "energiehuis"@en,
+    "energiehuis"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso schemas:amount,
+    dc:type;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
