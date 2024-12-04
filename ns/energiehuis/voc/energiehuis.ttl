@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -75,8 +76,8 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
 
-<https://data.vlaanderen.be/ns/energiehuis#ProfesioneelContact> a owl:Class;
-  rdfs:label "Een interactie of verbinding tussen individuen of organisaties binnen een werkcontext."@nl;
+<https://data.vlaanderen.be/ns/energiehuis#ProfessioneelContact> a owl:Class;
+  rdfs:label "Professioneel Contact"@nl;
   <http://purl.org/vocab/vann/usageNote> "Met professionele contacten bedoelen we alle contacten die een Energiehuis heeft met partnerorganisaties, aannemers en andere partijen die geen klanten zijn."@nl;
   rdfs:comment "Een interactie of verbinding tussen individuen of organisaties binnen een werkcontext."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
@@ -114,13 +115,6 @@
   rdfs:label "Woon- en Energieloket"@nl;
   rdfs:comment "Een integrale dienst die inwoners van een gemeente ondersteunt bij een breed scala aan onderwerpen met betrekking tot wonen en energie (o.a. wonen, verhuren, bouwen, woningkwaliteit, klimaatadaptatie, energie)."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
-
-<https://data.vlaanderen.be/ns/energiehuis#bedrag> a owl:DatatypeProperty;
-  rdfs:label "bedrag"@nl;
-  rdfs:comment "Het bedrag dat gefinancierd wordt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
-  rdfs:range xsd:double .
 
 <https://data.vlaanderen.be/ns/energiehuis#categorieWerken> a owl:ObjectProperty;
   rdfs:label "categorie werken"@nl;
@@ -162,7 +156,7 @@
   rdfs:comment "Het percentage van het geleende bedrag dat de lener periodiek betaalt aan de kredietverstrekker als vergoeding voor het gebruik van het geld, meestal uitgedrukt op jaarbasis (jaarlijkse rentevoet)."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Lening>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
-  rdfs:range xsd:double .
+  rdfs:range xsd:decimal .
 
 <https://data.vlaanderen.be/ns/energiehuis#uitbetalingStart> a owl:DatatypeProperty;
   rdfs:label "uitbetaling start"@nl;
@@ -179,6 +173,9 @@ dc:type a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een telefonisch gesprek, afspraak of huisbezoek omvatten waarin de klant vragen stelt, advies zoekt, of ondersteuning aanvraagt met betrekking tot energiebesparende maatregelen of diensten."@nl;
   rdfs:comment "Een geregistreerd klantencontact is een interactie tussen een klant en een organisatie die formeel wordt vastgelegd en gedocumenteerd in een systeem voor toekomstige referentie en opvolging."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
+schemas:amount a rdf:Property;
+  rdfs:label "bedrag"@nl .
 
 <https://data.vlaanderen.be/ns/energiehuis#Lening> a owl:Class;
   rdfs:label "Lening"@nl;
@@ -219,7 +216,8 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso dc:type;
+  rdfs:seeAlso schemas:amount,
+    dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
