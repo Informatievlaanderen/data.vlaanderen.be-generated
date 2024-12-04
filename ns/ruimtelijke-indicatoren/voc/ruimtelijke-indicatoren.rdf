@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#DirecteLocatieAanduiding">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject.type">
     <rdfs:isDefinedBy>
-      <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren">
+      <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
         <dc:license rdf:resource="https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0"/>
         <dc:mediator>
@@ -388,123 +388,101 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#target">
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#target">
             <rdfs:label xml:lang="nl">target</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#source">
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#source">
             <rdfs:label xml:lang="nl">source</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-    <rdfs:label xml:lang="nl">DirecteLocatieAanduiding</rdfs:label>
-    <rdfs:comment xml:lang="nl">Een specifieke plaats wordt aangeduid door middel van coördinaten,zoals breedte- en lengtegraden.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject.type">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
     <rdfs:label xml:lang="nl">type</rdfs:label>
     <rdfs:comment xml:lang="nl">Typering van het ruimtelijk object, i.e., schaalniveau.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkObject</rdfs:label>
         <rdfs:comment xml:lang="nl">Een entiteit met ruimtelijke kenmerken en een vaste geografische ligging.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"/>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectType">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectType">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkObjectType</rdfs:label>
         <rdfs:comment xml:lang="nl">Classificatie van ruimtelijke objecten.</rdfs:comment>
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#geldigheid">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#geldigheid">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">geldigheid</rdfs:label>
     <rdfs:comment xml:lang="nl">Periode waarin de grenzen van een ruimtelijk object ongewijzigd bleven.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject"/>
     <rdfs:range rdf:resource="http://data.europa.eu/m8g/PeriodOfTime"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#locatie">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#locatie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">locatie</rdfs:label>
     <rdfs:comment xml:lang="nl">Geografische positie van het ruimtelijk object.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#naam">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#naam">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">naam</rdfs:label>
     <rdfs:comment xml:lang="nl">Benaming van het ruimtelijk object.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#referentie">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
-    <rdfs:label xml:lang="nl">referentie</rdfs:label>
-    <rdfs:comment xml:lang="nl">Referentie naar het ruimtelijk object (plaats of adres) dat gebruikt wordt als indirecte locatie aanduiding.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#IndirecteLocatieAanduiding">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
-        <rdfs:label xml:lang="nl">IndirecteLocatieAanduiding</rdfs:label>
-        <rdfs:comment xml:lang="nl">Een specifieke plaats wordt beschreven aan de hand van een herkenbare plaatsnaam of adres, waarbij de geografische ligging impliciet wordt weergegeven.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#relatieType">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#relatieType">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">relatietype</rdfs:label>
     <rdfs:comment xml:lang="nl">Typering van de relatie tussen twee ruimtelijke objecten.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatie">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectRelatie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkObjectRelatie</rdfs:label>
         <rdfs:comment xml:lang="nl">De geometrische en topologische verbindingen tussen geografische entiteiten.</rdfs:comment>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatieType">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectRelatieType">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkObjectRelatieType</rdfs:label>
         <rdfs:comment xml:lang="nl">Classificatie van relaties tussen ruimtelijke objecten.</rdfs:comment>
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#ruimtelijkeIndicatorType">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#ruimtelijkeIndicatorType">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">ruimtelijke indicatortype</rdfs:label>
     <rdfs:comment xml:lang="nl">Aanduiding van de ruimtelijke indicator die bestudeerd wordt.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicator">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicator">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkeIndicator</rdfs:label>
         <rdfs:comment xml:lang="nl">Kenmerk die één/meerdere aspecten gerelateerd aan de private of openbare ruimte in beeld brengt.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"/>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicatorType">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicatorType">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">RuimtelijkeIndicatorType</rdfs:label>
         <rdfs:comment xml:lang="nl">Classificatie van ruimtelijke indicatoren.</rdfs:comment>
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#toetsingType">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#toetsingType">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
     <rdfs:label xml:lang="nl">toetsingtype</rdfs:label>
     <rdfs:comment xml:lang="nl">Vergelijking van twee ruimtelijke indicatoren.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicator"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicator"/>
     <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#ToetsingType">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren"/>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#ToetsingType">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/"/>
         <rdfs:label xml:lang="nl">ToetsingType</rdfs:label>
         <rdfs:comment xml:lang="nl">Aard van de toetsing van twee resultaten ten opzichte van elkaar.</rdfs:comment>
       </owl:Class>
