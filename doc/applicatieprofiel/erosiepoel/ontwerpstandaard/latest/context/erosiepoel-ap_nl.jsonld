@@ -1,12 +1,12 @@
 {
   "@context": {
     "Actuatie": "http://www.w3.org/ns/sosa/Actuation",
-    "Actuatie.heeftSimpelResultaat": {
-      "@id": "http://www.w3.org/ns/sosa/hasSimpleResult"
-    },
-    "Actuatie.object": {
+    "Actuatie.featureOfInterest": {
       "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
+    },
+    "Actuatie.heeftSimpelResultaat": {
+      "@id": "http://www.w3.org/ns/sosa/hasSimpleResult"
     },
     "Actuatie.uitgevoerdDoor": {
       "@id": "http://www.w3.org/ns/sosa/madeByActuator",
@@ -62,7 +62,7 @@
     },
     "Erosiepoel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoel",
     "Erosiepoel.dimensie": {
-      "@id": "http://qudt.org/schema/qudt/hasQuantity",
+      "@id": "https://test.data.vlaanderen.be/ns/bodemerosie#dimensie",
       "@type": "@id"
     },
     "Erosiepoel.maximaalVolume": {
@@ -70,6 +70,7 @@
       "@type": "@id"
     },
     "Erosiepoelonderdeel": "https://test.data.vlaanderen.be/ns/bodemerosie#Erosiepoelonderdeel",
+    "FeatureOfInterest": "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "Geobserveerdkenmerk": "http://www.w3.org/ns/sosa/ObservableProperty",
     "Graszone": "https://test.data.vlaanderen.be/ns/bodemerosie#Graszone",
     "Hoeveelheid": "http://qudt.org/schema/qudt/Quantity",
@@ -94,11 +95,14 @@
     },
     "Locatie": "http://www.w3.org/ns/prov#Location",
     "Numeriekeunie": "http://www.linkedmodel.org/schema/dtype#numericUnion",
-    "Object": "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "Observatie": "http://www.w3.org/ns/sosa/Observation",
     "Observatie.einde": {
       "@id": "http://www.w3.org/ns/prov#endedAtTime",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Observatie.featureOfInterest": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
     },
     "Observatie.gedaanDoor": {
       "@id": "http://www.w3.org/ns/sosa/madeBySensor",
@@ -110,10 +114,6 @@
     },
     "Observatie.heeftResultaat": {
       "@id": "http://www.w3.org/ns/sosa/hasResult",
-      "@type": "@id"
-    },
-    "Observatie.object": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
       "@type": "@id"
     },
     "Observatie.start": {
