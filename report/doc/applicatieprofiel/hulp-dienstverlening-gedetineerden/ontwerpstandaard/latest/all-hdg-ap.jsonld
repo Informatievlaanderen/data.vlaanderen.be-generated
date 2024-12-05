@@ -1145,7 +1145,7 @@
                 }
             ],
             "generalization": [],
-            "minCardinality": "0",
+            "minCardinality": "1",
             "maxCardinality": "1"
         },
         {
@@ -1493,6 +1493,88 @@
             ],
             "generalization": [],
             "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "maximaalAantalDeelnemers",
+            "inpackage": "ACTIVE_PACKAGE",
+            "definition": {
+                "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod."
+            },
+            "label": {
+                "nl": "maximaal aantal deelnemers"
+            },
+            "ap-label-nl": {
+                "nl": "maximaal aantal deelnemers"
+            },
+            "ap-definition-nl": {
+                "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod."
+            },
+            "extra": {
+                "EA-Name": "maxAantalDeelnames",
+                "EA-Guid": "{7A2EE7FC-34F9-43cf-82A5-761450B21E25}",
+                "EA-Package": "OSLO-HDG",
+                "EA-Type": "attribute",
+                "EA-Domain": "Aanbod",
+                "EA-Domain-Guid": "{A26D275D-0AF0-49f3-A40E-84F55DD484C1}",
+                "EA-Range": "Integer",
+                "RangeData": {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "label": {
+                    "nl": "maximaal aantal deelnemers"
+                },
+                "definition": {
+                    "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod."
+                },
+                "usage": "",
+                "ap-label-nl": {
+                    "nl": "maximaal aantal deelnemers"
+                },
+                "ap-definition-nl": {
+                    "nl": "Maximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod."
+                },
+                "ap-usageNote-nl": "",
+                "ap-codelist": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "maxAantalDeelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "maximaal aantal deelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Maximaal aantal gedetineerden die kunnen deelnemen aan het Aanbod.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+                    "EA-Name": "Aanbod"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
             "maxCardinality": "1"
         },
         {
@@ -1936,7 +2018,7 @@
             ],
             "generalization": [],
             "minCardinality": "1",
-            "maxCardinality": "1"
+            "maxCardinality": "*"
         },
         {
             "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#bovengrens",
@@ -7636,7 +7718,9 @@
                     "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
                 }
             ],
-            "generalization": []
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
         },
         {
             "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
@@ -7857,7 +7941,9 @@
                     "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
                 }
             ],
-            "generalization": []
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
         },
         {
             "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
@@ -9905,6 +9991,9 @@
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "type",
             "inpackage": "OTHER_PACKAGE",
+            "ap-usageNote-nl": {
+                "nl": "Dit is bijvoorbeeld de leeftijd."
+            },
             "usage": {
                 "nl": "Dit is bijvoorbeeld de leeftijd."
             },
@@ -9949,7 +10038,9 @@
                 "ap-definition-nl": {
                     "nl": "De eigenschap waar we iets willen over zeggen."
                 },
-                "ap-usageNote-nl": "",
+                "ap-usageNote-nl": {
+                    "nl": "Dit is bijvoorbeeld de leeftijd."
+                },
                 "ap-codelist": "",
                 "RawTags": [
                     {
@@ -9963,13 +10054,13 @@
                         "note": "null"
                     },
                     {
-                        "key": "usageNote-nl",
-                        "value": "Dit is bijvoorbeeld de leeftijd.",
+                        "key": "uri",
+                        "value": "http://purl.org/dc/terms/type",
                         "note": "null"
                     },
                     {
-                        "key": "uri",
-                        "value": "http://purl.org/dc/terms/type",
+                        "key": "ap-usageNote-nl",
+                        "value": "Dit is bijvoorbeeld de leeftijd.",
                         "note": "null"
                     }
                 ],
@@ -11550,7 +11641,7 @@
     "name": "hdg-ap",
     "type": "ap",
     "eap": "OSLO-Hulp-en-Dienstverlening-aan-Gedetineerden.eap",
-    "diagram": "OSLO-HDG",
+    "diagram": "OSLO-HDG-AP",
     "template": "hdg-ap.j2",
     "title": "OSLO Hulp- en Dienstverlening aan Gedetineerden",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
@@ -11563,7 +11654,7 @@
     "config": "config/config-ap.json",
     "branchtag": "main",
     "disabled": false,
-    "dummy": "053",
+    "dummy": "054",
     "filename": "config/hdg-ap.json",
     "navigation": {
         "prev": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-02"
@@ -11571,7 +11662,7 @@
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden",
     "seealso": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-04",
     "urlref": "/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/latest",
-    "documentcommit": "edbd94e623c58e83548a1a5ab852742f68764b02",
-    "toolchaincommit": "cc9d2fdefde66c42ffddfc0221a7c7f574694208",
+    "documentcommit": "bd1a2451a408a36847676ec717fee4df4993cc97",
+    "toolchaincommit": "df7279439aeac105e4c54e46b80ca5de237a8299",
     "hostname": "https://data.test-vlaanderen.be"
 }
