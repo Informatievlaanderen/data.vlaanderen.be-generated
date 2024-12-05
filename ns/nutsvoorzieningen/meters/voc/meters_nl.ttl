@@ -20,9 +20,6 @@ skos:Concept a rdfs:Class;
 <https://w3id.org/okn/o/sd#Software> a rdfs:Class;
   rdfs:label "Systeem"@nl .
 
-<https://www.w3.org/ns/prov#Collection> a rdfs:Class;
-  rdfs:label "Collectie"@nl .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Bevoorradingsgebied> a owl:Class;
   rdfs:label "Bevoorradingsgebied"@nl;
   rdfs:comment "Afgebakend geografisch gebied voor waterbevoorrading."@nl;
@@ -71,6 +68,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearningInput> a owl:Class;
+  rdfs:label "MachineLearningInput"@nl;
+  rdfs:comment "Machine learning input die door een Procedure wordt gebruikt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meter.verbruiksadres> a owl:ObjectProperty;
   rdfs:label "verbruiksadres"@nl;
@@ -151,21 +154,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#model> a owl:ObjectProperty;
-  rdfs:label "model"@nl;
-  rdfs:comment "Machine learning model die door een Procedure wordt gebruikt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearningInput>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range <http://data.europa.eu/m8g/MachineLearningModel> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#observaties> a owl:ObjectProperty;
-  rdfs:label "observaties"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Naast observaties is het ook mogelijk om Datasets te gebruiken als input. Om te aligneren met MLDCAT 2.0 (<a href=https://semiceu.github.io/MLDCAT-AP/releases/2.0.0/\">) wordt aangeraden om gebruik te maken van double typing ([Observatie, Dataset])."@nl;
-  rdfs:comment "Machine learning observaties die door een Procedure wordt gebruikt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearningInput>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range <http://www.w3.org/ns/sosa/ObservationCollection> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#subaansluiting> a owl:ObjectProperty;
   rdfs:label "subaansluiting"@nl;
   rdfs:comment "Aansluiting die afgetakt is van deze aansluiting."@nl;
@@ -224,12 +212,6 @@ skos:notation a rdf:Property;
 
 <https://saref.etsi.org/core/hasFunction> a rdf:Property;
   rdfs:label "functie"@nl .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearningInput> a owl:Class;
-  rdfs:label "MachineLearningInput"@nl;
-  rdfs:comment "Machine learning input die door een Procedure wordt gebruikt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:subClassOf <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone> a owl:Class;
   rdfs:label "Meterzone"@nl;
@@ -320,7 +302,6 @@ skos:notation a rdf:Property;
   rdfs:seeAlso skos:Concept,
     <https://saref.etsi.org/core/Device>,
     <https://w3id.org/okn/o/sd#Software>,
-    <https://www.w3.org/ns/prov#Collection>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     dc:type,
