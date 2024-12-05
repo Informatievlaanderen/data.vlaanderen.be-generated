@@ -890,6 +890,9 @@
       "ap-label-nl": {
         "nl": "Sessiereeks"
       },
+      "ap-usageNote-nl": {
+        "nl": "Deze klasse kan gebruikt worden om het persoonlijk traject van een gedetineerde voor een Aanbod te modelleren."
+      },
       "definition": {
         "nl": "Groep van 1 of meerdere Sessies."
       },
@@ -922,6 +925,11 @@
             "key": "name",
             "note": "null",
             "value": "Sessiereeks"
+          },
+          {
+            "key": "ap-usageNote-nl",
+            "note": "null",
+            "value": "Deze klasse kan gebruikt worden om het persoonlijk traject van een gedetineerde voor een Aanbod te modelleren."
           }
         ],
         "Scope": "FULL_DEFINITON",
@@ -932,7 +940,9 @@
         "ap-label-nl": {
           "nl": "Sessiereeks"
         },
-        "ap-usageNote-nl": "",
+        "ap-usageNote-nl": {
+          "nl": "Deze klasse kan gebruikt worden om het persoonlijk traject van een gedetineerde voor een Aanbod te modelleren."
+        },
         "definition": {
           "nl": "Groep van 1 of meerdere Sessies."
         },
@@ -940,7 +950,9 @@
           "nl": "Sessiereeks"
         },
         "parentclasses": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-        "usage": ""
+        "usage": {
+          "nl": "Deze klasse kan gebruikt worden om het persoonlijk traject van een gedetineerde voor een Aanbod te modelleren."
+        }
       },
       "inpackage": "ACTIVE_PACKAGE",
       "label": {
@@ -949,20 +961,23 @@
       "name": "Sessiereeks",
       "parents": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ]
+      ],
+      "usage": {
+        "nl": "Deze klasse kan gebruikt worden om het persoonlijk traject van een gedetineerde voor een Aanbod te modelleren."
+      }
     },
     {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{7A4822C0-EC1B-44d7-8A7F-56968587F72A}",
       "ap-definition-nl": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+        "nl": "Hoeveelheid voltijdse equivalenten die bijgedragen hebben aan de Realisatie van een Aanbod."
       },
       "ap-label-nl": {
         "nl": "VTE Gebruik"
       },
       "definition": {
-        "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+        "nl": "Hoeveelheid voltijdse equivalenten die bijgedragen hebben aan de Realisatie van een Aanbod."
       },
       "extra": {
         "EA-Guid": "{7A4822C0-EC1B-44d7-8A7F-56968587F72A}",
@@ -997,20 +1012,20 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+            "value": "Hoeveelheid voltijdse equivalenten die bijgedragen hebben aan de Realisatie van een Aanbod."
           }
         ],
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+          "nl": "Hoeveelheid voltijdse equivalenten die bijgedragen hebben aan de Realisatie van een Aanbod."
         },
         "ap-label-nl": {
           "nl": "VTE Gebruik"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Alle personen die bijgedragen hebben aan de Realisatie van een Activiteit."
+          "nl": "Hoeveelheid voltijdse equivalenten die bijgedragen hebben aan de Realisatie van een Aanbod."
         },
         "label": {
           "nl": "VTE Gebruik"
@@ -1045,8 +1060,8 @@
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-HDG-AP",
   "disabled": false,
-  "documentcommit": "cea7d3cca96246a1859fc55eb2350c5fb4c7f29f",
-  "dummy": "055",
+  "documentcommit": "c8007a02e0e9bd6c7c40a1bd6038f05842530a0c",
+  "dummy": "056",
   "eap": "OSLO-Hulp-en-Dienstverlening-aan-Gedetineerden.eap",
   "editors": [
     {
@@ -1166,6 +1181,121 @@
       },
       "maxCardinality": "1",
       "minCardinality": "0",
+      "name": "infrastructuur",
+      "range": [
+        {
+          "EA-GUID": "{8B9842B8-F527-418e-96B3-55861E9CF9E8}",
+          "EA-Name": "Infrastructuur",
+          "EA-Package": "OSLO-CultuurEnJeugdinfrastructuur",
+          "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.w3.org/ns/prov#atLocation",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "EA-Guid": "{DEFF13A5-B0DA-4c0d-8F6C-BA072310309C}",
+      "ap-definition-nl": {
+        "nl": "Infrastructuur van welke de populatie beschreven wordt."
+      },
+      "ap-label-nl": {
+        "nl": "infrastructuur"
+      },
+      "codelist": [],
+      "definition": {
+        "nl": "Infrastructuur van welke de populatie beschreven wordt."
+      },
+      "domain": [
+        {
+          "EA-Name": "Populatie",
+          "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie"
+        }
+      ],
+      "extra": {
+        "DestRoleTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Infrastructuur van welke de populatie beschreven wordt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://www.w3.org/ns/prov#atLocation",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "infrastructuur",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Locatie van welke de populatie beschreven wordt.",
+            "value": "NOTE"
+          }
+        ],
+        "EA-Domain": "Populatie",
+        "EA-Domain-Guid": "{CFD42C37-0A99-4bda-9E89-55D8C2BA91F0}",
+        "EA-Guid": "{DEFF13A5-B0DA-4c0d-8F6C-BA072310309C}",
+        "EA-Name": "infrastructuur",
+        "EA-Package": "",
+        "EA-Range": "Infrastructuur",
+        "EA-Type": "connector",
+        "RangeData": {
+          "EA-GUID": "{8B9842B8-F527-418e-96B3-55861E9CF9E8}",
+          "EA-Name": "Infrastructuur",
+          "EA-Package": "OSLO-CultuurEnJeugdinfrastructuur",
+          "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+        },
+        "RawTags": [
+          {
+            "key": "ap-definition-nl",
+            "note": "Infrastructuur van welke de populatie beschreven wordt.",
+            "value": "NOTE"
+          },
+          {
+            "key": "uri",
+            "note": "https://www.w3.org/ns/prov#atLocation",
+            "value": "NOTE"
+          },
+          {
+            "key": "ap-label-nl",
+            "note": "infrastructuur",
+            "value": "NOTE"
+          },
+          {
+            "key": "definition-nl",
+            "note": "Locatie van welke de populatie beschreven wordt.",
+            "value": "NOTE"
+          }
+        ],
+        "Scope": "NOTHING",
+        "ap-codelist": "",
+        "ap-definition-nl": {
+          "nl": "Infrastructuur van welke de populatie beschreven wordt."
+        },
+        "ap-label-nl": {
+          "nl": "infrastructuur"
+        },
+        "ap-usageNote-nl": "",
+        "definition": {
+          "nl": "Infrastructuur van welke de populatie beschreven wordt."
+        },
+        "derived": "false",
+        "destRole": "infrastructuur",
+        "label": {
+          "nl": "infrastructuur"
+        },
+        "sourceRole": "populatie",
+        "usage": ""
+      },
+      "generalization": [],
+      "inpackage": "UNKNOWN",
+      "label": {
+        "nl": "infrastructuur"
+      },
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "infrastructuur",
       "range": [
         {
@@ -4485,14 +4615,14 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{85F6DF62-A8E7-4e72-A325-3836EEE91F21}",
       "ap-definition-nl": {
-        "nl": "Realisatie waartoe de gebruikte VTE´s bijdragen."
+        "nl": "Realisatie waartoe de gebruikte VTE's bijdragen."
       },
       "ap-label-nl": {
         "nl": "realisatie"
       },
       "codelist": [],
       "definition": {
-        "nl": "Realisatie waartoe de gebruikte VTE´s bijdragen."
+        "nl": "Realisatie waartoe de gebruikte VTE's bijdragen."
       },
       "domain": [
         {
@@ -4514,7 +4644,7 @@
           },
           {
             "key": "ap-definition-nl",
-            "note": "Realisatie waartoe de gebruikte VTE´s bijdragen.",
+            "note": "Realisatie waartoe de gebruikte VTE's bijdragen.",
             "value": "NOTE"
           }
         ],
@@ -4544,21 +4674,21 @@
           },
           {
             "key": "ap-definition-nl",
-            "note": "Realisatie waartoe de gebruikte VTE´s bijdragen.",
+            "note": "Realisatie waartoe de gebruikte VTE's bijdragen.",
             "value": "NOTE"
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Realisatie waartoe de gebruikte VTE´s bijdragen."
+          "nl": "Realisatie waartoe de gebruikte VTE's bijdragen."
         },
         "ap-label-nl": {
           "nl": "realisatie"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Realisatie waartoe de gebruikte VTE´s bijdragen."
+          "nl": "Realisatie waartoe de gebruikte VTE's bijdragen."
         },
         "derived": "false",
         "destRole": "realisatie",
@@ -4596,7 +4726,7 @@
         "nl": "gebruikte VTE"
       },
       "ap-usageNote-nl": {
-        "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
+        "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's."
       },
       "codelist": [],
       "definition": {
@@ -4617,7 +4747,7 @@
           },
           {
             "key": "ap-usageNote-nl",
-            "note": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
+            "note": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's.",
             "value": "NOTE"
           },
           {
@@ -4652,7 +4782,7 @@
           },
           {
             "key": "ap-usageNote-nl",
-            "note": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s.",
+            "note": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's.",
             "value": "NOTE"
           },
           {
@@ -4675,7 +4805,7 @@
           "nl": "gebruikte VTE"
         },
         "ap-usageNote-nl": {
-          "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
+          "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's."
         },
         "definition": {
           "nl": "Aantal VTE's die gebruikt werden tijdens de Realisatie."
@@ -4687,7 +4817,7 @@
         },
         "sourceRole": "realisatie",
         "usage": {
-          "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
+          "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's."
         }
       },
       "generalization": [],
@@ -4707,7 +4837,7 @@
         }
       ],
       "usage": {
-        "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE´s."
+        "nl": "Het aantal gebruikte VTE's kan verschillen van het aantal geplande VTE's."
       }
     },
     {
@@ -6222,7 +6352,7 @@
         "nl": "naam"
       },
       "maxCardinality": "*",
-      "minCardinality": "0",
+      "minCardinality": "1",
       "name": "naam",
       "range": [
         {
@@ -6358,14 +6488,14 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{6FDAE586-22F8-4816-8B46-28567E198644}",
       "ap-definition-nl": {
-        "nl": "Taal waarin de Activiteit doorgaat."
+        "nl": "Taal waarin het Aanbod doorgaat."
       },
       "ap-label-nl": {
         "nl": "taal"
       },
       "codelist": [],
       "definition": {
-        "nl": "Taal waarin de Activiteit doorgaat."
+        "nl": "Taal waarin het Aanbod doorgaat."
       },
       "domain": [
         {
@@ -6395,7 +6525,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Taal waarin de Activiteit doorgaat."
+            "value": "Taal waarin het Aanbod doorgaat."
           },
           {
             "key": "uri",
@@ -6411,14 +6541,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Taal waarin de Activiteit doorgaat."
+          "nl": "Taal waarin het Aanbod doorgaat."
         },
         "ap-label-nl": {
           "nl": "taal"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Taal waarin de Activiteit doorgaat."
+          "nl": "Taal waarin het Aanbod doorgaat."
         },
         "label": {
           "nl": "taal"
@@ -6432,8 +6562,8 @@
       "label": {
         "nl": "taal"
       },
-      "maxCardinality": "*",
-      "minCardinality": "0",
+      "maxCardinality": "1",
+      "minCardinality": "1",
       "name": "taal",
       "range": [
         {
@@ -6656,14 +6786,14 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{61142232-7374-425c-968D-76EEDF6584E4}",
       "ap-definition-nl": {
-        "nl": "Het voorzien van een activiteit voor gedetineerden."
+        "nl": "Een tekstuele beschrijving van het Aanbod."
       },
       "ap-label-nl": {
         "nl": "beschrijving"
       },
       "codelist": [],
       "definition": {
-        "nl": "Het voorzien van een activiteit voor gedetineerden."
+        "nl": "Een tekstuele beschrijving van het Aanbod."
       },
       "domain": [
         {
@@ -6694,7 +6824,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Het voorzien van een activiteit voor gedetineerden."
+            "value": "Een tekstuele beschrijving van het Aanbod."
           },
           {
             "key": "uri",
@@ -6705,14 +6835,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Het voorzien van een activiteit voor gedetineerden."
+          "nl": "Een tekstuele beschrijving van het Aanbod."
         },
         "ap-label-nl": {
           "nl": "beschrijving"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Het voorzien van een activiteit voor gedetineerden."
+          "nl": "Een tekstuele beschrijving van het Aanbod."
         },
         "label": {
           "nl": "beschrijving"
@@ -6945,7 +7075,7 @@
         "nl": "financiert"
       },
       "maxCardinality": "*",
-      "minCardinality": "1",
+      "minCardinality": "0",
       "name": "financiert",
       "range": [
         {
@@ -7067,7 +7197,7 @@
         "nl": "gerealiseerd door"
       },
       "maxCardinality": "*",
-      "minCardinality": "0",
+      "minCardinality": "1",
       "name": "gerealiseerdDoor",
       "range": [
         {
@@ -7172,7 +7302,7 @@
         "RawTags": [
           {
             "key": "usageNote-nl",
-            "note": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten.",
+            "note": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele definitie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten.",
             "value": "NOTE"
           },
           {
@@ -7213,7 +7343,7 @@
         },
         "parentclasses": "",
         "usage": {
-          "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten."
+          "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele definitie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten."
         }
       },
       "inpackage": "OTHER_PACKAGE",
@@ -7222,7 +7352,7 @@
       },
       "name": "Activiteit",
       "usage": {
-        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele defintie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten."
+        "nl": "Een Activiteit kan uit één of meerdere sessies bestaan en wordt bewust georganiseerd en uitgevoerd door hulp- of dienstverleners, vrijwilligers, fatikken of anderen in het kader van hulp- en dienstverlening voor gedetineerden. De originele definitie van Activiteit is ruim genoeg om activiteiten voor gedetineerden te omvatten."
       }
     },
     {
@@ -8565,13 +8695,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{0622CAE1-6D30-4e45-A8EC-EE799E0BEF8B}",
       "ap-definition-nl": {
-        "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+        "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
       },
       "ap-label-nl": {
         "nl": "Organisator"
       },
       "definition": {
-        "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+        "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
       },
       "extra": {
         "EA-Guid": "{0622CAE1-6D30-4e45-A8EC-EE799E0BEF8B}",
@@ -8601,20 +8731,20 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+            "value": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
           }
         ],
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+          "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
         },
         "ap-label-nl": {
           "nl": "Organisator"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Persoon of Organisatie die een Activiteit organiseert of coördineert."
+          "nl": "Persoon of Organisatie die een Aanbod organiseert of coördineert."
         },
         "label": {
           "nl": "Organisator"
@@ -8633,13 +8763,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{05E700CE-98F3-494c-ACE2-9C7C03F3460B}",
       "ap-definition-nl": {
-        "nl": "Het tot stand brengen van een Activiteit door een Realisator."
+        "nl": "Het tot stand brengen van een Aanbod door een Realisator."
       },
       "ap-label-nl": {
         "nl": "Realisatie"
       },
       "definition": {
-        "nl": "Het tot stand brengen van een Activiteit door een Realisator."
+        "nl": "Het tot stand brengen van een Aanbod door een Realisator."
       },
       "extra": {
         "EA-Guid": "{05E700CE-98F3-494c-ACE2-9C7C03F3460B}",
@@ -8664,7 +8794,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Het tot stand brengen van een Activiteit door een Realisator."
+            "value": "Het tot stand brengen van een Aanbod door een Realisator."
           },
           {
             "key": "ap-label-nl",
@@ -8675,14 +8805,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Het tot stand brengen van een Activiteit door een Realisator."
+          "nl": "Het tot stand brengen van een Aanbod door een Realisator."
         },
         "ap-label-nl": {
           "nl": "Realisatie"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Het tot stand brengen van een Activiteit door een Realisator."
+          "nl": "Het tot stand brengen van een Aanbod door een Realisator."
         },
         "label": {
           "nl": "Realisatie"
@@ -8701,13 +8831,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{30DC0795-1E5D-408a-825F-93BF80AB14B4}",
       "ap-definition-nl": {
-        "nl": "Persoon of Organisatie die een Activiteit realiseert."
+        "nl": "Persoon of Organisatie die een Aanbod realiseert."
       },
       "ap-label-nl": {
         "nl": "Realisator"
       },
       "definition": {
-        "nl": "Persoon of Organisatie die een Activiteit realiseert."
+        "nl": "Persoon of Organisatie die een Aanbod realiseert."
       },
       "extra": {
         "EA-Guid": "{30DC0795-1E5D-408a-825F-93BF80AB14B4}",
@@ -8720,7 +8850,7 @@
           {
             "key": "usageNote-nl",
             "note": "null",
-            "value": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Activiteit ongeacht hun rol daarin."
+            "value": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Aanbod ongeacht hun rol daarin."
           },
           {
             "key": "uri",
@@ -8730,7 +8860,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Persoon of Organisatie die een Activiteit realiseert."
+            "value": "Persoon of Organisatie die een Aanbod realiseert."
           },
           {
             "key": "ap-label-nl",
@@ -8746,21 +8876,21 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Persoon of Organisatie die een Activiteit realiseert."
+          "nl": "Persoon of Organisatie die een Aanbod realiseert."
         },
         "ap-label-nl": {
           "nl": "Realisator"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Persoon of Organisatie die een Activiteit realiseert."
+          "nl": "Persoon of Organisatie die een Aanbod realiseert."
         },
         "label": {
           "nl": "Realisator"
         },
         "parentclasses": "",
         "usage": {
-          "nl": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Activiteit ongeacht hun rol daarin."
+          "nl": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Aanbod ongeacht hun rol daarin."
         }
       },
       "inpackage": "OTHER_PACKAGE",
@@ -8769,7 +8899,7 @@
       },
       "name": "Realisator",
       "usage": {
-        "nl": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Activiteit ongeacht hun rol daarin."
+        "nl": "Met deze klasse wordt verwezen naar alle personen of organisaties die bijgedragen hebben aan het organiseren en plaatsvinden van een Aanbod ongeacht hun rol daarin."
       }
     },
     {
@@ -8777,13 +8907,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{2F7A1AAD-386C-4da7-8387-74ED49A3CE02}",
       "ap-definition-nl": {
-        "nl": "Persoon of organisatie die een Activiteit uitvoert of begeleidt."
+        "nl": "Persoon of organisatie die een Aanbod uitvoert of begeleidt."
       },
       "ap-label-nl": {
         "nl": "Uitvoerder"
       },
       "definition": {
-        "nl": "Persoon of organisatie die een Activiteit uitvoert of begeleidt."
+        "nl": "Persoon of organisatie die een Aanbod uitvoert of begeleidt."
       },
       "extra": {
         "EA-Guid": "{2F7A1AAD-386C-4da7-8387-74ED49A3CE02}",
@@ -8813,7 +8943,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Persoon of organisatie die een Activiteit uitvoert of begeleidt."
+            "value": "Persoon of organisatie die een Aanbod uitvoert of begeleidt."
           },
           {
             "key": "ap-label-nl",
@@ -8824,14 +8954,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Persoon of organisatie die een Activiteit uitvoert of begeleidt."
+          "nl": "Persoon of organisatie die een Aanbod uitvoert of begeleidt."
         },
         "ap-label-nl": {
           "nl": "Uitvoerder"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Persoon of organisatie die een Activiteit uitvoert of begeleidt."
+          "nl": "Persoon of organisatie die een Aanbod uitvoert of begeleidt."
         },
         "label": {
           "nl": "Uitvoerder"
@@ -8855,13 +8985,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{D43FA8E8-74A2-47bb-9F96-BE15345588D6}",
       "ap-definition-nl": {
-        "nl": "Bedoelde of verwachte publiek van een Activiteit."
+        "nl": "Bedoelde of verwachte publiek van het Aanbod."
       },
       "ap-label-nl": {
         "nl": "Doelgroep"
       },
       "definition": {
-        "nl": "Bedoelde of verwachte publiek van een Activiteit."
+        "nl": "Bedoelde of verwachte publiek van het Aanbod."
       },
       "extra": {
         "EA-Guid": "{D43FA8E8-74A2-47bb-9F96-BE15345588D6}",
@@ -8879,7 +9009,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Bedoelde of verwachte publiek van een Activiteit."
+            "value": "Bedoelde of verwachte publiek van het Aanbod."
           },
           {
             "key": "ap-label-nl",
@@ -8890,14 +9020,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Bedoelde of verwachte publiek van een Activiteit."
+          "nl": "Bedoelde of verwachte publiek van het Aanbod."
         },
         "ap-label-nl": {
           "nl": "Doelgroep"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Bedoelde of verwachte publiek van een Activiteit."
+          "nl": "Bedoelde of verwachte publiek van het Aanbod."
         },
         "label": {
           "nl": "Doelgroep"
@@ -8916,13 +9046,13 @@
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "EA-Guid": "{CE74FC63-27F7-4027-9EAB-3D31E79679A9}",
       "ap-definition-nl": {
-        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
       },
       "ap-label-nl": {
         "nl": "Financiering"
       },
       "definition": {
-        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
+        "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
       },
       "extra": {
         "EA-Guid": "{CE74FC63-27F7-4027-9EAB-3D31E79679A9}",
@@ -8935,7 +9065,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
+            "value": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
           },
           {
             "key": "ap-label-nl",
@@ -8956,14 +9086,14 @@
         "Scope": "TRANSLATIONS_ONLY",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
+          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
         },
         "ap-label-nl": {
           "nl": "Financiering"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."
+          "nl": "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Aanbod."
         },
         "label": {
           "nl": "Financiering"
@@ -9128,14 +9258,14 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{B4533B40-C0DE-4f31-B2A2-378237738597}",
       "ap-definition-nl": {
-        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."
       },
       "ap-label-nl": {
         "nl": "participatiegraad"
       },
       "codelist": [],
       "definition": {
-        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+        "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."
       },
       "domain": [
         {
@@ -9166,7 +9296,7 @@
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+            "value": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."
           },
           {
             "key": "uri",
@@ -9182,14 +9312,14 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+          "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."
         },
         "ap-label-nl": {
           "nl": "participatiegraad"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit."
+          "nl": "De mate waarin gedetineerden inspraak of hulp hebben kunnen bieden bij het vormgeven van het Aanbod."
         },
         "label": {
           "nl": "participatiegraad"
@@ -9474,14 +9604,14 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{FA53611E-E071-4054-B3BF-33BE528B19BD}",
       "ap-definition-nl": {
-        "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+        "nl": "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
       },
       "ap-label-nl": {
         "nl": "medium"
       },
       "codelist": [],
       "definition": {
-        "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+        "nl": "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
       },
       "domain": [
         {
@@ -9512,7 +9642,7 @@
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+            "value": "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
           },
           {
             "key": "uri",
@@ -9528,14 +9658,14 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+          "nl": "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
         },
         "ap-label-nl": {
           "nl": "medium"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+          "nl": "Manier waarop het Aanbod plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
         },
         "label": {
           "nl": "medium"
@@ -10078,7 +10208,7 @@
         "nl": "effectieve populatie"
       },
       "maxCardinality": "1",
-      "minCardinality": "1",
+      "minCardinality": "0",
       "name": "effectievePopulatie",
       "range": [
         {
@@ -10093,14 +10223,14 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{3C5654DF-D38F-40f5-BBBF-C9B31548EC93}",
       "ap-definition-nl": {
-        "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+        "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
       },
       "ap-label-nl": {
         "nl": "categorie"
       },
       "codelist": [],
       "definition": {
-        "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+        "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
       },
       "domain": [
         {
@@ -10126,7 +10256,7 @@
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+            "value": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
           },
           {
             "key": "label-nl",
@@ -10147,14 +10277,14 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+          "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
         },
         "ap-label-nl": {
           "nl": "categorie"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "De classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+          "nl": "De classificatie van het Aanbod, zoals bijvoorbeeld balsporten."
         },
         "label": {
           "nl": "categorie"
@@ -10421,8 +10551,8 @@
       "label": {
         "nl": "beleidsdomein"
       },
-      "maxCardinality": "1",
-      "minCardinality": "0",
+      "maxCardinality": "*",
+      "minCardinality": "1",
       "name": "beleidsdomein",
       "range": [
         {
@@ -10523,7 +10653,7 @@
       "label": {
         "nl": "beleidsdomein"
       },
-      "maxCardinality": "1",
+      "maxCardinality": "*",
       "minCardinality": "1",
       "name": "beleidsdomein",
       "range": [
@@ -10623,14 +10753,14 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{A20CBDD1-1179-46f1-9400-33F82B05B566}",
       "ap-definition-nl": {
-        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor het Aanbod."
       },
       "ap-label-nl": {
         "nl": "aantal inschrijvingen"
       },
       "codelist": [],
       "definition": {
-        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+        "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor het Aanbod."
       },
       "domain": [
         {
@@ -10665,7 +10795,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+            "value": "Aantal gedetineerden dat zich heeft ingeschreven voor het Aanbod."
           },
           {
             "key": "uri",
@@ -10681,14 +10811,14 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor het Aanbod."
         },
         "ap-label-nl": {
           "nl": "aantal inschrijvingen"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor de Activiteit."
+          "nl": "Aantal gedetineerden dat zich heeft ingeschreven voor het Aanbod."
         },
         "label": {
           "nl": "aantal inschrijvingen"
@@ -10716,7 +10846,7 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{3FCCD6C4-8116-4887-BC39-A105F34AD094}",
       "ap-definition-nl": {
-        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan het Aanbod."
       },
       "ap-label-nl": {
         "nl": "aantal deelnames"
@@ -10726,7 +10856,7 @@
       },
       "codelist": [],
       "definition": {
-        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+        "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan het Aanbod."
       },
       "domain": [
         {
@@ -10761,7 +10891,7 @@
           {
             "key": "ap-definition-nl",
             "note": "null",
-            "value": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+            "value": "Aantal gedetineerden die effectief hebben deelgenomen aan het Aanbod."
           },
           {
             "key": "ap-usageNote-nl",
@@ -10782,7 +10912,7 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan het Aanbod."
         },
         "ap-label-nl": {
           "nl": "aantal deelnames"
@@ -10791,7 +10921,7 @@
           "nl": "Dit aantal kan lager zijn dat het aantal inschrijvingen als er gedetineerden zijn die zich hebben ingeschreven maar die niet deelnamen."
         },
         "definition": {
-          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan de Activiteit."
+          "nl": "Aantal gedetineerden die effectief hebben deelgenomen aan het Aanbod."
         },
         "label": {
           "nl": "aantal deelnames"
@@ -10937,14 +11067,14 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{9DD249F4-1CE0-47a9-AF2C-FC2D85EAAC26}",
       "ap-definition-nl": {
-        "nl": "Het aantal VTE´s die gebruikt werden."
+        "nl": "Het aantal VTE's die gebruikt werden."
       },
       "ap-label-nl": {
-        "nl": "aantal VTE´s"
+        "nl": "aantal VTE's"
       },
       "codelist": [],
       "definition": {
-        "nl": "Het aantal VTE´s die gebruikt werden."
+        "nl": "Het aantal VTE's die gebruikt werden."
       },
       "domain": [
         {
@@ -10969,12 +11099,12 @@
           {
             "key": "label-nl",
             "note": "null",
-            "value": "aantal VTE´s"
+            "value": "aantal VTE's"
           },
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "Het aantal VTE´s die gebruikt werden."
+            "value": "Het aantal VTE's die gebruikt werden."
           },
           {
             "key": "name",
@@ -10985,28 +11115,28 @@
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Het aantal VTE´s die gebruikt werden."
+          "nl": "Het aantal VTE's die gebruikt werden."
         },
         "ap-label-nl": {
-          "nl": "aantal VTE´s"
+          "nl": "aantal VTE's"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Het aantal VTE´s die gebruikt werden."
+          "nl": "Het aantal VTE's die gebruikt werden."
         },
         "label": {
-          "nl": "aantal VTE´s"
+          "nl": "aantal VTE's"
         },
         "usage": ""
       },
       "generalization": [],
       "inpackage": "ACTIVE_PACKAGE",
       "label": {
-        "nl": "aantal VTE´s"
+        "nl": "aantal VTE's"
       },
       "maxCardinality": "1",
       "minCardinality": "1",
-      "name": "aantalVte´s",
+      "name": "aantalVte's",
       "range": [
         {
           "EA-Name": "Double",
@@ -11020,14 +11150,14 @@
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{A38D2A56-C65F-4594-BDF4-A1E808ACD978}",
       "ap-definition-nl": {
-        "nl": "Aantal personen die de VTE´s uitvoeren."
+        "nl": "Aantal personen die de VTE's uitvoeren."
       },
       "ap-label-nl": {
         "nl": "aantal personen"
       },
       "codelist": [],
       "definition": {
-        "nl": "Aantal personen die de VTE´s uitvoeren."
+        "nl": "Aantal personen die de VTE's uitvoeren."
       },
       "domain": [
         {
@@ -11062,31 +11192,31 @@
           {
             "key": "definition-nl",
             "note": "null",
-            "value": "Aantal personen die de VTE´s uitvoeren."
+            "value": "Aantal personen die de VTE's uitvoeren."
           },
           {
             "key": "usageNote-nl",
             "note": "null",
-            "value": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."
+            "value": "Dit zegt niets over de verdeling van de VTE's tussen deze personen."
           }
         ],
         "Scope": "FULL_DEFINITON",
         "ap-codelist": "",
         "ap-definition-nl": {
-          "nl": "Aantal personen die de VTE´s uitvoeren."
+          "nl": "Aantal personen die de VTE's uitvoeren."
         },
         "ap-label-nl": {
           "nl": "aantal personen"
         },
         "ap-usageNote-nl": "",
         "definition": {
-          "nl": "Aantal personen die de VTE´s uitvoeren."
+          "nl": "Aantal personen die de VTE's uitvoeren."
         },
         "label": {
           "nl": "aantal personen"
         },
         "usage": {
-          "nl": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."
+          "nl": "Dit zegt niets over de verdeling van de VTE's tussen deze personen."
         }
       },
       "generalization": [],
@@ -11105,7 +11235,7 @@
         }
       ],
       "usage": {
-        "nl": "Dit zegt niets over de verdeling van de VTE´s tussen deze personen."
+        "nl": "Dit zegt niets over de verdeling van de VTE's tussen deze personen."
       }
     },
     {
@@ -11119,7 +11249,7 @@
         "nl": "geplande VTE"
       },
       "ap-usageNote-nl": {
-        "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
+        "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's."
       },
       "codelist": [],
       "definition": {
@@ -11135,7 +11265,7 @@
         "DestRoleTags": [
           {
             "key": "ap-usageNote-nl",
-            "note": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s.",
+            "note": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's.",
             "value": "NOTE"
           },
           {
@@ -11170,7 +11300,7 @@
         "RawTags": [
           {
             "key": "ap-usageNote-nl",
-            "note": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s.",
+            "note": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's.",
             "value": "NOTE"
           },
           {
@@ -11198,7 +11328,7 @@
           "nl": "geplande VTE"
         },
         "ap-usageNote-nl": {
-          "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
+          "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's."
         },
         "definition": {
           "nl": "Aantal VTE's die gepland werden voor gebruik tijdens de Realisatie."
@@ -11210,7 +11340,7 @@
         },
         "sourceRole": "null",
         "usage": {
-          "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
+          "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's."
         }
       },
       "generalization": [],
@@ -11230,7 +11360,7 @@
         }
       ],
       "usage": {
-        "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE´s."
+        "nl": "Het aantal geplande VTE's kan verschillende van het aantal gebruikte VTE's."
       }
     },
     {
@@ -11516,8 +11646,8 @@
       "label": {
         "nl": "gefinancierd door"
       },
-      "maxCardinality": "1",
-      "minCardinality": "1",
+      "maxCardinality": "*",
+      "minCardinality": "0",
       "name": "gefinancierdDoor",
       "range": [
         {
@@ -11876,7 +12006,7 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
   "template": "hdg-ap.j2",
   "title": "OSLO Hulp- en Dienstverlening aan Gedetineerden",
-  "toolchaincommit": "10000a9604f93ee97902b0da4cb0528f97297052",
+  "toolchaincommit": "a8b27e379eb5f970565ef05b829054ff2a3e0d64",
   "translation": [
     {
       "language": "nl",
