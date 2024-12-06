@@ -2712,7 +2712,7 @@
         "nl": "TODO"
       },
       "extra": {
-        "EA-Name": "gedaanDoor",
+        "EA-Name": "uitgevoerdDoorSensor",
         "EA-Guid": "{6D7E0AEA-BF3C-49d3-A6A2-9E70FF71754C}",
         "EA-Package": "SSN/SOSA",
         "EA-Type": "attribute",
@@ -2750,7 +2750,7 @@
           },
           {
             "key": "ap-label-nl",
-            "value": "gedaan door",
+            "value": "uitgevoerd door Sensor",
             "note": "null"
           },
           {
@@ -2891,7 +2891,7 @@
           "EA-Package": "SSN/SOSA",
           "uri": "http://www.w3.org/ns/sosa/Platform"
         },
-        "sourceRole": "^bevat",
+        "sourceRole": "^hostVan",
         "destRole": "^gehostDoor",
         "label": "",
         "definition": "",
@@ -2977,7 +2977,7 @@
         "nl": "TODO"
       },
       "extra": {
-        "EA-Name": "^bevat",
+        "EA-Name": "^hostVan",
         "EA-Guid": "{88035070-EE1D-4a3f-84DC-21351957A85A}",
         "derived": "false",
         "EA-Package": "",
@@ -2992,7 +2992,7 @@
           "uri": "http://www.w3.org/ns/sosa/Sensor"
         },
         "sourceRole": "^gehostDoor",
-        "destRole": "^bevat",
+        "destRole": "^hostVan",
         "label": "",
         "definition": "",
         "usage": "",
@@ -3019,7 +3019,7 @@
           {
             "key": "ap-label-nl",
             "value": "NOTE",
-            "note": "bevat"
+            "note": "host van"
           },
           {
             "key": "uri",
@@ -3036,7 +3036,7 @@
           {
             "key": "ap-label-nl",
             "value": "NOTE",
-            "note": "bevat"
+            "note": "host van"
           },
           {
             "key": "uri",
@@ -3160,7 +3160,7 @@
         "nl": "TODO"
       },
       "extra": {
-        "EA-Name": "heeftResultaat",
+        "EA-Name": "resultaat",
         "EA-Guid": "{41EC9DF9-CA41-4be4-9416-58280D631E7D}",
         "derived": "false",
         "EA-Package": "",
@@ -3175,7 +3175,7 @@
           "uri": "http://www.w3.org/ns/sosa/Result"
         },
         "sourceRole": "null",
-        "destRole": "heeftResultaat",
+        "destRole": "resultaat",
         "label": "",
         "definition": "",
         "usage": "",
@@ -3202,7 +3202,7 @@
           {
             "key": "ap-label-nl",
             "value": "NOTE",
-            "note": "heeft resultaat"
+            "note": "resultaat"
           },
           {
             "key": "ap-definition-nl",
@@ -3219,7 +3219,7 @@
           {
             "key": "ap-label-nl",
             "value": "NOTE",
-            "note": "heeft resultaat"
+            "note": "resultaat"
           },
           {
             "key": "ap-definition-nl",
@@ -3260,7 +3260,107 @@
         "nl": "TODO"
       },
       "extra": {
-        "EA-Name": "object",
+        "EA-Name": "featureOfInterest",
+        "EA-Guid": "{1E127431-679B-4c91-B16A-C36431588643}",
+        "derived": "false",
+        "EA-Package": "",
+        "EA-Type": "connector",
+        "EA-Domain": "Observatie",
+        "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
+        "EA-Range": "FeatureOfInterest",
+        "RangeData": {
+          "EA-Name": "FeatureOfInterest",
+          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
+          "EA-Package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        },
+        "sourceRole": "null",
+        "destRole": "featureOfInterest",
+        "label": "",
+        "definition": "",
+        "usage": "",
+        "label-nl": {
+          "nl": "TODO"
+        },
+        "definition-nl": {
+          "nl": "TODO"
+        },
+        "usageNote-nl": "",
+        "label-en": "",
+        "definition-en": "",
+        "usageNote-en": "",
+        "equivalent": "",
+        "subclass": "",
+        "subclass1": "",
+        "sameAs": "",
+        "RawTags": [
+          {
+            "key": "ap-label-nl",
+            "value": "NOTE",
+            "note": "feature of interest"
+          },
+          {
+            "key": "uri",
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "NOTE",
+            "note": "De Feature Of Interest waarop de Observatie is uitgevoerd."
+          }
+        ],
+        "DestRoleTags": [
+          {
+            "key": "ap-label-nl",
+            "value": "NOTE",
+            "note": "feature of interest"
+          },
+          {
+            "key": "uri",
+            "value": "NOTE",
+            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+          },
+          {
+            "key": "ap-definition-nl",
+            "value": "NOTE",
+            "note": "De Feature Of Interest waarop de Observatie is uitgevoerd."
+          }
+        ],
+        "Scope": "NOTHING"
+      },
+      "codelist": [],
+      "domain": [
+        {
+          "uri": "http://www.w3.org/ns/sosa/Observation",
+          "EA-Name": "Observatie"
+        }
+      ],
+      "range": [
+        {
+          "EA-Name": "FeatureOfInterest",
+          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
+          "EA-Package": "SSN/SOSA",
+          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        }
+      ],
+      "generalization": [],
+      "minCardinality": "1",
+      "maxCardinality": "1"
+    },
+    {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "name": "",
+      "inpackage": "OTHER_PACKAGE",
+      "label-nl": {
+        "nl": "TODO"
+      },
+      "definition-nl": {
+        "nl": "TODO"
+      },
+      "extra": {
+        "EA-Name": "featureOfInterest",
         "EA-Guid": "{7B3DD2C5-134B-448e-B797-0CA80F61DFF8}",
         "derived": "false",
         "EA-Package": "",
@@ -3275,7 +3375,7 @@
           "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
         },
         "sourceRole": "null",
-        "destRole": "object",
+        "destRole": "featureOfInterest",
         "label": "",
         "definition": "",
         "usage": "",
@@ -3334,106 +3434,6 @@
         {
           "uri": "http://www.w3.org/ns/sosa/Actuation",
           "EA-Name": "Actuatie"
-        }
-      ],
-      "range": [
-        {
-          "EA-Name": "FeatureOfInterest",
-          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
-          "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        }
-      ],
-      "generalization": [],
-      "minCardinality": "1",
-      "maxCardinality": "1"
-    },
-    {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "name": "",
-      "inpackage": "OTHER_PACKAGE",
-      "label-nl": {
-        "nl": "TODO"
-      },
-      "definition-nl": {
-        "nl": "TODO"
-      },
-      "extra": {
-        "EA-Name": "object",
-        "EA-Guid": "{1E127431-679B-4c91-B16A-C36431588643}",
-        "derived": "false",
-        "EA-Package": "",
-        "EA-Type": "connector",
-        "EA-Domain": "Observatie",
-        "EA-Domain-Guid": "{4C6E8507-F2BB-4f03-9E37-9924CA3F1948}",
-        "EA-Range": "FeatureOfInterest",
-        "RangeData": {
-          "EA-Name": "FeatureOfInterest",
-          "EA-GUID": "{B011B017-1EA0-49e2-A741-E8C6DF775F6B}",
-          "EA-Package": "SSN/SOSA",
-          "uri": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        },
-        "sourceRole": "null",
-        "destRole": "object",
-        "label": "",
-        "definition": "",
-        "usage": "",
-        "label-nl": {
-          "nl": "TODO"
-        },
-        "definition-nl": {
-          "nl": "TODO"
-        },
-        "usageNote-nl": "",
-        "label-en": "",
-        "definition-en": "",
-        "usageNote-en": "",
-        "equivalent": "",
-        "subclass": "",
-        "subclass1": "",
-        "sameAs": "",
-        "RawTags": [
-          {
-            "key": "ap-label-nl",
-            "value": "NOTE",
-            "note": "feature of interest"
-          },
-          {
-            "key": "uri",
-            "value": "NOTE",
-            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "NOTE",
-            "note": "De Feature Of Interest waarop de Observatie is uitgevoerd."
-          }
-        ],
-        "DestRoleTags": [
-          {
-            "key": "ap-label-nl",
-            "value": "NOTE",
-            "note": "feature of interest"
-          },
-          {
-            "key": "uri",
-            "value": "NOTE",
-            "note": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-          },
-          {
-            "key": "ap-definition-nl",
-            "value": "NOTE",
-            "note": "De Feature Of Interest waarop de Observatie is uitgevoerd."
-          }
-        ],
-        "Scope": "NOTHING"
-      },
-      "codelist": [],
-      "domain": [
-        {
-          "uri": "http://www.w3.org/ns/sosa/Observation",
-          "EA-Name": "Observatie"
         }
       ],
       "range": [
@@ -4130,7 +4130,7 @@
           },
           {
             "key": "ap-definition-nl",
-            "value": "Degene aan wie de Erosiebestrijdingsmaatregel toebehoort.",
+            "value": "Persoon of Organisatie aan wie de Erosiebestrijdingsmaatregel toebehoort.",
             "note": "null"
           },
           {
@@ -4210,7 +4210,7 @@
           },
           {
             "key": "ap-definition-nl",
-            "value": "Degene aan wie de Zone toebehoort.",
+            "value": "Persoon of Organisatie aan wie de Zone toebehoort.",
             "note": "null"
           },
           {
@@ -4958,15 +4958,15 @@
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html",
   "config": "config/config-voc.json",
   "branchtag": "main",
-  "dummy": "12",
+  "dummy": "13",
   "filename": "config/erosiepoel-voc.json",
   "navigation": {
     "prev": "/doc/vocabularium/bodemerosie/ontwerpstandaard/2024-11-29"
   },
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen",
   "urlref": "/doc/vocabularium/erosiepoel/ontwerpstandaard/2024-12-05",
-  "documentcommit": "97e2ccbfd4150bc1743f7b072b08435750379501",
-  "toolchaincommit": "61c2626ef387fb70af41b3e1d63c9e8b612331ac",
+  "documentcommit": "5001a3f567c65a63cab07934c29f23bee83249ca",
+  "toolchaincommit": "021f5b4d66a5e169e02233b710a8b7f881321258",
   "hostname": "https://data.test-vlaanderen.be",
   "translation": [
     {

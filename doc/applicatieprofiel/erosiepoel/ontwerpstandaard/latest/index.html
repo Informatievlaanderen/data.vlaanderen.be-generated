@@ -388,8 +388,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/97e2ccbfd4150bc1743f7b072b08435750379501">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/97e2ccbfd4150bc1743f7b072b08435750379501</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/97e2ccbfd4150bc1743f7b072b08435750379501/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/97e2ccbfd4150bc1743f7b072b08435750379501/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/5001a3f567c65a63cab07934c29f23bee83249ca">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/5001a3f567c65a63cab07934c29f23bee83249ca</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/5001a3f567c65a63cab07934c29f23bee83249ca/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/blob/5001a3f567c65a63cab07934c29f23bee83249ca/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues">https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html">https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html</a></dd>
 
@@ -803,7 +803,7 @@ Je kan een aantal datavoorbeelden
                           
                         </td>
                         <td>1..*</td>
-                        <td property="rdfs:comment">Degene aan wie de Erosiebestrijdingsmaatregel toebehoort.</td>
+                        <td property="rdfs:comment">Persoon of Organisatie aan wie de Erosiebestrijdingsmaatregel toebehoort.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1299,10 +1299,10 @@ Je kan een aantal datavoorbeelden
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Observatie%3Aeinde">einde</a>, 
                       <a href="#Observatie%3AfeatureOfInterest">feature of interest</a>, 
-                      <a href="#Observatie%3AgedaanDoor">gedaan door</a>, 
                       <a href="#Observatie%3AgeobserveerdKenmerk">geobserveerd kenmerk</a>, 
-                      <a href="#Observatie%3AheeftResultaat">heeft resultaat</a>, 
-                      <a href="#Observatie%3Astart">start</a>.</dd>
+                      <a href="#Observatie%3Aresultaat">resultaat</a>, 
+                      <a href="#Observatie%3Astart">start</a>, 
+                      <a href="#Observatie%3AuitgevoerdDoorSensor">uitgevoerd door Sensor</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1362,26 +1362,6 @@ Je kan een aantal datavoorbeelden
                         <td></td>
                       </tr>
                     
-                      <tr id="Observatie%3AgedaanDoor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeBySensor">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/sosa/madeBySensor" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/madeBySensor" data-placement="right">
-                            gedaan door</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Sensor" data-placement="right">Sensor</a>
-			    
-                          
-                        </td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De Sensor die de Observatie heeft gedaan.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Observatie%3AgeobserveerdKenmerk" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/observedProperty">
                         <td>
                           <code property="rdfs:label">
@@ -1402,11 +1382,11 @@ Je kan een aantal datavoorbeelden
                         <td></td>
                       </tr>
                     
-                      <tr id="Observatie%3AheeftResultaat" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/hasResult">
+                      <tr id="Observatie%3Aresultaat" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/hasResult">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/sosa/hasResult" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/hasResult" data-placement="right">
-                            heeft resultaat</a>
+                            resultaat</a>
                           </code>
                         </td>
                         <td>
@@ -1438,6 +1418,26 @@ Je kan een aantal datavoorbeelden
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Moment waarop de Observatie gestart is.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Observatie%3AuitgevoerdDoorSensor" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/madeBySensor">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/sosa/madeBySensor" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/madeBySensor" data-placement="right">
+                            uitgevoerd door Sensor</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Sensor" data-placement="right">Sensor</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De Sensor die de Observatie heeft gedaan.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1562,7 +1562,7 @@ Je kan een aantal datavoorbeelden
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Platform%3Abevat">bevat</a>.</dd>
+                      <a href="#Platform%3AhostVan">host van</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1582,11 +1582,11 @@ Je kan een aantal datavoorbeelden
 
                     <tbody class="supertype">
                     
-                      <tr id="Platform%3Abevat" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/hosts">
+                      <tr id="Platform%3AhostVan" typeof="rdfs:Property" resource="http://www.w3.org/ns/sosa/hosts">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/sosa/hosts" data-toggle="tooltip" data-content="http://www.w3.org/ns/sosa/hosts" data-placement="right">
-                            bevat</a>
+                            host van</a>
                           </code>
                         </td>
                         <td>
@@ -1760,7 +1760,7 @@ Je kan een aantal datavoorbeelden
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Degene aan wie de Zone toebehoort.</td>
+                        <td property="rdfs:comment">Persoon of Organisatie aan wie de Zone toebehoort.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
