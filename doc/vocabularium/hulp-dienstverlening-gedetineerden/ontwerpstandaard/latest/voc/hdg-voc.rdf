@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:org="http://www.w3.org/ns/org#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:org="http://www.w3.org/ns/org#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus.reden">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden">
@@ -219,6 +219,25 @@
     <rdfs:comment xml:lang="nl">Een beveiligde faciliteit waar personen verblijven die van hun vrijheid zijn beroofd.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Site"/>
   </owl:Class>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">Groepsaanbod</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een Aanbod waaraan meerdere personen kunnen deelnemen.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod">
+        <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+        <rdfs:label xml:lang="nl">Aanbod</rdfs:label>
+        <rdfs:comment xml:lang="nl">Het voorzien van een activiteit voor gedetineerden.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">IndividueelAanbod</rdfs:label>
+    <rdfs:comment xml:lang="nl">Begeleid Aanbod waaraan slechts één persoon kan deelnemen.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"/>
+  </owl:Class>
   <owl:ObjectProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">waarde</rdfs:label>
@@ -254,6 +273,18 @@
       </owl:Class>
     </rdfs:range>
   </owl:ObjectProperty>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">Sessie</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het concreet plaatsvinden van een Activiteit op een bepaald moment.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks">
+    <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
+    <rdfs:label xml:lang="nl">Sessiereeks</rdfs:label>
+    <rdfs:comment xml:lang="nl">Groep van 1 of meerdere Sessies.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+  </owl:Class>
   <owl:DatatypeProperty rdf:about="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen">
     <rdfs:isDefinedBy rdf:resource="https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden"/>
     <rdfs:label xml:lang="nl">aantal personen</rdfs:label>

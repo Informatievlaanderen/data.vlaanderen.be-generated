@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -83,6 +84,18 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf org:Site .
 
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod> a owl:Class;
+  rdfs:label "Groepsaanbod"@nl;
+  rdfs:comment "Een Aanbod waaraan meerdere personen kunnen deelnemen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod> a owl:Class;
+  rdfs:label "IndividueelAanbod"@nl;
+  rdfs:comment "Begeleid Aanbod waaraan slechts één persoon kan deelnemen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod> .
+
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit is bijvoorbeeld 65+ voor de eigenschap leeftijd."@nl;
@@ -104,6 +117,18 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie> a owl:Class;
+  rdfs:label "Sessie"@nl;
+  rdfs:comment "Het concreet plaatsvinden van een Activiteit op een bepaald moment."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf crm:E7_Activity .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks> a owl:Class;
+  rdfs:label "Sessiereeks"@nl;
+  rdfs:comment "Groep van 1 of meerdere Sessies."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf crm:E7_Activity .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen> a owl:DatatypeProperty;
   rdfs:label "aantal personen"@nl;
@@ -208,6 +233,12 @@ schemas:funder a rdf:Property;
   rdfs:label "Populatie"@nl;
   rdfs:comment "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod> a owl:Class;
+  rdfs:label "Aanbod"@nl;
+  rdfs:comment "Het voorzien van een activiteit voor gedetineerden."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf crm:E7_Activity .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde> a owl:Class;
   rdfs:label "Enkele Waarde"@nl;
