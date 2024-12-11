@@ -50,11 +50,24 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {
-    "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-04"
+    "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-06"
   },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-11-13",
   "classes": [
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Aanbod"
+      },
+      "definition": {
+        "nl": "Het voorzien van een activiteit voor gedetineerden."
+      },
+      "parents": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ]
+    },
     {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus",
       "@type": "http://www.w3.org/2002/07/owl#Class",
@@ -118,6 +131,32 @@
       ]
     },
     {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Groepsaanbod",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Groepsaanbod"
+      },
+      "definition": {
+        "nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen."
+      },
+      "parents": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#IndividueelAanbod",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "IndividueelAanbod"
+      },
+      "definition": {
+        "nl": "Begeleid Aanbod waaraan slechts één persoon kan deelnemen."
+      },
+      "parents": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
+      ]
+    },
+    {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -138,6 +177,32 @@
         "nl": "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."
       },
       "parents": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Sessie"
+      },
+      "definition": {
+        "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
+      },
+      "parents": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ]
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Sessiereeks",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Sessiereeks"
+      },
+      "definition": {
+        "nl": "Groep van 1 of meerdere Sessies."
+      },
+      "parents": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ]
     },
     {
       "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik",
@@ -500,6 +565,28 @@
       ],
       "range": [
         "https://www.w3.org/2000/01/rdf-schema#Resource"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Fractiewaarde"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "domain": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk"
+      ],
+      "range": [
+        "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde"
       ],
       "generalization": []
     },
