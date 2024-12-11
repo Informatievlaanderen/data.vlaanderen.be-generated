@@ -130,6 +130,11 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf crm:E7_Activity .
 
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Testt> a owl:ObjectProperty;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range <https://data.vlaanderen.be/ns/persoon#Inwoner> .
+
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik.aantalPersonen> a owl:DatatypeProperty;
   rdfs:label "aantal personen"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit zegt niets over de verdeling van de VTE's tussen deze personen."@nl;
@@ -144,6 +149,13 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#VTEGebruik>;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range xsd:double .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalDeelnames> a owl:DatatypeProperty;
+  rdfs:label "aantal deelnames"@nl;
+  rdfs:comment "Aantal deelnames"@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range xsd:integer .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein> a owl:ObjectProperty;
   rdfs:label "beleidsdomein"@nl;
@@ -195,6 +207,11 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> .
 
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#test> a owl:ObjectProperty;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Test>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range skos:Concept .
+
 <http://purl.org/cerif/frapo/funds> a rdf:Property;
   rdfs:label "financiert"@nl .
 
@@ -234,17 +251,20 @@ schemas:funder a rdf:Property;
   rdfs:comment "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod> a owl:Class;
-  rdfs:label "Aanbod"@nl;
-  rdfs:comment "Het voorzien van een activiteit voor gedetineerden."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
-  rdfs:subClassOf crm:E7_Activity .
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Test> a owl:Class;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde> a owl:Class;
   rdfs:label "Enkele Waarde"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit kan gebruikt worden om te zeggen over het populatiekenmerk \"Nationaliteit\" dat er 100 (waarde) Belgen (kenmerkwaarde) deel uit maken van een Gevangenis Vestiging."@nl;
   rdfs:comment "De waarde van een kenmerk gekoppeled aan een andere waarde."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod> a owl:Class;
+  rdfs:label "Aanbod"@nl;
+  rdfs:comment "Het voorzien van een activiteit voor gedetineerden."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:subClassOf crm:E7_Activity .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Fractiewaarde> a owl:Class;
   rdfs:label "Fractiewaarde"@nl;
