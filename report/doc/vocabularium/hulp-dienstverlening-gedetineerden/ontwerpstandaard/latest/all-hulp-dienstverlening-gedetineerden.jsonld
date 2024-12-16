@@ -154,7 +154,7 @@
                 "nl": "Het voorzien van een activiteit voor gedetineerden."
             },
             "extra": {
-                "EA-Name": "Aanbod",
+                "EA-Name": "Aanbod (VOC)",
                 "EA-Guid": "{594DDD07-074F-4e12-AB8B-AD93665A93C7}",
                 "EA-Package": "OSLO-HDG",
                 "EA-Type": "CLASS",
@@ -162,7 +162,7 @@
                 "EA-Parents2": [
                     {
                         "name": "Activity",
-                        "label": "Activity",
+                        "label": "",
                         "package": "CIDOC-CRM",
                         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
                     }
@@ -603,14 +603,14 @@
                 "nl": "Een Aanbod waaraan meerdere personen kunnen deelnemen."
             },
             "extra": {
-                "EA-Name": "Groepsaanbod",
+                "EA-Name": "Groepsaanbod (VOC)",
                 "EA-Guid": "{F17064C6-1510-4cc1-A48E-35EE01C6462C}",
                 "EA-Package": "OSLO-HDG",
                 "EA-Type": "CLASS",
-                "EA-Parents": "Aanbod",
+                "EA-Parents": "Aanbod (VOC)",
                 "EA-Parents2": [
                     {
-                        "name": "Aanbod",
+                        "name": "Aanbod (VOC)",
                         "label": "Aanbod",
                         "package": "OSLO-HDG",
                         "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
@@ -679,14 +679,14 @@
                 "nl": "Begeleid Aanbod waaraan slechts één persoon kan deelnemen."
             },
             "extra": {
-                "EA-Name": "IndividueelAanbod",
+                "EA-Name": "IndividueelAanbod (VOC)",
                 "EA-Guid": "{9F2F29AF-32F7-4808-8A2B-FE4474EFB4C5}",
                 "EA-Package": "OSLO-HDG",
                 "EA-Type": "CLASS",
-                "EA-Parents": "Aanbod",
+                "EA-Parents": "Aanbod (VOC)",
                 "EA-Parents2": [
                     {
-                        "name": "Aanbod",
+                        "name": "Aanbod (VOC)",
                         "label": "Aanbod",
                         "package": "OSLO-HDG",
                         "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Aanbod"
@@ -798,6 +798,11 @@
                         "key": "name",
                         "value": "Kenmerk",
                         "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote-nl",
+                        "value": "De ondergrens van de kardinaliteit van waarde, fractiewaarde, en enkeleWaar staat op 0, maar er wordt verwacht dat minstens 1 van de eigenschappen gebruikt wordt.",
+                        "note": "null"
                     }
                 ],
                 "Scope": "FULL_DEFINITON"
@@ -894,7 +899,7 @@
                 "nl": "Het concreet plaatsvinden van een Activiteit op een bepaald moment."
             },
             "extra": {
-                "EA-Name": "Sessie",
+                "EA-Name": "Sessie  (VOC)",
                 "EA-Guid": "{152C7A91-F919-4150-BCD8-D5DB5CCD6154}",
                 "EA-Package": "OSLO-HDG",
                 "EA-Type": "CLASS",
@@ -902,7 +907,7 @@
                 "EA-Parents2": [
                     {
                         "name": "Activity",
-                        "label": "Activity",
+                        "label": "",
                         "package": "CIDOC-CRM",
                         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
                     }
@@ -970,7 +975,7 @@
                 "nl": "Groep van 1 of meerdere Sessies."
             },
             "extra": {
-                "EA-Name": "Sessiereeks",
+                "EA-Name": "Sessiereeks  (VOC)",
                 "EA-Guid": "{40B196EF-9137-473d-BFC1-38612FB63ED3}",
                 "EA-Package": "OSLO-HDG",
                 "EA-Type": "CLASS",
@@ -978,7 +983,7 @@
                 "EA-Parents2": [
                     {
                         "name": "Activity",
-                        "label": "Activity",
+                        "label": "",
                         "package": "CIDOC-CRM",
                         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
                     }
@@ -1114,47 +1119,43 @@
     ],
     "properties": [
         {
-            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden/#minAantalDeelnemers",
-            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-            "name": "minimumAantalDeelnemers",
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "participatiegraad",
             "inpackage": "ACTIVE_PACKAGE",
             "label-nl": {
-                "nl": "minimum aantal deelnemers"
-            },
-            "definition": {
-                "nl": "Minimum aantal deelnemers"
+                "nl": "participatiegraad"
             },
             "label": {
-                "nl": "minimum aantal deelnemers"
+                "nl": "participatiegraad"
             },
             "definition-nl": {
-                "nl": "Minimum aantal deelnemers"
+                "nl": "TODO"
             },
             "extra": {
-                "EA-Name": "minAantalDeelnemers",
-                "EA-Guid": "{47E2A126-206B-45c6-B294-F4BBD5FCA50A}",
+                "EA-Name": "participatiegraad",
+                "EA-Guid": "{517600F5-684C-4d79-B0A1-151669DAAC68}",
                 "EA-Package": "CIDOC-CRM",
                 "EA-Type": "attribute",
                 "EA-Domain": "Activity",
                 "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Integer",
+                "EA-Range": "Participatiegraad",
                 "RangeData": {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                    "EA-Name": "Participatiegraad",
+                    "EA-GUID": "{880FA271-00EF-427d-90CA-0D9DCEE70A80}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
                 },
                 "label": {
-                    "nl": "minimum aantal deelnemers"
+                    "nl": "participatiegraad"
                 },
-                "definition": {
-                    "nl": "Minimum aantal deelnemers"
-                },
+                "definition": "",
                 "usage": "",
                 "label-nl": {
-                    "nl": "minimum aantal deelnemers"
+                    "nl": "participatiegraad"
                 },
                 "definition-nl": {
-                    "nl": "Minimum aantal deelnemers"
+                    "nl": "TODO"
                 },
                 "usageNote-nl": "",
                 "label-en": "",
@@ -1167,22 +1168,22 @@
                 "RawTags": [
                     {
                         "key": "name",
-                        "value": "Activity.minAantalDeelnemers",
+                        "value": "participatiegraad",
                         "note": "null"
                     },
                     {
                         "key": "label-nl",
-                        "value": "minimum aantal deelnemers",
-                        "note": "null"
-                    },
-                    {
-                        "key": "definition-nl",
-                        "value": "Minimum aantal deelnemers",
+                        "value": "participatiegraad",
                         "note": "null"
                     },
                     {
                         "key": "uri",
-                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden/#minAantalDeelnemers",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#participatiegraad",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definitie-nl",
+                        "value": "De mate waarin personen inspraak of hulp hebben kunnen bieden bij het vormgeven van de Activiteit.",
                         "note": "null"
                     }
                 ],
@@ -1197,101 +1198,14 @@
             ],
             "range": [
                 {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                    "EA-Name": "Participatiegraad",
+                    "EA-GUID": "{880FA271-00EF-427d-90CA-0D9DCEE70A80}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
                 }
             ],
             "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden/#maxAantalDeelnemers",
-            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-            "name": "maximaalAantalDeelnemers",
-            "inpackage": "ACTIVE_PACKAGE",
-            "label-nl": {
-                "nl": "maximaal aantal deelnemers"
-            },
-            "definition": {
-                "nl": "Maximaal aantal deelnemers"
-            },
-            "label": {
-                "nl": "maximaal aantal deelnemers"
-            },
-            "definition-nl": {
-                "nl": "Maximaal aantal deelnemers"
-            },
-            "extra": {
-                "EA-Name": "maxAantalDeelnemers",
-                "EA-Guid": "{93946447-F470-4316-B561-D4582F478016}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Integer",
-                "RangeData": {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
-                },
-                "label": {
-                    "nl": "maximaal aantal deelnemers"
-                },
-                "definition": {
-                    "nl": "Maximaal aantal deelnemers"
-                },
-                "usage": "",
-                "label-nl": {
-                    "nl": "maximaal aantal deelnemers"
-                },
-                "definition-nl": {
-                    "nl": "Maximaal aantal deelnemers"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "maximaal aantal deelnemers",
-                        "note": "null"
-                    },
-                    {
-                        "key": "definition-nl",
-                        "value": "Maximaal aantal deelnemers",
-                        "note": "null"
-                    },
-                    {
-                        "key": "uri",
-                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden/#maxAantalDeelnemers",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "FULL_DEFINITON"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
+            "minCardinality": "1",
             "maxCardinality": "1"
         },
         {
@@ -1378,6 +1292,287 @@
                     "EA-GUID": "{71F2BCB9-B72E-4874-8E9F-62550E3A0154}",
                     "EA-Package": "OSLO-HDG",
                     "uri": "https://www.w3.org/2000/01/rdf-schema#Resource"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "minimumAantalDeelnemers",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "minimum aantal deelnemers"
+            },
+            "definition": {
+                "nl": "Minimaal aantal personen die deelnemen voor de Activiteit kan plaatsvinden."
+            },
+            "label": {
+                "nl": "minimum aantal deelnemers"
+            },
+            "definition-nl": {
+                "nl": "Minimaal aantal personen die deelnemen voor de Activiteit kan plaatsvinden."
+            },
+            "extra": {
+                "EA-Name": "minAantalDeelnemers",
+                "EA-Guid": "{47E2A126-206B-45c6-B294-F4BBD5FCA50A}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Integer",
+                "RangeData": {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "label": {
+                    "nl": "minimum aantal deelnemers"
+                },
+                "definition": {
+                    "nl": "Minimaal aantal personen die deelnemen voor de Activiteit kan plaatsvinden."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "minimum aantal deelnemers"
+                },
+                "definition-nl": {
+                    "nl": "Minimaal aantal personen die deelnemen voor de Activiteit kan plaatsvinden."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "minAantalDeelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "minimum aantal deelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#minAantalDeelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Minimaal aantal personen die deelnemen voor de Activiteit kan plaatsvinden.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "medium",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "medium"
+            },
+            "definition": {
+                "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+            },
+            "label": {
+                "nl": "medium"
+            },
+            "definition-nl": {
+                "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+            },
+            "extra": {
+                "EA-Name": "medium",
+                "EA-Guid": "{8BA4698B-9E68-453a-9A98-BBCF5FA2030C}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Mediumtype",
+                "RangeData": {
+                    "EA-Name": "Mediumtype",
+                    "EA-GUID": "{A46FCA98-C332-495e-8E18-838CE293E88A}",
+                    "EA-Package": "OSLO-Cultuurparticipatie",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "medium"
+                },
+                "definition": {
+                    "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "medium"
+                },
+                "definition-nl": {
+                    "nl": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "medium",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "medium",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#medium",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Manier waarop de Activiteit plaatsvindt zoals bijvoorbeeld online, fysiek, of hybride.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Mediumtype",
+                    "EA-GUID": "{A46FCA98-C332-495e-8E18-838CE293E88A}",
+                    "EA-Package": "OSLO-Cultuurparticipatie",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "maximaalAantalDeelnemers",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "maximaal aantal deelnemers"
+            },
+            "definition": {
+                "nl": "Maximaal aantal personen die kunnen deelnemen aan de Activiteit."
+            },
+            "label": {
+                "nl": "maximaal aantal deelnemers"
+            },
+            "definition-nl": {
+                "nl": "Maximaal aantal personen die kunnen deelnemen aan de Activiteit."
+            },
+            "extra": {
+                "EA-Name": "maxAantalDeelnemers",
+                "EA-Guid": "{93946447-F470-4316-B561-D4582F478016}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Integer",
+                "RangeData": {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "label": {
+                    "nl": "maximaal aantal deelnemers"
+                },
+                "definition": {
+                    "nl": "Maximaal aantal personen die kunnen deelnemen aan de Activiteit."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "maximaal aantal deelnemers"
+                },
+                "definition-nl": {
+                    "nl": "Maximaal aantal personen die kunnen deelnemen aan de Activiteit."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "maxAantalDeelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "maximaal aantal deelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#maxAantalDeelnemers",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Maximaal aantal personen die kunnen deelnemen aan de Activiteit.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
                 }
             ],
             "generalization": [],
@@ -1565,6 +1760,101 @@
             "maxCardinality": "1"
         },
         {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "intake",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "intake"
+            },
+            "definition": {
+                "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+            },
+            "label": {
+                "nl": "intake"
+            },
+            "definition-nl": {
+                "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+            },
+            "extra": {
+                "EA-Name": "intake",
+                "EA-Guid": "{D5A70493-723B-48a6-B24F-72001B08A953}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Intaketype",
+                "RangeData": {
+                    "EA-Name": "Intaketype",
+                    "EA-GUID": "{C0CE0358-6398-4652-895B-53AFCE718A4B}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "intake"
+                },
+                "definition": {
+                    "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "intake"
+                },
+                "definition-nl": {
+                    "nl": "Classificering van de intake aan de hand van een gecontroleerde codelijst."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "intake",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "intake",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#intake",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Classificering van de intake aan de hand van een gecontroleerde codelijst.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Intaketype",
+                    "EA-GUID": "{C0CE0358-6398-4652-895B-53AFCE718A4B}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
             "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#effectievePopulatie",
             "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
             "name": "effectievePopulatie",
@@ -1666,6 +1956,101 @@
             "generalization": [],
             "minCardinality": "0",
             "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#categorie",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "categorie",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "categorie"
+            },
+            "definition": {
+                "nl": " \tDe classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+            },
+            "label": {
+                "nl": "categorie"
+            },
+            "definition-nl": {
+                "nl": " \tDe classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+            },
+            "extra": {
+                "EA-Name": "categorie",
+                "EA-Guid": "{9FE04D60-60FE-4433-9937-977735D9EFB8}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Categorie",
+                "RangeData": {
+                    "EA-Name": "Categorie",
+                    "EA-GUID": "{DD0DBCF0-017D-406d-9537-2B0912D4BDC0}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "categorie"
+                },
+                "definition": {
+                    "nl": " \tDe classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "categorie"
+                },
+                "definition-nl": {
+                    "nl": " \tDe classificatie van de Activiteit, zoals bijvoorbeeld balsporten."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "categorie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "categorie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#categorie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": " \tDe classificatie van de Activiteit, zoals bijvoorbeeld balsporten.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Categorie",
+                    "EA-GUID": "{DD0DBCF0-017D-406d-9537-2B0912D4BDC0}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "*"
         },
         {
             "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#bovengrens",
@@ -2023,6 +2408,101 @@
             "maxCardinality": "*"
         },
         {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "beleidsdomein",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "beleidsdomein"
+            },
+            "definition": {
+                "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
+            },
+            "label": {
+                "nl": "beleidsdomein"
+            },
+            "definition-nl": {
+                "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
+            },
+            "extra": {
+                "EA-Name": "beleidsdomein",
+                "EA-Guid": "{C3EFBB85-4EA9-40b1-92B4-7A41D3412D6D}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Beleidsdomein",
+                "RangeData": {
+                    "EA-Name": "Beleidsdomein",
+                    "EA-GUID": "{47A8FA0E-AF2E-4621-A9FC-A0B980BCF805}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                },
+                "label": {
+                    "nl": "beleidsdomein"
+                },
+                "definition": {
+                    "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "beleidsdomein"
+                },
+                "definition-nl": {
+                    "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "beleidsdomein",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "beleidsdomein",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beleidsdomein",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Beleidsdomein",
+                    "EA-GUID": "{47A8FA0E-AF2E-4621-A9FC-A0B980BCF805}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
             "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
             "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
             "name": "aantalInschrijvingen",
@@ -2031,13 +2511,13 @@
                 "nl": "aantal inschrijvingen"
             },
             "definition": {
-                "nl": "Aantal inschrijvingen"
+                "nl": "Aantal personen dat zich heeft ingeschreven voor de Activiteit."
             },
             "label": {
                 "nl": "aantal inschrijvingen"
             },
             "definition-nl": {
-                "nl": "Aantal inschrijvingen"
+                "nl": "Aantal personen dat zich heeft ingeschreven voor de Activiteit."
             },
             "extra": {
                 "EA-Name": "aantalInschrijvingen",
@@ -2056,14 +2536,14 @@
                     "nl": "aantal inschrijvingen"
                 },
                 "definition": {
-                    "nl": "Aantal inschrijvingen"
+                    "nl": "Aantal personen dat zich heeft ingeschreven voor de Activiteit."
                 },
                 "usage": "",
                 "label-nl": {
                     "nl": "aantal inschrijvingen"
                 },
                 "definition-nl": {
-                    "nl": "Aantal inschrijvingen"
+                    "nl": "Aantal personen dat zich heeft ingeschreven voor de Activiteit."
                 },
                 "usageNote-nl": "",
                 "label-en": "",
@@ -2085,13 +2565,13 @@
                         "note": "null"
                     },
                     {
-                        "key": "definition-nl",
-                        "value": "Aantal inschrijvingen",
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
                         "note": "null"
                     },
                     {
-                        "key": "uri",
-                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalInschrijvingen",
+                        "key": "definition-nl",
+                        "value": "Aantal personen dat zich heeft ingeschreven voor de Activiteit.",
                         "note": "null"
                     }
                 ],
@@ -2124,13 +2604,13 @@
                 "nl": "aantal deelnames"
             },
             "definition": {
-                "nl": "Aantal deelnames"
+                "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
             },
             "label": {
                 "nl": "aantal deelnames"
             },
             "definition-nl": {
-                "nl": "Aantal deelnames"
+                "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
             },
             "extra": {
                 "EA-Name": "aantalDeelnames",
@@ -2149,14 +2629,14 @@
                     "nl": "aantal deelnames"
                 },
                 "definition": {
-                    "nl": "Aantal deelnames"
+                    "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
                 },
                 "usage": "",
                 "label-nl": {
                     "nl": "aantal deelnames"
                 },
                 "definition-nl": {
-                    "nl": "Aantal deelnames"
+                    "nl": "Aantal personen die effectief hebben deelgenomen aan de Activiteit."
                 },
                 "usageNote-nl": "",
                 "label-en": "",
@@ -2184,7 +2664,100 @@
                     },
                     {
                         "key": "definition-nl",
-                        "value": "Aantal deelnames",
+                        "value": "Aantal personen die effectief hebben deelgenomen aan de Activiteit.",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
+            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+            "name": "aantalAanmeldingen",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "aantal aanmeldingen"
+            },
+            "definition": {
+                "nl": "Aantal personen dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+            },
+            "label": {
+                "nl": "aantal aanmeldingen"
+            },
+            "definition-nl": {
+                "nl": "Aantal personen dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+            },
+            "extra": {
+                "EA-Name": "aantalAanmeldingen",
+                "EA-Guid": "{0D3B61D1-F8A3-48e6-84C0-A39A6D8FEE20}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Integer",
+                "RangeData": {
+                    "EA-Name": "Integer",
+                    "EA-Package": "",
+                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
+                },
+                "label": {
+                    "nl": "aantal aanmeldingen"
+                },
+                "definition": {
+                    "nl": "Aantal personen dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "aantal aanmeldingen"
+                },
+                "definition-nl": {
+                    "nl": "Aantal personen dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "aantalAanmeldingen",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "aantal aanmeldingen",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#aantalAanmeldingen",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Aantal personen dat zich geeft aangemeld voor de Activiteit. Dit betreft enkel geldige aanmeldingen.",
                         "note": "null"
                     }
                 ],
@@ -2617,6 +3190,266 @@
             "label-nl": {
                 "nl": "waarde"
             },
+            "definition": {
+                "nl": "De waarde van de eigenschap."
+            },
+            "label": {
+                "nl": "waarde"
+            },
+            "definition-nl": {
+                "nl": "De waarde van de eigenschap."
+            },
+            "extra": {
+                "EA-Name": "fractiewaarde",
+                "EA-Guid": "{8BABE8FC-E316-4ea7-8454-B05418C92E1A}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Kenmerk",
+                "EA-Domain-Guid": "{493F1C5F-37A1-4336-B54A-25F66858BE1A}",
+                "EA-Range": "Fractiewaarde",
+                "RangeData": {
+                    "EA-Name": "Fractiewaarde",
+                    "EA-GUID": "{C50F2951-642A-4de8-B91B-2847CD7D745C}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Fractiewaarde"
+                },
+                "sourceRole": "null",
+                "destRole": "fractiewaarde",
+                "label": {
+                    "nl": "waarde"
+                },
+                "definition": {
+                    "nl": "De waarde van de eigenschap."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "waarde"
+                },
+                "definition-nl": {
+                    "nl": "De waarde van de eigenschap."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "De Fractiewaarde van de eigenschap."
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "fractiewaarde"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "Kenmerk.waarde"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "De waarde van de eigenschap."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "waarde"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "De Fractiewaarde van de eigenschap."
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "fractiewaarde"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "Kenmerk.waarde"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "De waarde van de eigenschap."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "waarde"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk",
+                    "EA-Name": "Kenmerk"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Fractiewaarde",
+                    "EA-GUID": "{C50F2951-642A-4de8-B91B-2847CD7D745C}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Fractiewaarde"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "waarde",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "waarde"
+            },
+            "definition": {
+                "nl": "De waarde van de eigenschap."
+            },
+            "label": {
+                "nl": "waarde"
+            },
+            "definition-nl": {
+                "nl": "De waarde van de eigenschap."
+            },
+            "extra": {
+                "EA-Name": "enkeleWaarde",
+                "EA-Guid": "{7E63C78B-29AE-4e63-BE9F-BE0ED965E57D}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Kenmerk",
+                "EA-Domain-Guid": "{493F1C5F-37A1-4336-B54A-25F66858BE1A}",
+                "EA-Range": "EnkeleWaarde",
+                "RangeData": {
+                    "EA-Name": "EnkeleWaarde",
+                    "EA-GUID": "{F111F68C-6542-465b-AFC5-18B9C1A616E3}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde"
+                },
+                "sourceRole": "null",
+                "destRole": "enkeleWaarde",
+                "label": {
+                    "nl": "waarde"
+                },
+                "definition": {
+                    "nl": "De waarde van de eigenschap."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "waarde"
+                },
+                "definition-nl": {
+                    "nl": "De waarde van de eigenschap."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "De Enkele Waarde van de eigenschap."
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "enkele waarde"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "De waarde van de eigenschap."
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "Kenmerk.waarde"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "waarde"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "De Enkele Waarde van de eigenschap."
+                    },
+                    {
+                        "key": "ap-label-nl",
+                        "value": "NOTE",
+                        "note": "enkele waarde"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "De waarde van de eigenschap."
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "Kenmerk.waarde"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "waarde"
+                    }
+                ],
+                "Scope": "FULL_DEFINITON"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk",
+                    "EA-Name": "Kenmerk"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "EnkeleWaarde",
+                    "EA-GUID": "{F111F68C-6542-465b-AFC5-18B9C1A616E3}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Kenmerk.waarde",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "waarde",
+            "inpackage": "ACTIVE_PACKAGE",
+            "label-nl": {
+                "nl": "waarde"
+            },
             "usage": {
                 "nl": "Dit is bijvoorbeeld 65+ voor de eigenschap leeftijd."
             },
@@ -2711,7 +3544,7 @@
                 }
             ],
             "generalization": [],
-            "minCardinality": "1",
+            "minCardinality": "0",
             "maxCardinality": "*"
         },
         {
@@ -3262,10 +4095,7 @@
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
             "label-nl": {
-                "nl": "Activity"
-            },
-            "label": {
-                "nl": "Activity"
+                "nl": "TODO"
             },
             "definition-nl": {
                 "nl": "TODO"
@@ -3278,13 +4108,11 @@
                 "EA-Parents": "",
                 "EA-Parents2": [],
                 "parentclasses": "",
-                "label": {
-                    "nl": "Activity"
-                },
+                "label": "",
                 "definition": "",
                 "usage": "",
                 "label-nl": {
-                    "nl": "Activity"
+                    "nl": "TODO"
                 },
                 "definition-nl": {
                     "nl": "TODO"
@@ -3307,16 +4135,11 @@
                         "key": "ap-label-nl",
                         "value": "Activity",
                         "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "Activity",
-                        "note": "null"
                     }
                 ],
                 "Scope": "NOTHING"
             },
-            "name": "Activity"
+            "name": ""
         },
         {
             "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -4471,6 +5294,82 @@
             "name": "Vestiging"
         },
         {
+            "@id": "http://www.w3.org/ns/prov#Location",
+            "@type": "http://www.w3.org/2002/07/owl#Class",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "Locatie"
+            },
+            "definition": {
+                "nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d"
+            },
+            "label": {
+                "nl": "Locatie"
+            },
+            "definition-nl": {
+                "nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d"
+            },
+            "extra": {
+                "EA-Name": "Locatie",
+                "EA-Guid": "{446AF64E-582E-4552-A4EC-1858F2446114}",
+                "EA-Package": "OSLO-Generiek",
+                "EA-Type": "CLASS",
+                "EA-Parents": "",
+                "EA-Parents2": [],
+                "parentclasses": "",
+                "label": {
+                    "nl": "Locatie"
+                },
+                "definition": {
+                    "nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d"
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "Locatie"
+                },
+                "definition-nl": {
+                    "nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "Aanduiding van een geogrrafische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "ap-usageNote",
+                        "value": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc.",
+                        "note": "null"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "Locatie",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/prov#Location",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "name": "Locatie"
+        },
+        {
             "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte",
             "@type": "http://www.w3.org/2002/07/owl#Class",
             "inpackage": "OTHER_PACKAGE",
@@ -4656,7 +5555,7 @@
                 "EA-Guid": "{8B9842B8-F527-418e-96B3-55861E9CF9E8}",
                 "EA-Package": "OSLO-CultuurEnJeugdinfrastructuur",
                 "EA-Type": "CLASS",
-                "EA-Parents": "",
+                "EA-Parents": "Locatie",
                 "EA-Parents2": [
                     {
                         "name": "Locatie",
@@ -5232,6 +6131,101 @@
         {
             "@id": "https://www.w3.org/ns/prov#atLocation",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "locatie",
+            "inpackage": "UNKNOWN",
+            "label-nl": {
+                "nl": "locatie"
+            },
+            "label": {
+                "nl": "locatie"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "locatie",
+                "EA-Guid": "{C268DC4E-7DCF-4a07-A712-2B9EFC49C4E4}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Populatie",
+                "EA-Domain-Guid": "{CFD42C37-0A99-4bda-9E89-55D8C2BA91F0}",
+                "EA-Range": "Locatie",
+                "RangeData": {
+                    "EA-Name": "Locatie",
+                    "EA-GUID": "{446AF64E-582E-4552-A4EC-1858F2446114}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/ns/prov#Location"
+                },
+                "sourceRole": "populatie",
+                "destRole": "locatie",
+                "label": {
+                    "nl": "locatie"
+                },
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "locatie"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://www.w3.org/ns/prov#atLocation"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "locatie"
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://www.w3.org/ns/prov#atLocation"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "locatie"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie",
+                    "EA-Name": "Populatie"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Locatie",
+                    "EA-GUID": "{446AF64E-582E-4552-A4EC-1858F2446114}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/ns/prov#Location"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://www.w3.org/ns/prov#atLocation",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "",
             "inpackage": "UNKNOWN",
             "label-nl": {
@@ -5244,22 +6238,22 @@
                 "nl": "Locatie van welke de populatie beschreven wordt."
             },
             "extra": {
-                "EA-Name": "infrastructuur",
+                "EA-Name": "vestiging",
                 "EA-Guid": "{DEFF13A5-B0DA-4c0d-8F6C-BA072310309C}",
                 "derived": "false",
                 "EA-Package": "",
                 "EA-Type": "connector",
                 "EA-Domain": "Populatie",
                 "EA-Domain-Guid": "{CFD42C37-0A99-4bda-9E89-55D8C2BA91F0}",
-                "EA-Range": "Infrastructuur",
+                "EA-Range": "Vestiging",
                 "RangeData": {
-                    "EA-Name": "Infrastructuur",
-                    "EA-GUID": "{8B9842B8-F527-418e-96B3-55861E9CF9E8}",
-                    "EA-Package": "OSLO-CultuurEnJeugdinfrastructuur",
-                    "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+                    "EA-Name": "Vestiging",
+                    "EA-GUID": "{BA756214-3009-419a-813C-99AEF1090587}",
+                    "EA-Package": "OSLO-Organisatie",
+                    "uri": "http://www.w3.org/ns/org#Site"
                 },
                 "sourceRole": "populatie",
-                "destRole": "infrastructuur",
+                "destRole": "vestiging",
                 "label": "",
                 "definition": {
                     "nl": "Locatie van welke de populatie beschreven wordt."
@@ -5283,7 +6277,7 @@
                     {
                         "key": "ap-definition-nl",
                         "value": "NOTE",
-                        "note": "Infrastructuur van welke de populatie beschreven wordt."
+                        "note": "Vestiging van welke de populatie beschreven wordt."
                     },
                     {
                         "key": "uri",
@@ -5293,7 +6287,7 @@
                     {
                         "key": "ap-label-nl",
                         "value": "NOTE",
-                        "note": "infrastructuur"
+                        "note": "vestiging"
                     },
                     {
                         "key": "definition-nl",
@@ -5305,7 +6299,7 @@
                     {
                         "key": "ap-definition-nl",
                         "value": "NOTE",
-                        "note": "Infrastructuur van welke de populatie beschreven wordt."
+                        "note": "Vestiging van welke de populatie beschreven wordt."
                     },
                     {
                         "key": "uri",
@@ -5315,7 +6309,7 @@
                     {
                         "key": "ap-label-nl",
                         "value": "NOTE",
-                        "note": "infrastructuur"
+                        "note": "vestiging"
                     },
                     {
                         "key": "definition-nl",
@@ -5334,15 +6328,567 @@
             ],
             "range": [
                 {
-                    "EA-Name": "Infrastructuur",
-                    "EA-GUID": "{8B9842B8-F527-418e-96B3-55861E9CF9E8}",
-                    "EA-Package": "OSLO-CultuurEnJeugdinfrastructuur",
-                    "uri": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+                    "EA-Name": "Vestiging",
+                    "EA-GUID": "{BA756214-3009-419a-813C-99AEF1090587}",
+                    "EA-Package": "OSLO-Organisatie",
+                    "uri": "http://www.w3.org/ns/org#Site"
                 }
             ],
             "generalization": [],
             "minCardinality": "1",
             "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#vervangt",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "vervangt",
+                "EA-Guid": "{37DB2F7F-0062-4698-B1E6-37665F0D0EB6}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Activity",
+                "RangeData": {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                },
+                "sourceRole": "vervangenDoor",
+                "destRole": "vervangt",
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [],
+                "DestRoleTags": [],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#vervangenDoor",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "vervangenDoor",
+                "EA-Guid": "{37DB2F7F-0062-4698-B1E6-37665F0D0EB6}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Activity",
+                "RangeData": {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                },
+                "sourceRole": "vervangt",
+                "destRole": "vervangenDoor",
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [],
+                "DestRoleTags": [],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#superActiviteit",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "superActiviteit",
+                "EA-Guid": "{5B281B45-BA59-4fff-900F-D4261703924C}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Activity",
+                "RangeData": {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                },
+                "sourceRole": "subActiviteit",
+                "destRole": "superActiviteit",
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [],
+                "DestRoleTags": [],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#subActiviteit",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "subActiviteit",
+                "EA-Guid": "{5B281B45-BA59-4fff-900F-D4261703924C}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Activity",
+                "RangeData": {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                },
+                "sourceRole": "superActiviteit",
+                "destRole": "subActiviteit",
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [],
+                "DestRoleTags": [],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activity",
+                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                    "EA-Package": "CIDOC-CRM",
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "populatie",
+            "inpackage": "UNKNOWN",
+            "label-nl": {
+                "nl": "populatie"
+            },
+            "definition": {
+                "nl": "Populatie van een Locatie."
+            },
+            "label": {
+                "nl": "populatie"
+            },
+            "definition-nl": {
+                "nl": "Populatie van een Locatie."
+            },
+            "extra": {
+                "EA-Name": "populatie",
+                "EA-Guid": "{DEFF13A5-B0DA-4c0d-8F6C-BA072310309C}",
+                "derived": "false",
+                "EA-Package": "",
+                "EA-Type": "connector",
+                "EA-Domain": "Vestiging",
+                "EA-Domain-Guid": "{BA756214-3009-419a-813C-99AEF1090587}",
+                "EA-Range": "Populatie",
+                "RangeData": {
+                    "EA-Name": "Populatie",
+                    "EA-GUID": "{CFD42C37-0A99-4bda-9E89-55D8C2BA91F0}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie"
+                },
+                "sourceRole": "vestiging",
+                "destRole": "populatie",
+                "label": {
+                    "nl": "populatie"
+                },
+                "definition": {
+                    "nl": "Populatie van een Locatie."
+                },
+                "usage": "",
+                "label-nl": {
+                    "nl": "populatie"
+                },
+                "definition-nl": {
+                    "nl": "Populatie van een Locatie."
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "Populatie van de Vestiging."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "populatie"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "populatie"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "Populatie van een Locatie."
+                    }
+                ],
+                "DestRoleTags": [
+                    {
+                        "key": "ap-definition-nl",
+                        "value": "NOTE",
+                        "note": "Populatie van de Vestiging."
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "NOTE",
+                        "note": "populatie"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "NOTE",
+                        "note": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie"
+                    },
+                    {
+                        "key": "name",
+                        "value": "NOTE",
+                        "note": "populatie"
+                    },
+                    {
+                        "key": "definition-nl",
+                        "value": "NOTE",
+                        "note": "Populatie van een Locatie."
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.w3.org/ns/org#Site",
+                    "EA-Name": "Vestiging"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Populatie",
+                    "EA-GUID": "{CFD42C37-0A99-4bda-9E89-55D8C2BA91F0}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "1",
+            "maxCardinality": "1"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#naam",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "naam",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "naam"
+            },
+            "label": {
+                "nl": "naam"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "naam",
+                "EA-Guid": "{4B208AE2-CEE9-4f30-813B-EC57FAEF1CB1}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "TaalString",
+                "RangeData": {
+                    "EA-Name": "TaalString",
+                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                },
+                "label": {
+                    "nl": "naam"
+                },
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "naam"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "name",
+                        "value": "naam",
+                        "note": "null"
+                    },
+                    {
+                        "key": "label-nl",
+                        "value": "naam",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "TaalString",
+                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
+        },
+        {
+            "@id": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#beschrijving",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "TODO"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "beschrijving",
+                "EA-Guid": "{68C6FB18-4EBB-4553-8DCB-D3F6FA885315}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "TaalString",
+                "RangeData": {
+                    "EA-Name": "TaalString",
+                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                },
+                "label": "",
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "TODO"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "ap-label-nl",
+                        "value": "beschrijving",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "TaalString",
+                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
+                    "EA-Package": "OSLO-Generiek",
+                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "*"
         },
         {
             "@id": "https://schema.org/startTime",
@@ -8721,6 +10267,86 @@
             "maxCardinality": "*"
         },
         {
+            "@id": "http://www.w3.org/ns/adms#status",
+            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+            "name": "status",
+            "inpackage": "OTHER_PACKAGE",
+            "label-nl": {
+                "nl": "status"
+            },
+            "label": {
+                "nl": "status"
+            },
+            "definition-nl": {
+                "nl": "TODO"
+            },
+            "extra": {
+                "EA-Name": "status",
+                "EA-Guid": "{C4F53379-90CF-4537-9772-DD7189EB5450}",
+                "EA-Package": "CIDOC-CRM",
+                "EA-Type": "attribute",
+                "EA-Domain": "Activity",
+                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
+                "EA-Range": "Activiteitsstatus",
+                "RangeData": {
+                    "EA-Name": "Activiteitsstatus",
+                    "EA-GUID": "{6DA358BC-6C87-4f32-9B07-B6D7DD8717F4}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus"
+                },
+                "label": {
+                    "nl": "status"
+                },
+                "definition": "",
+                "usage": "",
+                "label-nl": {
+                    "nl": "status"
+                },
+                "definition-nl": {
+                    "nl": "TODO"
+                },
+                "usageNote-nl": "",
+                "label-en": "",
+                "definition-en": "",
+                "usageNote-en": "",
+                "equivalent": "",
+                "subclass": "",
+                "subclass1": "",
+                "sameAs": "",
+                "RawTags": [
+                    {
+                        "key": "label-nl",
+                        "value": "status",
+                        "note": "null"
+                    },
+                    {
+                        "key": "uri",
+                        "value": "http://www.w3.org/ns/adms#status",
+                        "note": "null"
+                    }
+                ],
+                "Scope": "NOTHING"
+            },
+            "codelist": [],
+            "domain": [
+                {
+                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+                    "EA-Name": "Activity"
+                }
+            ],
+            "range": [
+                {
+                    "EA-Name": "Activiteitsstatus",
+                    "EA-GUID": "{6DA358BC-6C87-4f32-9B07-B6D7DD8717F4}",
+                    "EA-Package": "OSLO-HDG",
+                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus"
+                }
+            ],
+            "generalization": [],
+            "minCardinality": "0",
+            "maxCardinality": "1"
+        },
+        {
             "@id": "http://qudt.org/schema/qudt/hasQuantity",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "",
@@ -9671,991 +11297,6 @@
             "maxCardinality": "*"
         },
         {
-            "@id": "http://fixme.com#vervangt",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "TODO"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "vervangt",
-                "EA-Guid": "{37DB2F7F-0062-4698-B1E6-37665F0D0EB6}",
-                "derived": "false",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Activity",
-                "RangeData": {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                },
-                "sourceRole": "vervangenDoor",
-                "destRole": "vervangt",
-                "label": "",
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "TODO"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [],
-                "DestRoleTags": [],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#vervangenDoor",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "TODO"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "vervangenDoor",
-                "EA-Guid": "{37DB2F7F-0062-4698-B1E6-37665F0D0EB6}",
-                "derived": "false",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Activity",
-                "RangeData": {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                },
-                "sourceRole": "vervangt",
-                "destRole": "vervangenDoor",
-                "label": "",
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "TODO"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [],
-                "DestRoleTags": [],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#superActiviteit",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "TODO"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "superActiviteit",
-                "EA-Guid": "{5B281B45-BA59-4fff-900F-D4261703924C}",
-                "derived": "false",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Activity",
-                "RangeData": {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                },
-                "sourceRole": "subActiviteit",
-                "destRole": "superActiviteit",
-                "label": "",
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "TODO"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [],
-                "DestRoleTags": [],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#subActiviteit",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "TODO"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "subActiviteit",
-                "EA-Guid": "{5B281B45-BA59-4fff-900F-D4261703924C}",
-                "derived": "false",
-                "EA-Package": "",
-                "EA-Type": "connector",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Activity",
-                "RangeData": {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                },
-                "sourceRole": "superActiviteit",
-                "destRole": "subActiviteit",
-                "label": "",
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "TODO"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [],
-                "DestRoleTags": [],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Activity",
-                    "EA-GUID": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                    "EA-Package": "CIDOC-CRM",
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#status",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "status",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "status"
-            },
-            "label": {
-                "nl": "status"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "status",
-                "EA-Guid": "{C4F53379-90CF-4537-9772-DD7189EB5450}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Activiteitsstatus",
-                "RangeData": {
-                    "EA-Name": "Activiteitsstatus",
-                    "EA-GUID": "{6DA358BC-6C87-4f32-9B07-B6D7DD8717F4}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus"
-                },
-                "label": {
-                    "nl": "status"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "status"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "label-nl",
-                        "value": "status",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Activiteitsstatus",
-                    "EA-GUID": "{6DA358BC-6C87-4f32-9B07-B6D7DD8717F4}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Activiteitsstatus"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#participatiegraad",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "participatiegraad",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "participatiegraad"
-            },
-            "label": {
-                "nl": "participatiegraad"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "participatiegraad",
-                "EA-Guid": "{517600F5-684C-4d79-B0A1-151669DAAC68}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Participatiegraad",
-                "RangeData": {
-                    "EA-Name": "Participatiegraad",
-                    "EA-GUID": "{880FA271-00EF-427d-90CA-0D9DCEE70A80}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                },
-                "label": {
-                    "nl": "participatiegraad"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "participatiegraad"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "participatiegraad",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "participatiegraad",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Participatiegraad",
-                    "EA-GUID": "{880FA271-00EF-427d-90CA-0D9DCEE70A80}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#naam",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "naam",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "naam"
-            },
-            "label": {
-                "nl": "naam"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "naam",
-                "EA-Guid": "{4B208AE2-CEE9-4f30-813B-EC57FAEF1CB1}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "TaalString",
-                "RangeData": {
-                    "EA-Name": "TaalString",
-                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
-                    "EA-Package": "OSLO-Generiek",
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "label": {
-                    "nl": "naam"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "naam"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "naam",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "naam",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "TaalString",
-                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
-                    "EA-Package": "OSLO-Generiek",
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "*"
-        },
-        {
-            "@id": "http://fixme.com#medium",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "medium",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "medium"
-            },
-            "label": {
-                "nl": "medium"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "medium",
-                "EA-Guid": "{8BA4698B-9E68-453a-9A98-BBCF5FA2030C}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Mediumtype",
-                "RangeData": {
-                    "EA-Name": "Mediumtype",
-                    "EA-GUID": "{A46FCA98-C332-495e-8E18-838CE293E88A}",
-                    "EA-Package": "OSLO-Cultuurparticipatie",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                },
-                "label": {
-                    "nl": "medium"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "medium"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "medium",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "medium",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Mediumtype",
-                    "EA-GUID": "{A46FCA98-C332-495e-8E18-838CE293E88A}",
-                    "EA-Package": "OSLO-Cultuurparticipatie",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#intake",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "intake",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "intake"
-            },
-            "label": {
-                "nl": "intake"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "intake",
-                "EA-Guid": "{D5A70493-723B-48a6-B24F-72001B08A953}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Intaketype",
-                "RangeData": {
-                    "EA-Name": "Intaketype",
-                    "EA-GUID": "{C0CE0358-6398-4652-895B-53AFCE718A4B}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                },
-                "label": {
-                    "nl": "intake"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "intake"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "intake",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "intake",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Intaketype",
-                    "EA-GUID": "{C0CE0358-6398-4652-895B-53AFCE718A4B}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#categorie",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "categorie",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "categorie"
-            },
-            "label": {
-                "nl": "categorie"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "categorie",
-                "EA-Guid": "{9FE04D60-60FE-4433-9937-977735D9EFB8}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Categorie",
-                "RangeData": {
-                    "EA-Name": "Categorie",
-                    "EA-GUID": "{DD0DBCF0-017D-406d-9537-2B0912D4BDC0}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                },
-                "label": {
-                    "nl": "categorie"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "categorie"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "categorie",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "categorie",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Categorie",
-                    "EA-GUID": "{DD0DBCF0-017D-406d-9537-2B0912D4BDC0}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "*"
-        },
-        {
-            "@id": "http://fixme.com#beschrijving",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "TODO"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "beschrijving",
-                "EA-Guid": "{68C6FB18-4EBB-4553-8DCB-D3F6FA885315}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "TaalString",
-                "RangeData": {
-                    "EA-Name": "TaalString",
-                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
-                    "EA-Package": "OSLO-Generiek",
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "label": "",
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "TODO"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "ap-label-nl",
-                        "value": "beschrijving",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "TaalString",
-                    "EA-GUID": "{B40E40D1-DD1D-4134-A0B9-F5CBDDCBB0CE}",
-                    "EA-Package": "OSLO-Generiek",
-                    "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "*"
-        },
-        {
-            "@id": "http://fixme.com#beleidsdomein",
-            "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-            "name": "beleidsdomein",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "beleidsdomein"
-            },
-            "definition": {
-                "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
-            },
-            "label": {
-                "nl": "beleidsdomein"
-            },
-            "definition-nl": {
-                "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
-            },
-            "extra": {
-                "EA-Name": "beleidsdomein",
-                "EA-Guid": "{C3EFBB85-4EA9-40b1-92B4-7A41D3412D6D}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Beleidsdomein",
-                "RangeData": {
-                    "EA-Name": "Beleidsdomein",
-                    "EA-GUID": "{47A8FA0E-AF2E-4621-A9FC-A0B980BCF805}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                },
-                "label": {
-                    "nl": "beleidsdomein"
-                },
-                "definition": {
-                    "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
-                },
-                "usage": "",
-                "label-nl": {
-                    "nl": "beleidsdomein"
-                },
-                "definition-nl": {
-                    "nl": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie."
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "beleidsdomein",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "beleidsdomein",
-                        "note": "null"
-                    },
-                    {
-                        "key": "definition-nl",
-                        "value": "Specifiek terrein of onderwerp waarop beleid wordt ontwikkeld en uitgevoerd, vaak binnen de context van overheid of organisatie.",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Beleidsdomein",
-                    "EA-GUID": "{47A8FA0E-AF2E-4621-A9FC-A0B980BCF805}",
-                    "EA-Package": "OSLO-HDG",
-                    "uri": "http://www.w3.org/2004/02/skos/core#Concept"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "1",
-            "maxCardinality": "1"
-        },
-        {
-            "@id": "http://fixme.com#aantalAanmeldingen",
-            "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-            "name": "aantalAanmeldingen",
-            "inpackage": "OTHER_PACKAGE",
-            "label-nl": {
-                "nl": "aantal aanmeldingen"
-            },
-            "label": {
-                "nl": "aantal aanmeldingen"
-            },
-            "definition-nl": {
-                "nl": "TODO"
-            },
-            "extra": {
-                "EA-Name": "aantalAanmeldingen",
-                "EA-Guid": "{0D3B61D1-F8A3-48e6-84C0-A39A6D8FEE20}",
-                "EA-Package": "CIDOC-CRM",
-                "EA-Type": "attribute",
-                "EA-Domain": "Activity",
-                "EA-Domain-Guid": "{23C4736D-2D91-4b99-82C4-3B97FEBFA574}",
-                "EA-Range": "Integer",
-                "RangeData": {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
-                },
-                "label": {
-                    "nl": "aantal aanmeldingen"
-                },
-                "definition": "",
-                "usage": "",
-                "label-nl": {
-                    "nl": "aantal aanmeldingen"
-                },
-                "definition-nl": {
-                    "nl": "TODO"
-                },
-                "usageNote-nl": "",
-                "label-en": "",
-                "definition-en": "",
-                "usageNote-en": "",
-                "equivalent": "",
-                "subclass": "",
-                "subclass1": "",
-                "sameAs": "",
-                "RawTags": [
-                    {
-                        "key": "name",
-                        "value": "aantalAanmeldingen",
-                        "note": "null"
-                    },
-                    {
-                        "key": "label-nl",
-                        "value": "aantal aanmeldingen",
-                        "note": "null"
-                    }
-                ],
-                "Scope": "NOTHING"
-            },
-            "codelist": [],
-            "domain": [
-                {
-                    "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-                    "EA-Name": "Activity"
-                }
-            ],
-            "range": [
-                {
-                    "EA-Name": "Integer",
-                    "EA-Package": "",
-                    "uri": "http://www.w3.org/2001/XMLSchema#integer"
-                }
-            ],
-            "generalization": [],
-            "minCardinality": "0",
-            "maxCardinality": "1"
-        },
-        {
             "@id": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
             "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
             "name": "",
@@ -10757,15 +11398,15 @@
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-hulp-dienstverlening-gedetineerden/index.html",
     "config": "config/config-voc.json",
-    "branchtag": "main-kristof",
-    "dummy": "011",
+    "branchtag": "main-kristof-voc",
+    "dummy": "012",
     "filename": "config/hdg-voc.json",
     "navigation": {
         "prev": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/latest"
     },
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-hulpEnDienstverleningAanGedetineerden",
     "urlref": "/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/latest",
-    "documentcommit": "1c4331c984643f6405397aa3b67d2083fadd3945",
-    "toolchaincommit": "b2bc77b1102376d8bc2b77178ceb70f3cdbd7169",
+    "documentcommit": "90fdd57e672593d5a613df13c00eeda9ffb03578",
+    "toolchaincommit": "6e70b702bdea091aef1f424ea5c31c379bfa45e9",
     "hostname": "https://data.test-vlaanderen.be"
 }
