@@ -40,20 +40,6 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
     <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwDoor> a owl:ObjectProperty;
-  rdfs:label "gedeployedDoor"@nl;
-  rdfs:comment "Agent die de Meter deployed."@nl;
-  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range dc:Agent .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwTijdstip> a owl:DatatypeProperty;
-  rdfs:label "InbouwTijdstip"@nl;
-  rdfs:comment "Het tijdstip dat een meter wordt gedeployed."@nl;
-  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range xsd:dateTime .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#IndividueelVerbruikObservatie> a owl:Class;
   rdfs:label "IndividueelVerbruikObservatie"@nl;
   rdfs:comment "Individueel waterverbruik op één aansluitingspunt gerelateerd aan één meter."@nl;
@@ -105,13 +91,12 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone> a owl:Class;
   rdfs:label "Verbruikszone"@nl;
-  rdfs:comment "Taak die met het Toestel kan worden uitgevoerd waarvoor het Toestel ontworpen is."@nl;
+  rdfs:comment "Een specifiek gebied of sectie binnen een distributienetwerk waar het verbruik wordt gemeten en gemonitord."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#aantalMeters> a owl:DatatypeProperty;
   rdfs:label "aantalMeters"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Dit attribuut kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."@nl;
   rdfs:comment "Het aantal meters dat binnen de Meterzone ligt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
@@ -146,6 +131,20 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwDoor> a owl:ObjectProperty;
+  rdfs:label "inbouwDoor"@nl;
+  rdfs:comment "Agent die de Meter inbouwt."@nl;
+  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range dc:Agent .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwTijdstip> a owl:DatatypeProperty;
+  rdfs:label "inbouwTijdstip"@nl;
+  rdfs:comment "Het tijdstip dat een meter wordt ingebouwd."@nl;
+  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range xsd:dateTime .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#metertype> a owl:ObjectProperty;
   rdfs:label "metertype"@nl;
   <http://purl.org/vocab/vann/usageNote> "Type kan slaan op watermeter; maar ook op digitaal of analoog."@nl;
@@ -177,8 +176,7 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://qudt.org/schema/qudt/QuantityValue> .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest> a rdf:Property;
-  rdfs:label "geobserveerdobject"@nl,
-    "geobserveerdObject"@nl .
+  rdfs:label "geobserveerdObject"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
@@ -203,7 +201,7 @@ skos:notation a rdf:Property;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
   rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
-  rdfs:comment "In welk bereik het Systeem afdoende werkt."@nl;
+  rdfs:comment "Een tijdsreeks van kwantitatieve waardes."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
 
@@ -215,6 +213,7 @@ skos:notation a rdf:Property;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone> a owl:Class;
   rdfs:label "Meterzone"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Deze klasse kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."@nl;
   rdfs:comment "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
@@ -227,7 +226,6 @@ skos:notation a rdf:Property;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
   rdfs:label "MomentKwantitatieveWaardepaar"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
   rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
