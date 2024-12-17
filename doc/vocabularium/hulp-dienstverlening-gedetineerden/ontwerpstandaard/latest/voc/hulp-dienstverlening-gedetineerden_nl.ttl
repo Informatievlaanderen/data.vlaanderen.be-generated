@@ -260,6 +260,13 @@ schemas:MonetaryGrant a rdfs:Class .
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:range skos:Concept .
 
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie> a owl:ObjectProperty;
+  rdfs:label "populatie"@nl;
+  rdfs:comment "Populatie van een Locatie."@nl;
+  rdfs:domain prov:Location;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie> .
+
 <http://purl.org/cerif/frapo/funds> a rdf:Property;
   rdfs:label "financiert"@nl .
 
@@ -294,14 +301,6 @@ schemas:funder a rdf:Property;
   rdfs:comment "Het type en reden van de toestand van een Activiteit."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie> a owl:Class;
-  rdfs:label "Populatie"@nl;
-  rdfs:comment "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."@nl;
-  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
-
-<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie> a rdf:Property;
-  rdfs:label "populatie"@nl .
-
 <https://www.w3.org/ns/prov#atLocation> a rdf:Property;
   rdfs:label "locatie"@nl .
 
@@ -310,6 +309,11 @@ schemas:funder a rdf:Property;
   rdfs:comment "Het voorzien van een activiteit voor gedetineerden."@nl;
   rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden>;
   rdfs:subClassOf crm:E7_Activity .
+
+<https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#Populatie> a owl:Class;
+  rdfs:label "Populatie"@nl;
+  rdfs:comment "Groep van personen of objecten die gemeenschappelijke kenmerken hebben."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden> .
 
 <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#EnkeleWaarde> a owl:Class;
   rdfs:label "Enkele Waarde"@nl;
@@ -363,7 +367,6 @@ schemas:funder a rdf:Property;
     schemas:MonetaryGrant,
     <https://www.w3.org/2004/02/skos/core#Concept>,
     <https://www.w3.org/ns/prov#atLocation>,
-    <https://test.data.vlaanderen.be/ns/hulp-dienstverlening-gedetineerden#populatie>,
     schemas:funder,
     schemas:fundedItem,
     <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.naam>,
