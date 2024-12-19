@@ -374,6 +374,11 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://data.vlaanderen.be/doc/applicatieprofiel/DigitaleWatermeter/#Momentkwantitatievewaardepaar">
+            <rdfs:label xml:lang="nl">element</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdf:Property rdf:about="https://saref.etsi.org/core/accomplishes">
             <rdfs:label xml:lang="nl">taak</rdfs:label>
           </rdf:Property>
@@ -459,6 +464,12 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie"/>
     <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
   </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
+    <rdfs:label xml:lang="nl">TemporeelMomentKwantitatiefBereik</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een tijdsreeks van kwantitatieve waardes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage"/>
+  </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
     <rdfs:label xml:lang="nl">Verbruikszone</rdfs:label>
@@ -494,27 +505,6 @@
     <rdfs:comment xml:lang="nl">De interne diameter van de pijpaansluiting waar de watermeter wordt geïnstalleerd.</rdfs:comment>
     <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/WaterMeter"/>
     <rdfs:range rdf:resource="https://qudt.org/schema/qudt/QuantityValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
-    <rdfs:label xml:lang="nl">element</rdfs:label>
-    <rdfs:comment xml:lang="nl">Resultaat van de observatie in de vorm van een tijdreeks.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
-        <rdfs:label xml:lang="nl">TemporeelMomentKwantitatiefBereik</rdfs:label>
-        <rdfs:comment xml:lang="nl">Een tijdsreeks van kwantitatieve waardes.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
-        <rdfs:label xml:lang="nl">MomentKwantitatieveWaardepaar</rdfs:label>
-        <rdfs:comment xml:lang="nl">Een kwantitatief waardepaar dat onderdeel is van een tijdreeks.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar"/>
-      </owl:Class>
-    </rdfs:range>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#hoofdaansluiting">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
@@ -557,7 +547,14 @@
     <rdfs:label xml:lang="nl">tijdstip</rdfs:label>
     <rdfs:comment xml:lang="nl">Tijdstip van wanneer een waarde is geobserveerd, onderdeel van een kwantitatief waardepaar.</rdfs:comment>
     <ns1:usageNote xml:lang="nl">Tijdstip slaat op de fenomeentijd. Dit kan een punt in de tijd in het verleden of in de toekomst, bv als het over een voorspelling gaat.</ns1:usageNote>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters"/>
+        <rdfs:label xml:lang="nl">MomentKwantitatieveWaardepaar</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een kwantitatief waardepaar dat onderdeel is van een tijdreeks.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar"/>
+      </owl:Class>
+    </rdfs:domain>
     <rdfs:range rdf:resource="http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#waarde">

@@ -89,6 +89,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range dc:Location .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
+  rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
+  rdfs:comment "Een tijdsreeks van kwantitatieve waardes."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone> a owl:Class;
   rdfs:label "Verbruikszone"@nl;
   rdfs:comment "Een specifiek gebied of sectie binnen een distributienetwerk waar het verbruik wordt gemeten en gemonitord."@nl;
@@ -116,13 +122,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://saref.etsi.org/saref4watr/WaterMeter>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://qudt.org/schema/qudt/QuantityValue> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element> a owl:ObjectProperty;
-  rdfs:label "element"@nl;
-  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#hoofdaansluiting> a owl:ObjectProperty;
   rdfs:label "hoofdaansluiting"@nl;
@@ -199,11 +198,8 @@ skos:notation a rdf:Property;
 <http://www.w3.org/ns/ssn/systems/hasSystemCapability> a rdf:Property;
   rdfs:label "capaciteit"@nl .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
-  rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
-  rdfs:comment "Een tijdsreeks van kwantitatieve waardes."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
+<https://data.vlaanderen.be/doc/applicatieprofiel/DigitaleWatermeter/#Momentkwantitatievewaardepaar> a rdf:Property;
+  rdfs:label "element"@nl .
 
 <https://saref.etsi.org/core/accomplishes> a rdf:Property;
   rdfs:label "taak"@nl .
@@ -218,17 +214,17 @@ skos:notation a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie> a owl:Class;
-  rdfs:label "RuimtelijkRelatie"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
-  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
   rdfs:label "MomentKwantitatieveWaardepaar"@nl;
   rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie> a owl:Class;
+  rdfs:label "RuimtelijkRelatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
+  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> a owl:Ontology;
   rdfs:label "meters"@en,
@@ -308,6 +304,7 @@ skos:notation a rdf:Property;
     <http://www.w3.org/ns/ssn/systems/hasOperatingRange>,
     <http://www.w3.org/ns/ssn/systems/hasSurvivalRange>,
     <http://www.w3.org/ns/ssn/systems/hasSystemCapability>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/DigitaleWatermeter/#Momentkwantitatievewaardepaar>,
     <https://saref.etsi.org/core/accomplishes>,
     <https://saref.etsi.org/core/hasFunction>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
