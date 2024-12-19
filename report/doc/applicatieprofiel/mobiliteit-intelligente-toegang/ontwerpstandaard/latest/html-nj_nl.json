@@ -6,7 +6,7 @@
     "baseURI": "https://test.data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#",
     "filename": "mobiliteit-intelligente-toegang-ap",
     "navigation": {
-      "prev": "/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/2024-12-03",
+      "prev": "/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/2024-12-09",
       "self": "https://data.test-vlaanderen.be/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/latest"
     },
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/61fa8e73f9246b0618a76d655054042394f5c321",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/61fa8e73f9246b0618a76d655054042394f5c321/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/tree/2163583b53ad217e9861dca66f4a3c4d1bfda649",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/blob/2163583b53ad217e9861dca66f4a3c4d1bfda649/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-citerra/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-mobiliteit-intelligente-toegang/index.html",
     "usesVocs": [],
@@ -3188,6 +3188,29 @@
       "properties": []
     },
     {
+      "uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "name": "GetypeerdeString",
+      "label": {
+        "nl": "Getypeerde String"
+      },
+      "sort": "Getypeerde String",
+      "description": {
+        "nl": "Combinatie van een string en het type van wat de string voorstelt."
+      },
+      "usage": {
+        "nl": "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."
+      },
+      "parents": [],
+      "rawTags": {
+        "uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "literal": "true",
+        "ap-usageNote-nl": "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe.",
+        "ap-label-nl": "Getypeerde String",
+        "ap-definition-nl": "Combinatie van een string en het type van wat de string voorstelt."
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.w3.org/2006/time#Instant",
       "name": "Moment",
       "label": {
@@ -3429,7 +3452,7 @@
             "nl": "toegekendDoor"
           },
           "description": {
-            "nl": "Naam vd agent die de identificator heeft toegekend."
+            "nl": "Naam van de agent die de identificator heeft toegekend."
           },
           "usage": {
             "nl": " "
@@ -3462,16 +3485,16 @@
             "uri": "http://www.w3.org/ns/adms#schemaAgency",
             "label-nl": "toegekendDoor",
             "ap-label-nl": "toegekendDoor",
-            "ap-definition-nl": "Naam vd agent die de identificator heeft toegekend.",
-            "definition-nl": "Naam vd agent die de identificator heeft toegekend."
+            "ap-definition-nl": "Naam van de agent die de identificator heeft toegekend.",
+            "definition-nl": "Naam van de agent die de identificator heeft toegekend."
           }
         },
         {
           "uri": "http://www.w3.org/2004/02/skos/core#notation",
-          "name": "notatie",
-          "sort": "notatie",
+          "name": "identificator",
+          "sort": "identificator",
           "label": {
-            "nl": "notatie"
+            "nl": "identificator"
           },
           "description": {
             "nl": "String gebruikt om het object uniek te identificeren."
@@ -3485,15 +3508,28 @@
               "uri": "http://www.w3.org/ns/adms#Identifier"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "GetypeerdeString",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Getypeerde String",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "Getypeerde String"
+              }
+            }
+          ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "ap-label-nl": "notatie",
+            "ap-label-nl": "identificator",
             "uri": "http://www.w3.org/2004/02/skos/core#notation",
             "ap-usageNote-nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
-            "label-nl": "notatie",
+            "label-nl": "identificator",
             "ap-definition-nl": "String gebruikt om het object uniek te identificeren.",
             "definition-nl": "String gebruikt om het object uniek te identificeren.",
             "usageNote-nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."
