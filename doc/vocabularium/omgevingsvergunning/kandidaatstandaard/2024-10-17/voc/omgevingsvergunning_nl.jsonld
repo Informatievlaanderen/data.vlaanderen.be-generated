@@ -695,8 +695,8 @@
   "navigation": {
     "next": "/doc/vocabularium/omgevingsvergunning/erkendestandaard/2024-11-07"
   },
-  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
-  "publication-date": "2024-11-07",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+  "publication-date": "2024-09-12",
   "classes": [
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag",
@@ -752,7 +752,7 @@
         "nl": "Beroepsmogelijkheid"
       },
       "definition": {
-        "nl": "Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
+        "nl": "Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
       },
       "usage": {
         "nl": "Mogelijkheid om in beroep te gaaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
@@ -778,6 +778,20 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Document",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Document"
+      },
+      "definition": {
+        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
+      },
+      "usage": {
+        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -790,7 +804,8 @@
         "nl": "Kan een verzoek zijn, een melding, een vaststelling, een normatieve bepaling, een procedurele beslissing, enzovoort. Eén rechtshandeling kan meerdere inhoudelijke punten inhouden. Gebruikers worden aangezet om het soort inhoud te classificeren volgens gemeenschappelijke codelijsten."
       },
       "parents": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
+        "45e06e9f:1943a6b1af7:-7fff"
       ]
     },
     {
@@ -837,7 +852,7 @@
         "nl": "Een juridische kwalificatie gebeurt aan de hand van juridische verwijzingen, nl. verwijzingen naar Juridische Werken. Het is mogelijk om een juridische kwalificatie op verschillende dimensies (bv. een activiteit kwalificeren op vlak van indelingsrubrieken en op vlak van Sevezo-regelgeving) te doen."
       },
       "parents": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
       ]
     },
     {
@@ -880,9 +895,11 @@
         "nl": "Een Procedure is de blauwdruk voor de afhandeling van een Zaak."
       },
       "usage": {
-        "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Beroepsmogelijkheid. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
+        "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
       },
-      "parents": []
+      "parents": [
+        "http://purl.org/vocab/cpsv#Rule"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap",
@@ -933,9 +950,6 @@
       "label": {
         "nl": "Rechtscollege"
       },
-      "definition": {
-        "nl": "Een rechtsprekende instantie."
-      },
       "parents": [
         "http://data.europa.eu/m8g/PublicOrganisation"
       ]
@@ -954,7 +968,8 @@
       },
       "parents": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk",
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeGebeurtenis",
+        "45e06e9f:1943a6b1af7:-7ffd"
       ]
     },
     {
@@ -1064,27 +1079,236 @@
     },
     {
       "name": {
-        "nl": "Resource"
-      },
-      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Vlarem Rubriek"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
-    },
-    {
-      "name": {
-        "nl": "Document"
-      },
-      "@id": "http://xmlns.com/foaf/0.1/Document",
-      "@type": "rdfs:Class"
     }
   ],
   "properties": [
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.juridischeKwalificatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "juridische kwalificatie"
+      },
+      "definition": {
+        "nl": "De Juridische Kwalificatie van de Activiteit."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit.tijdsbestek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Activiteit."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+      ],
+      "range": [
+        "http://www.w3.org/2006/time#Interval"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid.bevoegdeOverheid",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "bevoegde overheid"
+      },
+      "definition": {
+        "nl": "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PublicOrganisation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling.verantwoordelijke",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#BestuurlijkeRechtshandeling"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PublicOrganisation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling.tijdsbestek",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
+      },
+      "usage": {
+        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
+      ],
+      "range": [
+        "http://www.w3.org/2006/time#Interval"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.juridischeKwalificatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "juridische kwalificatie"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling.verantwoordelijke",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Rechtshandeling."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand.verantwoordelijke",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PublicOrganisation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak.verantwoordelijke",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "domain": [
+        "http://dbpedia.org/ontology/Case"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PublicOrganisation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.verantwoordelijke",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling.zaak",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "zaak"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
+      ],
+      "range": [
+        "http://dbpedia.org/ontology/Case"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanleiding"
+      },
+      "domain": [
+        "http://dbpedia.org/ontology/Case"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischWerk"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanvrager"
+      },
+      "definition": {
+        "nl": "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#aanwendingstermijn",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanwendingstermijn"
+      },
+      "definition": {
+        "nl": "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Beroepsmogelijkheid"
+      ],
+      "range": [
+        "http://www.w3.org/2006/time#Interval"
+      ],
+      "generalization": []
+    },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#bekendmaking",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -1103,19 +1327,33 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
-        "nl": "bevoegde overheid"
+        "nl": "beschrijving"
       },
       "definition": {
-        "nl": "De Publieke Organisatie bevoegd om zich over de Procedure of Beroepsmogelijkheid uit te spreken."
+        "nl": "De beschrijving van de Activiteit."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
       ],
       "range": [
-        "http://data.europa.eu/m8g/PublicOrganisation"
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#betrokkene",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "betrokkene"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
       ],
       "generalization": []
     },
@@ -1133,23 +1371,6 @@
       ],
       "range": [
         "http://xmlns.com/foaf/0.1/Document"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "dossier"
-      },
-      "definition": {
-        "nl": "Het dossier waarin deze zaak wordt behandeld."
-      },
-      "domain": [
-        "http://dbpedia.org/ontology/Case"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/dossier#Dossier"
       ],
       "generalization": []
     },
@@ -1176,9 +1397,6 @@
       "label": {
         "nl": "ingangsdatum"
       },
-      "definition": {
-        "nl": "Datum vanaf dewelke de rechtshandeling rechtskracht krijgt."
-      },
       "usage": {
         "nl": "Bijvoorbeeld, de datum van een arrest."
       },
@@ -1191,13 +1409,13 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldeBeroepsmogelijkheid",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingesteldRechtsmiddel",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "ingestelde beroepsmogelijkheid"
+        "nl": "ingesteld rechtsmiddel"
       },
       "definition": {
-        "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
+        "nl": "Verwijzing naar het ingesteld rechtsmiddel."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep"
@@ -1213,31 +1431,11 @@
       "label": {
         "nl": "inhoud"
       },
-      "definition": {
-        "nl": "Waarover de rechtshandeling gaat: namelijk de inhoud. "
-      },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "juridische kwalificatie"
-      },
-      "definition": {
-        "nl": "De juridische kwalificatie van een resource."
-      },
-      "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie"
       ],
       "generalization": []
     },
@@ -1254,7 +1452,7 @@
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
       ],
       "range": [
-        "http://purl.org/dc/terms/Location"
+        "http://www.opengis.net/ont/geosparql#Feature"
       ],
       "generalization": []
     },
@@ -1263,9 +1461,6 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "normatieve bepaling"
-      },
-      "definition": {
-        "nl": "een normatieve bepalingen die geldig is in de context van een vergunde toestand."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand"
@@ -1281,9 +1476,6 @@
       "label": {
         "nl": "procedure"
       },
-      "definition": {
-        "nl": "Een procedure volgens dewelke de zaak wordt afgehandeld."
-      },
       "domain": [
         "http://dbpedia.org/ontology/Case"
       ],
@@ -1298,14 +1490,53 @@
       "label": {
         "nl": "procedurestap"
       },
-      "definition": {
-        "nl": "Een procedurestap volgens dewelke de zaakhandeling wordt gesteld."
-      },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedurestap",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "procedurestap"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedurestap"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#publiekeOrganisatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "publiekeOrganisatie"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/PublicOrganisation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "rechtscollege"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#RechterlijkeUitspraak"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtscollege"
       ],
       "generalization": []
     },
@@ -1339,10 +1570,10 @@
         "nl": "Termijn binnen dewelke de Procedure toegepast mag worden."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
       ],
       "range": [
-        "http://www.w3.org/2006/time#TemporalDuration"
+        "http://www.w3.org/2006/time#Interval"
       ],
       "generalization": []
     },
@@ -1365,7 +1596,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vaststellingtijdstip"
       },
@@ -1376,7 +1607,7 @@
         "https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand"
       ],
       "range": [
-        "http://www.w3.org/2001/XMLSchema#dateTime"
+        "http://www.w3.org/2006/time#Instant"
       ],
       "generalization": []
     },
@@ -1385,9 +1616,6 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vaststelling vergunde toestand"
-      },
-      "definition": {
-        "nl": "Een handeling waarmee een vergunde toestand is vastgelegd."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand"
@@ -1398,22 +1626,56 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verwanteZaak",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "verantwoordelijke"
+        "nl": "verwanteZaak"
       },
       "definition": {
-        "nl": "Een agent die verplicht is om goed voor de resource te zorgen en gedwongen kan worden om rekenschap te geven over de resource."
+        "nl": "Verwijzingen naar verwante Zaken."
       },
       "usage": {
-        "nl": "In de context van omgeviningsvergunningen is de verantwoorlijke meestal een betrokken rechtssubject. Dit rechtsubject draagt de juridische verantwoordelijkheid. "
+        "nl": "Verwantschappen kunnen verschillende doelstellingen hebben. De doelstelling mag een aangegeven worden in een gekwalificeerde relatie."
       },
       "domain": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
+        "http://dbpedia.org/ontology/Case"
       ],
       "range": [
-        "http://purl.org/dc/terms/Agent"
+        "http://dbpedia.org/ontology/Case"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "verzoekende partij"
+      },
+      "definition": {
+        "nl": "Partij die het Rechtsmiddel aanwendt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#InstellingBeroep"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#vindplaats",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "vindplaats"
+      },
+      "definition": {
+        "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Location"
       ],
       "generalization": []
     },
@@ -1421,7 +1683,7 @@
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "voorwerp bepaling"
+        "nl": "rechtsobject"
       },
       "definition": {
         "nl": "Het voorwerp van de Normatieve Bepaling."
@@ -1435,6 +1697,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "voorwerp"
+      },
+      "definition": {
+        "nl": "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand"
+      ],
+      "range": [
+        "http://www.opengis.net/ont/geosparql#Feature"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#waarmerk",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -1444,27 +1723,10 @@
         "nl": "Waarheidskenmerk van het Document."
       },
       "domain": [
-        "http://xmlns.com/foaf/0.1/Document"
+        "https://data.vlaanderen.be/ns/omgevingsvergunning#Document"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/omgevingsvergunning#Waarmerk"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "zaak"
-      },
-      "definition": {
-        "nl": "Een zaak waarin de zaakhandeling wordt gesteld."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling"
-      ],
-      "range": [
-        "http://dbpedia.org/ontology/Case"
       ],
       "generalization": []
     },
@@ -1473,9 +1735,6 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "zaakhandeling"
-      },
-      "definition": {
-        "nl": "Een zaakhandeling die wordt gesteld in het kader van de zaak."
       },
       "domain": [
         "http://dbpedia.org/ontology/Case"
@@ -1489,44 +1748,9 @@
   "externalproperties": [
     {
       "name": {
-        "nl": "beschrijving"
-      },
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "tijdsbestek"
-      },
-      "@id": "http://purl.org/dc/terms/extent",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "tijdsbestek"
-      },
-      "@id": "http://purl.org/dc/terms/extent",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "procedurestap"
-      },
-      "@id": "http://purl.org/dc/terms/hasPart",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
         "nl": "is deel van"
       },
       "@id": "http://purl.org/dc/terms/isPartOf",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "verwanteZaak"
-      },
-      "@id": "http://purl.org/dc/terms/relation",
       "@type": "rdf:Property"
     },
     {
@@ -1538,13 +1762,6 @@
     },
     {
       "name": {
-        "nl": "juridisch werk"
-      },
-      "@id": "http://www.w3.org/2004/02/skos/core#note",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
         "nl": "identificator"
       },
       "@id": "http://www.w3.org/ns/adms#identifier",
@@ -1569,20 +1786,6 @@
         "nl": "identificator"
       },
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "voorwerp"
-      },
-      "@id": "http://www.w3.org/ns/locn#location",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "vindplaats"
-      },
-      "@id": "http://www.w3.org/ns/prov#atLocation",
       "@type": "rdf:Property"
     }
   ],

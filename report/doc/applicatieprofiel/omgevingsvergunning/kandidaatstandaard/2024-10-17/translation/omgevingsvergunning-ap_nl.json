@@ -47,10 +47,10 @@
         "nl": "Beroepsmogelijkheid"
       },
       "definition": {
-        "nl": "Procedurestap die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
+        "nl": "Procedure die de mogelijkheid biedt om een bestuurlijke rechtshandeling of gerechtelijke beslissing aan te vechten."
       },
       "usage": {
-        "nl": "Mogelijkheid om in beroep te gaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
+        "nl": "Mogelijkheid om in beroep te gaaan tegen een gemeentelijke vergunningsbeslissing in eerste aanleg. Of jurisdictioneel beroep tegen een beslissing in laatste administratieve aanleg."
       }
     },
     {
@@ -64,6 +64,19 @@
       },
       "usage": {
         "nl": "Voorbeelden van eenzijdige bestuurlijke rechtshandelingen zijn: besluiten van algemene strekking, uitvaardiging van voorschriften, beschikkingen zoals erkenningen en vergunningen en aktenamen. Breid deze klasse uit met de nodige specilisaties of typeringen."
+      }
+    },
+    {
+      "EA-Guid": "{00625B86-70EA-4de6-998D-1066ADC9A5A7}",
+      "name": "Document",
+      "label": {
+        "nl": "Document"
+      },
+      "definition": {
+        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
+      },
+      "usage": {
+        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
       }
     },
     {
@@ -154,7 +167,7 @@
         "nl": "Een Procedure is de blauwdruk voor de afhandeling van een Zaak."
       },
       "usage": {
-        "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Beroepsmogelijkheid. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
+        "nl": "Het bevat Procedurestappen zoals bijvoorbeeld een Rechtsmiddel. De Procedurestappen bepalen wat de mogelijke vervolghandelingen zijn in de Zaak en welke termijnen er gelden. In casemanagement systemen die CMMN implementeren komt deze entiteit overeen met een CasePlanModel."
       }
     },
     {
@@ -198,9 +211,6 @@
       "name": "Rechtscollege",
       "label": {
         "nl": "Rechtscollege"
-      },
-      "definition": {
-        "nl": "Rechtsprekende instantie."
       }
     },
     {
@@ -262,7 +272,7 @@
         "nl": "Het geheel van rechten en plichten, voor wat betreft het toepassingsgebied van de omgevingsvergunningen, die op een bepaald moment in de tijd van toepassing zijn op het voorwerp van de vergunde toestand."
       },
       "usage": {
-        "nl": "Een vergunde toestand bevat (verwijzingen naar) Normatieve Bepalingen. In de context van de omgevingsvergunning is het voorwerp van de vergunde toestand vaak een Locatie zoals een gebouw, een perceel of een gebied. Een Vergunde Toestand is onlosmakelijk verbonden met de Vaststelling ervan."
+        "nl": "Een vergunde toestand bevat (verwijzingen naar) Normatieve Bepalingen. In de context van de omgevingsvergunning is het voorwerp van de vergunde toestand vaak een Feature zoals een gebouw, een perceel of een gebied. Een Vergunde Toestand is onlosmakelijk verbonden met de Vaststelling ervan."
       }
     },
     {
@@ -301,6 +311,134 @@
   ],
   "properties": [
     {
+      "EA-Guid": "{DF44CFFC-551B-4efc-8D01-28ACB07BCFB4}",
+      "name": "juridischeKwalificatie",
+      "label": {
+        "nl": "juridische kwalificatie"
+      },
+      "definition": {
+        "nl": "De Juridische Kwalificatie van de Activiteit."
+      }
+    },
+    {
+      "EA-Guid": "{9A80F8A9-C757-4276-90E3-DD85EAD85137}",
+      "name": "tijdsbestek",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Activiteit."
+      }
+    },
+    {
+      "EA-Guid": "{DB07771B-832C-413a-99F0-C84CA788EFF1}",
+      "name": "bevoegdeOverheid",
+      "label": {
+        "nl": "bevoegde overheid"
+      },
+      "definition": {
+        "nl": "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."
+      }
+    },
+    {
+      "EA-Guid": "{88E95EFD-DEB5-49cc-A104-E1A981E50927}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      }
+    },
+    {
+      "EA-Guid": "{72941DEB-85CA-480e-968A-55DBD97AC036}",
+      "name": "tijdsbestek",
+      "label": {
+        "nl": "tijdsbestek"
+      },
+      "definition": {
+        "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
+      },
+      "usage": {
+        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+      }
+    },
+    {
+      "EA-Guid": "{36BD3340-18A6-404a-8704-61FB5693B77E}",
+      "name": "juridischeKwalificatie",
+      "label": {
+        "nl": "juridische kwalificatie"
+      }
+    },
+    {
+      "EA-Guid": "{CA734217-89EC-4b40-AAF7-F532A5C00557}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Rechtshandeling."
+      }
+    },
+    {
+      "EA-Guid": "{C51EDFA2-BEA5-47a9-842E-1A0AE962E239}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."
+      }
+    },
+    {
+      "EA-Guid": "{05BAB743-E33A-4c95-9946-B320D729D822}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      },
+      "definition": {
+        "nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."
+      }
+    },
+    {
+      "EA-Guid": "{0D682A26-A2D5-4eef-A036-965FAD85AA18}",
+      "name": "verantwoordelijke",
+      "label": {
+        "nl": "verantwoordelijke"
+      }
+    },
+    {
+      "EA-Guid": "{E4B4DCD0-7D15-4741-82FD-03DA79618A77}",
+      "name": "zaak",
+      "label": {
+        "nl": "zaak"
+      }
+    },
+    {
+      "EA-Guid": "{91D745D6-0C58-4097-8FC3-81C0131D78DD}",
+      "name": "aanleiding",
+      "label": {
+        "nl": "aanleiding"
+      }
+    },
+    {
+      "EA-Guid": "{94E598CF-1DC4-43b2-AC09-37ED90B3F85E}",
+      "name": "aanvrager",
+      "label": {
+        "nl": "aanvrager"
+      },
+      "definition": {
+        "nl": "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."
+      }
+    },
+    {
+      "EA-Guid": "{7C5478AF-4A78-4811-8AE1-EA3B0DA25450}",
+      "name": "aanwendingstermijn",
+      "label": {
+        "nl": "aanwendingstermijn"
+      },
+      "definition": {
+        "nl": "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."
+      }
+    },
+    {
       "EA-Guid": "{9345E1B2-61D4-4404-9CF6-103B5550542C}",
       "name": "bekendmaking",
       "label": {
@@ -311,23 +449,20 @@
       }
     },
     {
-      "EA-Guid": "{DC8ABADB-057D-4507-950E-324EE5784939}",
-      "name": "bevoegdeOverheid",
+      "EA-Guid": "{52637518-9D76-4ccc-BA7B-A26AEAFA4B67}",
+      "name": "beschrijving",
       "label": {
-        "nl": "bevoegde overheid"
+        "nl": "beschrijving"
       },
       "definition": {
-        "nl": "De Publieke Organisaties die bevoegdheid kunnen hebben over de Procedure."
+        "nl": "De beschrijving van de Activiteit."
       }
     },
     {
-      "EA-Guid": "{2FFC98F0-E39C-4803-9DFD-574A8B769381}",
-      "name": "bevoegdeOverheid",
+      "EA-Guid": "{777770B5-5E98-40d2-8A19-0643896361FB}",
+      "name": "betrokkene",
       "label": {
-        "nl": "bevoegde overheid"
-      },
-      "definition": {
-        "nl": "De Publieke Organisatie bevoegd om zich over de Beroepsmogelijkheid uit te spreken."
+        "nl": "betrokkene"
       }
     },
     {
@@ -338,16 +473,6 @@
       },
       "definition": {
         "nl": "Neerslag van de Rechtshandeling in een Document."
-      }
-    },
-    {
-      "EA-Guid": "{420FF9AC-6FBA-41b3-9A7E-AF616360CF0A}",
-      "name": "dossier",
-      "label": {
-        "nl": "dossier"
-      },
-      "definition": {
-        "nl": "Het dossier waarin deze zaak wordt behandeld."
       }
     },
     {
@@ -366,21 +491,18 @@
       "label": {
         "nl": "ingangsdatum"
       },
-      "definition": {
-        "nl": "Datum vanaf dewelke de Rechtshandeling rechtskracht krijgt."
-      },
       "usage": {
         "nl": "Bijvoorbeeld, de datum van een arrest."
       }
     },
     {
       "EA-Guid": "{E9155232-0FC3-4c80-9F24-39729DC561D1}",
-      "name": "ingesteldeBeroepsmogelijkheid",
+      "name": "ingesteldRechtsmiddel",
       "label": {
-        "nl": "ingestelde beroepsmogelijkheid"
+        "nl": "ingesteld rechtsmiddel"
       },
       "definition": {
-        "nl": "Verwijzing naar de ingestelde beroepsmogelijkheid."
+        "nl": "Verwijzing naar het ingesteld rechtsmiddel."
       }
     },
     {
@@ -388,32 +510,16 @@
       "name": "inhoud",
       "label": {
         "nl": "inhoud"
-      },
-      "definition": {
-        "nl": "De Inhoud van de Rechtshandeling."
       }
     },
     {
-      "EA-Guid": "{36BD3340-18A6-404a-8704-61FB5693B77E}",
-      "name": "juridischeKwalificatie",
+      "EA-Guid": "{5D00579E-96DC-45c9-B3C6-494FB49E128C}",
+      "name": "locatie",
       "label": {
-        "nl": "juridische kwalificatie"
+        "nl": "locatie"
       },
       "definition": {
-        "nl": "De Juridische Categorieën waaronder de Rechtshandeling geclassificeerd kan worden."
-      }
-    },
-    {
-      "EA-Guid": "{DF44CFFC-551B-4efc-8D01-28ACB07BCFB4}",
-      "name": "juridischeKwalificatie",
-      "label": {
-        "nl": "juridische kwalificatie"
-      },
-      "definition": {
-        "nl": "De Juridische Kwalificatie van de Activiteit."
-      },
-      "usage": {
-        "nl": "De gebruikte codelijst kan een andere zijn dan die gebruikt wordt voor Rechtshandelingen."
+        "nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
       }
     },
     {
@@ -421,9 +527,6 @@
       "name": "normatieveBepaling",
       "label": {
         "nl": "normatieve bepaling"
-      },
-      "definition": {
-        "nl": "De Normatieve Bepalingen die geldig zijn in de context van een bepaalde Vergunde Toestand."
       }
     },
     {
@@ -431,9 +534,13 @@
       "name": "procedure",
       "label": {
         "nl": "procedure"
-      },
-      "definition": {
-        "nl": "De Procedure volgens dewelke de Zaak wordt afgehandeld."
+      }
+    },
+    {
+      "EA-Guid": "{FBEC8A04-81B8-4f95-8F9F-3CE24B43CF96}",
+      "name": "procedurestap",
+      "label": {
+        "nl": "procedurestap"
       }
     },
     {
@@ -441,9 +548,23 @@
       "name": "procedurestap",
       "label": {
         "nl": "procedurestap"
+      }
+    },
+    {
+      "EA-Guid": "{DC8ABADB-057D-4507-950E-324EE5784939}",
+      "name": "publiekeorganisatie",
+      "label": {
+        "nl": "publiekeOrganisatie"
       },
       "definition": {
-        "nl": "De Procedurestap volgens dewelke de Zaakhandeling wordt gesteld."
+        "nl": "De Publieke Organisaties die bevoegdheid kunnen hebben over de Procedure."
+      }
+    },
+    {
+      "EA-Guid": "{2B5A7B6D-CD25-40ac-8561-33BA839D1D04}",
+      "name": "rechtscollege",
+      "label": {
+        "nl": "rechtscollege"
       }
     },
     {
@@ -457,16 +578,6 @@
       },
       "usage": {
         "nl": "Bijvoorbeeld, de procedure voor de vereenvoudigde vergunningsprocedure is vastgesteld in de artikelen 37 en volgende van het Omgevingsdecreet, zoals van kracht op een bepaalde datum."
-      }
-    },
-    {
-      "EA-Guid": "{7C5478AF-4A78-4811-8AE1-EA3B0DA25450}",
-      "name": "aanwendingstermijn",
-      "label": {
-        "nl": "aanwendingstermijn"
-      },
-      "definition": {
-        "nl": "Termijn binnen dewelke de Beroepsmogelijkheid aangewend mag worden."
       }
     },
     {
@@ -504,49 +615,19 @@
       "name": "vaststellingVergundeToestand",
       "label": {
         "nl": "vaststelling vergunde toestand"
-      },
-      "definition": {
-        "nl": "De handeling waarmee de Vergunde Toestand is vastgelegd."
       }
     },
     {
-      "EA-Guid": "{0D682A26-A2D5-4eef-A036-965FAD85AA18}",
-      "name": "verantwoordelijke",
+      "EA-Guid": "{4FE5960D-82CF-4d74-8B18-969C671AA816}",
+      "name": "verwantezaak",
       "label": {
-        "nl": "verantwoordelijke"
+        "nl": "verwanteZaak"
       },
       "definition": {
-        "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Zaakhandeling."
-      }
-    },
-    {
-      "EA-Guid": "{C51EDFA2-BEA5-47a9-842E-1A0AE962E239}",
-      "name": "verantwoordelijke",
-      "label": {
-        "nl": "verantwoordelijke"
+        "nl": "Verwijzingen naar verwante Zaken."
       },
-      "definition": {
-        "nl": "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."
-      }
-    },
-    {
-      "EA-Guid": "{2B5A7B6D-CD25-40ac-8561-33BA839D1D04}",
-      "name": "rechtscollege",
-      "label": {
-        "nl": "rechtscollege"
-      },
-      "definition": {
-        "nl": "De Rechtscollege verantwoordelijk voor de Rechterlijke Uitspraak."
-      }
-    },
-    {
-      "EA-Guid": "{88E95EFD-DEB5-49cc-A104-E1A981E50927}",
-      "name": "verantwoordelijke",
-      "label": {
-        "nl": "verantwoordelijke"
-      },
-      "definition": {
-        "nl": "De Publieke Organisatie verantwoordelijk voor de Bestuurlijke Rechtshandeling."
+      "usage": {
+        "nl": "Verwantschappen kunnen verschillende doelstellingen hebben. De doelstelling mag een aangegeven worden in een gekwalificeerde relatie."
       }
     },
     {
@@ -556,57 +637,37 @@
         "nl": "verzoekende partij"
       },
       "definition": {
-        "nl": "Partij die de Beroepsmogelijkheid aanwendt."
+        "nl": "Partij die het Rechtsmiddel aanwendt."
       }
     },
     {
-      "EA-Guid": "{94E598CF-1DC4-43b2-AC09-37ED90B3F85E}",
-      "name": "aanvrager",
+      "EA-Guid": "{3F93B29F-73B9-40f2-A246-3891A7CFB3FD}",
+      "name": "vindplaats",
       "label": {
-        "nl": "aanvrager"
+        "nl": "vindplaats"
       },
       "definition": {
-        "nl": "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."
-      }
-    },
-    {
-      "EA-Guid": "{CA734217-89EC-4b40-AAF7-F532A5C00557}",
-      "name": "verantwoordelijke",
-      "label": {
-        "nl": "verantwoordelijke"
-      },
-      "definition": {
-        "nl": "Rechtssubject dat juridisch verantwoordelijk is voor de Rechtshandeling."
-      }
-    },
-    {
-      "EA-Guid": "{05BAB743-E33A-4c95-9946-B320D729D822}",
-      "name": "verantwoordelijke",
-      "label": {
-        "nl": "verantwoordelijke"
-      },
-      "definition": {
-        "nl": "De Publieke Organisatie verantwoordelijk voor de opvolging van de Zaak."
-      }
-    },
-    {
-      "EA-Guid": "{777770B5-5E98-40d2-8A19-0643896361FB}",
-      "name": "verantwoordelijke",
-      "label": {
-        "nl": "verantwoordelijke"
-      },
-      "definition": {
-        "nl": "Rechtssubject verantwoordelijk voor de Activiteit."
+        "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
       }
     },
     {
       "EA-Guid": "{B9544B95-D5DB-4846-A29A-1127218E8083}",
+      "name": "rechtsobject",
+      "label": {
+        "nl": "rechtsobject"
+      },
+      "definition": {
+        "nl": "Het voorwerp van de Normatieve Bepaling."
+      }
+    },
+    {
+      "EA-Guid": "{7D9A6967-99DA-468e-B069-F4FD0E55ED5B}",
       "name": "voorwerp",
       "label": {
         "nl": "voorwerp"
       },
       "definition": {
-        "nl": "Het voorwerp van de Normatieve Bepaling."
+        "nl": "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."
       }
     },
     {
@@ -621,26 +682,26 @@
     },
     {
       "EA-Guid": "{E4B4DCD0-7D15-4741-82FD-03DA79618A77}",
-      "name": "zaak",
-      "label": {
-        "nl": "zaak"
-      },
-      "definition": {
-        "nl": "De zaak waarin de Zaakhandeling wordt gesteld."
-      }
-    },
-    {
-      "EA-Guid": "{E4B4DCD0-7D15-4741-82FD-03DA79618A77}",
       "name": "zaakhandeling",
       "label": {
         "nl": "zaakhandeling"
-      },
-      "definition": {
-        "nl": "De Zaakhandelingen die worden gesteld in het kader van de Zaak."
       }
     }
   ],
   "externals": [
+    {
+      "EA-Guid": "{FB821B56-20B4-47ed-9CEC-18B0B7D2EF86}",
+      "name": "Rechtsgrond",
+      "label": {
+        "nl": "Rechtsgrond"
+      },
+      "definition": {
+        "nl": "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."
+      },
+      "usage": {
+        "nl": "Een rechtsgrond kan zowel een geheel (bvb: wet, besluit) voorstellen als een onderdeel eruit (bvb: artikel)."
+      }
+    },
     {
       "EA-Guid": "{4BF889A0-DBB7-4d4d-83DB-86FFBADEC61A}",
       "name": "PubliekeOrganisatie",
@@ -668,13 +729,13 @@
       }
     },
     {
-      "EA-Guid": "{23E0131B-00BF-4b0e-9F6C-08E4773B5E78}",
-      "name": "Locatie",
+      "EA-Guid": "{B680F716-B743-4327-87FC-F828659A2A80}",
+      "name": "Feature",
       "label": {
-        "nl": "Locatie"
+        "nl": "Feature"
       },
       "definition": {
-        "nl": "Generieke aanknopingspunt voor ruimtelijke data."
+        "nl": "Een discreet ruimtelijk fenomeen binnen het beschouwde domein."
       }
     },
     {
@@ -685,29 +746,54 @@
       }
     },
     {
-      "EA-Guid": "{58B7E80D-29F9-4f4c-AAF5-ECBC6FA27CCE}",
-      "name": "Tijdsinterval",
+      "EA-Guid": "{D927C7B0-550C-4e4d-8EA4-9F94AFA49DB6}",
+      "name": "VlaremRubriek",
       "label": {
-        "nl": "Tijdsinterval"
-      },
-      "definition": {
-        "nl": "Een tijdsspanne vastgelegd aan de hand van begin- en eindtijdstippen."
-      },
-      "usage": {
-        "nl": "Zie gebruik in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
+        "nl": "Vlarem Rubriek"
       }
     },
     {
       "EA-Guid": "{05FF571F-3A07-4032-8C9B-F3A23498A316}",
+      "name": "Tijdsduurbeschrijving",
+      "label": {
+        "nl": "Tijdsduurbeschrijving"
+      }
+    },
+    {
+      "EA-Guid": "{CC3B8652-B837-4104-B4A9-4F2A2EB1CA09}",
+      "name": "Tijdstip",
+      "label": {
+        "nl": "Tijdstip"
+      },
+      "definition": {
+        "nl": "Een Tijdsbepaling zonder omvang of duur."
+      }
+    },
+    {
+      "EA-Guid": "{97D7D2BE-5333-4007-B192-D964FA9768A5}",
       "name": "Tijdsduur",
       "label": {
         "nl": "Tijdsduur"
       },
       "definition": {
-        "nl": "Een tijdsspanne beschreven aan de hand van een tijdseenheid (schaal) en waarde."
+        "nl": "Een Tijdsbepaling met een omvang of duur."
+      }
+    },
+    {
+      "EA-Guid": "{58B7E80D-29F9-4f4c-AAF5-ECBC6FA27CCE}",
+      "name": "Datetimeinterval",
+      "label": {
+        "nl": "DateTimeInterval"
+      }
+    },
+    {
+      "EA-Guid": "{7E9977A2-24A1-43c5-8E0A-2D2D9A343090}",
+      "name": "Tijdsbepaling",
+      "label": {
+        "nl": "Tijdsbepaling"
       },
-      "usage": {
-        "nl": "Zie specialisaties in <a href=\"https://www.w3.org/TR/owl-time/\">Time ontology</a>."
+      "definition": {
+        "nl": "Een tijdstip of tijdsinterval."
       }
     },
     {
@@ -734,19 +820,6 @@
       }
     },
     {
-      "EA-Guid": "{00625B86-70EA-4de6-998D-1066ADC9A5A7}",
-      "name": "Document",
-      "label": {
-        "nl": "Document"
-      },
-      "definition": {
-        "nl": "Logisch geheel van informatie vastgelegd op een gegevensdrager in welke vorm ook."
-      },
-      "usage": {
-        "nl": "Omvat elektronische en niet-elektronische vormen. De gegevensdrager kan gefragmenteerd zijn, zoals een papieren document bestaande uit meerdere vellen, of een digitaal document bestaande uit meerdere bestanden. Eveneens kan één gegevensdrager meerdere documenten bevatten, zoals een digital bestand dat een scan is van meerdere documenten."
-      }
-    },
-    {
       "EA-Guid": "{D2D2B682-C96B-490a-9929-5F9C6CBAADD3}",
       "name": "Dossier",
       "label": {
@@ -759,46 +832,39 @@
   ],
   "externalproperties": [
     {
-      "EA-Guid": "{52637518-9D76-4ccc-BA7B-A26AEAFA4B67}",
-      "name": "beschrijving",
+      "EA-Guid": "{F94AD524-6EA2-49dd-9A69-D9AC0A4EE755}",
+      "name": "buitenwerkingtreding",
       "label": {
-        "nl": "beschrijving"
+        "nl": "buitenwerkingtreding"
       },
       "definition": {
-        "nl": "De beschrijving van de Activiteit."
+        "nl": "De laatste dag waarop de regelgeving nog van kracht is."
       }
     },
     {
-      "EA-Guid": "{9A80F8A9-C757-4276-90E3-DD85EAD85137}",
-      "name": "tijdsbestek",
+      "EA-Guid": "{879088CA-27BE-48a4-8775-48A19CD96A49}",
+      "name": "inwerkingtreding",
       "label": {
-        "nl": "tijdsbestek"
+        "nl": "inwerkingtreding"
       },
       "definition": {
-        "nl": "Aanduiding van het tijdsbestek van de Activiteit."
-      }
-    },
-    {
-      "EA-Guid": "{72941DEB-85CA-480e-968A-55DBD97AC036}",
-      "name": "tijdsbestek",
-      "label": {
-        "nl": "tijdsbestek"
-      },
-      "definition": {
-        "nl": "Aanduiding van het tijdsbestek van de Normatieve Bepaling."
+        "nl": "De datum waarop de regelgeving van kracht wordt."
       },
       "usage": {
-        "nl": "De toelating om een bepaalde Activiteit uit te voeren kan beperkt zijn in de tijd."
+        "nl": "Dit is niet hetzelfde als wanneer de regelgeving toepasbaar (in de praktijk uitvoerbaar) wordt. De toepasbaarheid van de regelgeving kan op of na de inwerkingtreding liggen."
       }
     },
     {
-      "EA-Guid": "{FBEC8A04-81B8-4f95-8F9F-3CE24B43CF96}",
-      "name": "procedurestap",
+      "EA-Guid": "{BCE7F5C0-A704-4341-9102-360FDE44E46D}",
+      "name": "typeDocument",
       "label": {
-        "nl": "procedurestap"
+        "nl": "type document"
       },
       "definition": {
-        "nl": "De Procedurestappen die deel uitmaken van een Procedure."
+        "nl": "Het type van de rechtsgrond."
+      },
+      "usage": {
+        "nl": "Bijvoorbeeld: reglement, wet, voorstel."
       }
     },
     {
@@ -812,19 +878,6 @@
       },
       "usage": {
         "nl": "Laat toe om een complexe Activiteit als een geneste datastructuur uit te werken."
-      }
-    },
-    {
-      "EA-Guid": "{4FE5960D-82CF-4d74-8B18-969C671AA816}",
-      "name": "verwantezaak",
-      "label": {
-        "nl": "verwanteZaak"
-      },
-      "definition": {
-        "nl": "Verwijzingen naar verwante Zaken."
-      },
-      "usage": {
-        "nl": "Verwantschappen kunnen verschillende doelstellingen hebben. De doelstelling mag een aangegeven worden in een gekwalificeerde relatie."
       }
     },
     {
@@ -842,19 +895,16 @@
       "name": "type",
       "label": {
         "nl": "type"
-      },
-      "definition": {
-        "nl": "Classificering van de Zaakhandeling aan de hand van een gecontroleerde codelijst."
       }
     },
     {
-      "EA-Guid": "{D4888699-B617-4bd3-A1D8-8C819408E40F}",
-      "name": "locatietype",
+      "EA-Guid": "{BB30C65B-7E6A-446e-A764-31DF973B0581}",
+      "name": "contactinfo",
       "label": {
-        "nl": "locatieType"
+        "nl": "contactinfo"
       },
       "definition": {
-        "nl": "De type van de Locatie."
+        "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.\r\n"
       }
     },
     {
@@ -864,17 +914,45 @@
         "nl": "geometrie"
       },
       "definition": {
-        "nl": "Een ruimtelijke voorstelling voor een welbepaalde Locatie"
+        "nl": "Een ruimtelijke voorstelling voor een welbepaalde Feature."
       }
     },
     {
-      "EA-Guid": "{6249DBA3-DD16-4f4d-81CE-69B50B47B86C}",
-      "name": "juridischWerk",
+      "EA-Guid": "{EC500D88-A8F3-4ba8-BC81-553CD85D2177}",
+      "name": "voorkeurslabel",
       "label": {
-        "nl": "juridisch werk"
+        "nl": "voorkeurslabel"
       },
       "definition": {
-        "nl": "De rechtsbron van de Juridische Categorie.\n\n\n\n\n\n\n"
+        "nl": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."
+      }
+    },
+    {
+      "EA-Guid": "{D4CD8C24-FBB7-429c-BA46-323B34BAA20C}",
+      "name": "begintijdstip",
+      "label": {
+        "nl": "begintijdstip"
+      }
+    },
+    {
+      "EA-Guid": "{51BADBF1-D3AB-40c7-9911-167D430FFD2F}",
+      "name": "eindtijdstip",
+      "label": {
+        "nl": "eindtijdstip"
+      }
+    },
+    {
+      "EA-Guid": "{AAB82D55-AF30-4fd4-B988-BFC7561EED14}",
+      "name": "waarde",
+      "label": {
+        "nl": "waarde"
+      }
+    },
+    {
+      "EA-Guid": "{9FBC7E58-7588-4e9a-A7B4-6294FB52C3B8}",
+      "name": "tijdseenheid",
+      "label": {
+        "nl": "tijdseenheid"
       }
     },
     {
@@ -882,9 +960,6 @@
       "name": "identificator",
       "label": {
         "nl": "identificator"
-      },
-      "definition": {
-        "nl": "De Identificator van de Rechtshandeling."
       }
     },
     {
@@ -934,13 +1009,16 @@
       }
     },
     {
-      "EA-Guid": "{3EF46FF6-41E7-47fe-8210-00C8D4B8EE30}",
+      "EA-Guid": "{24D2BBF4-4D6B-4a4c-9C49-6F6E04A05FFC}",
       "name": "identificator",
       "label": {
         "nl": "identificator"
       },
       "definition": {
-        "nl": "De identificator van de Locatie."
+        "nl": "De identificator van de Feature."
+      },
+      "usage": {
+        "nl": "Gebruik bijvoorbeeld een CaPaKey als het gaat om een perceel."
       }
     },
     {
@@ -950,37 +1028,20 @@
         "nl": "adres"
       },
       "definition": {
-        "nl": "Associeert de Locatie met het bijbehorende adres."
+        "nl": "Associeert de Feature met het bijbehorende adres."
       }
     },
     {
-      "EA-Guid": "{5D00579E-96DC-45c9-B3C6-494FB49E128C}",
-      "name": "locatie",
+      "EA-Guid": "{32C99145-23F2-41a9-A925-D03726D07904}",
+      "name": "voornaam",
       "label": {
-        "nl": "locatie"
+        "nl": "voornaam"
       },
       "definition": {
-        "nl": "Aanduiding van de plaats waar een Activiteit plaatsvindt, plaats zal vinden, of plaatsvond."
-      }
-    },
-    {
-      "EA-Guid": "{7D9A6967-99DA-468e-B069-F4FD0E55ED5B}",
-      "name": "voorwerp",
-      "label": {
-        "nl": "voorwerp"
+        "nl": "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."
       },
-      "definition": {
-        "nl": "De ruimtelijke bepaling waarvoor de vergunde toestand wordt vastgesteld."
-      }
-    },
-    {
-      "EA-Guid": "{3F93B29F-73B9-40f2-A246-3891A7CFB3FD}",
-      "name": "vindplaats",
-      "label": {
-        "nl": "vindplaats"
-      },
-      "definition": {
-        "nl": "De fysieke of digitale locatie waar het Document zich bevindt."
+      "usage": {
+        "nl": " "
       }
     },
     {
@@ -991,6 +1052,19 @@
       },
       "definition": {
         "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden voor het Dossier."
+      }
+    },
+    {
+      "EA-Guid": "{CEA9C7F8-2FB2-49e9-A606-5D8173E92303}",
+      "name": "alternatieveNaam",
+      "label": {
+        "nl": "alternatieve naam"
+      },
+      "definition": {
+        "nl": "Alternatief voor de volledige naam vd persoon."
+      },
+      "usage": {
+        "nl": "Bv pseudoniem, titel etc."
       }
     }
   ]
