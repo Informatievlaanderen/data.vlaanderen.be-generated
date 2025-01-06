@@ -50,7 +50,7 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {},
-  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "2024-12-03",
   "classes": [
     {
@@ -65,7 +65,22 @@
       "usage": {
         "nl": "Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie."
       },
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Basistaak"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#Basistaak",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Basistaak"
+      },
+      "definition": {
+        "nl": "Een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een Agent. "
+      },
+      "parents": [
+        "http://purl.org/vocab/cpsv#PublicService"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#Begeleiding",
@@ -79,6 +94,13 @@
       "usage": {
         "nl": "Begeleiding kan enkel gegeven worden aan burgers uit inkomenscategorieën 2 en 3. De informatieoverdracht in deze fase is strikt persoonlijk, als ook pandgebonden, en niet vrij beschikbaar voor alle burgers. Deze fase is de overkoepelende fase voor 3 subfases."
       },
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Basistaak"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#CategorieWerken",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "parents": []
     },
     {
@@ -107,6 +129,11 @@
       "parents": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#FinancieringType",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#GeregistreerdKlantencontact",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -118,7 +145,9 @@
       "usage": {
         "nl": "Dit kan bijvoorbeeld een telefonisch gesprek, afspraak of huisbezoek omvatten waarin de klant vragen stelt, advies zoekt, of ondersteuning aanvraagt met betrekking tot energiebesparende maatregelen of diensten."
       },
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Klantencontact"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening",
@@ -132,10 +161,12 @@
       "usage": {
         "nl": "Deze fase kent bij een Energiehuis doorgaans de volgende activiteiten:\r\n<ul>\n\r\n<li>Medewerkers luisteren naar wat de burger te vertellen heeft, om een beter begrip te krijgen van hun situatie.</li>\n\r\n<li>Soms worden de wensen en noden van de burger in kaart gebracht, mogelijk via een intakegesprek, hoewel dit niet altijd noodzakelijk is.</li>\n  <li>Er wordt generieke informatie verstrekt, zoals uitleg over beschikbare energieleningen en premies voor bepaalde doelgroepen.</li>\n\r\n<li>De burger wordt naar de juiste dienst of dienstverlener verwezen voor verdere ondersteuning en specifieke hulp.</li>\r\n\n</ul>\r\n"
       },
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Basistaak"
+      ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekken",
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekking",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
         "nl": "Interesse Opwekken"
@@ -146,6 +177,13 @@
       "usage": {
         "nl": "Dit kan bijvoorbeeld gaan over het verspreiden van flyers, deelnemen aan informatiemarkten, en het onderhouden van een informatieve website om een breed publiek te informeren over de diensten van een energiehuis."
       },
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Basistaak"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#Kenmerktype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "parents": []
     },
     {
@@ -190,7 +228,9 @@
       "usage": {
         "nl": "Deze fase omvat activiteiten, zoals:\r\n<ul>\r\n<li>Beheer van de leningen</li>\r\n<li>Opvolgscan type 2</li>\r\n<li>Evaluatie (klantenbevraging) over het afgelopen traject en feedback</li>\r\n<li>Opmaken van de eindfactuur</li>\r\n<li>Individuele sensibilisering m.b.t. vervolgtraject</li>\r\n<li>Toeleiding naar volgende maatregel</li>\r\n</ul>\r\n"
       },
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Begeleiding"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#Premie",
@@ -234,6 +274,19 @@
       "usage": {
         "nl": "Deze fase omvat activiteiten zoals:\r\n<ul>\r\n<li>opvragen en vergelijken van offertes</li>\r\n<li>het gedetailleerd uitwerken van de financiële aspecten</li>\r\n<li>het aanvragen en analyseren van eventuele leningen</li>\r\n<li>De fase wordt afgesloten met de ondertekening van de gekozen offerte(s) door de klant en, indien van toepassing, de ondertekening van een leningsakte.</li>\r\n</ul>\r\n"
       },
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Begeleiding"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Renovatiebegeleider"
+      },
+      "definition": {
+        "nl": "Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie."
+      },
       "parents": []
     },
     {
@@ -248,6 +301,21 @@
       "parents": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#ThemaInformatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#TypeAdvies",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#TypeBegeleiding",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#Uitvoering",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -259,7 +327,9 @@
       "usage": {
         "nl": "Deze fase omvat activiteiten (vanuit het standpunt van Energiehuizen), zoals:\r\n<ul>\r\n<li>werfbezoek,</li> \r\n<li>aanspreekpunt voor derden,</li>\r\n<li>doorverwijzing bij conflict,</li>\r\n<li>risicos tijdens de uitvoering analyseren en signaleren (bv. een aannemer die slechte reputatie heeft, bv. slechte uitvoering van een bepaald werk).</li>\r\n<li>eerste schijf van MVL opvragen</li>\r\n<li>aanlevering en betaling van de facturen</li>\r\n<li>ondersteuning van premie-aanvraag</li>\r\n</ul>\r\n"
       },
-      "parents": []
+      "parents": [
+        "https://data.vlaanderen.be/ns/energiehuis#Begeleiding"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/energiehuis#WoonEnEnergieloket",
@@ -390,8 +460,37 @@
         "https://data.vlaanderen.be/ns/energiehuis#Renovatieproject"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "https://data.vlaanderen.be/ns/energiehuis#CategorieWerken"
       ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#begeleider",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "domain": [
+        "https://data.vlaanderen.be/ns/energiehuis#Begeleiding"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/energiehuis#aantalBeschikbareLoketuren",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "label": {
+        "nl": "aantal beschikbare loketuren"
+      },
+      "definition": {
+        "nl": "Het totaal aantal loketuren, berekend door het aantal loketten te vermenigvuldigen met het aantal openingsuren van de respectievelijke loketten en het aantal medewerkers beschikbaar als aanspreekpunt."
+      },
+      "usage": {
+        "nl": "Bijvoorbeeld: voor een energiehuis met 3 loketten met respectievelijk 15, 23 en 30 loketuren per week, met respectievelijk 1, 1 en 2 medewerkers, is het totaal aantal beschikbare loketuren gelijk aan 15*1+20*1+30*2=95 per week"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/energiehuis#Energiehuis"
+      ],
+      "range": [],
       "generalization": []
     }
   ],

@@ -69,17 +69,17 @@
     <rdfs:label xml:lang="nl">Adviesverlening</rdfs:label>
     <rdfs:comment xml:lang="nl">Dienstverlening op maat. Dit kan in de vorm van een huisbezoek, een uitgebreide intake, advies op afspraak aan het loket, uitgebreide antwoorden op mail, etc.</rdfs:comment>
     <ns1:usageNote xml:lang="nl">Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie.</ns1:usageNote>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Basistaak">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+        <rdfs:label xml:lang="nl">Basistaak</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een Agent. </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+      </owl:Class>
+    </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Begeleiding">
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#FinancieringType">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
-    <rdfs:label xml:lang="nl">Begeleiding</rdfs:label>
-    <rdfs:comment xml:lang="nl">Het ondersteunen van een Agent door stapsgewijs te helpen bij het ondernemen van acties of het doorlopen van langdurige trajecten, al dan niet met regelmatige contactmomenten.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">Begeleiding kan enkel gegeven worden aan burgers uit inkomenscategorieën 2 en 3. De informatieoverdracht in deze fase is strikt persoonlijk, als ook pandgebonden, en niet vrij beschikbaar voor alle burgers. Deze fase is de overkoepelende fase voor 3 subfases.</ns1:usageNote>
-  </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Energiehuis">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
-    <rdfs:label xml:lang="nl">Energiehuis</rdfs:label>
-    <rdfs:comment xml:lang="nl">Een instantie die op het niveau van één of meer gemeenten diensten inzake energie en woningkwaliteit aanbiedt aan de klant.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
@@ -97,18 +97,17 @@
 
 &lt;/ul&gt;
 </ns1:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Basistaak"/>
   </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekken">
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekking">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
     <rdfs:label xml:lang="nl">Interesse Opwekken</rdfs:label>
     <rdfs:comment xml:lang="nl">Het verstrekken van algemene, laagdrempelige kennis en richtlijnen via diverse middelen zoals websites, video’s, brochures, telefoon, mail, en loket, op grote schaal. Interesse opwekken is gericht op het creëren van bewustwording en het trekken van de aandacht van een breed publiek, zodat zij op de hoogte zijn van iets.</rdfs:comment>
     <ns1:usageNote xml:lang="nl">Dit kan bijvoorbeeld gaan over het verspreiden van flyers, deelnemen aan informatiemarkten, en het onderhouden van een informatieve website om een breed publiek te informeren over de diensten van een energiehuis.</ns1:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Basistaak"/>
   </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Klantencontact">
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Kenmerktype">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
-    <rdfs:label xml:lang="nl">Klantencontact</rdfs:label>
-    <rdfs:comment xml:lang="nl">Elke interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">Hiermee bedoelen we elke interactie (telefoongesprek, hoe kort ook, e-mail, formulier, loket bezoek, huisbezoek, ...), inclusief interacties die niet in een CRM geregistreerd worden, maar bijvoorbeeld wel via streepjes geteld worden.</ns1:usageNote>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Nazorg">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
@@ -124,6 +123,15 @@
 &lt;li&gt;Toeleiding naar volgende maatregel&lt;/li&gt;
 &lt;/ul&gt;
 </ns1:usageNote>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Begeleiding">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+        <rdfs:label xml:lang="nl">Begeleiding</rdfs:label>
+        <rdfs:comment xml:lang="nl">Het ondersteunen van een Agent door stapsgewijs te helpen bij het ondernemen van acties of het doorlopen van langdurige trajecten, al dan niet met regelmatige contactmomenten.</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">Begeleiding kan enkel gegeven worden aan burgers uit inkomenscategorieën 2 en 3. De informatieoverdracht in deze fase is strikt persoonlijk, als ook pandgebonden, en niet vrij beschikbaar voor alle burgers. Deze fase is de overkoepelende fase voor 3 subfases.</ns1:usageNote>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Basistaak"/>
+      </owl:Class>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Premie">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
@@ -157,6 +165,16 @@
 &lt;li&gt;De fase wordt afgesloten met de ondertekening van de gekozen offerte(s) door de klant en, indien van toepassing, de ondertekening van een leningsakte.&lt;/li&gt;
 &lt;/ul&gt;
 </ns1:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Begeleiding"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#ThemaInformatie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#TypeAdvies">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#TypeBegeleiding">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Uitvoering">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
@@ -173,12 +191,37 @@
 &lt;li&gt;ondersteuning van premie-aanvraag&lt;/li&gt;
 &lt;/ul&gt;
 </ns1:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Begeleiding"/>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#WoonEnEnergieloket">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
     <rdfs:label xml:lang="nl">Woon- en Energieloket</rdfs:label>
     <rdfs:comment xml:lang="nl">Een integrale dienst die inwoners van een gemeente ondersteunt bij een breed scala aan onderwerpen met betrekking tot wonen en energie (o.a. wonen, verhuren, bouwen, woningkwaliteit, klimaatadaptatie, energie).</rdfs:comment>
   </owl:Class>
+  <rdf:Property rdf:about="https://data.vlaanderen.be/ns/energiehuis#aantalBeschikbareLoketuren">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+    <rdfs:label xml:lang="nl">aantal beschikbare loketuren</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het totaal aantal loketuren, berekend door het aantal loketten te vermenigvuldigen met het aantal openingsuren van de respectievelijke loketten en het aantal medewerkers beschikbaar als aanspreekpunt.</rdfs:comment>
+    <ns1:usageNote xml:lang="nl">Bijvoorbeeld: voor een energiehuis met 3 loketten met respectievelijk 15, 23 en 30 loketuren per week, met respectievelijk 1, 1 en 2 medewerkers, is het totaal aantal beschikbare loketuren gelijk aan 15*1+20*1+30*2=95 per week</ns1:usageNote>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Energiehuis">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+        <rdfs:label xml:lang="nl">Energiehuis</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een instantie die op het niveau van één of meer gemeenten diensten inzake energie en woningkwaliteit aanbiedt aan de klant.</rdfs:comment>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/energiehuis#begeleider">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Begeleiding"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+        <rdfs:label xml:lang="nl">Renovatiebegeleider</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie.</rdfs:comment>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/energiehuis#categorieWerken">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
     <rdfs:label xml:lang="nl">categorie werken</rdfs:label>
@@ -190,7 +233,11 @@
         <rdfs:comment xml:lang="nl">Een plan of onderneming gericht op de vernieuwing van onroerend goed, zoals woningen, commerciële gebouwen of industriële panden.</rdfs:comment>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#CategorieWerken">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+      </owl:Class>
+    </rdfs:range>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/energiehuis#financiering">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
@@ -231,6 +278,14 @@
         <rdfs:label xml:lang="nl">Geregistreerd Klantencontact</rdfs:label>
         <rdfs:comment xml:lang="nl">Een geregistreerd klantencontact is een interactie tussen een klant en een organisatie die formeel wordt vastgelegd en gedocumenteerd in een systeem voor toekomstige referentie en opvolging.</rdfs:comment>
         <ns1:usageNote xml:lang="nl">Dit kan bijvoorbeeld een telefonisch gesprek, afspraak of huisbezoek omvatten waarin de klant vragen stelt, advies zoekt, of ondersteuning aanvraagt met betrekking tot energiebesparende maatregelen of diensten.</ns1:usageNote>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Klantencontact">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+            <rdfs:label xml:lang="nl">Klantencontact</rdfs:label>
+            <rdfs:comment xml:lang="nl">Elke interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld.</rdfs:comment>
+            <ns1:usageNote xml:lang="nl">Hiermee bedoelen we elke interactie (telefoongesprek, hoe kort ook, e-mail, formulier, loket bezoek, huisbezoek, ...), inclusief interacties die niet in een CRM geregistreerd worden, maar bijvoorbeeld wel via streepjes geteld worden.</ns1:usageNote>
+          </owl:Class>
+        </rdfs:subClassOf>
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
