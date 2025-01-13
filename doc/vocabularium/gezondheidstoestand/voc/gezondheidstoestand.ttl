@@ -50,6 +50,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling.heeftBevallingstoestand> a owl:ObjectProperty;
   rdfs:label "heeft bevallingstoestand"@nl;
+  rdfs:comment "De Bevallingstoestand die bij de specifieke AssistentieBevalling hoort."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling> .
@@ -208,11 +209,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake> .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang> a owl:DatatypeProperty;
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang> a rdf:Property;
   rdfs:label "rang"@nl;
+  rdfs:comment "De rang van de Geboorte van de Persoon."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:range xsd:integer .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening> a owl:ObjectProperty;
   rdfs:label "aandoening"@nl;
@@ -233,7 +234,14 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Persoonsgebeurtenis gekoppeld aan de Gezondheidstoestand van een Persoon."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:range <http://purl.org/vocab/bio/0.1/Event> .
+  rdfs:range <https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.vastgesteld> a owl:ObjectProperty;
+  rdfs:label "vastgesteld"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://build.fhir.org/observation-definitions.html#Observation>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.zorg> a owl:ObjectProperty;
   rdfs:label "zorg"@nl;
@@ -268,16 +276,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport> .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld> a owl:ObjectProperty;
-  rdfs:label "vastgesteld"@nl;
-  rdfs:comment "De Medische Observatie stelt een Gezondheidstoestand vast."@nl;
-  rdfs:domain <https://build.fhir.org/observation-definitions.html#Observation>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
-
 <https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteldDoor> a owl:ObjectProperty;
   rdfs:label "vastgesteld door"@nl;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "De Medische Observatie stelt een Gezondheidstoestand vast."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://build.fhir.org/observation-definitions.html#Observation> .
@@ -464,8 +465,7 @@ dc:type a rdf:Property;
   rdfs:label "Arts"@nl;
   rdfs:comment "Een Persoon met de officiële bevoegdheid om de geneeskunde uit te oefenen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:subClassOf <http://fixme.com#Agent>,
-    <https://hl7.org/fhir/practitioner-definitions.html#Practitioner> .
+  rdfs:subClassOf <https://hl7.org/fhir/practitioner-definitions.html#Practitioner> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling> a owl:Class;
   rdfs:label "Assistentie Bevalling"@nl;
@@ -486,8 +486,7 @@ dc:type a rdf:Property;
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> a owl:Class;
   rdfs:label "Bevalling"@nl;
   rdfs:comment "Het proces waarbij een baby de baarmoeder van de Persoon verlaat en de buitenwereld binnengaat. De Bevalling leidt tot de Geboorte."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand> a owl:Class;
   rdfs:label "Geboortetoestand"@nl;
@@ -498,8 +497,7 @@ dc:type a rdf:Property;
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap> a owl:Class;
   rdfs:label "Zwangerschap"@nl;
   rdfs:comment "De staat waarin een Persoon een of meerdere embryos of foetussen draagt in de baarmoeder, wat leidt tot de ontwikkeling van een nieuw natuurlijk Persoon."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus> a owl:Class;
   rdfs:label "Foetus"@nl;

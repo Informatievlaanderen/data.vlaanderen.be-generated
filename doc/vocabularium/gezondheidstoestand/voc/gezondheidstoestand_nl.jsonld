@@ -417,7 +417,9 @@
   ],
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "/doc/vocabularium/gezondheidstoestand/kandidaatstandaard/2024-10-23"
+  },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
   "publication-date": "2024-10-23",
   "classes": [
@@ -444,7 +446,6 @@
         "nl": "Een Persoon met de officiële bevoegdheid om de geneeskunde uit te oefenen."
       },
       "parents": [
-        "http://fixme.com#Agent",
         "https://hl7.org/fhir/practitioner-definitions.html#Practitioner"
       ]
     },
@@ -479,9 +480,7 @@
       "definition": {
         "nl": "Het proces waarbij een baby de baarmoeder van de Persoon verlaat en de buitenwereld binnengaat. De Bevalling leidt tot de Geboorte."
       },
-      "parents": [
-        "http://fixme.com#Persoonsgebeurtenis"
-      ]
+      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand",
@@ -599,9 +598,7 @@
       "definition": {
         "nl": "De staat waarin een Persoon een of meerdere embryos of foetussen draagt in de baarmoeder, wat leidt tot de ontwikkeling van een nieuw natuurlijk Persoon."
       },
-      "parents": [
-        "http://fixme.com#Persoonsgebeurtenis"
-      ]
+      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand",
@@ -924,30 +921,13 @@
         "nl": "vastgesteld door"
       },
       "definition": {
-        "nl": "TODO"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
-      ],
-      "range": [
-        "https://build.fhir.org/observation-definitions.html#Observation"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "vastgesteld"
-      },
-      "definition": {
         "nl": "De Medische Observatie stelt een Gezondheidstoestand vast."
       },
       "domain": [
-        "https://build.fhir.org/observation-definitions.html#Observation"
+        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+        "https://build.fhir.org/observation-definitions.html#Observation"
       ],
       "generalization": []
     },
@@ -1020,6 +1000,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.vastgesteld",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "vastgesteld"
+      },
+      "definition": {
+        "nl": "TODO"
+      },
+      "domain": [
+        "https://build.fhir.org/observation-definitions.html#Observation"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftGebeurtenis",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -1032,7 +1029,7 @@
         "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
       ],
       "range": [
-        "http://purl.org/vocab/bio/0.1/Event"
+        "https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis"
       ],
       "generalization": []
     },
@@ -1072,16 +1069,17 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       "label": {
         "nl": "rang"
+      },
+      "definition": {
+        "nl": "De rang van de Geboorte van de Persoon."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand"
       ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
+      "range": [],
       "generalization": []
     },
     {
@@ -1452,6 +1450,9 @@
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "heeft bevallingstoestand"
+      },
+      "definition": {
+        "nl": "De Bevallingstoestand die bij de specifieke AssistentieBevalling hoort."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand"

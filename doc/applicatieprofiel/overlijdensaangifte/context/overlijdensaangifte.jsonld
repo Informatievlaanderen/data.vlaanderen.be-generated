@@ -158,13 +158,8 @@
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur",
       "@type": "@id"
     },
-    "Doodsoorzaak.gerelateerdAan": {
-      "@id": "http://purl.org/dc/terms/relation",
-      "@type": "@id"
-    },
-    "Doodsoorzaak.gevolgVan": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gevolgVan",
+    "Doodsoorzaak.gelinktAan": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.gelinktAan",
       "@type": "@id"
     },
     "Doodsoorzaak.hoofdoorzaak": {
@@ -219,14 +214,17 @@
       "@type": "@id"
     },
     "GeassocieerdeOorzaak": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
-    "GeassocieerdeOorzaak.gerelateerdAan": {
-      "@id": "http://purl.org/dc/terms/relation",
+    "GeassocieerdeOorzaak.duur": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.duur",
       "@type": "@id"
     },
-    "GeassocieerdeOorzaak.leidtTot": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.leidtTot",
+    "GeassocieerdeOorzaak.gelinktAan": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak.gelinktAan",
       "@type": "@id"
+    },
+    "GeassocieerdeOorzaak.hoofdoorzaak": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Gebeurtenis": "https://schema.org/Event",
     "Gebeurtenis.begindatum": {
@@ -283,8 +281,7 @@
       "@type": "@id"
     },
     "Geboortetoestand.rang": {
-      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang"
     },
     "Geboortetoestand.statusZwangerschap": {
       "@container": "@set",
@@ -324,6 +321,11 @@
     "Gezondheidstoestand.risico": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.risico",
+      "@type": "@id"
+    },
+    "Gezondheidstoestand.toestandVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.toestandVan",
       "@type": "@id"
     },
     "Gezondheidstoestand.vastgesteldDoor": {
@@ -367,6 +369,10 @@
     "LiggingKindType": "http://www.w3.org/2004/02/skos/core#Concept",
     "LijkbezorgingType": "http://www.w3.org/2004/02/skos/core#Concept",
     "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Locatie.type": {
+      "@id": "http://purl.org/dc/terms/type"
+    },
+    "LocatieOverlijdenType": "http://www.w3.org/2004/02/skos/core#Concept",
     "MaatregelMedischVerslag": "http://www.w3.org/2004/02/skos/core#Concept",
     "Medicatie": "https://hl7.org/fhir/medication-definitions.html#Medication",
     "Medicatie.batch": {
@@ -465,7 +471,7 @@
     },
     "MedischeObservatie.vastgesteld": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.vastgesteld",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.vastgesteld",
       "@type": "@id"
     },
     "MedischeObservatie.waarde": {
@@ -480,12 +486,13 @@
     "Onderwijsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
     "Ongeval": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
     "Ongeval.locatie": {
+      "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.locatie",
       "@type": "@id"
     },
     "Ongeval.omstandigheden": {
       "@container": "@set",
-      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.omstandigheden",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Ongeval.veroorzaaktDoor": {
@@ -605,6 +612,11 @@
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte",
       "@type": "@id"
     },
+    "Persoon.heeftGezondheidstoestand": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftMedischeToestand",
+      "@type": "@id"
+    },
     "Persoon.heeftInwonerschap": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap",
@@ -628,7 +640,7 @@
       "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Persoonsgebeurtenis": "http://purl.org/vocab/bio/0.1/Event",
+    "Persoonsgebeurtenis": "https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis",
     "Persoonsgebeurtenis.datum": {
       "@id": "http://purl.org/vocab/bio/0.1/date",
       "@type": "@id"
@@ -900,7 +912,7 @@
     },
     "Wilsbeschikking.ondertekening": {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.ondertekening",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      "@type": "@id"
     },
     "Wilsbeschikking.opgesteldBij": {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.opgesteldBij",
