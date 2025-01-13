@@ -283,15 +283,17 @@
   ],
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
-  "navigation": {},
+  "navigation": {
+    "prev": "/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-11-07"
+  },
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
-  "publication-date": "2024-10-17",
+  "publication-date": "2024-09-09",
   "classes": [
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Advies",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "Advies"
+        "nl": "Adviesantwoord"
       },
       "definition": {
         "nl": "Input van een organisatie of persoon die bijdraagt aan het beslissingsproces."
@@ -439,191 +441,7 @@
   ],
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#gebruikte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gebruikte"
-      },
-      "definition": {
-        "nl": "Stuk dat werd gebruikt voor de behandeling van de agendapunt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/prov#used"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "rechthebbende"
-      },
-      "definition": {
-        "nl": "De agent die rechthebbende is van de verbintenis."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
-      ],
-      "range": [
-        "http://www.w3.org/ns/prov#Agent"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.eiser",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "eiser"
-      },
-      "definition": {
-        "nl": "De agent die de vordering van de verbintenis eist."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis"
-      ],
-      "range": [
-        "http://www.w3.org/ns/prov#Agent"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "thema"
-      },
-      "definition": {
-        "nl": "Thema waarover dit Stuk gaat."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema"
-      ],
-      "generalization": [
-        "http://purl.org/dc/terms/subject"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtvraag",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gaat over initiatiefrechtvraag"
-      },
-      "definition": {
-        "nl": "Initiatiefrechtvraag waarover het stuk gaat."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-      ],
-      "generalization": [
-        "http://purl.org/dc/terms/subject"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtantwoord",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gaat over initiatiefrechtantwoord"
-      },
-      "definition": {
-        "nl": "Initiatiefrechtantwoord waarover het stuk gaat."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
-      ],
-      "generalization": [
-        "http://purl.org/dc/terms/subject"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gaat over adviesvraag"
-      },
-      "definition": {
-        "nl": "Adviesvraag waarover het stuk gaat."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag"
-      ],
-      "generalization": [
-        "http://purl.org/dc/terms/subject"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesantwoord",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gaat over adviesantwoord"
-      },
-      "definition": {
-        "nl": "Adviesantwoord waarover het stuk gaat."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Advies"
-      ],
-      "generalization": [
-        "http://purl.org/dc/terms/subject"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Recht.begunstigde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "begunstigde"
-      },
-      "definition": {
-        "nl": "Agent die het recht mag uitoefenen."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#Recht"
-      ],
-      "range": [
-        "http://www.w3.org/ns/prov#Agent"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#LegaleVerschijningsvorm.realiseertNormatieveBepaling",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "realiseert"
-      },
-      "definition": {
-        "nl": "Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.\t"
-      },
-      "domain": [
-        "https://data.europa.eu/eli/ontology#LegalExpression"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "generalization": [
-        "http://data.europa.eu/eli/ontology#realizes"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.motivering",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#motivering",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "motivering"
@@ -640,7 +458,7 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.indieningsdatum",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#indieningsdatum",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "indieningsdatum"
@@ -657,136 +475,7 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.heeftOntwerpbesluit",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "heeft ontwerp besluit"
-      },
-      "definition": {
-        "nl": "Ontwerpbesluit dat voorgesteld wordt bij de initiatiefrechtvraag."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/dossier#Stuk"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.datumAntwoordVerwacht",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "datum antwoord verwacht"
-      },
-      "definition": {
-        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#dateTime"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.creeertNormatieveBepaling",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "creeert"
-      },
-      "definition": {
-        "nl": "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/prov#generated"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "bestaat uit initiatiefrechtvraag"
-      },
-      "definition": {
-        "nl": "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
-      ],
-      "generalization": [
-        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "bestaat uit initiatiefrechtantwoord"
-      },
-      "definition": {
-        "nl": "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord"
-      ],
-      "generalization": [
-        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "bestaat uit beslissingsactiviteit"
-      },
-      "definition": {
-        "nl": "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit"
-      ],
-      "generalization": [
-        "http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "beeindigt"
-      },
-      "definition": {
-        "nl": "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."
-      },
-      "domain": [
-        "http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling"
-      ],
-      "generalization": [
-        "http://www.w3.org/ns/prov#invalidated"
-      ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "heeft thema"
@@ -805,7 +494,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "heeft tekstuele inhoud"
@@ -824,7 +513,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "heeft object"
@@ -843,7 +532,7 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "heeft locatie"
@@ -862,23 +551,21 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@id": "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#datumAntwoordVerwacht",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
-        "nl": "genereert"
+        "nl": "datum antwoord verwacht"
       },
       "definition": {
-        "nl": "De annotatie die werd aangemaakt als gevolg van de activiteit."
+        "nl": "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."
       },
       "domain": [
-        "http://www.w3.org/ns/prov#Activity"
+        "https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag"
       ],
       "range": [
-        "http://www.w3.org/ns/oa#Annotation"
+        "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
-      "generalization": [
-        "http://www.w3.org/ns/prov#generated"
-      ]
+      "generalization": []
     }
   ],
   "externalproperties": [
@@ -969,13 +656,6 @@
         "nl": "naam"
       },
       "@id": "http://purl.org/dc/terms/title",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "heeft relatie tot"
-      },
-      "@id": "http://purl.org/dc/terms/relation",
       "@type": "rdf:Property"
     },
     {
