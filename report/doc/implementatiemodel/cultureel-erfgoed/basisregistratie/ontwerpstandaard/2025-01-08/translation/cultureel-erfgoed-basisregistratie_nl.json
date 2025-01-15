@@ -1,5 +1,20 @@
 {
-  "classes": [],
+  "baseURI": "https://data.vlaanderen.be/ns/cultureel-erfgoed#",
+  "classes": [
+    {
+      "EA-Guid": "{67EAD7B8-2EBC-41fa-A382-C5C11C4A1FAC}",
+      "name": "Rol",
+      "label": {
+        "nl": "Rol"
+      },
+      "definition": {
+        "nl": "Aard van de deelname van de Agent aan de Activiteit."
+      },
+      "usage": {
+        "nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst."
+      }
+    }
+  ],
   "properties": [],
   "externals": [
     {
@@ -41,7 +56,26 @@
     },
     {
       "EA-Guid": "{AA956CB9-5844-42ba-853A-A4CDE45E693D}",
-      "name": ""
+      "name": "Valuta",
+      "label": {
+        "nl": "Valuta"
+      },
+      "definition": {
+        "nl": "Gebruikt voor elke eenheid die een munteenheid uitdrukt."
+      }
+    },
+    {
+      "EA-Guid": "{910E2781-5B5F-4543-A80F-11A0E987136A}",
+      "name": "Contactinfo",
+      "label": {
+        "nl": "Contactinfo"
+      },
+      "definition": {
+        "nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."
+      },
+      "usage": {
+        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc."
+      }
     },
     {
       "EA-Guid": "{5BC08D8D-0C93-401f-A818-1472993D3E4F}",
@@ -123,6 +157,29 @@
       },
       "usage": {
         "nl": "Conceptuele Objecten zijn typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Bijvoorbeeld: Beethoven's \"Ode aan de Vreugde\", de definitie van \"Ontologie\", of kennis van hoe het is om olympisch kampioen te worden. Conceptuele Objecten kunnen op meerdere dragers tegelijk bestaan, bv op papier, audio, foto, harde schijf, canvas, alsook het menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt."
+      }
+    },
+    {
+      "EA-Guid": "{94E55FD8-3694-4545-9749-490400DB223B}",
+      "name": "Recht",
+      "label": {
+        "nl": "Recht"
+      },
+      "definition": {
+        "nl": "Omvat wettelijke privileges met betrekking tot materiële en immateriële dingen en hun afgeleiden."
+      }
+    },
+    {
+      "EA-Guid": "{ECF5B6F0-0354-417e-A817-2E9841E55217}",
+      "name": "Conditie",
+      "label": {
+        "nl": "Conditie"
+      },
+      "definition": {
+        "nl": "Staat waarin een object zich bevindt."
+      },
+      "usage": {
+        "nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk."
       }
     },
     {
@@ -259,6 +316,19 @@
       }
     },
     {
+      "EA-Guid": "{A3178512-F1C7-4dec-B14A-80C4104255CA}",
+      "name": "GetypeerdeString",
+      "label": {
+        "nl": "Getypeerde String"
+      },
+      "definition": {
+        "nl": "Combinatie van een string en het type van wat de string voorstelt."
+      },
+      "usage": {
+        "nl": "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."
+      }
+    },
+    {
       "EA-Guid": "{E58A5CC1-72FA-4431-A0C7-7DB89D627434}",
       "name": "TypeRol",
       "label": {
@@ -350,6 +420,19 @@
       }
     },
     {
+      "EA-Guid": "{D4389D60-0321-4cc1-8FF0-6E0B9E048F9B}",
+      "name": "Adresvoorstelling",
+      "label": {
+        "nl": "Adresvoorstelling"
+      },
+      "definition": {
+        "nl": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."
+      },
+      "usage": {
+        "nl": "Bv als attribuut ve persoon of gebouw... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."
+      }
+    },
+    {
       "EA-Guid": "{44E05428-08CA-46c0-91D2-C5D6FBA23BDC}",
       "name": "Geometrie",
       "label": {
@@ -399,19 +482,6 @@
       },
       "usage": {
         "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc. Opmerking: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek."
-      }
-    },
-    {
-      "EA-Guid": "{67EAD7B8-2EBC-41fa-A382-C5C11C4A1FAC}",
-      "name": "Rol",
-      "label": {
-        "nl": "Rol"
-      },
-      "definition": {
-        "nl": "Aard van de deelname van de Agent aan de Activiteit."
-      },
-      "usage": {
-        "nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst."
       }
     },
     {
@@ -559,6 +629,84 @@
       "name": ""
     },
     {
+      "EA-Guid": "{C6FCE4AD-9085-49b4-865A-4E232BCB4810}",
+      "name": "land",
+      "label": {
+        "nl": "land"
+      },
+      "definition": {
+        "nl": "Land waarin het adres gelegen is."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{28AE0AA8-9D91-4011-8238-F62A66B9C113}",
+      "name": "gemeentenaam",
+      "label": {
+        "nl": "gemeentenaam"
+      },
+      "definition": {
+        "nl": "Gemeentenaam vh adres."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{692DCDF8-01AB-4efe-AD51-A0F373B9ED8C}",
+      "name": "huisnummer",
+      "label": {
+        "nl": "huisnummer"
+      },
+      "definition": {
+        "nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."
+      },
+      "usage": {
+        "nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+      }
+    },
+    {
+      "EA-Guid": "{95F44499-DC14-48d2-80DB-71EA69B2F40D}",
+      "name": "busnummer",
+      "label": {
+        "nl": "busnummer"
+      },
+      "definition": {
+        "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
+      },
+      "usage": {
+        "nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+      }
+    },
+    {
+      "EA-Guid": "{7568DE92-9428-462f-B6F7-A085096E8219}",
+      "name": "website",
+      "label": {
+        "nl": "website"
+      },
+      "definition": {
+        "nl": "Website waarnaar men kan surfen."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{7D22291B-04B5-4926-A4F1-6A11EB9C2DBF}",
+      "name": "contactnaam",
+      "label": {
+        "nl": "contactnaam"
+      },
+      "definition": {
+        "nl": "Naam van bvb de persoon die men kan contacteren."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
       "EA-Guid": "{DE2F910C-B1D8-4448-AC3E-E436225E123C}",
       "name": "voornaam",
       "label": {
@@ -582,6 +730,149 @@
       },
       "usage": {
         "nl": "Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt."
+      }
+    },
+    {
+      "EA-Guid": "{33F496DB-5386-4606-936C-840E706F8A56}",
+      "name": "straatnaam",
+      "label": {
+        "nl": "straatnaam"
+      },
+      "definition": {
+        "nl": "Straatnaam vh adres."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{5DB1B214-B384-4bc5-A3E4-1F69DB4D1987}",
+      "name": "postnaam",
+      "label": {
+        "nl": "postnaam"
+      },
+      "definition": {
+        "nl": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{7491B3F3-FE55-4e7b-8EDB-AC63A15275D5}",
+      "name": "postcode",
+      "label": {
+        "nl": "postcode"
+      },
+      "definition": {
+        "nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{0966E0F6-474B-4cd5-837A-457E06A63B9F}",
+      "name": "postbus",
+      "label": {
+        "nl": "postbus"
+      },
+      "definition": {
+        "nl": "Postbusnummer in een postkantoor."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{864ADEED-FD8B-474f-BD21-36921144CE14}",
+      "name": "locatienaam",
+      "label": {
+        "nl": "locatienaam"
+      },
+      "definition": {
+        "nl": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{FC607DBF-6BCE-4635-8777-1A87521EAD8D}",
+      "name": "locatieaanduiding",
+      "label": {
+        "nl": "locatieaanduiding"
+      },
+      "definition": {
+        "nl": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{B8CE4199-52B7-4155-9354-71ADE06FF4E4}",
+      "name": "volledigAdres",
+      "label": {
+        "nl": "volledig adres"
+      },
+      "definition": {
+        "nl": "Het complete adres in één string, al dan niet geformatteerd."
+      },
+      "usage": {
+        "nl": "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer."
+      }
+    },
+    {
+      "EA-Guid": "{31D52C66-02B7-4e40-B811-6BE6D48F5F6C}",
+      "name": "administratieveEenheidNiveau2",
+      "label": {
+        "nl": "administratieve eenheid niveau 2"
+      },
+      "definition": {
+        "nl": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{59944D6C-3091-4d99-9CBD-E6721025B885}",
+      "name": "administratieveEenheidNiveau1",
+      "label": {
+        "nl": "administratieve eenheid niveau 1"
+      },
+      "definition": {
+        "nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{22A83D79-E9F4-43b6-834D-4C426B0424DC}",
+      "name": "adresgebied",
+      "label": {
+        "nl": "adresgebied"
+      },
+      "definition": {
+        "nl": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"
+      },
+      "usage": {
+        "nl": "Bvb de naam vh gehucht waarin het adres ligt."
+      }
+    },
+    {
+      "EA-Guid": "{5F8214B6-BF7E-4991-BF5E-8D007312A2CA}",
+      "name": "adres",
+      "label": {
+        "nl": "adres"
+      },
+      "definition": {
+        "nl": "Adres dat men kan aanschrijven of bezoeken."
+      },
+      "usage": {
+        "nl": " "
       }
     },
     {
@@ -618,6 +909,32 @@
       },
       "usage": {
         "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+      }
+    },
+    {
+      "EA-Guid": "{86BDE34F-0CF8-42bc-8398-2B491A799B6F}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "Identificator van de Entiteit."
+      },
+      "usage": {
+        "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+      }
+    },
+    {
+      "EA-Guid": "{9D9DBE10-C81A-48bb-A73A-67F0A518323A}",
+      "name": "aanschrijfvorm",
+      "label": {
+        "nl": "aanschrijfvorm"
+      },
+      "definition": {
+        "nl": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."
+      },
+      "usage": {
+        "nl": "Bvb De heer/Mevrouw, Excellentie, Dokter..."
       }
     },
     {
@@ -743,6 +1060,10 @@
       }
     },
     {
+      "EA-Guid": "{BC0E9024-36BB-460a-9A4E-A6F82F5AD8E0}",
+      "name": ""
+    },
+    {
       "EA-Guid": "{7CCC91C5-4C45-420a-A5FD-BEFED29F5E69}",
       "name": "verwijstNaar",
       "label": {
@@ -832,6 +1153,16 @@
       },
       "definition": {
         "nl": "Periode waarin de Gebeurtenis plaatsvond."
+      }
+    },
+    {
+      "EA-Guid": "{E7D3B37C-DF87-4153-B632-91B6232F2578}",
+      "name": "periode",
+      "label": {
+        "nl": "periode"
+      },
+      "definition": {
+        "nl": "Tijdspanne waarin het object zich in deze Conditie bevindt."
       }
     },
     {
@@ -957,6 +1288,26 @@
       }
     },
     {
+      "EA-Guid": "{4ABF7BD8-1B5C-4d3c-99EE-37CC0A105877}",
+      "name": "beschrijving",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "definition": {
+        "nl": "Beschrijving van het Recht."
+      }
+    },
+    {
+      "EA-Guid": "{ADEB0013-A94F-4808-BF55-AF5891010F18}",
+      "name": "beschrijving",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "definition": {
+        "nl": "Beschrijving van de Conditie."
+      }
+    },
+    {
       "EA-Guid": "{AC84F444-5BF8-4094-B36B-2526487FB19E}",
       "name": "gebruikteTechniek",
       "label": {
@@ -1006,6 +1357,29 @@
       },
       "usage": {
         "nl": "Laat toe om een Entiteit (en dus ook zijn subklassen) verder (of anders) te specialiseren, typisch volgens een of ander hiërarchisch systeem, bv een taxonomie of een thesaurus."
+      }
+    },
+    {
+      "EA-Guid": "{9CDA3AA8-27A1-458a-9DAC-1682FC3160F9}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Soort Recht."
+      }
+    },
+    {
+      "EA-Guid": "{63DEFE43-555F-4a61-97EB-D29B4C7C2EA2}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Aard van de Conditie waarin het object zich bevindt."
+      },
+      "usage": {
+        "nl": "Bv als nieuw, goed, beschadigd etc."
       }
     },
     {
@@ -1214,6 +1588,22 @@
       }
     },
     {
+      "EA-Guid": "{B64BF90B-0A0A-4ec9-AE77-80F2C46D0FE2}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{C02DEEB7-12F5-47f0-9D4D-F49D6DDDC916}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{BA8A7E16-EDA4-4b25-A08D-A1BD26BF4F21}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{78372711-52A5-4946-A429-77F15A0A48AB}",
+      "name": ""
+    },
+    {
       "EA-Guid": "{CCF25AC6-BA99-4ab2-B411-8C955DBB9D45}",
       "name": "titel",
       "label": {
@@ -1231,6 +1621,81 @@
       },
       "definition": {
         "nl": "Titel van het MensgemaaktObject."
+      }
+    },
+    {
+      "EA-Guid": "{53134794-7805-4e9a-99FA-C3EF333CC10A}",
+      "name": "titel",
+      "label": {
+        "nl": "titel"
+      },
+      "definition": {
+        "nl": "Titel van het Recht."
+      }
+    },
+    {
+      "EA-Guid": "{669BD4C8-9966-4054-914B-3CAD49A3D461}",
+      "name": "telefoon",
+      "label": {
+        "nl": "telefoon"
+      },
+      "definition": {
+        "nl": "Telefoonnummer waarop men kan bellen."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{64A97531-2319-47ef-BD62-BEAA9D0B6D69}",
+      "name": "openingsuren",
+      "label": {
+        "nl": "openingsuren"
+      },
+      "definition": {
+        "nl": "Uren waarbinnen contact kan worden opgenomen."
+      },
+      "usage": {
+        "nl": "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."
+      }
+    },
+    {
+      "EA-Guid": "{E97DE578-5803-49e0-BC30-3AE1CC8C058C}",
+      "name": "beschikbaarheid",
+      "label": {
+        "nl": "beschikbaarheid"
+      },
+      "definition": {
+        "nl": "Periode waarin contact kan worden opgenomen."
+      },
+      "usage": {
+        "nl": "Bv aanduiding van het seizoen waarin contact kan worden opgenomen. Begin- en einddatum volgens ISO8601 syntax."
+      }
+    },
+    {
+      "EA-Guid": "{A629A47A-22E5-41ad-B5AB-EB6597F975A9}",
+      "name": "fax",
+      "label": {
+        "nl": "fax"
+      },
+      "definition": {
+        "nl": "Faxnummer waarnaar men kan faxen."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{2098F014-A755-407e-A589-EE7A46DA5760}",
+      "name": "email",
+      "label": {
+        "nl": "email"
+      },
+      "definition": {
+        "nl": "Email-adres waarnaar men kan mailen."
+      },
+      "usage": {
+        "nl": " "
       }
     },
     {

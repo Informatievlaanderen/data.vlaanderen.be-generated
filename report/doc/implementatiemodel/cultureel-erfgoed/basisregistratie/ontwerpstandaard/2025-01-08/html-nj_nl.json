@@ -1,8 +1,9 @@
 {
   "metadata": {
     "title": "Implementatiemodel Cultureel Erfgoed - Basisregistratie - Generiek",
-    "uri": "http://fixme.com",
+    "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed",
     "issued": "2025-01-08",
+    "baseURI": "https://data.vlaanderen.be/ns/cultureel-erfgoed#",
     "filename": "cultureel-erfgoed-basisregistratie",
     "navigation": {
       "self": "https://data.test-vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed/basisregistratie/ontwerpstandaard/2025-01-08"
@@ -12,14 +13,82 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/0b73afddf0068c8a729cabf7f98569230431eb98",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/0b73afddf0068c8a729cabf7f98569230431eb98/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/368b3c0aad17953ab2327bba2206c845c01b0655",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/368b3c0aad17953ab2327bba2206c845c01b0655/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
     "usesAPs": []
   },
   "classes": [
+    {
+      "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol",
+      "name": "Rol",
+      "label": {
+        "nl": "Rol"
+      },
+      "sort": "Rol",
+      "description": {
+        "nl": "Aard van de deelname van de Agent aan de Activiteit."
+      },
+      "usage": {
+        "nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Aard van de deelname van de Agent aan de Activiteit.",
+        "ap-label-nl": "Rol",
+        "ap-usageNote-nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst.",
+        "definition-nl": "Aard van de deelname van de Agent aan de Activiteit.",
+        "label-nl": "Rol",
+        "usageNote-nl": "Bv schilder bij de Productie van een schilderij of muzikant bij de uitvoering van een Voorstelling.",
+        "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
+      },
+      "properties": [
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
+          "name": "rol",
+          "sort": "rol",
+          "label": {
+            "nl": "rol"
+          },
+          "description": {
+            "nl": "Aard van de Rol."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Rol",
+              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TypeRol",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Type Rol",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Type Rol"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
+            "ap-label-nl": "rol",
+            "ap-definition-nl": "Aard van de Rol.",
+            "label-nl": "rol",
+            "definition-nl": "Aard van de Rol."
+          }
+        }
+      ]
+    },
     {
       "uri": "http://fixme.com#WettelijkObject",
       "name": "",
@@ -84,6 +153,40 @@
           "rawTags": {}
         },
         {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Agent",
+              "uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Recht",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Recht",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
+              "range_label": {
+                "nl": "Recht"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses"
+          }
+        },
+        {
           "uri": "http://schema.org/contactPoint",
           "name": "contactinfo",
           "sort": "contactinfo",
@@ -110,10 +213,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://schema.org/ContactPoint",
+              "range_uri": "#Contactinfo",
               "range_puri": "http://schema.org/ContactPoint",
               "range_label": {
-                "nl": "ContactInfo"
+                "nl": "Contactinfo"
               }
             }
           ],
@@ -160,10 +263,14 @@
     },
     {
       "uri": "http://qudt.org/schema/qudt/CurrencyUnit",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
+      "name": "Valuta",
+      "label": {
+        "nl": "Valuta"
+      },
+      "sort": "Valuta",
+      "description": {
+        "nl": "Gebruikt voor elke eenheid die een munteenheid uitdrukt."
+      },
       "usage": {},
       "parents": [
         {
@@ -175,7 +282,9 @@
         }
       ],
       "rawTags": {
-        "uri": "http://qudt.org/schema/qudt/CurrencyUnit"
+        "uri": "http://qudt.org/schema/qudt/CurrencyUnit",
+        "label-nl": "Valuta",
+        "definition-nl": "Gebruikt voor elke eenheid die een munteenheid uitdrukt."
       },
       "properties": []
     },
@@ -706,6 +815,40 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
             "ap-definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject.",
             "definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject."
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "MaterieelDing",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Recht",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Recht",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
+              "range_label": {
+                "nl": "Recht"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
           }
         }
       ]
@@ -1405,6 +1548,234 @@
       ]
     },
     {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
+      "name": "Recht",
+      "label": {
+        "nl": "Recht"
+      },
+      "sort": "Recht",
+      "description": {
+        "nl": "Omvat wettelijke privileges met betrekking tot materiële en immateriële dingen en hun afgeleiden."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "PropositioneelObject",
+          "name": "PropositioneelObject",
+          "package": "CIDOC-CRM",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
+          "scoped_uri": "#PropositioneelObject"
+        }
+      ],
+      "rawTags": {
+        "ap-definition-nl": "Omvat wettelijke privileges met betrekking tot materiële en immateriële dingen en hun afgeleiden.",
+        "ap-label-nl": "Recht",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+      },
+      "properties": [
+        {
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "Identificator van de Entiteit."
+          },
+          "usage": {
+            "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#identificator",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "identificator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "ap-definition-nl": "Identificator van de Entiteit.",
+            "ap-label-nl": "identificator",
+            "label-nl": "identificator",
+            "definition-nl": "Identificator van de Entiteit.",
+            "usageNote-nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "name": "beschrijving",
+          "sort": "beschrijving",
+          "label": {
+            "nl": "beschrijving"
+          },
+          "description": {
+            "nl": "Beschrijving van het Recht."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Beschrijving",
+              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_puri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_label": {
+                "nl": "Beschrijving"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+            "ap-label-nl": "beschrijving",
+            "ap-definition-nl": "Beschrijving van het Recht."
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Soort Recht."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TypeRecht",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "TypeRecht"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Soort Recht."
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Entiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Entiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
+              "range_label": {
+                "nl": "Entiteit"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to"
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+          "name": "titel",
+          "sort": "titel",
+          "label": {
+            "nl": "titel"
+          },
+          "description": {
+            "nl": "Titel van het Recht."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Recht",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "titel",
+            "ap-definition-nl": "Titel van het Recht.",
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title"
+          }
+        }
+      ]
+    },
+    {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
       "name": "Gebeurtenis",
       "label": {
@@ -1495,16 +1866,16 @@
           ],
           "range": [
             {
-              "range_label": "Periode",
-              "range_uri": "http://data.europa.eu/m8g/PeriodOfTime"
+              "range_label": "TemporeleEntiteit",
+              "range_uri": "http://www.w3.org/2006/time#TemporalEntity"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Periode",
-              "range_puri": "http://data.europa.eu/m8g/PeriodOfTime",
+              "range_uri": "#TemporeleEntiteit",
+              "range_puri": "http://www.w3.org/2006/time#TemporalEntity",
               "range_label": {
-                "nl": "Periode"
+                "nl": "TemporeleEntiteit"
               }
             }
           ],
@@ -1930,6 +2301,40 @@
             "label-nl": "rechtenhouder",
             "ap-label-nl": "rechtenhouder",
             "definition-nl": "\tAgent die een Recht bezit op het WettelijkObject."
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "InformatieObject",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Recht",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Recht",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
+              "range_label": {
+                "nl": "Recht"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
           }
         }
       ]
@@ -2787,74 +3192,6 @@
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol",
-      "name": "Rol",
-      "label": {
-        "nl": "Rol"
-      },
-      "sort": "Rol",
-      "description": {
-        "nl": "Aard van de deelname van de Agent aan de Activiteit."
-      },
-      "usage": {
-        "nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst."
-      },
-      "parents": [],
-      "rawTags": {
-        "ap-definition-nl": "Aard van de deelname van de Agent aan de Activiteit.",
-        "ap-label-nl": "Rol",
-        "ap-usageNote-nl": "Bv schilder bij de Productie van een schilderij of auteur bij de Creatie van een tekst.",
-        "definition-nl": "Aard van de deelname van de Agent aan de Activiteit.",
-        "label-nl": "Rol",
-        "usageNote-nl": "Bv schilder bij de Productie van een schilderij of muzikant bij de uitvoering van een Voorstelling.",
-        "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
-      },
-      "properties": [
-        {
-          "uri": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
-          "name": "rol",
-          "sort": "rol",
-          "label": {
-            "nl": "rol"
-          },
-          "description": {
-            "nl": "Aard van de Rol."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Rol",
-              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "TypeRol",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Type Rol",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Type Rol"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": "",
-          "rawTags": {
-            "uri": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
-            "ap-label-nl": "rol",
-            "ap-definition-nl": "Aard van de Rol.",
-            "label-nl": "rol",
-            "definition-nl": "Aard van de Rol."
-          }
-        }
-      ]
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
       "name": "Verblijfplaats",
       "label": {
@@ -2870,7 +3207,8 @@
         "ap-definition-nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert.",
         "definition-nl": "Plaats waar een Persoon al dan niet tijdelijk woont of logeert.",
         "label-nl": "Verblijfplaats",
-        "ap-label-nl": "Verblijfplaats"
+        "ap-label-nl": "Verblijfplaats",
+        "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
       },
       "properties": [
         {
@@ -2900,7 +3238,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/locn#Address",
+              "range_uri": "#Adresvoorstelling",
               "range_puri": "http://www.w3.org/ns/locn#Address",
               "range_label": {
                 "nl": "Adresvoorstelling"
@@ -2914,7 +3252,8 @@
             "ap-usageNote-nl": " ",
             "definition-nl": "Adres vd Verblijfplaats.",
             "label-nl": "verblijfsadres",
-            "ap-label-nl": "verblijfsadres"
+            "ap-label-nl": "verblijfsadres",
+            "uri": "https://data.vlaanderen.be/ns/persoon#verblijfsadres"
           }
         }
       ]
@@ -3179,6 +3518,40 @@
             "ap-label-nl": "rechtenhouder",
             "ap-definition-nl": "Agent die een Recht bezit op een Set."
           }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Set",
+              "uri": "https://linked.art/Set"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Recht",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Recht",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
+              "range_label": {
+                "nl": "Recht"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
+          }
         }
       ]
     }
@@ -3191,58 +3564,46 @@
       "last_name": "van der Linden",
       "affiliation": {
         "name": "Departement Cultuur, Jeugd en Media",
-        "website": "https://www.vlaanderen.be/cjm/nl"
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO000009"
       },
       "email": "hans.vanderlinden@vlaanderen.be"
+    },
+    {
+      "role": "A",
+      "first_name": "Rony",
+      "last_name": "Vissers",
+      "affiliation": {
+        "name": "meemoo",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO008227"
+      }
+    },
+    {
+      "role": "A",
+      "first_name": "Astrid",
+      "last_name": "Vergauwe",
+      "affiliation": {
+        "name": "Meemoo",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO008227"
+      }
+    },
+    {
+      "role": "A",
+      "first_name": "Filip",
+      "last_name": "Borloo",
+      "affiliation": {
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
+      }
     },
     {
       "role": "E",
       "first_name": "Louise",
       "last_name": "Ysewijn",
       "affiliation": {
-        "name": "Digitaal Vlaanderen"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
       },
       "email": "louise.ysewijn@vlaanderen.be"
-    },
-    {
-      "role": "E",
-      "first_name": "Laurens",
-      "last_name": "Vercauteren",
-      "affiliation": {
-        "name": "PwC",
-        "website": "https://www.pwc.be"
-      },
-      "email": "laurens.vercauteren@pwc.com"
-    },
-    {
-      "role": "E",
-      "first_name": "Martin",
-      "last_name": "Vanbrabant",
-      "affiliation": {
-        "name": "Informatie Vlaanderen",
-        "website": "https://overheid.vlaanderen.be/informatie-vlaanderen"
-      },
-      "email": "martin.vanbrabant@vlaanderen.be"
-    },
-    {
-      "role": "E",
-      "first_name": "Brecht",
-      "last_name": "Van de Vyvere",
-      "affiliation": {
-        "name": "UGent - imec",
-        "website": "https://imec.be"
-      },
-      "email": "brecht.vandevyvere@ugent.be"
-    },
-    {
-      "role": "E",
-      "first_name": "Anthony",
-      "last_name": "Van Heymbeeck",
-      "affiliation": {
-        "name": "PwC",
-        "website": "https://www.pwc.be"
-      },
-      "email": "anthony.van.heymbeeck@pwc.com"
     },
     {
       "role": "E",
@@ -3250,93 +3611,45 @@
       "last_name": "Thijs",
       "affiliation": {
         "name": "Informatie Vlaanderen",
-        "website": "https://overheid.vlaanderen.be/informatie-vlaanderen"
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
       },
       "email": "geert.thijs@vlaanderen.be"
-    },
-    {
-      "role": "E",
-      "first_name": "Dimitri",
-      "last_name": "Schepers",
-      "affiliation": {
-        "name": "PwC",
-        "website": "https://www.pwc.be"
-      },
-      "email": "dimitri.schepers@pwc.com"
     },
     {
       "role": "E",
       "first_name": "Jitse",
       "last_name": "De Cock",
       "affiliation": {
-        "name": "Digitaal Vlaanderen"
+        "name": "Digitaal Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002949"
       },
       "email": "jitse.decock@vlaanderen.be"
     },
     {
-      "role": "E",
-      "first_name": "Raf",
-      "last_name": "Buyle",
-      "affiliation": {
-        "name": "Informatie Vlaanderen",
-        "website": "https://overheid.vlaanderen.be/informatie-vlaanderen"
-      },
-      "email": "raf.buyle@vlaanderen.be"
-    },
-    {
       "role": "C",
-      "first_name": "Floris",
-      "last_name": "Zuallaert",
+      "first_name": "Stan",
+      "last_name": "Vertessen",
       "affiliation": {
-        "name": "Werkplaats Immaterieel Erfgoed"
+        "name": "Publiq",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO003887"
       }
     },
     {
       "role": "C",
-      "first_name": "Roxanne",
-      "last_name": "Wyns",
+      "first_name": "Ron",
+      "last_name": "Van den Branden",
       "affiliation": {
-        "name": "LIBIS - KU Leuven"
+        "name": "Stad Antwerpen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO001999"
       }
     },
     {
       "role": "C",
-      "first_name": "Bram",
-      "last_name": "Wiercx",
+      "first_name": "Chloë",
+      "last_name": "Van Gelder",
       "affiliation": {
-        "name": "FARO"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Rony",
-      "last_name": "Vissers",
-      "affiliation": {
-        "name": "meemoo"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Miel",
-      "last_name": "Vander Sande",
-      "affiliation": {
-        "name": "meemoo"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Hendrik",
-      "last_name": "Vandeginste",
-      "affiliation": {
-        "name": "Histories vzw"
-      }
-    },
-    {
-      "role": "C",
-      "first_name": "Shana",
-      "last_name": "Van Hauwermeiren",
-      "affiliation": {
-        "name": "Werkplaats Immaterieel Erfgoed"
+        "name": "Amsab-ISG",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO020417"
       }
     },
     {
@@ -3344,7 +3657,8 @@
       "first_name": "Annelies",
       "last_name": "Van Daele",
       "affiliation": {
-        "name": "Agentschap Onroerend Erfgoed"
+        "name": "Agentschap Onroerend Erfgoed",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO000104"
       }
     },
     {
@@ -3352,7 +3666,35 @@
       "first_name": "Koen",
       "last_name": "Van Daele",
       "affiliation": {
-        "name": "Agentschap Onroerend Erfgoed"
+        "name": "Agentschap Onroerend Erfgoed",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO000104"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Annelies",
+      "last_name": "Valgaeren",
+      "affiliation": {
+        "name": "Stad Gent",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002067"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Sofie",
+      "last_name": "Teugels",
+      "affiliation": {
+        "name": "Stad Gent",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002067"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Toon",
+      "last_name": "Tabruyn",
+      "affiliation": {
+        "name": "Publiq",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO003887"
       }
     },
     {
@@ -3360,63 +3702,107 @@
       "first_name": "Kim",
       "last_name": "Robensyn",
       "affiliation": {
-        "name": "Amsab-ISG"
+        "name": "Amsab-ISG",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO020417"
       }
     },
     {
       "role": "C",
-      "first_name": "Matthias",
-      "last_name": "Priem",
+      "first_name": "Diantha",
+      "last_name": "Osseweijer",
       "affiliation": {
-        "name": "meemoo"
+        "name": "Centrum voor Agrarische Geschiedenis",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO019487"
       }
     },
     {
       "role": "C",
-      "first_name": "Jorijn",
-      "last_name": "Neyrinck",
+      "first_name": "Rein",
+      "last_name": "Meus",
       "affiliation": {
-        "name": "Werkplaats Immaterieel Erfgoed"
+        "name": "Toerisme Vlaanderen",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO000034"
       }
     },
     {
       "role": "C",
-      "first_name": "Sofie",
-      "last_name": "Marchand",
+      "first_name": "Michaël",
+      "last_name": "Meersmans",
       "affiliation": {
-        "name": "Agentschap Onroerend Erfgoed"
+        "name": "Digipolis",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO046441"
       }
     },
     {
       "role": "C",
-      "first_name": "Bert",
-      "last_name": "Lemmens",
+      "first_name": "Jelle",
+      "last_name": "Kleevens",
       "affiliation": {
-        "name": "meemoo"
+        "name": "Archiefpunt",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO008585"
       }
     },
     {
       "role": "C",
-      "first_name": "Pascal",
-      "last_name": "Ennaert",
+      "first_name": "Tobias",
+      "last_name": "Hendrickx",
       "affiliation": {
-        "name": "Vlaamse Kunstcollectie"
+        "name": "MoMu",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO013251"
       }
     },
     {
       "role": "C",
-      "first_name": "David",
-      "last_name": "Coppoolse",
+      "first_name": "Marek",
+      "last_name": "Fenner",
       "affiliation": {
-        "name": "Vlaamse Erfgoedbibliotheek"
+        "name": "Archiefpunt",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO008585"
       }
     },
     {
       "role": "C",
-      "first_name": "Bert",
-      "last_name": "Aernouts",
+      "first_name": " Vincent",
+      "last_name": "Ducatteeuw",
       "affiliation": {
-        "name": "Archiefbank Vlaanderen"
+        "name": "Ugent",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002303"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Olivier",
+      "last_name": "D'huynslager",
+      "affiliation": {
+        "name": "Design Museum Gent",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002067"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Jeroen",
+      "last_name": "Cortvriendt",
+      "affiliation": {
+        "name": "Vlaamse Erfgoedbibliotheken",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO021323"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Tom",
+      "last_name": "Cobbaert",
+      "affiliation": {
+        "name": "Archief en Documentatiecentrum voor het Vlaams Nationalisme",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO008414"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Valérie",
+      "last_name": "Adriaens",
+      "affiliation": {
+        "name": "KU Leuven",
+        "website": "https://data.vlaanderen.be/id/organisatie/OVO002307"
       }
     }
   ],
@@ -3445,6 +3831,555 @@
         "ap-usageNote-nl": "Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin)."
       },
       "properties": []
+    },
+    {
+      "uri": "http://schema.org/ContactPoint",
+      "name": "Contactinfo",
+      "label": {
+        "nl": "Contactinfo"
+      },
+      "sort": "Contactinfo",
+      "description": {
+        "nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."
+      },
+      "usage": {
+        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren.",
+        "ap-label-nl": "Contactinfo",
+        "ap-usageNote-nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc.",
+        "label-nl": "Contactpunt",
+        "uri": "http://schema.org/ContactPoint"
+      },
+      "properties": [
+        {
+          "uri": "http://xmlns.com/foaf/0.1/page",
+          "name": "website",
+          "sort": "website",
+          "label": {
+            "nl": "website"
+          },
+          "description": {
+            "nl": "Website waarnaar men kan surfen."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "URI",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#anyURI"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#anyURI",
+              "range_label": {
+                "nl": "URI"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "website",
+            "ap-usageNote-nl": " ",
+            "label-nl": "pagina",
+            "uri": "http://xmlns.com/foaf/0.1/page",
+            "ap-definition-nl": "Website waarnaar men kan surfen."
+          }
+        },
+        {
+          "uri": "http://xmlns.com/foaf/0.1/name",
+          "name": "contactnaam",
+          "sort": "contactnaam",
+          "label": {
+            "nl": "contactnaam"
+          },
+          "description": {
+            "nl": "Naam van bvb de persoon die men kan contacteren."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Naam van bvb de persoon die men kan contacteren.",
+            "ap-usageNote-nl": " ",
+            "ap-label-nl": "contactnaam",
+            "label-nl": "naam",
+            "uri": "http://xmlns.com/foaf/0.1/name"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#address",
+          "name": "adres",
+          "sort": "adres",
+          "label": {
+            "nl": "adres"
+          },
+          "description": {
+            "nl": "Adres dat men kan aanschrijven of bezoeken."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Adresvoorstelling",
+              "range_uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adresvoorstelling",
+              "range_puri": "http://www.w3.org/ns/locn#Address",
+              "range_label": {
+                "nl": "Adresvoorstelling"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": " ",
+            "label-nl": "adres",
+            "uri": "http://www.w3.org/ns/locn#address",
+            "ap-definition-nl": "Adres dat men kan aanschrijven of bezoeken."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+          "name": "aanschrijfvorm",
+          "sort": "aanschrijfvorm",
+          "label": {
+            "nl": "aanschrijfvorm"
+          },
+          "description": {
+            "nl": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."
+          },
+          "usage": {
+            "nl": "Bvb De heer/Mevrouw, Excellentie, Dokter..."
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen.",
+            "ap-usageNote-nl": "Bvb De heer/Mevrouw, Excellentie, Dokter...",
+            "ap-label-nl": "aanschrijfvorm",
+            "label-nl": "aanschrijfprefix",
+            "uri": "http://www.w3.org/2006/vcard/ns#honorific-prefix"
+          }
+        },
+        {
+          "uri": "http://schema.org/telephone",
+          "name": "telefoon",
+          "sort": "telefoon",
+          "label": {
+            "nl": "telefoon"
+          },
+          "description": {
+            "nl": "Telefoonnummer waarop men kan bellen."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "telefoon",
+            "uri": "http://schema.org/telephone",
+            "ap-definition-nl": "Telefoonnummer waarop men kan bellen.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://schema.org/openingHours",
+          "name": "openingsuren",
+          "sort": "openingsuren",
+          "label": {
+            "nl": "openingsuren"
+          },
+          "description": {
+            "nl": "Uren waarbinnen contact kan worden opgenomen."
+          },
+          "usage": {
+            "nl": "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GetypeerdeString",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Getypeerde String",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "Getypeerde String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00.",
+            "label-nl": "openingsuren",
+            "uri": "http://schema.org/openingHours",
+            "ap-definition-nl": "Uren waarbinnen contact kan worden opgenomen."
+          }
+        },
+        {
+          "uri": "http://schema.org/hoursAvailable",
+          "name": "beschikbaarheid",
+          "sort": "beschikbaarheid",
+          "label": {
+            "nl": "beschikbaarheid"
+          },
+          "description": {
+            "nl": "Periode waarin contact kan worden opgenomen."
+          },
+          "usage": {
+            "nl": "Bv aanduiding van het seizoen waarin contact kan worden opgenomen. Begin- en einddatum volgens ISO8601 syntax."
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "beschikbaarheid",
+            "ap-usageNote-nl": "Bv aanduiding van het seizoen waarin contact kan worden opgenomen. Begin- en einddatum volgens ISO8601 syntax.",
+            "label-nl": "uren beschikbaarheid",
+            "uri": "http://schema.org/hoursAvailable",
+            "ap-definition-nl": "Periode waarin contact kan worden opgenomen."
+          }
+        },
+        {
+          "uri": "http://schema.org/faxNumber",
+          "name": "fax",
+          "sort": "fax",
+          "label": {
+            "nl": "fax"
+          },
+          "description": {
+            "nl": "Faxnummer waarnaar men kan faxen."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Faxnummer waarnaar men kan faxen.",
+            "ap-usageNote-nl": " ",
+            "label-nl": "faxnummer",
+            "ap-label-nl": "fax",
+            "uri": "http://schema.org/faxNumber"
+          }
+        },
+        {
+          "uri": "http://schema.org/email",
+          "name": "email",
+          "sort": "email",
+          "label": {
+            "nl": "email"
+          },
+          "description": {
+            "nl": "Email-adres waarnaar men kan mailen."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "ContactInfo",
+              "uri": "http://schema.org/ContactPoint"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": " ",
+            "label-nl": "email",
+            "uri": "http://schema.org/email",
+            "ap-definition-nl": "Email-adres waarnaar men kan mailen."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
+      "name": "Conditie",
+      "label": {
+        "nl": "Conditie"
+      },
+      "sort": "Conditie",
+      "description": {
+        "nl": "Staat waarin een object zich bevindt."
+      },
+      "usage": {
+        "nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Staat waarin een object zich bevindt.",
+        "ap-label-nl": "Conditie",
+        "ap-usageNote-nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk.",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+      },
+      "properties": [
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+          "name": "periode",
+          "sort": "periode",
+          "label": {
+            "nl": "periode"
+          },
+          "description": {
+            "nl": "Tijdspanne waarin het object zich in deze Conditie bevindt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Conditie",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Periode",
+              "range_uri": "http://data.europa.eu/m8g/PeriodOfTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Periode",
+              "range_puri": "http://data.europa.eu/m8g/PeriodOfTime",
+              "range_label": {
+                "nl": "Periode"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "periode",
+            "ap-definition-nl": "Tijdspanne waarin het object zich in deze Conditie bevindt.",
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "name": "beschrijving",
+          "sort": "beschrijving",
+          "label": {
+            "nl": "beschrijving"
+          },
+          "description": {
+            "nl": "Beschrijving van de Conditie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Conditie",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Beschrijving",
+              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_puri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_label": {
+                "nl": "Beschrijving"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "beschrijving",
+            "ap-definition-nl": "Beschrijving van de Conditie.",
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note"
+          }
+        },
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van de Conditie waarin het object zich bevindt."
+          },
+          "usage": {
+            "nl": "Bv als nieuw, goed, beschadigd etc."
+          },
+          "domain": [
+            {
+              "EA-Name": "Conditie",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TypeConditie",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Type Conditie",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "Type Conditie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van de Conditie waarin het object zich bevindt.",
+            "ap-usageNote-nl": "Bv als nieuw, goed, beschadigd etc.",
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type"
+          }
+        }
+      ]
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension",
@@ -3743,6 +4678,28 @@
         "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
         "definition-nl": "Benaming toegekend aan of gebruikt voor een geografisch object.",
         "ap-label-nl": "Geografische Naam"
+      },
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "name": "GetypeerdeString",
+      "label": {
+        "nl": "Getypeerde String"
+      },
+      "sort": "Getypeerde String",
+      "description": {
+        "nl": "Combinatie van een string en het type van wat de string voorstelt."
+      },
+      "usage": {
+        "nl": "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."
+      },
+      "parents": [],
+      "rawTags": {
+        "uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "label-nl": "Getypeerde String",
+        "definition-nl": "Combinatie van een string en het type van wat de string voorstelt.",
+        "ap-usageNote-nl": "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."
       },
       "properties": []
     },
@@ -4249,6 +5206,531 @@
       ]
     },
     {
+      "uri": "http://www.w3.org/ns/locn#Address",
+      "name": "Adresvoorstelling",
+      "label": {
+        "nl": "Adresvoorstelling"
+      },
+      "sort": "Adresvoorstelling",
+      "description": {
+        "nl": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."
+      },
+      "usage": {
+        "nl": "Bv als attribuut ve persoon of gebouw... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object.",
+        "ap-usageNote-nl": "Bv als attribuut ve persoon of gebouw... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen).",
+        "isCollection": "false",
+        "label-nl": "Adresvoorstelling",
+        "noPropertyType": "false",
+        "uri": "http://www.w3.org/ns/locn#Address"
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#land",
+          "name": "land",
+          "sort": "land",
+          "label": {
+            "nl": "land"
+          },
+          "description": {
+            "nl": "Land waarin het adres gelegen is."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "parentURI": "http://www.w3.org/ns/locn#adminUnitL1",
+            "ap-definition-nl": "Land waarin het adres gelegen is.",
+            "ap-usageNote-nl": " ",
+            "label-nl": "land"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+          "name": "gemeentenaam",
+          "sort": "gemeentenaam",
+          "label": {
+            "nl": "gemeentenaam"
+          },
+          "description": {
+            "nl": "Gemeentenaam vh adres."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "gemeentenaam",
+            "parentURI": "http://www.w3.org/ns/locn#postName",
+            "ap-definition-nl": "Gemeentenaam vh adres.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+          "name": "huisnummer",
+          "sort": "huisnummer",
+          "label": {
+            "nl": "huisnummer"
+          },
+          "description": {
+            "nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."
+          },
+          "usage": {
+            "nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "name": "Adresvoorstelling.huisnummer",
+            "parentURI": "http://www.w3.org/ns/locn#locatorDesignator",
+            "label-nl": "huisnummer",
+            "ap-definition-nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+            "ap-usageNote-nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+          "name": "busnummer",
+          "sort": "busnummer",
+          "label": {
+            "nl": "busnummer"
+          },
+          "description": {
+            "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
+          },
+          "usage": {
+            "nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen.",
+            "label-nl": "busnummer",
+            "name": "Adresvoorstelling.busnummer",
+            "parentURI": "http://www.w3.org/ns/locn#locatorDesignator",
+            "ap-definition-nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#thoroughfare",
+          "name": "straatnaam",
+          "sort": "straatnaam",
+          "label": {
+            "nl": "straatnaam"
+          },
+          "description": {
+            "nl": "Straatnaam vh adres."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "straatnaam",
+            "uri": "http://www.w3.org/ns/locn#thoroughfare",
+            "ap-definition-nl": "Straatnaam vh adres.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#postName",
+          "name": "postnaam",
+          "sort": "postnaam",
+          "label": {
+            "nl": "postnaam"
+          },
+          "description": {
+            "nl": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/locn#postName",
+            "label-nl": "postnaam",
+            "ap-definition-nl": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#postCode",
+          "name": "postcode",
+          "sort": "postcode",
+          "label": {
+            "nl": "postcode"
+          },
+          "description": {
+            "nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "postcode",
+            "uri": "http://www.w3.org/ns/locn#postCode",
+            "ap-definition-nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#poBox",
+          "name": "postbus",
+          "sort": "postbus",
+          "label": {
+            "nl": "postbus"
+          },
+          "description": {
+            "nl": "Postbusnummer in een postkantoor."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "postbus",
+            "uri": "http://www.w3.org/ns/locn#poBox",
+            "ap-definition-nl": "Postbusnummer in een postkantoor.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#locatorName",
+          "name": "locatienaam",
+          "sort": "locatienaam",
+          "label": {
+            "nl": "locatienaam"
+          },
+          "description": {
+            "nl": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "locatienaam",
+            "uri": "http://www.w3.org/ns/locn#locatorName",
+            "ap-definition-nl": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#locatorDesignator",
+          "name": "locatieaanduiding",
+          "sort": "locatieaanduiding",
+          "label": {
+            "nl": "locatieaanduiding"
+          },
+          "description": {
+            "nl": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "locatieaanduiding",
+            "uri": "http://www.w3.org/ns/locn#locatorDesignator",
+            "ap-definition-nl": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#fullAddress",
+          "name": "volledigAdres",
+          "sort": "volledig adres",
+          "label": {
+            "nl": "volledig adres"
+          },
+          "description": {
+            "nl": "Het complete adres in één string, al dan niet geformatteerd."
+          },
+          "usage": {
+            "nl": "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer."
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Het complete adres in één string, al dan niet geformatteerd.",
+            "ap-usageNote-nl": "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer.",
+            "uri": "http://www.w3.org/ns/locn#fullAddress",
+            "label-nl": "volledig adres"
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#adminUnitL2",
+          "name": "administratieveEenheidNiveau2",
+          "sort": "administratieve eenheid niveau 2",
+          "label": {
+            "nl": "administratieve eenheid niveau 2"
+          },
+          "description": {
+            "nl": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "administratieve eenheid niveau 2",
+            "uri": "http://www.w3.org/ns/locn#adminUnitL2",
+            "ap-definition-nl": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#adminUnitL1",
+          "name": "administratieveEenheidNiveau1",
+          "sort": "administratieve eenheid niveau 1",
+          "label": {
+            "nl": "administratieve eenheid niveau 1"
+          },
+          "description": {
+            "nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "administratieve eenheid niveau 1",
+            "uri": "http://www.w3.org/ns/locn#adminUnitL1",
+            "ap-definition-nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
+            "ap-usageNote-nl": " "
+          }
+        },
+        {
+          "uri": "http://www.w3.org/ns/locn#addressArea",
+          "name": "adresgebied",
+          "sort": "adresgebied",
+          "label": {
+            "nl": "adresgebied"
+          },
+          "description": {
+            "nl": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"
+          },
+          "usage": {
+            "nl": "Bvb de naam vh gehucht waarin het adres ligt."
+          },
+          "domain": [
+            {
+              "EA-Name": "Adresvoorstelling",
+              "uri": "http://www.w3.org/ns/locn#Address"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "adresgebied",
+            "uri": "http://www.w3.org/ns/locn#addressArea",
+            "ap-definition-nl": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is",
+            "ap-usageNote-nl": "Bvb de naam vh gehucht waarin het adres ligt."
+          }
+        }
+      ]
+    },
+    {
       "uri": "http://www.w3.org/ns/locn#Geometry",
       "name": "Geometrie",
       "label": {
@@ -4307,10 +5789,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_uri": "#Getypeerde String",
               "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "GetypeerdeString"
+                "nl": "Getypeerde String"
               }
             }
           ],
@@ -4353,10 +5835,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_uri": "#Getypeerde String",
               "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "GetypeerdeString"
+                "nl": "Getypeerde String"
               }
             }
           ],
