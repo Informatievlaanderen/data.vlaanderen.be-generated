@@ -224,11 +224,19 @@
 opvragen en vergelijken van offertes, het gedetailleerd uitwerken van de financiële aspecten, het aanvragen en analyseren van eventuele leningen. De fase wordt afgesloten met de ondertekening van de gekozen offerte(s) door de klant en, indien van toepassing, de ondertekening van een leningsakte.</ns0:usageNote>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Begeleiding"/>
   </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider.renovatiebegeleider">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
-    <rdfs:label xml:lang="nl">Renovatiebegeleider</rdfs:label>
-    <rdfs:comment xml:lang="nl">Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie.</rdfs:comment>
-  </owl:Class>
+    <rdfs:label xml:lang="nl">renovatiebegeleider</rdfs:label>
+    <rdfs:comment xml:lang="nl">renovatiebegeleider</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
+        <rdfs:label xml:lang="nl">Renovatiebegeleider</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie.</rdfs:comment>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/energiehuis#Begeleiding"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/energiehuis#Renovatieproject.categorieWerken">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/energiehuis"/>
     <rdfs:label xml:lang="nl">categorieWerken</rdfs:label>
