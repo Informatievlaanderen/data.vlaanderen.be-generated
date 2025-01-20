@@ -267,8 +267,7 @@
         "nl": "Waterverbruik geaggregeerd  over een specifiek vooraf gedefinieerde regio of groep van watermeters."
       },
       "parents": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-        "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
       ]
     },
     {
@@ -295,8 +294,7 @@
         "nl": "Individueel waterverbruik op één aansluitingspunt gerelateerd aan één meter."
       },
       "parents": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-        "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
       ]
     },
     {
@@ -354,6 +352,9 @@
       "definition": {
         "nl": "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"
       },
+      "usage": {
+        "nl": "Deze klasse kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."
+      },
       "parents": [
         "http://purl.org/dc/terms/Location"
       ]
@@ -365,9 +366,6 @@
         "nl": "MomentKwantitatieveWaardepaar"
       },
       "definition": {
-        "nl": "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."
-      },
-      "usage": {
         "nl": "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."
       },
       "parents": [
@@ -395,7 +393,7 @@
         "nl": "TemporeelMomentKwantitatiefBereik"
       },
       "definition": {
-        "nl": "In welk bereik het Systeem afdoende werkt."
+        "nl": "Een tijdsreeks van kwantitatieve waardes."
       },
       "parents": [
         "http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage"
@@ -408,7 +406,7 @@
         "nl": "Verbruikszone"
       },
       "definition": {
-        "nl": "Taak die met het Toestel kan worden uitgevoerd waarvoor het Toestel ontworpen is."
+        "nl": "Een specifiek gebied of sectie binnen een distributienetwerk waar het verbruik wordt gemeten en gemonitord."
       },
       "parents": [
         "http://purl.org/dc/terms/Location"
@@ -453,6 +451,13 @@
     },
     {
       "name": {
+        "nl": "Functietype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Toestel"
       },
       "@id": "https://saref.etsi.org/core/Device",
@@ -467,40 +472,6 @@
     }
   ],
   "properties": [
-    {
-      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gedeployedDoor"
-      },
-      "definition": {
-        "nl": "Agent die de Meter deployed."
-      },
-      "domain": [
-        "http://www.w3.org/ns/ssn/#Deployment"
-      ],
-      "range": [
-        "http://purl.org/dc/terms/Agent"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwTijdstip",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "InbouwTijdstip"
-      },
-      "definition": {
-        "nl": "Het tijdstip dat een meter wordt gedeployed."
-      },
-      "domain": [
-        "http://www.w3.org/ns/ssn/#Deployment"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#dateTime"
-      ],
-      "generalization": []
-    },
     {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meter.verbruiksadres",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -560,9 +531,6 @@
       },
       "definition": {
         "nl": "Het aantal meters dat binnen de Meterzone ligt."
-      },
-      "usage": {
-        "nl": "Dit attribuut kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone"
@@ -644,6 +612,40 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "inbouwDoor"
+      },
+      "definition": {
+        "nl": "Agent die de Meter inbouwt."
+      },
+      "domain": [
+        "http://www.w3.org/ns/ssn/#Deployment"
+      ],
+      "range": [
+        "http://purl.org/dc/terms/Agent"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwTijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "inbouwTijdstip"
+      },
+      "definition": {
+        "nl": "Het tijdstip dat een meter wordt ingebouwd."
+      },
+      "domain": [
+        "http://www.w3.org/ns/ssn/#Deployment"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#metertype",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -721,7 +723,7 @@
   "externalproperties": [
     {
       "name": {
-        "nl": "geobserveerdobject"
+        "nl": "geobserveerdObject"
       },
       "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
       "@type": "rdf:Property"
