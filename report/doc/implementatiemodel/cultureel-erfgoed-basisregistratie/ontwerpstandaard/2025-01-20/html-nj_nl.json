@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Implementatiemodel Cultureel Erfgoed - Basisregistratie - Generiek",
     "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed",
-    "issued": "2025-01-08",
+    "issued": "2025-01-20",
     "baseURI": "https://data.vlaanderen.be/ns/cultureel-erfgoed#",
     "filename": "cultureel-erfgoed-basisregistratie",
     "navigation": {
@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/doc/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Onbekend",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/f319ae5305148d596cdbfc4789a18b9fe6a1a88c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/f319ae5305148d596cdbfc4789a18b9fe6a1a88c/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/7f70445ea7a6dd58ce1fe126d5e05519bd8addf5",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/7f70445ea7a6dd58ce1fe126d5e05519bd8addf5/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -110,11 +110,15 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/generiek#identificator",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "Identificator van de Agent."
+          },
           "usage": {},
           "domain": [
             {
@@ -139,7 +143,11 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "label-nl": "identificator",
+            "definition-nl": "Identificator van de Agent."
+          }
         },
         {
           "uri": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
@@ -1250,7 +1258,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "is onderdeel van",
@@ -1488,7 +1496,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "productie",
@@ -1613,7 +1621,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by",
@@ -2052,7 +2060,8 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
             "ap-label-nl": "plaats",
             "ap-definition-nl": "Locatie waar de Gebeurtenis plaatsvond.",
-            "definition-nl": "Locatie waar de Gebeurtenis plaatsvond."
+            "definition-nl": "Locatie waar de Gebeurtenis plaatsvond.",
+            "label-nl": "Plaats"
           }
         },
         {
@@ -2927,7 +2936,8 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P23_transfered_title_from",
             "definition-nl": "Agent die zijn bezit afstaat.",
             "label-nl": "overgedragen van",
-            "ap-definition-nl": "Agent die zijn bezit afstaat."
+            "ap-definition-nl": "Agent die zijn bezit afstaat.",
+            "ap-label-nl": "overgedragen van"
           }
         },
         {
@@ -3271,7 +3281,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "volledige naam",
@@ -3357,7 +3367,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "definition-nl": "Datum waarop een Persoon doodgegaan is.",
@@ -3399,7 +3409,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "geboortedatum",
@@ -3487,7 +3497,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "achternaam",
@@ -3730,7 +3740,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "Structureel onderdeel van de Set",
@@ -3772,7 +3782,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "definition-nl": "Structureel onderdeel van de Set",
@@ -3916,11 +3926,17 @@
     },
     {
       "uri": "https://qudt.org/schema/qudt/QuantityKind",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
-      "usage": {},
+      "name": "Grootheid",
+      "label": {
+        "nl": "Grootheid"
+      },
+      "sort": "Grootheid",
+      "description": {
+        "nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd."
+      },
+      "usage": {
+        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit."
+      },
       "parents": [
         {
           "label": "Concept",
@@ -3931,7 +3947,10 @@
         }
       ],
       "rawTags": {
-        "uri": "https://qudt.org/schema/qudt/QuantityKind"
+        "uri": "https://qudt.org/schema/qudt/QuantityKind",
+        "label-nl": "Grootheid",
+        "definition-nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.",
+        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit."
       },
       "properties": []
     }
