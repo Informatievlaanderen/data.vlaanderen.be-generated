@@ -400,8 +400,8 @@
   "contributors-file": "stakeholders.csv",
   "diagram": "OSLO-CultureelErfgoed-Iteratie-Basisregistratie",
   "disabled": false,
-  "documentcommit": "5e8c7c44f24e4814a9149660f60e5a97dd8de490",
-  "dummy": "003",
+  "documentcommit": "0fc2ebc430ab6943310da7d561d8eb3f2cd2a4ef",
+  "dummy": "005",
   "eap": "CultureelErfgoed-basisregistratie.EAP",
   "editors": [
     {
@@ -1519,7 +1519,7 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "EA-Guid": "{28AE0AA8-9D91-4011-8238-F62A66B9C113}",
       "ap-definition-nl": {
         "nl": "Gemeentenaam vh adres."
@@ -1546,12 +1546,12 @@
         "EA-Guid": "{28AE0AA8-9D91-4011-8238-F62A66B9C113}",
         "EA-Name": "gemeentenaam",
         "EA-Package": "OSLO-Adres",
-        "EA-Range": "langString",
+        "EA-Range": "LangString",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
+          "EA-Name": "LangString",
           "EA-Package": "",
-          "uri": "null"
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "RawTags": [
           {
@@ -1616,7 +1616,13 @@
       "maxCardinality": "1",
       "minCardinality": "0",
       "name": "gemeentenaam",
-      "range": [],
+      "range": [
+        {
+          "EA-Name": "LangString",
+          "EA-Package": "",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      ],
       "usage": {
         "nl": " "
       }
@@ -4114,12 +4120,11 @@
         "EA-Guid": "{9D9DBE10-C81A-48bb-A73A-67F0A518323A}",
         "EA-Name": "aanschrijfvorm",
         "EA-Package": "OSLO-Generiek",
-        "EA-Range": "TaalString",
+        "EA-Range": "LangString",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-GUID": "{857D09C6-E2DA-4d39-852F-D6AC9C3354D8}",
-          "EA-Name": "TaalString",
-          "EA-Package": "OSLO-Generiek",
+          "EA-Name": "LangString",
+          "EA-Package": "",
           "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "RawTags": [
@@ -4185,9 +4190,8 @@
       "name": "aanschrijfvorm",
       "range": [
         {
-          "EA-GUID": "{857D09C6-E2DA-4d39-852F-D6AC9C3354D8}",
-          "EA-Name": "TaalString",
-          "EA-Package": "OSLO-Generiek",
+          "EA-Name": "LangString",
+          "EA-Package": "",
           "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         }
       ],
@@ -6710,7 +6714,7 @@
     },
     {
       "@id": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "EA-Guid": "{6205259B-720D-4d92-A9F1-9B61BFC936CE}",
       "ap-definition-nl": {
         "nl": "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."
@@ -6734,12 +6738,13 @@
         "EA-Guid": "{6205259B-720D-4d92-A9F1-9B61BFC936CE}",
         "EA-Name": "conditie",
         "EA-Package": "OSLO-CultureelErfgoed-Object",
-        "EA-Range": "null",
+        "EA-Range": "Conditie",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-Name": "",
-          "EA-Package": "",
-          "uri": "null"
+          "EA-GUID": "{ECF5B6F0-0354-417e-A817-2E9841E55217}",
+          "EA-Name": "Conditie",
+          "EA-Package": "OSLO-CultureelErfgoed-Object",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
         },
         "RawTags": [
           {
@@ -6793,7 +6798,14 @@
       "maxCardinality": "*",
       "minCardinality": "0",
       "name": "conditie",
-      "range": []
+      "range": [
+        {
+          "EA-GUID": "{ECF5B6F0-0354-417e-A817-2E9841E55217}",
+          "EA-Name": "Conditie",
+          "EA-Package": "OSLO-CultureelErfgoed-Object",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+        }
+      ]
     },
     {
       "@id": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
@@ -11133,12 +11145,11 @@
         "EA-Guid": "{53134794-7805-4e9a-99FA-C3EF333CC10A}",
         "EA-Name": "^titel",
         "EA-Package": "OSLO-CultureelErfgoed-Object",
-        "EA-Range": "TaalString",
+        "EA-Range": "LangString",
         "EA-Type": "attribute",
         "RangeData": {
-          "EA-GUID": "{857D09C6-E2DA-4d39-852F-D6AC9C3354D8}",
-          "EA-Name": "TaalString",
-          "EA-Package": "OSLO-Generiek",
+          "EA-Name": "LangString",
+          "EA-Package": "",
           "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "RawTags": [
@@ -11195,9 +11206,8 @@
       "name": "titel",
       "range": [
         {
-          "EA-GUID": "{857D09C6-E2DA-4d39-852F-D6AC9C3354D8}",
-          "EA-Name": "TaalString",
-          "EA-Package": "OSLO-Generiek",
+          "EA-Name": "LangString",
+          "EA-Package": "",
           "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         }
       ]
@@ -16449,13 +16459,13 @@
   "navigation": {},
   "properties": [],
   "publication-date": "2025-01-20",
-  "publication-state": "https://data.vlaanderen.be/doc/concept/StandaardStatus/OntwerpStandaard",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed",
   "site": "site-skeleton/cultureel-erfgoed-basisregistratie",
   "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
   "template": "cultureel-erfgoed-basisregistratie-impl.j2",
   "title": "Implementatiemodel Cultureel Erfgoed - Basisregistratie - Generiek",
-  "toolchaincommit": "bc5de02b2d52f01e8df0bf2cc193b1dd2512b8c6",
+  "toolchaincommit": "50e188bc531708425fad8a41bb91aec42680ce3b",
   "translation": [
     {
       "language": "nl",

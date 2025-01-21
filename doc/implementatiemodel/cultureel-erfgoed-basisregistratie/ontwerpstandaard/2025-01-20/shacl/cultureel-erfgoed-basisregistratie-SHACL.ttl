@@ -133,6 +133,7 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/b1af948ae2cd61c00ea230d344d1e936b18963c0>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/abfc06b457fcde1ee965f226e532bf6f3a39a2c6>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/f648c2d4eacbd1d07bd50057ffcd80c7530fee82>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/5b5c9660dee8c2fe5e12a2171df9ca8f65e56afe>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/9c835625155376a4ace080d75f0e6a1de34e125f>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/133ddf2f2dface49550bac70c2d3c0e1cbcc1814>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/4377bdb4b159b2d102367c80a69ddb81c3b07d5c>,
@@ -189,6 +190,12 @@
   shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
   shacl:name "volledig adres"@nl;
   shacl:path <http://www.w3.org/ns/locn#fullAddress> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/5b5c9660dee8c2fe5e12a2171df9ca8f65e56afe> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.gemeentenaam";
+  shacl:datatype rdf:langString;
+  shacl:description "Gemeentenaam vh adres."@nl;
+  shacl:name "gemeentenaam"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/616718c1e32ca05fef2798f755da77ea3dc306bf> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.straatnaam";
   shacl:datatype rdf:langString;
@@ -911,6 +918,7 @@
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/1a30482b3e53ec3424e45bfaee16aa218fe34532>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/07883a3556657f573b5da9b23ce06d8ae66f85c6>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/6dbc59c07f4e500909acd45e519de4b3b974fe09>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/8452958e7e3ff4f372a2572514a9e5828932e062>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/eb44b9a8b1fb23d93b4bc09f5ad535709e0310ac>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/0addb769185db828aa4c44888f0aa906471c3d06>,
@@ -950,6 +958,12 @@
   shacl:description """De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.	"""@nl;
   shacl:name "is overgedragen bij verwerving"@nl;
   shacl:path crm:P24i_changed_ownership_through .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/6dbc59c07f4e500909acd45e519de4b3b974fe09> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.conditie";
+  shacl:class crm:E3_Condition_State;
+  shacl:description "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."@nl;
+  shacl:name "conditie"@nl;
+  shacl:path crm:P44_has_condition .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/8452958e7e3ff4f372a2572514a9e5828932e062> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.dimensie";
   shacl:class crm:E54_Dimension;
