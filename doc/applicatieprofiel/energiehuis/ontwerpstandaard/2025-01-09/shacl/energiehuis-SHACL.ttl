@@ -17,6 +17,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#CategorieWerkenShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#EnergiehuisShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#EnergiescannerShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#FinancieringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#FinancieringTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#GeregistreerdKlantencontactShape>,
@@ -26,6 +27,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#KlantencontactShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#LeningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#NazorgShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#PlaatsbezoekShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#PremieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#ProfessioneelContactShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#ProjectontwerpShape>,
@@ -176,7 +178,9 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/ce012334c76fbb8723d52324457cb619f53f2527>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/74feba662f4f65577bf45a8dd94f8faec0f03592>;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening> .
@@ -193,11 +197,21 @@
   shacl:name "type"@nl;
   shacl:path <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening.type> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Adviesverlening.";
+  shacl:class <https://data.vlaanderen.be/ns/energiehuis#Energiescanner>;
+  shacl:description "";
+  shacl:path <https://data.vlaanderen.be/ns/energiehuis#energiescanner> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Adviesverlening.type";
   shacl:description "De specifieke categorie of vorm van advies die wordt geboden aan een Agent."@nl;
   shacl:minCount 1;
   shacl:name "type"@nl;
   shacl:path <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening.type> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AdviesverleningShape/ce012334c76fbb8723d52324457cb619f53f2527> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Adviesverlening.";
+  shacl:description "";
+  shacl:maxCount 1;
+  shacl:path <https://data.vlaanderen.be/ns/energiehuis#energiescanner> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#AgentInRolShape> a shacl:NodeShape;
   shacl:closed false;
@@ -230,7 +244,8 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/74feba662f4f65577bf45a8dd94f8faec0f03592>;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Begeleiding> .
@@ -246,6 +261,11 @@
   shacl:description "De specifieke categorie of vorm van ondersteuning die wordt geboden aan een Agent."@nl;
   shacl:name "type"@nl;
   shacl:path <https://data.vlaanderen.be/ns/energiehuis#Begeleiding.type> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/4d55af37dbbb6a42088d917caa1ca25428ec42c9> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Begeleiding.";
+  shacl:class <https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider>;
+  shacl:description "";
+  shacl:path <https://data.vlaanderen.be/ns/energiehuis#renovatiebegeleider> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#BegeleidingShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Begeleiding.type";
   shacl:description "De specifieke categorie of vorm van ondersteuning die wordt geboden aan een Agent."@nl;
@@ -397,6 +417,10 @@
   shacl:maxCount 1;
   shacl:name "aantal beschikbare loketuren"@nl;
   shacl:path <https://data.vlaanderen.be/ns/energiehuis#Energiehuis.aantalBeschikbareLoketuren> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#EnergiescannerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Energiescanner> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#FinancieringShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1129,6 +1153,10 @@
   shacl:name "Persoon (source)"@nl;
   shacl:path <https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.source> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#PlaatsbezoekShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Plaatsbezoek> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#PremieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Premie> .
@@ -1309,14 +1337,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#RenovatiebegeleiderShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#RenovatiebegeleiderShape/e1b35a57d8b12bd9b814721ec620e543f8b3ffa0>;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#RenovatiebegeleiderShape/e1b35a57d8b12bd9b814721ec620e543f8b3ffa0> rdfs:seeAlso "https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#Renovatiebegeleider.renovatiebegeleider";
-  shacl:class <https://data.vlaanderen.be/ns/energiehuis#Begeleiding>;
-  shacl:description "renovatiebegeleider"@nl;
-  shacl:name "renovatiebegeleider"@nl;
-  shacl:path <https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider.renovatiebegeleider> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/2025-01-09#RenovatieprojectShape> a shacl:NodeShape;
   shacl:closed false;
