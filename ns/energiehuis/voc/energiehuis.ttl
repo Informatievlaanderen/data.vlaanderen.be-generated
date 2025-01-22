@@ -30,6 +30,12 @@
   rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Energiehuis>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
 
+<https://data.vlaanderen.be/ns/energiehuis#Energiescanner> a owl:Class;
+  rdfs:label "Energiescanner"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De Energiescanner voert waar mogelijk ook kleine energiebesparende maatregelen uit."@nl;
+  rdfs:comment "Persoon die de energiescan uitvoert en tips geeft over mogelijke aanpassingen van verwarming, verlichting en/of huishoudtoestellen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
 <https://data.vlaanderen.be/ns/energiehuis#Financiering.bedrag> a owl:ObjectProperty;
   rdfs:label "bedrag"@nl;
   rdfs:comment "Het bedrag dat gefinancierd wordt."@nl;
@@ -126,6 +132,11 @@ opvragen en vergelijken van offertes, het gedetailleerd uitwerken van de financi
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Begeleiding> .
 
+<https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider> a owl:Class;
+  rdfs:label "Renovatiebegeleider"@nl;
+  rdfs:comment "Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
+
 <https://data.vlaanderen.be/ns/energiehuis#Renovatieproject.categorieWerken> a owl:ObjectProperty;
   rdfs:label "categorieWerken"@nl;
   rdfs:comment "Indeling van diverse renovatietaken en activiteiten."@nl;
@@ -147,11 +158,6 @@ werfbezoek, aanspreekpunt voor derden, doorverwijzing bij conflict, risicos ti
   rdfs:comment "Een integrale dienst die inwoners van een gemeente ondersteunt bij een breed scala aan onderwerpen met betrekking tot wonen en energie (o.a. wonen, verhuren, bouwen, woningkwaliteit, klimaatadaptatie, energie)."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
 
-<https://data.vlaanderen.be/ns/energiehuis#energiescanner> a owl:ObjectProperty;
-  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
-  rdfs:range <https://data.vlaanderen.be/ns/energiehuis#Energiescanner> .
-
 <https://data.vlaanderen.be/ns/energiehuis#financiering> a owl:ObjectProperty;
   rdfs:label "relatie"@nl;
   rdfs:comment "Renovatieproject waarvoor de Financiering wordt gebruikt."@nl;
@@ -159,10 +165,12 @@ werfbezoek, aanspreekpunt voor derden, doorverwijzing bij conflict, risicos ti
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
   rdfs:range <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
 
-<https://data.vlaanderen.be/ns/energiehuis#renovatiebegeleider> a owl:ObjectProperty;
-  rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Begeleiding>;
+<https://data.vlaanderen.be/ns/energiehuis#Adviesverlening> a owl:Class;
+  rdfs:label "Adviesverlening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie."@nl;
+  rdfs:comment "Dienstverlening op maat. Dit kan in de vorm van een huisbezoek, een uitgebreide intake, advies op afspraak aan het loket, uitgebreide antwoorden op mail, etc."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
-  rdfs:range <https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider> .
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Basistaak> .
 
 <https://data.vlaanderen.be/ns/energiehuis#CategorieWerken> a owl:Class;
   rdfs:label "CategorieWerken"@nl;
@@ -178,12 +186,6 @@ werfbezoek, aanspreekpunt voor derden, doorverwijzing bij conflict, risicos ti
   rdfs:domain <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
   rdfs:range xsd:date .
-
-<https://data.vlaanderen.be/ns/energiehuis#Energiescanner> a owl:Class;
-  rdfs:label "Energiescanner"@nl;
-  <http://purl.org/vocab/vann/usageNote> "De Energiescanner voert waar mogelijk ook kleine energiebesparende maatregelen uit."@nl;
-  rdfs:comment "Persoon die de energiescan uitvoert en tips geeft over mogelijke aanpassingen van verwarming, verlichting en/of huishoudtoestellen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
 
 <https://data.vlaanderen.be/ns/energiehuis#FinancieringType> a owl:Class;
   rdfs:label "FinancieringType"@nl;
@@ -210,11 +212,6 @@ werfbezoek, aanspreekpunt voor derden, doorverwijzing bij conflict, risicos ti
   rdfs:comment "Elke interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
 
-<https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleider> a owl:Class;
-  rdfs:label "Renovatiebegeleider"@nl;
-  rdfs:comment "Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
-
 <https://data.vlaanderen.be/ns/energiehuis#ThemaInformatie> a owl:Class;
   rdfs:label "ThemaInformatie"@nl;
   rdfs:comment "Codelijst voor type van informatievoorziening."@nl;
@@ -229,13 +226,6 @@ werfbezoek, aanspreekpunt voor derden, doorverwijzing bij conflict, risicos ti
   rdfs:label "TypeBegeleiding"@nl;
   rdfs:comment "Codelijst voor type van begeleiding."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis> .
-
-<https://data.vlaanderen.be/ns/energiehuis#Adviesverlening> a owl:Class;
-  rdfs:label "Adviesverlening"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie."@nl;
-  rdfs:comment "Dienstverlening op maat. Dit kan in de vorm van een huisbezoek, een uitgebreide intake, advies op afspraak aan het loket, uitgebreide antwoorden op mail, etc."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/energiehuis>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/energiehuis#Basistaak> .
 
 <https://data.vlaanderen.be/ns/energiehuis#Lening> a owl:Class;
   rdfs:label "Lening"@nl;
