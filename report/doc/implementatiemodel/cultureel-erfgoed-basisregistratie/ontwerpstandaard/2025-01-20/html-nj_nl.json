@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/0589a451be7a4c5d67fb41199c291c6ff67a6c36",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/0589a451be7a4c5d67fb41199c291c6ff67a6c36/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/32e240bf4beb4b5713532961efe99c89daaaf6f2",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/32e240bf4beb4b5713532961efe99c89daaaf6f2/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -1308,13 +1308,19 @@
         "nl": "Materieel Object"
       },
       "sort": "Materieel Object",
-      "description": {},
-      "usage": {},
+      "description": {
+        "nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt."
+      },
+      "usage": {
+        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakte object kan zijn, bvb een Persoon. OPMERKING: deze klasse is niet expliciet aanwezig in het implementatiemodel. Subklassen zijn Mensgemaakte Objecten (aanwezig in het model) en Biologische Objecten (niet aanwezig in het model)."
+      },
       "parents": [],
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
         "label-nl": "MaterieelObject",
-        "ap-label-nl": "Materieel Object"
+        "ap-label-nl": "Materieel Object",
+        "ap-definition-nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt.",
+        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakte object kan zijn, bvb een Persoon. OPMERKING: deze klasse is niet expliciet aanwezig in het implementatiemodel. Subklassen zijn Mensgemaakte Objecten (aanwezig in het model) en Biologische Objecten (niet aanwezig in het model)."
       },
       "properties": []
     },
@@ -2359,13 +2365,13 @@
         "nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item."
       },
       "usage": {
-        "nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC-CRM</a>."
+        "nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Subklasse van Entiteit. Niet expliciet aanwezig in dit implementatiemodel. Subklassen zijn Mensgemaakt Ding en Legaal Object, evenmin expliciet aanwezig. Indirect echter zijn Conceptueel Object en Materieel Ding (en hun subklassen) er subklasse van."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.",
         "ap-label-nl": "Ding",
-        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC-CRM</a>.",
+        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Subklasse van Entiteit. Niet expliciet aanwezig in dit implementatiemodel. Subklassen zijn Mensgemaakt Ding en Legaal Object, evenmin expliciet aanwezig. Indirect echter zijn Conceptueel Object en Materieel Ding (en hun subklassen) er subklasse van.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
         "label-nl": "Ding"
       },
@@ -2378,13 +2384,19 @@
         "nl": "Mensgemaakt Ding"
       },
       "sort": "Mensgemaakt Ding",
-      "description": {},
-      "usage": {},
+      "description": {
+        "nl": "Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding."
+      },
+      "usage": {
+        "nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is.OPMERKING: Niet expliciet aanwezig in het implementatiemodel. Directe subklassen zijn Conceptueel Object en Materieel Mensgemaakt Ding (deze laatste evenmin expliciet in het model). Conceptuele Objecten zijn een subklasse omdat deze steeds mensgemaakt zijn, iets dat niet geldt  voor alle Materiële Dingen vandaar de subklasse Materieel Mensgemaakt Ding."
+      },
       "parents": [],
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing",
         "label-nl": "MensgemaaktDing",
-        "ap-label-nl": "Mensgemaakt Ding"
+        "ap-label-nl": "Mensgemaakt Ding",
+        "ap-definition-nl": "Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding.",
+        "ap-usageNote-nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is.OPMERKING: Niet expliciet aanwezig in het implementatiemodel. Directe subklassen zijn Conceptueel Object en Materieel Mensgemaakt Ding (deze laatste evenmin expliciet in het model). Conceptuele Objecten zijn een subklasse omdat deze steeds mensgemaakt zijn, iets dat niet geldt  voor alle Materiële Dingen vandaar de subklasse Materieel Mensgemaakt Ding."
       },
       "properties": []
     },
@@ -4056,7 +4068,7 @@
         "nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd."
       },
       "usage": {
-        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-units</a> voor meer info."
+        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info."
       },
       "parents": [
         {
@@ -4071,7 +4083,7 @@
         "uri": "https://qudt.org/schema/qudt/QuantityKind",
         "label-nl": "Grootheid",
         "definition-nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.",
-        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-units</a> voor meer info."
+        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info."
       },
       "properties": []
     },
