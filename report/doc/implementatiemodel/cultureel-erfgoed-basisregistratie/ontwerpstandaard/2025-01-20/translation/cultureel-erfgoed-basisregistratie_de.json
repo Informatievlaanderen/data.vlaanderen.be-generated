@@ -61,18 +61,6 @@
       }
     },
     {
-      "EA-Guid": "{461AF3BF-3B1C-4745-B703-816FDA79EA43}",
-      "name": "Eenheid",
-      "label": {
-        "nl": "Eenheid",
-        "de": "Enter your translation here"
-      },
-      "definition": {
-        "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
-        "de": "Enter your translation here"
-      }
-    },
-    {
       "EA-Guid": "{AA956CB9-5844-42ba-853A-A4CDE45E693D}",
       "name": "Valuta",
       "label": {
@@ -108,11 +96,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Activiteit die leidt tot en slaagt in het ontstaan van een MaterieelDing.",
+        "nl": "Activiteit die leidt tot en slaagt in het ontstaan van een Materieel Ding.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een MensgemaaktObject uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor InformatieObjecten. \n",
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een Mensgemaakt Object uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor Conceptuele Objecten. \n",
         "de": "Enter your translation here"
       }
     },
@@ -128,7 +116,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
+        "nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties.\n",
         "de": "Enter your translation here"
       }
     },
@@ -140,11 +128,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk.",
+        "nl": "Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken. Het onderscheid tussen beide is gebaseerd op de natuurlijke begrenzing van het ding. De meeste fysieke objecten (zoals MensgemaaktObject) kunnen verplaatst worden, voor kenmerken (zoals MensgemaaktKenmerk) geldt dat niet, deze zitten vast aan het omliggend materiaal. De klasse MaterieelDing kan gebruikt worden wanneer het onderscheid tussen fysieke objecten en kenmerken er niet toe doet en de attributen op dit niveau toereikend zijn voor de data die men tracht uit te wisselen.",
+        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklass van deze subklassen, mn MensgemaaktObject.",
         "de": "Enter your translation here"
       }
     },
@@ -166,9 +154,9 @@
     },
     {
       "EA-Guid": "{47A3B009-75CF-4fec-97C2-0F5FC999B103}",
-      "name": "Materieelobject",
+      "name": "MaterieelObject",
       "label": {
-        "nl": "MaterieelObject",
+        "nl": "Materieel Object",
         "de": "Enter your translation here"
       }
     },
@@ -200,7 +188,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Conceptuele Objecten zijn typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Bijvoorbeeld: Beethoven's \"Ode aan de Vreugde\", de definitie van \"Ontologie\", of kennis van hoe het is om olympisch kampioen te worden. Conceptuele Objecten kunnen op meerdere dragers tegelijk bestaan, bv op papier, audio, foto, harde schijf, canvas, alsook het menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt.",
+        "nl": "Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Subklassen zijn Type, Propositioneel Object en Symbolisch Object en subklassen daarvan. In het implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een selectie van subklassen van deze subklassen (mn Recht en InformatieObject).",
         "de": "Enter your translation here"
       }
     },
@@ -228,7 +216,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk.",
+        "nl": "Geldt voor een bepaalde periode. Slaat op een Materieel Ding, bv een Mensgemaakt Object of -Kenmerk.",
         "de": "Enter your translation here"
       }
     },
@@ -256,11 +244,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Onderscheidbaar,afgelijnd en samenhangend proces of interactie dat een cultureel,sociaal of materieel effect teweeg brengt.",
+        "nl": "Onderscheidbaar, afgelijnd en samenhangend proces of interactie dat een cultureel, sociaal of materieel effect teweeg brengt.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van TemporeleEntiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \r\n",
+        "nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van Temporele Entiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \n",
         "de": "Enter your translation here"
       }
     },
@@ -272,11 +260,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Activiteit die leidt tot het onstaan van een ConceptueelDing, bv een gedicht, tekst, muziek, beelden, films etc.",
+        "nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van InformatieObjecten uit te wisselen, bijvoorbeeld voor publicaties, tentoonstellingen en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.",
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.",
         "de": "Enter your translation here"
       }
     },
@@ -288,27 +276,27 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Afzonderlijk hanteerbaar,identificeerbaar,als eenheid te beschrijven,persistent item.",
+        "nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Het kan om fysieke voorwerpen gaan maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd,kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: te instantiëren als ConceptueelObject of MaterieelDing of subklassen daarvan.",
+        "nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC-CRM</a>.",
         "de": "Enter your translation here"
       }
     },
     {
       "EA-Guid": "{B6230E15-2FC7-4e20-A7BF-A8C675A74AF4}",
-      "name": "Mensgemaaktding",
+      "name": "MensgemaaktDing",
       "label": {
-        "nl": "MensgemaaktDing",
+        "nl": "Mensgemaakt Ding",
         "de": "Enter your translation here"
       }
     },
     {
       "EA-Guid": "{05465ED7-EFE5-47b4-8673-11FE76DD6BEA}",
-      "name": "Wettelijkobject",
+      "name": "WettelijkObject",
       "label": {
-        "nl": "WettelijkObject",
+        "nl": "Wettelijk Object",
         "de": "Enter your translation here"
       }
     },
@@ -324,7 +312,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
+        "nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
         "de": "Enter your translation here"
       }
     },
@@ -336,19 +324,19 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,sociaal of materieel effect teweeg te brengen.",
+        "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving. Hiervan moeten geen instanties gemaakt worden.",
+        "nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving.",
         "de": "Enter your translation here"
       }
     },
     {
       "EA-Guid": "{73AD46A5-E98B-4761-8C10-F067DAB33377}",
-      "name": "Propositioneelobject",
+      "name": "PropositioneelObject",
       "label": {
-        "nl": "PropositioneelObject",
+        "nl": "Propositioneel Object",
         "de": "Enter your translation here"
       }
     },
@@ -360,11 +348,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Overdracht van de eigendomstitel van een MaterieelDing van de ene Agent naar de andere, bv door een verkoop of een erfenis.",
+        "nl": "Overdracht van de eigendomstitel van een Materieel Ding van de ene Agent naar de andere, bv door een verkoop of een erfenis.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het MaterieelDing. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
+        "nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
         "de": "Enter your translation here"
       }
     },
@@ -454,6 +442,10 @@
       "definition": {
         "nl": "Idee of begrip.",
         "de": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bedoeld om kennis te organiseren, bvb in een codelijst of taxonomie (een zgn ConceptScheme). Zie <a href=\"https://www.w3.org/TR/skos-reference/\">SKOS</a> voor meer informatie.",
+        "de": "Enter your translation here"
       }
     },
     {
@@ -484,15 +476,15 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.",
+        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.",
         "de": "Enter your translation here"
       }
     },
     {
       "EA-Guid": "{00142BCA-807D-4518-8718-D9D8E81021FA}",
-      "name": "Temporeleentiteit",
+      "name": "TemporeleEntiteit",
       "label": {
-        "nl": "TemporeleEntiteit",
+        "nl": "Temporele Entiteit",
         "de": "Enter your translation here"
       },
       "definition": {
@@ -548,7 +540,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Beschrijft deze kenmerken dmv punten,lijnen,polygonen en coördinaten.",
+        "nl": "Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten.",
         "de": "Enter your translation here"
       }
     },
@@ -596,7 +588,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc. Opmerking: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.",
+        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.",
         "de": "Enter your translation here"
       }
     },
@@ -608,11 +600,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
+        "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "De definitie heeft betrekking op Belgische adressen. In andere landen kan een adres eventueel verwijzen naar andere geografisch objecten (niet gebouweenheid of perceel) of bestaan uit andere aanduidingen (verschillend van huisnummer en busnummer) of uit andere componenten dan straatnaam, gemeentenaam of postcode. Alternatieve adresaanduidingen dan huisnummer of busnummer (bv ingangaanduiding, trapaanduiding, verdiepaanduiding...) of een gebouwnaam of kamernaam ed zijn mogelijk dmv een associatie met adresuitbreiding. Uitwisseling van buitenlandse adressen moet gebeuren mbv het object adresvoorstelling.",
+        "nl": "De definitie heeft betrekking op Belgische adressen. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/\">OSLO-Adresregister</a>.",
         "de": "Enter your translation here"
       }
     },
@@ -660,7 +652,23 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit.",
+        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-units</a> voor meer info.",
+        "de": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{461AF3BF-3B1C-4745-B703-816FDA79EA43}",
+      "name": "Eenheid",
+      "label": {
+        "nl": "Eenheid",
+        "de": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
+        "de": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info.",
         "de": "Enter your translation here"
       }
     }
@@ -668,9 +676,9 @@
   "externalproperties": [
     {
       "EA-Guid": "{87FAFF4A-0F82-4a73-9DA1-BA4655668FDF}",
-      "name": "inedtf",
+      "name": "inEdtf",
       "label": {
-        "nl": "inEDTF",
+        "nl": "in EDTF",
         "de": "Enter your translation here"
       },
       "definition": {
@@ -680,9 +688,9 @@
     },
     {
       "EA-Guid": "{80BA3BC4-7CF9-4819-ACE4-E8E8F065724E}",
-      "name": "inEdtfPeriode",
+      "name": "inEdtf",
       "label": {
-        "nl": "in EDTF periode",
+        "nl": "in EDTF",
         "de": "Enter your translation here"
       },
       "definition": {
@@ -1070,7 +1078,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
+        "nl": "Hoogste administratieve eenheid vh adres, doorgaans een land.",
         "de": "Enter your translation here"
       },
       "usage": {
@@ -1118,11 +1126,27 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Naam vd agent die de identificator heeft toegekend.",
+        "nl": "Naam vd Agent die de identificator heeft toegekend.",
         "de": "Enter your translation here"
       },
       "usage": {
         "nl": " ",
+        "de": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{0AD74CE5-C536-44b5-B276-33FA119F44FA}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator",
+        "de": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Identificator van de Gebeurtenis.",
+        "de": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bij implementatie in RDF is de uri vd Gebeurtenis de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
         "de": "Enter your translation here"
       }
     },
@@ -1134,7 +1158,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De identificator gebruikt om de locatie te identificeren.",
+        "nl": "De Identificator gebruikt om de locatie te identificeren.",
         "de": "Enter your translation here"
       }
     },
@@ -1178,7 +1202,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
+        "nl": "Bij implementatie in RDF is de uri vd Entiteit de Identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
         "de": "Enter your translation here"
       }
     },
@@ -1218,7 +1242,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Einde ve TemporeleEntiteit.",
+        "nl": "Einde ve Temporele Entiteit.",
         "de": "Enter your translation here"
       }
     },
@@ -1230,7 +1254,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Start ve TemporeleEntiteit.",
+        "nl": "Start ve Temporele Entiteit.",
         "de": "Enter your translation here"
       }
     },
@@ -1318,7 +1342,19 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De Activiteit waarbij het ConceptueelDing werd gecreëerd.",
+        "nl": "De Activiteit waarbij het Conceptueel Object werd gecreëerd.",
+        "de": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{BC565523-91B2-4555-8594-F1FF452130EB}",
+      "name": "creatie",
+      "label": {
+        "nl": "creatie",
+        "de": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd.",
         "de": "Enter your translation here"
       }
     },
@@ -1331,6 +1367,10 @@
       },
       "definition": {
         "nl": "De eenheid waarin de waarde is uitgedrukt.",
+        "de": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Gebruik Concept of de subklasse Eenheid.",
         "de": "Enter your translation here"
       }
     },
@@ -1360,9 +1400,13 @@
     },
     {
       "EA-Guid": "{BC0E9024-36BB-460a-9A4E-A6F82F5AD8E0}",
-      "name": "bezit",
+      "name": "heeft",
       "label": {
-        "nl": "bezit",
+        "nl": "heeft",
+        "de": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Recht dat een Agent bezit.",
         "de": "Enter your translation here"
       }
     },
@@ -1378,7 +1422,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver.",
+        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\".",
         "de": "Enter your translation here"
       }
     },
@@ -1394,7 +1438,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver.",
+        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\".",
         "de": "Enter your translation here"
       }
     },
@@ -1406,7 +1450,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Entiteit die door het MensgemaaktObject wordt uitgebeeld.",
+        "nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld.",
         "de": "Enter your translation here"
       },
       "usage": {
@@ -1422,7 +1466,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft de huidige locatie van het MensgemaaktObject.",
+        "nl": "Beschrijft de huidige locatie van het Mensgemaakt Object.",
         "de": "Enter your translation here"
       }
     },
@@ -1434,7 +1478,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft de permanente locatie van het MensgemaaktObject.",
+        "nl": "Beschrijft de permanente locatie van het Mensgemaakt Object.",
         "de": "Enter your translation here"
       },
       "usage": {
@@ -1450,7 +1494,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De Agent die het MaterieelDing bezit.",
+        "nl": "De Agent die het Materieel Ding bezit.",
         "de": "Enter your translation here"
       }
     },
@@ -1462,7 +1506,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De Agent die het MaterieelDing bewaart.",
+        "nl": "De Agent die het Materieel Ding bewaart.",
         "de": "Enter your translation here"
       }
     },
@@ -1474,7 +1518,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Periode waarin de Gebeurtenis plaatsvond.",
+        "nl": "Moment waarop of periode waarin de Gebeurtenis plaatsvond.",
         "de": "Enter your translation here"
       }
     },
@@ -1498,11 +1542,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk.",
+        "nl": "Materieel Ding dat deel uitmaakt van het Materieel Ding.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.",
+        "nl": "Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding.",
         "de": "Enter your translation here"
       }
     },
@@ -1514,7 +1558,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat.",
+        "nl": "Beschrijft het Materiaal waaruit het Materieel Ding bestaat.",
         "de": "Enter your translation here"
       }
     },
@@ -1526,7 +1570,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt.",
+        "nl": "Beschrijft de Conditie waarin het Materieel Ding zich bevindt.",
         "de": "Enter your translation here"
       }
     },
@@ -1538,11 +1582,11 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft een Dimensie van het MensgemaaktObject.",
+        "nl": "Beschrijft een Dimensie van het Mensgemaakt Object.",
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Bv de afmetingen.",
+        "nl": "Bv de omvang of het belang van het Conceptueel Object.",
         "de": "Enter your translation here"
       }
     },
@@ -1554,7 +1598,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Beschrijft een Dimensie van het MensgemaaktObject.",
+        "nl": "Omvang van het Materieel Ding.",
         "de": "Enter your translation here"
       },
       "usage": {
@@ -1623,6 +1667,10 @@
       },
       "definition": {
         "nl": "Beschrijving van de Dimensie.",
+        "de": "Enter your translation here"
+      },
+      "usage": {
+        "nl": "Bvb om grootheid en eenheid verder te beschrijven of als deze niet gekend zijn.",
         "de": "Enter your translation here"
       }
     },
@@ -1706,7 +1754,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht...",
+        "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid.",
         "de": "Enter your translation here"
       }
     },
@@ -1762,7 +1810,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.\t",
+        "nl": "De Activiteit waarbij de eigendomstitel van het Materieel Ding werd overgedragen.\t",
         "de": "Enter your translation here"
       }
     },
@@ -1774,7 +1822,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "MaterieelDing dat werd verworven.",
+        "nl": "Materieel Ding dat werd verworven.",
         "de": "Enter your translation here"
       }
     },
@@ -1854,7 +1902,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Eerder dan bij een component van een ConceptueelDing, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
+        "nl": "Eerder dan bij een component van een Conceptueel Object, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
         "de": "Enter your translation here"
       }
     },
@@ -1922,7 +1970,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.",
+        "nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.",
         "de": "Enter your translation here"
       }
     },
@@ -1938,7 +1986,7 @@
         "de": "Enter your translation here"
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object.",
+        "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object.",
         "de": "Enter your translation here"
       }
     },
@@ -1950,7 +1998,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Het MensgemaaktObject dat het InformatieObject draagt.",
+        "nl": "Het Mensgemaakt Object dat het InformatieObject draagt.",
         "de": "Enter your translation here"
       }
     },
@@ -1962,7 +2010,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject.",
+        "nl": "InformatieObject dat gedragen wordt door het Materieel Ding.",
         "de": "Enter your translation here"
       }
     },
@@ -1974,7 +2022,19 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "De Activiteit waarbij het MaterieelDing werd geproduceerd.",
+        "nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd.",
+        "de": "Enter your translation here"
+      }
+    },
+    {
+      "EA-Guid": "{DDC3ECF3-A826-44e4-99F2-B4B4A9720EEF}",
+      "name": "product",
+      "label": {
+        "nl": "product",
+        "de": "Enter your translation here"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd.",
         "de": "Enter your translation here"
       }
     },
@@ -1986,7 +2046,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "\tAgent die een Recht bezit op het WettelijkObject.",
+        "nl": "\tAgent die een Recht bezit op het Wettelijk Object.",
         "de": "Enter your translation here"
       }
     },
@@ -2014,7 +2074,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Recht waaraan het MaterieelDing is onderworpen.",
+        "nl": "Recht waaraan het Materieel Ding is onderworpen.",
         "de": "Enter your translation here"
       }
     },
@@ -2050,7 +2110,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Titel van het InformatieObject.",
+        "nl": "Titel van het Conceptueel Object.",
         "de": "Enter your translation here"
       }
     },
@@ -2062,7 +2122,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Titel van het MensgemaaktObject.",
+        "nl": "Titel van het Mensgemaakt Object.",
         "de": "Enter your translation here"
       }
     },
@@ -2246,7 +2306,7 @@
         "de": "Enter your translation here"
       },
       "definition": {
-        "nl": "Het onderwerp van een MaterieelDing.",
+        "nl": "Het onderwerp van een Materieel Ding.",
         "de": "Enter your translation here"
       }
     }

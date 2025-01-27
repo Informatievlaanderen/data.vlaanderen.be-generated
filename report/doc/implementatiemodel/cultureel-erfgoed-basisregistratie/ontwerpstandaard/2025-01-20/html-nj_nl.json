@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/b0de8d8682cb1ea20158120f3ace07006e36ec56",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/b0de8d8682cb1ea20158120f3ace07006e36ec56/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/0589a451be7a4c5d67fb41199c291c6ff67a6c36",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/0589a451be7a4c5d67fb41199c291c6ff67a6c36/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -151,12 +151,14 @@
         },
         {
           "uri": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
-          "name": "bezit",
-          "sort": "bezit",
+          "name": "heeft",
+          "sort": "heeft",
           "label": {
-            "nl": "bezit"
+            "nl": "heeft"
           },
-          "description": {},
+          "description": {
+            "nl": "Recht dat een Agent bezit."
+          },
           "usage": {},
           "domain": [
             {
@@ -184,7 +186,8 @@
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
             "label-nl": "bezit",
-            "ap-label-nl": "bezit"
+            "ap-label-nl": "heeft",
+            "ap-definition-nl": "Recht dat een Agent bezit."
           }
         },
         {
@@ -350,34 +353,6 @@
       ]
     },
     {
-      "uri": "http://qudt.org/2.1/schema/qudt/Unit",
-      "name": "Eenheid",
-      "label": {
-        "nl": "Eenheid"
-      },
-      "sort": "Eenheid",
-      "description": {
-        "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "Concept",
-          "name": "Concept",
-          "package": "skos",
-          "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-          "scoped_uri": "#Concept"
-        }
-      ],
-      "rawTags": {
-        "definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
-        "label-nl": "Eenheid",
-        "uri": "http://qudt.org/2.1/schema/qudt/Unit",
-        "ap-label-nl": "Eenheid"
-      },
-      "properties": []
-    },
-    {
       "uri": "http://qudt.org/schema/qudt/CurrencyUnit",
       "name": "Valuta",
       "label": {
@@ -393,7 +368,7 @@
           "label": "Eenheid",
           "name": "Eenheid",
           "package": "QUDT",
-          "uri": "http://qudt.org/2.1/schema/qudt/Unit",
+          "uri": "https://qudt.org/schema/qudt/Unit",
           "scoped_uri": "#Eenheid"
         }
       ],
@@ -414,10 +389,10 @@
       },
       "sort": "Productie",
       "description": {
-        "nl": "Activiteit die leidt tot en slaagt in het ontstaan van een MaterieelDing."
+        "nl": "Activiteit die leidt tot en slaagt in het ontstaan van een Materieel Ding."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een MensgemaaktObject uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor InformatieObjecten. \n"
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een Mensgemaakt Object uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor Conceptuele Objecten. \n"
       },
       "parents": [
         {
@@ -430,14 +405,57 @@
       ],
       "rawTags": {
         "ap-label-nl": "Productie",
-        "ap-definition-nl": "Activiteit die leidt tot en slaagt in het ontstaan van een MaterieelDing.",
+        "ap-definition-nl": "Activiteit die leidt tot en slaagt in het ontstaan van een Materieel Ding.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
-        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een MensgemaaktObject uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor InformatieObjecten. \n",
+        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Productie) van een Mensgemaakt Object uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor Conceptuele Objecten. \n",
         "label-nl": "Productie",
         "definition-nl": "Activiteit die leidt tot en slaagt in het ontstaan van een MaterieelDing.",
-        "usageNote-nl": "Bv het maken van een schilderij. Eenzelfde Activiteit kan meer dan één object doen ontstaan, bv bij het drukken van een boek. De Productie geldt vanaf het moment dat het object  relevant wordt, bv een canvas van zodra het wordt beschilderd. Ook mogelijk is dat tgv Productie een object wordt gemaakt ten koste van een ander object (en enkel materie bewaard blijft). Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
+        "usageNote-nl": "Bv het maken van een schilderij. Eenzelfde Activiteit kan meer dan één object doen ontstaan, bv bij het drukken van een boek. De Productie geldt vanaf het moment dat het object  relevant wordt, bv een canvas van zodra het wordt beschilderd. Ook mogelijk is dat tgv Productie een object wordt gemaakt ten koste van een ander object (en enkel materie bewaard blijft). OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P108_has_produced",
+          "name": "product",
+          "sort": "product",
+          "label": {
+            "nl": "product"
+          },
+          "description": {
+            "nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Productie",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E12_Production"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "MaterieelMensgemaaktDing",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
+              "range_label": {
+                "nl": "MaterieelMensgemaaktDing"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P108_has_produced",
+            "ap-label-nl": "product",
+            "ap-definition-nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd.",
+            "label-nl": "product",
+            "definition-nl": "Identificeert een MaterieelDing dat ontstaan werd door een Productie activiteit."
+          }
+        }
+      ]
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
@@ -450,7 +468,7 @@
         "nl": "Het toekennen van een type aan een Entiteit."
       },
       "usage": {
-        "nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
+        "nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties.\n"
       },
       "parents": [
         {
@@ -472,10 +490,10 @@
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
         "ap-label-nl": "Classificatie",
         "ap-definition-nl": "Het toekennen van een type aan een Entiteit.",
-        "ap-usageNote-nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
+        "ap-usageNote-nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties.\n",
         "label-nl": "Classificatie",
         "definition-nl": "Het toekennen van een type aan een Entiteit.",
-        "usageNote-nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
+        "usageNote-nl": "Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
       },
       "properties": [
         {
@@ -575,10 +593,10 @@
       },
       "sort": "Materieel Ding",
       "description": {
-        "nl": "Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk."
+        "nl": "Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk."
       },
       "usage": {
-        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken. Het onderscheid tussen beide is gebaseerd op de natuurlijke begrenzing van het ding. De meeste fysieke objecten (zoals MensgemaaktObject) kunnen verplaatst worden, voor kenmerken (zoals MensgemaaktKenmerk) geldt dat niet, deze zitten vast aan het omliggend materiaal. De klasse MaterieelDing kan gebruikt worden wanneer het onderscheid tussen fysieke objecten en kenmerken er niet toe doet en de attributen op dit niveau toereikend zijn voor de data die men tracht uit te wisselen."
+        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklass van deze subklassen, mn MensgemaaktObject."
       },
       "parents": [
         {
@@ -597,9 +615,9 @@
         }
       ],
       "rawTags": {
-        "ap-definition-nl": "Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk.",
+        "ap-definition-nl": "Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.",
         "ap-label-nl": "Materieel Ding",
-        "ap-usageNote-nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken. Het onderscheid tussen beide is gebaseerd op de natuurlijke begrenzing van het ding. De meeste fysieke objecten (zoals MensgemaaktObject) kunnen verplaatst worden, voor kenmerken (zoals MensgemaaktKenmerk) geldt dat niet, deze zitten vast aan het omliggend materiaal. De klasse MaterieelDing kan gebruikt worden wanneer het onderscheid tussen fysieke objecten en kenmerken er niet toe doet en de attributen op dit niveau toereikend zijn voor de data die men tracht uit te wisselen.",
+        "ap-usageNote-nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklass van deze subklassen, mn MensgemaaktObject.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
         "label-nl": "Materieel Ding",
         "definition-nl": "Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk.",
@@ -614,7 +632,7 @@
             "nl": "eigenaar"
           },
           "description": {
-            "nl": "De Agent die het MaterieelDing bezit."
+            "nl": "De Agent die het Materieel Ding bezit."
           },
           "usage": {},
           "domain": [
@@ -644,7 +662,7 @@
             "definition-nl": "De Agent die het MaterieelDing bezit.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
             "ap-label-nl": "eigenaar",
-            "ap-definition-nl": "De Agent die het MaterieelDing bezit.",
+            "ap-definition-nl": "De Agent die het Materieel Ding bezit.",
             "label-nl": "eigenaar"
           }
         },
@@ -656,7 +674,7 @@
             "nl": "beheerder"
           },
           "description": {
-            "nl": "De Agent die het MaterieelDing bewaart."
+            "nl": "De Agent die het Materieel Ding bewaart."
           },
           "usage": {},
           "domain": [
@@ -685,7 +703,7 @@
           "rawTags": {
             "label-nl": "beheerder",
             "definition-nl": "De Agent die het MaterieelDing bewaart.",
-            "ap-definition-nl": "De Agent die het MaterieelDing bewaart.",
+            "ap-definition-nl": "De Agent die het Materieel Ding bewaart.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper",
             "ap-label-nl": "beheerder"
           }
@@ -698,10 +716,10 @@
             "nl": "bestaat uit"
           },
           "description": {
-            "nl": "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk."
+            "nl": "Materieel Ding dat deel uitmaakt van het Materieel Ding."
           },
           "usage": {
-            "nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing."
+            "nl": "Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding."
           },
           "domain": [
             {
@@ -729,8 +747,8 @@
           "rawTags": {
             "ap-label-nl": "bestaat uit",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of",
-            "ap-usageNote-nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.",
-            "ap-definition-nl": "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk.",
+            "ap-usageNote-nl": "Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding.",
+            "ap-definition-nl": "Materieel Ding dat deel uitmaakt van het Materieel Ding.",
             "usageNote-nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.",
             "label-nl": "bestaat uit",
             "definition-nl": "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk."
@@ -744,7 +762,7 @@
             "nl": "materiaal"
           },
           "description": {
-            "nl": "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."
+            "nl": "Beschrijft het Materiaal waaruit het Materieel Ding bestaat."
           },
           "usage": {},
           "domain": [
@@ -772,7 +790,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "materiaal",
-            "ap-definition-nl": "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat.",
+            "ap-definition-nl": "Beschrijft het Materiaal waaruit het Materieel Ding bestaat.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P45_consists_of",
             "label-nl": "materiaal",
             "definition-nl": "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."
@@ -786,7 +804,7 @@
             "nl": "conditie"
           },
           "description": {
-            "nl": "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."
+            "nl": "Beschrijft de Conditie waarin het Materieel Ding zich bevindt."
           },
           "usage": {},
           "domain": [
@@ -817,7 +835,7 @@
             "definition-nl": "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
             "ap-label-nl": "conditie",
-            "ap-definition-nl": "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."
+            "ap-definition-nl": "Beschrijft de Conditie waarin het Materieel Ding zich bevindt."
           }
         },
         {
@@ -828,7 +846,7 @@
             "nl": "dimensie"
           },
           "description": {
-            "nl": "Beschrijft een Dimensie van het MensgemaaktObject."
+            "nl": "Omvang van het Materieel Ding."
           },
           "usage": {
             "nl": "Bv de afmetingen."
@@ -862,7 +880,7 @@
             "usageNote-nl": "Bv de afmetingen.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
             "ap-label-nl": "dimensie",
-            "ap-definition-nl": "Beschrijft een Dimensie van het MensgemaaktObject.",
+            "ap-definition-nl": "Omvang van het Materieel Ding.",
             "ap-usageNote-nl": "Bv de afmetingen."
           }
         },
@@ -874,7 +892,7 @@
             "nl": "is overgedragen bij verwerving"
           },
           "description": {
-            "nl": "De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.\t"
+            "nl": "De Activiteit waarbij de eigendomstitel van het Materieel Ding werd overgedragen.\t"
           },
           "usage": {},
           "domain": [
@@ -905,7 +923,7 @@
             "definition-nl": "De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.\t",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through",
             "ap-label-nl": "is overgedragen bij verwerving",
-            "ap-definition-nl": "De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.\t"
+            "ap-definition-nl": "De Activiteit waarbij de eigendomstitel van het Materieel Ding werd overgedragen.\t"
           }
         },
         {
@@ -916,7 +934,7 @@
             "nl": "draagt"
           },
           "description": {
-            "nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject."
+            "nl": "InformatieObject dat gedragen wordt door het Materieel Ding."
           },
           "usage": {},
           "domain": [
@@ -946,7 +964,7 @@
             "ap-label-nl": "draagt",
             "label-nl": "draagt",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
-            "ap-definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject.",
+            "ap-definition-nl": "InformatieObject dat gedragen wordt door het Materieel Ding.",
             "definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject."
           }
         },
@@ -958,7 +976,7 @@
             "nl": "is onderworpen aan"
           },
           "description": {
-            "nl": "Recht waaraan het MaterieelDing is onderworpen."
+            "nl": "Recht waaraan het Materieel Ding is onderworpen."
           },
           "usage": {},
           "domain": [
@@ -989,7 +1007,7 @@
             "label-nl": "is onderworpen aan",
             "definition-nl": "Recht waaraan het MaterieelDing is onderworpen.",
             "ap-label-nl": "is onderworpen aan",
-            "ap-definition-nl": "Recht waaraan het MaterieelDing is onderworpen."
+            "ap-definition-nl": "Recht waaraan het Materieel Ding is onderworpen."
           }
         },
         {
@@ -1000,7 +1018,7 @@
             "nl": "gaat over"
           },
           "description": {
-            "nl": "Het onderwerp van een MaterieelDing."
+            "nl": "Het onderwerp van een Materieel Ding."
           },
           "usage": {},
           "domain": [
@@ -1031,7 +1049,7 @@
             "label-nl": "gaat over",
             "definition-nl": "Het onderwerp van een MaterieelDing.",
             "ap-label-nl": "gaat over",
-            "ap-definition-nl": "Het onderwerp van een MaterieelDing."
+            "ap-definition-nl": "Het onderwerp van een Materieel Ding."
           }
         }
       ]
@@ -1285,18 +1303,18 @@
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
-      "name": "Materieelobject",
+      "name": "MaterieelObject",
       "label": {
-        "nl": "MaterieelObject"
+        "nl": "Materieel Object"
       },
-      "sort": "MaterieelObject",
+      "sort": "Materieel Object",
       "description": {},
       "usage": {},
       "parents": [],
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
         "label-nl": "MaterieelObject",
-        "ap-label-nl": "MaterieelObject"
+        "ap-label-nl": "Materieel Object"
       },
       "properties": []
     },
@@ -1353,7 +1371,7 @@
             "nl": "beeldt uit"
           },
           "description": {
-            "nl": "Entiteit die door het MensgemaaktObject wordt uitgebeeld."
+            "nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld."
           },
           "usage": {
             "nl": "Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort."
@@ -1383,7 +1401,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "beeldt uit",
-            "ap-definition-nl": "Entiteit die door het MensgemaaktObject wordt uitgebeeld.",
+            "ap-definition-nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld.",
             "ap-usageNote-nl": "Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P62_depicts",
             "label-nl": "beeldt uit",
@@ -1398,7 +1416,7 @@
             "nl": "locatie"
           },
           "description": {
-            "nl": "Beschrijft de huidige locatie van het MensgemaaktObject."
+            "nl": "Beschrijft de huidige locatie van het Mensgemaakt Object."
           },
           "usage": {},
           "domain": [
@@ -1426,7 +1444,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "locatie",
-            "ap-definition-nl": "Beschrijft de huidige locatie van het MensgemaaktObject.",
+            "ap-definition-nl": "Beschrijft de huidige locatie van het Mensgemaakt Object.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location",
             "label-nl": "locatie",
             "definition-nl": "Beschrijft de huidige locatie van het MensgemaaktObject."
@@ -1440,7 +1458,7 @@
             "nl": "permanente locatie"
           },
           "description": {
-            "nl": "Beschrijft de permanente locatie van het MensgemaaktObject."
+            "nl": "Beschrijft de permanente locatie van het Mensgemaakt Object."
           },
           "usage": {
             "nl": "Dit is de plaats die normaal gereserveerd is voor het object, zoals het depot waar het wordt bewaard of het museum waar het in principe wordt tentoongesteld. Objecten worden echter soms uitgeleend aan andere instellingen of maken deel uit van een tijdelijke tentoonstelling waardoor de permanenteLocatie kan verschillen van de huidige locatie."
@@ -1470,7 +1488,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "permanente locatie",
-            "ap-definition-nl": "Beschrijft de permanente locatie van het MensgemaaktObject.",
+            "ap-definition-nl": "Beschrijft de permanente locatie van het Mensgemaakt Object.",
             "ap-usageNote-nl": "Dit is de plaats die normaal gereserveerd is voor het object, zoals het depot waar het wordt bewaard of het museum waar het in principe wordt tentoongesteld. Objecten worden echter soms uitgeleend aan andere instellingen of maken deel uit van een tijdelijke tentoonstelling waardoor de permanenteLocatie kan verschillen van de huidige locatie.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location",
             "label-nl": "permanente locatie",
@@ -1485,7 +1503,7 @@
             "nl": "productie"
           },
           "description": {
-            "nl": "De Activiteit waarbij het MaterieelDing werd geproduceerd."
+            "nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
           },
           "usage": {},
           "domain": [
@@ -1516,7 +1534,7 @@
             "definition-nl": "De Activiteit waarbij het MaterieelDing werd geproduceerd.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by",
             "ap-label-nl": "productie",
-            "ap-definition-nl": "De Activiteit waarbij het MaterieelDing werd geproduceerd."
+            "ap-definition-nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
           }
         },
         {
@@ -1527,7 +1545,7 @@
             "nl": "titel"
           },
           "description": {
-            "nl": "Titel van het MensgemaaktObject."
+            "nl": "Titel van het Mensgemaakt Object."
           },
           "usage": {},
           "domain": [
@@ -1555,7 +1573,7 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "titel",
-            "ap-definition-nl": "Titel van het MensgemaaktObject.",
+            "ap-definition-nl": "Titel van het Mensgemaakt Object.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
             "label-nl": "titel",
             "definition-nl": "Titel van het MensgemaaktObject."
@@ -1574,7 +1592,7 @@
         "nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens."
       },
       "usage": {
-        "nl": "Conceptuele Objecten zijn typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Bijvoorbeeld: Beethoven's \"Ode aan de Vreugde\", de definitie van \"Ontologie\", of kennis van hoe het is om olympisch kampioen te worden. Conceptuele Objecten kunnen op meerdere dragers tegelijk bestaan, bv op papier, audio, foto, harde schijf, canvas, alsook het menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt."
+        "nl": "Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Subklassen zijn Type, Propositioneel Object en Symbolisch Object en subklassen daarvan. In het implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een selectie van subklassen van deze subklassen (mn Recht en InformatieObject)."
       },
       "parents": [
         {
@@ -1595,11 +1613,11 @@
       "rawTags": {
         "ap-definition-nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.",
         "ap-label-nl": "Conceptueel Object",
-        "ap-usageNote-nl": "Conceptuele Objecten zijn typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Bijvoorbeeld: Beethoven's \"Ode aan de Vreugde\", de definitie van \"Ontologie\", of kennis van hoe het is om olympisch kampioen te worden. Conceptuele Objecten kunnen op meerdere dragers tegelijk bestaan, bv op papier, audio, foto, harde schijf, canvas, alsook het menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt.",
+        "ap-usageNote-nl": "Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Subklassen zijn Type, Propositioneel Object en Symbolisch Object en subklassen daarvan. In het implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een selectie van subklassen van deze subklassen (mn Recht en InformatieObject).",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
         "label-nl": "Conceptueel Object",
         "definition-nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.",
-        "usageNote-nl": "Kan geproduceerd zijn met technologische middelen zoals camera's of computers. Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of doorgegeven. Kunnen op meerdere dragers tegelijk bestaan, bv papier, audio, foto, harde schijf, canvas, menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt."
+        "usageNote-nl": "Kan geproduceerd zijn met technologische middelen zoals camera's of computers. Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of doorgegeven. Kunnen op meerdere dragers tegelijk bestaan, bv papier, audio, foto, harde schijf, canvas, menselijk geheugen. Een ConceptueelObject kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt."
       },
       "properties": [
         {
@@ -1610,7 +1628,7 @@
             "nl": "creatie"
           },
           "description": {
-            "nl": "De Activiteit waarbij het ConceptueelDing werd gecreëerd."
+            "nl": "De Activiteit waarbij het Conceptueel Object werd gecreëerd."
           },
           "usage": {},
           "domain": [
@@ -1639,9 +1657,9 @@
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by",
             "ap-label-nl": "creatie",
-            "ap-definition-nl": "De Activiteit waarbij het ConceptueelDing werd gecreëerd.",
+            "ap-definition-nl": "De Activiteit waarbij het Conceptueel Object werd gecreëerd.",
             "label-nl": "creatie",
-            "definition-nl": "De Activiteit waarbij het ConceptueelDing werd gecreëerd."
+            "definition-nl": "De Activiteit waarbij het ConceptueelObject werd gecreëerd."
           }
         },
         {
@@ -1652,10 +1670,10 @@
             "nl": "dimensie"
           },
           "description": {
-            "nl": "Beschrijft een Dimensie van het MensgemaaktObject."
+            "nl": "Beschrijft een Dimensie van het Mensgemaakt Object."
           },
           "usage": {
-            "nl": "Bv de afmetingen."
+            "nl": "Bv de omvang of het belang van het Conceptueel Object."
           },
           "domain": [
             {
@@ -1686,8 +1704,8 @@
             "usageNote-nl": "Bv de afmetingen.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
             "ap-label-nl": "dimensie",
-            "ap-definition-nl": "Beschrijft een Dimensie van het MensgemaaktObject.",
-            "ap-usageNote-nl": "Bv de afmetingen."
+            "ap-definition-nl": "Beschrijft een Dimensie van het Mensgemaakt Object.",
+            "ap-usageNote-nl": "Bv de omvang of het belang van het Conceptueel Object."
           }
         },
         {
@@ -1698,7 +1716,7 @@
             "nl": "titel"
           },
           "description": {
-            "nl": "Titel van het InformatieObject."
+            "nl": "Titel van het Conceptueel Object."
           },
           "usage": {},
           "domain": [
@@ -1729,7 +1747,7 @@
             "definition-nl": "Titel van het InformatieObject.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
             "ap-label-nl": "titel",
-            "ap-definition-nl": "Titel van het InformatieObject."
+            "ap-definition-nl": "Titel van het Conceptueel Object."
           }
         }
       ]
@@ -1773,7 +1791,7 @@
             "nl": "Identificator van de Entiteit."
           },
           "usage": {
-            "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+            "nl": "Bij implementatie in RDF is de uri vd Entiteit de Identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
           },
           "domain": [
             {
@@ -1799,7 +1817,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-usageNote-nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
+            "ap-usageNote-nl": "Bij implementatie in RDF is de uri vd Entiteit de Identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
             "uri": "http://www.w3.org/ns/adms#identifier",
             "ap-definition-nl": "Identificator van de Entiteit.",
             "ap-label-nl": "identificator",
@@ -2012,10 +2030,10 @@
       },
       "sort": "Gebeurtenis",
       "description": {
-        "nl": "Onderscheidbaar,afgelijnd en samenhangend proces of interactie dat een cultureel,sociaal of materieel effect teweeg brengt."
+        "nl": "Onderscheidbaar, afgelijnd en samenhangend proces of interactie dat een cultureel, sociaal of materieel effect teweeg brengt."
       },
       "usage": {
-        "nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van TemporeleEntiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \r\n"
+        "nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van Temporele Entiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \n"
       },
       "parents": [
         {
@@ -2027,14 +2045,58 @@
         }
       ],
       "rawTags": {
-        "ap-definition-nl": "Onderscheidbaar,afgelijnd en samenhangend proces of interactie dat een cultureel,sociaal of materieel effect teweeg brengt.",
+        "ap-definition-nl": "Onderscheidbaar, afgelijnd en samenhangend proces of interactie dat een cultureel, sociaal of materieel effect teweeg brengt.",
         "ap-label-nl": "Gebeurtenis",
-        "ap-usageNote-nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van TemporeleEntiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \r\n",
+        "ap-usageNote-nl": "Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van Temporele Entiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. \n",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
         "label-nl": "Gebeurtenis",
         "definition-nl": "Onderscheidbaar,afgelijnd en samenhangend proces of interactie dat een cultureel,sociaal of materieel effect teweeg brengt."
       },
       "properties": [
+        {
+          "uri": "http://www.w3.org/ns/adms#identifier",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "Identificator van de Gebeurtenis."
+          },
+          "usage": {
+            "nl": "Bij implementatie in RDF is de uri vd Gebeurtenis de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn."
+          },
+          "domain": [
+            {
+              "EA-Name": "Gebeurtenis",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E5_Event"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Identificator",
+              "range_uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Identificator",
+              "range_puri": "http://www.w3.org/ns/adms#Identifier",
+              "range_label": {
+                "nl": "Identificator"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.w3.org/ns/adms#identifier",
+            "ap-label-nl": "identificator",
+            "ap-definition-nl": "Identificator van de Gebeurtenis.",
+            "ap-usageNote-nl": "Bij implementatie in RDF is de uri vd Gebeurtenis de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.",
+            "label-nl": "identificator"
+          }
+        },
         {
           "uri": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
           "name": "plaats",
@@ -2085,7 +2147,7 @@
             "nl": "tijd"
           },
           "description": {
-            "nl": "Periode waarin de Gebeurtenis plaatsvond."
+            "nl": "Moment waarop of periode waarin de Gebeurtenis plaatsvond."
           },
           "usage": {},
           "domain": [
@@ -2102,10 +2164,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#TemporeleEntiteit",
+              "range_uri": "#Temporele Entiteit",
               "range_puri": "http://www.w3.org/2006/time#TemporalEntity",
               "range_label": {
-                "nl": "TemporeleEntiteit"
+                "nl": "Temporele Entiteit"
               }
             }
           ],
@@ -2114,7 +2176,7 @@
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
             "ap-label-nl": "tijd",
-            "ap-definition-nl": "Periode waarin de Gebeurtenis plaatsvond.",
+            "ap-definition-nl": "Moment waarop of periode waarin de Gebeurtenis plaatsvond.",
             "label-nl": "tijd",
             "definition-nl": "Periode waarin de Gebeurtenis plaatsvond."
           }
@@ -2219,10 +2281,10 @@
       },
       "sort": "Creatie",
       "description": {
-        "nl": "Activiteit die leidt tot het onstaan van een ConceptueelDing, bv een gedicht, tekst, muziek, beelden, films etc."
+        "nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van InformatieObjecten uit te wisselen, bijvoorbeeld voor publicaties, tentoonstellingen en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
       },
       "parents": [
         {
@@ -2235,13 +2297,56 @@
       ],
       "rawTags": {
         "ap-label-nl": "Creatie",
-        "ap-definition-nl": "Activiteit die leidt tot het onstaan van een ConceptueelDing, bv een gedicht, tekst, muziek, beelden, films etc.",
+        "ap-definition-nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
         "label-nl": "Creatie",
-        "definition-nl": "Activiteit die leidt tot het onstaan van een ConceptueelDing, bv een gedicht, tekst, muziek, beelden, films etc.",
-        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van InformatieObjecten uit te wisselen, bijvoorbeeld voor publicaties, tentoonstellingen en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
+        "definition-nl": "Activiteit die leidt tot het onstaan van een ConceptueelObject, bv een gedicht, tekst, muziek, beelden, films etc.",
+        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/P94_has_created",
+          "name": "creatie",
+          "sort": "creatie",
+          "label": {
+            "nl": "creatie"
+          },
+          "description": {
+            "nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Creatie",
+              "uri": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "ConceptueelObject",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Conceptueel Object",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
+              "range_label": {
+                "nl": "Conceptueel Object"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P94_has_created",
+            "ap-label-nl": "creatie",
+            "ap-definition-nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd.",
+            "label-nl": "creatie",
+            "definition-nl": "Het koppelen van een conceptuele creatie aan een ConceptueelObject."
+          }
+        }
+      ]
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
@@ -2251,16 +2356,16 @@
       },
       "sort": "Ding",
       "description": {
-        "nl": "Afzonderlijk hanteerbaar,identificeerbaar,als eenheid te beschrijven,persistent item."
+        "nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item."
       },
       "usage": {
-        "nl": "Het kan om fysieke voorwerpen gaan maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd,kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: te instantiëren als ConceptueelObject of MaterieelDing of subklassen daarvan."
+        "nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC-CRM</a>."
       },
       "parents": [],
       "rawTags": {
-        "ap-definition-nl": "Afzonderlijk hanteerbaar,identificeerbaar,als eenheid te beschrijven,persistent item.",
+        "ap-definition-nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.",
         "ap-label-nl": "Ding",
-        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd,kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: te instantiëren als ConceptueelObject of MaterieelDing of subklassen daarvan.",
+        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC-CRM</a>.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
         "label-nl": "Ding"
       },
@@ -2268,35 +2373,35 @@
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing",
-      "name": "Mensgemaaktding",
+      "name": "MensgemaaktDing",
       "label": {
-        "nl": "MensgemaaktDing"
+        "nl": "Mensgemaakt Ding"
       },
-      "sort": "MensgemaaktDing",
+      "sort": "Mensgemaakt Ding",
       "description": {},
       "usage": {},
       "parents": [],
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing",
         "label-nl": "MensgemaaktDing",
-        "ap-label-nl": "MensgemaaktDing"
+        "ap-label-nl": "Mensgemaakt Ding"
       },
       "properties": []
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
-      "name": "Wettelijkobject",
+      "name": "WettelijkObject",
       "label": {
-        "nl": "WettelijkObject"
+        "nl": "Wettelijk Object"
       },
-      "sort": "WettelijkObject",
+      "sort": "Wettelijk Object",
       "description": {},
       "usage": {},
       "parents": [],
       "rawTags": {
         "label-nl": "WettelijkObject",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
-        "ap-label-nl": "WettelijkObject"
+        "ap-label-nl": "Wettelijk Object"
       },
       "properties": []
     },
@@ -2311,7 +2416,7 @@
         "nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan."
       },
       "usage": {
-        "nl": "Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen."
+        "nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen."
       },
       "parents": [
         {
@@ -2332,7 +2437,7 @@
       "rawTags": {
         "ap-definition-nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.",
         "ap-label-nl": "Informatie Object",
-        "ap-usageNote-nl": "Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
+        "ap-usageNote-nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
         "definition-nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.",
         "usageNote-nl": "Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
@@ -2350,7 +2455,7 @@
             "nl": "Entiteit waarnaar het InformatieObject verwijst."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver."
+            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
           },
           "domain": [
             {
@@ -2381,7 +2486,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
             "ap-label-nl": "verwijst naar",
             "ap-definition-nl": "Entiteit waarnaar het InformatieObject verwijst.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver."
+            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
           }
         },
         {
@@ -2395,7 +2500,7 @@
             "nl": "Zelfstandig onderdeel van het InformatieObject."
           },
           "usage": {
-            "nl": "Eerder dan bij een component van een ConceptueelDing, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing."
+            "nl": "Eerder dan bij een component van een Conceptueel Object, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing."
           },
           "domain": [
             {
@@ -2422,8 +2527,8 @@
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "Zelfstandig onderdeel van het InformatieObject.",
-            "usageNote-nl": "Eerder dan bij een component van een ConceptueelDing, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
-            "ap-usageNote-nl": "Eerder dan bij een component van een ConceptueelDing, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
+            "usageNote-nl": "Eerder dan bij een component van een ConceptueelObject, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
+            "ap-usageNote-nl": "Eerder dan bij een component van een Conceptueel Object, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.",
             "ap-label-nl": "omvat",
             "label-nl": "omvat",
             "definition-nl": "Zelfstandig onderdeel van het InformatieObject.",
@@ -2441,7 +2546,7 @@
             "nl": "Het onderwerp van het InformatieObject."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           },
           "domain": [
             {
@@ -2469,11 +2574,11 @@
           "rawTags": {
             "label-nl": "gaat over",
             "definition-nl": "Het onderwerp van het InformatieObject.",
-            "usageNote-nl": "Niet te verwarren met het attribuut verwijstNaar dat veel algemener is.",
+            "usageNote-nl": "Niet te verwarren met het attribuut \"verwijst naar\" dat veel algemener is.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
             "ap-label-nl": "gaat over",
             "ap-definition-nl": "Het onderwerp van het InformatieObject.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           }
         },
         {
@@ -2484,7 +2589,7 @@
             "nl": "drager"
           },
           "description": {
-            "nl": "Het MensgemaaktObject dat het InformatieObject draagt."
+            "nl": "Het Mensgemaakt Object dat het InformatieObject draagt."
           },
           "usage": {},
           "domain": [
@@ -2511,7 +2616,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Het MensgemaaktObject dat het InformatieObject draagt.",
+            "ap-definition-nl": "Het Mensgemaakt Object dat het InformatieObject draagt.",
             "label-nl": "drager",
             "definition-nl": "Het MensgemaaktObject dat het InformatieObject draagt.",
             "ap-label-nl": "drager",
@@ -2526,7 +2631,7 @@
             "nl": "rechtenhouder"
           },
           "description": {
-            "nl": "\tAgent die een Recht bezit op het WettelijkObject."
+            "nl": "\tAgent die een Recht bezit op het Wettelijk Object."
           },
           "usage": {},
           "domain": [
@@ -2557,7 +2662,7 @@
             "label-nl": "rechtenhouder",
             "ap-label-nl": "rechtenhouder",
             "definition-nl": "\tAgent die een Recht bezit op het WettelijkObject.",
-            "ap-definition-nl": "\tAgent die een Recht bezit op het WettelijkObject."
+            "ap-definition-nl": "\tAgent die een Recht bezit op het Wettelijk Object."
           }
         },
         {
@@ -2612,10 +2717,10 @@
       },
       "sort": "Activiteit",
       "description": {
-        "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,sociaal of materieel effect teweeg te brengen."
+        "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen."
       },
       "usage": {
-        "nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving. Hiervan moeten geen instanties gemaakt worden."
+        "nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving."
       },
       "parents": [
         {
@@ -2627,13 +2732,13 @@
         }
       ],
       "rawTags": {
-        "ap-definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,sociaal of materieel effect teweeg te brengen.",
+        "ap-definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
         "ap-label-nl": "Activiteit",
-        "ap-usageNote-nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving. Hiervan moeten geen instanties gemaakt worden.",
+        "ap-usageNote-nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
         "label-nl": "Activiteit",
-        "definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,sociaal of materieel effect teweeg te brengen.",
-        "usageNote-nl": "Subklasse van Gebeurtenis,verschil is dat een Activiteit bewust door een Agent wordt veroorzaakt (die dus meer is dan louter een deelnemer). Kan om langdurige acties gaan zoals het bouwen van een tempel of kortere acties zoals het maken van een tekening."
+        "definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
+        "usageNote-nl": "Subklasse van Gebeurtenis, verschil is dat een Activiteit bewust door een Agent wordt veroorzaakt (die dus meer is dan louter een deelnemer). Kan om langdurige acties gaan zoals het bouwen van een tempel of kortere acties zoals het maken van een tekening."
       },
       "properties": [
         {
@@ -2822,18 +2927,18 @@
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
-      "name": "Propositioneelobject",
+      "name": "PropositioneelObject",
       "label": {
-        "nl": "PropositioneelObject"
+        "nl": "Propositioneel Object"
       },
-      "sort": "PropositioneelObject",
+      "sort": "Propositioneel Object",
       "description": {},
       "usage": {},
       "parents": [],
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
         "label-nl": "PropositioneelObject",
-        "ap-label-nl": "PropositioneelObject"
+        "ap-label-nl": "Propositioneel Object"
       },
       "properties": []
     },
@@ -2845,10 +2950,10 @@
       },
       "sort": "Verwerving",
       "description": {
-        "nl": "Overdracht van de eigendomstitel van een MaterieelDing van de ene Agent naar de andere, bv door een verkoop of een erfenis."
+        "nl": "Overdracht van de eigendomstitel van een Materieel Ding van de ene Agent naar de andere, bv door een verkoop of een erfenis."
       },
       "usage": {
-        "nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het MaterieelDing. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
+        "nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
       },
       "parents": [
         {
@@ -2862,8 +2967,8 @@
       "rawTags": {
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition",
         "ap-label-nl": "Verwerving",
-        "ap-definition-nl": "Overdracht van de eigendomstitel van een MaterieelDing van de ene Agent naar de andere, bv door een verkoop of een erfenis.",
-        "ap-usageNote-nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het MaterieelDing. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
+        "ap-definition-nl": "Overdracht van de eigendomstitel van een Materieel Ding van de ene Agent naar de andere, bv door een verkoop of een erfenis.",
+        "ap-usageNote-nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n",
         "label-nl": "Verwerving",
         "definition-nl": "Overdracht van de eigendomstitel van een MaterieelDing van de ene Agent naar de andere, bv door een verkoop of een erfenis.",
         "usageNote-nl": "De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het MaterieelDing. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.\n"
@@ -2877,7 +2982,7 @@
             "nl": "overdracht van"
           },
           "description": {
-            "nl": "MaterieelDing dat werd verworven."
+            "nl": "Materieel Ding dat werd verworven."
           },
           "usage": {},
           "domain": [
@@ -2906,7 +3011,7 @@
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of",
             "ap-label-nl": "overdracht van",
-            "ap-definition-nl": "MaterieelDing dat werd verworven.",
+            "ap-definition-nl": "Materieel Ding dat werd verworven.",
             "label-nl": "overdracht van",
             "definition-nl": "\tMaterieelDing dat werd verworven."
           }
@@ -3096,14 +3201,17 @@
       "description": {
         "nl": "Idee of begrip."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Bedoeld om kennis te organiseren, bvb in een codelijst of taxonomie (een zgn ConceptScheme). Zie <a href=\"https://www.w3.org/TR/skos-reference/\">SKOS</a> voor meer informatie."
+      },
       "parents": [],
       "rawTags": {
         "definition-nl": "Idee of begrip.",
         "label-nl": "Concept",
         "uri": "http://www.w3.org/2004/02/skos/core#Concept",
         "ap-label-nl": "Concept",
-        "ap-definition-nl": "Idee of begrip."
+        "ap-definition-nl": "Idee of begrip.",
+        "ap-usageNote-nl": "Bedoeld om kennis te organiseren, bvb in een codelijst of taxonomie (een zgn ConceptScheme). Zie <a href=\"https://www.w3.org/TR/skos-reference/\">SKOS</a> voor meer informatie."
       },
       "properties": []
     },
@@ -3373,10 +3481,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#TemporeleEntiteit",
+              "range_uri": "#Temporele Entiteit",
               "range_puri": "http://www.w3.org/2006/time#TemporalEntity",
               "range_label": {
-                "nl": "TemporeleEntiteit"
+                "nl": "Temporele Entiteit"
               }
             }
           ],
@@ -3415,10 +3523,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#TemporeleEntiteit",
+              "range_uri": "#Temporele Entiteit",
               "range_puri": "http://www.w3.org/2006/time#TemporalEntity",
               "range_label": {
-                "nl": "TemporeleEntiteit"
+                "nl": "Temporele Entiteit"
               }
             }
           ],
@@ -3577,10 +3685,10 @@
       },
       "sort": "Belgisch Adres",
       "description": {
-        "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode."
+        "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode."
       },
       "usage": {
-        "nl": "De definitie heeft betrekking op Belgische adressen. In andere landen kan een adres eventueel verwijzen naar andere geografisch objecten (niet gebouweenheid of perceel) of bestaan uit andere aanduidingen (verschillend van huisnummer en busnummer) of uit andere componenten dan straatnaam, gemeentenaam of postcode. Alternatieve adresaanduidingen dan huisnummer of busnummer (bv ingangaanduiding, trapaanduiding, verdiepaanduiding...) of een gebouwnaam of kamernaam ed zijn mogelijk dmv een associatie met adresuitbreiding. Uitwisseling van buitenlandse adressen moet gebeuren mbv het object adresvoorstelling."
+        "nl": "De definitie heeft betrekking op Belgische adressen. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/\">OSLO-Adresregister</a>."
       },
       "parents": [
         {
@@ -3592,8 +3700,8 @@
         }
       ],
       "rawTags": {
-        "ap-definition-nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
-        "ap-usageNote-nl": "De definitie heeft betrekking op Belgische adressen. In andere landen kan een adres eventueel verwijzen naar andere geografisch objecten (niet gebouweenheid of perceel) of bestaan uit andere aanduidingen (verschillend van huisnummer en busnummer) of uit andere componenten dan straatnaam, gemeentenaam of postcode. Alternatieve adresaanduidingen dan huisnummer of busnummer (bv ingangaanduiding, trapaanduiding, verdiepaanduiding...) of een gebouwnaam of kamernaam ed zijn mogelijk dmv een associatie met adresuitbreiding. Uitwisseling van buitenlandse adressen moet gebeuren mbv het object adresvoorstelling.",
+        "ap-definition-nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode.",
+        "ap-usageNote-nl": "De definitie heeft betrekking op Belgische adressen. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/\">OSLO-Adresregister</a>.",
         "definition-nl": "Informatie die toelaat om in België op een gestructureerde en unieke manier te verwijzen naar een \"gebouweenheid\", \"gebouw\", een ligplaats, een standplaats of een perceel op basis van de naam van de gemeente, de straatnaam en het huisnummer eventueel aangevuld met een busnummer en met een postcode.",
         "label-nl": "Belgisch Adres",
         "ap-label-nl": "Belgisch Adres"
@@ -3687,7 +3795,7 @@
             "nl": "Entiteit waarnaar het InformatieObject verwijst."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver."
+            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
           },
           "domain": [
             {
@@ -3718,7 +3826,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
             "ap-label-nl": "verwijst naar",
             "ap-definition-nl": "Entiteit waarnaar het InformatieObject verwijst.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver."
+            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
           }
         },
         {
@@ -3816,7 +3924,7 @@
             "nl": "Het onderwerp van de Set."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
+            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
           },
           "domain": [
             {
@@ -3848,7 +3956,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
             "ap-label-nl": "gaat over",
             "ap-definition-nl": "Het onderwerp van de Set.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
+            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
           }
         },
         {
@@ -3948,7 +4056,7 @@
         "nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd."
       },
       "usage": {
-        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit."
+        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-units</a> voor meer info."
       },
       "parents": [
         {
@@ -3963,7 +4071,39 @@
         "uri": "https://qudt.org/schema/qudt/QuantityKind",
         "label-nl": "Grootheid",
         "definition-nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.",
-        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit."
+        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-units</a> voor meer info."
+      },
+      "properties": []
+    },
+    {
+      "uri": "https://qudt.org/schema/qudt/Unit",
+      "name": "Eenheid",
+      "label": {
+        "nl": "Eenheid"
+      },
+      "sort": "Eenheid",
+      "description": {
+        "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
+      },
+      "usage": {
+        "nl": "Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
+      },
+      "parents": [
+        {
+          "label": "Concept",
+          "name": "Concept",
+          "package": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#Concept",
+          "scoped_uri": "#Concept"
+        }
+      ],
+      "rawTags": {
+        "definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
+        "label-nl": "Eenheid",
+        "uri": "https://qudt.org/schema/qudt/Unit",
+        "ap-label-nl": "Eenheid",
+        "ap-definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
+        "ap-usageNote-nl": "Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
       },
       "properties": []
     }
@@ -4595,13 +4735,13 @@
         "nl": "Staat waarin een object zich bevindt."
       },
       "usage": {
-        "nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk."
+        "nl": "Geldt voor een bepaalde periode. Slaat op een Materieel Ding, bv een Mensgemaakt Object of -Kenmerk."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Staat waarin een object zich bevindt.",
         "ap-label-nl": "Conditie",
-        "ap-usageNote-nl": "Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk.",
+        "ap-usageNote-nl": "Geldt voor een bepaalde periode. Slaat op een Materieel Ding, bv een Mensgemaakt Object of -Kenmerk.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State",
         "label-nl": "Conditie",
         "definition-nl": "Staat waarin een object zich bevindt.",
@@ -4774,7 +4914,9 @@
           "description": {
             "nl": "De eenheid waarin de waarde is uitgedrukt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Gebruik Concept of de subklasse Eenheid."
+          },
           "domain": [
             {
               "EA-Name": "Dimensie",
@@ -4803,7 +4945,8 @@
             "ap-definition-nl": "De eenheid waarin de waarde is uitgedrukt.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
             "label-nl": "eenheid",
-            "definition-nl": "De eenheid waarin de waarde is uitgedrukt."
+            "definition-nl": "De eenheid waarin de waarde is uitgedrukt.",
+            "ap-usageNote-nl": "Gebruik Concept of de subklasse Eenheid."
           }
         },
         {
@@ -4858,7 +5001,9 @@
           "description": {
             "nl": "Beschrijving van de Dimensie."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb om grootheid en eenheid verder te beschrijven of als deze niet gekend zijn."
+          },
           "domain": [
             {
               "EA-Name": "Dimensie",
@@ -4887,7 +5032,8 @@
             "ap-label-nl": "beschrijving",
             "ap-definition-nl": "Beschrijving van de Dimensie.",
             "label-nl": "beschrijving",
-            "definition-nl": "Beschrijving van de Dimensie."
+            "definition-nl": "Beschrijving van de Dimensie.",
+            "ap-usageNote-nl": "Bvb om grootheid en eenheid verder te beschrijven of als deze niet gekend zijn."
           }
         },
         {
@@ -4901,7 +5047,7 @@
             "nl": "Grootheid van de Dimensie."
           },
           "usage": {
-            "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht..."
+            "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid."
           },
           "domain": [
             {
@@ -4929,7 +5075,7 @@
           "rawTags": {
             "ap-label-nl": "type",
             "ap-definition-nl": "Grootheid van de Dimensie.",
-            "ap-usageNote-nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht...",
+            "ap-usageNote-nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
             "label-nl": "type",
             "definition-nl": "Grootheid van de Dimensie.",
@@ -5053,11 +5199,11 @@
       "usage": {},
       "parents": [
         {
-          "label": "TemporeleEntiteit",
+          "label": "Temporele Entiteit",
           "name": "TemporeleEntiteit",
           "package": "W3C-Time",
           "uri": "http://www.w3.org/2006/time#TemporalEntity",
-          "scoped_uri": "#TemporeleEntiteit"
+          "scoped_uri": "#Temporele Entiteit"
         }
       ],
       "rawTags": {
@@ -5070,10 +5216,10 @@
       "properties": [
         {
           "uri": "https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime",
-          "name": "inedtf",
-          "sort": "inEDTF",
+          "name": "inEdtf",
+          "sort": "in EDTF",
           "label": {
-            "nl": "inEDTF"
+            "nl": "in EDTF"
           },
           "description": {
             "nl": "Positie van een Moment, uitgedrukt in EDTF."
@@ -5104,7 +5250,7 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime",
-            "ap-label-nl": "inEDTF",
+            "ap-label-nl": "in EDTF",
             "label-nl": "in EDTF datumTijd",
             "definition-nl": "Positie van een Moment, uitgedrukt in EDTF.",
             "ap-definition-nl": "Positie van een Moment, uitgedrukt in EDTF."
@@ -5162,16 +5308,16 @@
       },
       "sort": "Periode",
       "description": {
-        "nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
       },
       "usage": {},
       "parents": [
         {
-          "label": "TemporeleEntiteit",
+          "label": "Temporele Entiteit",
           "name": "TemporeleEntiteit",
           "package": "W3C-Time",
           "uri": "http://www.w3.org/2006/time#TemporalEntity",
-          "scoped_uri": "#TemporeleEntiteit"
+          "scoped_uri": "#Temporele Entiteit"
         }
       ],
       "rawTags": {
@@ -5179,15 +5325,15 @@
         "label-nl": "Periode",
         "uri": "http://www.w3.org/2006/time#ProperInterval",
         "ap-label-nl": "Periode",
-        "ap-definition-nl": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+        "ap-definition-nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
       },
       "properties": [
         {
           "uri": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
-          "name": "inEdtfPeriode",
-          "sort": "in EDTF periode",
+          "name": "inEdtf",
+          "sort": "in EDTF",
           "label": {
-            "nl": "in EDTF periode"
+            "nl": "in EDTF"
           },
           "description": {
             "nl": "Waarde van een Periode, uitgedrukt in EDTF."
@@ -5218,7 +5364,7 @@
           "codelist_uri": "",
           "rawTags": {
             "uri": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
-            "ap-label-nl": "in EDTF periode",
+            "ap-label-nl": "in EDTF",
             "label-nl": "in EDTF periode",
             "definition-nl": "Waarde van een Periode, uitgedrukt in EDTF.",
             "ap-definition-nl": "Waarde van een Periode, uitgedrukt in EDTF."
@@ -5232,7 +5378,7 @@
             "nl": "tot"
           },
           "description": {
-            "nl": "Einde ve TemporeleEntiteit."
+            "nl": "Einde ve Temporele Entiteit."
           },
           "usage": {},
           "domain": [
@@ -5263,7 +5409,7 @@
             "label-nl": "tot",
             "definition-nl": "Einde ve TemporeleEntiteit.",
             "ap-label-nl": "tot",
-            "ap-definition-nl": "Einde ve TemporeleEntiteit."
+            "ap-definition-nl": "Einde ve Temporele Entiteit."
           }
         },
         {
@@ -5274,7 +5420,7 @@
             "nl": "van"
           },
           "description": {
-            "nl": "Start ve TemporeleEntiteit."
+            "nl": "Start ve Temporele Entiteit."
           },
           "usage": {},
           "domain": [
@@ -5305,18 +5451,18 @@
             "label-nl": "van",
             "definition-nl": "Start ve TemporeleEntiteit.",
             "ap-label-nl": "van",
-            "ap-definition-nl": "Start ve TemporeleEntiteit."
+            "ap-definition-nl": "Start ve Temporele Entiteit."
           }
         }
       ]
     },
     {
       "uri": "http://www.w3.org/2006/time#TemporalEntity",
-      "name": "Temporeleentiteit",
+      "name": "TemporeleEntiteit",
       "label": {
-        "nl": "TemporeleEntiteit"
+        "nl": "Temporele Entiteit"
       },
-      "sort": "TemporeleEntiteit",
+      "sort": "Temporele Entiteit",
       "description": {
         "nl": "Abstracte klasse voor temporele objecten."
       },
@@ -5326,7 +5472,7 @@
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Abstracte klasse voor temporele objecten.",
-        "ap-label-nl": "TemporeleEntiteit",
+        "ap-label-nl": "Temporele Entiteit",
         "ap-usageNote-nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn.",
         "label-nl": "TemporeleEntiteit",
         "uri": "http://www.w3.org/2006/time#TemporalEntity",
@@ -5367,7 +5513,7 @@
             "nl": "toegekend door (String)"
           },
           "description": {
-            "nl": "Naam vd agent die de identificator heeft toegekend."
+            "nl": "Naam vd Agent die de identificator heeft toegekend."
           },
           "usage": {
             "nl": " "
@@ -5400,7 +5546,7 @@
             "uri": "http://www.w3.org/ns/adms#schemaAgency",
             "label-nl": "schema agentschap",
             "ap-label-nl": "toegekend door (String)",
-            "ap-definition-nl": "Naam vd agent die de identificator heeft toegekend.",
+            "ap-definition-nl": "Naam vd Agent die de identificator heeft toegekend.",
             "definition-nl": "Naam vd agent die de identificator heeft toegekend."
           }
         },
@@ -6156,7 +6302,7 @@
             "nl": "administratieve eenheid niveau 1"
           },
           "description": {
-            "nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land."
+            "nl": "Hoogste administratieve eenheid vh adres, doorgaans een land."
           },
           "usage": {
             "nl": " "
@@ -6187,7 +6333,7 @@
           "rawTags": {
             "label-nl": "administratieve eenheid niveau 1",
             "uri": "http://www.w3.org/ns/locn#adminUnitL1",
-            "ap-definition-nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
+            "ap-definition-nl": "Hoogste administratieve eenheid vh adres, doorgaans een land.",
             "ap-usageNote-nl": " ",
             "definition-nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
             "ap-label-nl": "administratieve eenheid niveau 1"
@@ -6251,7 +6397,7 @@
         "nl": "Vorm- en positiekenmerken van een object."
       },
       "usage": {
-        "nl": "Beschrijft deze kenmerken dmv punten,lijnen,polygonen en coördinaten."
+        "nl": "Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten."
       },
       "parents": [
         {
@@ -6264,7 +6410,7 @@
       ],
       "rawTags": {
         "ap-definition-nl": "Vorm- en positiekenmerken van een object.",
-        "ap-usageNote-nl": "Beschrijft deze kenmerken dmv punten,lijnen,polygonen en coördinaten.",
+        "ap-usageNote-nl": "Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten.",
         "label-nl": "Geometrie",
         "uri": "http://www.w3.org/ns/locn#Geometry",
         "definition-nl": "Vorm- en positiekenmerken van een object.",
@@ -6377,12 +6523,12 @@
         "nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres."
       },
       "usage": {
-        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc. Opmerking: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek."
+        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres.",
-        "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc. Opmerking: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.",
+        "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.",
         "definition-nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d",
         "label-nl": "Locatie",
         "uri": "http://www.w3.org/ns/prov#Location",
@@ -6397,7 +6543,7 @@
             "nl": "identificator"
           },
           "description": {
-            "nl": "De identificator gebruikt om de locatie te identificeren."
+            "nl": "De Identificator gebruikt om de locatie te identificeren."
           },
           "usage": {},
           "domain": [
@@ -6428,7 +6574,7 @@
             "label-nl": "identificator",
             "definition-nl": "De identificator gebruikt om de locatie te identificeren.",
             "uri": "http://www.w3.org/ns/adms#identifier",
-            "ap-definition-nl": "De identificator gebruikt om de locatie te identificeren."
+            "ap-definition-nl": "De Identificator gebruikt om de locatie te identificeren."
           }
         }
       ]

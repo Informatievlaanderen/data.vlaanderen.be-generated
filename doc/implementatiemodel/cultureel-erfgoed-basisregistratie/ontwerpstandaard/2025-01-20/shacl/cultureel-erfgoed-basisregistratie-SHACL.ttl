@@ -16,7 +16,6 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EDTFShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PlaatsShape>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EenheidShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ValutaShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ContactInfoShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape>,
@@ -61,6 +60,7 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#RuimtelijkObjectShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GrootheidShape>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EenheidShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonsrelatieShape> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AankoopShape> a shacl:NodeShape;
@@ -204,7 +204,7 @@
   shacl:path <http://www.w3.org/ns/locn#thoroughfare> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/668a88a9eff0d829ffaeb5fef100df69b01da1d5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.administratieveeenheidniveau1";
-  shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+  shacl:description "Hoogste administratieve eenheid vh adres, doorgaans een land."@nl;
   shacl:maxCount 1;
   shacl:name "administratieve eenheid niveau 1"@nl;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL1> .
@@ -289,7 +289,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/c9e40ada78017997257dfd2851f9f80b98670cfa> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.administratieveeenheidniveau1";
   shacl:datatype rdf:langString;
-  shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+  shacl:description "Hoogste administratieve eenheid vh adres, doorgaans een land."@nl;
   shacl:name "administratieve eenheid niveau 1"@nl;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL1> .
 
@@ -319,9 +319,9 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/f64a98e323f1b956cad8886532c45e3e6490dbd6>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/4b124f0924fab01fc5967b50aacaf82bcf846710>,
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/4b124f0924fab01fc5967b50aacaf82bcf846710>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/bd32c9364485a2a85965fbee55f90a75d8d8fdef>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/979da8f7da561a9813cd00800ab21c59907f2eb3>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>;
   shacl:targetClass dc:Agent .
 
@@ -337,16 +337,17 @@
   shacl:name "contactinfo"@nl;
   shacl:path schema:contactPoint .
 
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/979da8f7da561a9813cd00800ab21c59907f2eb3> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Agent.heeft";
+  shacl:class crm:E30_Right;
+  shacl:description "Recht dat een Agent bezit."@nl;
+  shacl:name "heeft"@nl;
+  shacl:path crm:P75_possesses .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/bd32c9364485a2a85965fbee55f90a75d8d8fdef> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Agent.contactinfo";
   shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
   shacl:maxCount 1;
   shacl:name "contactinfo"@nl;
   shacl:path schema:contactPoint .
-
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AgentShape/f64a98e323f1b956cad8886532c45e3e6490dbd6> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Agent.bezit";
-  shacl:class crm:E30_Right;
-  shacl:name "bezit"@nl;
-  shacl:path crm:P75_possesses .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ClassificatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -400,19 +401,19 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape/8452958e7e3ff4f372a2572514a9e5828932e062> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObject.dimensie";
   shacl:class crm:E54_Dimension;
-  shacl:description "Beschrijft een Dimensie van het MensgemaaktObject."@nl;
+  shacl:description "Beschrijft een Dimensie van het Mensgemaakt Object."@nl;
   shacl:name "dimensie"@nl;
   shacl:path crm:P43_has_dimension .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape/f28ce523c4b4fcb15d8c7d4f279da195ba7403ab> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObject.titel";
   shacl:datatype rdf:langString;
-  shacl:description "Titel van het InformatieObject."@nl;
+  shacl:description "Titel van het Conceptueel Object."@nl;
   shacl:name "titel"@nl;
   shacl:path crm:P102_has_title .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape/f367a23d8205a5e4a83e5b9c5cce0e4eb05989d5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObject.creatie";
   shacl:class crm:E65_Creation;
-  shacl:description "De Activiteit waarbij het ConceptueelDing werd gecreëerd."@nl;
+  shacl:description "De Activiteit waarbij het Conceptueel Object werd gecreëerd."@nl;
   shacl:name "creatie"@nl;
   shacl:path crm:P94i_was_created_by .
 
@@ -559,7 +560,21 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#CreatieShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#CreatieShape/dad37608a85acfefb5866b9dc3b81c9272a09c9a>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#CreatieShape/f367a23d8205a5e4a83e5b9c5cce0e4eb05989d5>;
   shacl:targetClass crm:E65_Creation .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#CreatieShape/dad37608a85acfefb5866b9dc3b81c9272a09c9a> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Creatie.creatie";
+  shacl:description "Verwijzing naar het Conceptueel Object dat is gecreëerd."@nl;
+  shacl:minCount 1;
+  shacl:name "creatie"@nl;
+  shacl:path crm:P94_has_created .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#CreatieShape/f367a23d8205a5e4a83e5b9c5cce0e4eb05989d5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Creatie.creatie";
+  shacl:class crm:E28_Conceptual_Object;
+  shacl:description "Verwijzing naar het Conceptueel Object dat is gecreëerd."@nl;
+  shacl:name "creatie"@nl;
+  shacl:path crm:P94_has_created .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#DimensieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -631,7 +646,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EenheidShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://qudt.org/2.1/schema/qudt/Unit> .
+  shacl:targetClass <https://qudt.org/schema/qudt/Unit> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -675,6 +690,7 @@
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/0e9a7d4dbf6ec19568d474169ad717f71e882319>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/86c8e07c9db54c41d275d6a125f0a82c25815b80>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/c7398e9c9a6a99f55ace8794058f97c1e1f27910>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/241960e26b1c57d963200ab2cd3fc830d60573f4>,
@@ -683,6 +699,12 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/322371a77364a50f049d46180f6192532eea26dc>;
   shacl:targetClass crm:E5_Event .
 
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Gebeurtenis.identificator";
+  shacl:class <http://www.w3.org/ns/adms#Identifier>;
+  shacl:description "Identificator van de Gebeurtenis."@nl;
+  shacl:name "identificator"@nl;
+  shacl:path <http://www.w3.org/ns/adms#identifier> .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/0e9a7d4dbf6ec19568d474169ad717f71e882319> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Gebeurtenis.beschrijving";
   shacl:datatype rdf:langString;
   shacl:description "Beschrijving van de Entiteit."@nl;
@@ -690,7 +712,7 @@
   shacl:path crm:P3_has_note .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/241960e26b1c57d963200ab2cd3fc830d60573f4> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Gebeurtenis.tijd";
-  shacl:description "Periode waarin de Gebeurtenis plaatsvond."@nl;
+  shacl:description "Moment waarop of periode waarin de Gebeurtenis plaatsvond."@nl;
   shacl:maxCount 1;
   shacl:name "tijd"@nl;
   shacl:path crm:P4_has_time-span .
@@ -703,7 +725,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/43775369c86888c21f8d575ad00e9514818eaa33> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Gebeurtenis.tijd";
   shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
-  shacl:description "Periode waarin de Gebeurtenis plaatsvond."@nl;
+  shacl:description "Moment waarop of periode waarin de Gebeurtenis plaatsvond."@nl;
   shacl:name "tijd"@nl;
   shacl:path crm:P4_has_time-span .
 
@@ -714,7 +736,7 @@
   shacl:path crm:P7_took_place_at .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape/b990aa58bbfdcc567198c656b4df5c2a9246d05a> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Gebeurtenis.tijd";
-  shacl:description "Periode waarin de Gebeurtenis plaatsvond."@nl;
+  shacl:description "Moment waarop of periode waarin de Gebeurtenis plaatsvond."@nl;
   shacl:minCount 1;
   shacl:name "tijd"@nl;
   shacl:path crm:P4_has_time-span .
@@ -801,12 +823,12 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#IdentificatorShape/5f023c37e7d18ecf8aecd2bb45eae0a05687cd6f> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Identificator.toegekenddoor(String)";
   shacl:datatype xsd:string;
-  shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+  shacl:description "Naam vd Agent die de identificator heeft toegekend."@nl;
   shacl:name "toegekend door (String)"@nl;
   shacl:path <http://www.w3.org/ns/adms#schemaAgency> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#IdentificatorShape/9f8532791e13c302ae6dcc70ef353c796f948c85> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Identificator.toegekenddoor(String)";
-  shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+  shacl:description "Naam vd Agent die de identificator heeft toegekend."@nl;
   shacl:maxCount 1;
   shacl:name "toegekend door (String)"@nl;
   shacl:path <http://www.w3.org/ns/adms#schemaAgency> .
@@ -848,7 +870,7 @@
   shacl:path crm:P129_is_about .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder";
-  shacl:description """	Agent die een Recht bezit op het WettelijkObject."""@nl;
+  shacl:description """	Agent die een Recht bezit op het Wettelijk Object."""@nl;
   shacl:minCount 1;
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
@@ -861,13 +883,13 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/b0ef6d9d4bd199ad2c9e40b13d9859c6518c9958> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.drager";
   shacl:class crm:E18_Physical_Thing;
-  shacl:description "Het MensgemaaktObject dat het InformatieObject draagt."@nl;
+  shacl:description "Het Mensgemaakt Object dat het InformatieObject draagt."@nl;
   shacl:name "drager"@nl;
   shacl:path crm:P128i_is_carried_by .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/b851e527d772c697eed125fca5e7cd7f9002a57b> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder";
   shacl:class dc:Agent;
-  shacl:description """	Agent die een Recht bezit op het WettelijkObject."""@nl;
+  shacl:description """	Agent die een Recht bezit op het Wettelijk Object."""@nl;
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
 
@@ -884,7 +906,7 @@
   shacl:path crm:P165_incorporates .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/d744c5264831101844b549db8f158a58965b8282> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder";
-  shacl:description """	Agent die een Recht bezit op het WettelijkObject."""@nl;
+  shacl:description """	Agent die een Recht bezit op het Wettelijk Object."""@nl;
   shacl:maxCount 1;
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
@@ -898,18 +920,18 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Locatie.identificator";
   shacl:class <http://www.w3.org/ns/adms#Identifier>;
-  shacl:description "De identificator gebruikt om de locatie te identificeren."@nl;
+  shacl:description "De Identificator gebruikt om de locatie te identificeren."@nl;
   shacl:name "identificator"@nl;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape/972d73e7a13100b66c0c2f44466edac47aa1ab28> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Locatie.identificator";
-  shacl:description "De identificator gebruikt om de locatie te identificeren."@nl;
+  shacl:description "De Identificator gebruikt om de locatie te identificeren."@nl;
   shacl:minCount 1;
   shacl:name "identificator"@nl;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape/bb43a48c77e7d98609af3d3bb1b1648370465308> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Locatie.identificator";
-  shacl:description "De identificator gebruikt om de locatie te identificeren."@nl;
+  shacl:description "De Identificator gebruikt om de locatie te identificeren."@nl;
   shacl:maxCount 1;
   shacl:name "identificator"@nl;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
@@ -931,67 +953,67 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/0498a7759996084de1277c2c6e96bcc7e0114e9b> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.gaatover";
   shacl:class crm:E1_CRM_Entity;
-  shacl:description "Het onderwerp van een MaterieelDing."@nl;
+  shacl:description "Het onderwerp van een Materieel Ding."@nl;
   shacl:name "gaat over"@nl;
   shacl:path dc11:subject .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/07883a3556657f573b5da9b23ce06d8ae66f85c6> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.bestaatuit";
   shacl:class crm:E18_Physical_Thing;
-  shacl:description "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk."@nl;
+  shacl:description "Materieel Ding dat deel uitmaakt van het Materieel Ding."@nl;
   shacl:name "bestaat uit"@nl;
   shacl:path crm:P46_is_composed_of .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/0addb769185db828aa4c44888f0aa906471c3d06> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.eigenaar";
   shacl:class dc:Agent;
-  shacl:description "De Agent die het MaterieelDing bezit."@nl;
+  shacl:description "De Agent die het Materieel Ding bezit."@nl;
   shacl:name "eigenaar"@nl;
   shacl:path crm:P52_has_current_owner .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/1a30482b3e53ec3424e45bfaee16aa218fe34532> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.beheerder";
   shacl:class dc:Agent;
-  shacl:description "De Agent die het MaterieelDing bewaart."@nl;
+  shacl:description "De Agent die het Materieel Ding bewaart."@nl;
   shacl:name "beheerder"@nl;
   shacl:path crm:P50_has_current_keeper .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/416554330782f4adecab01022b6ad619da4a2fed> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.isovergedragenbijverwerving";
   shacl:class crm:E8_Acquisition;
-  shacl:description """De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.	"""@nl;
+  shacl:description """De Activiteit waarbij de eigendomstitel van het Materieel Ding werd overgedragen.	"""@nl;
   shacl:name "is overgedragen bij verwerving"@nl;
   shacl:path crm:P24i_changed_ownership_through .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/6dbc59c07f4e500909acd45e519de4b3b974fe09> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.conditie";
   shacl:class crm:E3_Condition_State;
-  shacl:description "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."@nl;
+  shacl:description "Beschrijft de Conditie waarin het Materieel Ding zich bevindt."@nl;
   shacl:name "conditie"@nl;
   shacl:path crm:P44_has_condition .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/8452958e7e3ff4f372a2572514a9e5828932e062> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.dimensie";
   shacl:class crm:E54_Dimension;
-  shacl:description "Beschrijft een Dimensie van het MensgemaaktObject."@nl;
+  shacl:description "Omvang van het Materieel Ding."@nl;
   shacl:name "dimensie"@nl;
   shacl:path crm:P43_has_dimension .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.isonderworpenaan";
   shacl:class crm:E30_Right;
-  shacl:description "Recht waaraan het MaterieelDing is onderworpen."@nl;
+  shacl:description "Recht waaraan het Materieel Ding is onderworpen."@nl;
   shacl:name "is onderworpen aan"@nl;
   shacl:path crm:P104_is_subject_to .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/a9acafaa9d0953d6ab47a4465bc480365a1f40bc> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.materiaal";
-  shacl:description "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."@nl;
+  shacl:description "Beschrijft het Materiaal waaruit het Materieel Ding bestaat."@nl;
   shacl:minCount 1;
   shacl:name "materiaal"@nl;
   shacl:path crm:P45_consists_of .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/c7cc9954c67bcdd52111a19e33ce663a714359bd> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.materiaal";
   shacl:class skos:Concept;
-  shacl:description "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."@nl;
+  shacl:description "Beschrijft het Materiaal waaruit het Materieel Ding bestaat."@nl;
   shacl:name "materiaal"@nl;
   shacl:path crm:P45_consists_of .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/eb44b9a8b1fb23d93b4bc09f5ad535709e0310ac> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.draagt";
   shacl:class crm:E73_Information_Object;
-  shacl:description "InformatieObject dat gedragen wordt door het MensgemaaktObject."@nl;
+  shacl:description "InformatieObject dat gedragen wordt door het Materieel Ding."@nl;
   shacl:name "draagt"@nl;
   shacl:path crm:P128_carries .
 
@@ -1016,50 +1038,50 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/259ce11dbd670d8d18bdaece44c2c76e7d19822c> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.permanentelocatie";
   shacl:class prov:Location;
-  shacl:description "Beschrijft de permanente locatie van het MensgemaaktObject."@nl;
+  shacl:description "Beschrijft de permanente locatie van het Mensgemaakt Object."@nl;
   shacl:name "permanente locatie"@nl;
   shacl:path crm:P54_has_current_permanent_location .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/421d78c27acf98a3c52191db36ac97de764ae8b5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.locatie";
-  shacl:description "Beschrijft de huidige locatie van het MensgemaaktObject."@nl;
+  shacl:description "Beschrijft de huidige locatie van het Mensgemaakt Object."@nl;
   shacl:maxCount 1;
   shacl:name "locatie"@nl;
   shacl:path crm:P55_has_current_location .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/634c9034242d42f92452dc2ddbbe2a5f49265cbd> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.locatie";
   shacl:class prov:Location;
-  shacl:description "Beschrijft de huidige locatie van het MensgemaaktObject."@nl;
+  shacl:description "Beschrijft de huidige locatie van het Mensgemaakt Object."@nl;
   shacl:name "locatie"@nl;
   shacl:path crm:P55_has_current_location .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/7368f1002b4d1aa34c02e0869f0c237eccf6d79b> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.beeldtuit";
   shacl:class crm:E1_CRM_Entity;
-  shacl:description "Entiteit die door het MensgemaaktObject wordt uitgebeeld."@nl;
+  shacl:description "Entiteit die door het Mensgemaakt Object wordt uitgebeeld."@nl;
   shacl:name "beeldt uit"@nl;
   shacl:path crm:P62_depicts .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/76ecdb52495bafd2acf35c500e1421fbd52d7c93> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.productie";
   shacl:class crm:E12_Production;
-  shacl:description "De Activiteit waarbij het MaterieelDing werd geproduceerd."@nl;
+  shacl:description "De Activiteit waarbij het Materieel Ding werd geproduceerd."@nl;
   shacl:name "productie"@nl;
   shacl:path crm:P108i_was_produced_by .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/d9ba3ed8f8aa9a2c416b30e1a11fc45238967364> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.permanentelocatie";
-  shacl:description "Beschrijft de permanente locatie van het MensgemaaktObject."@nl;
+  shacl:description "Beschrijft de permanente locatie van het Mensgemaakt Object."@nl;
   shacl:maxCount 1;
   shacl:name "permanente locatie"@nl;
   shacl:path crm:P54_has_current_permanent_location .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/f28ce523c4b4fcb15d8c7d4f279da195ba7403ab> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.titel";
   shacl:datatype rdf:langString;
-  shacl:description "Titel van het MensgemaaktObject."@nl;
+  shacl:description "Titel van het Mensgemaakt Object."@nl;
   shacl:name "titel"@nl;
   shacl:path crm:P102_has_title .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/5db8dd1f8707730cb0ff3d5c01bb86d521a6fb39>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/f655b7f2082ea71f0f9a166e64f543ff4a60ea19>,
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/85bce7728469283b70e0d0cc7243dca83aca9778>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/bbb8416208532abb076fa268342c2e832ee7c00e>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/49dc8053b0c59e8029860a7a4eb20c7878f1f0c9>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/95f394953174d98bddb1046692e980fabf924ed0>;
   shacl:targetClass <http://www.w3.org/2006/time#Instant> .
@@ -1070,10 +1092,10 @@
   shacl:name "inXSDDateTime"@nl;
   shacl:path <http://www.w3.org/2006/time#inXSDDateTime> .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/5db8dd1f8707730cb0ff3d5c01bb86d521a6fb39> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF";
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/85bce7728469283b70e0d0cc7243dca83aca9778> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF";
+  shacl:class <http://id.loc.gov/datatypes/edtf/EDTF>;
   shacl:description "Positie van een Moment, uitgedrukt in EDTF."@nl;
-  shacl:maxCount 1;
-  shacl:name "inEDTF"@nl;
+  shacl:name "in EDTF"@nl;
   shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/95f394953174d98bddb1046692e980fabf924ed0> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inXSDDateTime";
@@ -1082,10 +1104,10 @@
   shacl:name "inXSDDateTime"@nl;
   shacl:path <http://www.w3.org/2006/time#inXSDDateTime> .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/f655b7f2082ea71f0f9a166e64f543ff4a60ea19> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF";
-  shacl:class <http://id.loc.gov/datatypes/edtf/EDTF>;
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/bbb8416208532abb076fa268342c2e832ee7c00e> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF";
   shacl:description "Positie van een Moment, uitgedrukt in EDTF."@nl;
-  shacl:name "inEDTF"@nl;
+  shacl:maxCount 1;
+  shacl:name "in EDTF"@nl;
   shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#OrganisatieShape> a shacl:NodeShape;
@@ -1122,8 +1144,8 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/b6bb99bb89574f31ecc291659c0275b7f095db09>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/fcd183613fa10bcaaec90154865bf95e407795b1>,
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/85bce7728469283b70e0d0cc7243dca83aca9778>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/bbb8416208532abb076fa268342c2e832ee7c00e>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/0354f86b3536851fb9b0c53038d5e662c58b5e2a>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/0e315d4790091d512d746a8f6b09a44661741724>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/d426118d422ba5be2c3d3cc917337b0dce926a6d>,
@@ -1132,39 +1154,39 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/0354f86b3536851fb9b0c53038d5e662c58b5e2a> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.tot";
   shacl:class <http://www.w3.org/2006/time#Instant>;
-  shacl:description "Einde ve TemporeleEntiteit."@nl;
+  shacl:description "Einde ve Temporele Entiteit."@nl;
   shacl:name "tot"@nl;
   shacl:path <http://www.w3.org/2006/time#hasEnd> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/0e315d4790091d512d746a8f6b09a44661741724> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.tot";
-  shacl:description "Einde ve TemporeleEntiteit."@nl;
+  shacl:description "Einde ve Temporele Entiteit."@nl;
   shacl:maxCount 1;
   shacl:name "tot"@nl;
   shacl:path <http://www.w3.org/2006/time#hasEnd> .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/b6bb99bb89574f31ecc291659c0275b7f095db09> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.inEDTFperiode";
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/85bce7728469283b70e0d0cc7243dca83aca9778> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.inEDTF";
+  shacl:class <http://id.loc.gov/datatypes/edtf/EDTF>;
+  shacl:description "Waarde van een Periode, uitgedrukt in EDTF."@nl;
+  shacl:name "in EDTF"@nl;
+  shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/bbb8416208532abb076fa268342c2e832ee7c00e> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.inEDTF";
   shacl:description "Waarde van een Periode, uitgedrukt in EDTF."@nl;
   shacl:maxCount 1;
-  shacl:name "in EDTF periode"@nl;
+  shacl:name "in EDTF"@nl;
   shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/d426118d422ba5be2c3d3cc917337b0dce926a6d> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.van";
   shacl:class <http://www.w3.org/2006/time#Instant>;
-  shacl:description "Start ve TemporeleEntiteit."@nl;
+  shacl:description "Start ve Temporele Entiteit."@nl;
   shacl:name "van"@nl;
   shacl:path <http://www.w3.org/2006/time#hasBeginning> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/fa99298c0faadafb620da48c365af6f5d475f678> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.van";
-  shacl:description "Start ve TemporeleEntiteit."@nl;
+  shacl:description "Start ve Temporele Entiteit."@nl;
   shacl:maxCount 1;
   shacl:name "van"@nl;
   shacl:path <http://www.w3.org/2006/time#hasBeginning> .
-
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape/fcd183613fa10bcaaec90154865bf95e407795b1> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Periode.inEDTFperiode";
-  shacl:class <http://id.loc.gov/datatypes/edtf/EDTF>;
-  shacl:description "Waarde van een Periode, uitgedrukt in EDTF."@nl;
-  shacl:name "in EDTF periode"@nl;
-  shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1340,7 +1362,21 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape/945ea2be2a71a26b704d3cbb29ae3daff81326c0>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape/b67cc06a63ff51a4496c08e8e22d80e6c5518e4e>;
   shacl:targetClass crm:E12_Production .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape/945ea2be2a71a26b704d3cbb29ae3daff81326c0> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Productie.product";
+  shacl:class crm:E24_Physical_Human-Made_Thing;
+  shacl:description "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd."@nl;
+  shacl:name "product"@nl;
+  shacl:path crm:P108_has_produced .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ProductieShape/b67cc06a63ff51a4496c08e8e22d80e6c5518e4e> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Productie.product";
+  shacl:description "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd."@nl;
+  shacl:minCount 1;
+  shacl:name "product"@nl;
+  shacl:path crm:P108_has_produced .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PropositioneelObjectShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1509,7 +1545,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#VerwervingShape/225287f6f6e86bddd37c50d18417d9520d79de8b> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Verwerving.overdrachtvan";
   shacl:class crm:E18_Physical_Thing;
-  shacl:description "MaterieelDing dat werd verworven."@nl;
+  shacl:description "Materieel Ding dat werd verworven."@nl;
   shacl:name "overdracht van"@nl;
   shacl:path crm:P24_transferred_title_of .
 
@@ -1526,7 +1562,7 @@
   shacl:path crm:P23_transfered_title_from .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#VerwervingShape/e50aba45c75cbd1cda899b629556659598e4df27> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Verwerving.overdrachtvan";
-  shacl:description "MaterieelDing dat werd verworven."@nl;
+  shacl:description "Materieel Ding dat werd verworven."@nl;
   shacl:minCount 1;
   shacl:name "overdracht van"@nl;
   shacl:path crm:P24_transferred_title_of .

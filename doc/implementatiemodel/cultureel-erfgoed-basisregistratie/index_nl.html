@@ -396,8 +396,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/b0de8d8682cb1ea20158120f3ace07006e36ec56">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/b0de8d8682cb1ea20158120f3ace07006e36ec56</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/b0de8d8682cb1ea20158120f3ace07006e36ec56/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/b0de8d8682cb1ea20158120f3ace07006e36ec56/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/0589a451be7a4c5d67fb41199c291c6ff67a6c36">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/0589a451be7a4c5d67fb41199c291c6ff67a6c36</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/0589a451be7a4c5d67fb41199c291c6ff67a6c36/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/0589a451be7a4c5d67fb41199c291c6ff67a6c36/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed">https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed</a></dd>
 
@@ -469,7 +469,7 @@
 <p>Ook enkele Gebeurtenissen of Activiteiten die in het kader van Erfgoed plaatsvinden, hebben een plaats in dit implementatiemodel. Het gaat dan over de Creatie/Productie van erfgoedobjecten of over het beheer ervan (Verwerving, Bewaring, Classificatie).</p>
 <p><b>Tijd en ruimte</b></p>
 <p>In het implementatiemodel werd ook extra aandacht besteed aan de modelleringsopties voor plaats en tijd. Voor het modelleren van tijd werd is bovenal flexibiliteit nodig. Voor sommige cultureel erfgoed objecten kan bijvoorbeeld niet nauwkeurig worden
-    aangegeven wanneer ze gecreëerd werden. Het model voorziet voor die gevallen een tijdsindicatie in EDTF, die toelaat om onzekerheid daarover aan te duiden wanneer een datum of periode slechts een schatting is.</p>
+    aangegeven wanneer ze gecreëerd werden. Het model voorziet voor die gevallen een tijdsindicatie in <a href="https://www.loc.gov/standards/datetime/">EDTF</a>, die toelaat om onzekerheid daarover aan te duiden wanneer een datum of periode slechts een schatting is.</p>
 <p><b>Rechten</b></p>
 <p>Op de objecten beschreven in dit implementatiemodel kunnen bepaalde rechten van toepassing zijn, bvb. eigendom of auteursrecht, een beschermd statuut of de stempel van ‘topstuk’. De klasse Recht beschrijft over welk soort rechten
     het gaat. En uiteraard is het mogelijk om de rechtenhouders te specifiëren. Voor eigendom is daar een shortcut voor: de associatie “eigenaar” tussen een object en een Agent (Persoon of Organisatie). Een echte diepgaande uitwerking van deze rechten zelf is out of scope voor dit implementatiemodel.</p>
@@ -526,14 +526,14 @@
                       <a href="#Grootheid">Grootheid</a> |
                       <a href="#InformatieObject">Informatie Object</a> |
                       <a href="#MaterieelDing">Materieel Ding</a> |
-                      <a href="#Materieelobject">MaterieelObject</a> |
+                      <a href="#MaterieelObject">Materieel Object</a> |
+                      <a href="#MensgemaaktDing">Mensgemaakt Ding</a> |
                       <a href="#MensgemaaktObject">Mensgemaakt Object</a> |
-                      <a href="#Mensgemaaktding">MensgemaaktDing</a> |
                       <a href="#Organisatie">Organisatie</a> |
                       <a href="#Persoon">Persoon</a> |
                       <a href="#Plaats">Plaats</a> |
                       <a href="#Productie">Productie</a> |
-                      <a href="#Propositioneelobject">PropositioneelObject</a> |
+                      <a href="#PropositioneelObject">Propositioneel Object</a> |
                       <a href="#Recht">Recht</a> |
                       <a href="#Rol">Rol</a> |
                       <a href="#Ruimtelijkobject">RuimtelijkObject</a> |
@@ -541,7 +541,7 @@
                       <a href="#Symbolischobject">SymbolischObject</a> |
                       <a href="#Valuta">Valuta</a> |
                       <a href="#Verwerving">Verwerving</a> |
-                      <a href="#Wettelijkobject">WettelijkObject</a> |
+                      <a href="#WettelijkObject">Wettelijk Object</a> |
                     </p>
                   </div>
                   
@@ -562,7 +562,7 @@
                       <a href="#Locatie">Locatie</a> |
                       <a href="#Moment">Moment</a> |
                       <a href="#Periode">Periode</a> |
-                      <a href="#Temporeleentiteit">TemporeleEntiteit</a> |
+                      <a href="#TemporeleEntiteit">Temporele Entiteit</a> |
                     </p>
                   </div>
                   
@@ -645,9 +645,9 @@
               <h3 class="h3" id="Activiteit"><a href="http://www.cidoc-crm.org/cidoc-crm/E7_Activity" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E7_Activity" data-placement="right">Activiteit</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,sociaal of materieel effect teweeg te brengen.</dd>
+                    <dt>Beschrijving</dt><dd>Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.</dd>
                     
-                    <dt>Gebruik</dt><dd>Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving. Hiervan moeten geen instanties gemaakt worden.</dd>
+                    <dt>Gebruik</dt><dd>Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -776,8 +776,8 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Agent%3Abezit">bezit</a>, 
                       <a href="#Agent%3Acontactinfo">contactinfo</a>, 
+                      <a href="#Agent%3Aheeft">heeft</a>, 
                       <a href="#Agent%3Aidentificator">identificator</a>.</dd>
                     
                   </dl>
@@ -798,26 +798,6 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Agent%3Abezit" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P75_possesses">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.cidoc-crm.org/cidoc-crm/P75_possesses" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P75_possesses" data-placement="right">
-                            bezit</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Recht" data-placement="right">Recht</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment"></td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Agent%3Acontactinfo" typeof="rdfs:Property" resource="http://schema.org/contactPoint">
                         <td>
                           <code property="rdfs:label">
@@ -835,6 +815,26 @@
                         <td>0..1</td>
                         <td property="rdfs:comment">Informatie zoals email, telefoon... die toelaat de Persoon te contacteren.</td>
                         <td property="vann:usageNote"> </td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agent%3Aheeft" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P75_possesses">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P75_possesses" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P75_possesses" data-placement="right">
+                            heeft</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Recht" data-placement="right">Recht</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Recht dat een Agent bezit.</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -868,9 +868,9 @@
               <h3 class="h3" id="BelgischAdres"><a href="https://data.vlaanderen.be/ns/adres#Adres" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/adres#Adres" data-placement="right">Belgisch Adres</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.</dd>
+                    <dt>Beschrijving</dt><dd>Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode.</dd>
                     
-                    <dt>Gebruik</dt><dd>De definitie heeft betrekking op Belgische adressen. In andere landen kan een adres eventueel verwijzen naar andere geografisch objecten (niet gebouweenheid of perceel) of bestaan uit andere aanduidingen (verschillend van huisnummer en busnummer) of uit andere componenten dan straatnaam, gemeentenaam of postcode. Alternatieve adresaanduidingen dan huisnummer of busnummer (bv ingangaanduiding, trapaanduiding, verdiepaanduiding...) of een gebouwnaam of kamernaam ed zijn mogelijk dmv een associatie met adresuitbreiding. Uitwisseling van buitenlandse adressen moet gebeuren mbv het object adresvoorstelling.</dd>
+                    <dt>Gebruik</dt><dd>De definitie heeft betrekking op Belgische adressen. Meer info over deze klasse in het applicatieprofiel <a href="https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/">OSLO-Adresregister</a>.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -892,7 +892,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Het toekennen van een type aan een Entiteit.</dd>
                     
-                    <dt>Gebruik</dt><dd>Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.
+                    <dt>Gebruik</dt><dd>Standaard attributen zijn voorzien om het getypeerde Object en het toegekende type op te geven. Daarnaast kan aangegeven worden wie de classificatie uitvoerde en wanneer (via overerving van overeenkomstige attributen van Activiteit en Gebeurtenis), dit is van belang voor geopinieerde classificaties.
 </dd>
                     
 		     
@@ -977,6 +977,8 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Idee of begrip.</dd>
                     
+                    <dt>Gebruik</dt><dd>Bedoeld om kennis te organiseren, bvb in een codelijst of taxonomie (een zgn ConceptScheme). Zie <a href="https://www.w3.org/TR/skos-reference/">SKOS</a> voor meer informatie.</dd>
+                    
 		    
                     <dt>Eigenschappen</dt>
 		    
@@ -993,7 +995,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.</dd>
                     
-                    <dt>Gebruik</dt><dd>Conceptuele Objecten zijn typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Bijvoorbeeld: Beethoven's "Ode aan de Vreugde", de definitie van "Ontologie", of kennis van hoe het is om olympisch kampioen te worden. Conceptuele Objecten kunnen op meerdere dragers tegelijk bestaan, bv op papier, audio, foto, harde schijf, canvas, alsook het menselijk geheugen. Een ConceptueelDing kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt.</dd>
+                    <dt>Gebruik</dt><dd>Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Subklassen zijn Type, Propositioneel Object en Symbolisch Object en subklassen daarvan. In het implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een selectie van subklassen van deze subklassen (mn Recht en InformatieObject).</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1041,7 +1043,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Activiteit waarbij het ConceptueelDing werd gecreëerd.</td>
+                        <td property="rdfs:comment">De Activiteit waarbij het Conceptueel Object werd gecreëerd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1061,8 +1063,8 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Beschrijft een Dimensie van het MensgemaaktObject.</td>
-                        <td property="vann:usageNote">Bv de afmetingen.</td>
+                        <td property="rdfs:comment">Beschrijft een Dimensie van het Mensgemaakt Object.</td>
+                        <td property="vann:usageNote">Bv de omvang of het belang van het Conceptueel Object.</td>
                         <td></td>
                       </tr>
                     
@@ -1081,7 +1083,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Titel van het InformatieObject.</td>
+                        <td property="rdfs:comment">Titel van het Conceptueel Object.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1096,9 +1098,9 @@
               <h3 class="h3" id="Creatie"><a href="http://www.cidoc-crm.org/cidoc-crm/E65_Creation" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E65_Creation" data-placement="right">Creatie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Activiteit die leidt tot het onstaan van een ConceptueelDing, bv een gedicht, tekst, muziek, beelden, films etc.</dd>
+                    <dt>Beschrijving</dt><dd>Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc.</dd>
                     
-                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van InformatieObjecten uit te wisselen, bijvoorbeeld voor publicaties, tentoonstellingen en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.</dd>
+                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1106,21 +1108,61 @@
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Creatie%3Acreatie">creatie</a>.</dd>
                     
                   </dl>
                 </div>
-		
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Creatie%3Acreatie" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P94_has_created">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P94_has_created" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P94_has_created" data-placement="right">
+                            creatie</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Conceptueel Object" data-placement="right">Conceptueel Object</a>
+			    
+                          
+                        </td>
+                        <td>1..*</td>
+                        <td property="rdfs:comment">Verwijzing naar het Conceptueel Object dat is gecreëerd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
               <div class="region region--no-space-top">
               <h3 class="h3" id="Ding"><a href="http://www.cidoc-crm.org/cidoc-crm/E70_Thing" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E70_Thing" data-placement="right">Ding</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Afzonderlijk hanteerbaar,identificeerbaar,als eenheid te beschrijven,persistent item.</dd>
+                    <dt>Beschrijving</dt><dd>Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.</dd>
                     
-                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd,kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: te instantiëren als ConceptueelObject of MaterieelDing of subklassen daarvan.</dd>
+                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Te instantiëren als Conceptueel Object of Materieel Ding of subklassen daarvan. Voor meer info over deze klasse zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC-CRM</a>.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1133,10 +1175,12 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Eenheid"><a href="http://qudt.org/2.1/schema/qudt/Unit" data-toggle="tooltip" data-content="http://qudt.org/2.1/schema/qudt/Unit" data-placement="right">Eenheid</a></h3>
+              <h3 class="h3" id="Eenheid"><a href="https://qudt.org/schema/qudt/Unit" data-toggle="tooltip" data-content="https://qudt.org/schema/qudt/Unit" data-placement="right">Eenheid</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/unit/M">meter</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-UNITS.html">QUDT-units</a> voor meer info.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1298,9 +1342,9 @@
               <h3 class="h3" id="Gebeurtenis"><a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E5_Event" data-placement="right">Gebeurtenis</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Onderscheidbaar,afgelijnd en samenhangend proces of interactie dat een cultureel,sociaal of materieel effect teweeg brengt.</dd>
+                    <dt>Beschrijving</dt><dd>Onderscheidbaar, afgelijnd en samenhangend proces of interactie dat een cultureel, sociaal of materieel effect teweeg brengt.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van TemporeleEntiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. 
+                    <dt>Gebruik</dt><dd>Bv een geboorte, een meeting, een voorstelling, een oorlog. Het is een subklasse van een Tijdvak (op zijn beurt subklasse van Temporele Entiteit) maar verschil is de overgang tussen twee toestanden, een Gebeurtenis heeft een duidelijk effect. Bv het kiemen van een boom is een Gebeurtenis, niet het groeien van de boom. 
 </dd>
                     
 		     
@@ -1312,6 +1356,7 @@
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Gebeurtenis%3Abeschrijving">beschrijving</a>, 
+                      <a href="#Gebeurtenis%3Aidentificator">identificator</a>, 
                       <a href="#Gebeurtenis%3Aplaats">plaats</a>, 
                       <a href="#Gebeurtenis%3Atijd">tijd</a>, 
                       <a href="#Gebeurtenis%3Atype">type</a>.</dd>
@@ -1354,6 +1399,26 @@
                         <td></td>
                       </tr>
                     
+                      <tr id="Gebeurtenis%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
+                            identificator</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Identificator" data-placement="right">Identificator</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Identificator van de Gebeurtenis.</td>
+                        <td property="vann:usageNote">Bij implementatie in RDF is de uri vd Gebeurtenis de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.</td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Gebeurtenis%3Aplaats" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at">
                         <td>
                           <code property="rdfs:label">
@@ -1384,12 +1449,12 @@
                         <td>
                           
 			    
-			    <a href="#TemporeleEntiteit" data-placement="right">TemporeleEntiteit</a>
+			    <a href="#Temporele Entiteit" data-placement="right">Temporele Entiteit</a>
 			    
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">Periode waarin de Gebeurtenis plaatsvond.</td>
+                        <td property="rdfs:comment">Moment waarop of periode waarin de Gebeurtenis plaatsvond.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1426,7 +1491,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief, prijs-winstverhouding en informatiecapaciteit.</dd>
+                    <dt>Gebruik</dt><dd>Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/quantitykind/Height">hoogte</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html">QUDT-units</a> voor meer info.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1448,7 +1513,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.</dd>
                     
-                    <dt>Gebruik</dt><dd>Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.</dd>
+                    <dt>Gebruik</dt><dd>Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1499,7 +1564,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Het MensgemaaktObject dat het InformatieObject draagt.</td>
+                        <td property="rdfs:comment">Het Mensgemaakt Object dat het InformatieObject draagt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1520,7 +1585,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het onderwerp van het InformatieObject.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
                         <td></td>
                       </tr>
                     
@@ -1560,7 +1625,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Zelfstandig onderdeel van het InformatieObject.</td>
-                        <td property="vann:usageNote">Eerder dan bij een component van een ConceptueelDing, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.</td>
+                        <td property="vann:usageNote">Eerder dan bij een component van een Conceptueel Object, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.</td>
                         <td></td>
                       </tr>
                     
@@ -1579,7 +1644,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">	Agent die een Recht bezit op het WettelijkObject.</td>
+                        <td property="rdfs:comment">	Agent die een Recht bezit op het Wettelijk Object.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1600,7 +1665,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Entiteit waarnaar het InformatieObject verwijst.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut "gaat over".</td>
                         <td></td>
                       </tr>
                     
@@ -1614,9 +1679,9 @@
               <h3 class="h3" id="MaterieelDing"><a href="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing" data-placement="right">Materieel Ding</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk.</dd>
+                    <dt>Beschrijving</dt><dd>Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.</dd>
                     
-                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken. Het onderscheid tussen beide is gebaseerd op de natuurlijke begrenzing van het ding. De meeste fysieke objecten (zoals MensgemaaktObject) kunnen verplaatst worden, voor kenmerken (zoals MensgemaaktKenmerk) geldt dat niet, deze zitten vast aan het omliggend materiaal. De klasse MaterieelDing kan gebruikt worden wanneer het onderscheid tussen fysieke objecten en kenmerken er niet toe doet en de attributen op dit niveau toereikend zijn voor de data die men tracht uit te wisselen.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklass van deze subklassen, mn MensgemaaktObject.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1671,7 +1736,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Agent die het MaterieelDing bewaart.</td>
+                        <td property="rdfs:comment">De Agent die het Materieel Ding bewaart.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1691,8 +1756,8 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk.</td>
-                        <td property="vann:usageNote">Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.</td>
+                        <td property="rdfs:comment">Materieel Ding dat deel uitmaakt van het Materieel Ding.</td>
+                        <td property="vann:usageNote">Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding.</td>
                         <td></td>
                       </tr>
                     
@@ -1711,7 +1776,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt.</td>
+                        <td property="rdfs:comment">Beschrijft de Conditie waarin het Materieel Ding zich bevindt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1731,7 +1796,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Beschrijft een Dimensie van het MensgemaaktObject.</td>
+                        <td property="rdfs:comment">Omvang van het Materieel Ding.</td>
                         <td property="vann:usageNote">Bv de afmetingen.</td>
                         <td></td>
                       </tr>
@@ -1751,7 +1816,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">InformatieObject dat gedragen wordt door het MensgemaaktObject.</td>
+                        <td property="rdfs:comment">InformatieObject dat gedragen wordt door het Materieel Ding.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1771,7 +1836,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Agent die het MaterieelDing bezit.</td>
+                        <td property="rdfs:comment">De Agent die het Materieel Ding bezit.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1791,7 +1856,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Het onderwerp van een MaterieelDing.</td>
+                        <td property="rdfs:comment">Het onderwerp van een Materieel Ding.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1811,7 +1876,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Recht waaraan het MaterieelDing is onderworpen.</td>
+                        <td property="rdfs:comment">Recht waaraan het Materieel Ding is onderworpen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1831,7 +1896,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen.	</td>
+                        <td property="rdfs:comment">De Activiteit waarbij de eigendomstitel van het Materieel Ding werd overgedragen.	</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1851,7 +1916,7 @@
                           
                         </td>
                         <td>1..*</td>
-                        <td property="rdfs:comment">Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat.</td>
+                        <td property="rdfs:comment">Beschrijft het Materiaal waaruit het Materieel Ding bestaat.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1863,7 +1928,23 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Materieelobject"><a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object" data-placement="right">MaterieelObject</a></h3>
+              <h3 class="h3" id="MaterieelObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object" data-placement="right">Materieel Object</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd></dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="MensgemaaktDing"><a href="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing" data-placement="right">Mensgemaakt Ding</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd></dd>
@@ -1935,7 +2016,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Entiteit die door het MensgemaaktObject wordt uitgebeeld.</td>
+                        <td property="rdfs:comment">Entiteit die door het Mensgemaakt Object wordt uitgebeeld.</td>
                         <td property="vann:usageNote">Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort.</td>
                         <td></td>
                       </tr>
@@ -1955,7 +2036,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Beschrijft de huidige locatie van het MensgemaaktObject.</td>
+                        <td property="rdfs:comment">Beschrijft de huidige locatie van het Mensgemaakt Object.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1975,7 +2056,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Beschrijft de permanente locatie van het MensgemaaktObject.</td>
+                        <td property="rdfs:comment">Beschrijft de permanente locatie van het Mensgemaakt Object.</td>
                         <td property="vann:usageNote">Dit is de plaats die normaal gereserveerd is voor het object, zoals het depot waar het wordt bewaard of het museum waar het in principe wordt tentoongesteld. Objecten worden echter soms uitgeleend aan andere instellingen of maken deel uit van een tijdelijke tentoonstelling waardoor de permanenteLocatie kan verschillen van de huidige locatie.</td>
                         <td></td>
                       </tr>
@@ -1995,7 +2076,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Activiteit waarbij het MaterieelDing werd geproduceerd.</td>
+                        <td property="rdfs:comment">De Activiteit waarbij het Materieel Ding werd geproduceerd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2015,7 +2096,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Titel van het MensgemaaktObject.</td>
+                        <td property="rdfs:comment">Titel van het Mensgemaakt Object.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2024,22 +2105,6 @@
                   </table>
                 </div>
       			  
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Mensgemaaktding"><a href="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing" data-placement="right">MensgemaaktDing</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd></dd>
-                    
-		    
-                    <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-                    
-                  </dl>
-                </div>
-		
             </div>
             
               <div class="region region--no-space-top">
@@ -2217,7 +2282,7 @@
                         <td>
                           
 			    
-			    <a href="#TemporeleEntiteit" data-placement="right">TemporeleEntiteit</a>
+			    <a href="#Temporele Entiteit" data-placement="right">Temporele Entiteit</a>
 			    
                           
                         </td>
@@ -2257,7 +2322,7 @@
                         <td>
                           
 			    
-			    <a href="#TemporeleEntiteit" data-placement="right">TemporeleEntiteit</a>
+			    <a href="#Temporele Entiteit" data-placement="right">Temporele Entiteit</a>
 			    
                           
                         </td>
@@ -2398,9 +2463,9 @@
               <h3 class="h3" id="Productie"><a href="http://www.cidoc-crm.org/cidoc-crm/E12_Production" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E12_Production" data-placement="right">Productie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Activiteit die leidt tot en slaagt in het ontstaan van een MaterieelDing.</dd>
+                    <dt>Beschrijving</dt><dd>Activiteit die leidt tot en slaagt in het ontstaan van een Materieel Ding.</dd>
                     
-                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Productie) van een MensgemaaktObject uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor InformatieObjecten. 
+                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Productie) van een Mensgemaakt Object uit te wisselen, bijvoorbeeld museale objecten, onroerend erfgoed en archiefbestanddelen. Niet te verwarren met de klasse Creatie, die enkel gebruikt mag worden voor Conceptuele Objecten. 
 </dd>
                     
 		     
@@ -2409,16 +2474,56 @@
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
-		    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+		     
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Productie%3Aproduct">product</a>.</dd>
                     
                   </dl>
                 </div>
-		
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Productie%3Aproduct" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced" data-placement="right">
+                            product</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing" data-placement="right">MaterieelMensgemaaktDing</a>
+                            
+                          
+                        </td>
+                        <td>1..*</td>
+                        <td property="rdfs:comment">Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Propositioneelobject"><a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-placement="right">PropositioneelObject</a></h3>
+              <h3 class="h3" id="PropositioneelObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-placement="right">Propositioneel Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd></dd>
@@ -2548,7 +2653,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Identificator van de Entiteit.</td>
-                        <td property="vann:usageNote">Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.</td>
+                        <td property="vann:usageNote">Bij implementatie in RDF is de uri vd Entiteit de Identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.</td>
                         <td></td>
                       </tr>
                     
@@ -2737,7 +2842,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het onderwerp van de Set.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut verwijstNaar kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object.</td>
                         <td></td>
                       </tr>
                     
@@ -2837,7 +2942,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Entiteit waarnaar het InformatieObject verwijst.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut gaatOver.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut "gaat over".</td>
                         <td></td>
                       </tr>
                     
@@ -2887,9 +2992,9 @@
               <h3 class="h3" id="Verwerving"><a href="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition" data-placement="right">Verwerving</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Overdracht van de eigendomstitel van een MaterieelDing van de ene Agent naar de andere, bv door een verkoop of een erfenis.</dd>
+                    <dt>Beschrijving</dt><dd>Overdracht van de eigendomstitel van een Materieel Ding van de ene Agent naar de andere, bv door een verkoop of een erfenis.</dd>
                     
-                    <dt>Gebruik</dt><dd>De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het MaterieelDing. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. Opmerking: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.
+                    <dt>Gebruik</dt><dd>De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.
 </dd>
                     
 		     
@@ -2937,7 +3042,7 @@
                           
                         </td>
                         <td>1..*</td>
-                        <td property="rdfs:comment">MaterieelDing dat werd verworven.</td>
+                        <td property="rdfs:comment">Materieel Ding dat werd verworven.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2989,7 +3094,7 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Wettelijkobject"><a href="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-placement="right">WettelijkObject</a></h3>
+              <h3 class="h3" id="WettelijkObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-placement="right">Wettelijk Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd></dd>
@@ -3076,7 +3181,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Hoogste Administratieve eenheid vh adres, doorgaans een land.</td>
+                        <td property="rdfs:comment">Hoogste administratieve eenheid vh adres, doorgaans een land.</td>
                         <td property="vann:usageNote"> </td>
                         <td></td>
                       </tr>
@@ -3357,7 +3462,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Staat waarin een object zich bevindt.</dd>
                     
-                    <dt>Gebruik</dt><dd>Geldt voor een bepaalde periode. Slaat op een MaterieelDing,bv een MensgemaaktObject of -Kenmerk.</dd>
+                    <dt>Gebruik</dt><dd>Geldt voor een bepaalde periode. Slaat op een Materieel Ding, bv een Mensgemaakt Object of -Kenmerk.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -3679,7 +3784,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Beschrijving van de Dimensie.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">Bvb om grootheid en eenheid verder te beschrijven of als deze niet gekend zijn.</td>
                         <td></td>
                       </tr>
                       
@@ -3698,7 +3803,7 @@
                         </td>
                         <td>0..1</td>
                         <td property="rdfs:comment">De eenheid waarin de waarde is uitgedrukt.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">Gebruik Concept of de subklasse Eenheid.</td>
                         <td></td>
                       </tr>
                       
@@ -3717,7 +3822,7 @@
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Grootheid van de Dimensie.</td>
-                        <td property="vann:usageNote">Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht...</td>
+                        <td property="vann:usageNote">Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid.</td>
                         <td></td>
                       </tr>
                       
@@ -3857,7 +3962,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Vorm- en positiekenmerken van een object.</dd>
                     
-                    <dt>Gebruik</dt><dd>Beschrijft deze kenmerken dmv punten,lijnen,polygonen en coördinaten.</dd>
+                    <dt>Gebruik</dt><dd>Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -4021,7 +4126,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Naam vd agent die de identificator heeft toegekend.</td>
+                        <td property="rdfs:comment">Naam vd Agent die de identificator heeft toegekend.</td>
                         <td property="vann:usageNote"> </td>
                         <td></td>
                       </tr>
@@ -4059,7 +4164,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres.</dd>
                     
-                    <dt>Gebruik</dt><dd>Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc. Opmerking: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.</dd>
+                    <dt>Gebruik</dt><dd>Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -4099,7 +4204,7 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">De identificator gebruikt om de locatie te identificeren.</td>
+                        <td property="rdfs:comment">De Identificator gebruikt om de locatie te identificeren.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -4120,13 +4225,13 @@
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#TemporeleEntiteit">TemporeleEntiteit</a>
+                        <a href="#Temporele Entiteit">Temporele Entiteit</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Moment%3Ainedtf">inEDTF</a>, 
+                      <a href="#Moment%3AinEdtf">in EDTF</a>, 
                       <a href="#Moment%3Ainxsddatetime">inXSDDateTime</a>.</dd>
                     
                   </dl>
@@ -4147,10 +4252,10 @@
 
                     <tbody class="supertype">
                       
-                      <tr id="Moment%3Ainedtf" typeof="rdfs:Property" resource="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime">
+                      <tr id="Moment%3AinEdtf" typeof="rdfs:Property" resource="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime" data-toggle="tooltip" data-content="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime" data-placement="right">inEDTF</a>
+                            <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime" data-toggle="tooltip" data-content="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime" data-placement="right">in EDTF</a>
                           </code>
                         </td>
                         <td>
@@ -4197,17 +4302,17 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.</dd>
+                    <dt>Beschrijving</dt><dd>Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#TemporeleEntiteit">TemporeleEntiteit</a>
+                        <a href="#Temporele Entiteit">Temporele Entiteit</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor dit datatype zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Periode%3AinEdtfPeriode">in EDTF periode</a>, 
+                      <a href="#Periode%3AinEdtf">in EDTF</a>, 
                       <a href="#Periode%3Atot">tot</a>, 
                       <a href="#Periode%3Avan">van</a>.</dd>
                     
@@ -4229,10 +4334,10 @@
 
                     <tbody class="supertype">
                       
-                      <tr id="Periode%3AinEdtfPeriode" typeof="rdfs:Property" resource="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription">
+                      <tr id="Periode%3AinEdtf" typeof="rdfs:Property" resource="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription" data-toggle="tooltip" data-content="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription" data-placement="right">in EDTF periode</a>
+                            <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription" data-toggle="tooltip" data-content="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription" data-placement="right">in EDTF</a>
                           </code>
                         </td>
                         <td>
@@ -4262,7 +4367,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Einde ve TemporeleEntiteit.</td>
+                        <td property="rdfs:comment">Einde ve Temporele Entiteit.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -4281,7 +4386,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Start ve TemporeleEntiteit.</td>
+                        <td property="rdfs:comment">Start ve Temporele Entiteit.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -4294,7 +4399,7 @@
             
             <div class="region region--no-space-top">
               
-              <h3 class="h3" id="Temporeleentiteit"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">TemporeleEntiteit</a></h3>
+              <h3 class="h3" id="TemporeleEntiteit"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">Temporele Entiteit</a></h3>
 	      
                 <div class="region region--no-space-top">
                   <dl>
