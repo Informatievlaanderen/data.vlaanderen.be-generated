@@ -706,16 +706,16 @@
           "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/8a90f8ef6099c6e262255af9a4000a970dad8834",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Entiteit.isonderdeelvan",
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/19e368355089771f86f50f0d579bbda7fcb34ee5",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Entiteit.lidvan",
           "sh:class": "https://linked.art/Set",
           "sh:description": {
-            "nl": "De Entiteit die een onderdeel is van een Set."
+            "nl": "Set waartoe de Entiteit behoort."
           },
           "sh:name": {
-            "nl": "is onderdeel van"
+            "nl": "lid van"
           },
-          "sh:path": "http://purl.org/dc/terms/isPartOf"
+          "sh:path": "https://linked.art/ns/terms/member_of"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -1311,6 +1311,18 @@
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about"
         },
         {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/97aec4cc557820632eb2c748fa047c7b4210761c",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.heeftcomponent",
+          "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+          "sh:description": {
+            "nl": "Structureel onderdeel van het InformatieObject"
+          },
+          "sh:name": {
+            "nl": "heeft component"
+          },
+          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component"
+        },
+        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.isonderworpenaan",
           "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
@@ -1321,18 +1333,6 @@
             "nl": "is onderworpen aan"
           },
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/c50c780876b22ae67a3ded60e1c528c11c9dfc59",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.omvat",
-          "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-          "sh:description": {
-            "nl": "Zelfstandig onderdeel van het InformatieObject."
-          },
-          "sh:name": {
-            "nl": "omvat"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P165_incorporates"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901",
@@ -2531,18 +2531,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/2e9ae5f43a769b193b40895c089e96f1e4fe3267",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.StructureelonderdeelvandeSet",
-          "sh:class": "https://linked.art/Set",
-          "sh:description": {
-            "nl": "Structureel onderdeel van de Set"
-          },
-          "sh:name": {
-            "nl": "Structureel onderdeel van de Set"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component"
-        },
-        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/0498a7759996084de1277c2c6e96bcc7e0114e9b",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.gaatover",
           "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
@@ -2555,16 +2543,28 @@
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about"
         },
         {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/54ea4df195b59a0f222e730f61ce6214a05cb8d5",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.iscomponentvan",
-          "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/97aec4cc557820632eb2c748fa047c7b4210761c",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.heeftcomponent",
+          "sh:class": "https://linked.art/Set",
           "sh:description": {
             "nl": "Structureel onderdeel van de Set"
           },
           "sh:name": {
-            "nl": "is component van"
+            "nl": "heeft component"
           },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of"
+          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/e54ac8c7cf1fa06b18cc4092dd158896a9c59f84",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.heeftlid",
+          "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
+          "sh:description": {
+            "nl": "Verwijzing naar Entiteit die deel uitmaakt van de Set."
+          },
+          "sh:name": {
+            "nl": "heeft lid"
+          },
+          "sh:path": "https://linked.art/ns/terms/has_member"
         },
         {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5",

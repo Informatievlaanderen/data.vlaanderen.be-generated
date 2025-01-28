@@ -396,8 +396,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/32e240bf4beb4b5713532961efe99c89daaaf6f2">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/32e240bf4beb4b5713532961efe99c89daaaf6f2</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/32e240bf4beb4b5713532961efe99c89daaaf6f2/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/32e240bf4beb4b5713532961efe99c89daaaf6f2/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/bb374a14aed99eaee311898791fd940c3e16b2c1">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/bb374a14aed99eaee311898791fd940c3e16b2c1</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/bb374a14aed99eaee311898791fd940c3e16b2c1/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/bb374a14aed99eaee311898791fd940c3e16b2c1/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed">https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed</a></dd>
 
@@ -538,7 +538,7 @@
                       <a href="#Rol">Rol</a> |
                       <a href="#Ruimtelijkobject">RuimtelijkObject</a> |
                       <a href="#Set">Set</a> |
-                      <a href="#Symbolischobject">SymbolischObject</a> |
+                      <a href="#SymbolischObject">Symbolisch Object</a> |
                       <a href="#Valuta">Valuta</a> |
                       <a href="#Verwerving">Verwerving</a> |
                       <a href="#WettelijkObject">Wettelijk Object</a> |
@@ -995,7 +995,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.</dd>
                     
-                    <dt>Gebruik</dt><dd>Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Subklassen zijn Type, Propositioneel Object en Symbolisch Object en subklassen daarvan. In het implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een selectie van subklassen van deze subklassen (mn Recht en InformatieObject).</dd>
+                    <dt>Gebruik</dt><dd>Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Indirecte subklassen zijn Set en InformatieObject.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1162,7 +1162,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.</dd>
                     
-                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan (uitgezonderd Agents) maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Subklasse van Entiteit. Niet expliciet aanwezig in dit implementatiemodel. Subklassen zijn Mensgemaakt Ding en Legaal Object, evenmin expliciet aanwezig. Indirect echter zijn Conceptueel Object en Materieel Ding (en hun subklassen) er subklasse van.</dd>
+                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1202,7 +1202,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte superklasse.</dd>
                     
-                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor alle types cultureel erfgoed, alsook de Activiteiten die daarop uitgevoerd worden. Entiteiten kunnen onderscheiden worden door middel van een identificator, een type en een beschrijving.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor alle types cultureel erfgoed, alsook voor de Activiteiten die daarop uitgevoerd worden.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1211,7 +1211,7 @@
                       <a href="#Entiteit%3Abeschrijving">beschrijving</a>, 
                       <a href="#Entiteit%3Aclassificatie">classificatie</a>, 
                       <a href="#Entiteit%3Aidentificator">identificator</a>, 
-                      <a href="#Entiteit%3AisOnderdeelVan">is onderdeel van</a>, 
+                      <a href="#Entiteit%3AlidVan">lid van</a>, 
                       <a href="#Entiteit%3Atype">type</a>.</dd>
                     
                   </dl>
@@ -1292,11 +1292,11 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Entiteit%3AisOnderdeelVan" typeof="rdfs:Property" resource="http://purl.org/dc/terms/isPartOf">
+                      <tr id="Entiteit%3AlidVan" typeof="rdfs:Property" resource="https://linked.art/ns/terms/member_of">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/isPartOf" data-toggle="tooltip" data-content="http://purl.org/dc/terms/isPartOf" data-placement="right">
-                            is onderdeel van</a>
+                            <a href="https://linked.art/ns/terms/member_of" data-toggle="tooltip" data-content="https://linked.art/ns/terms/member_of" data-placement="right">
+                            lid van</a>
                           </code>
                         </td>
                         <td>
@@ -1307,7 +1307,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">De Entiteit die een onderdeel is van een Set.</td>
+                        <td property="rdfs:comment">Set waartoe de Entiteit behoort.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1518,7 +1518,8 @@
 		     
 		    <dt>Subklasse van <dt><dd>
                         <a href="#Conceptueel Object">Conceptueel Object</a>, 
-                        <a href="#SymbolischObject">SymbolischObject</a>
+                        <a href="#SymbolischObject">SymbolischObject</a>, 
+                        <a href="#PropositioneelObject">PropositioneelObject</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -1526,8 +1527,8 @@
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#InformatieObject%3Adrager">drager</a>, 
                       <a href="#InformatieObject%3AgaatOver">gaat over</a>, 
+                      <a href="#InformatieObject%3AheeftComponent">heeft component</a>, 
                       <a href="#InformatieObject%3AisOnderworpenAan">is onderworpen aan</a>, 
-                      <a href="#InformatieObject%3Aomvat">omvat</a>, 
                       <a href="#InformatieObject%3Arechtenhouder">rechtenhouder</a>, 
                       <a href="#InformatieObject%3AverwijstNaar">verwijst naar</a>.</dd>
                     
@@ -1589,6 +1590,26 @@
                         <td></td>
                       </tr>
                     
+                      <tr id="InformatieObject%3AheeftComponent" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-placement="right">
+                            heeft component</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Informatie Object" data-placement="right">Informatie Object</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Structureel onderdeel van het InformatieObject</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="InformatieObject%3AisOnderworpenAan" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to">
                         <td>
                           <code property="rdfs:label">
@@ -1606,26 +1627,6 @@
                         <td>0..*</td>
                         <td property="rdfs:comment">Recht waaraan het InformatieObject is onderworpen.</td>
                         <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="InformatieObject%3Aomvat" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates" data-placement="right">
-                            omvat</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Informatie Object" data-placement="right">Informatie Object</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">Zelfstandig onderdeel van het InformatieObject.</td>
-                        <td property="vann:usageNote">Eerder dan bij een component van een Conceptueel Object, kan het deel van het InformatieObject ook op zichzelf bestaan, bv een muzieknummer op een album of een gedicht in een bloemlezing.</td>
                         <td></td>
                       </tr>
                     
@@ -1681,7 +1682,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.</dd>
                     
-                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklass van deze subklassen, mn MensgemaaktObject.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklasse van deze subklassen, mn MensgemaaktObject.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1933,7 +1934,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt.</dd>
                     
-                    <dt>Gebruik</dt><dd>Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakte object kan zijn, bvb een Persoon. OPMERKING: deze klasse is niet expliciet aanwezig in het implementatiemodel. Subklassen zijn Mensgemaakte Objecten (aanwezig in het model) en Biologische Objecten (niet aanwezig in het model).</dd>
+                    <dt>Gebruik</dt><dd>Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1951,7 +1952,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding.</dd>
                     
-                    <dt>Gebruik</dt><dd>Beperkter dan Ding dat niet noodzakelijk mensgemaakt is.OPMERKING: Niet expliciet aanwezig in het implementatiemodel. Directe subklassen zijn Conceptueel Object en Materieel Mensgemaakt Ding (deze laatste evenmin expliciet in het model). Conceptuele Objecten zijn een subklasse omdat deze steeds mensgemaakt zijn, iets dat niet geldt  voor alle Materiële Dingen vandaar de subklasse Materieel Mensgemaakt Ding.</dd>
+                    <dt>Gebruik</dt><dd>Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -2530,7 +2531,9 @@
               <h3 class="h3" id="PropositioneelObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object" data-placement="right">Propositioneel Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd></dd>
+                    <dt>Beschrijving</dt><dd>Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen</dd>
+                    
+                    <dt>Gebruik</dt><dd>Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -2791,9 +2794,9 @@
               <h3 class="h3" id="Set"><a href="https://linked.art/Set" data-toggle="tooltip" data-content="https://linked.art/Set" data-placement="right">Set</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Conceptuele groepering.</dd>
+                    <dt>Beschrijving</dt><dd>Conceptuele groepering van Entiteiten.</dd>
                     
-                    <dt>Gebruik</dt><dd>De verzameling objecten in een tentoonstelling of simpelweg de verzameling favoriete objecten van een persoon verandert nooit van fysieke staat door wel of niet deel uit te maken van de Set. Sets kunnen niet worden vernietigd. Een Set kan op elk moment nul leden hebben zonder dat deze ophoudt te bestaan.</dd>
+                    <dt>Gebruik</dt><dd>Bvb de collectie van een museum of de lijst van favoriete objecten van een persoon. Als een Set materieel was zouden de objecten die bvb deel uitmaken van een virtuele collectie vernietigd worden als de Set zou ophouden te bestaan. Het is maw niet omdat een object deel uimaakt van een Set dat dit zijn fysieke toestand kan impacteren. Aangezien een Set conceptueel is kan hij niet worden vernietigd. een Set kan ook nul items bevatten.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -2806,10 +2809,10 @@
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Set%3AgaatOver">gaat over</a>, 
-                      <a href="#Set%3AisComponentVan">is component van</a>, 
+                      <a href="#Set%3AheeftComponent">heeft component</a>, 
+                      <a href="#Set%3AheeftLid">heeft lid</a>, 
                       <a href="#Set%3AisOnderworpenAan">is onderworpen aan</a>, 
                       <a href="#Set%3Arechtenhouder">rechtenhouder</a>, 
-                      <a href="#Set%3AstructureelOnderdeelVanDeSet">Structureel onderdeel van de Set</a>, 
                       <a href="#Set%3AverwijstNaar">verwijst naar</a>.</dd>
                     
                   </dl>
@@ -2850,11 +2853,31 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Set%3AisComponentVan" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of">
+                      <tr id="Set%3AheeftComponent" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P148i_is_component_of" data-placement="right">
-                            is component van</a>
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-placement="right">
+                            heeft component</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Set" data-placement="right">Set</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">Structureel onderdeel van de Set</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Set%3AheeftLid" typeof="rdfs:Property" resource="https://linked.art/ns/terms/has_member">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://linked.art/ns/terms/has_member" data-toggle="tooltip" data-content="https://linked.art/ns/terms/has_member" data-placement="right">
+                            heeft lid</a>
                           </code>
                         </td>
                         <td>
@@ -2865,7 +2888,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Structureel onderdeel van de Set</td>
+                        <td property="rdfs:comment">Verwijzing naar Entiteit die deel uitmaakt van de Set.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2910,26 +2933,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Set%3AstructureelOnderdeelVanDeSet" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-placement="right">
-                            Structureel onderdeel van de Set</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Set" data-placement="right">Set</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">Structureel onderdeel van de Set</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Set%3AverwijstNaar" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to">
                         <td>
                           <code property="rdfs:label">
@@ -2957,10 +2960,12 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Symbolischobject"><a href="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object" data-placement="right">SymbolischObject</a></h3>
+              <h3 class="h3" id="SymbolischObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object" data-placement="right">Symbolisch Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd></dd>
+                    <dt>Beschrijving</dt><dd>Herkenbare symbolen en elke samenvoeging van symbolen die een objectief herkenbare structuur hebben en die als afzonderlijke eenheden zijn gedocumenteerd.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -2998,8 +3003,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Overdracht van de eigendomstitel van een Materieel Ding van de ene Agent naar de andere, bv door een verkoop of een erfenis.</dd>
                     
-                    <dt>Gebruik</dt><dd>De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie. Meestal slaat men het object dat men bezit zelf op maar niet altijd, zie Bewaring. OPMERKING: een meer uitgebreide beschrijving is te vinden in het AP OSLO-CultureelErfgoed-Event.
-</dd>
+                    <dt>Gebruik</dt><dd>De eigendomstitel is een document dat aantoont dat een Agent de wettelijke eigenaar is van het Materieel Ding. Het vermelden van de Agenten die bij de verwerving betrokken waren is niet verplicht. Dekt ook gevallen waar men zich de eigendomstitel toeëigent, bv bij een vondst of annexatie.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -3101,7 +3105,9 @@
               <h3 class="h3" id="WettelijkObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object" data-placement="right">Wettelijk Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd></dd>
+                    <dt>Beschrijving</dt><dd>Materiële of immateriële objecten waarop een Recht van toepassing is of op kan toegepast worden.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -3744,7 +3750,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Kwantificeerbare eigenschap van een Entiteit.</dd>
                     
-                    <dt>Gebruik</dt><dd>De eigenschap is meetbaar met een zekere precisie en kan voorgesteld worden door een waarde,ttz een punt of gebied in een wiskundige of conceptuele ruimte,zoals een natuurlijk of reëel getal,een RGB-waarde, etc. In tegensteling tot een 'meting' hoeft deze Dimensie zich niet te beperken tot Materiële Dingen.</dd>
+                    <dt>Gebruik</dt><dd>De eigenschap is meetbaar met een zekere precisie en kan voorgesteld worden door een waarde, ttz een punt of gebied in een wiskundige of conceptuele ruimte, zoals een natuurlijk of reëel getal, een RGB-waarde, etc. Van toepassing op Dingen, dus indirect zowel op Conceptuele als Materiële Dingen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

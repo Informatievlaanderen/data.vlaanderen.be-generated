@@ -653,7 +653,7 @@
   shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/0e9a7d4dbf6ec19568d474169ad717f71e882319>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/72d196f39d114d410023dfae67396fa111bb5641>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/05134c4e7c34157d6f7ac1128713a08418e0fe7d>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/8a90f8ef6099c6e262255af9a4000a970dad8834>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/19e368355089771f86f50f0d579bbda7fcb34ee5>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/322371a77364a50f049d46180f6192532eea26dc>;
   shacl:targetClass crm:E1_CRM_Entity .
 
@@ -669,6 +669,12 @@
   shacl:name "beschrijving"@nl;
   shacl:path crm:P3_has_note .
 
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/19e368355089771f86f50f0d579bbda7fcb34ee5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Entiteit.lidvan";
+  shacl:class <https://linked.art/Set>;
+  shacl:description "Set waartoe de Entiteit behoort."@nl;
+  shacl:name "lid van"@nl;
+  shacl:path <https://linked.art/ns/terms/member_of> .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Entiteit.type";
   shacl:class skos:Concept;
   shacl:description "Type van de Entiteit."@nl;
@@ -680,12 +686,6 @@
   shacl:description "De Activiteit waarbij de Entiteit werd geklassificeerd."@nl;
   shacl:name "classificatie"@nl;
   shacl:path crm:P41i_was_classified_by .
-
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape/8a90f8ef6099c6e262255af9a4000a970dad8834> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Entiteit.isonderdeelvan";
-  shacl:class <https://linked.art/Set>;
-  shacl:description "De Entiteit die een onderdeel is van een Set."@nl;
-  shacl:name "is onderdeel van"@nl;
-  shacl:path dc:isPartOf .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GebeurtenisShape> a shacl:NodeShape;
   shacl:closed false;
@@ -855,8 +855,8 @@
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/b0ef6d9d4bd199ad2c9e40b13d9859c6518c9958>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/0498a7759996084de1277c2c6e96bcc7e0114e9b>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/97aec4cc557820632eb2c748fa047c7b4210761c>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/c50c780876b22ae67a3ded60e1c528c11c9dfc59>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/b851e527d772c697eed125fca5e7cd7f9002a57b>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/d744c5264831101844b549db8f158a58965b8282>,
@@ -874,6 +874,12 @@
   shacl:minCount 1;
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/97aec4cc557820632eb2c748fa047c7b4210761c> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.heeftcomponent";
+  shacl:class crm:E73_Information_Object;
+  shacl:description "Structureel onderdeel van het InformatieObject"@nl;
+  shacl:name "heeft component"@nl;
+  shacl:path crm:P148_has_component .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.isonderworpenaan";
   shacl:class crm:E30_Right;
@@ -898,12 +904,6 @@
   shacl:description "Entiteit waarnaar het InformatieObject verwijst."@nl;
   shacl:name "verwijst naar"@nl;
   shacl:path crm:P67_refers_to .
-
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/c50c780876b22ae67a3ded60e1c528c11c9dfc59> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.omvat";
-  shacl:class crm:E73_Information_Object;
-  shacl:description "Zelfstandig onderdeel van het InformatieObject."@nl;
-  shacl:name "omvat"@nl;
-  shacl:path crm:P165_incorporates .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/d744c5264831101844b549db8f158a58965b8282> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder";
   shacl:description """	Agent die een Recht bezit op het Wettelijk Object."""@nl;
@@ -1445,9 +1445,9 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/2e9ae5f43a769b193b40895c089e96f1e4fe3267>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/0498a7759996084de1277c2c6e96bcc7e0114e9b>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/54ea4df195b59a0f222e730f61ce6214a05cb8d5>,
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/0498a7759996084de1277c2c6e96bcc7e0114e9b>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/97aec4cc557820632eb2c748fa047c7b4210761c>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/e54ac8c7cf1fa06b18cc4092dd158896a9c59f84>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/b851e527d772c697eed125fca5e7cd7f9002a57b>,
@@ -1467,17 +1467,11 @@
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/2e9ae5f43a769b193b40895c089e96f1e4fe3267> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.StructureelonderdeelvandeSet";
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/97aec4cc557820632eb2c748fa047c7b4210761c> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.heeftcomponent";
   shacl:class <https://linked.art/Set>;
   shacl:description "Structureel onderdeel van de Set"@nl;
-  shacl:name "Structureel onderdeel van de Set"@nl;
+  shacl:name "heeft component"@nl;
   shacl:path crm:P148_has_component .
-
-<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/54ea4df195b59a0f222e730f61ce6214a05cb8d5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.iscomponentvan";
-  shacl:class crm:E1_CRM_Entity;
-  shacl:description "Structureel onderdeel van de Set"@nl;
-  shacl:name "is component van"@nl;
-  shacl:path crm:P148i_is_component_of .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/a6153b8da8eef77fb76d4d3e30d08e77614fc2e5> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.isonderworpenaan";
   shacl:class crm:E30_Right;
@@ -1502,6 +1496,12 @@
   shacl:maxCount 1;
   shacl:name "rechtenhouder"@nl;
   shacl:path crm:P105_right_held_by .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/e54ac8c7cf1fa06b18cc4092dd158896a9c59f84> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.heeftlid";
+  shacl:class crm:E1_CRM_Entity;
+  shacl:description "Verwijzing naar Entiteit die deel uitmaakt van de Set."@nl;
+  shacl:name "heeft lid"@nl;
+  shacl:path <https://linked.art/ns/terms/has_member> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SymbolischObjectShape> a shacl:NodeShape;
   shacl:closed false;
