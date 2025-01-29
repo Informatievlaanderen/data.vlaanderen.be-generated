@@ -396,8 +396,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/bb374a14aed99eaee311898791fd940c3e16b2c1">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/bb374a14aed99eaee311898791fd940c3e16b2c1</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/bb374a14aed99eaee311898791fd940c3e16b2c1/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/bb374a14aed99eaee311898791fd940c3e16b2c1/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/1d800c7669df940a8b05a4aae25b904bbda902e8">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/1d800c7669df940a8b05a4aae25b904bbda902e8</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/1d800c7669df940a8b05a4aae25b904bbda902e8/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/1d800c7669df940a8b05a4aae25b904bbda902e8/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed">https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed</a></dd>
 
@@ -514,6 +514,7 @@
                       <a href="#Aankoop">Aankoop</a> |
                       <a href="#Activiteit">Activiteit</a> |
                       <a href="#Agent">Agent</a> |
+                      <a href="#BeginBestaan">Begin Bestaan</a> |
                       <a href="#BelgischAdres">Belgisch Adres</a> |
                       <a href="#Classificatie">Classificatie</a> |
                       <a href="#Concept">Concept</a> |
@@ -524,7 +525,7 @@
                       <a href="#Entiteit">Entiteit</a> |
                       <a href="#Gebeurtenis">Gebeurtenis</a> |
                       <a href="#Grootheid">Grootheid</a> |
-                      <a href="#InformatieObject">Informatie Object</a> |
+                      <a href="#Informatieobject">InformatieObject</a> |
                       <a href="#MaterieelDing">Materieel Ding</a> |
                       <a href="#MaterieelObject">Materieel Object</a> |
                       <a href="#MensgemaaktDing">Mensgemaakt Ding</a> |
@@ -539,9 +540,12 @@
                       <a href="#Ruimtelijkobject">RuimtelijkObject</a> |
                       <a href="#Set">Set</a> |
                       <a href="#SymbolischObject">Symbolisch Object</a> |
+                      <a href="#Tijdvak">Tijdvak</a> |
+                      <a href="#Toekenning">Toekenning</a> |
                       <a href="#Valuta">Valuta</a> |
                       <a href="#Verwerving">Verwerving</a> |
                       <a href="#WettelijkObject">Wettelijk Object</a> |
+                      <a href="#Wijziging">Wijziging</a> |
                     </p>
                   </div>
                   
@@ -585,7 +589,7 @@
               <h3 class="h3" id="Aankoop"><a href="http://www.cidoc-crm.org/cidoc-crm/E96_Purchase" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E96_Purchase" data-placement="right">Aankoop</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De transfer van eigenaarschap van één of meerdere instanties van één of meerdere Agents waarbij de eerste partij volledig gecompenseerd wordt door een betaling in een monetaire hoeveelheid.</dd>
+                    <dt>Beschrijving</dt><dd>Transfer van eigenaarschap van één of meer Agents naar één of meer andere  Agents waarbij de eerste partij volledig gecompenseerd wordt door betaling van een Geldbedrag.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -630,7 +634,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">De prijs die voor de aankoop werd betaald.</td>
+                        <td property="rdfs:comment">De prijs die voor de Aankoop werd betaald.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -647,7 +651,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.</dd>
                     
-                    <dt>Gebruik</dt><dd>Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving.</dd>
+                    <dt>Gebruik</dt><dd>Subklasse van Gebeurtenis, verschil is dat een Activiteit bewust door een Agent wordt veroorzaakt (die dus meer is dan louter een deelnemer). Gespecialiseerd als Creatie of Productie, Classificatie of Verwerving van cultureel erfgoed. Ook niet-gespecialiseerd bruikbaar om Activiteiten zoals tentoonstellingen, voorstellingen edm te beschrijven.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -695,8 +699,8 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Het onderwerp van een Activiteit.</td>
-                        <td property="vann:usageNote">Dit attribuut kan gebruikt worden om te verwijzen naar het onderwerp van een tentoonstelling.</td>
+                        <td property="rdfs:comment">Het onderwerp van de Activiteit.</td>
+                        <td property="vann:usageNote">Bvb om naar het onderwerp van een tentoonstelling of voorstelling te verwijzen.</td>
                         <td></td>
                       </tr>
                     
@@ -716,7 +720,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.</td>
-                        <td property="vann:usageNote">Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig.</td>
+                        <td property="vann:usageNote">Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten.</td>
                         <td></td>
                       </tr>
                     
@@ -772,11 +776,12 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
                     
+                    <dt>Gebruik</dt><dd>OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie.</dd>
+                    
 		    
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Agent%3Acontactinfo">contactinfo</a>, 
                       <a href="#Agent%3Aheeft">heeft</a>, 
                       <a href="#Agent%3Aidentificator">identificator</a>.</dd>
                     
@@ -797,26 +802,6 @@
                     </thead>
 
                     <tbody class="supertype">
-                    
-                      <tr id="Agent%3Acontactinfo" typeof="rdfs:Property" resource="http://schema.org/contactPoint">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://schema.org/contactPoint" data-toggle="tooltip" data-content="http://schema.org/contactPoint" data-placement="right">
-                            contactinfo</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Contactinfo" data-placement="right">Contactinfo</a>
-			    
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment">Informatie zoals email, telefoon... die toelaat de Persoon te contacteren.</td>
-                        <td property="vann:usageNote"> </td>
-                        <td></td>
-                      </tr>
                     
                       <tr id="Agent%3Aheeft" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P75_possesses">
                         <td>
@@ -865,6 +850,24 @@
             </div>
             
               <div class="region region--no-space-top">
+              <h3 class="h3" id="BeginBestaan"><a href="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence" data-placement="right">Begin Bestaan</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Gebeurtenis die het ontstaan van een Persistent Object aangeeft.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Kan slaan op Agents of op Dingen (beide indirect subklasse van Entiteit). Gaat oa over Geboortes of Transformaties (beide niet aanwezig in dit model, Transformatie is tevens een Einde Bestaan), maar ook over Creatie en Productie. OPMERKING: Directe subklasse van Gebeurtenis en niet expliciet aanwezig in dit model. Directe superklasse van Creatie en Productie. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
               <h3 class="h3" id="BelgischAdres"><a href="https://data.vlaanderen.be/ns/adres#Adres" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/adres#Adres" data-placement="right">Belgisch Adres</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -897,7 +900,7 @@
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Toekenning</a>, 
+                        <a href="#Toekenning">Toekenning</a>, 
                         <a href="#Activiteit">Activiteit</a>
 		   </dd>
                     
@@ -961,7 +964,7 @@
                         </td>
                         <td>1..*</td>
                         <td property="rdfs:comment">Type dat aan de Entiteit is toegekend.</td>
-                        <td property="vann:usageNote">TO DO</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -995,7 +998,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.</dd>
                     
-                    <dt>Gebruik</dt><dd>Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Indirecte subklassen zijn Set en InformatieObject.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor immateriële objecten. Gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklassen Set of InformatieObject.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1100,11 +1103,12 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc.</dd>
                     
-                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.</dd>
+                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties of immaterieel erfgoedpraktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#Activiteit">Activiteit</a>
+                        <a href="#Activiteit">Activiteit</a>, 
+                        <a href="#Begin Bestaan">Begin Bestaan</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -1162,7 +1166,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.</dd>
                     
-                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn elektronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1180,7 +1184,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.</dd>
                     
-                    <dt>Gebruik</dt><dd>Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/unit/M">meter</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-UNITS.html">QUDT-units</a> voor meer info.</dd>
+                    <dt>Gebruik</dt><dd>Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/unit/M">meter</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-UNITS.html">QUDT-units</a> voor meer info.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1202,7 +1206,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte superklasse.</dd>
                     
-                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor alle types cultureel erfgoed, alsook voor de Activiteiten die daarop uitgevoerd worden.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor alle types cultureel erfgoed (conceptueel of materieel), alsook voor de Activiteiten die erop uitgevoerd worden. OPMERKING: Abstract, gebruik een niet-abstracte subklasse (ttz de indirecte subklasse Set, InformatieObject of MensgemaaktObject).</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1349,7 +1353,8 @@
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#Entiteit">Entiteit</a>
+                        <a href="#Entiteit">Entiteit</a>, 
+                        <a href="#Tijdvak">Tijdvak</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -1394,7 +1399,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Beschrijving van de Entiteit.</td>
+                        <td property="rdfs:comment">Beschrijving van de Gebeurtenis.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1491,7 +1496,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/quantitykind/Height">hoogte</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html">QUDT-quantityKinds</a> voor meer info.</dd>
+                    <dt>Gebruik</dt><dd>Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken ipv Concept als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href="http://qudt.org/vocab/quantitykind/Height">hoogte</a>. Zie <a href="https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html">QUDT-quantityKinds</a> voor meer info.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1508,12 +1513,12 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="InformatieObject"><a href="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" data-placement="right">Informatie Object</a></h3>
+              <h3 class="h3" id="Informatieobject"><a href="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" data-placement="right">InformatieObject</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.</dd>
                     
-                    <dt>Gebruik</dt><dd>Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.</dd>
+                    <dt>Gebruik</dt><dd>Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules, kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen. Superklasse van Expressie en Manifestatie (niet in dit model) in <a href="https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html">LRMoo</a>. Manifestatie wordt doorgaans gebruikt om publicaties te beschrijven. Kan voor archieven ook gemapt worden op Record en RecordPart uit <a href="https://www.ica.org/standards/RiC/RiC-O_1-0-2.html">RiC-O</a>.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1525,12 +1530,12 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#InformatieObject%3Adrager">drager</a>, 
-                      <a href="#InformatieObject%3AgaatOver">gaat over</a>, 
-                      <a href="#InformatieObject%3AheeftComponent">heeft component</a>, 
-                      <a href="#InformatieObject%3AisOnderworpenAan">is onderworpen aan</a>, 
-                      <a href="#InformatieObject%3Arechtenhouder">rechtenhouder</a>, 
-                      <a href="#InformatieObject%3AverwijstNaar">verwijst naar</a>.</dd>
+                      <a href="#Informatieobject%3Adrager">drager</a>, 
+                      <a href="#Informatieobject%3AgaatOver">gaat over</a>, 
+                      <a href="#Informatieobject%3AheeftComponent">heeft component</a>, 
+                      <a href="#Informatieobject%3AisOnderworpenAan">is onderworpen aan</a>, 
+                      <a href="#Informatieobject%3Arechtenhouder">rechtenhouder</a>, 
+                      <a href="#Informatieobject%3AverwijstNaar">verwijst naar</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1550,7 +1555,7 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="InformatieObject%3Adrager" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by">
+                      <tr id="Informatieobject%3Adrager" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by" data-placement="right">
@@ -1565,12 +1570,12 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Het Mensgemaakt Object dat het InformatieObject draagt.</td>
+                        <td property="rdfs:comment">Het Materieel Ding dat het InformatieObject draagt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="InformatieObject%3AgaatOver" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about">
+                      <tr id="Informatieobject%3AgaatOver" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P129_is_about" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P129_is_about" data-placement="right">
@@ -1586,11 +1591,11 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het onderwerp van het InformatieObject.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="InformatieObject%3AheeftComponent" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
+                      <tr id="Informatieobject%3AheeftComponent" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P148_has_component">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P148_has_component" data-placement="right">
@@ -1600,7 +1605,7 @@
                         <td>
                           
 			    
-			    <a href="#Informatie Object" data-placement="right">Informatie Object</a>
+			    <a href="#InformatieObject" data-placement="right">InformatieObject</a>
 			    
                           
                         </td>
@@ -1610,7 +1615,7 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="InformatieObject%3AisOnderworpenAan" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to">
+                      <tr id="Informatieobject%3AisOnderworpenAan" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to" data-placement="right">
@@ -1630,7 +1635,7 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="InformatieObject%3Arechtenhouder" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by">
+                      <tr id="Informatieobject%3Arechtenhouder" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by" data-placement="right">
@@ -1645,12 +1650,12 @@
                           
                         </td>
                         <td>1</td>
-                        <td property="rdfs:comment">	Agent die een Recht bezit op het Wettelijk Object.</td>
+                        <td property="rdfs:comment">Agent die een Recht bezit op het InformatieObject</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="InformatieObject%3AverwijstNaar" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to">
+                      <tr id="Informatieobject%3AverwijstNaar" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to" data-placement="right">
@@ -1682,7 +1687,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.</dd>
                     
-                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklasse van deze subklassen, mn MensgemaaktObject.</dd>
+                    <dt>Gebruik</dt><dd>Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklasse Mensgemaakt Object.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1758,7 +1763,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Materieel Ding dat deel uitmaakt van het Materieel Ding.</td>
-                        <td property="vann:usageNote">Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding.</td>
+                        <td property="vann:usageNote">Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.</td>
                         <td></td>
                       </tr>
                     
@@ -1812,7 +1817,7 @@
                         <td>
                           
 			    
-			    <a href="#Informatie Object" data-placement="right">Informatie Object</a>
+			    <a href="#InformatieObject" data-placement="right">InformatieObject</a>
 			    
                           
                         </td>
@@ -1857,7 +1862,7 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">Het onderwerp van een Materieel Ding.</td>
+                        <td property="rdfs:comment">Het onderwerp van het Materieel Ding.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1934,7 +1939,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt.</dd>
                     
-                    <dt>Gebruik</dt><dd>Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1952,7 +1957,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding.</dd>
                     
-                    <dt>Gebruik</dt><dd>Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -1970,7 +1975,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Fysiek object ontstaan door een doelbewuste menselijke activiteit.</dd>
                     
-                    <dt>Gebruik</dt><dd>Gebruik deze klasse om museale objecten, onroerend erfgoed en de dragers van InformatieObjecten te beschrijven, zoals een schilderij, een servies, een fysiek exemplaar van een publicatie, een fysiek onderdeel van een archief, een reus die gebruikt wordt tijdens de praktijk van het reuzendragen enz.</dd>
+                    <dt>Gebruik</dt><dd>Bruikbaar om museale objecten zoals schilderijen of serviezen te beschrijven. Of om een onroerend erfgoed voor te stellen of objecten gebruikt bij een immaterieel erfgoedpraktijk, bvb reuzen of speculaasvormen. Superklasse van Item uit <a href="https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html">LRMoo</a>, gebruikt om de fysieke exemplaren van een publicatie te beschrijven, bvb een individueel boek of cdrom. Kan voor de fysieke delen van een archief gemapt worden op Instantiation uit <a href="https://www.ica.org/standards/RiC/RiC-O_1-0-2.html">RiC-O</a>.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -2475,7 +2480,9 @@
                     
 		     
 		    <dt>Subklasse van <dt><dd>
-                        <a href="#Activiteit">Activiteit</a>
+                        <a href="#Activiteit">Activiteit</a>, 
+                        <a href="#Begin Bestaan">Begin Bestaan</a>, 
+                        <a href="#Wijziging">Wijziging</a>
 		   </dd>
                     
                     <dt>Eigenschappen</dt>
@@ -2533,7 +2540,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen</dd>
                     
-                    <dt>Gebruik</dt><dd>Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. Superklasse van Werk (niet in dit model) in <a href="https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html">LRMoo</a>. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -2559,10 +2566,10 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Recht%3A"></a>, 
-                      <a href="#Recht%3A"></a>, 
                       <a href="#Recht%3Abeschrijving">beschrijving</a>, 
+                      <a href="#Recht%3Ageldigheid">geldigheid</a>, 
                       <a href="#Recht%3Aidentificator">identificator</a>, 
+                      <a href="#Recht%3AisVanToepassingOp">is van toepassing op</a>, 
                       <a href="#Recht%3Atitel">titel</a>, 
                       <a href="#Recht%3Atype">type</a>.</dd>
                     
@@ -2584,46 +2591,6 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Recht%3A" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to" data-placement="right">
-                            </a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Entiteit" data-placement="right">Entiteit</a>
-			    
-                          
-                        </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment"></td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Recht%3A" typeof="rdfs:Property" resource="http://purl.org/dc/terms/valid">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/valid" data-toggle="tooltip" data-content="http://purl.org/dc/terms/valid" data-placement="right">
-                            </a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Periode" data-placement="right">Periode</a>
-			    
-                          
-                        </td>
-                        <td>0..1</td>
-                        <td property="rdfs:comment"></td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Recht%3Abeschrijving" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P3_has_note">
                         <td>
                           <code property="rdfs:label">
@@ -2640,6 +2607,26 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Beschrijving van het Recht.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Recht%3Ageldigheid" typeof="rdfs:Property" resource="http://purl.org/dc/terms/valid">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/valid" data-toggle="tooltip" data-content="http://purl.org/dc/terms/valid" data-placement="right">
+                            geldigheid</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Periode" data-placement="right">Periode</a>
+			    
+                          
+                        </td>
+                        <td>0..1</td>
+                        <td property="rdfs:comment">TODO</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2661,6 +2648,26 @@
                         <td>0..*</td>
                         <td property="rdfs:comment">Identificator van de Entiteit.</td>
                         <td property="vann:usageNote">Bij implementatie in RDF is de uri vd Entiteit de Identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren, hoeft niet noodzakelijk een technisch id te zijn maar kan bv ook een naam zijn.</td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Recht%3AisVanToepassingOp" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to" data-placement="right">
+                            is van toepassing op</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Entiteit" data-placement="right">Entiteit</a>
+			    
+                          
+                        </td>
+                        <td>0..*</td>
+                        <td property="rdfs:comment">TODO</td>
+                        <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
                     
@@ -2722,6 +2729,8 @@
                     <dt>Eigenschappen</dt>
 		     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Rol%3Aactiviteit">Activiteit</a>, 
+                      <a href="#Rol%3Aagent">Agent</a>, 
                       <a href="#Rol%3Arol">rol</a>.</dd>
                     
                   </dl>
@@ -2741,6 +2750,46 @@
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Rol%3Aactiviteit" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.activiteit">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.activiteit" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.activiteit" data-placement="right">
+                            Activiteit</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Activiteit" data-placement="right">Activiteit</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Referentie naar verbonden klasse.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Rol%3Aagent" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.agent">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.agent" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.agent" data-placement="right">
+                            Agent</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Agent" data-placement="right">Agent</a>
+			    
+                          
+                        </td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Referentie naar verbonden klasse.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Rol%3Arol" typeof="rdfs:Property" resource="http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of">
                         <td>
@@ -2796,7 +2845,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Conceptuele groepering van Entiteiten.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bvb de collectie van een museum of de lijst van favoriete objecten van een persoon. Als een Set materieel was zouden de objecten die bvb deel uitmaken van een virtuele collectie vernietigd worden als de Set zou ophouden te bestaan. Het is maw niet omdat een object deel uimaakt van een Set dat dit zijn fysieke toestand kan impacteren. Aangezien een Set conceptueel is kan hij niet worden vernietigd. een Set kan ook nul items bevatten.</dd>
+                    <dt>Gebruik</dt><dd>Sets zijn niet materieel omdat ze anders samen met de objecten die er deel van uit maken zouden kunnen worden vernietigd. Een Set kan nul items bevatten. Bruikbaar bvb voor het beschrijven van museale collecties of lijsten met favoriete objecten. Kan indien gewenst voor archieven gemapt worden op Recordset of Record uit <a href="https://www.ica.org/standards/RiC/RiC-O_1-0-2.html">RiC-O</a>.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -2965,7 +3014,43 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Herkenbare symbolen en elke samenvoeging van symbolen die een objectief herkenbare structuur hebben en die als afzonderlijke eenheden zijn gedocumenteerd.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Tijdvak"><a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E4_Period" data-placement="right">Tijdvak</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Omvat sets van samenhangende fenomenen of culturele uitingen in tijd en ruimte.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Vooral gebruikt om historische periodes weer te geven, bvb Neolithicum, Ming Dynasty, McCarthy tijdperk. Tov superklasse Temporele Entiteit (van CIDOC, niet aanwezig in dit model maar equivalent met Temporele Entiteit van W3C-Time, wel aanwezig) voegt het ook plaats toe, maw een Tijdvak is plaatsgebonden, het is nl tevens subklasse van RuimteTijdVolume (niet aanwezig in dit model). OPMERKING: Directe subklasse is Gebeurtenis, gedefinieerd als een Tijdvak met een direct vast te stellen resultaat (bvb een geboorte of vulkaanuitbarsting). Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Toekenning"><a href="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" data-placement="right">Toekenning</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Het vaststellen van de waarde van een kenmerk (attribuut of associatie) van een Entiteit.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Toekenning kan gaan over Identificatie, Meting, Classificatie of Conditiebeoordeling, maar andere mogelijkheden zijn bv het vaststellen van het eigenaarschap, het dateren van het object... OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Superklasse van Classificatie. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -3107,7 +3192,25 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Materiële of immateriële objecten waarop een Recht van toepassing is of op kan toegepast worden.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a>voor de volledige opdeling in klassen en subklassen.</dd>
+                    <dt>Gebruik</dt><dd>Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
+                    
+		    
+                    <dt>Eigenschappen</dt>
+		    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+		
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Wijziging"><a href="http://www.cidoc-crm.org/cidoc-crm/E11_Modification" data-toggle="tooltip" data-content="http://www.cidoc-crm.org/cidoc-crm/E11_Modification" data-placement="right">Wijziging</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Activiteit waarbij een Materieel Mensgemaakt Ding wordt geproduceerd, gewijzigd of veranderd.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Productie uit ruw materiaal valt hieronder maar bv ook behandeling of restauratie van bestaande objecten. OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Directe superklasse van Productie. . Zie <a href="https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html">CIDOC</a> voor de volledige opdeling in klassen en subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

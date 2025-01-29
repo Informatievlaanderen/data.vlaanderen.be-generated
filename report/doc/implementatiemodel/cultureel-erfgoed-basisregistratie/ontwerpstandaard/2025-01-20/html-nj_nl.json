@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/bb374a14aed99eaee311898791fd940c3e16b2c1",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/bb374a14aed99eaee311898791fd940c3e16b2c1/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/1d800c7669df940a8b05a4aae25b904bbda902e8",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/1d800c7669df940a8b05a4aae25b904bbda902e8/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -45,6 +45,98 @@
         "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
       },
       "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.agent",
+          "name": "agent",
+          "sort": "Agent",
+          "label": {
+            "nl": "Agent"
+          },
+          "description": {
+            "nl": "Referentie naar verbonden klasse."
+          },
+          "usage": {
+            "nl": ""
+          },
+          "domain": [
+            {
+              "EA-Name": "Rol",
+              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "",
+            "ap-label-nl": "",
+            "definition-nl": "",
+            "ap-definition-nl": "",
+            "usageNote-nl": "",
+            "ap-usageNote-nl": "",
+            "package": ""
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.activiteit",
+          "name": "activiteit",
+          "sort": "Activiteit",
+          "label": {
+            "nl": "Activiteit"
+          },
+          "description": {
+            "nl": "Referentie naar verbonden klasse."
+          },
+          "usage": {
+            "nl": ""
+          },
+          "domain": [
+            {
+              "EA-Name": "Rol",
+              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Activiteit",
+              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Activiteit",
+              "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+              "range_label": {
+                "nl": "Activiteit"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "",
+            "ap-label-nl": "",
+            "definition-nl": "",
+            "ap-definition-nl": "",
+            "usageNote-nl": "",
+            "ap-usageNote-nl": "",
+            "package": ""
+          }
+        },
         {
           "uri": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
           "name": "rol",
@@ -99,14 +191,17 @@
       "description": {
         "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
       },
-      "usage": {},
+      "usage": {
+        "nl": "OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
+      },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
         "ap-label-nl": "Agent",
         "uri": "http://purl.org/dc/terms/Agent",
         "label-nl": "Agent",
-        "definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+        "definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "ap-usageNote-nl": "OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
       },
       "properties": [
         {
@@ -189,51 +284,6 @@
             "ap-label-nl": "heeft",
             "ap-definition-nl": "Recht dat een Agent bezit."
           }
-        },
-        {
-          "uri": "http://schema.org/contactPoint",
-          "name": "contactinfo",
-          "sort": "contactinfo",
-          "label": {
-            "nl": "contactinfo"
-          },
-          "description": {
-            "nl": "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Agent",
-              "uri": "http://purl.org/dc/terms/Agent"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "ContactInfo",
-              "range_uri": "http://schema.org/ContactPoint"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Contactinfo",
-              "range_puri": "http://schema.org/ContactPoint",
-              "range_label": {
-                "nl": "Contactinfo"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-definition-nl": "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren.",
-            "ap-label-nl": "contactinfo",
-            "ap-usageNote-nl": " ",
-            "label-nl": "contactpunt",
-            "uri": "http://schema.org/contactPoint",
-            "definition-nl": "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."
-          }
         }
       ]
     },
@@ -258,11 +308,11 @@
         }
       ],
       "rawTags": {
-        "ap-defition-nl": "Een ruimtelijk gebied of benoemde plaats.",
         "ap-label-nl": "Plaats",
         "definition-nl": "Een ruimtelijk gebied of benoemde plaats.",
         "label-nl": "Locatie",
-        "uri": "http://purl.org/dc/terms/Location"
+        "uri": "http://purl.org/dc/terms/Location",
+        "ap-definition-nl": "Een ruimtelijk gebied of benoemde plaats."
       },
       "properties": [
         {
@@ -345,7 +395,6 @@
             "uri": "http://www.w3.org/2000/01/rdf-schema#label",
             "definition-nl": "Naam van de plaats of van het gebied.",
             "label-nl": "plaatsnaam",
-            "ap-defintion-nl": "Naam van de plaats of van het gebied.",
             "ap-label-nl": "plaatsnaam",
             "ap-definition-nl": "Naam van de plaats of van het gebied."
           }
@@ -382,6 +431,28 @@
       "properties": []
     },
     {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
+      "name": "Wijziging",
+      "label": {
+        "nl": "Wijziging"
+      },
+      "sort": "Wijziging",
+      "description": {
+        "nl": "Activiteit waarbij een Materieel Mensgemaakt Ding wordt geproduceerd, gewijzigd of veranderd."
+      },
+      "usage": {
+        "nl": "Productie uit ruw materiaal valt hieronder maar bv ook behandeling of restauratie van bestaande objecten. OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Directe superklasse van Productie. . Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Activiteit waarbij een Materieel Mensgemaakt Ding wordt geproduceerd, gewijzigd of veranderd.",
+        "ap-label-nl": "Wijziging",
+        "ap-usageNote-nl": "Productie uit ruw materiaal valt hieronder maar bv ook behandeling of restauratie van bestaande objecten. OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Directe superklasse van Productie. . Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen.",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
       "name": "Productie",
       "label": {
@@ -401,6 +472,20 @@
           "package": "OSLO-CultureelErfgoed-Event",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
           "scoped_uri": "#Activiteit"
+        },
+        {
+          "label": "Begin Bestaan",
+          "name": "BeginBestaan",
+          "package": "CIDOC-CRM",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+          "scoped_uri": "#Begin Bestaan"
+        },
+        {
+          "label": "Wijziging",
+          "name": "Wijziging",
+          "package": "OSLO-CultureelErfgoed-Event",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
+          "scoped_uri": "#Wijziging"
         }
       ],
       "rawTags": {
@@ -458,6 +543,28 @@
       ]
     },
     {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+      "name": "Toekenning",
+      "label": {
+        "nl": "Toekenning"
+      },
+      "sort": "Toekenning",
+      "description": {
+        "nl": "Het vaststellen van de waarde van een kenmerk (attribuut of associatie) van een Entiteit."
+      },
+      "usage": {
+        "nl": "Toekenning kan gaan over Identificatie, Meting, Classificatie of Conditiebeoordeling, maar andere mogelijkheden zijn bv het vaststellen van het eigenaarschap, het dateren van het object... OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Superklasse van Classificatie. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Het vaststellen van de waarde van een kenmerk (attribuut of associatie) van een Entiteit.",
+        "ap-label-nl": "Toekenning",
+        "ap-usageNote-nl": "Toekenning kan gaan over Identificatie, Meting, Classificatie of Conditiebeoordeling, maar andere mogelijkheden zijn bv het vaststellen van het eigenaarschap, het dateren van het object... OPMERKING: Directe subklasse van Activiteit en niet expliciet aanwezig in dit model. Superklasse van Classificatie. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen.",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
       "name": "Classificatie",
       "label": {
@@ -476,7 +583,7 @@
           "name": "Toekenning",
           "package": "OSLO-CultureelErfgoed-Event",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-          "scoped_uri": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+          "scoped_uri": "#Toekenning"
         },
         {
           "label": "Activiteit",
@@ -506,9 +613,7 @@
           "description": {
             "nl": "Type dat aan de Entiteit is toegekend."
           },
-          "usage": {
-            "nl": "TO DO"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Classificatie",
@@ -536,7 +641,6 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P42_assigned",
             "ap-label-nl": "toegekend type",
             "ap-definition-nl": "Type dat aan de Entiteit is toegekend.",
-            "ap-usageNote-nl": "TO DO",
             "label-nl": "toegekend type",
             "definition-nl": "Type dat aan de Entiteit is toegekend."
           }
@@ -596,7 +700,7 @@
         "nl": "Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk."
       },
       "usage": {
-        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklasse van deze subklassen, mn MensgemaaktObject."
+        "nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklasse Mensgemaakt Object."
       },
       "parents": [
         {
@@ -617,7 +721,7 @@
       "rawTags": {
         "ap-definition-nl": "Persistent fysiek item met een relatief stabiele vorm, kan mensgemaakt zijn of natuurlijk.",
         "ap-label-nl": "Materieel Ding",
-        "ap-usageNote-nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Subklassen zijn Fysiek Object en Fysiek Kenmerk en Fysiek Mensgemaakt Ding (deze laatste overlapt en geeft aan of het object of kenmerk mensgemaakt is). In dit implementatiemodel zijn deze subklassen niet expliciet aanwezig, wel een subklasse van deze subklassen, mn MensgemaaktObject.",
+        "ap-usageNote-nl": "Overkoepelende klasse voor fysieke objecten en fysieke kenmerken (al dan niet mensgemaakt). OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklasse Mensgemaakt Object.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
         "label-nl": "Materieel Ding",
         "definition-nl": "Persistent fysiek item met een relatief stabiele vorm,kan mensgemaakt zijn of natuurlijk.",
@@ -719,7 +823,7 @@
             "nl": "Materieel Ding dat deel uitmaakt van het Materieel Ding."
           },
           "usage": {
-            "nl": "Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding."
+            "nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing."
           },
           "domain": [
             {
@@ -747,7 +851,6 @@
           "rawTags": {
             "ap-label-nl": "bestaat uit",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of",
-            "ap-usageNote-nl": "Merk op dat componenten van een Materieel Ding deel kunnen uitmaken van een ander Materieel Ding.",
             "ap-definition-nl": "Materieel Ding dat deel uitmaakt van het Materieel Ding.",
             "usageNote-nl": "Merk op dat componenten van een MaterieelDing deel kunnen uitmaken van een ander MaterieelDing.",
             "label-nl": "bestaat uit",
@@ -951,10 +1054,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Informatie Object",
+              "range_uri": "#InformatieObject",
               "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
               "range_label": {
-                "nl": "Informatie Object"
+                "nl": "InformatieObject"
               }
             }
           ],
@@ -1018,7 +1121,7 @@
             "nl": "gaat over"
           },
           "description": {
-            "nl": "Het onderwerp van een Materieel Ding."
+            "nl": "Het onderwerp van het Materieel Ding."
           },
           "usage": {},
           "domain": [
@@ -1049,7 +1152,7 @@
             "label-nl": "gaat over",
             "definition-nl": "Het onderwerp van een MaterieelDing.",
             "ap-label-nl": "gaat over",
-            "ap-definition-nl": "Het onderwerp van een Materieel Ding."
+            "ap-definition-nl": "Het onderwerp van het Materieel Ding."
           }
         }
       ]
@@ -1065,13 +1168,13 @@
         "nl": "Abstracte superklasse."
       },
       "usage": {
-        "nl": "Overkoepelende klasse voor alle types cultureel erfgoed, alsook voor de Activiteiten die daarop uitgevoerd worden."
+        "nl": "Overkoepelende klasse voor alle types cultureel erfgoed (conceptueel of materieel), alsook voor de Activiteiten die erop uitgevoerd worden. OPMERKING: Abstract, gebruik een niet-abstracte subklasse (ttz de indirecte subklasse Set, InformatieObject of MensgemaaktObject)."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Abstracte superklasse.",
         "ap-label-nl": "Entiteit",
-        "ap-usageNote-nl": "Overkoepelende klasse voor alle types cultureel erfgoed, alsook voor de Activiteiten die daarop uitgevoerd worden.",
+        "ap-usageNote-nl": "Overkoepelende klasse voor alle types cultureel erfgoed (conceptueel of materieel), alsook voor de Activiteiten die erop uitgevoerd worden. OPMERKING: Abstract, gebruik een niet-abstracte subklasse (ttz de indirecte subklasse Set, InformatieObject of MensgemaaktObject).",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
         "label-nl": "Entiteit",
         "definition-nl": "Abstracte superklasse.",
@@ -1312,7 +1415,7 @@
         "nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt."
       },
       "usage": {
-        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -1320,7 +1423,7 @@
         "label-nl": "MaterieelObject",
         "ap-label-nl": "Materieel Object",
         "ap-definition-nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt.",
-        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
@@ -1335,7 +1438,7 @@
         "nl": "Fysiek object ontstaan door een doelbewuste menselijke activiteit."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om museale objecten, onroerend erfgoed en de dragers van InformatieObjecten te beschrijven, zoals een schilderij, een servies, een fysiek exemplaar van een publicatie, een fysiek onderdeel van een archief, een reus die gebruikt wordt tijdens de praktijk van het reuzendragen enz."
+        "nl": "Bruikbaar om museale objecten zoals schilderijen of serviezen te beschrijven. Of om een onroerend erfgoed voor te stellen of objecten gebruikt bij een immaterieel erfgoedpraktijk, bvb reuzen of speculaasvormen. Superklasse van Item uit <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>, gebruikt om de fysieke exemplaren van een publicatie te beschrijven, bvb een individueel boek of cdrom. Kan voor de fysieke delen van een archief gemapt worden op Instantiation uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>."
       },
       "parents": [
         {
@@ -1363,7 +1466,7 @@
       "rawTags": {
         "ap-definition-nl": "Fysiek object ontstaan door een doelbewuste menselijke activiteit.",
         "ap-label-nl": "Mensgemaakt Object",
-        "ap-usageNote-nl": "Gebruik deze klasse om museale objecten, onroerend erfgoed en de dragers van InformatieObjecten te beschrijven, zoals een schilderij, een servies, een fysiek exemplaar van een publicatie, een fysiek onderdeel van een archief, een reus die gebruikt wordt tijdens de praktijk van het reuzendragen enz.",
+        "ap-usageNote-nl": "Bruikbaar om museale objecten zoals schilderijen of serviezen te beschrijven. Of om een onroerend erfgoed voor te stellen of objecten gebruikt bij een immaterieel erfgoedpraktijk, bvb reuzen of speculaasvormen. Superklasse van Item uit <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>, gebruikt om de fysieke exemplaren van een publicatie te beschrijven, bvb een individueel boek of cdrom. Kan voor de fysieke delen van een archief gemapt worden op Instantiation uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
         "label-nl": "Mensgemaakt Object",
         "definition-nl": "Fysiek object ontstaan door een doelbewuste menselijke activiteit."
@@ -1598,7 +1701,7 @@
         "nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens."
       },
       "usage": {
-        "nl": "Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Indirecte subklassen zijn Set en InformatieObject."
+        "nl": "Overkoepelende klasse voor immateriële objecten. Gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklassen Set of InformatieObject."
       },
       "parents": [
         {
@@ -1619,7 +1722,7 @@
       "rawTags": {
         "ap-definition-nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.",
         "ap-label-nl": "Conceptueel Object",
-        "ap-usageNote-nl": "Typisch gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Indirecte subklassen zijn Set en InformatieObject.",
+        "ap-usageNote-nl": "Overkoepelende klasse voor immateriële objecten. Gecreëerd, uitgevonden of bedacht door iemand en dan gedocumenteerd of mondeling doorgegeven. Een Conceptueel Object kan niet worden vernietigd, het bestaan ervan stopt pas als het op geen enkele drager nog voorkomt. OPMERKING: Indirecte subklasse van Entiteit. Abstracte klasse, gebruik de indirecte subklassen Set of InformatieObject.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
         "label-nl": "Conceptueel Object",
         "definition-nl": "Niet-materiële voortbrengselen van de geest of andere door mensen geproduceerde gegevens.",
@@ -1918,10 +2021,14 @@
         },
         {
           "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "isVanToepassingOp",
+          "sort": "is van toepassing op",
+          "label": {
+            "nl": "is van toepassing op"
+          },
+          "description": {
+            "nl": "TODO"
+          },
           "usage": {},
           "domain": [
             {
@@ -1947,7 +2054,9 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to"
+            "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
+            "ap-label-nl": "is van toepassing op",
+            "ap-definition-nl": "TODO"
           }
         },
         {
@@ -1994,10 +2103,14 @@
         },
         {
           "uri": "http://purl.org/dc/terms/valid",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
+          "name": "geldigheid",
+          "sort": "geldigheid",
+          "label": {
+            "nl": "geldigheid"
+          },
+          "description": {
+            "nl": "TODO"
+          },
           "usage": {},
           "domain": [
             {
@@ -2023,10 +2136,34 @@
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://purl.org/dc/terms/valid"
+            "uri": "http://purl.org/dc/terms/valid",
+            "ap-label-nl": "geldigheid",
+            "ap-definition-nl": "TODO"
           }
         }
       ]
+    },
+    {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+      "name": "Tijdvak",
+      "label": {
+        "nl": "Tijdvak"
+      },
+      "sort": "Tijdvak",
+      "description": {
+        "nl": "Omvat sets van samenhangende fenomenen of culturele uitingen in tijd en ruimte."
+      },
+      "usage": {
+        "nl": "Vooral gebruikt om historische periodes weer te geven, bvb Neolithicum, Ming Dynasty, McCarthy tijdperk. Tov superklasse Temporele Entiteit (van CIDOC, niet aanwezig in dit model maar equivalent met Temporele Entiteit van W3C-Time, wel aanwezig) voegt het ook plaats toe, maw een Tijdvak is plaatsgebonden, het is nl tevens subklasse van RuimteTijdVolume (niet aanwezig in dit model). OPMERKING: Directe subklasse is Gebeurtenis, gedefinieerd als een Tijdvak met een direct vast te stellen resultaat (bvb een geboorte of vulkaanuitbarsting). Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Omvat sets van samenhangende fenomenen of culturele uitingen in tijd en ruimte.",
+        "ap-label-nl": "Tijdvak",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+        "ap-usageNote-nl": "Vooral gebruikt om historische periodes weer te geven, bvb Neolithicum, Ming Dynasty, McCarthy tijdperk. Tov superklasse Temporele Entiteit (van CIDOC, niet aanwezig in dit model maar equivalent met Temporele Entiteit van W3C-Time, wel aanwezig) voegt het ook plaats toe, maw een Tijdvak is plaatsgebonden, het is nl tevens subklasse van RuimteTijdVolume (niet aanwezig in dit model). OPMERKING: Directe subklasse is Gebeurtenis, gedefinieerd als een Tijdvak met een direct vast te stellen resultaat (bvb een geboorte of vulkaanuitbarsting). Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "properties": []
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
@@ -2048,6 +2185,13 @@
           "package": "HulpPakket",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
           "scoped_uri": "#Entiteit"
+        },
+        {
+          "label": "Tijdvak",
+          "name": "Tijdvak",
+          "package": "CIDOC-CRM",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
+          "scoped_uri": "#Tijdvak"
         }
       ],
       "rawTags": {
@@ -2195,7 +2339,7 @@
             "nl": "beschrijving"
           },
           "description": {
-            "nl": "Beschrijving van de Entiteit."
+            "nl": "Beschrijving van de Gebeurtenis."
           },
           "usage": {},
           "domain": [
@@ -2225,7 +2369,7 @@
             "package": "OSLO-CultureelErfgoed-Object",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
             "ap-label-nl": "beschrijving",
-            "ap-definition-nl": "Beschrijving van de Entiteit.",
+            "ap-definition-nl": "Beschrijving van de Gebeurtenis.",
             "label-nl": "beschrijving",
             "definition-nl": "Beschrijving van de Entiteit."
           }
@@ -2280,6 +2424,28 @@
       ]
     },
     {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+      "name": "BeginBestaan",
+      "label": {
+        "nl": "Begin Bestaan"
+      },
+      "sort": "Begin Bestaan",
+      "description": {
+        "nl": "Gebeurtenis die het ontstaan van een Persistent Object aangeeft."
+      },
+      "usage": {
+        "nl": "Kan slaan op Agents of op Dingen (beide indirect subklasse van Entiteit). Gaat oa over Geboortes of Transformaties (beide niet aanwezig in dit model, Transformatie is tevens een Einde Bestaan), maar ook over Creatie en Productie. OPMERKING: Directe subklasse van Gebeurtenis en niet expliciet aanwezig in dit model. Directe superklasse van Creatie en Productie. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Gebeurtenis die het ontstaan van een Persistent Object aangeeft.",
+        "ap-label-nl": "Begin Bestaan",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+        "ap-usageNote-nl": "Kan slaan op Agents of op Dingen (beide indirect subklasse van Entiteit). Gaat oa over Geboortes of Transformaties (beide niet aanwezig in dit model, Transformatie is tevens een Einde Bestaan), maar ook over Creatie en Productie. OPMERKING: Directe subklasse van Gebeurtenis en niet expliciet aanwezig in dit model. Directe superklasse van Creatie en Productie. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "properties": []
+    },
+    {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
       "name": "Creatie",
       "label": {
@@ -2290,7 +2456,7 @@
         "nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties of immaterieel erfgoedpraktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
       },
       "parents": [
         {
@@ -2299,6 +2465,13 @@
           "package": "OSLO-CultureelErfgoed-Event",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
           "scoped_uri": "#Activiteit"
+        },
+        {
+          "label": "Begin Bestaan",
+          "name": "BeginBestaan",
+          "package": "CIDOC-CRM",
+          "uri": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
+          "scoped_uri": "#Begin Bestaan"
         }
       ],
       "rawTags": {
@@ -2307,7 +2480,7 @@
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
         "label-nl": "Creatie",
         "definition-nl": "Activiteit die leidt tot het onstaan van een ConceptueelObject, bv een gedicht, tekst, muziek, beelden, films etc.",
-        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties en immaterieel erfgoed praktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
+        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten uit te wisselen, bijvoorbeeld voor publicaties, collecties of immaterieel erfgoedpraktijken. Niet te verwarren met de klasse Productie, die enkel gebruikt mag worden voor Mensgemaakte Objecten."
       },
       "properties": [
         {
@@ -2365,13 +2538,13 @@
         "nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item."
       },
       "usage": {
-        "nl": "Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn elektronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Afzonderlijk hanteerbaar, identificeerbaar, als eenheid te beschrijven, persistent item.",
         "ap-label-nl": "Ding",
-        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn electronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen.",
+        "ap-usageNote-nl": "Het kan om fysieke voorwerpen gaan (met uitzondering van Agents), maar ook om intellectuele producten. Dingen zijn relatief stabiel in de tijd, kunnen een materiële vorm aannemen of zijn elektronisch gecodeerd of zijn logische concepten of structuren. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Indirecte superklasse van Conceptueel Object en Materieel Ding. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
         "label-nl": "Ding"
       },
@@ -2388,7 +2561,7 @@
         "nl": "Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding."
       },
       "usage": {
-        "nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -2396,7 +2569,7 @@
         "label-nl": "MensgemaaktDing",
         "ap-label-nl": "Mensgemaakt Ding",
         "ap-definition-nl": "Onderscheidbaar, identificeerbaar mensgemaakt, afzonderlijk documenteerbaar Ding.",
-        "ap-usageNote-nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Beperkter dan Ding dat niet noodzakelijk mensgemaakt is. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in dit model. Directe superklasse van Conceptueel Object (dat immers steeds mensgemaakt is) en indirecte superklasse van MensgemaaktObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
@@ -2411,7 +2584,7 @@
         "nl": "Materiële of immateriële objecten waarop een Recht van toepassing is of op kan toegepast worden."
       },
       "usage": {
-        "nl": "Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -2419,22 +2592,22 @@
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
         "ap-label-nl": "Wettelijk Object",
         "ap-definition-nl": "Materiële of immateriële objecten waarop een Recht van toepassing is of op kan toegepast worden.",
-        "ap-usageNote-nl": "Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Bvb het recht op eigenaarschap of gebruik. OPMERKING: Indirecte subklasse van Entiteit en niet expliciet aanwezig in het model. Indirecte superklasse van InformatieObject en Mensgemaakt Object. Directe superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-      "name": "InformatieObject",
+      "name": "Informatieobject",
       "label": {
-        "nl": "Informatie Object"
+        "nl": "InformatieObject"
       },
-      "sort": "Informatie Object",
+      "sort": "InformatieObject",
       "description": {
         "nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan."
       },
       "usage": {
-        "nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen."
+        "nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules, kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen. Superklasse van Expressie en Manifestatie (niet in dit model) in <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>. Manifestatie wordt doorgaans gebruikt om publicaties te beschrijven. Kan voor archieven ook gemapt worden op Record en RecordPart uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>."
       },
       "parents": [
         {
@@ -2461,8 +2634,8 @@
       ],
       "rawTags": {
         "ap-definition-nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.",
-        "ap-label-nl": "Informatie Object",
-        "ap-usageNote-nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
+        "ap-label-nl": "InformatieObject",
+        "ap-usageNote-nl": "Voorbeelden: gedichten, datasets, afbeeldingen, teksten, multimedia-objecten, ontwerpen of procedures, computerprogrammacode, algoritmes of wiskundige formules, kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen. Superklasse van Expressie en Manifestatie (niet in dit model) in <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>. Manifestatie wordt doorgaans gebruikt om publicaties te beschrijven. Kan voor archieven ook gemapt worden op Record en RecordPart uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
         "definition-nl": "Immaterieel object dat informatie omvat, ttz gegevens of data waaraan op één of andere manier betekenis is gegeven. Een Informatieobject gaat ergens over (het is propositioneel) en brengt dat over dmv symbolen (karakters, tekens etc.) of aggregaties daarvan.",
         "usageNote-nl": "Voorbeelden: gedichten,datasets,afbeeldingen,teksten,multimedia-objecten,ontwerpen of procedures,computerprogrammacode,algoritmes of wiskundige formules,kennisgraphs... Kan los van een drager bestaan of op één of meer dragers voorkomen.",
@@ -2539,10 +2712,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#Informatie Object",
+              "range_uri": "#InformatieObject",
               "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
               "range_label": {
-                "nl": "Informatie Object"
+                "nl": "InformatieObject"
               }
             }
           ],
@@ -2567,7 +2740,7 @@
             "nl": "Het onderwerp van het InformatieObject."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "nl": "Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           },
           "domain": [
             {
@@ -2599,7 +2772,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
             "ap-label-nl": "gaat over",
             "ap-definition-nl": "Het onderwerp van het InformatieObject.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           }
         },
         {
@@ -2610,7 +2783,7 @@
             "nl": "drager"
           },
           "description": {
-            "nl": "Het Mensgemaakt Object dat het InformatieObject draagt."
+            "nl": "Het Materieel Ding dat het InformatieObject draagt."
           },
           "usage": {},
           "domain": [
@@ -2637,7 +2810,7 @@
           "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
-            "ap-definition-nl": "Het Mensgemaakt Object dat het InformatieObject draagt.",
+            "ap-definition-nl": "Het Materieel Ding dat het InformatieObject draagt.",
             "label-nl": "drager",
             "definition-nl": "Het MensgemaaktObject dat het InformatieObject draagt.",
             "ap-label-nl": "drager",
@@ -2652,7 +2825,7 @@
             "nl": "rechtenhouder"
           },
           "description": {
-            "nl": "\tAgent die een Recht bezit op het Wettelijk Object."
+            "nl": "Agent die een Recht bezit op het InformatieObject"
           },
           "usage": {},
           "domain": [
@@ -2683,7 +2856,7 @@
             "label-nl": "rechtenhouder",
             "ap-label-nl": "rechtenhouder",
             "definition-nl": "\tAgent die een Recht bezit op het WettelijkObject.",
-            "ap-definition-nl": "\tAgent die een Recht bezit op het Wettelijk Object."
+            "ap-definition-nl": "Agent die een Recht bezit op het InformatieObject"
           }
         },
         {
@@ -2741,7 +2914,7 @@
         "nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen."
       },
       "usage": {
-        "nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving."
+        "nl": "Subklasse van Gebeurtenis, verschil is dat een Activiteit bewust door een Agent wordt veroorzaakt (die dus meer is dan louter een deelnemer). Gespecialiseerd als Creatie of Productie, Classificatie of Verwerving van cultureel erfgoed. Ook niet-gespecialiseerd bruikbaar om Activiteiten zoals tentoonstellingen, voorstellingen edm te beschrijven."
       },
       "parents": [
         {
@@ -2755,7 +2928,7 @@
       "rawTags": {
         "ap-definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
         "ap-label-nl": "Activiteit",
-        "ap-usageNote-nl": "Activiteit is een overkoepelende term voor de acties die uitgevoerd worden op cultureel erfgoed, zoals bijvoorbeeld de Creatie of Productie, Classificatie, of Verwerving.",
+        "ap-usageNote-nl": "Subklasse van Gebeurtenis, verschil is dat een Activiteit bewust door een Agent wordt veroorzaakt (die dus meer is dan louter een deelnemer). Gespecialiseerd als Creatie of Productie, Classificatie of Verwerving van cultureel erfgoed. Ook niet-gespecialiseerd bruikbaar om Activiteiten zoals tentoonstellingen, voorstellingen edm te beschrijven.",
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
         "label-nl": "Activiteit",
         "definition-nl": "Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel, sociaal of materieel effect teweeg te brengen.",
@@ -2819,7 +2992,7 @@
             "nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit."
           },
           "usage": {
-            "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig."
+            "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten."
           },
           "domain": [
             {
@@ -2848,7 +3021,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
             "ap-label-nl": "gebruikt object",
             "ap-definition-nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.",
-            "ap-usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig.",
+            "ap-usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten.",
             "label-nl": "gebruikt object",
             "definition-nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.",
             "usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig."
@@ -2906,10 +3079,10 @@
             "nl": "gaat over"
           },
           "description": {
-            "nl": "Het onderwerp van een Activiteit."
+            "nl": "Het onderwerp van de Activiteit."
           },
           "usage": {
-            "nl": "Dit attribuut kan gebruikt worden om te verwijzen naar het onderwerp van een tentoonstelling."
+            "nl": "Bvb om naar het onderwerp van een tentoonstelling of voorstelling te verwijzen."
           },
           "domain": [
             {
@@ -2940,8 +3113,8 @@
             "definition-nl": "Het onderwerp van een Activiteit.",
             "usageNote-nl": "Dit attribuut kan gebruikt worden om te verwijzen naar het onderwerp van een tentoonstelling.",
             "ap-label-nl": "gaat over",
-            "ap-definition-nl": "Het onderwerp van een Activiteit.",
-            "ap-usageNote-nl": "Dit attribuut kan gebruikt worden om te verwijzen naar het onderwerp van een tentoonstelling."
+            "ap-definition-nl": "Het onderwerp van de Activiteit.",
+            "ap-usageNote-nl": "Bvb om naar het onderwerp van een tentoonstelling of voorstelling te verwijzen."
           }
         }
       ]
@@ -2957,7 +3130,7 @@
         "nl": "Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen"
       },
       "usage": {
-        "nl": "Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. Superklasse van Werk (niet in dit model) in <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -2965,7 +3138,7 @@
         "label-nl": "PropositioneelObject",
         "ap-label-nl": "Propositioneel Object",
         "ap-definition-nl": "Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen",
-        "ap-usageNote-nl": "Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Waaronder maar niet beperkt tot verhalen, plots, procedurele voorschriften, algoritmen, natuurwetten of afbeeldingen. Superklasse van Werk (niet in dit model) in <a href=\"https://cidoc-crm.org/extensions/lrmoo/html/LRMoo_v1.0.html\">LRMoo</a>. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Symbolisch Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Samen met WettelijkObject superklasse van Set. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
@@ -3140,7 +3313,7 @@
         "nl": "Herkenbare symbolen en elke samenvoeging van symbolen die een objectief herkenbare structuur hebben en die als afzonderlijke eenheden zijn gedocumenteerd."
       },
       "usage": {
-        "nl": "Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "nl": "Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -3148,7 +3321,7 @@
         "label-nl": "SymbolischObject",
         "ap-label-nl": "Symbolisch Object",
         "ap-definition-nl": "Herkenbare symbolen en elke samenvoeging van symbolen die een objectief herkenbare structuur hebben en die als afzonderlijke eenheden zijn gedocumenteerd.",
-        "ap-usageNote-nl": "Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a>voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Bvb tekens, identificatoren, verkeersborden, emblemen, teksten, gegevenssets, afbeeldingen, muzieknoten, multimediaobjecten, computerprogrammacode of wiskundige formules. OPMERKING: Directe subklasse van Conceptueel Object en niet expliciet aanwezig in dit model. Samen met Propositioneel Object (niet expliciet aanwezig in dit model) superklasse van InformatieObject. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
@@ -3160,7 +3333,7 @@
       },
       "sort": "Aankoop",
       "description": {
-        "nl": "De transfer van eigenaarschap van één of meerdere instanties van één of meerdere Agents waarbij de eerste partij volledig gecompenseerd wordt door een betaling in een monetaire hoeveelheid."
+        "nl": "Transfer van eigenaarschap van één of meer Agents naar één of meer andere  Agents waarbij de eerste partij volledig gecompenseerd wordt door betaling van een Geldbedrag."
       },
       "usage": {},
       "parents": [
@@ -3177,7 +3350,7 @@
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E96_Purchase",
         "label-nl": "Aankoop",
         "ap-label-nl": "Aankoop",
-        "ap-definition-nl": "De transfer van eigenaarschap van één of meerdere instanties van één of meerdere Agents waarbij de eerste partij volledig gecompenseerd wordt door een betaling in een monetaire hoeveelheid."
+        "ap-definition-nl": "Transfer van eigenaarschap van één of meer Agents naar één of meer andere  Agents waarbij de eerste partij volledig gecompenseerd wordt door betaling van een Geldbedrag."
       },
       "properties": [
         {
@@ -3188,7 +3361,7 @@
             "nl": "heeft aankoopprijs"
           },
           "description": {
-            "nl": "De prijs die voor de aankoop werd betaald."
+            "nl": "De prijs die voor de Aankoop werd betaald."
           },
           "usage": {},
           "domain": [
@@ -3219,7 +3392,7 @@
             "definition-nl": "De prijs die voor de aankoop werd betaald.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P179_had_sales_price",
             "ap-label-nl": "heeft aankoopprijs",
-            "ap-definition-nl": "De prijs die voor de aankoop werd betaald."
+            "ap-definition-nl": "De prijs die voor de Aankoop werd betaald."
           }
         }
       ]
@@ -3783,7 +3956,7 @@
         "nl": "Conceptuele groepering van Entiteiten."
       },
       "usage": {
-        "nl": "Bvb de collectie van een museum of de lijst van favoriete objecten van een persoon. Als een Set materieel was zouden de objecten die bvb deel uitmaken van een virtuele collectie vernietigd worden als de Set zou ophouden te bestaan. Het is maw niet omdat een object deel uimaakt van een Set dat dit zijn fysieke toestand kan impacteren. Aangezien een Set conceptueel is kan hij niet worden vernietigd. een Set kan ook nul items bevatten."
+        "nl": "Sets zijn niet materieel omdat ze anders samen met de objecten die er deel van uit maken zouden kunnen worden vernietigd. Een Set kan nul items bevatten. Bruikbaar bvb voor het beschrijven van museale collecties of lijsten met favoriete objecten. Kan indien gewenst voor archieven gemapt worden op Recordset of Record uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>."
       },
       "parents": [
         {
@@ -3813,7 +3986,7 @@
         "ap-label-nl": "Set",
         "definition-nl": "Conceptuele groepering van materiële of conceptuele dingen.",
         "ap-definition-nl": "Conceptuele groepering van Entiteiten.",
-        "ap-usageNote-nl": "Bvb de collectie van een museum of de lijst van favoriete objecten van een persoon. Als een Set materieel was zouden de objecten die bvb deel uitmaken van een virtuele collectie vernietigd worden als de Set zou ophouden te bestaan. Het is maw niet omdat een object deel uimaakt van een Set dat dit zijn fysieke toestand kan impacteren. Aangezien een Set conceptueel is kan hij niet worden vernietigd. een Set kan ook nul items bevatten.",
+        "ap-usageNote-nl": "Sets zijn niet materieel omdat ze anders samen met de objecten die er deel van uit maken zouden kunnen worden vernietigd. Een Set kan nul items bevatten. Bruikbaar bvb voor het beschrijven van museale collecties of lijsten met favoriete objecten. Kan indien gewenst voor archieven gemapt worden op Recordset of Record uit <a href=\"https://www.ica.org/standards/RiC/RiC-O_1-0-2.html\">RiC-O</a>.",
         "uri": "https://linked.art/Set"
       },
       "properties": [
@@ -4089,7 +4262,7 @@
         "nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd."
       },
       "usage": {
-        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info."
+        "nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken ipv Concept als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info."
       },
       "parents": [
         {
@@ -4104,7 +4277,9 @@
         "uri": "https://qudt.org/schema/qudt/QuantityKind",
         "label-nl": "Grootheid",
         "definition-nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd.",
-        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info."
+        "ap-usageNote-nl": "Bekende voorbeelden zijn onder meer fysieke eigenschappen zoals lengte, massa, tijd, kracht, energie, kracht, elektrische lading, enz. Minder bekende voorbeelden zijn onder meer valuta, rentetarief of informatiecapaciteit. Te gebruiken ipv Concept als een voorgedefinieerde grootheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/quantitykind/Height\">hoogte</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-QUANTITY-KINDS.html\">QUDT-quantityKinds</a> voor meer info.",
+        "ap-label-nl": "Grootheid",
+        "ap-definition-nl": "Een grootheid is elke waarneembare eigenschap die numeriek kan worden gemeten en gekwantificeerd."
       },
       "properties": []
     },
@@ -4119,7 +4294,7 @@
         "nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."
       },
       "usage": {
-        "nl": "Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
+        "nl": "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
       },
       "parents": [
         {
@@ -4136,7 +4311,7 @@
         "uri": "https://qudt.org/schema/qudt/Unit",
         "ap-label-nl": "Eenheid",
         "ap-definition-nl": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
-        "ap-usageNote-nl": "Te gebruiken als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
+        "ap-usageNote-nl": "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."
       },
       "properties": []
     }
