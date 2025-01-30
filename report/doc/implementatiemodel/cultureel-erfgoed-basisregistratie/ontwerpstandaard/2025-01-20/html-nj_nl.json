@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/9f473aac5e20e605928e032e2f0d225ad85ba365",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/9f473aac5e20e605928e032e2f0d225ad85ba365/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -192,7 +192,7 @@
         "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
       },
       "usage": {
-        "nl": "OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
+        "nl": "In deze context oa de creator of producent of de eigenaar of bewaarder van cultureel erfgoed. OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
       },
       "parents": [],
       "rawTags": {
@@ -201,7 +201,7 @@
         "uri": "http://purl.org/dc/terms/Agent",
         "label-nl": "Agent",
         "definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
-        "ap-usageNote-nl": "OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
+        "ap-usageNote-nl": "In deze context oa de creator of producent of de eigenaar of bewaarder van cultureel erfgoed. OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
       },
       "properties": [
         {
@@ -214,7 +214,9 @@
           "description": {
             "nl": "Identificator van de Agent."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren zoals persoons- of organisatienummers."
+          },
           "domain": [
             {
               "EA-Name": "Agent",
@@ -241,7 +243,10 @@
           "rawTags": {
             "uri": "http://www.w3.org/ns/adms#identifier",
             "label-nl": "identificator",
-            "definition-nl": "Identificator van de Agent."
+            "definition-nl": "Identificator van de Agent.",
+            "ap-label-nl": "identificator",
+            "ap-definition-nl": "Identificator van de Agent.",
+            "ap-usageNote-nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren zoals persoons- of organisatienummers."
           }
         },
         {
@@ -508,7 +513,9 @@
           "description": {
             "nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd."
           },
-          "usage": {},
+          "usage": {
+            "nl": "In dit model beperkt tot het geproduceerd Mensgemaakt Object."
+          },
           "domain": [
             {
               "EA-Name": "Productie",
@@ -537,7 +544,8 @@
             "ap-label-nl": "product",
             "ap-definition-nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd.",
             "label-nl": "product",
-            "definition-nl": "Identificeert een MaterieelDing dat ontstaan werd door een Productie activiteit."
+            "definition-nl": "Identificeert een MaterieelDing dat ontstaan werd door een Productie activiteit.",
+            "ap-usageNote-nl": "In dit model beperkt tot het geproduceerd Mensgemaakt Object."
           }
         }
       ]
@@ -975,7 +983,7 @@
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "dimensie",
@@ -1039,7 +1047,9 @@
           "description": {
             "nl": "InformatieObject dat gedragen wordt door het Materieel Ding."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb de tekst die in het indivudueel exemplaar van een boek staat of de afbeelding op een individuele cdrom."
+          },
           "domain": [
             {
               "EA-Name": "MaterieelDing",
@@ -1068,7 +1078,8 @@
             "label-nl": "draagt",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
             "ap-definition-nl": "InformatieObject dat gedragen wordt door het Materieel Ding.",
-            "definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject."
+            "definition-nl": "InformatieObject dat gedragen wordt door het MensgemaaktObject.",
+            "ap-usageNote-nl": "Bvb de tekst die in het indivudueel exemplaar van een boek staat of de afbeelding op een individuele cdrom."
           }
         },
         {
@@ -1483,7 +1494,7 @@
             "nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort."
+            "nl": "Onder uitbeelden verstaan we dat op het MensgemaaktObject, door zijn uitzicht of vorm, een voorstelling voorkomt van de betrokken Entiteit. Gebruik dit attribuut bvb om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij of door een beeldhouwwerk."
           },
           "domain": [
             {
@@ -1511,7 +1522,7 @@
           "rawTags": {
             "ap-label-nl": "beeldt uit",
             "ap-definition-nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort.",
+            "ap-usageNote-nl": "Onder uitbeelden verstaan we dat op het MensgemaaktObject, door zijn uitzicht of vorm, een voorstelling voorkomt van de betrokken Entiteit. Gebruik dit attribuut bvb om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij of door een beeldhouwwerk.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P62_depicts",
             "label-nl": "beeldt uit",
             "definition-nl": "Entiteit die door het MensgemaaktObject wordt uitgebeeld."
@@ -1612,7 +1623,7 @@
             "nl": "productie"
           },
           "description": {
-            "nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
+            "nl": "De Activiteit waarbij het MensgemaaktObject werd geproduceerd."
           },
           "usage": {},
           "domain": [
@@ -1636,14 +1647,14 @@
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "productie",
             "definition-nl": "De Activiteit waarbij het MaterieelDing werd geproduceerd.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by",
             "ap-label-nl": "productie",
-            "ap-definition-nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
+            "ap-definition-nl": "De Activiteit waarbij het MensgemaaktObject werd geproduceerd."
           }
         },
         {
@@ -1761,7 +1772,7 @@
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by",
@@ -1782,7 +1793,7 @@
             "nl": "Beschrijft een Dimensie van het Mensgemaakt Object."
           },
           "usage": {
-            "nl": "Bv de omvang of het belang van het Conceptueel Object."
+            "nl": "Bvb voor een immaterieel object zoals een tekst de lengte van de tekst in woorden of voor een afbeelding het aantal pixels."
           },
           "domain": [
             {
@@ -1814,7 +1825,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
             "ap-label-nl": "dimensie",
             "ap-definition-nl": "Beschrijft een Dimensie van het Mensgemaakt Object.",
-            "ap-usageNote-nl": "Bv de omvang of het belang van het Conceptueel Object."
+            "ap-usageNote-nl": "Bvb voor een immaterieel object zoals een tekst de lengte van de tekst in woorden of voor een afbeelding het aantal pixels."
           }
         },
         {
@@ -2027,9 +2038,11 @@
             "nl": "is van toepassing op"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Entiteit waarop het Recht van toepassing is."
           },
-          "usage": {},
+          "usage": {
+            "nl": "In dit geval concreet een set, Informatieobject of MensgemaaktObject. Bvb het feit dat een afbeelding (Informatieobject) in public domain is, of dat een onroerend erfgoed (Mensgemaakt Object) beschermd is."
+          },
           "domain": [
             {
               "EA-Name": "Recht",
@@ -2056,7 +2069,8 @@
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
             "ap-label-nl": "is van toepassing op",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Entiteit waarop het Recht van toepassing is.",
+            "ap-usageNote-nl": "In dit geval concreet een set, Informatieobject of MensgemaaktObject. Bvb het feit dat een afbeelding (Informatieobject) in public domain is, of dat een onroerend erfgoed (Mensgemaakt Object) beschermd is."
           }
         },
         {
@@ -2109,9 +2123,11 @@
             "nl": "geldigheid"
           },
           "description": {
-            "nl": "TODO"
+            "nl": "Periode waarin het Recht geldig is."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb om aan te geven dat het Recht intussen niet meer geldt, bvb de vaststelling van onroerend erfgoed die intussen vervangen is door bescherming."
+          },
           "domain": [
             {
               "EA-Name": "Recht",
@@ -2138,7 +2154,8 @@
           "rawTags": {
             "uri": "http://purl.org/dc/terms/valid",
             "ap-label-nl": "geldigheid",
-            "ap-definition-nl": "TODO"
+            "ap-definition-nl": "Periode waarin het Recht geldig is.",
+            "ap-usageNote-nl": "Bvb om aan te geven dat het Recht intussen niet meer geldt, bvb de vaststelling van onroerend erfgoed die intussen vervangen is door bescherming."
           }
         }
       ]
@@ -2456,7 +2473,7 @@
         "nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot MensgemaaktObject."
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot Mensgemaakt Object."
       },
       "parents": [
         {
@@ -2480,7 +2497,7 @@
         "uri": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
         "label-nl": "Creatie",
         "definition-nl": "Activiteit die leidt tot het onstaan van een ConceptueelObject, bv een gedicht, tekst, muziek, beelden, films etc.",
-        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot MensgemaaktObject."
+        "ap-usageNote-nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot Mensgemaakt Object."
       },
       "properties": [
         {
@@ -2493,7 +2510,9 @@
           "description": {
             "nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd."
           },
-          "usage": {},
+          "usage": {
+            "nl": "In dit model beperkt tot Sets of InformatieObjecten."
+          },
           "domain": [
             {
               "EA-Name": "Creatie",
@@ -2522,7 +2541,8 @@
             "ap-label-nl": "creatie",
             "ap-definition-nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd.",
             "label-nl": "creatie",
-            "definition-nl": "Het koppelen van een conceptuele creatie aan een ConceptueelObject."
+            "definition-nl": "Het koppelen van een conceptuele creatie aan een ConceptueelObject.",
+            "ap-usageNote-nl": "In dit model beperkt tot Sets of InformatieObjecten."
           }
         }
       ]
@@ -2653,7 +2673,7 @@
             "nl": "Entiteit waarnaar het InformatieObject verwijst."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+            "nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een InformatieObject aan bod komen. Bvb als het InformatieObject een verhaal is, de personen, locaties of andere objecten die in het verhaal voorkomen. Om het hoofdonderwerp van het verhaal te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
           },
           "domain": [
             {
@@ -2684,7 +2704,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
             "ap-label-nl": "verwijst naar",
             "ap-definition-nl": "Entiteit waarnaar het InformatieObject verwijst.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+            "ap-usageNote-nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een InformatieObject aan bod komen. Bvb als het InformatieObject een verhaal is, de personen, locaties of andere objecten die in het verhaal voorkomen. Om het hoofdonderwerp van het verhaal te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
           }
         },
         {
@@ -2740,7 +2760,7 @@
             "nl": "Het onderwerp van het InformatieObject."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           },
           "domain": [
             {
@@ -2772,7 +2792,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
             "ap-label-nl": "gaat over",
             "ap-definition-nl": "Het onderwerp van het InformatieObject.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+            "ap-usageNote-nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
           }
         },
         {
@@ -2785,7 +2805,9 @@
           "description": {
             "nl": "Het Materieel Ding dat het InformatieObject draagt."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb het exemplaar van een boek waarin het verhaal is afgedrukt of de individuele print van een kunsteditie."
+          },
           "domain": [
             {
               "EA-Name": "InformatieObject",
@@ -2814,6 +2836,7 @@
             "label-nl": "drager",
             "definition-nl": "Het MensgemaaktObject dat het InformatieObject draagt.",
             "ap-label-nl": "drager",
+            "ap-usageNote-nl": "Bvb het exemplaar van een boek waarin het verhaal is afgedrukt of de individuele print van een kunsteditie.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"
           }
         },
@@ -2849,7 +2872,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
@@ -2992,7 +3015,7 @@
             "nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit."
           },
           "usage": {
-            "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten."
+            "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit een expo is de objecten die worden tentoongesteld."
           },
           "domain": [
             {
@@ -3021,7 +3044,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
             "ap-label-nl": "gebruikt object",
             "ap-definition-nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.",
-            "ap-usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten.",
+            "ap-usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit een expo is de objecten die worden tentoongesteld.",
             "label-nl": "gebruikt object",
             "definition-nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.",
             "usageNote-nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig."
@@ -3431,9 +3454,7 @@
       "description": {
         "nl": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."
       },
-      "usage": {
-        "nl": " "
-      },
+      "usage": {},
       "parents": [
         {
           "label": "Agent",
@@ -3445,7 +3466,6 @@
       ],
       "rawTags": {
         "ap-definition-nl": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur.",
-        "ap-usageNote-nl": " ",
         "label-nl": "Organisatie",
         "uri": "http://www.w3.org/ns/org#Organization",
         "definition-nl": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."
@@ -3585,7 +3605,7 @@
             "nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
           },
           "usage": {
-            "nl": "Dit attribuut kan gebruikt worden wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam."
+            "nl": "Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam."
           },
           "domain": [
             {
@@ -3615,7 +3635,7 @@
             "definition-nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam.",
             "ap-label-nl": "volledige naam",
             "ap-definition-nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam.",
-            "ap-usageNote-nl": "Dit attribuut kan gebruikt worden wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam.",
+            "ap-usageNote-nl": "Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam.",
             "uri": "https://data.vlaanderen.be/ns/persoon#volledigeNaam"
           }
         },
@@ -3736,7 +3756,7 @@
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "geboortedatum",
@@ -3824,7 +3844,7 @@
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "achternaam",
@@ -3916,16 +3936,16 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/generiek#RuimtelijkObject",
-      "name": "Ruimtelijkobject",
+      "name": "RuimtelijkObject",
       "label": {
-        "nl": "RuimtelijkObject"
+        "nl": "Ruimtelijk Object"
       },
-      "sort": "RuimtelijkObject",
+      "sort": "Ruimtelijk Object",
       "description": {
         "nl": "Object met een geografische positie."
       },
       "usage": {
-        "nl": "Bvb een perceel,een gebouw,een Wegsegment etc."
+        "nl": "Bvb een perceel, een gebouw, een wegsegment etc. Laat toe om indirect naar een positie te verwijzen. Te substitueren door een instantie van het betrokken Ruimtelijk Object."
       },
       "parents": [
         {
@@ -3941,7 +3961,8 @@
         "label-nl": "RuimtelijkObject",
         "usageNote-nl": "Bvb een perceel,een gebouw,een Wegsegment etc.",
         "ap-definition-nl": "Object met een geografische positie.",
-        "ap-usageNote-nl": "Bvb een perceel,een gebouw,een Wegsegment etc."
+        "ap-usageNote-nl": "Bvb een perceel, een gebouw, een wegsegment etc. Laat toe om indirect naar een positie te verwijzen. Te substitueren door een instantie van het betrokken Ruimtelijk Object.",
+        "ap-label-nl": "Ruimtelijk Object"
       },
       "properties": []
     },
@@ -4043,7 +4064,7 @@
             "nl": "Entiteit waarnaar het InformatieObject verwijst."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+            "nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een Set aan bod komen. Bvb de personen, locaties of andere objecten waarmee de collectie geassocieerd is. Om het hoofdonderwerp van de Set te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
           },
           "domain": [
             {
@@ -4074,7 +4095,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
             "ap-label-nl": "verwijst naar",
             "ap-definition-nl": "Entiteit waarnaar het InformatieObject verwijst.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+            "ap-usageNote-nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een Set aan bod komen. Bvb de personen, locaties of andere objecten waarmee de collectie geassocieerd is. Om het hoofdonderwerp van de Set te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
           }
         },
         {
@@ -4130,7 +4151,7 @@
             "nl": "Het onderwerp van de Set."
           },
           "usage": {
-            "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
+            "nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van de Set te beschrijven, bijvoorbeeld een collectie die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die met de collectie geassocieerd kunnen worden, zoals een persoon, locatie of specifiek object."
           },
           "domain": [
             {
@@ -4162,7 +4183,7 @@
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
             "ap-label-nl": "gaat over",
             "ap-definition-nl": "Het onderwerp van de Set.",
-            "ap-usageNote-nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
+            "ap-usageNote-nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van de Set te beschrijven, bijvoorbeeld een collectie die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die met de collectie geassocieerd kunnen worden, zoals een persoon, locatie of specifiek object."
           }
         },
         {
@@ -4197,7 +4218,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
@@ -4578,7 +4599,7 @@
         "nl": "Een uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen."
       },
       "usage": {
-        "nl": "Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin)."
+        "nl": "Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."
       },
       "parents": [],
       "rawTags": {
@@ -4588,7 +4609,7 @@
         "usageNote-nl": "Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin).",
         "ap-label-nl": "EDTF",
         "ap-definition-nl": "Een uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen.",
-        "ap-usageNote-nl": "Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin)."
+        "ap-usageNote-nl": "Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."
       },
       "properties": []
     },
@@ -4600,16 +4621,16 @@
       },
       "sort": "Contactinfo",
       "description": {
-        "nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."
+        "nl": "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."
       },
       "usage": {
-        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc."
+        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc."
       },
       "parents": [],
       "rawTags": {
-        "ap-definition-nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren.",
+        "ap-definition-nl": "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
         "ap-label-nl": "Contactinfo",
-        "ap-usageNote-nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc.",
+        "ap-usageNote-nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc.",
         "label-nl": "Contactpunt",
         "uri": "http://schema.org/ContactPoint",
         "definition-nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."
@@ -4988,7 +5009,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "periode",
@@ -5255,7 +5276,7 @@
             "nl": "Grootheid van de Dimensie."
           },
           "usage": {
-            "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid."
+            "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht. Gebruik Concept of de subklasse Grootheid."
           },
           "domain": [
             {
@@ -5283,7 +5304,7 @@
           "rawTags": {
             "ap-label-nl": "type",
             "ap-definition-nl": "Grootheid van de Dimensie.",
-            "ap-usageNote-nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid.",
+            "ap-usageNote-nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht. Gebruik Concept of de subklasse Grootheid.",
             "uri": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
             "label-nl": "type",
             "definition-nl": "Grootheid van de Dimensie.",
@@ -5430,7 +5451,7 @@
             "nl": "in EDTF"
           },
           "description": {
-            "nl": "Positie van een Moment, uitgedrukt in EDTF."
+            "nl": "Positie in de tijd van een Moment, uitgedrukt in EDTF."
           },
           "usage": {},
           "domain": [
@@ -5461,7 +5482,7 @@
             "ap-label-nl": "in EDTF",
             "label-nl": "in EDTF datumTijd",
             "definition-nl": "Positie van een Moment, uitgedrukt in EDTF.",
-            "ap-definition-nl": "Positie van een Moment, uitgedrukt in EDTF."
+            "ap-definition-nl": "Positie in de tijd van een Moment, uitgedrukt in EDTF."
           }
         },
         {
@@ -5516,7 +5537,7 @@
       },
       "sort": "Periode",
       "description": {
-        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, ttz waarvoor de begin- en eindtijd verschillend zijn."
       },
       "usage": {},
       "parents": [
@@ -5533,7 +5554,7 @@
         "label-nl": "Periode",
         "uri": "http://www.w3.org/2006/time#ProperInterval",
         "ap-label-nl": "Periode",
-        "ap-definition-nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+        "ap-definition-nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, ttz waarvoor de begin- en eindtijd verschillend zijn."
       },
       "properties": [
         {
@@ -5675,13 +5696,13 @@
         "nl": "Abstracte klasse voor temporele objecten."
       },
       "usage": {
-        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn."
+        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode.OPMERKING: Dit datatype is Abstract, gebruik een van de subklassen."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Abstracte klasse voor temporele objecten.",
         "ap-label-nl": "Temporele Entiteit",
-        "ap-usageNote-nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn.",
+        "ap-usageNote-nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode.OPMERKING: Dit datatype is Abstract, gebruik een van de subklassen.",
         "label-nl": "TemporeleEntiteit",
         "uri": "http://www.w3.org/2006/time#TemporalEntity",
         "definition-nl": "Abstracte klasse voor temporele objecten.",
@@ -5700,12 +5721,12 @@
         "nl": "Informatie gebruikt om een object uniek te identificeren."
       },
       "usage": {
-        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke CIDOC-CRM Identifier (E42). Deze worden wel gezien als equivalent."
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke <a href=\"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\">CIDOC-CRM Identifier</a>. Deze worden wel gezien als equivalent."
       },
       "parents": [],
       "rawTags": {
         "ap-definition-nl": "Informatie gebruikt om een object uniek te identificeren.",
-        "ap-usageNote-nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke CIDOC-CRM Identifier (E42). Deze worden wel gezien als equivalent.",
+        "ap-usageNote-nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke <a href=\"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\">CIDOC-CRM Identifier</a>. Deze worden wel gezien als equivalent.",
         "label-nl": "Identificator",
         "uri": "http://www.w3.org/ns/adms#Identifier",
         "definition-nl": "Informatie gebruikt om een object uniek te identificeren.",
@@ -5792,7 +5813,7 @@
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "identificator",
@@ -6728,15 +6749,15 @@
       },
       "sort": "Locatie",
       "description": {
-        "nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres."
+        "nl": "Aanduiding van een geografische positie."
       },
       "usage": {
-        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek."
+        "nl": "Mogelijkheden zijn: dmv coordinaten (Geometrie), een toponiem (GeografischeNaam), een adreslabel (Adresvoorstelling), een verwijzing naar een plaats/regio (Plaats) of verwijzing naar een Adres of Ruimtelijk Object. OPMERKING: Dit datatype is abstract, gebruik een van de subklassen."
       },
       "parents": [],
       "rawTags": {
-        "ap-definition-nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres.",
-        "ap-usageNote-nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.",
+        "ap-definition-nl": "Aanduiding van een geografische positie.",
+        "ap-usageNote-nl": "Mogelijkheden zijn: dmv coordinaten (Geometrie), een toponiem (GeografischeNaam), een adreslabel (Adresvoorstelling), een verwijzing naar een plaats/regio (Plaats) of verwijzing naar een Adres of Ruimtelijk Object. OPMERKING: Dit datatype is abstract, gebruik een van de subklassen.",
         "definition-nl": "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d",
         "label-nl": "Locatie",
         "uri": "http://www.w3.org/ns/prov#Location",
@@ -6775,7 +6796,7 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "identificator",

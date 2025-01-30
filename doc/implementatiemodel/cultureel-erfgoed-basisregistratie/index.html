@@ -396,8 +396,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd</a></dd>
-              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/811f3aed0946d0ed668eb8dd48ead2d0ee5391dd/CHANGELOG</a></dd>
+              <dt>Brondata</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/9f473aac5e20e605928e032e2f0d225ad85ba365">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/9f473aac5e20e605928e032e2f0d225ad85ba365</a></dd>
+              <dt>Changelog</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/9f473aac5e20e605928e032e2f0d225ad85ba365/CHANGELOG">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/9f473aac5e20e605928e032e2f0d225ad85ba365/CHANGELOG</a></dd>
               <dt>Opmerkingen en feedback</dt><dd><a href="https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues">https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues</a></dd>
               <dt>Standaardenregister</dt><dd><a href="https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed">https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed</a></dd>
 
@@ -537,7 +537,7 @@
                       <a href="#PropositioneelObject">Propositioneel Object</a> |
                       <a href="#Recht">Recht</a> |
                       <a href="#Rol">Rol</a> |
-                      <a href="#Ruimtelijkobject">RuimtelijkObject</a> |
+                      <a href="#RuimtelijkObject">Ruimtelijk Object</a> |
                       <a href="#Set">Set</a> |
                       <a href="#SymbolischObject">Symbolisch Object</a> |
                       <a href="#Tijdvak">Tijdvak</a> |
@@ -720,7 +720,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit.</td>
-                        <td property="vann:usageNote">Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten.</td>
+                        <td property="vann:usageNote">Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit een expo is de objecten die worden tentoongesteld.</td>
                         <td></td>
                       </tr>
                     
@@ -776,7 +776,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
                     
-                    <dt>Gebruik</dt><dd>OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie.</dd>
+                    <dt>Gebruik</dt><dd>In deze context oa de creator of producent of de eigenaar of bewaarder van cultureel erfgoed. OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -839,7 +839,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Identificator van de Agent.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren zoals persoons- of organisatienummers.</td>
                         <td></td>
                       </tr>
                     
@@ -1045,7 +1045,7 @@
 			    
                           
                         </td>
-                        <td>0..*</td>
+                        <td>1..*</td>
                         <td property="rdfs:comment">De Activiteit waarbij het Conceptueel Object werd gecreëerd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -1067,7 +1067,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Beschrijft een Dimensie van het Mensgemaakt Object.</td>
-                        <td property="vann:usageNote">Bv de omvang of het belang van het Conceptueel Object.</td>
+                        <td property="vann:usageNote">Bvb voor een immaterieel object zoals een tekst de lengte van de tekst in woorden of voor een afbeelding het aantal pixels.</td>
                         <td></td>
                       </tr>
                     
@@ -1103,7 +1103,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc.</dd>
                     
-                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot MensgemaaktObject.</dd>
+                    <dt>Gebruik</dt><dd>Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot Mensgemaakt Object.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -1150,7 +1150,7 @@
                         </td>
                         <td>1..*</td>
                         <td property="rdfs:comment">Verwijzing naar het Conceptueel Object dat is gecreëerd.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">In dit model beperkt tot Sets of InformatieObjecten.</td>
                         <td></td>
                       </tr>
                     
@@ -1571,7 +1571,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het Materieel Ding dat het InformatieObject draagt.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">Bvb het exemplaar van een boek waarin het verhaal is afgedrukt of de individuele print van een kunsteditie.</td>
                         <td></td>
                       </tr>
                     
@@ -1591,7 +1591,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het onderwerp van het InformatieObject.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
+                        <td property="vann:usageNote">Specialisatie van het attribuut "verwijst naar", bedoeld om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object.</td>
                         <td></td>
                       </tr>
                     
@@ -1649,7 +1649,7 @@
 			    
                           
                         </td>
-                        <td>1</td>
+                        <td>0..*</td>
                         <td property="rdfs:comment">Agent die een Recht bezit op het InformatieObject</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -1671,7 +1671,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Entiteit waarnaar het InformatieObject verwijst.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut "gaat over".</td>
+                        <td property="vann:usageNote">Specialisatie van het attribuut "gaat over", bedoeld om te verwijzen naar zaken die in een InformatieObject aan bod komen. Bvb als het InformatieObject een verhaal is, de personen, locaties of andere objecten die in het verhaal voorkomen. Om het hoofdonderwerp van het verhaal te beschrijven daarentegen, zoals bijvoorbeeld "Eerste Wereldoorlog", kan gebruik gemaakt worden van het attribuut "gaat over".</td>
                         <td></td>
                       </tr>
                     
@@ -1801,7 +1801,7 @@
 			    
                           
                         </td>
-                        <td>0..*</td>
+                        <td>1..*</td>
                         <td property="rdfs:comment">Omvang van het Materieel Ding.</td>
                         <td property="vann:usageNote">Bv de afmetingen.</td>
                         <td></td>
@@ -1823,7 +1823,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">InformatieObject dat gedragen wordt door het Materieel Ding.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">Bvb de tekst die in het indivudueel exemplaar van een boek staat of de afbeelding op een individuele cdrom.</td>
                         <td></td>
                       </tr>
                     
@@ -2027,7 +2027,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Entiteit die door het Mensgemaakt Object wordt uitgebeeld.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort.</td>
+                        <td property="vann:usageNote">Onder uitbeelden verstaan we dat op het MensgemaaktObject, door zijn uitzicht of vorm, een voorstelling voorkomt van de betrokken Entiteit. Gebruik dit attribuut bvb om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij of door een beeldhouwwerk.</td>
                         <td></td>
                       </tr>
                     
@@ -2085,8 +2085,8 @@
 			    
                           
                         </td>
-                        <td>0..*</td>
-                        <td property="rdfs:comment">De Activiteit waarbij het Materieel Ding werd geproduceerd.</td>
+                        <td>1..*</td>
+                        <td property="rdfs:comment">De Activiteit waarbij het MensgemaaktObject werd geproduceerd.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -2122,8 +2122,6 @@
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur.</dd>
-                    
-                    <dt>Gebruik</dt><dd> </dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -2256,7 +2254,7 @@
                             
                           
                         </td>
-                        <td>0..1</td>
+                        <td>1</td>
                         <td property="rdfs:comment">Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie.</td>
                         <td property="vann:usageNote">Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.</td>
                         <td></td>
@@ -2296,7 +2294,7 @@
 			    
                           
                         </td>
-                        <td>0..1</td>
+                        <td>1</td>
                         <td property="rdfs:comment">Datum waarop een Persoon ter wereld gekomen is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -2358,7 +2356,7 @@
                         </td>
                         <td>0..1</td>
                         <td property="rdfs:comment">De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam.</td>
-                        <td property="vann:usageNote">Dit attribuut kan gebruikt worden wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam.</td>
+                        <td property="vann:usageNote">Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam.</td>
                         <td></td>
                       </tr>
                     
@@ -2523,7 +2521,7 @@
                         </td>
                         <td>1..*</td>
                         <td property="rdfs:comment">Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd.</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="vann:usageNote">In dit model beperkt tot het geproduceerd Mensgemaakt Object.</td>
                         <td></td>
                       </tr>
                     
@@ -2625,8 +2623,8 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Periode waarin het Recht geldig is.</td>
+                        <td property="vann:usageNote">Bvb om aan te geven dat het Recht intussen niet meer geldt, bvb de vaststelling van onroerend erfgoed die intussen vervangen is door bescherming.</td>
                         <td></td>
                       </tr>
                     
@@ -2665,8 +2663,8 @@
                           
                         </td>
                         <td>0..*</td>
-                        <td property="rdfs:comment">TODO</td>
-                        <td property="vann:usageNote"></td>
+                        <td property="rdfs:comment">Entiteit waarop het Recht van toepassing is.</td>
+                        <td property="vann:usageNote">In dit geval concreet een set, Informatieobject of MensgemaaktObject. Bvb het feit dat een afbeelding (Informatieobject) in public domain is, of dat een onroerend erfgoed (Mensgemaakt Object) beschermd is.</td>
                         <td></td>
                       </tr>
                     
@@ -2817,12 +2815,12 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Ruimtelijkobject"><a href="https://data.vlaanderen.be/ns/generiek#RuimtelijkObject" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#RuimtelijkObject" data-placement="right">RuimtelijkObject</a></h3>
+              <h3 class="h3" id="RuimtelijkObject"><a href="https://data.vlaanderen.be/ns/generiek#RuimtelijkObject" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#RuimtelijkObject" data-placement="right">Ruimtelijk Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Object met een geografische positie.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bvb een perceel,een gebouw,een Wegsegment etc.</dd>
+                    <dt>Gebruik</dt><dd>Bvb een perceel, een gebouw, een wegsegment etc. Laat toe om indirect naar een positie te verwijzen. Te substitueren door een instantie van het betrokken Ruimtelijk Object.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -2897,7 +2895,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Het onderwerp van de Set.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object.</td>
+                        <td property="vann:usageNote">Specialisatie van het attribuut "verwijst naar", bedoeld om het hoofdonderwerp van de Set te beschrijven, bijvoorbeeld een collectie die gaat over de Eerste Wereldoorlog. Het attribuut "verwijst naar" kan aanvullend gebruikt worden om de link te leggen met zaken die met de collectie geassocieerd kunnen worden, zoals een persoon, locatie of specifiek object.</td>
                         <td></td>
                       </tr>
                     
@@ -2975,7 +2973,7 @@
 			    
                           
                         </td>
-                        <td>1</td>
+                        <td>0..*</td>
                         <td property="rdfs:comment">Agent die een Recht bezit op een Set.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -2997,7 +2995,7 @@
                         </td>
                         <td>0..*</td>
                         <td property="rdfs:comment">Entiteit waarnaar het InformatieObject verwijst.</td>
-                        <td property="vann:usageNote">Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld "Eerste Wereldoorlog", kan daarentegen gebruik gemaakt worden van het attribuut "gaat over".</td>
+                        <td property="vann:usageNote">Specialisatie van het attribuut "gaat over", bedoeld om te verwijzen naar zaken die in een Set aan bod komen. Bvb de personen, locaties of andere objecten waarmee de collectie geassocieerd is. Om het hoofdonderwerp van de Set te beschrijven daarentegen, zoals bijvoorbeeld "Eerste Wereldoorlog", kan gebruik gemaakt worden van het attribuut "gaat over".</td>
                         <td></td>
                       </tr>
                     
@@ -3634,7 +3632,7 @@
 			    
                           
                         </td>
-                        <td>1</td>
+                        <td>0..1</td>
                         <td property="rdfs:comment">Tijdspanne waarin het object zich in deze Conditie bevindt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -3671,9 +3669,9 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren.</dd>
+                    <dt>Beschrijving</dt><dd>Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.</dd>
                     
-                    <dt>Gebruik</dt><dd>Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc.</dd>
+                    <dt>Gebruik</dt><dd>Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -3934,7 +3932,7 @@
                         </td>
                         <td>1</td>
                         <td property="rdfs:comment">Grootheid van de Dimensie.</td>
-                        <td property="vann:usageNote">Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid.</td>
+                        <td property="vann:usageNote">Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht. Gebruik Concept of de subklasse Grootheid.</td>
                         <td></td>
                       </tr>
                       
@@ -3971,7 +3969,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Een uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen.</dd>
                     
-                    <dt>Gebruik</dt><dd>Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin).</dd>
+                    <dt>Gebruik</dt><dd>Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href="https://www.loc.gov/standards/datetime/">EDTF</a> voor meer info.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -4157,7 +4155,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Informatie gebruikt om een object uniek te identificeren.</dd>
                     
-                    <dt>Gebruik</dt><dd>Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke CIDOC-CRM Identifier (E42). Deze worden wel gezien als equivalent.</dd>
+                    <dt>Gebruik</dt><dd>Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke <a href="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">CIDOC-CRM Identifier</a>. Deze worden wel gezien als equivalent.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -4199,7 +4197,7 @@
                             
                           
                         </td>
-                        <td>0..1</td>
+                        <td>1</td>
                         <td property="rdfs:comment">String gebruikt om het object uniek te identificeren.</td>
                         <td property="vann:usageNote">Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.</td>
                         <td></td>
@@ -4274,9 +4272,9 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres.</dd>
+                    <dt>Beschrijving</dt><dd>Aanduiding van een geografische positie.</dd>
                     
-                    <dt>Gebruik</dt><dd>Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek.</dd>
+                    <dt>Gebruik</dt><dd>Mogelijkheden zijn: dmv coordinaten (Geometrie), een toponiem (GeografischeNaam), een adreslabel (Adresvoorstelling), een verwijzing naar een plaats/regio (Plaats) of verwijzing naar een Adres of Ruimtelijk Object. OPMERKING: Dit datatype is abstract, gebruik een van de subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>
@@ -4315,7 +4313,7 @@
 			    
                           
                         </td>
-                        <td>1</td>
+                        <td>0..*</td>
                         <td property="rdfs:comment">De Identificator gebruikt om de locatie te identificeren.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
@@ -4378,7 +4376,7 @@
                           
                         </td>
                         <td>0..1</td>
-                        <td property="rdfs:comment">Positie van een Moment, uitgedrukt in EDTF.</td>
+                        <td property="rdfs:comment">Positie in de tijd van een Moment, uitgedrukt in EDTF.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -4414,7 +4412,7 @@
 	      
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn.</dd>
+                    <dt>Beschrijving</dt><dd>Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, ttz waarvoor de begin- en eindtijd verschillend zijn.</dd>
                     
 		     
 		    <dt>Subklasse van <dt><dd>
@@ -4517,7 +4515,7 @@
                   <dl>
                     <dt>Beschrijving</dt><dd>Abstracte klasse voor temporele objecten.</dd>
                     
-                    <dt>Gebruik</dt><dd>Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn.</dd>
+                    <dt>Gebruik</dt><dd>Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode.OPMERKING: Dit datatype is Abstract, gebruik een van de subklassen.</dd>
                     
 		    
                     <dt>Eigenschappen</dt>

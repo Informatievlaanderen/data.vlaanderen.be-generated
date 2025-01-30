@@ -27,7 +27,7 @@
         "nl": "Een uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen."
       },
       "usage": {
-        "nl": "Mogelijkheden om te verwijzen naar een (onzeker) jaartal of periode zijn: 1964/2008 (periode 1964-2008), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1950 (interval met onbekend begin)."
+        "nl": "Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."
       }
     },
     {
@@ -40,7 +40,7 @@
         "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
       },
       "usage": {
-        "nl": "OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
+        "nl": "In deze context oa de creator of producent of de eigenaar of bewaarder van cultureel erfgoed. OPMERKING: Abstracte klasse, gebruik de subklassen Persoon of Organisatie."
       }
     },
     {
@@ -70,10 +70,10 @@
         "nl": "Contactinfo"
       },
       "definition": {
-        "nl": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."
+        "nl": "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."
       },
       "usage": {
-        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc."
+        "nl": "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc."
       }
     },
     {
@@ -278,7 +278,7 @@
         "nl": "Activiteit die leidt tot het onstaan van een Conceptueel Object, bv een gedicht, tekst, muziek, beelden, films etc."
       },
       "usage": {
-        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot MensgemaaktObject."
+        "nl": "Gebruik deze klasse om informatie over het ontstaan (de Creatie) van Conceptuele Objecten te beschrijven. Die zijn in dit model vertegenwoordigd door Set en InformatieObject. Niet te verwarren met de klasse Productie, die dient voor Materiële Mensgemaakte Dingen, in dit model beperkt tot Mensgemaakt Object."
       }
     },
     {
@@ -480,7 +480,7 @@
         "nl": "Periode"
       },
       "definition": {
-        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul,ttz waarvoor de begin- en eindwaarde verschillend zijn."
+        "nl": "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, ttz waarvoor de begin- en eindtijd verschillend zijn."
       }
     },
     {
@@ -493,7 +493,7 @@
         "nl": "Abstracte klasse voor temporele objecten."
       },
       "usage": {
-        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn."
+        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode.OPMERKING: Dit datatype is Abstract, gebruik een van de subklassen."
       }
     },
     {
@@ -506,7 +506,7 @@
         "nl": "Informatie gebruikt om een object uniek te identificeren."
       },
       "usage": {
-        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke CIDOC-CRM Identifier (E42). Deze worden wel gezien als equivalent."
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem. Er werd voorkeur gegeven aan het gebruik van de breder gebruikte ADMS Identifier dan de meer domeinafhankelijke <a href=\"http://www.cidoc-crm.org/cidoc-crm/E42_Identifier\">CIDOC-CRM Identifier</a>. Deze worden wel gezien als equivalent."
       }
     },
     {
@@ -543,9 +543,6 @@
       },
       "definition": {
         "nl": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."
-      },
-      "usage": {
-        "nl": " "
       }
     },
     {
@@ -568,10 +565,10 @@
         "nl": "Locatie"
       },
       "definition": {
-        "nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres."
+        "nl": "Aanduiding van een geografische positie."
       },
       "usage": {
-        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, Geografische Naam, Adres etc. OPMERKING: een beschrijving van deze mogelijkheden is te vinden in het AP OSLO-Generiek."
+        "nl": "Mogelijkheden zijn: dmv coordinaten (Geometrie), een toponiem (GeografischeNaam), een adreslabel (Adresvoorstelling), een verwijzing naar een plaats/regio (Plaats) of verwijzing naar een Adres of Ruimtelijk Object. OPMERKING: Dit datatype is abstract, gebruik een van de subklassen."
       }
     },
     {
@@ -589,15 +586,15 @@
     },
     {
       "EA-Guid": "{E1C4D701-EE4D-4350-9DB7-040992E48F4F}",
-      "name": "Ruimtelijkobject",
+      "name": "RuimtelijkObject",
       "label": {
-        "nl": "RuimtelijkObject"
+        "nl": "Ruimtelijk Object"
       },
       "definition": {
         "nl": "Object met een geografische positie."
       },
       "usage": {
-        "nl": "Bvb een perceel,een gebouw,een Wegsegment etc."
+        "nl": "Bvb een perceel, een gebouw, een wegsegment etc. Laat toe om indirect naar een positie te verwijzen. Te substitueren door een instantie van het betrokken Ruimtelijk Object."
       }
     },
     {
@@ -648,7 +645,7 @@
         "nl": "in EDTF"
       },
       "definition": {
-        "nl": "Positie van een Moment, uitgedrukt in EDTF."
+        "nl": "Positie in de tijd van een Moment, uitgedrukt in EDTF."
       }
     },
     {
@@ -691,7 +688,7 @@
         "nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
       },
       "usage": {
-        "nl": "Dit attribuut kan gebruikt worden wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam."
+        "nl": "Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam."
       }
     },
     {
@@ -1106,6 +1103,9 @@
       },
       "definition": {
         "nl": "Identificator van de Agent."
+      },
+      "usage": {
+        "nl": "Bij implementatie in RDF is de uri vd Entiteit de identificator. In de eerste plaats bedoeld voor algemeen gebruikte identificatoren zoals persoons- of organisatienummers."
       }
     },
     {
@@ -1244,6 +1244,9 @@
       },
       "definition": {
         "nl": "Verwijzing naar het Conceptueel Object dat is gecreëerd."
+      },
+      "usage": {
+        "nl": "In dit model beperkt tot Sets of InformatieObjecten."
       }
     },
     {
@@ -1299,7 +1302,7 @@
         "nl": "Entiteit waarnaar het InformatieObject verwijst."
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een verhaal voorkomen, zoals een persoon, locatie, of object. Om het hoofdonderwerp van het verhaal te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+        "nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een InformatieObject aan bod komen. Bvb als het InformatieObject een verhaal is, de personen, locaties of andere objecten die in het verhaal voorkomen. Om het hoofdonderwerp van het verhaal te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
       }
     },
     {
@@ -1312,7 +1315,7 @@
         "nl": "Entiteit waarnaar het InformatieObject verwijst."
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om bijvoorbeeld te verwijzen naar zaken die in een Set voorkomen, zoals een specifiek object. Om het hoofdonderwerp van de Set te beschrijven, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan daarentegen gebruik gemaakt worden van het attribuut \"gaat over\"."
+        "nl": "Specialisatie van het attribuut \"gaat over\", bedoeld om te verwijzen naar zaken die in een Set aan bod komen. Bvb de personen, locaties of andere objecten waarmee de collectie geassocieerd is. Om het hoofdonderwerp van de Set te beschrijven daarentegen, zoals bijvoorbeeld \"Eerste Wereldoorlog\", kan gebruik gemaakt worden van het attribuut \"gaat over\"."
       }
     },
     {
@@ -1325,7 +1328,7 @@
         "nl": "Entiteit die door het Mensgemaakt Object wordt uitgebeeld."
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij, door een beeldhouwwerk, enzovoort."
+        "nl": "Onder uitbeelden verstaan we dat op het MensgemaaktObject, door zijn uitzicht of vorm, een voorstelling voorkomt van de betrokken Entiteit. Gebruik dit attribuut bvb om te verwijzen naar hetgeen zichtbaar wordt afgebeeld op een schilderij of door een beeldhouwwerk."
       }
     },
     {
@@ -1434,7 +1437,7 @@
         "nl": "Beschrijft een Dimensie van het Mensgemaakt Object."
       },
       "usage": {
-        "nl": "Bv de omvang of het belang van het Conceptueel Object."
+        "nl": "Bvb voor een immaterieel object zoals een tekst de lengte van de tekst in woorden of voor een afbeelding het aantal pixels."
       }
     },
     {
@@ -1569,7 +1572,7 @@
         "nl": "Grootheid van de Dimensie."
       },
       "usage": {
-        "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht Gebruik Concept of de subklasse Grootheid."
+        "nl": "Aard van de eigenschap die door de Dimensie wordt beschreven, bv hoogte, gewicht. Gebruik Concept of de subklasse Grootheid."
       }
     },
     {
@@ -1678,7 +1681,7 @@
         "nl": "Materieel of immaterieel Ding gebruikt en essentieel voor de uitvoering of het resultaat van de Activiteit."
       },
       "usage": {
-        "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit is de tentoongestelde objecten."
+        "nl": "Bv tools, instrumenten, ruwe materialen, losse voorwerpen zonder dewelke de Activiteit niet zou kunnen plaatsvinden. Bv als de Activiteit het schrijven van een tekst is dan is daarvoor een computer en software nodig of als de Activiteit een expo is de objecten die worden tentoongesteld."
       }
     },
     {
@@ -1734,7 +1737,7 @@
         "nl": "Het onderwerp van het InformatieObject."
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
+        "nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van het InformatieObject te beschrijven, bijvoorbeeld een verhaal dat gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het verhaal voorkomen, zoals een persoon, locatie of specifiek object."
       }
     },
     {
@@ -1747,7 +1750,7 @@
         "nl": "Het onderwerp van de Set."
       },
       "usage": {
-        "nl": "Gebruik dit attribuut om het hoofd onderwerp van een Set te beschrijven, bijvoorbeeld een Set die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die in het Set voorkomen, zoals een specifiek object."
+        "nl": "Specialisatie van het attribuut \"verwijst naar\", bedoeld om het hoofdonderwerp van de Set te beschrijven, bijvoorbeeld een collectie die gaat over de Eerste Wereldoorlog. Het attribuut \"verwijst naar\" kan aanvullend gebruikt worden om de link te leggen met zaken die met de collectie geassocieerd kunnen worden, zoals een persoon, locatie of specifiek object."
       }
     },
     {
@@ -1758,6 +1761,9 @@
       },
       "definition": {
         "nl": "Het Materieel Ding dat het InformatieObject draagt."
+      },
+      "usage": {
+        "nl": "Bvb het exemplaar van een boek waarin het verhaal is afgedrukt of de individuele print van een kunsteditie."
       }
     },
     {
@@ -1768,6 +1774,9 @@
       },
       "definition": {
         "nl": "InformatieObject dat gedragen wordt door het Materieel Ding."
+      },
+      "usage": {
+        "nl": "Bvb de tekst die in het indivudueel exemplaar van een boek staat of de afbeelding op een individuele cdrom."
       }
     },
     {
@@ -1777,7 +1786,7 @@
         "nl": "productie"
       },
       "definition": {
-        "nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
+        "nl": "De Activiteit waarbij het MensgemaaktObject werd geproduceerd."
       }
     },
     {
@@ -1788,6 +1797,9 @@
       },
       "definition": {
         "nl": "Verwijzing naar het Materieel Mensgemaakt Ding dat is geproduceerd."
+      },
+      "usage": {
+        "nl": "In dit model beperkt tot het geproduceerd Mensgemaakt Object."
       }
     },
     {
@@ -1817,7 +1829,10 @@
         "nl": "is van toepassing op"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Entiteit waarop het Recht van toepassing is."
+      },
+      "usage": {
+        "nl": "In dit geval concreet een set, Informatieobject of MensgemaaktObject. Bvb het feit dat een afbeelding (Informatieobject) in public domain is, of dat een onroerend erfgoed (Mensgemaakt Object) beschermd is."
       }
     },
     {
@@ -1952,7 +1967,10 @@
         "nl": "geldigheid"
       },
       "definition": {
-        "nl": "TODO"
+        "nl": "Periode waarin het Recht geldig is."
+      },
+      "usage": {
+        "nl": "Bvb om aan te geven dat het Recht intussen niet meer geldt, bvb de vaststelling van onroerend erfgoed die intussen vervangen is door bescherming."
       }
     },
     {

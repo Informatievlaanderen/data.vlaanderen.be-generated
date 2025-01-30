@@ -628,6 +628,18 @@
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition"
         },
         {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/80a0d7607af13c23865bf8e0fac09ec1614c1183",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.dimensie",
+          "sh:description": {
+            "nl": "Omvang van het Materieel Ding."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "dimensie"
+          },
+          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"
+        },
+        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDingShape/8452958e7e3ff4f372a2572514a9e5828932e062",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelDing.dimensie",
           "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension",
@@ -871,8 +883,20 @@
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.productie",
           "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
           "sh:description": {
-            "nl": "De Activiteit waarbij het Materieel Ding werd geproduceerd."
+            "nl": "De Activiteit waarbij het MensgemaaktObject werd geproduceerd."
           },
+          "sh:name": {
+            "nl": "productie"
+          },
+          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape/8d01eaaf19ef4eb6d754ae47211f1ebd284556f6",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObject.productie",
+          "sh:description": {
+            "nl": "De Activiteit waarbij het MensgemaaktObject werd geproduceerd."
+          },
+          "sh:minCount": "1",
           "sh:name": {
             "nl": "productie"
           },
@@ -898,6 +922,18 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape/dad37608a85acfefb5866b9dc3b81c9272a09c9a",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObject.creatie",
+          "sh:description": {
+            "nl": "De Activiteit waarbij het Conceptueel Object werd gecreëerd."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "creatie"
+          },
+          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"
+        },
         {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape/f367a23d8205a5e4a83e5b9c5cce0e4eb05989d5",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObject.creatie",
@@ -958,7 +994,7 @@
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#RechtShape/007b375ed24f02c9827ba30c069e95226a5e824f",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Recht.geldigheid",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Periode waarin het Recht geldig is."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -971,7 +1007,7 @@
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Recht.geldigheid",
           "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Periode waarin het Recht geldig is."
           },
           "sh:name": {
             "nl": "geldigheid"
@@ -995,7 +1031,7 @@
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Recht.isvantoepassingop",
           "sh:class": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Entiteit waarop het Recht van toepassing is."
           },
           "sh:name": {
             "nl": "is van toepassing op"
@@ -1065,18 +1101,6 @@
           "sh:description": {
             "nl": "Tijdspanne waarin het object zich in deze Conditie bevindt."
           },
-          "sh:name": {
-            "nl": "periode"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConditieShape/ead0140014ebf09954ecaa04a0b0da5f23bf732d",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Conditie.periode",
-          "sh:description": {
-            "nl": "Tijdspanne waarin het object zich in deze Conditie bevindt."
-          },
-          "sh:minCount": "1",
           "sh:name": {
             "nl": "periode"
           },
@@ -1426,36 +1450,12 @@
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
         },
         {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder",
-          "sh:description": {
-            "nl": "Agent die een Recht bezit op het InformatieObject"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "rechtenhouder"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by"
-        },
-        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/b851e527d772c697eed125fca5e7cd7f9002a57b",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder",
           "sh:class": "http://purl.org/dc/terms/Agent",
           "sh:description": {
             "nl": "Agent die een Recht bezit op het InformatieObject"
           },
-          "sh:name": {
-            "nl": "rechtenhouder"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObjectShape/d744c5264831101844b549db8f158a58965b8282",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#InformatieObject.rechtenhouder",
-          "sh:description": {
-            "nl": "Agent die een Recht bezit op het InformatieObject"
-          },
-          "sh:maxCount": "1",
           "sh:name": {
             "nl": "rechtenhouder"
           },
@@ -1749,7 +1749,7 @@
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF",
           "sh:class": "http://id.loc.gov/datatypes/edtf/EDTF",
           "sh:description": {
-            "nl": "Positie van een Moment, uitgedrukt in EDTF."
+            "nl": "Positie in de tijd van een Moment, uitgedrukt in EDTF."
           },
           "sh:name": {
             "nl": "in EDTF"
@@ -1760,7 +1760,7 @@
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape/bbb8416208532abb076fa268342c2e832ee7c00e",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Moment.inEDTF",
           "sh:description": {
-            "nl": "Positie van een Moment, uitgedrukt in EDTF."
+            "nl": "Positie in de tijd van een Moment, uitgedrukt in EDTF."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -1887,6 +1887,18 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
+        {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#IdentificatorShape/972d73e7a13100b66c0c2f44466edac47aa1ab28",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Identificator.identificator",
+          "sh:description": {
+            "nl": "String gebruikt om het object uniek te identificeren."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "identificator"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
         {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#IdentificatorShape/bb43a48c77e7d98609af3d3bb1b1648370465308",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Identificator.identificator",
@@ -2412,6 +2424,18 @@
           "sh:path": "http://xmlns.com/foaf/0.1/familyName"
         },
         {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonShape/57fa098945484c4b497b664cf92dd77681164d9c",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Persoon.achternaam",
+          "sh:description": {
+            "nl": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "achternaam"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/familyName"
+        },
+        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonShape/b67716fc88fb88e1a3e7dbae35461fd06b268311",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Persoon.achternaam",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
@@ -2466,6 +2490,18 @@
           "sh:description": {
             "nl": "Datum waarop een Persoon ter wereld gekomen is."
           },
+          "sh:name": {
+            "nl": "geboortedatum"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/persoon#/geboortedatum"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonShape/f535d3fbb78ee0798f7398dc1667dd25e832fe69",
+          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Persoon.geboortedatum",
+          "sh:description": {
+            "nl": "Datum waarop een Persoon ter wereld gekomen is."
+          },
+          "sh:minCount": "1",
           "sh:name": {
             "nl": "geboortedatum"
           },
@@ -2574,30 +2610,6 @@
             "nl": "identificator"
           },
           "sh:path": "http://www.w3.org/ns/adms#identifier"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape/972d73e7a13100b66c0c2f44466edac47aa1ab28",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Locatie.identificator",
-          "sh:description": {
-            "nl": "De Identificator gebruikt om de locatie te identificeren."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "identificator"
-          },
-          "sh:path": "http://www.w3.org/ns/adms#identifier"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape/bb43a48c77e7d98609af3d3bb1b1648370465308",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Locatie.identificator",
-          "sh:description": {
-            "nl": "De Identificator gebruikt om de locatie te identificeren."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "identificator"
-          },
-          "sh:path": "http://www.w3.org/ns/adms#identifier"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/prov#Location"
@@ -2670,36 +2682,12 @@
           "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to"
         },
         {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/1063cbc7f1c973a4d51a173c560f1551ba3d5901",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.rechtenhouder",
-          "sh:description": {
-            "nl": "Agent die een Recht bezit op een Set."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "rechtenhouder"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by"
-        },
-        {
           "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/b851e527d772c697eed125fca5e7cd7f9002a57b",
           "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.rechtenhouder",
           "sh:class": "http://purl.org/dc/terms/Agent",
           "sh:description": {
             "nl": "Agent die een Recht bezit op een Set."
           },
-          "sh:name": {
-            "nl": "rechtenhouder"
-          },
-          "sh:path": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by"
-        },
-        {
-          "@id": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape/d744c5264831101844b549db8f158a58965b8282",
-          "rdfs:seeAlso": "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Set.rechtenhouder",
-          "sh:description": {
-            "nl": "Agent die een Recht bezit op een Set."
-          },
-          "sh:maxCount": "1",
           "sh:name": {
             "nl": "rechtenhouder"
           },
