@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/86b39989dc9bd3294aecfdc5a3ca82d4d19c8fb5",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/86b39989dc9bd3294aecfdc5a3ca82d4d19c8fb5/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/tree/1ac1a5b055df646367bc116fe7b11ddadf6ea644",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/blob/1ac1a5b055df646367bc116fe7b11ddadf6ea644/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/implementatiemodel-basisregistratie-cultureel-erfgoed",
     "usesVocs": [],
@@ -533,10 +533,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
+              "range_uri": "#Materieel Mensgemaakt Ding",
               "range_puri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
               "range_label": {
-                "nl": "MaterieelMensgemaaktDing"
+                "nl": "Materieel Mensgemaakt Ding"
               }
             }
           ],
@@ -1429,7 +1429,7 @@
         "nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt."
       },
       "usage": {
-        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Materieel Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "parents": [],
       "rawTags": {
@@ -1437,7 +1437,7 @@
         "label-nl": "MaterieelObject",
         "ap-label-nl": "Materieel Object",
         "ap-definition-nl": "Object van materiële aard, afzonderlijk documenteerbaar en zodanig fysiek begrensd dat het zich objectief van een ander object onderscheidt.",
-        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Fysiek Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het geen Materieel Kenmerk is (dat onverbrekelijk en volledig deel uitmaakt van een Materieel Object) en ook een niet-mensgemaakt object kan zijn, bvb een Persoon. OPMERKING: Indirecte subklasse van Materieel Ding en niet expliciet aanwezig in dit model. Samen met Materieel Mensgemaakt Ding de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
       },
       "properties": []
     },
@@ -1470,11 +1470,11 @@
           "scoped_uri": "#MaterieelObject"
         },
         {
-          "label": "MaterieelMensgemaaktDing",
+          "label": "Materieel Mensgemaakt Ding",
           "name": "MaterieelMensgemaaktDing",
           "package": "CIDOC-CRM",
           "uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
-          "scoped_uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+          "scoped_uri": "#Materieel Mensgemaakt Ding"
         }
       ],
       "rawTags": {
@@ -1703,6 +1703,28 @@
           }
         }
       ]
+    },
+    {
+      "uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
+      "name": "MaterieelMensgemaaktDing",
+      "label": {
+        "nl": "Materieel Mensgemaakt Ding"
+      },
+      "sort": "Materieel Mensgemaakt Ding",
+      "description": {
+        "nl": "Persistente fysieke items van om het even welke omvang doelbewust gemaakt door menselijke activiteit."
+      },
+      "usage": {
+        "nl": "Beperkter dan zijn superklasse Materieel Ding omdat het steeds mensgemaakt is. OPMERKING: Directe subklasse van Materieel Ding, samen met Materieel Object en Materieel Kenmerk (beide niet expliciet aanwezig in dit model). . Samen met Materieel Object de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Persistente fysieke items van om het even welke omvang doelbewust gemaakt door menselijke activiteit.",
+        "ap-label-nl": "Materieel Mensgemaakt Ding",
+        "ap-usageNote-nl": "Beperkter dan zijn superklasse Materieel Ding omdat het steeds mensgemaakt is. OPMERKING: Directe subklasse van Materieel Ding, samen met Materieel Object en Materieel Kenmerk (beide niet expliciet aanwezig in dit model). . Samen met Materieel Object de directe superklasse van Mensgemaakt Object. Zie <a href=\"https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html\">CIDOC</a> voor de volledige opdeling in klassen en subklassen.",
+        "uri": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+      },
+      "properties": []
     },
     {
       "uri": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
@@ -1974,7 +1996,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_uri": "#Beschrijving",
               "range_puri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
               "range_label": {
                 "nl": "Beschrijving"
@@ -2016,10 +2038,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_uri": "#Type Recht",
               "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "TypeRecht"
+                "nl": "Type Recht"
               }
             }
           ],
@@ -5047,7 +5069,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_uri": "#Beschrijving",
               "range_puri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
               "range_label": {
                 "nl": "Beschrijving"
@@ -5250,7 +5272,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+              "range_uri": "#Beschrijving",
               "range_puri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
               "range_label": {
                 "nl": "Beschrijving"
@@ -5295,10 +5317,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_uri": "#Type Grootheid",
               "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "TypeDimensie"
+                "nl": "Type Grootheid"
               }
             }
           ],
@@ -6516,8 +6538,21 @@
               "uri": "http://www.w3.org/ns/locn#Address"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "LangString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "LangString"
+              }
+            }
+          ],
           "cardinality": "0..1",
           "codelist_uri": "",
           "rawTags": {
@@ -6810,6 +6845,109 @@
             "definition-nl": "De identificator gebruikt om de locatie te identificeren.",
             "uri": "http://www.w3.org/ns/adms#identifier",
             "ap-definition-nl": "De Identificator gebruikt om de locatie te identificeren."
+          }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving",
+      "name": "Beschrijving",
+      "label": {
+        "nl": "Beschrijving"
+      },
+      "sort": "Beschrijving",
+      "description": {
+        "nl": "Schriftelijke weergave van kenmerken van iets of iemand."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Schriftelijke weergave van kenmerken van iets of iemand.",
+        "ap-label-nl": "Beschrijving",
+        "definition-nl": "Schriftelijke weergave van kenmerken van iets of iemand.",
+        "label-nl": "Beschrijving"
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#type",
+          "name": "type",
+          "sort": "type",
+          "label": {
+            "nl": "type"
+          },
+          "description": {
+            "nl": "Aard van de beschrijving."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Beschrijving",
+              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TypeBeschrijving",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
+              "range_label": {
+                "nl": "TypeBeschrijving"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "type",
+            "ap-definition-nl": "Aard van de beschrijving.",
+            "label-nl": "type",
+            "definition-nl": "Aard van de beschrijving."
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst",
+          "name": "tekst",
+          "sort": "tekst",
+          "label": {
+            "nl": "tekst"
+          },
+          "description": {
+            "nl": "Tekst van de beschrijving."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Beschrijving",
+              "uri": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "tekst",
+            "ap-definition-nl": "Tekst van de beschrijving.",
+            "label-nl": "tekst",
+            "definition-nl": "Tekst van de beschrijving."
           }
         }
       ]

@@ -26,6 +26,7 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#EntiteitShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelObjectShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MensgemaaktObjectShape>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelMensgemaaktDingShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptueelObjectShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#RechtShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConditieShape>,
@@ -51,6 +52,8 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeConditieShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ConceptShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeTechniekShape>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeRechtShape>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeDimensieShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MomentShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PeriodeShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TemporeleEntiteitShape>,
@@ -61,6 +64,7 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#PersoonShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#LocatieShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresShape>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#RuimtelijkObjectShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#SetShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#GrootheidShape>,
@@ -132,6 +136,7 @@
   shacl:closed false;
   shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/668a88a9eff0d829ffaeb5fef100df69b01da1d5>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/c9e40ada78017997257dfd2851f9f80b98670cfa>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/7d79c74cde7ffd5bc2cf345bb8c3edbe00adbf82>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/8207c42c5a4995c89bf1c834cc9203634896c4aa>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/0e632e9d9d0c3f3e505f1631298d782cf44b0875>,
     <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/b1af948ae2cd61c00ea230d344d1e936b18963c0>,
@@ -230,6 +235,12 @@
   shacl:maxCount 1;
   shacl:name "postbus"@nl;
   shacl:path <http://www.w3.org/ns/locn#poBox> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/7d79c74cde7ffd5bc2cf345bb8c3edbe00adbf82> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.administratieveeenheidniveau2";
+  shacl:datatype rdf:langString;
+  shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+  shacl:name "administratieve eenheid niveau 2"@nl;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#AdresvoorstellingShape/8207c42c5a4995c89bf1c834cc9203634896c4aa> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Adresvoorstelling.administratieveeenheidniveau2";
   shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
@@ -342,6 +353,45 @@
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeginBestaanShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass crm:E63_Beginning_of_Existence .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/397a5a4f54d3e516e80a83b790fc36b201c00ce0>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/67d5c5e80a3832b172dc55f53d782e0f7c292fb1>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/aa40ca1341b90a47e8538fd2ba331f450fb90c67>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+    <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/322371a77364a50f049d46180f6192532eea26dc>;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Beschrijving.type";
+  shacl:description "Aard van de beschrijving."@nl;
+  shacl:maxCount 1;
+  shacl:name "type"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#type> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Beschrijving.type";
+  shacl:class skos:Concept;
+  shacl:description "Aard van de beschrijving."@nl;
+  shacl:name "type"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#type> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/397a5a4f54d3e516e80a83b790fc36b201c00ce0> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Beschrijving.tekst";
+  shacl:description "Tekst van de beschrijving."@nl;
+  shacl:maxCount 1;
+  shacl:name "tekst"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/67d5c5e80a3832b172dc55f53d782e0f7c292fb1> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Beschrijving.tekst";
+  shacl:description "Tekst van de beschrijving."@nl;
+  shacl:minCount 1;
+  shacl:name "tekst"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst> .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#BeschrijvingShape/aa40ca1341b90a47e8538fd2ba331f450fb90c67> rdfs:seeAlso "https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#Beschrijving.tekst";
+  shacl:datatype rdf:langString;
+  shacl:description "Tekst van de beschrijving."@nl;
+  shacl:name "tekst"@nl;
+  shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst> .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#ClassificatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -997,6 +1047,10 @@
   shacl:name "draagt"@nl;
   shacl:path crm:P128_carries .
 
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelMensgemaaktDingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E24_Physical_Human-Made_Thing .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#MaterieelObjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass crm:E22_Human-Made_Object .
@@ -1559,11 +1613,19 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeDimensieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeEntiteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeMateriaalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20#TypeRechtShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
