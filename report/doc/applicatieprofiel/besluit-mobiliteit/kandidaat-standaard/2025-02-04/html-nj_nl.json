@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Besluit Mobiliteit - Applicatieprofiel",
     "uri": "https://data.vlaanderen.be/ns/mobiliteit",
-    "issued": "2020-07-25",
+    "issued": "2025-02-04",
     "baseURI": "https://data.vlaanderen.be/ns/mobiliteit#",
     "filename": "besluit-mobiliteit-ap",
     "navigation": {
@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-lokaleBesluiten//tree/9e5df0bae5c4aac387be88f5f95583047a4281cb",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-lokaleBesluiten//blob/9e5df0bae5c4aac387be88f5f95583047a4281cb/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-lokaleBesluiten//tree/2c823f12d7d6de35b7bdfb457db8478635e87abb",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-lokaleBesluiten//blob/2c823f12d7d6de35b7bdfb457db8478635e87abb/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-lokaleBesluiten/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-besluit-mobiliteit/",
     "usesVocs": [],
@@ -2231,9 +2231,11 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/mobiliteit#Pictogram",
-      "name": "",
-      "label": {},
-      "sort": "",
+      "name": "Pictogram",
+      "label": {
+        "nl": "Pictogram"
+      },
+      "sort": "Pictogram",
       "description": {},
       "usage": {},
       "parents": [
@@ -2245,7 +2247,9 @@
           "scoped_uri": "#Concept"
         }
       ],
-      "rawTags": {},
+      "rawTags": {
+        "ap-label-nl": "Pictogram"
+      },
       "properties": [
         {
           "uri": " http://www.w3.org/2004/02/skos/core#prefSymbol",
@@ -2307,8 +2311,21 @@
               "uri": "https://data.vlaanderen.be/ns/mobiliteit#SignalisatieOntwerp"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -2332,8 +2349,21 @@
               "uri": "https://data.vlaanderen.be/ns/mobiliteit#SignalisatieOntwerp"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -2759,9 +2789,11 @@
       "properties": [
         {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#zonaliteit",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "zonaliteit",
+          "sort": "zonaliteit",
+          "label": {
+            "nl": "zonaliteit"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -2773,13 +2805,13 @@
           "range": [
             {
               "range_label": "Zonaliteit",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#Zonaliteit"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Zonaliteit",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#Zonaliteit",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
                 "nl": "Zonaliteit"
               }
@@ -2787,7 +2819,9 @@
           ],
           "cardinality": "0..1",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "ap-label-nl": "zonaliteit"
+          }
         },
         {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#heeftMogelijkOnderbord",
@@ -3133,6 +3167,38 @@
           }
         },
         {
+          "uri": "https://data.vlaanderen.be/ns/mobiliteit#heeftWaardeVoor",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersteken",
+              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Variabele",
+              "range_uri": "http://lblod.data.gift/vocabularies/variables/Variable"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Variabele",
+              "range_puri": "http://lblod.data.gift/vocabularies/variables/Variable",
+              "range_label": {
+                "nl": "Variabele"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {}
+        },
+        {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave",
           "name": "afbeelding",
           "sort": "afbeelding",
@@ -3272,8 +3338,21 @@
               "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "VerkeerstekenStatus",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept "
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verkeerstekenstatus",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept ",
+              "range_label": {
+                "nl": "Verkeerstekenstatus"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -3334,7 +3413,7 @@
             "nl": "locatie"
           },
           "description": {
-            "nl": "de locatie van het verkeersteken."
+            "nl": "de locatie van het verkeersteken in WKT formaat."
           },
           "usage": {
             "nl": "Als value wordt een wkt string opgegeven, bv: \"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.001475 51.477811)\"^^gsp:wktLiteral ."
@@ -3345,53 +3424,28 @@
               "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
             }
           ],
-          "range": [],
-          "scopedrange": [],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-label-nl": "locatie",
-            "ap-definition-nl": "de locatie van het verkeersteken.",
-            "uri": "http://www.w3.org/ns/locn#geometry",
-            "ap-usageNote-nl": "Als value wordt een wkt string opgegeven, bv: \"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.001475 51.477811)\"^^gsp:wktLiteral .",
-            "range": "http://www.opengis.net/ont/geosparql#wktLiteral"
-          }
-        },
-        {
-          "uri": "http://lblod.data.gift/vocabularies/variables/isValueFor",
-          "name": "heeftWaardeVoor",
-          "sort": "heeft waarde voor",
-          "label": {
-            "nl": "heeft waarde voor"
-          },
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Verkeersteken",
-              "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
-            }
-          ],
           "range": [
             {
-              "range_label": "Variabele",
-              "range_uri": "http://lblod.data.gift/vocabularies/variables/Variable"
+              "range_label": "GetypeerdeString",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Variabele",
-              "range_puri": "http://lblod.data.gift/vocabularies/variables/Variable",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
               "range_label": {
-                "nl": "Variabele"
+                "nl": "GetypeerdeString"
               }
             }
           ],
-          "cardinality": "0..*",
+          "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "uri": "http://lblod.data.gift/vocabularies/variables/isValueFor",
-            "ap-label-nl": "heeft waarde voor"
+            "ap-label-nl": "locatie",
+            "ap-definition-nl": "de locatie van het verkeersteken in WKT formaat.",
+            "uri": "http://www.w3.org/ns/locn#geometry",
+            "ap-usageNote-nl": "Als value wordt een wkt string opgegeven, bv: \"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.001475 51.477811)\"^^gsp:wktLiteral ."
           }
         }
       ]
@@ -3534,9 +3588,11 @@
         },
         {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#definieert",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "name": "definieert",
+          "sort": "definieert",
+          "label": {
+            "nl": "definieert"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -3562,7 +3618,9 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "ap-label-nl": "definieert"
+          }
         },
         {
           "uri": "https://data.vlaanderen.be/ns/mobiliteit#ARplichtig",
@@ -3581,8 +3639,21 @@
               "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -3804,10 +3875,12 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/mobiliteit#label",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "uri": "http://www.w3.org/2024/02/skos/core#prefLabel",
+          "name": "label",
+          "sort": "label",
+          "label": {
+            "nl": "label"
+          },
           "description": {},
           "usage": {},
           "domain": [
@@ -3816,11 +3889,27 @@
               "uri": " http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
-          "rawTags": {}
+          "rawTags": {
+            "ap-label-nl": "label",
+            "uri": "http://www.w3.org/2024/02/skos/core#prefLabel"
+          }
         }
       ]
     },
@@ -5129,15 +5218,15 @@
           "range": [
             {
               "range_label": "VariabeleType",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#VariabeleType"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept "
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#VariabeleType",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#VariabeleType",
+              "range_uri": "#Variabele Type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept ",
               "range_label": {
-                "nl": "VariabeleType"
+                "nl": "Variabele Type"
               }
             }
           ],
@@ -5200,8 +5289,21 @@
               "uri": "http://lblod.data.gift/vocabularies/variables/Variable"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
@@ -5410,6 +5512,43 @@
       },
       "properties": [
         {
+          "uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "name": "naam",
+          "sort": "naam",
+          "label": {
+            "nl": "naam"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Codelijst",
+              "uri": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "naam",
+            "uri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+          }
+        },
+        {
           "uri": "http://purl.org/dc/terms/type",
           "name": "type",
           "sort": "type",
@@ -5427,15 +5566,15 @@
           "range": [
             {
               "range_label": "CodelijstType",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#CodelijstType"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#CodelijstType",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#CodelijstType",
+              "range_uri": "#Codelijst type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "CodelijstType"
+                "nl": "Codelijst type"
               }
             }
           ],
@@ -5591,7 +5730,8 @@
     {
       "uri": "https://data.vlaanderen.be/ns/mobiliteit#zonaliteit",
       "name": {
-        "undefined": ""
+        "nl": "zonaliteit",
+        "undefined": "zonaliteit"
       },
       "description": {},
       "domain": [
@@ -5757,6 +5897,20 @@
       "name": {
         "nl": "inwerkingtreding",
         "undefined": "inwerkingtreding"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/mobiliteit#heeftWaardeVoor",
+      "name": {
+        "undefined": ""
       },
       "description": {},
       "domain": [
@@ -5950,7 +6104,8 @@
     {
       "uri": "https://data.vlaanderen.be/ns/mobiliteit#definieert",
       "name": {
-        "undefined": ""
+        "nl": "definieert",
+        "undefined": "definieert"
       },
       "description": {},
       "domain": [
@@ -6056,6 +6211,21 @@
       "name": {
         "nl": "type",
         "undefined": "type"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken.wettelijkeStatus",
+      "name": {
+        "nl": "wettelijke status",
+        "undefined": "wettelijkeStatus"
       },
       "description": {},
       "domain": [
@@ -7050,7 +7220,8 @@
           "rawTags": {
             "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
             "ap-label-nl": "waarde",
-            "ap-definition-nl": "De inhoud van de template als HTML of gewone string."
+            "ap-definition-nl": "De inhoud van de template als HTML of gewone string.",
+            "range": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"
           }
         }
       ]
@@ -7098,13 +7269,13 @@
           "range": [
             {
               "range_label": "Standaardeenheid",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#Standaardeenheid"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Standaardeenheid",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#Standaardeenheid",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
                 "nl": "Standaardeenheid"
               }
@@ -7168,15 +7339,15 @@
           "range": [
             {
               "range_label": "TypeGrootheid",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#TypeGrootheid"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#TypeGrootheid",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#TypeGrootheid",
+              "range_uri": "#Type grootheid",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "TypeGrootheid"
+                "nl": "Type grootheid"
               }
             }
           ],
@@ -7872,15 +8043,15 @@
           "range": [
             {
               "range_label": "VormType",
-              "range_uri": "https://data.vlaanderen.be/ns/mobiliteit#VormType"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#VormType",
-              "range_puri": "https://data.vlaanderen.be/ns/mobiliteit#VormType",
+              "range_uri": "#Vorm type",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "VormType"
+                "nl": "Vorm type"
               }
             }
           ],
